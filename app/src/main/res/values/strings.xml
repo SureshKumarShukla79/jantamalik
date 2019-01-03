@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Janta Maalik</string>
+    <string name="Issues">Issues</string>
+    <string name="Money">Money</string>
+    <string name="Vote">Vote</string>
+    <string name="menuItemDonate">Donate</string>
+    <string name="menuItemContactUs">Contact us</string>
+
+</resources>
