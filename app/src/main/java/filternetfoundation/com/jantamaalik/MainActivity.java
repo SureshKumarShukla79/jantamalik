@@ -13,10 +13,6 @@ import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Toast;
 
-import filternetfoundation.com.jantamaalik.IssuesJava.IssuesFragment;
-import filternetfoundation.com.jantamaalik.MoneyJava.MoneyFragment;
-import filternetfoundation.com.jantamaalik.VoteJava.VoteFragment;
-
 
 public class MainActivity extends AppCompatActivity {
 
