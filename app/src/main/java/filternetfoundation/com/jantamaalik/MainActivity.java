@@ -13,6 +13,10 @@ import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Toast;
 
+import filternetfoundation.com.jantamaalik.IssuesJava.IssuesFragment;
+import filternetfoundation.com.jantamaalik.MoneyJava.MoneyFragment;
+import filternetfoundation.com.jantamaalik.VoteJava.VoteFragment;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,13 +40,24 @@ public class MainActivity extends AppCompatActivity {
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
         viewPager.setAdapter(viewPagerAdapter);
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.setOnClickListener(new View.OnClickListener() {
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout ));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Drag the screen.", Toast.LENGTH_SHORT).show();
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
+
     }
 
     @Override
@@ -62,5 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),item.getTitle().toString(),Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+    public void changeLanguage(View view){
+        Toast.makeText(getApplicationContext(),"Under progress.", Toast.LENGTH_SHORT).show();
     }
 }
