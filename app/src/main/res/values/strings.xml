@@ -3,7 +3,8 @@
     <string name="Issues">Issues</string>
     <string name="Money">Money</string>
     <string name="Vote">Vote</string>
+    <string name="Button_donate_activity">Donate</string>
     <string name="menuItemDonate">Donate</string>
     <string name="menuItemContactUs">Contact us</string>
-
+    <string name="Donate_menuItem_description">Please tap on the button below to donate.</string>
 </resources>

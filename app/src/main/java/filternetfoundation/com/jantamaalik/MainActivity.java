@@ -1,7 +1,7 @@
 package filternetfoundation.com.jantamaalik;
 
-import android.support.annotation.NonNull;
-import android.support.v4.view.PagerAdapter;
+
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Toast;
+import filternetfoundation.com.jantamaalik.DonateActivityJava.donate;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.appbar);
         setSupportActionBar(toolbar);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Issues"));
-        tabLayout.addTab(tabLayout.newTab().setText("Money"));
-        tabLayout.addTab(tabLayout.newTab().setText("Vote"));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.Issues).setIcon(R.drawable.question_mark));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.Money).setIcon(R.drawable.note_bundle));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.Vote).setIcon(R.drawable.vote_icon));
 
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
@@ -68,9 +69,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         switch (id){
             case R.id.donate_menuItem:
-                Toast.makeText(getApplicationContext(),item.getTitle().toString(),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, donate.class);
+                startActivity(intent);
+                break;
             case R.id.contact_menuItem:
                 Toast.makeText(getApplicationContext(),item.getTitle().toString(),Toast.LENGTH_SHORT).show();
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
