@@ -9,11 +9,11 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Issues_recyclerview"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 </android.support.constraint.ConstraintLayout>

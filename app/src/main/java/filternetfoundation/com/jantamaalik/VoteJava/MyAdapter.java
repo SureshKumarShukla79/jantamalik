@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik.IssuesJava;
+package filternetfoundation.com.jantamaalik.VoteJava;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;

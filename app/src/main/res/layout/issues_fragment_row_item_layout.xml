@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/layout_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DCDCDC"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:background="#DCDCDC"
+            android:id="@+id/Issues_recyclerview_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="check"
+            android:textSize="30sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+            <ImageView
+                android:background="#DCDCDC"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:src="@drawable/right_black_arrow_24dp"/>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

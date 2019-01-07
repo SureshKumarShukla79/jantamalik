@@ -26,7 +26,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment {
         recyclerView.setLayoutManager(layoutManager);
          recyclerView.setHasFixedSize(true);
         //setting the adapter
-        String arr[] = {"one","two","three is also know as"};
+        String arr[] = {"one","two","three is also know as","four","five","six","seven","eight","nine","ten","eleven","twelve"};
 
         adapter = new MyAdapter(arr);
         recyclerView.setAdapter(adapter);
