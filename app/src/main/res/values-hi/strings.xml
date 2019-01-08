@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">जनता मालिक</string>
+    <string name="Issues">मुद्दे</string>
+    <string name="Money">पैसे</string>
+    <string name="Vote">वोट</string>
+    <string name="Button_donate_activity">समर्थन करें</string>
+    <string name="menuItemDonate">समर्थन करें</string>
+    <string name="menuItemContactUs">संपर्क करें</string>
+    <string name="Donate_menuItem_description">कृपया समर्थन के लिए नीचे दिए गए बटन पर टैप करें</string>
+</resources>

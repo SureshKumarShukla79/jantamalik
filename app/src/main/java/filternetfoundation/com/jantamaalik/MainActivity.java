@@ -1,7 +1,11 @@
 package filternetfoundation.com.jantamaalik;
 
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.preference.PreferenceManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,19 +16,37 @@ import android.view.MenuItem;
 import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Toast;
+import java.util.Locale;
+
 import filternetfoundation.com.jantamaalik.DonateActivityJava.donate;
 
 
 public class MainActivity extends AppCompatActivity {
 
-     private ViewPager viewPager;
-     private TabLayout tabLayout;
-     private Toolbar toolbar;
+    public final static String sUSER_CURRENT_LANGUAGE = "User_Current_Language";
+    public final static String sLANGUAGE_HINDI = "Hindi";
+    public final static String sLANGUAGE_ENGLISH = "English";
+
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+    private Toolbar toolbar;
+
+    private SharedPreferences mSharedPref;
+    private SharedPreferences.Editor mEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        mEditor = mSharedPref.edit();
+
+        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null);
+        if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
+            setUI_Lang(this, "hi");
+        }
+
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewPager_main);
         toolbar = findViewById(R.id.appbar);
@@ -78,7 +100,30 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
     public void changeLanguage(View view){
-        Toast.makeText(getApplicationContext(),"Under progress.", Toast.LENGTH_SHORT).show();
+        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null);
+
+        if(current_language == null || current_language.equals(sLANGUAGE_ENGLISH)) {
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
+            setUI_Lang(this, "hi");
+            Toast.makeText(getApplicationContext(),"भाषा को सफलतापूर्वक बदल दिया गया है", Toast.LENGTH_SHORT).show();
+        } else {
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
+            setUI_Lang(this, "en");
+            Toast.makeText(getApplicationContext(),"Language has successfully changed", Toast.LENGTH_SHORT).show();
+        }
+
+        this.recreate(); // refresh screen
+    }
+
+    public static void setUI_Lang(Activity activity, String lang) { // before setContentView
+        String languageToLoad = lang; // your language
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        activity.getBaseContext().getResources().updateConfiguration(config,
+                activity.getBaseContext().getResources().getDisplayMetrics());
     }
 }
