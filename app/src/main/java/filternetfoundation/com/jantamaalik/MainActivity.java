@@ -107,11 +107,11 @@ public class MainActivity extends AppCompatActivity {
         if(current_language == null || current_language.equals(sLANGUAGE_ENGLISH)) {
             mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
             setUI_Lang(this, "hi");
-            Toast.makeText(getApplicationContext(),"भाषा को सफलतापूर्वक बदल दिया गया है", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"भाषा को सफलतापूर्वक बदल दिया गया है", Toast.LENGTH_SHORT).show();
         } else {
             mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
             setUI_Lang(this, "en");
-            Toast.makeText(getApplicationContext(),"Language has successfully changed", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(),"Language has successfully changed", Toast.LENGTH_SHORT).show();
         }
 
         this.recreate(); // refresh screen
