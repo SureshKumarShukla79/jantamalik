@@ -56,7 +56,7 @@ public class VoteFragment extends Fragment implements ItemClickListener {
     @Override
     public void onClick(View view, int position) {
         if (position==0){
-            Intent intent = new Intent(view.getContext(), VoteFragmentMpLayout.class);
+            Intent intent = new Intent(view.getContext(), VoteMP.class);
             startActivity(intent);
         }
     }
