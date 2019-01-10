@@ -18,19 +18,15 @@
             app:title="@string/app_name"
             app:titleTextColor="#ffffff">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="180dp">
             <ImageButton
-                android:layout_gravity="right"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
                 android:contentDescription="TODO"
                 android:onClick="changeLanguage"
                 android:scaleType="centerCrop"
                 android:src="@drawable/world" />
-            </LinearLayout>
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
