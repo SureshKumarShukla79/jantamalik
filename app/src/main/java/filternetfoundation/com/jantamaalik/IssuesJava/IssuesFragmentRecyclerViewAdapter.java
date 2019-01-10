@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,7 +12,8 @@ import java.util.List;
 
 import filternetfoundation.com.jantamaalik.R;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.IssuesViewHolder> {
+
+public class IssuesFragmentRecyclerViewAdapter extends RecyclerView.Adapter<IssuesFragmentRecyclerViewAdapter.IssuesViewHolder> {
      private List<String> dataList = new ArrayList<>();
 
     public static class IssuesViewHolder extends RecyclerView.ViewHolder {
@@ -25,17 +25,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.IssuesViewHolder> 
             mtextView = itemView.findViewById(R.id.Issues_recyclerview_textView);
         }
     }
-    public MyAdapter(String[] dataArray){
-        for(int i=0;i<dataArray.length;i++){
-            dataList.add(dataArray[i]);
+    public IssuesFragmentRecyclerViewAdapter(List<String> dataArray){
+        this.dataList = dataArray;
         }
 
-    }
     @NonNull
     @Override
-    public MyAdapter.IssuesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public IssuesFragmentRecyclerViewAdapter.IssuesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        LinearLayout view = (LinearLayout) LayoutInflater.from(parent.getContext())
+        View view =  LayoutInflater.from(parent.getContext())
                                .inflate(R.layout.issues_fragment_row_item_layout,parent,false);
 
           IssuesViewHolder issuesViewHolder = new IssuesViewHolder(view);

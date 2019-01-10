@@ -1,5 +1,6 @@
 package filternetfoundation.com.jantamaalik.VoteJava;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -11,14 +12,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import filternetfoundation.com.jantamaalik.MainActivity;
 import filternetfoundation.com.jantamaalik.R;
 
-public class VoteFragment extends Fragment {
+public class VoteFragment extends Fragment implements ItemClickListener {
    private View view;
    private RecyclerView recyclerView;
    private RecyclerView.Adapter adapter;
    private RecyclerView.LayoutManager layoutManager;
+   private List<String> voteData;
 
     private SharedPreferences mSharedPref;
     @Nullable
@@ -38,9 +43,21 @@ public class VoteFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
 
-        String[] voteData = {"Member of Parliament", "MLA","Parshad"};
-        adapter = new MyAdapter(voteData);
+        voteData = new ArrayList<>();
+        voteData.add(getString(R.string.MP));
+        voteData.add(getString(R.string.MLA));
+        voteData.add(getString(R.string.Parshad));
+        adapter = new VoteFragmentRecyclerViewAdapter(voteData);
+        ((VoteFragmentRecyclerViewAdapter) adapter).setOnItemClickListener(this);
         recyclerView.setAdapter(adapter);
         return view;
+    }
+
+    @Override
+    public void onClick(View view, int position) {
+        if (position==0){
+            Intent intent = new Intent(view.getContext(), VoteFragmentMpLayout.class);
+            startActivity(intent);
+        }
     }
 }

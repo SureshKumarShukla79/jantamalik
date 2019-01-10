@@ -10,6 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import filternetfoundation.com.jantamaalik.MainActivity;
 import filternetfoundation.com.jantamaalik.R;
 
@@ -18,6 +21,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment {
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapter;
+    private List<String> arr;
 
     private SharedPreferences mSharedPref;
     @Nullable
@@ -39,9 +43,15 @@ public class IssuesFragment extends android.support.v4.app.Fragment {
         recyclerView.setLayoutManager(layoutManager);
          recyclerView.setHasFixedSize(true);
         //setting the adapter
-        String arr[] = {"one","two","three is also know as","four","five","six","seven","eight","nine","ten","eleven","twelve"};
 
-        adapter = new MyAdapter(arr);
+        arr = new ArrayList<>();
+        arr.add(getString(R.string.CrimeIssue));
+        arr.add(getString(R.string.IssueUnemployment));
+        arr.add(getString(R.string.IssueInflation));
+        arr.add(getString(R.string.IssueEducation));
+        arr.add(getString(R.string.IssueClimate));
+        arr.add(getString(R.string.IssueHealth));
+        adapter = new IssuesFragmentRecyclerViewAdapter(arr);
         recyclerView.setAdapter(adapter);
         return view;
     }

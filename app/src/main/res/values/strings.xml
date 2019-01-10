@@ -7,4 +7,23 @@
     <string name="menuItemDonate">Donate</string>
     <string name="menuItemContactUs">Contact us</string>
     <string name="Donate_menuItem_description">Please tap on the button below to donate.</string>
+    <string name="call_button">Call</string>
+    <string name="email_button">Email</string>
+    <string name="CrimeIssue">Crime</string>
+    <string name="IssueUnemployment">Unemployment</string>
+    <string name="IssueInflation">Inflation</string>
+    <string name="IssueEducation">Poor educational institutions</string>
+    <string name="IssueClimate">Climate change</string>
+    <string name="IssueHealth">Poor Health services</string>
+    <string name="MP">MP</string>
+    <string name="MLA">MLA</string>
+    <string name="Parshad">Parshad</string>
+
+    //MPs information
+    <string name="MP_modi">Narendra Modi</string>
+    <string name="constituency_info_modi">Constituency: Varanasi</string>
+    <string name="contact_no_modi">011-25533009</string>
+    <string name="email_contact_modi">narendramodi@pmo.com</string>
+    <string name="address_modi">7 RCR, New Delhi, INDIA</string>
+
 </resources>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">जनता मालिक</string>
+    <string name="app_name"><b>जनता मालिक</b></string>
     <string name="Issues">मेरे मुद्दे</string>
     <string name="Money">मेरा नोट</string>
     <string name="Vote">मेरा वोट</string>
@@ -7,4 +7,22 @@
     <string name="menuItemDonate">समर्थन करें</string>
     <string name="menuItemContactUs">संपर्क करें</string>
     <string name="Donate_menuItem_description">कृपया समर्थन के लिए नीचे दिए गए बटन पर टैप करें</string>
+    <string name="call_button">कॉल करें</string>
+    <string name="email_button">ईमेल करें</string>
+    <string name="CrimeIssue">अपराध</string>
+    <string name="IssueUnemployment">बेरोजगारी</string>
+    <string name="IssueInflation">महंगाई</string>
+    <string name="IssueEducation">खराब शिक्षण संस्थान</string>
+    <string name="IssueClimate">जलवायु परिवर्तन</string>
+    <string name="IssueHealth">स्वास्थ्य सेवाओं की कमी</string>
+    <string name="MP">सांसद</string>
+    <string name="MLA">विधायक</string>
+    <string name="Parshad">पार्षद</string>
+
+    //MPs information
+    <string name="MP_modi">नरेंद्र मोदी</string>
+    <string name="constituency_info_modi">निर्वाचन क्षेत्र: वाराणसी</string>
+    <string name="contact_no_modi">011-25533009</string>
+    <string name="email_contact_modi">narendramodi@pmo.com</string>
+    <string name="address_modi">7 आरसीआर, नई दिल्ली, भारत</string>
 </resources>

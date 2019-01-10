@@ -13,27 +13,34 @@ import java.util.List;
 
 import filternetfoundation.com.jantamaalik.R;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.IssuesViewHolder> {
+public class VoteFragmentRecyclerViewAdapter extends RecyclerView.Adapter<VoteFragmentRecyclerViewAdapter.IssuesViewHolder> {
      private List<String> dataList = new ArrayList<>();
+     private  ItemClickListener itemClickListener;
 
-    public static class IssuesViewHolder extends RecyclerView.ViewHolder {
+    public class IssuesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView mtextView;
 
         public IssuesViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             mtextView = itemView.findViewById(R.id.Issues_recyclerview_textView);
         }
-    }
-    public MyAdapter(String[] dataArray){
-        for(int i=0;i<dataArray.length;i++){
-            dataList.add(dataArray[i]);
+
+        @Override
+        public void onClick(View view) {
+            if (itemClickListener!=null){
+                itemClickListener.onClick(view, getAdapterPosition());
+            }
         }
+    }
+    public VoteFragmentRecyclerViewAdapter(List<String> dataArray){
+        this.dataList = dataArray;
 
     }
     @NonNull
     @Override
-    public MyAdapter.IssuesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public VoteFragmentRecyclerViewAdapter.IssuesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         LinearLayout view = (LinearLayout) LayoutInflater.from(parent.getContext())
                                .inflate(R.layout.issues_fragment_row_item_layout,parent,false);
@@ -53,6 +60,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.IssuesViewHolder> 
     }
 
 
-
+    public void setOnItemClickListener(ItemClickListener itemClickListener) {
+        this.itemClickListener = itemClickListener;
+    }
 
 }

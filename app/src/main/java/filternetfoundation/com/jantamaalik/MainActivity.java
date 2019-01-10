@@ -24,8 +24,8 @@ import filternetfoundation.com.jantamaalik.DonateActivityJava.donate;
 public class MainActivity extends AppCompatActivity {
 
     public final static String sUSER_CURRENT_LANGUAGE = "User_Current_Language";
-    public final static String sLANGUAGE_HINDI = "Hindi";
-    public final static String sLANGUAGE_ENGLISH = "English";
+    public final static String sLANGUAGE_HINDI = "hi";
+    public final static String sLANGUAGE_ENGLISH = "en";
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -37,15 +37,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPref.edit();
 
-        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null);
+        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
         if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
             setUI_Lang(this, "hi");
         }
+
+        setContentView(R.layout.activity_main);
 
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewPager_main);
