@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
-    <string name="Issues">मेरे मुद्दे</string>
-    <string name="Money">मेरा नोट</string>
-    <string name="Vote">मेरा वोट</string>
+    <string name="Issues"><b>मेरे मुद्दे</b></string>
+    <string name="Money"><b>मेरा नोट</b></string>
+    <string name="Vote"><b>मेरा वोट</b></string>
     <string name="Button_donate_activity">समर्थन करें</string>
     <string name="menuItemDonate">समर्थन करें</string>
     <string name="menuItemContactUs">संपर्क करें</string>

@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik.VoteJava;
+package filternetfoundation.com.jantamaalik;
 
 import android.view.View;
 

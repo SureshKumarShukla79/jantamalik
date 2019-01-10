@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import filternetfoundation.com.jantamaalik.ItemClickListener;
 import filternetfoundation.com.jantamaalik.MainActivity;
 import filternetfoundation.com.jantamaalik.R;
 

@@ -1,5 +1,6 @@
 package filternetfoundation.com.jantamaalik.IssuesJava;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -13,10 +14,11 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import filternetfoundation.com.jantamaalik.ItemClickListener;
 import filternetfoundation.com.jantamaalik.MainActivity;
 import filternetfoundation.com.jantamaalik.R;
 
-public class IssuesFragment extends android.support.v4.app.Fragment {
+public class IssuesFragment extends android.support.v4.app.Fragment implements ItemClickListener {
     View view;
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -52,7 +54,16 @@ public class IssuesFragment extends android.support.v4.app.Fragment {
         arr.add(getString(R.string.IssueClimate));
         arr.add(getString(R.string.IssueHealth));
         adapter = new IssuesFragmentRecyclerViewAdapter(arr);
+        ((IssuesFragmentRecyclerViewAdapter) adapter).onItemClickListener(this);
         recyclerView.setAdapter(adapter);
         return view;
+    }
+
+    @Override
+    public void onClick(View view, int position) {
+
+        Intent intent = new Intent(view.getContext(), IssuesItem.class);
+        startActivity(intent);
+
     }
 }

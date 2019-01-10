@@ -11,11 +11,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import filternetfoundation.com.jantamaalik.ItemClickListener;
 import filternetfoundation.com.jantamaalik.R;
 
 public class VoteFragmentRecyclerViewAdapter extends RecyclerView.Adapter<VoteFragmentRecyclerViewAdapter.IssuesViewHolder> {
      private List<String> dataList = new ArrayList<>();
-     private  ItemClickListener itemClickListener;
+     private ItemClickListener itemClickListener;
 
     public class IssuesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 

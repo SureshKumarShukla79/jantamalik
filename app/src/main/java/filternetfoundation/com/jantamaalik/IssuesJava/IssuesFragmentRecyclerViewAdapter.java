@@ -10,19 +10,31 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import filternetfoundation.com.jantamaalik.ItemClickListener;
 import filternetfoundation.com.jantamaalik.R;
 
 
 public class IssuesFragmentRecyclerViewAdapter extends RecyclerView.Adapter<IssuesFragmentRecyclerViewAdapter.IssuesViewHolder> {
-     private List<String> dataList = new ArrayList<>();
 
-    public static class IssuesViewHolder extends RecyclerView.ViewHolder {
+     private List<String> dataList = new ArrayList<>();
+     private ItemClickListener itemClickListener;
+
+    public  class IssuesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView mtextView;
 
         public IssuesViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             mtextView = itemView.findViewById(R.id.Issues_recyclerview_textView);
+        }
+
+
+        @Override
+        public void onClick(View view) {
+            if (itemClickListener!=null){
+                itemClickListener.onClick(view,getAdapterPosition());
+            }
         }
     }
     public IssuesFragmentRecyclerViewAdapter(List<String> dataArray){
@@ -50,7 +62,9 @@ public class IssuesFragmentRecyclerViewAdapter extends RecyclerView.Adapter<Issu
         return dataList.size();
     }
 
-
+   public void onItemClickListener(ItemClickListener itemClickListener){
+        this.itemClickListener = itemClickListener;
+   }
 
 
 }

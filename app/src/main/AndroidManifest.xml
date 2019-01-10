@@ -21,6 +21,8 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".VoteJava.VoteMP"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".IssuesJava.IssuesItem"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
