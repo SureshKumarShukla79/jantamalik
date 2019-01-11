@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="filternetfoundation.com.jantamaalik">
+    package="in.filternet.jantamaalik">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/ic_app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name="in.filternet.jantamaalik.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,12 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DonateActivityJava.donate"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".VoteJava.VoteMP"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".IssuesJava.IssuesItem"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name="in.filternet.jantamaalik.DonateActivityJava.donate"
+            android:parentActivityName="in.filternet.jantamaalik.MainActivity"></activity>
+        <activity android:name="in.filternet.jantamaalik.VoteJava.VoteMP"
+            android:parentActivityName="in.filternet.jantamaalik.MainActivity"></activity>
+        <activity android:name="in.filternet.jantamaalik.IssuesJava.IssuesItem"
+            android:parentActivityName="in.filternet.jantamaalik.MainActivity"></activity>
     </application>
 
 </manifest>

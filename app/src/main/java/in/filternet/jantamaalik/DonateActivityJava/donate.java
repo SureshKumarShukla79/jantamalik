@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik.DonateActivityJava;
+package in.filternet.jantamaalik.DonateActivityJava;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,8 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import filternetfoundation.com.jantamaalik.MainActivity;
-import filternetfoundation.com.jantamaalik.R;
+import in.filternet.jantamaalik.MainActivity;
+import in.filternet.jantamaalik.R;
 
 public class donate extends AppCompatActivity {
 

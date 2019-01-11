@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik.VoteJava;
+package in.filternet.jantamaalik.VoteJava;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,9 +15,9 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import filternetfoundation.com.jantamaalik.ItemClickListener;
-import filternetfoundation.com.jantamaalik.MainActivity;
-import filternetfoundation.com.jantamaalik.R;
+import in.filternet.jantamaalik.ItemClickListener;
+import in.filternet.jantamaalik.MainActivity;
+import in.filternet.jantamaalik.R;
 
 public class VoteFragment extends Fragment implements ItemClickListener {
    private View view;

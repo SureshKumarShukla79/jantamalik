@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik;
+package in.filternet.jantamaalik;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("filternetfoundation.com.jantamaalik", appContext.getPackageName());
+        assertEquals("in.filternet.jantamaalik", appContext.getPackageName());
     }
 }

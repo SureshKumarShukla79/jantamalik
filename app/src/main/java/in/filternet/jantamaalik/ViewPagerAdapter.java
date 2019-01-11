@@ -1,14 +1,12 @@
-package filternetfoundation.com.jantamaalik;
+package in.filternet.jantamaalik;
 
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
 
-import filternetfoundation.com.jantamaalik.IssuesJava.IssuesFragment;
-import filternetfoundation.com.jantamaalik.MoneyJava.MoneyFragment;
-import filternetfoundation.com.jantamaalik.VoteJava.VoteFragment;
+import in.filternet.jantamaalik.IssuesJava.IssuesFragment;
+import in.filternet.jantamaalik.MoneyJava.MoneyFragment;
+import in.filternet.jantamaalik.VoteJava.VoteFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 

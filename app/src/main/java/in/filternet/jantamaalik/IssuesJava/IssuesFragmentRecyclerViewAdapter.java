@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik.IssuesJava;
+package in.filternet.jantamaalik.IssuesJava;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import filternetfoundation.com.jantamaalik.ItemClickListener;
-import filternetfoundation.com.jantamaalik.R;
+import in.filternet.jantamaalik.ItemClickListener;
+import in.filternet.jantamaalik.R;
 
 
 public class IssuesFragmentRecyclerViewAdapter extends RecyclerView.Adapter<IssuesFragmentRecyclerViewAdapter.IssuesViewHolder> {

@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "filternetfoundation.com.jantamaalik"
+        applicationId "in.filternet.jantamaalik"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

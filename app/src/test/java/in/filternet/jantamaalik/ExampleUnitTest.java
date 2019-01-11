@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik;
+package in.filternet.jantamaalik;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik.VoteJava;
+package in.filternet.jantamaalik.VoteJava;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import filternetfoundation.com.jantamaalik.ItemClickListener;
-import filternetfoundation.com.jantamaalik.R;
+import in.filternet.jantamaalik.ItemClickListener;
+import in.filternet.jantamaalik.R;
 
 public class VoteFragmentRecyclerViewAdapter extends RecyclerView.Adapter<VoteFragmentRecyclerViewAdapter.IssuesViewHolder> {
      private List<String> dataList = new ArrayList<>();

@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik.MoneyJava;
+package in.filternet.jantamaalik.MoneyJava;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import filternetfoundation.com.jantamaalik.R;
+import in.filternet.jantamaalik.R;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;

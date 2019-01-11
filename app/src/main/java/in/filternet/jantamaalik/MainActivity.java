@@ -1,4 +1,4 @@
-package filternetfoundation.com.jantamaalik;
+package in.filternet.jantamaalik;
 
 
 import android.app.Activity;
@@ -18,7 +18,7 @@ import android.view.View;
 import android.widget.Toast;
 import java.util.Locale;
 
-import filternetfoundation.com.jantamaalik.DonateActivityJava.donate;
+import in.filternet.jantamaalik.DonateActivityJava.donate;
 
 
 public class MainActivity extends AppCompatActivity {
