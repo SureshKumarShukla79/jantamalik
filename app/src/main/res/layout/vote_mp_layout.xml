@@ -23,7 +23,7 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="223dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/gradientbackground"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
@@ -57,10 +57,12 @@
 
     </LinearLayout>
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="385dp"
-        android:layout_height="376dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="5dp"
@@ -68,32 +70,24 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
         android:padding="5dp"
+        android:background="#dcdcdc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/cardView"
-            android:layout_width="358dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="#dcdcdc"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingLeft="40dp">
+                android:layout_marginTop="16dp"
+                android:gravity="left"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="36dp"
@@ -104,18 +98,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:paddingLeft="10dp"
                     android:text="@string/constituency_info_modi"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"/>
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
                 android:orientation="horizontal"
-                android:paddingLeft="40dp">
+                android:gravity="left">
 
                 <ImageView
                     android:layout_width="36dp"
@@ -133,16 +127,16 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/email_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
                 android:orientation="horizontal"
-                android:paddingLeft="40dp">
+                android:gravity="left">
 
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@drawable/ic_email_black_24dp" />
+                    android:src="@drawable/ic_email_black_24dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -155,11 +149,11 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="140dp"
                 android:orientation="horizontal"
-                android:paddingLeft="40dp">
+                android:gravity="left">
 
                 <ImageView
                     android:layout_width="36dp"
@@ -176,33 +170,38 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/button5"
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contact_mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/call"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|left"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="100dp"
-                android:background="@drawable/button_styling"
-                android:padding="15dp"
-                android:text="@string/call_button"
-                android:textColor="#fff" />
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onclick_call_mp"
+                app:backgroundTint="@color/colorPrimary"
+                android:src="@drawable/ic_phone_white_24dp" />
 
-            <Button
-                android:id="@+id/button4"
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="100dp"
-                android:background="@drawable/button_styling"
-                android:padding="15dp"
-                android:text="@string/email_button"
-                android:textColor="#fff" />
-
-
-        </android.support.v7.widget.CardView>
-    </android.support.constraint.ConstraintLayout>
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onclick_email_mp"
+                app:backgroundTint="@color/colorPrimary"
+                android:src="@drawable/ic_email_white_24dp" />
+        </LinearLayout>
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

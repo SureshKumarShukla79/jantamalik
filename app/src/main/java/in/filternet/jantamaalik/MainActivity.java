@@ -15,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.support.design.widget.TabLayout;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 import java.util.Locale;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
+    private Button ui_language_button;
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
@@ -41,21 +43,26 @@ public class MainActivity extends AppCompatActivity {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPref.edit();
 
-        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
-        if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
-            setUI_Lang(this, "hi");
-        }
-
         setContentView(R.layout.activity_main);
 
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewPager_main);
         toolbar = findViewById(R.id.appbar);
+        ui_language_button = findViewById(R.id.lanugage_button);
+
+        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
+            setUI_Lang(this, "hi");
+            ui_language_button.setText("EN");
+        } else {
+            ui_language_button.setText("हिन्दी");
+        }
+
         setSupportActionBar(toolbar);
 
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.Issues).setIcon(R.drawable.question_mark));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.Money).setIcon(R.drawable.note_bundle));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.Vote).setIcon(R.drawable.vote_icon));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.Issues).setIcon(R.drawable.issues));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.Money).setIcon(R.drawable.note));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.Vote).setIcon(R.drawable.vote));
 
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
