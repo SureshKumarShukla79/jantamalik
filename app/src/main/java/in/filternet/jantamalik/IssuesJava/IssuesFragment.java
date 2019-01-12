@@ -29,6 +29,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
     private List<String> arr;
     private FloatingActionButton ui_add_issue;
 
+    private static final String itemName = "in.filternet.jantaMalik";
     private SharedPreferences mSharedPref;
     @Nullable
     @Override
@@ -77,11 +78,17 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         return view;
     }
 
+
     @Override
+
     public void onClick(View view, int position) {
         Toast.makeText(view.getContext(), R.string.issues_WIP, Toast.LENGTH_LONG).show();
 
-        //Intent intent = new Intent(view.getContext(), IssuesItem.class);
-        //startActivity(intent);
+        if (position==arr.indexOf(arr.get(position))) {
+            Intent i = new Intent(view.getContext(), IssuesItem.class);
+            i.putExtra(itemName, arr.get(position));
+            startActivity(i);
+        }
     }
 }
+

@@ -5,20 +5,42 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
+import in.filternet.jantamaalik.MainActivity;
+import in.filternet.jantamaalik.R;
 import in.filternet.jantamalik.Contact;
-import in.filternet.jantamalik.R;
 
 public class VoteMP extends AppCompatActivity {
+    public static final String TAB_NUMBER = "tab_number";
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.vote_mp_layout);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        toolbar = findViewById(R.id.toolbar_MP_layout);
+
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+
+        toolbar.setTitle(R.string.app_name);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick(View view) {
+            Intent intent = new Intent(view.getContext(), MainActivity.class);
+            intent.putExtra(TAB_NUMBER, 2);
+            startActivity(intent);
+            }
+
+        });
     }
 
     public void onclick_call_mp(View view) {
@@ -38,7 +60,6 @@ public class VoteMP extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setData(Uri.parse("mailto:"));
         intent.setType("text/plain");
-
         intent.setPackage("com.google.android.gm");
         intent.putExtra(Intent.EXTRA_EMAIL, TO);
 
