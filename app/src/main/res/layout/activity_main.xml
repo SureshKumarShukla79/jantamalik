@@ -39,8 +39,8 @@
             app:tabGravity="fill"
             android:background="@color/colorPrimary"
             app:tabSelectedTextColor="#ffffff">
-
         </android.support.design.widget.TabLayout>
+
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
@@ -53,7 +53,6 @@
             android:layout_height="match_parent"
             tools:context=".MainActivity">
 
-
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPager_main"
                 android:layout_width="0dp"
@@ -63,7 +62,6 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
-
             </android.support.v4.view.ViewPager>
 
         </android.support.constraint.ConstraintLayout>

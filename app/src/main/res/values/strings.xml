@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Janta Malik</string>
-    <string name="Issues">My issues</string>
-    <string name="Money">My note</string>
-    <string name="Vote">My vote</string>
+    <string name="Issues"><b>My issues</b></string>
+    <string name="Money"><b>My note</b></string>
+    <string name="Vote"><b>My vote</b></string>
     <string name="Button_donate_activity">Donate</string>
     <string name="menuItemDonate">Donate</string>
     <string name="menuItemContactUs">Contact us</string>
