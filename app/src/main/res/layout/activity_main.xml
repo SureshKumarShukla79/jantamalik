@@ -27,6 +27,7 @@
                 android:layout_gravity="end"
                 android:onClick="changeLanguage"
                 android:textStyle="bold"
+                android:textColor="@color/cardview_light_background"
                 android:background="@drawable/button_styling"/>
         </android.support.v7.widget.Toolbar>
 
