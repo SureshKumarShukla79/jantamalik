@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import in.filternet.jantamaalik.Contact;
 import in.filternet.jantamaalik.ItemClickListener;
 import in.filternet.jantamaalik.MainActivity;
 import in.filternet.jantamaalik.R;
@@ -24,6 +26,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapter;
     private List<String> arr;
+    private FloatingActionButton ui_add_issue;
 
     private SharedPreferences mSharedPref;
     @Nullable
@@ -39,6 +42,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
 
         view = inflater.inflate(R.layout.issues_fragment,container,false);
         recyclerView = view.findViewById(R.id.Issues_recyclerview);
+        ui_add_issue = view.findViewById(R.id.add_issue);
 
         //use a linear layout manager
         layoutManager = new LinearLayoutManager(view.getContext());
@@ -53,6 +57,16 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         arr.add(getString(R.string.IssueEducation));
         arr.add(getString(R.string.IssueClimate));
         arr.add(getString(R.string.IssueHealth));
+        //arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1");arr.add("1"); arr.add("1");
+
+        ui_add_issue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), Contact.class);
+                startActivity(intent);
+            }
+        });
+
         adapter = new IssuesFragmentRecyclerViewAdapter(arr);
         ((IssuesFragmentRecyclerViewAdapter) adapter).onItemClickListener(this);
         recyclerView.setAdapter(adapter);

@@ -13,15 +13,11 @@ import in.filternet.jantamaalik.R;
 
 public class VoteMP extends AppCompatActivity {
 
-    private Toolbar toolbar;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.vote_mp_layout);
-        toolbar = findViewById(R.id.toolbar_MP_layout);
-        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

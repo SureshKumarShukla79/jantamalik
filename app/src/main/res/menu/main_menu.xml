@@ -4,8 +4,13 @@
 
     <item
         android:id="@+id/donate_menuItem"
-        android:title="@string/menuItemDonate" />
+        android:title="@string/menuItemDonate"/>
+
     <item
         android:id="@+id/contact_menuItem"
-        android:title="@string/menuItemContactUs" />
+        android:title="@string/menuItemContactUs"/>
+
+    <item
+        android:id="@+id/share_menuItem"
+        android:title="@string/menuItemShare"/>
 </menu>

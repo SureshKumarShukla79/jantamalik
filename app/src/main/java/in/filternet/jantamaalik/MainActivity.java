@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPref.edit();
 
+        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
+            setUI_Lang(this, "hi");
+        }
+
         setContentView(R.layout.activity_main);
 
         tabLayout = findViewById(R.id.tabs);
@@ -50,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.appbar);
         ui_language_button = findViewById(R.id.lanugage_button);
 
-        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
         if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
-            setUI_Lang(this, "hi");
             ui_language_button.setText("EN");
         } else {
             ui_language_button.setText("हिन्दी");
@@ -97,13 +100,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        Intent intent;
         switch (id){
             case R.id.donate_menuItem:
-                Intent intent = new Intent(this, donate.class);
+                intent = new Intent(this, donate.class);
                 startActivity(intent);
                 break;
             case R.id.contact_menuItem:
-                Toast.makeText(getApplicationContext(),item.getTitle().toString(),Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, Contact.class);
+                startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -134,4 +139,5 @@ public class MainActivity extends AppCompatActivity {
         activity.getBaseContext().getResources().updateConfiguration(config,
                 activity.getBaseContext().getResources().getDisplayMetrics());
     }
+
 }

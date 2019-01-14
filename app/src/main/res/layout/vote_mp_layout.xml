@@ -3,35 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_MP_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:titleTextColor="@color/colorAccent" />
-
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gradientbackground"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_MP_layout"
-        app:layout_constraintVertical_bias="0.0">
+        android:orientation="vertical">
 
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -49,6 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/MP_modi"
             android:textColor="#fff"
             android:textSize="22sp"
@@ -61,16 +41,15 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="20dp"
-        android:padding="5dp"
+        android:layout_marginStart="8dp"
         android:background="#dcdcdc"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,18 +77,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
                     android:text="@string/constituency_info_modi"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:paddingLeft="10dp"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="left">
+                android:gravity="left"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="36dp"
@@ -130,13 +109,13 @@
                 android:id="@+id/email_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="left">
+                android:gravity="left"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="36dp"
                     android:layout_height="36dp"
-                    android:src="@drawable/ic_email_black_24dp"/>
+                    android:src="@drawable/ic_email_black_24dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -152,8 +131,8 @@
                 android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="left">
+                android:gravity="left"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="36dp"
@@ -187,8 +166,8 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="onclick_call_mp"
-                app:backgroundTint="@color/colorPrimary"
-                android:src="@drawable/ic_phone_white_24dp" />
+                android:src="@drawable/ic_phone_white_24dp"
+                app:backgroundTint="@color/colorPrimary" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/email"
@@ -198,8 +177,8 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="onclick_email_mp"
-                app:backgroundTint="@color/colorPrimary"
-                android:src="@drawable/ic_email_white_24dp" />
+                android:src="@drawable/ic_email_white_24dp"
+                app:backgroundTint="@color/colorPrimary" />
         </LinearLayout>
     </LinearLayout>
 

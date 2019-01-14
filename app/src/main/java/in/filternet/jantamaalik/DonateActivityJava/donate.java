@@ -15,8 +15,6 @@ import in.filternet.jantamaalik.R;
 
 public class donate extends AppCompatActivity {
 
-    Toolbar toolbar;
-
     private SharedPreferences mSharedPref;
 
     @Override
@@ -31,8 +29,6 @@ public class donate extends AppCompatActivity {
             MainActivity.setUI_Lang(this, "hi");
         }
 
-        toolbar = findViewById(R.id.donate_toolbar);
-        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
