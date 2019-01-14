@@ -1,4 +1,4 @@
-package in.filternet.jantamaalik;
+package in.filternet.jantamalik;
 
 import android.view.View;
 

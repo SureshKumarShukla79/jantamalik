@@ -1,12 +1,12 @@
-package in.filternet.jantamaalik;
+package in.filternet.jantamalik;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import in.filternet.jantamaalik.IssuesJava.IssuesFragment;
-import in.filternet.jantamaalik.MoneyJava.MoneyFragment;
-import in.filternet.jantamaalik.VoteJava.VoteFragment;
+import in.filternet.jantamalik.IssuesJava.IssuesFragment;
+import in.filternet.jantamalik.MoneyJava.MoneyFragment;
+import in.filternet.jantamalik.VoteJava.VoteFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
 

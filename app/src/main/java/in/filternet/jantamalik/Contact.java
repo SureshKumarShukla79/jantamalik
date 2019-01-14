@@ -1,4 +1,4 @@
-package in.filternet.jantamaalik;
+package in.filternet.jantamalik;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import in.filternet.jantamaalik.DonateActivityJava.donate;
+import in.filternet.jantamalik.DonateActivityJava.donate;
 
 public class Contact extends AppCompatActivity {
 

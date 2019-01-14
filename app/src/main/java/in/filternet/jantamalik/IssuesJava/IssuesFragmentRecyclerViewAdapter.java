@@ -1,24 +1,25 @@
-package in.filternet.jantamaalik.VoteJava;
+package in.filternet.jantamalik.IssuesJava;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import in.filternet.jantamaalik.ItemClickListener;
-import in.filternet.jantamaalik.R;
+import in.filternet.jantamalik.ItemClickListener;
+import in.filternet.jantamalik.R;
 
-public class VoteFragmentRecyclerViewAdapter extends RecyclerView.Adapter<VoteFragmentRecyclerViewAdapter.IssuesViewHolder> {
+
+public class IssuesFragmentRecyclerViewAdapter extends RecyclerView.Adapter<IssuesFragmentRecyclerViewAdapter.IssuesViewHolder> {
+
      private List<String> dataList = new ArrayList<>();
      private ItemClickListener itemClickListener;
 
-    public class IssuesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public  class IssuesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public TextView mtextView;
 
@@ -28,22 +29,23 @@ public class VoteFragmentRecyclerViewAdapter extends RecyclerView.Adapter<VoteFr
             mtextView = itemView.findViewById(R.id.Issues_recyclerview_textView);
         }
 
+
         @Override
         public void onClick(View view) {
             if (itemClickListener!=null){
-                itemClickListener.onClick(view, getAdapterPosition());
+                itemClickListener.onClick(view,getAdapterPosition());
             }
         }
     }
-    public VoteFragmentRecyclerViewAdapter(List<String> dataArray){
+    public IssuesFragmentRecyclerViewAdapter(List<String> dataArray){
         this.dataList = dataArray;
+        }
 
-    }
     @NonNull
     @Override
-    public VoteFragmentRecyclerViewAdapter.IssuesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public IssuesFragmentRecyclerViewAdapter.IssuesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        LinearLayout view = (LinearLayout) LayoutInflater.from(parent.getContext())
+        View view =  LayoutInflater.from(parent.getContext())
                                .inflate(R.layout.issues_fragment_row_item_layout,parent,false);
 
           IssuesViewHolder issuesViewHolder = new IssuesViewHolder(view);
@@ -60,9 +62,9 @@ public class VoteFragmentRecyclerViewAdapter extends RecyclerView.Adapter<VoteFr
         return dataList.size();
     }
 
-
-    public void setOnItemClickListener(ItemClickListener itemClickListener) {
+   public void onItemClickListener(ItemClickListener itemClickListener){
         this.itemClickListener = itemClickListener;
-    }
+   }
+
 
 }

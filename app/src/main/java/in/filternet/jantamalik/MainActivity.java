@@ -1,4 +1,4 @@
-package in.filternet.jantamaalik;
+package in.filternet.jantamalik;
 
 
 import android.app.Activity;
@@ -16,10 +16,10 @@ import android.view.MenuItem;
 import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
 import java.util.Locale;
 
-import in.filternet.jantamaalik.DonateActivityJava.donate;
+import in.filternet.jantamalik.DonateActivityJava.donate;
 
 
 public class MainActivity extends AppCompatActivity {

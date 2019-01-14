@@ -1,4 +1,4 @@
-package in.filternet.jantamaalik.IssuesJava;
+package in.filternet.jantamalik.IssuesJava;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,10 +15,10 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import in.filternet.jantamaalik.Contact;
-import in.filternet.jantamaalik.ItemClickListener;
-import in.filternet.jantamaalik.MainActivity;
-import in.filternet.jantamaalik.R;
+import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.ItemClickListener;
+import in.filternet.jantamalik.MainActivity;
+import in.filternet.jantamalik.R;
 
 public class IssuesFragment extends android.support.v4.app.Fragment implements ItemClickListener {
     View view;

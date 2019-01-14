@@ -1,11 +1,10 @@
-package in.filternet.jantamaalik.IssuesJava;
+package in.filternet.jantamalik.IssuesJava;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
-import in.filternet.jantamaalik.R;
+import in.filternet.jantamalik.R;
 
 public class IssuesItem extends AppCompatActivity {
     @Override

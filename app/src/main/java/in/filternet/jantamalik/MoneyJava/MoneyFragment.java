@@ -1,4 +1,4 @@
-package in.filternet.jantamaalik.MoneyJava;
+package in.filternet.jantamalik.MoneyJava;
 
 
 import android.content.SharedPreferences;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
-import in.filternet.jantamaalik.MainActivity;
-import in.filternet.jantamaalik.R;
+import in.filternet.jantamalik.MainActivity;
+import in.filternet.jantamalik.R;
 
 public class MoneyFragment extends Fragment {
     private GridView gridView;
