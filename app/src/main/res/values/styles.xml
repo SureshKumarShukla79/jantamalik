@@ -17,5 +17,10 @@
         <item name="android:textColorSecondary">@color/colorAccent</item>
         <item name="android:textColor">@color/black_color</item>
     </style>
+    <style name="NavigationTabTextAppeareance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/tabDefaultTextColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold|normal</item>
+    </style>
 
 </resources>
