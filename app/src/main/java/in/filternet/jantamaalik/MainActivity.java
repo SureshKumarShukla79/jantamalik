@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String shareBody = getString(R.string.share_message);
                 intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
-                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternetA");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
                startActivity(intent);
                 break;
         }

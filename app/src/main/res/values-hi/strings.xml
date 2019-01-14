@@ -22,17 +22,17 @@
     //MPs information
     <string name="MP_modi">नरेंद्र मोदी</string>
     <string name="constituency_info_modi">निर्वाचन क्षेत्र: वाराणसी</string>
-    <string name="contact_no_modi">011-25533009</string>
-    <string name="email_contact_modi">narendramodi@pmo.com</string>
-    <string name="address_modi">7 आरसीआर, नई दिल्ली, भारत</string>
+    <string name="contact_no_modi">+91-11-23012312</string>
+    <string name="email_contact_modi">connect@mygov.nic.in</string>
+    <string name="address_modi">7 लोक कल्याण मार्ग, नई दिल्ली, 110011</string>
 
-    <string name="update_info">If information need to be update</string>
-    <string name="donate">Show your support by donating us:</string>
+    <string name="update_info">अगर कोई जानकारी सही करनी हो</string>
+    <string name="donate">आपका समर्थन दें दान करें</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
-    <string name="add_issue">Add Issue</string>
-    <string name="update_contact_info">Update Information</string>
-    <string name="feedback">Feedback</string>
+    <string name="add_issue">अपने मुद्दे जोड़ें</string>
+    <string name="update_contact_info">जानकारी सही करें</string>
+    <string name="feedback">सुझाव लिखें</string>
 
-    <string name="share_message">Share JANTAMALIK: </string>
+    <string name="share_message">जनता मालिक ऐप डाउनलोड करें \nअपने सांसद, विधायक और पार्षद से संपर्क करें\nजानें टैक्स कहाँ खर्च हो रहा है\n</string>
 </resources>

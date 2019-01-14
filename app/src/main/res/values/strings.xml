@@ -23,9 +23,9 @@
     //MPs information
     <string name="MP_modi">Narendra Modi</string>
     <string name="constituency_info_modi">Constituency: Varanasi</string>
-    <string name="contact_no_modi">011-25533009</string>
-    <string name="email_contact_modi">narendramodi@pmo.com</string>
-    <string name="address_modi">7 RCR, New Delhi, INDIA</string>
+    <string name="contact_no_modi">+91-11-23012312</string>
+    <string name="email_contact_modi">connect@mygov.nic.in</string>
+    <string name="address_modi">7 Lok Kalyan Marg, New Delhi, 110011</string>
 
     <string name="update_info">If information need to be update</string>
     <string name="donate">Show your support by donating us:</string>
@@ -35,6 +35,6 @@
     <string name="update_contact_info">Update Information</string>
     <string name="feedback">Feedback</string>
 
-    <string name="share_message">Share JANTAMALIK: </string>
+    <string name="share_message">Share Janta Malik app\nCitizens can connect with MP/MLA/Parshad\nSee tax money spending\n</string>
 
 </resources>
