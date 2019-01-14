@@ -108,7 +108,17 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.contact_menuItem:
                 intent = new Intent(this, Contact.class);
+                intent.putExtra("feedback", true);
                 startActivity(intent);
+                break;
+            case R.id.share_menuItem:
+                intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+
+                String shareBody = getString(R.string.share_message);
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternetA");
+               startActivity(intent);
                 break;
         }
         return super.onOptionsItemSelected(item);

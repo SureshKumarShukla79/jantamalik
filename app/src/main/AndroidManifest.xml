@@ -32,7 +32,7 @@
             android:name="in.filternet.jantamaalik.Contact"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
-            android:label="Contact US"
+            android:label="Contact us"
             android:parentActivityName="in.filternet.jantamaalik.MainActivity" />
     </application>
 

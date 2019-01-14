@@ -63,6 +63,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), Contact.class);
+                intent.putExtra("add_issue", true);
                 startActivity(intent);
             }
         });
@@ -75,9 +76,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
 
     @Override
     public void onClick(View view, int position) {
-
         Intent intent = new Intent(view.getContext(), IssuesItem.class);
         startActivity(intent);
-
     }
 }

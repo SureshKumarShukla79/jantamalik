@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
+import in.filternet.jantamaalik.Contact;
 import in.filternet.jantamaalik.R;
 
 public class VoteMP extends AppCompatActivity {
@@ -54,5 +55,11 @@ public class VoteMP extends AppCompatActivity {
         } catch (Exception ex) {
             Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void onclick_update_mp(View view) {
+        Intent intent = new Intent(this, Contact.class);
+        intent.putExtra("update_mp", true);
+        startActivity(intent);
     }
 }

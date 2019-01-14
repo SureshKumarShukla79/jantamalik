@@ -26,9 +26,13 @@
     <string name="email_contact_modi">narendramodi@pmo.com</string>
     <string name="address_modi">7 आरसीआर, नई दिल्ली, भारत</string>
 
+    <string name="update_info">If information need to be update</string>
     <string name="donate">Show your support by donating us:</string>
+
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">Add Issue</string>
     <string name="update_contact_info">Update Information</string>
     <string name="feedback">Feedback</string>
+
+    <string name="share_message">Share JANTAMALIK: </string>
 </resources>

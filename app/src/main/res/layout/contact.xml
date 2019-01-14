@@ -32,6 +32,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
                     android:text="Add Issue"
+                    android:checked="false"
                     android:onClick="onclick_add_subject"
                     android:buttonTint="@color/colorPrimaryDark"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -41,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:checked="true"
+                    android:checked="false"
                     android:text="Update Information"
                     android:onClick="onclick_add_subject"
                     android:buttonTint="@color/colorPrimaryDark"
@@ -53,6 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="Feedback"
+                    android:checked="false"
                     android:onClick="onclick_add_subject"
                     android:buttonTint="@color/colorPrimaryDark"
                     android:textAppearance="?android:attr/textAppearanceLarge"/>
@@ -68,6 +70,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_centerHorizontal="true"
                 android:text="Email Us"
+                android:visibility="gone"
                 android:onClick="onclick_email_us"
                 android:textColor="@color/colorAccent"
                 android:background="@drawable/button_styling"/>
@@ -105,6 +108,7 @@
                 android:layout_centerHorizontal="true"
                 android:text="Donate"
                 android:textColor="@color/colorAccent"
+                android:onClick="onclick_open_donate"
                 android:background="@drawable/button_styling"/>
 
         </RelativeLayout>
