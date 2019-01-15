@@ -50,7 +50,10 @@ public class ImageAdapter extends BaseAdapter {
     }
 
     private Integer[] thumbnails ={
-            R.drawable.aaykar_text, R.drawable.refuelling_nozzle,
-            R.drawable.gst_icon, R.drawable.book_icon,
-            R.drawable.parle_g_icon };
+            R.drawable.tax_incometax,
+            R.drawable.tax_petrol, // https://economictimes.indiatimes.com/news/et-explains/why-you-end-up-paying-almost-double-for-petrol-and-diesel/articleshow/65718645.cms
+            R.drawable.tax_gst,
+            R.drawable.tax_book,
+            R.drawable.tax_parleg // https://www.outlookindia.com/website/story/to-cope-with-gst-rate-hike-parle-g-will-eat-into-your-biscuit-pack/308807
+    };
 }
