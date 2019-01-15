@@ -32,7 +32,7 @@ public class donate extends AppCompatActivity {
     }
 
     public void openDonationLink(View view){
-        Uri uri = Uri.parse("https://imjo.in/7mJBDn");
+        Uri uri = Uri.parse("https://www.filternet.in");//"https://imjo.in/7mJBDn");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

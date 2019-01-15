@@ -3,11 +3,12 @@
     <string name="Issues"><b>My issues</b></string>
     <string name="Money"><b>My note</b></string>
     <string name="Vote"><b>My vote</b></string>
-    <string name="Button_donate_activity">Donate</string>
-    <string name="menuItemDonate">Donate</string>
+    <string name="Button_donate_activity">Support us</string>
+    <string name="menuItemDonate">Support us</string>
     <string name="menuItemContactUs">Contact us</string>
     <string name="menuItemShare">Share</string>
-    <string name="Donate_menuItem_description">Please tap on the button below to donate.</string>
+    <string name="Donate_menuItem_description">Filternet Foundation is a registered non-profit (Section-8 Pvt Ltd).
+        \nTo support further research, click below</string>
     <string name="call_button">Call</string>
     <string name="email_button">Email</string>
     <string name="CrimeIssue">Crime</string>
@@ -31,7 +32,7 @@
     <string name="address_modi">7 Lok Kalyan Marg, New Delhi, 110011</string>
 
     <string name="update_info">If information need to be update</string>
-    <string name="donate">Show your support by donating us:</string>
+    <string name="donate">Show your support by clicking below</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">Add Issue</string>

@@ -6,8 +6,8 @@ android {
         applicationId "in.filternet.jantamalik"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 190115
-        versionName "19.01.15"
+        versionCode 190116
+        versionName "19.01.16"
         //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -29,4 +29,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'org.jsoup:jsoup:1.10.3' // Downloaded library for app version fetch
 }
