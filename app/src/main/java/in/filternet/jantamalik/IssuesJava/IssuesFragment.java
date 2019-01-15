@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,9 +53,11 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
 
         arr = new ArrayList<>();
         arr.add(getString(R.string.CrimeIssue));
+        arr.add(getString(R.string.WomenSafety));
         arr.add(getString(R.string.IssueUnemployment));
         arr.add(getString(R.string.IssueInflation));
         arr.add(getString(R.string.IssueEducation));
+        arr.add(getString(R.string.Cleanliness));
         arr.add(getString(R.string.IssueClimate));
         arr.add(getString(R.string.IssueHealth));
         //arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1");arr.add("1"); arr.add("1");
@@ -76,7 +79,9 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
 
     @Override
     public void onClick(View view, int position) {
-        Intent intent = new Intent(view.getContext(), IssuesItem.class);
-        startActivity(intent);
+        Toast.makeText(view.getContext(), R.string.issues_WIP, Toast.LENGTH_LONG).show();
+
+        //Intent intent = new Intent(view.getContext(), IssuesItem.class);
+        //startActivity(intent);
     }
 }
