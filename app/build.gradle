@@ -6,8 +6,8 @@ android {
         applicationId "in.filternet.jantamalik"
         minSdkVersion 15
         targetSdkVersion 27
-        versionCode 190114
-        versionName "19.01.14"
+        versionCode 190115
+        versionName "19.01.15"
         //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
