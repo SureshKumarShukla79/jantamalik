@@ -29,7 +29,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
     private List<String> arr;
     private FloatingActionButton ui_add_issue;
 
-    private static final String itemName = "in.filternet.jantaMalik";
+    public static final String itemName = "in.filternet.jantaMalik";
     private SharedPreferences mSharedPref;
     @Nullable
     @Override

@@ -9,8 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
-import in.filternet.jantamaalik.MainActivity;
-import in.filternet.jantamaalik.R;
+import in.filternet.jantamalik.MainActivity;
+import in.filternet.jantamalik.R;
 import in.filternet.jantamalik.Contact;
 
 public class VoteMP extends AppCompatActivity {
@@ -25,9 +25,7 @@ public class VoteMP extends AppCompatActivity {
         setContentView(R.layout.vote_mp_layout);
 
         toolbar = findViewById(R.id.toolbar_MP_layout);
-
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-
         toolbar.setTitle(R.string.app_name);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

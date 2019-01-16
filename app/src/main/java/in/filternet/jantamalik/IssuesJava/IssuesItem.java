@@ -9,10 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.transition.Explode;
 import android.transition.Fade;
 import android.view.Window;
+import android.widget.TextView;
 
 import in.filternet.jantamalik.R;
 
 public class IssuesItem extends AppCompatActivity {
+   private TextView textView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +27,8 @@ public class IssuesItem extends AppCompatActivity {
         }
 
         setContentView(R.layout.issues_fragment_item_layout);
-        textView = findViewById(R.id.textView_issues_item);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        textView = findViewById(R.id.textView);
 
         Intent intent = getIntent();
         String msg = intent.getStringExtra(IssuesFragment.itemName);

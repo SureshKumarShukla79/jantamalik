@@ -23,8 +23,7 @@
             android:name="in.filternet.jantamalik.DonateActivityJava.donate"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
         <activity
-            android:name="in.filternet.jantamalik.VoteJava.VoteMP"
-            android:parentActivityName="in.filternet.jantamalik.MainActivity" />
+            android:name="in.filternet.jantamalik.VoteJava.VoteMP" />
         <activity
             android:name="in.filternet.jantamalik.IssuesJava.IssuesItem"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />

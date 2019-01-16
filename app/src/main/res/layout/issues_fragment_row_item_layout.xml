@@ -11,7 +11,7 @@
         android:id="@+id/layout_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#dcdcdc"
+        app:cardBackgroundColor="#d6d7d7"
         android:layout_margin="3dp">
 
         <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content">
 
         <TextView
-            android:background="#DCDCDC"
+            android:background="@drawable/recyclerview_item_click_effect"
             android:id="@+id/Issues_recyclerview_textView"
             android:layout_width="match_parent"
             android:layout_marginRight="10dp"
@@ -36,7 +36,7 @@
             android:layout_gravity="right">
 
             <ImageView
-                android:background="#DCDCDC"
+                android:background="@drawable/recyclerview_item_click_effect"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:src="@drawable/right_black_arrow_24dp"/>
