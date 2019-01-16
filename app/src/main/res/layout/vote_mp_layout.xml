@@ -5,12 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_MP_layout"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/colorAccent" />
+
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="219dp"
         android:background="@drawable/gradientbackground"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_MP_layout">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
@@ -38,11 +54,12 @@
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
         android:background="#dcdcdc"
         android:gravity="center"
         android:orientation="vertical"
@@ -184,27 +201,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/update_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/update_info"
-                android:textColor="@color/black_color"
-                android:layout_marginTop="8dp"
                 android:layout_alignTop="@+id/arrow"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:layout_marginTop="8dp"
+                android:text="@string/update_info"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black_color" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/arrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:layout_toEndOf="@+id/update_text"
+                android:layout_toRightOf="@+id/update_text"
                 android:clickable="true"
                 android:focusable="true"
                 android:onClick="onclick_update_mp"
                 android:src="@drawable/ic_arrow_forward_white_24dp"
-                android:layout_toRightOf="@+id/update_text"
-                android:layout_toEndOf="@+id/update_text"
                 app:backgroundTint="@color/colorPrimary"
                 app:fabSize="mini" />
         </RelativeLayout>

@@ -80,4 +80,17 @@ public class VoteMP extends AppCompatActivity {
         intent.putExtra("update_mp", true);
         startActivity(intent);
     }
+
+    public void onclick_MP(View view){
+        Intent intent = new Intent(view.getContext(), VoteMP.class);
+        startActivity(intent);
+    }
+
+    public void onclick_MLA(View view){
+        Toast.makeText(view.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onclick_Parshad(View view){
+        Toast.makeText(view.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
+    }
 }
