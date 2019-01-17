@@ -2,13 +2,20 @@ package in.filternet.jantamalik;
 
 
 import android.app.Activity;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +43,7 @@ import org.jsoup.select.Elements;
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG ="MainActivity";
+    public final static String bDATE_CHANGE = "Date_Change";
     public final static String sUSER_CURRENT_LANGUAGE = "User_Current_Language";
     public final static String sLANGUAGE_HINDI = "hi";
     public final static String sLANGUAGE_ENGLISH = "en";
@@ -255,6 +263,109 @@ public class MainActivity extends AppCompatActivity {
                 //exception.printStackTrace();
             }
             return null;
+        }
+    }
+
+    public static class Match_Versions extends AsyncTask<Void, Void, Boolean> {
+        Context context_v;
+        private SharedPreferences mSharedPref;
+        private SharedPreferences.Editor mEditor;
+
+        protected Match_Versions(Context context) {
+            context_v = context;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            //Log.e(TAG, "VersionPrompt");
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            //Log.e(TAG, "doInBackground");
+            String mobileVersion, playstoreVersion = null;
+            String urlOfAppFromPlayStore = VersionPrompt.URL_PLAYSTORE_MARKET;
+            try {
+                mobileVersion = context_v.getPackageManager().getPackageInfo(context_v.getPackageName(), 0).versionName;
+                Log.e(TAG, "Mobile version = " + mobileVersion);
+
+                Document doc = Jsoup
+                        .connect(urlOfAppFromPlayStore)
+                        .timeout(60 * 1000) //millisec
+                        .userAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36") // 2018-Apr-11
+                        .referrer("http://www.google.com")
+                        .get();
+
+                Elements Version = doc.select(".htlgb ");
+                for (int i = 0; i < 15; i++) {
+                    String tmp = Version.get(i).text();
+                    //Log.e(TAG, tmp);
+                    if (Pattern.matches("^[0-9]{2}.[0-9]{2}.[0-9]{2}$", tmp)) {
+                        playstoreVersion = tmp;
+                        break;
+                    }
+                }
+                Log.e(TAG, "Playstore version = " + playstoreVersion);
+
+                if (playstoreVersion != null) {
+                    mSharedPref = PreferenceManager.getDefaultSharedPreferences(context_v);
+                    mEditor = mSharedPref.edit();
+                    mEditor.putBoolean(bDATE_CHANGE, false).commit();
+                }
+
+                if (playstoreVersion != null && !mobileVersion.equals(playstoreVersion)) {
+                    Log.e(TAG, "Versions not matched");
+                    return true;
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return false;
+        }
+
+        @Override
+        protected void onPostExecute(final Boolean success) {
+            if (success) {
+                showNotification(context_v);
+            }
+        }
+
+        void showNotification(Context context) {
+            String CHANNEL_ID = "Update";
+            NotificationCompat.Builder mBuilder;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+                mBuilder = new NotificationCompat.Builder(context)
+                        .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
+                        .setSmallIcon(R.drawable.notification)
+                        .setContentTitle(context.getResources().getString(R.string.app_name))
+                        .setContentText("App needs to be updated")
+                        .setChannelId(CHANNEL_ID);
+            } else {
+                mBuilder = new NotificationCompat.Builder(context)
+                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setContentTitle(context.getResources().getString(R.string.app_name))
+                        .setContentText("App needs to be updated")
+                        .setChannelId(CHANNEL_ID);
+            }
+
+            Intent resultIntent = new Intent(context, MainActivity.class);
+            PendingIntent resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            mBuilder.setContentIntent(resultPendingIntent);
+            mBuilder.setAutoCancel(true);
+
+            // Gets an instance of the NotificationManager service
+            NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+            //NotificationCompat.Builder constructor requires a channel ID to show notifications on Android 8.0 (API level 26) and higher
+            //Before showing notification on Android 8.0 and higher, we must register app's notification channel
+            //with the system by passing an instance of NotificationChannel to createNotificationChannel()
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Update", NotificationManager.IMPORTANCE_LOW);
+                notificationManager.createNotificationChannel(channel);
+            }
+
+            notificationManager.notify(1, mBuilder.build());
         }
     }
 }
