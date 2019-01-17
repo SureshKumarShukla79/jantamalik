@@ -14,6 +14,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -34,6 +35,7 @@ import org.jsoup.select.Elements;
 
 public class MainActivity extends AppCompatActivity {
 
+    private final static String TAG ="MainActivity";
     public final static String sUSER_CURRENT_LANGUAGE = "User_Current_Language";
     public final static String sLANGUAGE_HINDI = "hi";
     public final static String sLANGUAGE_ENGLISH = "en";
@@ -193,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                 boolean app_update_later = mSharedPref.getBoolean(bAPP_UPDATE_LATER, false);
                 if (!app_update_later) {
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getBaseContext(), R.style.Theme_AppCompat_DayNight_Dialog);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog);
                     builder.setTitle("New version available, please update");
                     builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
                         @Override
