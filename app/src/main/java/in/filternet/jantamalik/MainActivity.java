@@ -75,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.appbar);
         ui_language_button = findViewById(R.id.lanugage_button);
 
+        setSupportActionBar(toolbar);
+
         if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
             ui_language_button.setText("EN");
         } else {
