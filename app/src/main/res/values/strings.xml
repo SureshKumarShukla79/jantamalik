@@ -41,5 +41,24 @@
 
     <string name="share_message">Share Janta Malik app,\nCitizens can connect with MP/MLA/Parshad\nSee tax money spending\n</string>
     <string name="issues_WIP">Under Progress</string>
+    <string name="state_text">State</string>
+    <string name="constitunecy_text">Area</string>
+    <string name="Ward_text">Ward</string>
+
+    <string-array name="MP_state_values">
+        <item>Uttar Pradesh</item>
+    </string-array>
+
+    <string-array name="MP_area_values">
+        <item>Varanasi</item>
+    </string-array>
+
+    <string-array name="MLA_area_values">
+        <item>Varanasi Cantt</item>
+    </string-array>
+
+    <string-array name="Parshad_values">
+        <item>Chittupur, Sigra</item>
+    </string-array>
 
 </resources>
