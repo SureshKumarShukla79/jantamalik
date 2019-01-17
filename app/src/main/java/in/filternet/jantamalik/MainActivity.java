@@ -20,11 +20,13 @@ import android.view.MenuItem;
 import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Locale;
 import java.util.regex.Pattern;
 
 import in.filternet.jantamalik.DonateActivityJava.donate;
+import in.filternet.jantamalik.VoteJava.VoteMP;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -68,12 +70,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             ui_language_button.setText("हिन्दी");
         }
-
-        setSupportActionBar(toolbar);
-
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.Issues).setIcon(R.drawable.issues));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.Money).setIcon(R.drawable.note));
-        tabLayout.addTab(tabLayout.newTab().setText(R.string.Vote).setIcon(R.drawable.vote));
 
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
