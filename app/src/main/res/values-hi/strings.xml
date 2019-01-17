@@ -40,23 +40,23 @@
 
     <string name="share_message">जनता मालिक ऐप डाउनलोड करें \nअपने सांसद, विधायक और पार्षद से संपर्क करें\nजानें टैक्स कहाँ खर्च हो रहा है\n</string>
     <string name="issues_WIP">जल्दी आएगा</string>
-    <string name="state_text">State</string>
-    <string name="constitunecy_text">Area</string>
-    <string name="Ward_text">Ward</string>
+    <string name="state_text">राज्य</string>
+    <string name="constitunecy_text">क्षेत्र</string>
+    <string name="ward_text">वार्ड</string>
 
     <string-array name="MP_state_values">
-        <item>Uttar Pradesh</item>
+        <item>उत्तर प्रदेश</item>
     </string-array>
 
     <string-array name="MP_area_values">
-        <item>Varanasi</item>
+        <item>वाराणसी</item>
     </string-array>
 
     <string-array name="MLA_area_values">
-        <item>Varanasi Cantt</item>
+        <item>वाराणसी कैंट</item>
     </string-array>
 
     <string-array name="Parshad_values">
-        <item>Chittupur, Sigra</item>
+        <item>छित्तुपुर, सिगरा</item>
     </string-array>
 </resources>

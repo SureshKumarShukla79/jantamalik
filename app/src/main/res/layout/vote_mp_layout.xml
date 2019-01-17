@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    android:id="@+id/VoteMP_scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -17,16 +25,90 @@
         app:title="@string/app_name"
         app:titleTextColor="@color/colorAccent" />
 
+    //Do's cardview
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/DOs_cardview_MP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        app:cardBackgroundColor="@color/tabDefaultTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_MP_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/DOs_Textview_MP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/tabDefaultTextColor"
+                android:text="Here the  DO's text will go."
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></TextView>
+
+            <TextView
+                android:id="@+id/DONTs_Textview_MP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/tabDefaultTextColor"
+                android:padding="10dp"
+                android:text="Here the DONT's text will go."
+                android:textColor="@color/black_color"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    //Dont's cardview
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/DONTs_cardview_MP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        app:cardBackgroundColor="@color/tabDefaultTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DOs_cardview_MP">
+
+        <TextView
+            android:id="@+id/Salary_MP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/tabDefaultTextColor"
+            android:padding="10dp"
+            android:text="Salary"
+            android:textColor="@color/black_color"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/DONTs_cardview_MP"></TextView>
+
+    </android.support.v7.widget.CardView>
+
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="219dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/gradientbackground"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_MP_layout">
+        app:layout_constraintTop_toBottomOf="@+id/DONTs_cardview_MP"
+        tools:layout_editor_absoluteX="40dp">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
@@ -52,7 +134,7 @@
 
     <LinearLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
+        android:layout_width="397dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -228,4 +310,7 @@
         </RelativeLayout>
     </LinearLayout>
 
+
+
 </android.support.constraint.ConstraintLayout>
+</ScrollView>

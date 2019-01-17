@@ -43,7 +43,7 @@
     <string name="issues_WIP">Under Progress</string>
     <string name="state_text">State</string>
     <string name="constitunecy_text">Area</string>
-    <string name="Ward_text">Ward</string>
+    <string name="ward_text">Ward</string>
 
     <string-array name="MP_state_values">
         <item>Uttar Pradesh</item>
