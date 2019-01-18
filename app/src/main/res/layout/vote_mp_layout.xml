@@ -8,114 +8,91 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_MP_layout"
         android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:background="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/app_name"
+        app:title="@string/MP"
         app:titleTextColor="@color/colorAccent" />
-
-    //Do's cardview
 
     <android.support.v7.widget.CardView
         android:id="@+id/DOs_cardview_MP"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="8dp"
         android:layout_marginTop="5dp"
         android:padding="10dp"
-        app:cardBackgroundColor="@color/tabDefaultTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar_MP_layout">
+        android:layout_below="@+id/toolbar_MP_layout">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
+            <TextView
+                android:id="@+id/democracy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightTextBackgroundColor"
+                android:text="@string/democracy"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="8dp"
+                android:textColor="@color/black_color" />
             <TextView
                 android:id="@+id/DOs_Textview_MP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/tabDefaultTextColor"
-                android:text="Here the  DO's text will go."
-                android:textColor="@color/black_color"
-                android:textSize="22sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"></TextView>
-
+                android:layout_marginTop="3dp"
+                android:background="@color/lightTextBackgroundColor"
+                android:text="@string/mp_duty"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="8dp"
+                android:textColor="@color/black_color" />
             <TextView
                 android:id="@+id/DONTs_Textview_MP"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="@color/tabDefaultTextColor"
-                android:padding="10dp"
-                android:text="Here the DONT's text will go."
+                android:layout_marginTop="3dp"
+                android:background="@color/lightTextBackgroundColor"
+                android:padding="8dp"
+                android:text="@string/mp_optional"
                 android:textColor="@color/black_color"
-                android:textSize="22sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"></TextView>
-
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <TextView
+                android:id="@+id/Salary_MP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightTextBackgroundColor"
+                android:layout_marginTop="3dp"
+                android:padding="8dp"
+                android:text="@string/salary_Saansad"
+                android:textColor="@color/black_color"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    //Dont's cardview
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/DONTs_cardview_MP"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:padding="5dp"
-        app:cardBackgroundColor="@color/tabDefaultTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DOs_cardview_MP">
-
-        <TextView
-            android:id="@+id/Salary_MP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/tabDefaultTextColor"
-            android:padding="10dp"
-            android:text="Salary"
-            android:textColor="@color/black_color"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/DONTs_cardview_MP"></TextView>
-
     </android.support.v7.widget.CardView>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="219dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/gradientbackground"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/DONTs_cardview_MP"
+        android:layout_below="@+id/DOs_cardview_MP"
         tools:layout_editor_absoluteX="40dp">
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/narendra_modi_pic"
             app:civ_border_color="@color/black_color"
             app:civ_border_width="3dp" />
@@ -124,33 +101,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="@string/MP_modi"
             android:textColor="#fff"
-            android:textSize="22sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="397dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:background="#dcdcdc"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        android:layout_below="@+id/linearLayout3">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -176,7 +148,7 @@
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="@string/constituency_info_modi"
-                    android:textSize="20sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -198,7 +170,7 @@
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="@string/contact_no_modi"
-                    android:textSize="20sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -220,7 +192,7 @@
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="@string/email_contact_modi"
-                    android:textSize="20sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -242,7 +214,7 @@
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="@string/address_modi"
-                    android:textSize="20sp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -282,6 +254,8 @@
             android:id="@+id/update_mp_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
@@ -290,6 +264,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/arrow"
                 android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"
                 android:text="@string/update_info"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/black_color" />
@@ -310,7 +285,5 @@
         </RelativeLayout>
     </LinearLayout>
 
-
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
 </ScrollView>

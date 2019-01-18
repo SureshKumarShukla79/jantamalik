@@ -44,6 +44,16 @@
     <string name="constitunecy_text">क्षेत्र</string>
     <string name="ward_text">वार्ड</string>
 
+    <string name="democracy">लोकतंत्र में वोटर, सरकार कैसे चलाते हैं
+        \n<b>वोटर -> सांसद -> लोकसभा -> सरकार</b></string>
+    <string name="mp_duty"><b>सांसद के जरूरी काम</b>
+        \n1. मेरे सवालोंं को लोकसभा में पूछना और सरकार से जवाब लेना
+        \n2. लोकसभा की बहसों में मेरे पक्ष को रखना
+        \n3. सरकार के खर्च और काम-काज का हिसाब समझकर मुझे बताना</string>
+    <string name="mp_optional"><b>गैर-जरूरी या वैकल्पिक</b>
+        \nशादी या पार्टी या समारोह में जाना, सोशल मीडिया</string>
+    <string name="salary_Saansad"><b>वेतन 2.7 लाख प्रतिमाह</b> (भत्ते मिलाकर)</string>
+
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>
     </string-array>
