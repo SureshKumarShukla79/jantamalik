@@ -15,7 +15,6 @@ import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
 public class MoneyFragment extends Fragment {
-    private GridView gridView;
 
     View view;
 
@@ -32,8 +31,6 @@ public class MoneyFragment extends Fragment {
         }
 
         view = inflater.inflate(R.layout.money_fragment,container,false);
-        gridView = view.findViewById(R.id.money_tab_gridview);
-        gridView.setAdapter(new ImageAdapter(view.getContext()));
         return view;
     }
 }
