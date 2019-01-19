@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     public final static String sLANGUAGE_HINDI = "hi";
     public final static String sLANGUAGE_ENGLISH = "en";
 
+    private static int prev_tab = 0;
+
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
@@ -86,11 +88,14 @@ public class MainActivity extends AppCompatActivity {
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
         viewPager.setAdapter(viewPagerAdapter);
+        viewPager.setCurrentItem(prev_tab); // restore old tab
+
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout ));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+                prev_tab = tab.getPosition();
             }
 
             @Override
