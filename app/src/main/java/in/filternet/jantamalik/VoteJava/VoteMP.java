@@ -87,10 +87,10 @@ public class VoteMP extends AppCompatActivity {
     }
 
     public void onclick_MLA(View view){
-        Toast.makeText(view.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
+        Toast.makeText(view.getContext(),R.string.next_version, Toast.LENGTH_LONG).show();
     }
 
     public void onclick_Parshad(View view){
-        Toast.makeText(view.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
+        Toast.makeText(view.getContext(),R.string.next_version, Toast.LENGTH_LONG).show();
     }
 }

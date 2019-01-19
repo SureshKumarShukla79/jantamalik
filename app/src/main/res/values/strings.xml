@@ -54,6 +54,11 @@
     <string name="mp_optional"><b>Optional</b>
         \nAttending weddings, parties, public functions and social media</string>
     <string name="salary_Saansad"><b>Salary 2.7 lakh per month</b> (including allowances)</string>
+    <string name="next_version">Coming in next version</string>
+
+    <string name="tax_note">You give tax in various ways to build nation. Tax rates on common items :</string>
+    <string name="tax_total_center"><b>Central govt total tax : 24,42,213 crore</b></string>
+    <string name="tax_center_details">Where this tax money is spent?</string>
 
     <string-array name="MP_state_values">
         <item>Uttar Pradesh</item>

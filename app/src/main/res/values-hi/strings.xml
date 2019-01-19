@@ -54,6 +54,10 @@
         \nशादी या पार्टी या समारोह में जाना, सोशल मीडिया</string>
     <string name="salary_Saansad"><b>वेतन 2.7 लाख प्रतिमाह</b> (भत्ते मिलाकर)</string>
 
+    <string name="next_version">अगले संस्करण में आनेवाला है</string>
+
+    <string name="tax_note">देश की प्रगति के लिए आप कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
+
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>
     </string-array>
