@@ -102,208 +102,145 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp">
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:text="Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="Crore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="%" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:text="Interest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="5,75,795" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="23.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="Crore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="%" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                android:text="nDefence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="2,82,733" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="11.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="Interest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="5,75,795" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="23.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                android:text="Subsidy (food)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="1,69,323" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="6.93" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="nDefence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="2,82,733" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="11.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="Subsidy (food)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1,69,323" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="6.93" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="Pension" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1,68,466" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="6.90" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="Transfer to States" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1,42,858" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="5.85" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>  <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-            android:text="Union Territories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="14,123" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-        <TextView
-            android:text="0.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-    </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                android:text="Planning And Statistics" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="5,199" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="0.21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="Rural Development" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1,38,097" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="5.65" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView
-                android:text="Development Of North East" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="3,000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
-            <TextView
-                android:text="0.12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="Transport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1,34,572" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="5.51" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Tax Administration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1,05,541" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="4.32" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Home Affairs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="93,450" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="3.83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Education" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="85,010" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="3.48" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Others" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="72,845" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="2.98" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Subsidy (fertilizer)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="70,080" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="2.87" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Agriculture And Allied" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="63,836" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="2.61" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Health" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="54,667" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="2.24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Social welfare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="44,220" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1.81" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Urban Development" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="41,765" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1.71" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Energy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="41,104" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1.68" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Commerce And Industry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="27,956" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1.14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Subsidy (petroleum)" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="24,933" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1.02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Scientific Department" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="24,906" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="1.02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="IT And Telecom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="22,380" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="0.92" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Finance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="20,342" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="0.83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="External Affairs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="15,012" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="0.61" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Union Territories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="14,123" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="0.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Union Territories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="14,123" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="0.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Planning And Statistics" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="5,199" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="0.21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:text="Development Of North East" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="3,000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="0.12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
     </TableLayout>
 
