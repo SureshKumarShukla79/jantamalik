@@ -41,10 +41,20 @@ public class VoteFragment extends Fragment {
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
 
-    public static final String sSTATE = "Uttar Pradesh";
-    public static final String sMP = "Varanasi";
-    public static final String sMLA = "Varanasi Cantt";
-    public static final String sWARD = "Chittupur, Sigra";
+    public static final String DEFAULT_STATE = "Uttar Pradesh";
+    public static final String DEFAULT_MP = "Varanasi";
+    public static final String DEFAULT_MLA = "Varanasi Cantt";
+    public static final String DEFAULT_WARD = "Chittupur, Sigra";
+
+    public static final String hiDEFAULT_STATE = "उत्तर प्रदेश";
+    public static final String hiDEFAULT_MP = "वाराणसी";
+    public static final String hiDEFAULT_MLA = "वाराणसी कैंट";
+    public static final String hiDEFAULT_WARD = "छित्तुपुर, सिगरा";
+
+    public static final String sSTATE = DEFAULT_STATE;
+    public static final String sMP = DEFAULT_MP;
+    public static final String sMLA = DEFAULT_MLA;
+    public static final String sWARD = DEFAULT_WARD;
 
     String current_language;
     public String AreaName;
@@ -128,12 +138,20 @@ public class VoteFragment extends Fragment {
         arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerState.setAdapter(arrayAdapterState);
 
-        String State = mSharedPref.getString(sSTATE,"");
-        String MP = mSharedPref.getString(sMP,"");
-        String MLA = mSharedPref.getString(sMLA,"");
-        String Ward = mSharedPref.getString(sWARD,"");
+        String State = mSharedPref.getString(sSTATE,DEFAULT_STATE);
+        String MP = mSharedPref.getString(sMP,DEFAULT_MP);
+        String MLA = mSharedPref.getString(sMLA,DEFAULT_MLA);
+        String Ward = mSharedPref.getString(sWARD,DEFAULT_WARD);
+        // In case of Hindi, change the defaults
         if (current_language != null && current_language.equals(MainActivity.sLANGUAGE_HINDI)) {
-            //TODO hindi equivalents
+            if(State.equals(DEFAULT_STATE))
+                State = hiDEFAULT_STATE;
+            if(MP.equals(DEFAULT_MP))
+                MP = hiDEFAULT_MP;
+            if(MLA.equals(DEFAULT_MLA))
+                MLA = hiDEFAULT_MLA;
+            if(Ward.equals(DEFAULT_WARD))
+                Ward = hiDEFAULT_WARD;
         }
 
         //populating Constiuencies
