@@ -23,7 +23,8 @@
     <string name="MLA">विधायक</string>
     <string name="Parshad">पार्षद</string>
 
-    //MPs information
+    <string name="mp_area">निर्वाचन क्षेत्र: </string>
+
     <string name="MP_modi">नरेंद्र मोदी</string>
     <string name="constituency_info_modi">निर्वाचन क्षेत्र: वाराणसी</string>
     <string name="contact_no_modi">+91-11-23012312</string>

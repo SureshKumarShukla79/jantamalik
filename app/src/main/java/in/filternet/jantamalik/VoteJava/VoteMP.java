@@ -1,21 +1,34 @@
 package in.filternet.jantamalik.VoteJava;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import in.filternet.jantamalik.DataFilter;
+import in.filternet.jantamalik.MPdata;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 import in.filternet.jantamalik.Contact;
 
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
+import static in.filternet.jantamalik.VoteJava.VoteFragment.DEFAULT_MP;
+import static in.filternet.jantamalik.VoteJava.VoteFragment.sMP;
+
 public class VoteMP extends AppCompatActivity {
     public static final String TAB_NUMBER = "tab_number";
     private Toolbar toolbar;
+    private TextView name,phone,email,area, address;
+    DataFilter.MP_info mp;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +38,11 @@ public class VoteMP extends AppCompatActivity {
         setContentView(R.layout.vote_mp_layout);
 
         toolbar = findViewById(R.id.toolbar_MP_layout);
+        name = findViewById(R.id.MP_name);
+        phone = findViewById(R.id.phone);
+        email = findViewById(R.id.email);
+        area = findViewById(R.id.Area);
+        address = findViewById(R.id.address);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         toolbar.setTitle(R.string.app_name);
 
@@ -39,10 +57,25 @@ public class VoteMP extends AppCompatActivity {
             }
 
         });
+       SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String MPArea = mSharedPref.getString(sMP,DEFAULT_MP);
+       String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        DataFilter dataFilter = new DataFilter();
+        mp = dataFilter.getMPInfo(current_language, MPArea);
+
+        Log.e("jhhj", mp.name+mp.phone+mp.email+mp.address);
+        name.setText(mp.name);
+        phone.setText(mp.phone);
+        email.setText(mp.email);
+        area.setText(getString(R.string.mp_area) + MPArea);
+        address.setText(mp.address);
     }
 
     public void onclick_call_mp(View view) {
-        Uri number = Uri.parse("tel:" + getString(R.string.contact_no_modi));
+        if(mp.phone.equals(""))
+            return;
+
+        Uri number = Uri.parse("tel:" + mp.phone);
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
 
         try { // Calling not available on Tablet devices
@@ -54,7 +87,10 @@ public class VoteMP extends AppCompatActivity {
     }
 
     public void onclick_email_mp(View view) {
-        String[] TO = {getString(R.string.email_contact_modi)};
+        if(mp.email.equals(""))
+            return;
+
+        String[] TO = {mp.email};
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setData(Uri.parse("mailto:"));
         intent.setType("text/plain");

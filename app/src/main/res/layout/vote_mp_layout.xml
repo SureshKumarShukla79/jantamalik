@@ -98,12 +98,12 @@
             app:civ_border_width="3dp" />
 
         <TextView
+            android:id="@+id/MP_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/MP_modi"
             android:textColor="#fff"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
@@ -143,11 +143,11 @@
                     android:src="@drawable/ic_location_on_black_24dp" />
 
                 <TextView
+                    android:id="@+id/Area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="@string/constituency_info_modi"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -165,11 +165,11 @@
                     android:src="@drawable/ic_phone_black_24dp" />
 
                 <TextView
+                    android:id="@+id/phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="@string/contact_no_modi"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -187,17 +187,16 @@
                     android:src="@drawable/ic_email_black_24dp" />
 
                 <TextView
+                    android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="@string/email_contact_modi"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
@@ -209,11 +208,11 @@
                     android:src="@drawable/ic_store_mall_directory_black_24dp" />
 
                 <TextView
+                    android:id="@+id/address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
-                    android:text="@string/address_modi"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -239,7 +238,7 @@
                 app:backgroundTint="@color/colorPrimary" />
 
             <android.support.design.widget.FloatingActionButton
-                android:id="@+id/email"
+                android:id="@+id/email_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"

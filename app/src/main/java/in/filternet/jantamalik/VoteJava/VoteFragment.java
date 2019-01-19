@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 import in.filternet.jantamalik.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
+
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class VoteFragment extends Fragment {
     private View view;
@@ -64,8 +67,8 @@ public class VoteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, final Bundle savedInstanceState) {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-        current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, null);
-        if (current_language != null && current_language.equals(MainActivity.sLANGUAGE_HINDI)) {
+        current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        if (current_language.equals(sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(getActivity(), "hi");
         }
 
@@ -95,7 +98,7 @@ public class VoteFragment extends Fragment {
                 editor.putString(sSTATE, State).commit();
 
                 arrayAdapterMP = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
-                        dataFilter.getMPAreas(State));
+                        dataFilter.getMPAreas(current_language,State));
                 arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerMP.setAdapter(arrayAdapterMP);
             }
@@ -111,8 +114,6 @@ public class VoteFragment extends Fragment {
                 AreaName = adapterView.getItemAtPosition(i).toString();
 
                 editor.putString(sSTATE, AreaName ).commit();
-
-                Toast.makeText(getContext(),AreaName, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -133,17 +134,12 @@ public class VoteFragment extends Fragment {
         Parshad_Click();
 
         // Populating GUI
-        arrayAdapterState = new ArrayAdapter(view.getContext(), android.R.layout.simple_spinner_item,
-                dataFilter.getStates());
-        arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerState.setAdapter(arrayAdapterState);
-
         String State = mSharedPref.getString(sSTATE,DEFAULT_STATE);
         String MP = mSharedPref.getString(sMP,DEFAULT_MP);
         String MLA = mSharedPref.getString(sMLA,DEFAULT_MLA);
         String Ward = mSharedPref.getString(sWARD,DEFAULT_WARD);
         // In case of Hindi, change the defaults
-        if (current_language != null && current_language.equals(MainActivity.sLANGUAGE_HINDI)) {
+        if (current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
             if(State.equals(DEFAULT_STATE))
                 State = hiDEFAULT_STATE;
             if(MP.equals(DEFAULT_MP))
@@ -153,10 +149,15 @@ public class VoteFragment extends Fragment {
             if(Ward.equals(DEFAULT_WARD))
                 Ward = hiDEFAULT_WARD;
         }
+        Log.e("", State+MP+MLA+Ward);
 
+        arrayAdapterState = new ArrayAdapter(view.getContext(), android.R.layout.simple_spinner_item,
+                dataFilter.getStates(current_language));
+        arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerState.setAdapter(arrayAdapterState);
         //populating Constiuencies
         arrayAdapterMP = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
-                dataFilter.getMPAreas(State));
+                dataFilter.getMPAreas(current_language,State));
         arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMP.setAdapter(arrayAdapterMP);
 
