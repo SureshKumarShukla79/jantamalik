@@ -58,9 +58,37 @@
     <string name="salary_Saansad"><b>Salary 2.7 lakh per month</b> (including allowances)</string>
     <string name="next_version">Coming in next version</string>
 
-    <string name="tax_note">You give tax in various ways to build nation. Tax rates on common items :</string>
-    <string name="tax_total_center"><b>Central govt total tax : 24,42,213 crore</b></string>
+    <string name="tax_note">For nation building, we all pay tax in various forms. Tax rates on common items :</string>
+    <string name="tax_total_center"><b>Central govt total tax : 24,42,213 crore
+        \nTwenty four lakh forty two thousand two hundred thirteen crores</b></string>
     <string name="tax_center_details">Where this tax money is spent?</string>
+    <string name="crore">Crore</string>
+    <string name="interest">Interest</string>
+    <string name="defence">Defence</string>
+    <string name="subsidy_food">Subsidy (food)</string>
+    <string name="pension">Pension</string>
+    <string name="transfer_to_states">Transfer to States</string>
+    <string name="rural_development">Rural Development</string>
+    <string name="transport">Transport</string>
+    <string name="tax_administration">Tax Administration</string>
+    <string name="home_affairs">Home Affairs</string>
+    <string name="education">Education</string>
+    <string name="others">Others</string>
+    <string name="subsidy_fertilizer">Subsidy (fertilizer)</string>
+    <string name="agriculture_and_allied">Agriculture And Allied</string>
+    <string name="health">Health</string>
+    <string name="social_welfare">Social welfare</string>
+    <string name="urban_development">Urban Development</string>
+    <string name="energy">Energy</string>
+    <string name="commerce_and_industry">Commerce And Industry</string>
+    <string name="subsidy_petroleum">Subsidy (petroleum)</string>
+    <string name="scientific_department">Scientific Department</string>
+    <string name="it_and_telecom">IT and Telecom</string>
+    <string name="finance">Finance</string>
+    <string name="external_affairs">External Affairs</string>
+    <string name="union_territories">Union Territories</string>
+    <string name="planning_and_statistics">Planning And Statistics</string>
+    <string name="development_north_east">Development North-East</string>
 
     <string-array name="MP_state_values">
         <item>Uttar Pradesh</item>

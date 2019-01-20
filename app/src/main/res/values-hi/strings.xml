@@ -57,7 +57,37 @@
 
     <string name="next_version">अगले संस्करण में आनेवाला है</string>
 
-    <string name="tax_note">देश की प्रगति के लिए आप कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
+    <string name="tax_note">देश की प्रगति के लिए हम सब कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
+    <string name="tax_total_center"><b>केंद्र सरकार को टैक्स : 24,42,213 करोड़
+    \nचौबीस लाख बयालीस हजार दो सौ तेरह करोड़</b></string>
+    <string name="tax_center_details">टैक्स का यह पैसा कहाँ खर्च हो रहा है?</string>
+    <string name="crore">करोड़</string>
+    <string name="interest">ब्याज</string>
+    <string name="defence">रक्षा</string>
+    <string name="subsidy_food">सब्सिडी (भोजन)</string>
+    <string name="pension">पेंशन</string>
+    <string name="transfer_to_states">राज्य को स्थानांतरण</string>
+    <string name="rural_development">ग्रामीण विकास</string>
+    <string name="transport">ट्रांसपोर्ट</string>
+    <string name="tax_administration">टैक्स प्रशासन</string>
+    <string name="home_affairs">गृह मंत्रालय</string>
+    <string name="education">शिक्षा</string>
+    <string name="others">अन्य</string>
+    <string name="subsidy_fertilizer">सब्सिडी - उर्वरक</string>
+    <string name="agriculture_and_allied">कृषि और संबद्ध गतिविधि</string>
+    <string name="health">स्वास्थ्य</string>
+    <string name="social_welfare">सामाजिक कल्याण</string>
+    <string name="urban_development">शहरी विकास</string>
+    <string name="energy">ऊर्जा</string>
+    <string name="commerce_and_industry">वाणिज्य और उद्योग</string>
+    <string name="subsidy_petroleum">सब्सिडी (पेट्रोलियम)</string>
+    <string name="scientific_department">वैज्ञानिक विभाग</string>
+    <string name="it_and_telecom">आईटी और दूरसंचार</string>
+    <string name="finance">वित्त</string>
+    <string name="external_affairs">विदेशी मामले</string>
+    <string name="union_territories">केंद्र शासित प्रदेश</string>
+    <string name="planning_and_statistics">योजना और सांख्यिकी</string>
+    <string name="development_north_east">पूर्वोत्तर का विकास</string>
 
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>
