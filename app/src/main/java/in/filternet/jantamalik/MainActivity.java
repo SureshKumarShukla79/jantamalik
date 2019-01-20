@@ -28,13 +28,11 @@ import android.view.MenuItem;
 import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import java.util.Locale;
 import java.util.regex.Pattern;
 
 import in.filternet.jantamalik.DonateActivityJava.donate;
-import in.filternet.jantamalik.VoteJava.VoteMP;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -58,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
 
+    String mLanguage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,8 +65,13 @@ public class MainActivity extends AppCompatActivity {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPref.edit();
 
-        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
-        if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
+        mLanguage = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null); // first launch
+        if (mLanguage == null){
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
+            mLanguage = sLANGUAGE_HINDI; // default - Hindi 58 crore. English 2 crore.
+        }
+
+        if(mLanguage.equals(sLANGUAGE_HINDI)) {
             setUI_Lang(this, "hi");
         }
 
@@ -79,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
 
-        if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
+        if(mLanguage.equals(sLANGUAGE_HINDI)) {
             ui_language_button.setText("EN");
         } else {
             ui_language_button.setText("हिन्दी");
@@ -99,14 +104,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
+            public void onTabUnselected(TabLayout.Tab tab) {}
 
             @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
+            public void onTabReselected(TabLayout.Tab tab) {}
         });
 
         //As per documentation, Starting with Build.VERSION_CODES.HONEYCOMB, tasks are executed on a single thread to avoid
@@ -211,14 +212,14 @@ public class MainActivity extends AppCompatActivity {
                 if (!app_update_later) {
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog);
-                    builder.setTitle("New version available, please update");
-                    builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
+                    builder.setTitle(R.string.version_update);
+                    builder.setPositiveButton(R.string.Option_Update, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
                             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(URL_PLAYSTORE_MARKET)));
                         }
                     });
-                    builder.setNegativeButton("Later", new DialogInterface.OnClickListener() {
+                    builder.setNegativeButton(R.string.Option_Later, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
                             mEditor.putBoolean(bAPP_UPDATE_LATER, true).commit();

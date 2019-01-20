@@ -95,7 +95,8 @@
             android:layout_marginTop="5dp"
             android:src="@drawable/narendra_modi_pic"
             app:civ_border_color="@color/black_color"
-            app:civ_border_width="3dp" />
+            app:civ_border_width="3dp"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/MP_name"

@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="145dp"
         android:layout_height="69dp"
-        android:text="@string/issues_WIP"
+        android:text="@string/next_version"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

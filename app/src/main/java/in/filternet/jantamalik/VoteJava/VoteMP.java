@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,12 +23,14 @@ import in.filternet.jantamalik.Contact;
 
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.DEFAULT_MP;
+import static in.filternet.jantamalik.VoteJava.VoteFragment.hiDEFAULT_MP;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.sMP;
 
 public class VoteMP extends AppCompatActivity {
-    public static final String TAB_NUMBER = "tab_number";
+    String TAG = "VoteMP";
     private Toolbar toolbar;
     private TextView name,phone,email,area, address;
+    private de.hdodenhof.circleimageview.CircleImageView profile_pic;
     DataFilter.MP_info mp;
 
     @Override
@@ -43,32 +46,35 @@ public class VoteMP extends AppCompatActivity {
         email = findViewById(R.id.email);
         area = findViewById(R.id.Area);
         address = findViewById(R.id.address);
+        profile_pic = findViewById(R.id.profile_image);
+
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         toolbar.setTitle(R.string.app_name);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-
             @Override
-
             public void onClick(View view) {
-            Intent intent = new Intent(view.getContext(), MainActivity.class);
-            intent.putExtra(TAB_NUMBER, 2);
-            startActivity(intent);
+                Intent intent = new Intent(view.getContext(), MainActivity.class);
+                startActivity(intent);
             }
-
         });
-       SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+
+        SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String MPArea = mSharedPref.getString(sMP,DEFAULT_MP);
-       String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
         DataFilter dataFilter = new DataFilter();
         mp = dataFilter.getMPInfo(current_language, MPArea);
 
-        Log.e("jhhj", mp.name+mp.phone+mp.email+mp.address);
+        //Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
         name.setText(mp.name);
         phone.setText(mp.phone);
         email.setText(mp.email);
         area.setText(getString(R.string.mp_area) + MPArea);
         address.setText(mp.address);
+
+        // Only Varanasi MP pic in app
+        if(MPArea.equals(DEFAULT_MP) || MPArea.equals(hiDEFAULT_MP))
+            profile_pic.setVisibility(View.VISIBLE);
     }
 
     public void onclick_call_mp(View view) {

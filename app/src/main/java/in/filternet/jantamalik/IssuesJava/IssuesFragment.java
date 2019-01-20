@@ -53,15 +53,14 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         //setting the adapter
 
         arr = new ArrayList<>();
-        arr.add(getString(R.string.CrimeIssue));
+        //arr.add(getString(R.string.CrimeIssue));
         arr.add(getString(R.string.WomenSafety));
         arr.add(getString(R.string.IssueUnemployment));
-        arr.add(getString(R.string.IssueInflation));
+        //arr.add(getString(R.string.IssueInflation));
         arr.add(getString(R.string.IssueEducation));
         arr.add(getString(R.string.Cleanliness));
-        arr.add(getString(R.string.IssueClimate));
-        arr.add(getString(R.string.IssueHealth));
-        //arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1"); arr.add("1");arr.add("1"); arr.add("1");
+        //arr.add(getString(R.string.IssueClimate));
+        //arr.add(getString(R.string.IssueHealth));
 
         ui_add_issue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,17 +77,15 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         return view;
     }
 
-
     @Override
-
     public void onClick(View view, int position) {
-        Toast.makeText(view.getContext(), R.string.issues_WIP, Toast.LENGTH_LONG).show();
+        Toast.makeText(view.getContext(), R.string.next_version, Toast.LENGTH_LONG).show();
 
-        if (position==arr.indexOf(arr.get(position))) {
+        /*if (position == arr.indexOf(arr.get(position))) {
             Intent i = new Intent(view.getContext(), IssuesItem.class);
             i.putExtra(itemName, arr.get(position));
             startActivity(i);
-        }
+        }*/
     }
 }
 

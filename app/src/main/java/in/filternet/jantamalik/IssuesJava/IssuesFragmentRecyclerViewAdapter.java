@@ -65,6 +65,4 @@ public class IssuesFragmentRecyclerViewAdapter extends RecyclerView.Adapter<Issu
    public void onItemClickListener(ItemClickListener itemClickListener){
         this.itemClickListener = itemClickListener;
    }
-
-
 }

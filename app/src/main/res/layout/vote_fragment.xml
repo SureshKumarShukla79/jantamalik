@@ -101,7 +101,6 @@
 
     </android.support.v7.widget.CardView>
 
-    //spinner2
     <TextView
         android:id="@+id/Area_text"
         android:layout_width="wrap_content"
@@ -112,7 +111,8 @@
         android:layout_below="@id/layout_cardview"
         android:layout_marginTop="15dp"
         android:paddingLeft="30dp"
-        android:paddingRight="35dp" />
+        android:paddingRight="35dp"
+        android:visibility="invisible"/>
 
     <Spinner
         android:id="@+id/MLA_spinner"
@@ -126,7 +126,8 @@
         android:entries="@array/MLA_area_values"
         android:layout_below="@id/layout_cardview"
         android:layout_toRightOf="@id/Area_text"
-        android:layout_alignBaseline="@+id/Area_text" />
+        android:layout_alignBaseline="@+id/Area_text"
+        android:visibility="invisible"/>
 
     <android.support.v7.widget.CardView
         android:id="@+id/layout_cardview2"
@@ -135,7 +136,8 @@
         android:layout_below="@id/Area_text"
         android:layout_marginTop="8dp"
         android:onClick="onclick_MLA"
-        app:cardBackgroundColor="#d6d7d7">
+        app:cardBackgroundColor="#d6d7d7"
+        android:visibility="invisible" >
 
         <LinearLayout
             android:layout_width="350dp"
@@ -172,7 +174,6 @@
 
     </android.support.v7.widget.CardView>
 
-    //spinner3
     <TextView
         android:id="@+id/Ward_text"
         android:layout_width="wrap_content"
@@ -183,7 +184,8 @@
         android:layout_below="@id/layout_cardview2"
         android:layout_marginTop="15dp"
         android:paddingLeft="30dp"
-        android:paddingRight="35dp"/>
+        android:paddingRight="35dp"
+        android:visibility="invisible"/>
 
     <Spinner
         android:id="@+id/Ward_spinner"
@@ -197,7 +199,8 @@
         android:gravity="center"
         android:layout_below="@id/layout_cardview2"
         android:layout_toRightOf="@id/Ward_text"
-        android:layout_alignBaseline="@+id/Ward_text" />
+        android:layout_alignBaseline="@+id/Ward_text"
+        android:visibility="invisible"/>
 
     <android.support.v7.widget.CardView
         android:id="@+id/layout_cardview3"
@@ -208,7 +211,8 @@
         android:layout_marginLeft="3dp"
         android:layout_marginTop="8dp"
         android:onClick="onclick_Parshad"
-        app:cardBackgroundColor="#d6d7d7">
+        app:cardBackgroundColor="#d6d7d7"
+        android:visibility="invisible">
 
         <LinearLayout
             android:layout_width="350dp"

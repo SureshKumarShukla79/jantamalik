@@ -11,7 +11,7 @@
     <string name="call_button">कॉल करें</string>
     <string name="email_button">ईमेल करें</string>
     <string name="CrimeIssue">अपराध</string>
-    <string name="IssueUnemployment">बेरोजगारी</string>
+    <string name="IssueUnemployment">रोजगार</string>
     <string name="IssueInflation">महंगाई</string>
     <string name="IssueEducation">खराब शिक्षा</string>
     <string name="IssueClimate">प्रदूषण</string>
@@ -40,7 +40,7 @@
     <string name="feedback">सुझाव लिखें</string>
 
     <string name="share_message">जनता मालिक ऐप डाउनलोड करें \nअपने सांसद, विधायक और पार्षद से संपर्क करें\nजानें टैक्स कहाँ खर्च हो रहा है\n</string>
-    <string name="issues_WIP">जल्दी आएगा</string>
+
     <string name="state_text">राज्य</string>
     <string name="constitunecy_text">क्षेत्र</string>
     <string name="ward_text">वार्ड</string>
@@ -88,6 +88,10 @@
     <string name="union_territories">केंद्र शासित प्रदेश</string>
     <string name="planning_and_statistics">योजना और सांख्यिकी</string>
     <string name="development_north_east">पूर्वोत्तर का विकास</string>
+
+    <string name="version_update">ऐप का नया संस्करण आ गया है, डाउनलोड करें</string>
+    <string name="Option_Update">हाँ</string>
+    <string name="Option_Later">बाद में</string>
 
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>

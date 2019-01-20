@@ -8,18 +8,12 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Build;
 
-
 public class MainApplication extends Application {
     private final String TAG = "MainApplication";
-    private Context context;
-    private SharedPreferences mSharedPref;
-    private SharedPreferences.Editor mEditor;
 
     @Override
     public void onCreate() {
         super.onCreate();
-
-        context = getBaseContext().getApplicationContext(); // App global context
 
         /*
         In Android 6 - API 23(Nexus), USER_PRESENT fires after SCREEN_OFF when Screen Lock set to "Swipe"
