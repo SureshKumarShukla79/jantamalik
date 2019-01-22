@@ -18,12 +18,13 @@
 
         <activity
             android:name="in.filternet.jantamalik.MainActivity"
+            android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
         <activity
