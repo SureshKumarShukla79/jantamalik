@@ -93,6 +93,7 @@
     <string name="version_update">ऐप का नया संस्करण आ गया है, डाउनलोड करें</string>
     <string name="Option_Update">हाँ</string>
     <string name="Option_Later">बाद में</string>
+    <string name="User_appeal">Add your issues, they will appear\nin the next version.</string>
 
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>

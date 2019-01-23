@@ -94,6 +94,7 @@
     <string name="version_update">New version available, please update</string>
     <string name="Option_Update">Update</string>
     <string name="Option_Later">Later</string>
+    <string name="User_appeal">Add your issues, they will appear\nin the next version.</string>
 
     <string-array name="MP_state_values">
         <item>Uttar Pradesh</item>
