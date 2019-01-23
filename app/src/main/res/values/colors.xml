@@ -7,4 +7,6 @@
     <color name="black_color">#000000</color>
     <color name="tabDefaultTextColor">#bebebe</color>
     <color name="greylight">#efefef</color>
+    <color name="orange">#fdab2f</color>
+    <color name="itax">#fdab2f</color>
 </resources>

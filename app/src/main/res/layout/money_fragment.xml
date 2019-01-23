@@ -12,7 +12,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/tax_note"
@@ -28,14 +28,13 @@
 
     <GridLayout
         android:id="@+id/GridLayout_Note"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/tax_note"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:columnCount="3"
-        android:rowCount="2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:rowCount="3"
         android:orientation="horizontal"
         android:layout_margin="1dp">
 
@@ -44,18 +43,21 @@
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
+            android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_parleg" />
         <ImageButton
             android:id="@+id/GST_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
+            android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_gst" />
         <ImageButton
             android:id="@+id/Book_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
+            android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_book" />
         <ImageButton
             android:id="@+id/petrol_grid"
@@ -63,30 +65,65 @@
             android:layout_height="@dimen/tax_image"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:backgroundTint="@color/orange"
             android:src="@drawable/tax_petrol" />
+
         <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@color/colorAccent"
+            android:rotation="135"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow_tilted_24px" />
+        <ImageButton
+            android:layout_row="1"
+            android:layout_column="2"
             android:id="@+id/income_tax_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            android:backgroundTint="@color/itax"
             android:src="@drawable/tax_incometax" />
-    </GridLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_below="@+id/GridLayout_Note"
-        android:id="@+id/dhan_kalash"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/dhan_kalash"
-        app:civ_border_color="@color/black_color"
-        app:civ_border_width="3dp"/>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:background="@color/colorAccent"
+            android:rotation="90"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow_tilted_24px" />
+        <ImageButton
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_width="@dimen/tax_image"
+            android:layout_height="@dimen/tax_image"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dhan_kalash" />
+        <ImageButton
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/colorAccent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:rotation="180"
+            android:src="@drawable/ic_arrow_tilted_24px"/>
+    </GridLayout>
 
     <TextView
         android:id="@+id/tax_total_center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dhan_kalash"
+        android:layout_below="@+id/GridLayout_Note"
         android:layout_marginTop="3dp"
         android:background="@color/greylight"
         android:text="@string/tax_total_center"
