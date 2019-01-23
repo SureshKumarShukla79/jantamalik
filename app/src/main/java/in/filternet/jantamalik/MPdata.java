@@ -5,9 +5,9 @@ public final class MPdata {
     public static final String[][] all_MPs = {
 
         //    "STATE"		"STATE"		"No."		"Constituency"		"Name of elected M.P."		"Party affiliation"		"चुनाव क्षेत्र"		"निर्वाचित सांसद का नाम"		"पार्टी संबद्धता"		phone		email		address		website
-            {	"Andaman and Nicobar Islands"	,	"अण्डमान और निकोबार द्वीपसमूह"	,	"1"	,	"Andaman and Nicobar Islands"	,	"Bishnu Pada Ray"	,	"Bharatiya Janata Party"	,	"अंडमान व नोकोबार द्वीप समूह"	,	"विष्णु पादा रे"	,	"भारतीय जनता पार्टी"	,	""	,	""	,	""	,	""	}	,
-            {	"Andhra Pradesh"	,	"आन्ध्र प्रदेश"	,	"1"	,	"Araku"	,	"Kothapalli Geetha"	,	"YSR Congress Party"	,	"अरकू"	,	"कोथापल्ली गीता"	,	"YSR कांग्रेस पार्टी"	,	""	,	""	,	""	,	""	}	,
-            {	"Andhra Pradesh"	,	"आन्ध्र प्रदेश"	,	"2"	,	"Srikakulam"	,	"Ram Mohan Naidu Kinjarapu"	,	"Telugu Desam Party"	,	"श्रीकाकुलम"	,	"राम मोहन नायडू किंजारापु"	,	"तेलुगू देशम पार्टी"	,	""	,	""	,	""	,	""	}	,
+            {	"Andaman and Nicobar Islands"	,	"अण्डमान और निकोबार द्वीपसमूह"	,	"1"	,	"Andaman and Nicobar Islands"	,	"Bishnu Pada Ray"	,	"Bharatiya Janata Party"	,	"अंडमान व नोकोबार द्वीप समूह"	,	"विष्णु पादा रे"	,	"भारतीय जनता पार्टी"	,	"9013180198"	,	""	,	""	,	""	}	,
+            {	"Andhra Pradesh"	,	"आन्ध्र प्रदेश"	,	"1"	,	"Araku"	,	"Kothapalli Geetha"	,	"YSR Congress Party"	,	"अरकू"	,	"कोथापल्ली गीता"	,	"YSR कांग्रेस पार्टी"	,	"9013869918"	,	""	,	""	,	""	}	,
+            {	"Andhra Pradesh"	,	"आन्ध्र प्रदेश"	,	"2"	,	"Srikakulam"	,	"Ram Mohan Naidu Kinjarapu"	,	"Telugu Desam Party"	,	"श्रीकाकुलम"	,	"राम मोहन नायडू किंजारापु"	,	"तेलुगू देशम पार्टी"	,	"9440195555"	,	""	,	""	,	""	}	,
             {	"Andhra Pradesh"	,	"आन्ध्र प्रदेश"	,	"3"	,	"Vizianagaram"	,	"Pusapati Ashok Gajapathi Raju"	,	"Telugu Desam Party"	,	"विजयनगरम"	,	"Pusapati अशोक गजपति राजू"	,	"तेलुगू देशम पार्टी"	,	""	,	""	,	""	,	""	}	,
             {	"Andhra Pradesh"	,	"आन्ध्र प्रदेश"	,	"4"	,	"Visakhapatnam"	,	"Kambhampati Hari Babu"	,	"Bharatiya Janata Party"	,	"विशाखापत्तनम"	,	"कमभमपाती हरी बाबू"	,	"भारतीय जनता पार्टी"	,	""	,	""	,	""	,	""	}	,
             {	"Andhra Pradesh"	,	"आन्ध्र प्रदेश"	,	"5"	,	"Anakapalli"	,	"Muttamsetti Srinivasa Rao"	,	"Telugu Desam Party"	,	"अनकापल्ली"	,	"मुत्तमसे्ती श्रीनिवास राव"	,	"तेलुगू देशम पार्टी"	,	""	,	""	,	""	,	""	}	,

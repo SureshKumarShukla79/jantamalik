@@ -22,27 +22,48 @@
         app:titleTextColor="@color/colorAccent" />
 
     <android.support.v7.widget.CardView
+        android:id="@+id/infographics_cardView"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:layout_below="@id/toolbar_MP_layout"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:onClick="openInfographics">
+        <TextView
+            android:id="@+id/democracy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/greylight"
+            android:text="@string/democracy"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="8dp"
+            android:gravity="fill_horizontal"
+            android:layout_gravity="left"
+            android:textColor="@color/black_color" />
+        <ImageView
+            android:background="@color/greylight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:src="@drawable/right_black_arrow_24dp"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
         android:id="@+id/DOs_cardview_MP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:layout_marginTop="5dp"
         android:padding="10dp"
-        android:layout_below="@+id/toolbar_MP_layout">
+        android:layout_below="@+id/infographics_cardView">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/democracy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/greylight"
-                android:text="@string/democracy"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:padding="8dp"
-                android:textColor="@color/black_color" />
             <TextView
                 android:id="@+id/DOs_Textview_MP"
                 android:layout_width="match_parent"

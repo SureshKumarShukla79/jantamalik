@@ -32,7 +32,6 @@
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
         <activity
             android:name="in.filternet.jantamalik.VoteJava.VoteMP"
-            android:noHistory="true"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
             android:name="in.filternet.jantamalik.IssuesJava.IssuesItem"
@@ -43,7 +42,8 @@
             android:excludeFromRecents="true"
             android:label="Contact us"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
-
+        <activity android:name=".infographics"
+            android:parentActivityName=".VoteJava.VoteMP"></activity>
         <receiver
             android:name="in.filternet.jantamalik.Receiver"
             android:directBootAware="true">

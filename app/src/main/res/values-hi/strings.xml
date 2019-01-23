@@ -45,7 +45,7 @@
     <string name="constitunecy_text">क्षेत्र</string>
     <string name="ward_text">वार्ड</string>
 
-    <string name="democracy">लोकतंत्र में वोटर, सरकार कैसे चलाते हैं
+    <string name="democracy">लोकतंत्र में वोटर, सरकार कैसे चलाते हैं?
         \n<b>वोटर -> सांसद -> लोकसभा -> सरकार</b></string>
     <string name="mp_duty"><b>सांसद के जरूरी काम</b>
         \n1. मेरे सवालोंं को लोकसभा में पूछना और सरकार से जवाब लेना
@@ -93,7 +93,7 @@
     <string name="version_update">ऐप का नया संस्करण आ गया है, डाउनलोड करें</string>
     <string name="Option_Update">हाँ</string>
     <string name="Option_Later">बाद में</string>
-    <string name="User_appeal">Add your issues, they will appear\nin the next version.</string>
+    <string name="User_appeal">अपने मुद्दों को जोड़ें, वे अगले संस्करण\nमें दिखाई देंगे.</string>
 
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>

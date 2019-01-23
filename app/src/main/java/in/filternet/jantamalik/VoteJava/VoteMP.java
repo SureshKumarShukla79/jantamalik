@@ -18,6 +18,7 @@ import in.filternet.jantamalik.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.infographics;
 
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.DEFAULT_MP;
@@ -147,5 +148,10 @@ public class VoteMP extends AppCompatActivity {
 
     public void onclick_Parshad(View view){
         Toast.makeText(view.getContext(),R.string.next_version, Toast.LENGTH_LONG).show();
+    }
+
+    public void openInfographics(View view) {
+        Intent intent = new Intent(VoteMP.this, infographics.class);
+        startActivity(intent);
     }
 }
