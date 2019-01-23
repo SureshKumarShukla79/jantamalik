@@ -30,6 +30,7 @@ public class VoteMP extends AppCompatActivity {
     private TextView name,phone,email,area, address;
     private de.hdodenhof.circleimageview.CircleImageView profile_pic;
     DataFilter.MP_info mp;
+    public static final String TAB_NUMBER = "tab_number";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,8 +52,7 @@ public class VoteMP extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), MainActivity.class);
-                startActivity(intent);
+                back_button(view);
             }
         });
 
@@ -76,6 +76,18 @@ public class VoteMP extends AppCompatActivity {
             profile_pic.setImageResource(R.drawable.narendra_modi_pic);
         else
             profile_pic.setImageResource(R.drawable.politician_illustration);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        back_button(toolbar.getRootView()); // TODO animation is too strong
+    }
+
+    private void back_button(View view) {
+        Intent intent = new Intent(view.getContext(), MainActivity.class);
+        intent.putExtra(TAB_NUMBER, 2);
+        startActivity(intent);
     }
 
     public void onclick_call_mp(View view) {

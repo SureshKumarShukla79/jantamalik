@@ -34,6 +34,7 @@ import java.util.Locale;
 import java.util.regex.Pattern;
 
 import in.filternet.jantamalik.DonateActivityJava.donate;
+import in.filternet.jantamalik.VoteJava.VoteMP;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -46,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
     public final static String sUSER_CURRENT_LANGUAGE = "User_Current_Language";
     public final static String sLANGUAGE_HINDI = "hi";
     public final static String sLANGUAGE_ENGLISH = "en";
-
-    private static int prev_tab = 0;
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -97,14 +96,12 @@ public class MainActivity extends AppCompatActivity {
         final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
         viewPager.setAdapter(viewPagerAdapter);
-        viewPager.setCurrentItem(prev_tab); // restore old tab
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout ));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
-                prev_tab = tab.getPosition();
                 if (tab.getPosition()==1 || tab.getPosition()==2)
                     ui_add_issue.setVisibility(View.INVISIBLE);
                 else
@@ -117,6 +114,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {}
         });
+
+        Intent intent =getIntent();
+        int num = intent.getIntExtra(VoteMP.TAB_NUMBER, 0);
+        viewPager.setCurrentItem(num);
 
         //As per documentation, Starting with Build.VERSION_CODES.HONEYCOMB, tasks are executed on a single thread to avoid
         //common application errors caused by parallel execution. If we need parallel execution, then use executeOnExecutor()
