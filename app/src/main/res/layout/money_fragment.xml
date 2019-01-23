@@ -73,11 +73,20 @@
             android:src="@drawable/tax_incometax" />
     </GridLayout>
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@+id/GridLayout_Note"
+        android:id="@+id/dhan_kalash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dhan_kalash"
+        app:civ_border_color="@color/black_color"
+        app:civ_border_width="3dp"/>
+
     <TextView
         android:id="@+id/tax_total_center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:layout_below="@+id/GridLayout_Note"
+        android:layout_below="@+id/dhan_kalash"
         android:layout_marginTop="3dp"
         android:background="@color/greylight"
         android:text="@string/tax_total_center"
