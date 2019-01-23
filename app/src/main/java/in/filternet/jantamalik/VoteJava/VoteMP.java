@@ -11,12 +11,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import in.filternet.jantamalik.DataFilter;
-import in.filternet.jantamalik.MPdata;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 import in.filternet.jantamalik.Contact;
@@ -61,10 +59,12 @@ public class VoteMP extends AppCompatActivity {
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         String MPArea = mSharedPref.getString(sMP,DEFAULT_MP);
         String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+
         DataFilter dataFilter = new DataFilter();
+        //mp = dataFilter.new MP_info();
         mp = dataFilter.getMPInfo(current_language, MPArea);
 
-        //Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
+      //  Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
         name.setText(mp.name);
         phone.setText(mp.phone);
         email.setText(mp.email);
@@ -73,7 +73,9 @@ public class VoteMP extends AppCompatActivity {
 
         // Only Varanasi MP pic in app
         if(MPArea.equals(DEFAULT_MP) || MPArea.equals(hiDEFAULT_MP))
-            profile_pic.setVisibility(View.VISIBLE);
+            profile_pic.setImageResource(R.drawable.narendra_modi_pic);
+        else
+            profile_pic.setImageResource(R.drawable.politician_illustration);
     }
 
     public void onclick_call_mp(View view) {

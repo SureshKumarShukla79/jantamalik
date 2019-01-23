@@ -93,10 +93,9 @@
             android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:src="@drawable/narendra_modi_pic"
+            android:src="@drawable/politician_illustration"
             app:civ_border_color="@color/black_color"
-            app:civ_border_width="3dp"
-            android:visibility="invisible" />
+            app:civ_border_width="3dp" />
 
         <TextView
             android:id="@+id/MP_name"

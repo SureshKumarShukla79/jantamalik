@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
-    private FloatingActionButton ui_add_issue;
+    public static FloatingActionButton ui_add_issue;
 
     String mLanguage;
 

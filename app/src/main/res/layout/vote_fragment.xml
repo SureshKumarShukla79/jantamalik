@@ -64,13 +64,11 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="3dp"
-        android:onClick="onclick_MP"
         app:cardBackgroundColor="#d6d7d7">
 
         <LinearLayout
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:onClick="onclick_MP">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/Vote_Item_Button"
@@ -88,8 +86,7 @@
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:onClick="onclick_MP">
+            android:layout_gravity="right">
 
             <ImageButton
                 android:id="@+id/Vote_Item_imageButton"
@@ -135,14 +132,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/Area_text"
         android:layout_marginTop="8dp"
-        android:onClick="onclick_MLA"
         app:cardBackgroundColor="#d6d7d7"
         android:visibility="invisible" >
 
         <LinearLayout
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:onClick="onclick_MLA">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/Vote_Item_Button2"
@@ -161,8 +156,7 @@
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:onClick="onclick_MLA">
+            android:layout_gravity="right">
 
             <ImageButton
                 android:id="@+id/Vote_Item_imageButton2"
@@ -210,14 +204,12 @@
         android:layout_marginStart="3dp"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="8dp"
-        android:onClick="onclick_Parshad"
         app:cardBackgroundColor="#d6d7d7"
         android:visibility="invisible">
 
         <LinearLayout
             android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:onClick="onclick_Parshad">
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/Vote_Item_Button3"
@@ -235,8 +227,7 @@
         <LinearLayout
             android:layout_width="50dp"
             android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:onClick="onclick_Parshad">
+            android:layout_gravity="right">
 
             <ImageButton
                 android:id="@+id/Vote_Item_imageButton3"
