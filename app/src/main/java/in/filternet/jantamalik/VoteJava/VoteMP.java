@@ -49,7 +49,6 @@ public class VoteMP extends AppCompatActivity {
         profile_pic = findViewById(R.id.profile_image);
 
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-        toolbar.setTitle(R.string.app_name);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

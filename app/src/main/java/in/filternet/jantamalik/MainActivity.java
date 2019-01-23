@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
+    private FloatingActionButton ui_add_issue;
 
     String mLanguage;
 
@@ -81,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager_main);
         toolbar = findViewById(R.id.appbar);
         ui_language_button = findViewById(R.id.lanugage_button);
+        ui_add_issue = findViewById(R.id.add_issue);
+
 
         setSupportActionBar(toolbar);
 
@@ -101,6 +105,10 @@ public class MainActivity extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
                 prev_tab = tab.getPosition();
+                if (tab.getPosition()==1 || tab.getPosition()==2)
+                    ui_add_issue.setVisibility(View.INVISIBLE);
+                else
+                    ui_add_issue.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -163,6 +171,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         this.recreate(); // refresh screen
+    }
+
+    public void onclick_AddIssue(View view){
+        Intent intent = new Intent(view.getContext(), Contact.class);
+        intent.putExtra("add_issue", true);
+        startActivity(intent);
     }
 
     public static void setUI_Lang(Activity activity, String lang) { // before setContentView
