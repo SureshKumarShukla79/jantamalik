@@ -11,7 +11,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +20,8 @@ import in.filternet.jantamalik.ItemClickListener;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
+
 public class IssuesFragment extends android.support.v4.app.Fragment implements ItemClickListener {
     View view;
     private RecyclerView recyclerView;
@@ -28,8 +29,9 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
     private RecyclerView.Adapter adapter;
     private List<String> arr;
     private FloatingActionButton ui_add_issue;
+    String current_language;
 
-    public static final String itemName = "in.filternet.jantaMalik";
+    public static final String issueID = "issueID";
     private SharedPreferences mSharedPref;
     @Nullable
     @Override
@@ -37,8 +39,8 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-        String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, null);
-        if(current_language != null && current_language.equals(MainActivity.sLANGUAGE_HINDI)) {
+        current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(getActivity(), "hi");
         }
 
@@ -53,14 +55,12 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         //setting the adapter
 
         arr = new ArrayList<>();
-        //arr.add(getString(R.string.CrimeIssue));
-        arr.add(getString(R.string.WomenSafety));
-        arr.add(getString(R.string.IssueUnemployment));
-        //arr.add(getString(R.string.IssueInflation));
-        arr.add(getString(R.string.IssueEducation));
-        arr.add(getString(R.string.Cleanliness));
-        //arr.add(getString(R.string.IssueClimate));
-        //arr.add(getString(R.string.IssueHealth));
+        for(int i=0;i<IssuesData.issues.length;i++) {
+            if (current_language.equals(sLANGUAGE_HINDI))
+                arr.add(IssuesData.issues[i][5]);
+            else
+                arr.add(IssuesData.issues[i][0]);
+        }
 
 
         adapter = new IssuesFragmentRecyclerViewAdapter(arr);
@@ -81,13 +81,9 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
 
     @Override
     public void onClick(View view, int position) {
-        Toast.makeText(view.getContext(), R.string.next_version, Toast.LENGTH_LONG).show();
-
-        /*if (position == arr.indexOf(arr.get(position))) {
             Intent i = new Intent(view.getContext(), IssuesItem.class);
-            i.putExtra(itemName, arr.get(position));
+            i.putExtra(issueID, position);
             startActivity(i);
-        }*/
     }
 }
 

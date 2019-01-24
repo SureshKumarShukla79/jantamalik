@@ -12,7 +12,7 @@
     <string name="call_button">Call</string>
     <string name="email_button">Email</string>
     <string name="CrimeIssue">Crime</string>
-    <string name="IssueUnemployment">Employment</string>
+    <string name="IssueUnemployment">Unemployment</string>
     <string name="IssueInflation">Inflation</string>
     <string name="IssueEducation">Poor educational institutions</string>
     <string name="IssueClimate">Pollution</string>
@@ -101,6 +101,7 @@
     <string name="feedback_msg">Feedback</string>
     <string name="email_us_msg">Email Us</string>
     <string name="donate">Donate</string>
+    <string name="switchText">I strongly agree on this issue.</string>
 
     <string-array name="MP_state_values">
         <item>Uttar Pradesh</item>

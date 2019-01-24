@@ -1,8 +1,10 @@
 package in.filternet.jantamalik.IssuesJava;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
@@ -10,10 +12,15 @@ import android.transition.Fade;
 import android.view.Window;
 import android.widget.TextView;
 
+import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
+
 public class IssuesItem extends AppCompatActivity {
-   private TextView textView;
+   private TextView janta, saansad, loksabha, government;
+   private String current_language;
+    private SharedPreferences mSharedPref;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,13 +31,35 @@ public class IssuesItem extends AppCompatActivity {
             getWindow().setEnterTransition(new Explode());
             getWindow().setExitTransition(new Fade());
         }
+        mSharedPref = PreferenceManager.getDefaultSharedPreferences(IssuesItem.this);
+
+        current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
 
         setContentView(R.layout.issues_fragment_item_layout);
 
-        //textView = findViewById(R.id.textView);
+        janta = findViewById(R.id.janta_issue);
+        saansad = findViewById(R.id.saansad_issue);
+        loksabha = findViewById(R.id.loksabha_issue);
+        government = findViewById(R.id.govt_issue);
 
         Intent intent = getIntent();
-        String msg = intent.getStringExtra(IssuesFragment.itemName);
-        //textView.setText(msg);
+        int index = intent.getIntExtra(IssuesFragment.issueID, 0);
+        //setting the title
+
+
+        if (current_language.equals(sLANGUAGE_HINDI)) {
+            getSupportActionBar().setTitle(IssuesData.issues[index][5]);
+            janta.setText(IssuesData.issues[index][6]);
+            saansad.setText(IssuesData.issues[index][7]);
+            loksabha.setText(IssuesData.issues[index][8]);
+            government.setText(IssuesData.issues[index][9]);
+        }
+        else {
+            getSupportActionBar().setTitle(IssuesData.issues[index][0]);
+            janta.setText(IssuesData.issues[index][1]);
+            saansad.setText(IssuesData.issues[index][2]);
+            loksabha.setText(IssuesData.issues[index][3]);
+            government.setText(IssuesData.issues[index][4]);
+        }
     }
 }

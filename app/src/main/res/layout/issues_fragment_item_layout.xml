@@ -30,12 +30,11 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/colorPrimary"
             android:scaleType="centerCrop"
-            android:src="@drawable/tax_parleg" />
+            android:src="@drawable/voter" />
         <TextView
             android:id="@+id/janta_issue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My issue is that I am not happy with traffic jam al the time onevery major road." />
+            android:layout_height="wrap_content"/>
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -54,12 +53,11 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/colorPrimary"
             android:scaleType="centerCrop"
-            android:src="@drawable/tax_parleg" />
+            android:src="@drawable/politician_illustration" />
         <TextView
             android:id="@+id/saansad_issue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My issue is that I am not happy with traffic jam al the time onevery major road." />
+            android:layout_height="wrap_content"/>
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -77,12 +75,11 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/colorPrimary"
             android:scaleType="centerCrop"
-            android:src="@drawable/tax_parleg" />
+            android:src="@drawable/loksabha"/>
         <TextView
             android:id="@+id/loksabha_issue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My issue is that I am not happy with traffic jam al the time onevery major road." />
+            android:layout_height="wrap_content"/>
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -97,16 +94,27 @@
             android:id="@+id/govt"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
+            android:adjustViewBounds="true"
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/colorPrimary"
             android:scaleType="centerCrop"
-            android:src="@drawable/tax_parleg" />
+            android:src="@drawable/govt" />
         <TextView
             android:id="@+id/govt_issue"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="My issue is that I am not happy with traffic jam al the time onevery major road." />
+            android:layout_height="wrap_content"/>
 
     </GridLayout>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/Switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/GridLayout_Note"
+        android:text="@string/switchText"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:theme="@style/SwitchColor"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 </RelativeLayout>
 </ScrollView>

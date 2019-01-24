@@ -11,7 +11,7 @@
     <string name="call_button">कॉल करें</string>
     <string name="email_button">ईमेल करें</string>
     <string name="CrimeIssue">अपराध</string>
-    <string name="IssueUnemployment">रोजगार</string>
+    <string name="IssueUnemployment">बेरोजगारी</string>
     <string name="IssueInflation">महंगाई</string>
     <string name="IssueEducation">खराब शिक्षा</string>
     <string name="IssueClimate">प्रदूषण</string>
@@ -100,6 +100,7 @@
     <string name="feedback_msg">सुझाव दैं</string>
     <string name="email_us_msg">ईमेल भेजें</string>
     <string name="donate">दान करें</string>
+    <string name="switchText">मैं इस मुद्दे पर दृढ़ता से सहमत हूं</string>
 
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>
