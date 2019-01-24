@@ -34,7 +34,7 @@
     <string name="address_modi">7 Lok Kalyan Marg, New Delhi, 110011</string>
 
     <string name="update_info">If information need to be update</string>
-    <string name="donate">Show your support by clicking below</string>
+    <string name="donate_appeal">Show your support</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">Add Issue</string>
@@ -96,6 +96,12 @@
     <string name="Option_Later">Later</string>
     <string name="User_appeal">Add your issues.
         \nIt will appear in the next version.</string>
+
+    <string name="add_issue_msg">Add Issue</string>
+    <string name="update_information_msg">Update Information</string>
+    <string name="feedback_msg">Feedback</string>
+    <string name="email_us_msg">Email Us</string>
+    <string name="donate">Donate</string>
 
     <string-array name="MP_state_values">
         <item>Uttar Pradesh</item>

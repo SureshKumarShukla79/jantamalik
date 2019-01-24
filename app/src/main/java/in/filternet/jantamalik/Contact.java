@@ -1,7 +1,9 @@
 package in.filternet.jantamalik;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +14,10 @@ import android.widget.Toast;
 
 import in.filternet.jantamalik.DonateActivityJava.donate;
 
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
+import static in.filternet.jantamalik.MainActivity.sUSER_CURRENT_LANGUAGE;
+import static in.filternet.jantamalik.MainActivity.setUI_Lang;
+
 public class Contact extends AppCompatActivity {
 
     private Button ui_email_us;
@@ -21,9 +27,19 @@ public class Contact extends AppCompatActivity {
     private boolean mAddIssue, mUpdateMP, mFeedback;
     private String subject = "";
 
+    private SharedPreferences mSharedPref;
+    String mLanguage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+
+        mLanguage = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI); // first launch
+        if(mLanguage.equals(sLANGUAGE_HINDI)) {
+            setUI_Lang(this, "hi");
+        }
 
         savedInstanceState = getIntent().getExtras();
         if(savedInstanceState != null){

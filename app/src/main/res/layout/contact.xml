@@ -31,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Add Issue"
+                    android:text="@string/add_issue_msg"
                     android:checked="false"
                     android:onClick="onclick_add_subject"
                     android:buttonTint="@color/colorPrimaryDark"
@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:checked="false"
-                    android:text="Update Information"
+                    android:text="@string/update_information_msg"
                     android:onClick="onclick_add_subject"
                     android:buttonTint="@color/colorPrimaryDark"
                     android:textAppearance="?android:attr/textAppearanceLarge"/>
@@ -53,7 +53,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Feedback"
+                    android:text="@string/feedback_msg"
                     android:checked="false"
                     android:onClick="onclick_add_subject"
                     android:buttonTint="@color/colorPrimaryDark"
@@ -69,7 +69,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_centerHorizontal="true"
-                android:text="Email Us"
+                android:text="@string/email_us_msg"
                 android:visibility="gone"
                 android:onClick="onclick_email_us"
                 android:textColor="@color/colorAccent"
@@ -95,7 +95,7 @@
                 android:id="@+id/donate_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/donate"
+                android:text="@string/donate_appeal"
                 android:textColor="@color/black_color"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -106,7 +106,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_centerHorizontal="true"
-                android:text="Donate"
+                android:text="@string/donate"
                 android:textColor="@color/colorAccent"
                 android:onClick="onclick_open_donate"
                 android:background="@drawable/button_styling"/>

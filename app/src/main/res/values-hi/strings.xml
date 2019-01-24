@@ -32,7 +32,7 @@
     <string name="address_modi">7 लोक कल्याण मार्ग, नई दिल्ली, 110011</string>
 
     <string name="update_info">अगर कोई जानकारी सही करनी हो</string>
-    <string name="donate">आपका समर्थन दें दान करें</string>
+    <string name="donate_appeal">अपना समर्थन दें</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">अपने मुद्दे जोड़ें</string>
@@ -93,7 +93,14 @@
     <string name="version_update">ऐप का नया संस्करण आ गया है, डाउनलोड करें</string>
     <string name="Option_Update">हाँ</string>
     <string name="Option_Later">बाद में</string>
-    <string name="User_appeal">अपने मुद्दों को जोड़ें, वे अगले संस्करण\nमें दिखाई देंगे.</string>
+    <string name="User_appeal">अपने मुद्दों को जोड़ें।
+        \nअगले संस्करण में दिखाई देगा।</string>
+
+    <string name="add_issue_msg">अपनी बात कहें</string>
+    <string name="update_information_msg">जानकारी साझा करें</string>
+    <string name="feedback_msg">सुझाव दैं</string>
+    <string name="email_us_msg">ईमेल भेजें</string>
+    <string name="donate">दान करें</string>
 
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>
