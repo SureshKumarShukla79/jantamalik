@@ -75,16 +75,4 @@
 
     </android.support.v4.view.ViewPager>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_issue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/ic_add_white_24dp"
-        app:backgroundTint="@color/colorPrimary"
-        android:onClick="onclick_AddIssue"
-        android:layout_gravity="end|bottom"/>
-
 </android.support.design.widget.CoordinatorLayout>

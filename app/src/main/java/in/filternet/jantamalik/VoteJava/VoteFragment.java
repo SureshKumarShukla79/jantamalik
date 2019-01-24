@@ -78,8 +78,6 @@ public class VoteFragment extends Fragment {
             MainActivity.setUI_Lang(getActivity(), "hi");
         }
 
-        // Add issue floating button was appearing on back press of MP.
-        MainActivity.ui_add_issue.setVisibility(View.GONE);
         editor = mSharedPref.edit();
 
         view = inflater.inflate(R.layout.vote_fragment, container, false);

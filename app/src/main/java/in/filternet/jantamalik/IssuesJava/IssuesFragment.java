@@ -44,11 +44,12 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
 
         view = inflater.inflate(R.layout.issues_fragment,container,false);
         recyclerView = view.findViewById(R.id.Issues_recyclerview);
+        ui_add_issue = view.findViewById(R.id.add_issue);
 
         //use a linear layout manager
         layoutManager = new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(layoutManager);
-         recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true);
         //setting the adapter
 
         arr = new ArrayList<>();
@@ -65,6 +66,16 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         adapter = new IssuesFragmentRecyclerViewAdapter(arr);
         ((IssuesFragmentRecyclerViewAdapter) adapter).onItemClickListener(this);
         recyclerView.setAdapter(adapter);
+
+        ui_add_issue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            Intent intent = new Intent(view.getContext(), Contact.class);
+            intent.putExtra("add_issue", true);
+            startActivity(intent);
+            }
+        });
+
         return view;
     }
 
