@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:layout_weight="1.0"
-            android:text="check"
+            android:text="Issue title"
             android:textColor="@color/black"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 

@@ -27,10 +27,10 @@ public class IssuesItem extends AppCompatActivity {
 
         setContentView(R.layout.issues_fragment_item_layout);
 
-        textView = findViewById(R.id.textView);
+        //textView = findViewById(R.id.textView);
 
         Intent intent = getIntent();
         String msg = intent.getStringExtra(IssuesFragment.itemName);
-        textView.setText(msg);
+        //textView.setText(msg);
     }
 }

@@ -1,18 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
+    android:id="@+id/VoteMP_scrollView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="145dp"
-        android:layout_height="69dp"
-        android:text="@string/next_version"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:id="@+id/GridLayout_Note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tax_note"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:columnCount="1"
+        android:orientation="vertical"
+        android:layout_margin="1dp">
+
+        <ImageButton
+            android:id="@+id/janta"
+            android:layout_width="@dimen/tax_image"
+            android:layout_height="@dimen/tax_image"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorPrimary"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tax_parleg" />
+        <TextView
+            android:id="@+id/janta_issue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My issue is that I am not happy with traffic jam al the time onevery major road." />
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@color/colorAccent"
+            android:rotation="135"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow_tilted_24px" />
+
+        <ImageButton
+            android:id="@+id/saansad"
+            android:layout_width="@dimen/tax_image"
+            android:layout_height="@dimen/tax_image"
+            android:layout_row="3"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorPrimary"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tax_parleg" />
+        <TextView
+            android:id="@+id/saansad_issue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My issue is that I am not happy with traffic jam al the time onevery major road." />
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@color/colorAccent"
+            android:rotation="135"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow_tilted_24px" />
+
+        <ImageButton
+            android:id="@+id/parliament"
+            android:layout_width="@dimen/tax_image"
+            android:layout_height="@dimen/tax_image"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorPrimary"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tax_parleg" />
+        <TextView
+            android:id="@+id/loksabha_issue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My issue is that I am not happy with traffic jam al the time onevery major road." />
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@color/colorAccent"
+            android:rotation="135"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_arrow_tilted_24px" />
+
+        <ImageButton
+            android:id="@+id/govt"
+            android:layout_width="@dimen/tax_image"
+            android:layout_height="@dimen/tax_image"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorPrimary"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tax_parleg" />
+        <TextView
+            android:id="@+id/govt_issue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My issue is that I am not happy with traffic jam al the time onevery major road." />
+
+    </GridLayout>
+</RelativeLayout>
+</ScrollView>
