@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:text="@string/state_text"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/black_color"
+            android:textColor="@color/black"
             android:layout_alignParentTop="true"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"/>
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="@string/constitunecy_text"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/black_color"
+            android:textColor="@color/black"
             android:layout_below="@id/state_text"
             android:layout_marginTop="15dp"
             android:paddingLeft="30dp"
@@ -79,7 +79,7 @@
                 android:gravity="left"
                 android:padding="10dp"
                 android:text="@string/MP"
-                android:textColor="@color/black_color"
+                android:textColor="@color/black"
                 android:textSize="25sp" />
         </LinearLayout>
 
@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:text="@string/constitunecy_text"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/black_color"
+        android:textColor="@color/black"
         android:layout_below="@id/layout_cardview"
         android:layout_marginTop="15dp"
         android:paddingLeft="30dp"
@@ -148,7 +148,7 @@
                 android:gravity="left"
                 android:padding="10dp"
                 android:text="@string/MLA"
-                android:textColor="@color/black_color"
+                android:textColor="@color/black"
                 android:textSize="25sp" />
 
         </LinearLayout>
@@ -174,7 +174,7 @@
         android:layout_height="wrap_content"
         android:text="@string/ward_text"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/black_color"
+        android:textColor="@color/black"
         android:layout_below="@id/layout_cardview2"
         android:layout_marginTop="15dp"
         android:paddingLeft="30dp"
@@ -220,7 +220,7 @@
                 android:gravity="left"
                 android:padding="10dp"
                 android:text="@string/Parshad"
-                android:textColor="@color/black_color"
+                android:textColor="@color/black"
                 android:textSize="25sp" />
         </LinearLayout>
 

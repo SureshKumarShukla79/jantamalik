@@ -24,7 +24,7 @@
         android:text="@string/tax_note"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:padding="8dp"
-        android:textColor="@color/black_color" />
+        android:textColor="@color/black" />
 
     <GridLayout
         android:id="@+id/GridLayout_Note"
@@ -129,7 +129,7 @@
         android:text="@string/tax_total_center"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:padding="8dp"
-        android:textColor="@color/black_color" />
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/tax_details"
@@ -141,7 +141,7 @@
         android:text="@string/tax_center_details"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:padding="8dp"
-        android:textColor="@color/black_color" />
+        android:textColor="@color/black" />
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/nestedScroll"

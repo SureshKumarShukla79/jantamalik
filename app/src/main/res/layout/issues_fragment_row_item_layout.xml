@@ -15,31 +15,25 @@
         android:layout_margin="3dp">
 
         <LinearLayout
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         <TextView
             android:background="@drawable/recyclerview_item_click_effect"
             android:id="@+id/Issues_recyclerview_textView"
             android:layout_width="match_parent"
-            android:layout_marginRight="10dp"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:layout_weight="1.0"
             android:text="check"
-            android:textSize="25sp"/>
-        </LinearLayout>
+            android:textColor="@color/black"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-        <LinearLayout
+        <ImageView
+            android:background="@drawable/recyclerview_item_click_effect"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="right">
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:src="@drawable/right_black_arrow_24dp"/>
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_black_arrow_24dp"/>
         </LinearLayout>
-
-
     </android.support.v7.widget.CardView>
 </LinearLayout>

@@ -15,7 +15,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorPrimary">@color/colorAccent</item>
         <item name="android:textColorSecondary">@color/colorAccent</item>
-        <item name="android:textColor">@color/black_color</item>
+        <item name="android:textColor">@color/black</item>
     </style>
     <style name="NavigationTabTextAppeareance" parent="TextAppearance.Design.Tab">
         <item name="android:textColor">@color/tabDefaultTextColor</item>

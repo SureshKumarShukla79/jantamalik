@@ -42,8 +42,8 @@
                 android:layout_weight="1.00"
                 android:padding="8dp"
                 android:text="@string/democracy"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/black_color" />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
                 android:text="@string/mp_duty"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:padding="8dp"
-                android:textColor="@color/black_color" />
+                android:textColor="@color/black" />
             <TextView
                 android:id="@+id/DONTs_Textview_MP"
                 android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                 android:background="@color/greylight"
                 android:padding="8dp"
                 android:text="@string/mp_optional"
-                android:textColor="@color/black_color"
+                android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
             <TextView
                 android:id="@+id/Salary_MP"
@@ -94,7 +94,7 @@
                 android:layout_marginTop="3dp"
                 android:padding="8dp"
                 android:text="@string/salary_Saansad"
-                android:textColor="@color/black_color"
+                android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -117,7 +117,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:src="@drawable/politician_illustration"
-            app:civ_border_color="@color/black_color"
+            app:civ_border_color="@color/black"
             app:civ_border_width="3dp" />
 
         <TextView
@@ -289,7 +289,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="@string/update_info"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/black_color" />
+                android:textColor="@color/black" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/arrow"

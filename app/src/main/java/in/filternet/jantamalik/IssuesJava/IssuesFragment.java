@@ -70,9 +70,9 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         ui_add_issue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            Intent intent = new Intent(view.getContext(), Contact.class);
-            intent.putExtra("add_issue", true);
-            startActivity(intent);
+                Intent intent = new Intent(view.getContext(), Contact.class);
+                intent.putExtra("add_issue", true);
+                startActivity(intent);
             }
         });
 
