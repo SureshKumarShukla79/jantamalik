@@ -45,8 +45,7 @@
     <string name="constitunecy_text">क्षेत्र</string>
     <string name="ward_text">वार्ड</string>
 
-    <string name="democracy">लोकतंत्र में वोटर, सरकार कैसे चलाते हैं?
-        \n<b>वोटर -> सांसद -> लोकसभा -> सरकार</b></string>
+    <string name="democracy"><b>वोटर सरकार कैसे चलाते हैं?</b></string>
     <string name="mp_duty"><b>सांसद के जरूरी काम</b>
         \n1. मेरे सवालोंं को लोकसभा में पूछना और सरकार से जवाब लेना
         \n2. लोकसभा की बहसों में मेरे पक्ष को रखना

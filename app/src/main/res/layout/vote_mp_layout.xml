@@ -29,26 +29,28 @@
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:onClick="openInfographics">
-        <TextView
-            android:id="@+id/democracy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/greylight"
-            android:text="@string/democracy"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:padding="8dp"
-            android:gravity="fill_horizontal"
-            android:layout_gravity="left"
-            android:textColor="@color/black_color" />
-        <ImageView
-            android:background="@color/greylight"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:src="@drawable/right_black_arrow_24dp"/>
+
+            <TextView
+                android:id="@+id/democracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@color/greylight"
+                android:layout_weight="1.00"
+                android:padding="8dp"
+                android:text="@string/democracy"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black_color" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|end"
+                android:background="@color/greylight"
+                android:src="@drawable/right_black_arrow_24dp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
