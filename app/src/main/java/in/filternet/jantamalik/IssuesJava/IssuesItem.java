@@ -18,7 +18,7 @@ import in.filternet.jantamalik.R;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class IssuesItem extends AppCompatActivity {
-   private TextView janta, saansad, loksabha, government;
+   private TextView janta, loksabha, government;
    private String current_language;
     private SharedPreferences mSharedPref;
 
@@ -37,8 +37,9 @@ public class IssuesItem extends AppCompatActivity {
 
         setContentView(R.layout.issues_fragment_item_layout);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         janta = findViewById(R.id.janta_issue);
-        saansad = findViewById(R.id.saansad_issue);
         loksabha = findViewById(R.id.loksabha_issue);
         government = findViewById(R.id.govt_issue);
 
@@ -46,20 +47,17 @@ public class IssuesItem extends AppCompatActivity {
         int index = intent.getIntExtra(IssuesFragment.issueID, 0);
         //setting the title
 
-
         if (current_language.equals(sLANGUAGE_HINDI)) {
-            getSupportActionBar().setTitle(IssuesData.issues[index][5]);
-            janta.setText(IssuesData.issues[index][6]);
-            saansad.setText(IssuesData.issues[index][7]);
-            loksabha.setText(IssuesData.issues[index][8]);
-            government.setText(IssuesData.issues[index][9]);
+            getSupportActionBar().setTitle(IssuesData.issues[index][4]);
+            janta.setText(IssuesData.issues[index][5]);
+            loksabha.setText(IssuesData.issues[index][6]);
+            government.setText(IssuesData.issues[index][7]);
         }
         else {
             getSupportActionBar().setTitle(IssuesData.issues[index][0]);
             janta.setText(IssuesData.issues[index][1]);
-            saansad.setText(IssuesData.issues[index][2]);
-            loksabha.setText(IssuesData.issues[index][3]);
-            government.setText(IssuesData.issues[index][4]);
+            loksabha.setText(IssuesData.issues[index][2]);
+            government.setText(IssuesData.issues[index][3]);
         }
     }
 }

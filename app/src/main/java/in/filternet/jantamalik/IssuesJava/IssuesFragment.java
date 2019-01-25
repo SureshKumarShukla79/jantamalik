@@ -57,11 +57,10 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         arr = new ArrayList<>();
         for(int i=0;i<IssuesData.issues.length;i++) {
             if (current_language.equals(sLANGUAGE_HINDI))
-                arr.add(IssuesData.issues[i][5]);
+                arr.add(IssuesData.issues[i][4]);
             else
                 arr.add(IssuesData.issues[i][0]);
         }
-
 
         adapter = new IssuesFragmentRecyclerViewAdapter(arr);
         ((IssuesFragmentRecyclerViewAdapter) adapter).onItemClickListener(this);

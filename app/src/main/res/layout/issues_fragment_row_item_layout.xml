@@ -11,7 +11,7 @@
         android:id="@+id/layout_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="#d6d7d7"
+        app:cardBackgroundColor="@color/white"
         android:layout_margin="3dp">
 
         <LinearLayout

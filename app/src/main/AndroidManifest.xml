@@ -18,7 +18,6 @@
 
         <activity
             android:name="in.filternet.jantamalik.MainActivity"
-            android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme_NoActionBar">
             <intent-filter>
@@ -40,7 +39,7 @@
             android:name="in.filternet.jantamalik.Contact"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true"
-            android:label="Contact us"
+            android:label="@string/contact"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
         <activity android:name=".infographics"
             android:parentActivityName=".VoteJava.VoteMP"></activity>

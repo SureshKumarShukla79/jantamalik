@@ -18,7 +18,7 @@
         <item name="android:textColor">@color/black</item>
     </style>
     <style name="NavigationTabTextAppeareance" parent="TextAppearance.Design.Tab">
-        <item name="android:textColor">@color/tabDefaultTextColor</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold|normal</item>
     </style>
@@ -28,11 +28,11 @@
         <item name="colorControlActivated">@color/colorPrimary</item>
 
         <!-- inactive thumb color -->
-        <item name="colorSwitchThumbNormal">#f1f1f1
+        <item name="colorSwitchThumbNormal">#aeaeae
         </item>
 
         <!-- inactive track color (30% transparency) -->
-        <item name="android:colorForeground">@color/tabDefaultTextColor
+        <item name="android:colorForeground">#aeaeae
         </item>
     </style>
 </resources>

@@ -35,10 +35,10 @@
 
             <TextView
                 android:id="@+id/democracy"
+                android:background="@drawable/recyclerview_item_click_effect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:background="@color/greylight"
                 android:layout_weight="1.00"
                 android:padding="8dp"
                 android:text="@string/democracy"
@@ -46,10 +46,10 @@
                 android:textColor="@color/black" />
 
             <ImageView
+                android:background="@drawable/recyclerview_item_click_effect"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="right|end"
-                android:background="@color/greylight"
                 android:src="@drawable/right_black_arrow_24dp" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -141,7 +141,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="#dcdcdc"
+        android:background="@color/white"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="5dp"

@@ -5,8 +5,8 @@
     <color name="colorAccent">#FFFFFF</color>
     <color name="forAppStyling">#25d366</color>
     <color name="black">#000000</color>
-    <color name="tabDefaultTextColor">#bebebe</color>
-    <color name="greylight">#efefef</color>
+    <color name="tabDefaultTextColor">#ffffff</color>
+    <color name="greylight">#ffffff</color>
     <color name="orange">#fdab2f</color>
     <color name="itax">#fdab2f</color>
     <color name="white">#ffffff</color>

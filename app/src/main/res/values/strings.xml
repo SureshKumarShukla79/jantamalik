@@ -93,15 +93,25 @@
     <string name="version_update">New version available, please update</string>
     <string name="Option_Update">Update</string>
     <string name="Option_Later">Later</string>
-    <string name="User_appeal">Add your issues.
-        \nIt will appear in the next version.</string>
+    <string name="User_appeal">Add your issue,
+        \nIt will appear next week.</string>
 
     <string name="add_issue_msg">Add Issue</string>
     <string name="update_information_msg">Update Information</string>
     <string name="feedback_msg">Feedback</string>
-    <string name="email_us_msg">Email Us</string>
+    <string name="email_us_msg">Next</string>
     <string name="donate">Donate</string>
-    <string name="switchText">I strongly agree on this issue.</string>
+    <string name="switchText">I agree on this issue.</string>
+    <string name="voter">Voters elect representative
+    \nAsk questions from govt
+    \nGive opinions on bills
+    \nAsk details of govt work/budget</string>
+    <string name="loksabha">Loksabha makes new laws,
+        \nasks questions to govt,
+        \nanalyses tax spending</string>
+    <string name="government">Government enforces laws,
+        \nprovides services to citizens</string>
+    <string name="contact">Contact us</string>
 
     <string-array name="MP_state_values">
         <item>Uttar Pradesh</item>

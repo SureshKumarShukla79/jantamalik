@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Voter" />
+                android:text="@string/voter" />
             <ImageButton
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -52,7 +52,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Saansad / MP" />
+                android:text="@string/MP" />
             <ImageButton
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Loksabha" />
+                android:text="@string/loksabha" />
             <ImageButton
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -92,7 +92,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Government" />
+                android:text="@string/government" />
 
         </GridLayout>
     </RelativeLayout>

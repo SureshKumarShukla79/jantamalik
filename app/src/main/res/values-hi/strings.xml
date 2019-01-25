@@ -92,15 +92,19 @@
     <string name="version_update">ऐप का नया संस्करण आ गया है, डाउनलोड करें</string>
     <string name="Option_Update">हाँ</string>
     <string name="Option_Later">बाद में</string>
-    <string name="User_appeal">अपने मुद्दों को जोड़ें।
-        \nअगले संस्करण में दिखाई देगा।</string>
+    <string name="User_appeal">अपने मुद्दों को जोड़ें,
+        \nअगले हफ्ते दिखाई देगा।</string>
 
-    <string name="add_issue_msg">अपनी बात कहें</string>
-    <string name="update_information_msg">जानकारी साझा करें</string>
-    <string name="feedback_msg">सुझाव दैं</string>
-    <string name="email_us_msg">ईमेल भेजें</string>
+    <string name="add_issue_msg">अपना मुद्दा लिखेंं</string>
+    <string name="update_information_msg">सांसद की सही जानकारी देंं</string>
+    <string name="feedback_msg">सुझाव दें</string>
+    <string name="email_us_msg">आगे</string>
     <string name="donate">दान करें</string>
     <string name="switchText">मैं इस मुद्दे पर दृढ़ता से सहमत हूं</string>
+    <string name="voter">वोटर</string>
+    <string name="loksabha">लोकसभा</string>
+    <string name="government">केंद्र सरकार</string>
+    <string name="contact">संपर्क करें</string>
 
     <string-array name="MP_state_values">
         <item>उत्तर प्रदेश</item>
