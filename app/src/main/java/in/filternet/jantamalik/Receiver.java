@@ -29,6 +29,12 @@ public class Receiver extends BroadcastReceiver {
         mEditor = mSharedPref.edit();
 
         switch (event) {
+            case Intent.ACTION_BOOT_COMPLETED:
+                // After reboot, alarms are cleared. So, we have to set it again
+                mEditor.putBoolean(MainActivity.bNOTIFICATION_TIME_SET, false).commit();
+                MainActivity.set_notification_time(context, true);
+                break;
+
             case Intent.ACTION_DATE_CHANGED:
                 mEditor.putBoolean(MainActivity.bDATE_CHANGE, true).commit();
                 break;
@@ -40,6 +46,12 @@ public class Receiver extends BroadcastReceiver {
                 if(new_date) {
                     new MainActivity.Match_Versions(context).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                 }
+                break;
+
+            case "in.janatamalik.NOTIFICATION":
+                mEditor.putBoolean(MainActivity.bNOTIFICATION_TIME_SET, false).commit();
+                MainActivity.showNotification(context, MainActivity.sCHANNEL_ID_SUNDAY);
+                MainActivity.set_notification_time(context, false);
                 break;
 
             default:

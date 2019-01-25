@@ -2,6 +2,7 @@ package in.filternet.jantamalik;
 
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -15,7 +16,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
+import android.provider.Settings;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
@@ -30,6 +31,7 @@ import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Calendar;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
@@ -44,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
 
     private final static String TAG ="MainActivity";
     public final static String bDATE_CHANGE = "Date_Change";
+    public final static String bNOTIFICATION_TIME_SET = "Notification_Time_Set";
+    public final static String sCHANNEL_ID_SUNDAY = "Sunday";
+    public final static String sCHANNEL_ID_UPDATE = "Update";
     public final static String sUSER_CURRENT_LANGUAGE = "User_Current_Language";
     public final static String sLANGUAGE_HINDI = "hi";
     public final static String sLANGUAGE_ENGLISH = "en";
@@ -115,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
         //As per documentation, Starting with Build.VERSION_CODES.HONEYCOMB, tasks are executed on a single thread to avoid
         //common application errors caused by parallel execution. If we need parallel execution, then use executeOnExecutor()
         new VersionPrompt().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+        set_notification_time(this, true);
     }
 
     @Override
@@ -175,6 +182,114 @@ public class MainActivity extends AppCompatActivity {
         config.locale = locale;
         activity.getBaseContext().getResources().updateConfiguration(config,
                 activity.getBaseContext().getResources().getDisplayMetrics());
+    }
+
+    public static void set_notification_time(Context context, boolean fresh) {
+        //Log.e(TAG, "set_notification_time*****");
+
+        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = shared_pref.edit();
+
+        boolean notification_time_set = shared_pref.getBoolean(MainActivity.bNOTIFICATION_TIME_SET, false);
+        if (notification_time_set)
+            return;
+
+        String eventName = "in.janatamalik.NOTIFICATION";
+        Intent intent = new Intent(context, Receiver.class);
+        intent.setAction(eventName);
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        //Log.e(TAG, "start " + pendingIntent);
+        AlarmManager manager = (AlarmManager) (context.getSystemService(Context.ALARM_SERVICE));
+
+        Calendar calendar = Calendar.getInstance();
+
+        if(fresh) {// Fresh install: If time has elapsed then set from next Sunday 11:00 AM
+            int current_hour = calendar.get(Calendar.HOUR_OF_DAY);
+            int current_min = calendar.get(Calendar.MINUTE);
+            if ((current_hour * 60 + current_min) > (11 * 60))
+                calendar.add(Calendar.WEEK_OF_MONTH, 1);
+        } else {
+            calendar.add(Calendar.WEEK_OF_MONTH, 1);
+        }
+
+        calendar.set(Calendar.DAY_OF_WEEK, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 11);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+
+        //Log.e(TAG, "alarm time \n" + calendar);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            manager.setExact(AlarmManager.RTC_WAKEUP,
+                    calendar.getTimeInMillis(),
+                    pendingIntent);
+        } else {
+            manager.set(AlarmManager.RTC_WAKEUP,
+                    calendar.getTimeInMillis(),
+                    pendingIntent);
+        }
+
+        editor.putBoolean(MainActivity.bNOTIFICATION_TIME_SET, true).commit();
+    }
+
+    public static void showNotification(Context context, String CHANNEL_ID) {
+        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
+        String current_language = shared_pref.getString(sUSER_CURRENT_LANGUAGE, null);
+
+        String notification_text = null;
+        CharSequence notification_name = null;
+        int notification_id = 0;
+
+        if(CHANNEL_ID.equals(sCHANNEL_ID_UPDATE)) {
+            notification_text = context.getString(R.string.notification_update);
+            notification_name = sCHANNEL_ID_UPDATE;
+            notification_id = 1;
+        }
+
+        else if(CHANNEL_ID.equals(sCHANNEL_ID_SUNDAY)) {
+            notification_text = context.getString(R.string.sunday_msg);
+            notification_name = sCHANNEL_ID_SUNDAY;
+            notification_id = 2;
+        }
+
+        NotificationCompat.Builder mBuilder;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            mBuilder = new NotificationCompat.Builder(context)
+                    .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
+                    .setSmallIcon(R.drawable.notification)
+                    .setContentTitle(context.getResources().getString(R.string.app_name))
+                    .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
+                    .setContentText(notification_text)
+                    .setChannelId(CHANNEL_ID);
+        } else {
+            mBuilder = new NotificationCompat.Builder(context)
+                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setContentTitle(context.getResources().getString(R.string.app_name))
+                    .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
+                    .setContentText(notification_text)
+                    .setChannelId(CHANNEL_ID);
+        }
+
+        Intent resultIntent = new Intent(context, MainActivity.class);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        mBuilder.setContentIntent(resultPendingIntent);
+        mBuilder.setAutoCancel(true);
+
+        // Gets an instance of the NotificationManager service
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        //NotificationCompat.Builder constructor requires a channel ID to show notifications on Android 8.0 (API level 26) and higher
+        //Before showing notification on Android 8.0 and higher, we must register app's notification channel
+        //with the system by passing an instance of NotificationChannel to createNotificationChannel()
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, notification_name, NotificationManager.IMPORTANCE_LOW);
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        notificationManager.notify(notification_id, mBuilder.build());
     }
 
     private class VersionPrompt extends AsyncTask<Void, Void, Boolean> {
@@ -337,45 +452,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(final Boolean success) {
             if (success) {
-                showNotification(context_v);
+                showNotification(context_v, MainActivity.sCHANNEL_ID_UPDATE);
             }
-        }
-
-        void showNotification(Context context) {
-            String CHANNEL_ID = "Update";
-            NotificationCompat.Builder mBuilder;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-                mBuilder = new NotificationCompat.Builder(context)
-                        .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
-                        .setSmallIcon(R.drawable.notification)
-                        .setContentTitle(context.getResources().getString(R.string.app_name))
-                        .setContentText("App needs to be updated")
-                        .setChannelId(CHANNEL_ID);
-            } else {
-                mBuilder = new NotificationCompat.Builder(context)
-                        .setSmallIcon(R.mipmap.ic_launcher)
-                        .setContentTitle(context.getResources().getString(R.string.app_name))
-                        .setContentText("App needs to be updated")
-                        .setChannelId(CHANNEL_ID);
-            }
-
-            Intent resultIntent = new Intent(context, MainActivity.class);
-            PendingIntent resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-            mBuilder.setContentIntent(resultPendingIntent);
-            mBuilder.setAutoCancel(true);
-
-            // Gets an instance of the NotificationManager service
-            NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-
-            //NotificationCompat.Builder constructor requires a channel ID to show notifications on Android 8.0 (API level 26) and higher
-            //Before showing notification on Android 8.0 and higher, we must register app's notification channel
-            //with the system by passing an instance of NotificationChannel to createNotificationChannel()
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "Update", NotificationManager.IMPORTANCE_LOW);
-                notificationManager.createNotificationChannel(channel);
-            }
-
-            notificationManager.notify(1, mBuilder.build());
         }
     }
 }

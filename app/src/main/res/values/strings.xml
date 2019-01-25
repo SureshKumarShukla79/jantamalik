@@ -129,4 +129,7 @@
         <item>Chittupur, Sigra</item>
     </string-array>
 
+    <string name="notification_update">New version of app is available. Download.</string>
+    <string name="sunday_msg">Make the difference. Nation needs you!</string>
+
 </resources>

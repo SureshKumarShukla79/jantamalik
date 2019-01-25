@@ -121,4 +121,7 @@
     <string-array name="Parshad_values">
         <item>छित्तुपुर, सिगरा</item>
     </string-array>
+
+    <string name="notification_update">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
+    <string name="sunday_msg">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
 </resources>
