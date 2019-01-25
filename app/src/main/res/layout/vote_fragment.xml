@@ -64,7 +64,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="3dp"
-        app:cardBackgroundColor="#d6d7d7">
+        app:cardBackgroundColor="@color/white">
 
         <LinearLayout
             android:layout_width="350dp"

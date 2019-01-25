@@ -100,7 +100,7 @@
     <string name="feedback_msg">सुझाव दें</string>
     <string name="email_us_msg">आगे</string>
     <string name="donate">दान करें</string>
-    <string name="switchText">मैं इस मुद्दे पर दृढ़ता से सहमत हूं</string>
+    <string name="switchText">यह मेरा मुद्दा है।</string>
     <string name="voter">वोटर</string>
     <string name="loksabha">लोकसभा</string>
     <string name="government">केंद्र सरकार</string>
