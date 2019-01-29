@@ -19,7 +19,6 @@
 
         <activity
             android:name="in.filternet.jantamalik.MainActivity"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme_NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

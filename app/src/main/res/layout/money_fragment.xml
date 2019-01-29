@@ -34,32 +34,67 @@
         android:layout_below="@+id/tax_note"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:columnCount="3"
-        android:rowCount="3"
+        android:rowCount="6"
         android:orientation="horizontal"
         android:layout_margin="1dp">
 
         <ImageButton
+            android:layout_row="0"
+            android:layout_column="0"
             android:id="@+id/ParleG_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
             android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_parleg" />
+        <TextView
+            android:textColor="@color/black"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:text="ABCD"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
         <ImageButton
+            android:layout_row="0"
+            android:layout_column="1"
             android:id="@+id/GST_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
             android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_gst" />
+        <TextView
+            android:textColor="@color/black"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:text="ABCD"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
         <ImageButton
+            android:layout_row="0"
+            android:layout_column="2"
             android:id="@+id/Book_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
             android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_book" />
+        <TextView
+            android:textColor="@color/black"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:text="ABCD"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
         <ImageButton
+            android:layout_row="2"
+            android:layout_column="0"
             android:id="@+id/petrol_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
@@ -67,18 +102,29 @@
             android:scaleType="centerCrop"
             android:backgroundTint="@color/orange"
             android:src="@drawable/tax_petrol" />
+        <TextView
+            android:textColor="@color/black"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:text="ABCD"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"/>
 
         <ImageButton
+            android:layout_row="2"
+            android:layout_column="1"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:background="@color/colorAccent"
             android:rotation="135"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_arrow_tilted_24px" />
         <ImageButton
-            android:layout_row="1"
+            android:layout_row="2"
             android:layout_column="2"
             android:id="@+id/income_tax_grid"
             android:layout_width="@dimen/tax_image"
@@ -87,11 +133,20 @@
             android:scaleType="centerCrop"
             android:backgroundTint="@color/itax"
             android:src="@drawable/tax_incometax" />
+        <TextView
+            android:layout_row="3"
+            android:layout_column="2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:text="ABCD"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
 
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_row="2"
+            android:layout_row="4"
             android:layout_column="0"
             android:layout_gravity="right"
             android:adjustViewBounds="true"
@@ -100,7 +155,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_arrow_tilted_24px" />
         <ImageButton
-            android:layout_row="2"
+            android:layout_row="4"
             android:layout_column="1"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
@@ -108,7 +163,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/dhan_kalash" />
         <ImageButton
-            android:layout_row="2"
+            android:layout_row="4"
             android:layout_column="2"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -117,6 +172,17 @@
             android:scaleType="centerCrop"
             android:rotation="180"
             android:src="@drawable/ic_arrow_tilted_24px"/>
+
+        <TextView
+            android:textSize="40sp"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:text="@string/total_budget"
+            android:gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="fill_horizontal"
+            android:textColor="@color/black"/>
     </GridLayout>
 
     <TextView
@@ -153,146 +219,185 @@
         android:id="@+id/datatable"
         android:layout_below="@id/tax_details"
         android:layout_width="match_parent"
-        android:stretchColumns="0"
+        android:stretchColumns="1"
         android:layout_height="wrap_content">
         <TableRow  android:layout_width="match_parent" android:layout_height="wrap_content">
             <TextView android:gravity="center" android:text="" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="@string/head" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="@string/crore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="%"  android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/interest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/interest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="5,75,795" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="23.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/defence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/defence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="2,82,733" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="11.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/subsidy_food" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="@string/subsidy_food" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1,69,323" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="6.93" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/pension" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/pension" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1,68,466" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="6.90" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/transfer_to_states" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/transfer_to_states" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1,42,858" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="5.85" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/rural_development" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/rural_development" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1,38,097" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="5.65" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/transport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/transport" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1,34,572" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="5.51" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/tax_administration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/tax_administration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1,05,541" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="4.32" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/home_affairs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/home_affairs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="93,450" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="3.83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/education" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/education" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="85,010" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="3.48" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/others" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:text="@string/others" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="72,845" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="2.98" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/subsidy_fertilizer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/subsidy_fertilizer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="70,080" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="2.87" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/agriculture_and_allied" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/agriculture_and_allied" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="63,836" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="2.61" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/health" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/health" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="54,667" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="2.24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/social_welfare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/social_welfare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="44,220" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1.81" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/urban_development" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/urban_development" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="41,765" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1.71" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/energy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/energy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="41,104" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1.68" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/commerce_and_industry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/commerce_and_industry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="27,956" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1.14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/subsidy_petroleum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="19" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/subsidy_petroleum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="24,933" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1.02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/scientific_department" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/scientific_department" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="24,906" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="1.02" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/it_and_telecom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/it_and_telecom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="22,380" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="0.92" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/finance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="22" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/finance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="20,342" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="0.83" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/external_affairs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="23" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/external_affairs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="15,012" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="0.61" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/union_territories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/union_territories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="14,123" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="0.58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/planning_and_statistics" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="25" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/planning_and_statistics" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="5,199" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="0.21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
-            <TextView android:gravity="center" android:text="@string/development_north_east" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView android:gravity="center" android:text="26" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView  android:text="@string/development_north_east" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center"  android:text="3,000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="0.12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
     </TableLayout>
+
     </android.support.v4.widget.NestedScrollView>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/source_text"
+        android:paddingBottom="5dp"
+        android:textAlignment="center"
+        android:autoLink="web"
+        android:clickable="true"
+        android:textColorLink="@color/black"
+        android:layout_below="@id/nestedScroll"
+        android:focusable="true" />
 </RelativeLayout>
 
 </ScrollView>
