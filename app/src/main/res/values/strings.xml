@@ -130,6 +130,8 @@
     </string-array>
 
     <string name="notification_update">New version of app is available. Download.</string>
+    <string name="notification_update_hi">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">Make the difference. Nation needs you!</string>
+    <string name="sunday_msg_hi">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
 
 </resources>

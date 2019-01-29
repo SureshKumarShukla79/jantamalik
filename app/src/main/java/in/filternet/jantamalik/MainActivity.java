@@ -243,13 +243,22 @@ public class MainActivity extends AppCompatActivity {
         int notification_id = 0;
 
         if(CHANNEL_ID.equals(sCHANNEL_ID_UPDATE)) {
-            notification_text = context.getString(R.string.notification_update);
+            if(current_language.equals(sLANGUAGE_HINDI)) {
+                notification_text = context.getString(R.string.notification_update_hi);
+            } else {
+                notification_text = context.getString(R.string.notification_update);
+            }
             notification_name = sCHANNEL_ID_UPDATE;
             notification_id = 1;
         }
 
         else if(CHANNEL_ID.equals(sCHANNEL_ID_SUNDAY)) {
-            notification_text = context.getString(R.string.sunday_msg);
+            // Event handling chain doesn't handle language, so using tricks to achieve the effect
+            if(current_language.equals(sLANGUAGE_HINDI)) {
+                notification_text = context.getString(R.string.sunday_msg_hi);
+            } else {
+                notification_text = context.getString(R.string.sunday_msg);
+            }
             notification_name = sCHANNEL_ID_SUNDAY;
             notification_id = 2;
         }
