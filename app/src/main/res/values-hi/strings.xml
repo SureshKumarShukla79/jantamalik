@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
+
+    <string name="kendra"><b>केन्द्र</b></string>
+    <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
+
     <string name="Issues"><b>मेरे मुद्दे</b></string>
     <string name="Money"><b>मेरा नोट</b></string>
     <string name="Vote"><b>मेरा वोट</b></string>
+
     <string name="Button_donate_activity">समर्थन करें</string>
     <string name="menuItemDonate">समर्थन करें</string>
     <string name="menuItemContactUs">संपर्क करें</string>
@@ -19,7 +24,7 @@
     <string name="WomenSafety">महिला सुरक्षा</string>
     <string name="Cleanliness">साफ सफाई</string>
 
-    <string name="MP">सांसद</string>
+    <string name="MP">मेरा सांसद</string>
     <string name="MLA">विधायक</string>
     <string name="Parshad">पार्षद</string>
 
@@ -125,5 +130,5 @@
 
     <string name="notification_update">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
-    <string name="total_budget">24,42,213 करोड़</string>
+    <string name="kendra_budget">24,42,213 करोड़</string>
 </resources>

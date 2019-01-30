@@ -1,15 +1,13 @@
-package in.filternet.jantamalik.VoteJava;
+package in.filternet.jantamalik.Kendra;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +18,7 @@ import in.filternet.jantamalik.R;
 import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.infographics;
 
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.DEFAULT_MP;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.hiDEFAULT_MP;
@@ -31,7 +30,6 @@ public class VoteMP extends AppCompatActivity {
     private TextView name,phone,email,area, address;
     private de.hdodenhof.circleimageview.CircleImageView profile_pic;
     DataFilter.MP_info mp;
-    public static final String TAB_NUMBER = "tab_number";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,7 +47,6 @@ public class VoteMP extends AppCompatActivity {
         profile_pic = findViewById(R.id.profile_image);
 
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,7 +84,7 @@ public class VoteMP extends AppCompatActivity {
 
     private void back_button(View view) {
         Intent intent = new Intent(view.getContext(), MainActivity.class);
-        intent.putExtra(TAB_NUMBER, 2);
+        intent.putExtra(TAB_NUMBER, 0);
         startActivity(intent);
     }
 

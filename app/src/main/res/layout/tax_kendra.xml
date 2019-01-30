@@ -9,16 +9,25 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-<RelativeLayout
+    <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_Tax_Kendra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            app:title="@string/taxkendra"
+            app:titleTextColor="@color/colorAccent" />
 
     <TextView
         android:id="@+id/tax_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/toolbar_Tax_Kendra"
         android:layout_marginTop="3dp"
         android:background="@color/greylight"
         android:text="@string/tax_note"
@@ -178,7 +187,7 @@
             android:layout_row="5"
             android:layout_column="0"
             android:layout_columnSpan="3"
-            android:text="@string/total_budget"
+            android:text="@string/kendra_budget"
             android:gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="fill_horizontal"

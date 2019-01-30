@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Janta Malik</string>
+
+    <string name="kendra"><b>Center</b></string>
+    <string name="taxkendra"><b>Center - Tax</b></string>
+
     <string name="Issues"><b>My issues</b></string>
     <string name="Money"><b>My note</b></string>
     <string name="Vote"><b>My vote</b></string>
+
     <string name="Button_donate_activity">Support us</string>
     <string name="menuItemDonate">Support us</string>
     <string name="menuItemContactUs">Contact us</string>
@@ -20,7 +25,7 @@
     <string name="WomenSafety">Women safety</string>
     <string name="Cleanliness">Cleanliness</string>
 
-    <string name="MP">Saansad / MP</string>
+    <string name="MP">My Saansad/MP</string>
     <string name="MLA">Vidhayak / MLA</string>
     <string name="Parshad">Parshad</string>
 
@@ -134,6 +139,6 @@
     <string name="notification_update_hi">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">Make the difference. Nation needs you!</string>
     <string name="sunday_msg_hi">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
-    <string name="total_budget">24,42,213 crore</string>
+    <string name="kendra_budget">24,42,213 crore</string>
 
 </resources>

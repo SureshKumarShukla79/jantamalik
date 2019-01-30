@@ -30,7 +30,10 @@
             android:name="in.filternet.jantamalik.DonateActivityJava.donate"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
         <activity
-            android:name="in.filternet.jantamalik.VoteJava.VoteMP"
+            android:name="in.filternet.jantamalik.Kendra.VoteMP"
+            android:theme="@style/AppTheme_NoActionBar" />
+        <activity
+            android:name="in.filternet.jantamalik.Kendra.TaxKendra"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
             android:name="in.filternet.jantamalik.IssuesJava.IssuesItem"
@@ -42,7 +45,7 @@
             android:label="@string/contact"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
         <activity android:name=".infographics"
-            android:parentActivityName=".VoteJava.VoteMP"></activity>
+            android:parentActivityName=".Kendra.VoteMP"></activity>
         <receiver
             android:name="in.filternet.jantamalik.Receiver"
             android:directBootAware="true">

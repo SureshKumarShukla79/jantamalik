@@ -1,4 +1,4 @@
-package in.filternet.jantamalik.VoteJava;
+package in.filternet.jantamalik.Kendra;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,30 +14,22 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import in.filternet.jantamalik.DataFilter;
-import in.filternet.jantamalik.Kendra.VoteMP;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
-public class VoteFragment extends Fragment {
+public class KendraFragment extends Fragment {
     String TAG = "VoteFragment";
 
     private View view;
-    private Button buttonMP;
-    private ImageButton imageButtonMP;
-    private Button buttonMP2;
-    private ImageButton imageButtonMP2;
-    private Button buttonMP3;
-    private ImageButton imageButtonMP3;
+    private Button vote2, note2;
+    private ImageButton vote1, vote3, note1, note3;
     private Intent intent;
     private Spinner spinnerState;
     private Spinner spinnerMP;
-    private Spinner spinnerMLA;
-    private Spinner spinnerWard;
     private ArrayAdapter arrayAdapterState;
     private ArrayAdapter arrayAdapterMP;
 
@@ -76,21 +68,18 @@ public class VoteFragment extends Fragment {
 
         editor = mSharedPref.edit();
 
-        view = inflater.inflate(R.layout.vote_fragment, container, false);
+        view = inflater.inflate(R.layout.kendra, container, false);
 
-        buttonMP = view.findViewById(R.id.Vote_Item_Button);
-        imageButtonMP = view.findViewById(R.id.Vote_Item_imageButton);
-        //second
-        buttonMP2 = view.findViewById(R.id.Vote_Item_Button2);
-        imageButtonMP2 = view.findViewById(R.id.Vote_Item_imageButton2);
-        //third
-        buttonMP3 = view.findViewById(R.id.Vote_Item_Button3);
-        imageButtonMP3 = view.findViewById(R.id.Vote_Item_imageButton3);
+        vote1 = view.findViewById(R.id.vote1);
+        vote2 = view.findViewById(R.id.vote2);
+        vote3 = view.findViewById(R.id.vote3);
+
+        note1 = view.findViewById(R.id.note1);
+        note2 = view.findViewById(R.id.note2);
+        note3 = view.findViewById(R.id.note3);
 
         spinnerState = view.findViewById(R.id.state_spinner);
         spinnerMP = view.findViewById(R.id.MP_spinner);
-        spinnerMLA = view.findViewById(R.id.MLA_spinner);
-        spinnerWard = view.findViewById(R.id.Ward_spinner);
 
         // Populating GUI
         dataFilter = new DataFilter();
@@ -177,32 +166,28 @@ public class VoteFragment extends Fragment {
             public void onNothingSelected(AdapterView<?> adapterView) {}
         });
 
-        //spinnerMLA click handler
-        spinnerMLA.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {}
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {}
-        });
-
-        MP_Click();
-        MLA_Click();
-        Parshad_Click();
+        vote_Click();
+        note_Click();
 
         return view;
     }
 
-    public void MP_Click(){
-        buttonMP.setOnClickListener(new View.OnClickListener() {
+    public void vote_Click(){
+        vote1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(view.getContext(), VoteMP.class);
+                startActivity(intent);
+            }
+        });
+        vote2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
              intent = new Intent(view.getContext(), VoteMP.class);
              startActivity(intent);
             }
         });
-
-       imageButtonMP.setOnClickListener(new View.OnClickListener() {
+       vote3.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                intent = new Intent(view.getContext(), VoteMP.class);
@@ -211,34 +196,26 @@ public class VoteFragment extends Fragment {
        });
     }
 
-    public void MLA_Click(){
-        buttonMP2.setOnClickListener(new View.OnClickListener() {
+    public void note_Click(){
+        note1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Toast.makeText(view.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
+                intent = new Intent(view.getContext(), TaxKendra.class);
+                startActivity(intent);
             }
         });
-
-        imageButtonMP2.setOnClickListener(new View.OnClickListener() {
+        note2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
+                intent = new Intent(view.getContext(), TaxKendra.class);
+                startActivity(intent);
             }
         });
-    }
-
-    public void Parshad_Click(){
-        buttonMP3.setOnClickListener(new View.OnClickListener() {
+        note3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),R.string.next_version, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        imageButtonMP3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),R.string.next_version, Toast.LENGTH_SHORT).show();
+                intent = new Intent(view.getContext(), TaxKendra.class);
+                startActivity(intent);
             }
         });
     }

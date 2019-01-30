@@ -47,14 +47,12 @@
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Issues"
-                android:icon="@drawable/issues"
-                />
+                android:text="@string/kendra" />
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Money"
-                android:icon="@drawable/note"
+                android:text="@string/Issues"
+                android:icon="@drawable/issues"
                 />
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
