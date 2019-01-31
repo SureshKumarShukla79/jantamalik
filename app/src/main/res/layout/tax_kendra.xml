@@ -43,67 +43,35 @@
         android:layout_below="@+id/tax_note"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:columnCount="3"
-        android:rowCount="6"
+        android:rowCount="4"
         android:orientation="horizontal"
         android:layout_margin="1dp">
 
         <ImageButton
-            android:layout_row="0"
-            android:layout_column="0"
             android:id="@+id/ParleG_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
             android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_parleg" />
-        <TextView
-            android:textColor="@color/black"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:text="ABCD"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"/>
+
         <ImageButton
-            android:layout_row="0"
-            android:layout_column="1"
             android:id="@+id/GST_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
             android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_gst" />
-        <TextView
-            android:textColor="@color/black"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:text="ABCD"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"/>
+
         <ImageButton
-            android:layout_row="0"
-            android:layout_column="2"
             android:id="@+id/Book_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:scaleType="centerCrop"
             android:backgroundTint="@color/colorPrimary"
             android:src="@drawable/tax_book" />
-        <TextView
-            android:textColor="@color/black"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:text="ABCD"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"/>
+
         <ImageButton
-            android:layout_row="2"
-            android:layout_column="0"
             android:id="@+id/petrol_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
@@ -111,19 +79,8 @@
             android:scaleType="centerCrop"
             android:backgroundTint="@color/orange"
             android:src="@drawable/tax_petrol" />
-        <TextView
-            android:textColor="@color/black"
-            android:layout_row="3"
-            android:layout_column="0"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:text="ABCD"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"/>
 
         <ImageButton
-            android:layout_row="2"
-            android:layout_column="1"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
@@ -133,8 +90,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_arrow_tilted_24px" />
         <ImageButton
-            android:layout_row="2"
-            android:layout_column="2"
             android:id="@+id/income_tax_grid"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
@@ -142,21 +97,10 @@
             android:scaleType="centerCrop"
             android:backgroundTint="@color/itax"
             android:src="@drawable/tax_incometax" />
-        <TextView
-            android:layout_row="3"
-            android:layout_column="2"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:text="ABCD"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:layout_height="wrap_content"/>
 
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_row="4"
-            android:layout_column="0"
             android:layout_gravity="right"
             android:adjustViewBounds="true"
             android:background="@color/colorAccent"
@@ -164,16 +108,12 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_arrow_tilted_24px" />
         <ImageButton
-            android:layout_row="4"
-            android:layout_column="1"
             android:layout_width="@dimen/tax_image"
             android:layout_height="@dimen/tax_image"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/dhan_kalash" />
         <ImageButton
-            android:layout_row="4"
-            android:layout_column="2"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@color/colorAccent"
@@ -184,8 +124,6 @@
 
         <TextView
             android:textSize="40sp"
-            android:layout_row="5"
-            android:layout_column="0"
             android:layout_columnSpan="3"
             android:text="@string/kendra_budget"
             android:gravity="center_horizontal"

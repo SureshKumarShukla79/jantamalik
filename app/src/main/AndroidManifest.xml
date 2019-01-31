@@ -44,8 +44,8 @@
             android:excludeFromRecents="true"
             android:label="@string/contact"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
-        <activity android:name=".infographics"
-            android:parentActivityName=".Kendra.VoteMP"></activity>
+        <activity android:name=".Kendra.Infographics"
+            android:parentActivityName=".MainActivity"></activity>
         <receiver
             android:name="in.filternet.jantamalik.Receiver"
             android:directBootAware="true">

@@ -16,7 +16,6 @@ import in.filternet.jantamalik.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 import in.filternet.jantamalik.Contact;
-import in.filternet.jantamalik.infographics;
 
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
@@ -27,7 +26,7 @@ import static in.filternet.jantamalik.VoteJava.VoteFragment.sMP;
 public class VoteMP extends AppCompatActivity {
     String TAG = "VoteMP";
     private Toolbar toolbar;
-    private TextView name,phone,email,area, address;
+    private TextView name,phone,email, address;
     private de.hdodenhof.circleimageview.CircleImageView profile_pic;
     DataFilter.MP_info mp;
 
@@ -42,7 +41,6 @@ public class VoteMP extends AppCompatActivity {
         name = findViewById(R.id.MP_name);
         phone = findViewById(R.id.phone);
         email = findViewById(R.id.email);
-        area = findViewById(R.id.Area);
         address = findViewById(R.id.address);
         profile_pic = findViewById(R.id.profile_image);
 
@@ -66,7 +64,6 @@ public class VoteMP extends AppCompatActivity {
         name.setText(mp.name);
         phone.setText(mp.phone);
         email.setText(mp.email);
-        area.setText(getString(R.string.mp_area) + MPArea);
         address.setText(mp.address);
 
         // Only Varanasi MP pic in app
@@ -145,10 +142,5 @@ public class VoteMP extends AppCompatActivity {
 
     public void onclick_Parshad(View view){
         Toast.makeText(view.getContext(),R.string.next_version, Toast.LENGTH_LONG).show();
-    }
-
-    public void openInfographics(View view) {
-        Intent intent = new Intent(VoteMP.this, infographics.class);
-        startActivity(intent);
     }
 }

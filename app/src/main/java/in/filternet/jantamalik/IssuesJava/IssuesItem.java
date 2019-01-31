@@ -12,6 +12,7 @@ import android.transition.Explode;
 import android.transition.Fade;
 import android.view.View;
 import android.view.Window;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import in.filternet.jantamalik.MainActivity;
@@ -23,7 +24,7 @@ public class IssuesItem extends AppCompatActivity {
    private TextView janta, saansad, vidhayak, parshad, parliament, centerGovt, stateGovt, municipality;
    private String current_language;
     private SharedPreferences mSharedPref;
-    private CardView one, two, three, four, five, six, seven, eight;
+    private LinearLayout one, two, three, four, five, six, seven, eight;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

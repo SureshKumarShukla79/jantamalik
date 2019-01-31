@@ -11,9 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import in.filternet.jantamalik.DataFilter;
 import in.filternet.jantamalik.MainActivity;
@@ -25,8 +26,10 @@ public class KendraFragment extends Fragment {
     String TAG = "VoteFragment";
 
     private View view;
-    private Button vote2, note2;
+    private TextView vote2, note2, govt1;
     private ImageButton vote1, vote3, note1, note3;
+    private ImageView govt2;
+
     private Intent intent;
     private Spinner spinnerState;
     private Spinner spinnerMP;
@@ -77,6 +80,9 @@ public class KendraFragment extends Fragment {
         note1 = view.findViewById(R.id.note1);
         note2 = view.findViewById(R.id.note2);
         note3 = view.findViewById(R.id.note3);
+
+        govt1 = view.findViewById(R.id.govt1);
+        govt2 = view.findViewById(R.id.govt2);
 
         spinnerState = view.findViewById(R.id.state_spinner);
         spinnerMP = view.findViewById(R.id.MP_spinner);
@@ -168,6 +174,7 @@ public class KendraFragment extends Fragment {
 
         vote_Click();
         note_Click();
+        govt_Click();
 
         return view;
     }
@@ -215,6 +222,23 @@ public class KendraFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 intent = new Intent(view.getContext(), TaxKendra.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void govt_Click(){
+        govt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(view.getContext(), Infographics.class);
+                startActivity(intent);
+            }
+        });
+        govt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(view.getContext(), Infographics.class);
                 startActivity(intent);
             }
         });

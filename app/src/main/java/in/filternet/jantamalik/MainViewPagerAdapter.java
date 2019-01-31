@@ -8,11 +8,11 @@ import in.filternet.jantamalik.IssuesJava.IssuesFragment;
 import in.filternet.jantamalik.Kendra.KendraFragment;
 import in.filternet.jantamalik.VoteJava.VoteFragment;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class MainViewPagerAdapter extends FragmentPagerAdapter {
 
     private  int numOfTabs;
 
-    public ViewPagerAdapter(FragmentManager fm, int numOfTabs) {
+    public MainViewPagerAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
         this.numOfTabs = numOfTabs;
     }
@@ -26,9 +26,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             case 1:
                 IssuesFragment issuesFragment = new IssuesFragment();
                 return issuesFragment;
-            case 2:
-                VoteFragment voteFragment = new VoteFragment();
-                return voteFragment;
             default:
                 return null;
         }

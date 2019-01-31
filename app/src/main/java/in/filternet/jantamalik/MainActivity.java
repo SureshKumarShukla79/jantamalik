@@ -96,9 +96,9 @@ public class MainActivity extends AppCompatActivity {
             ui_language_button.setText("हिन्दी");
         }
 
-        final ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),
+        final MainViewPagerAdapter mainViewPagerAdapter = new MainViewPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
-        viewPager.setAdapter(viewPagerAdapter);
+        viewPager.setAdapter(mainViewPagerAdapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout ));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

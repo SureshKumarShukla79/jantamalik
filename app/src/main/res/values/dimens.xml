@@ -2,4 +2,5 @@
 <resources>
     <dimen name="tax_image">120dp</dimen>
     <dimen name="small_image">60dp</dimen>
+    <dimen name="arrow_tail_gap">8dp</dimen>
 </resources>

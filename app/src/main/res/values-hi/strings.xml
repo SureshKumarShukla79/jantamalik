@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
 
-    <string name="kendra"><b>केन्द्र</b></string>
+    <string name="kendra"><b>केन्द्र सरकार</b></string>
     <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
 
     <string name="Issues"><b>मेरे मुद्दे</b></string>
@@ -36,7 +36,9 @@
     <string name="email_contact_modi">connect@mygov.nic.in</string>
     <string name="address_modi">7 लोक कल्याण मार्ग, नई दिल्ली, 110011</string>
 
-    <string name="update_info">अगर कोई जानकारी सही करनी हो</string>
+    <string name="source_sansad">जानकारी https://loksabha.nic.in</string>
+
+    <string name="update_info">सांसद को फोन व ईमेल करें, हिचकिचाएँ नहीं।</string>
     <string name="donate_appeal">अपना समर्थन दें</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
@@ -109,7 +111,7 @@
     <string name="loksabha">लोकसभा</string>
     <string name="government">केंद्र सरकार</string>
     <string name="contact">संपर्क करें</string>
-    <string name="source_text">स्रोत https://www.indiabudget.gov.in/glance.asp</string>
+    <string name="source_text">जानकारी https://www.indiabudget.gov.in/glance.asp</string>
     <string name="head">नाम</string>
 
     <string-array name="MP_state_values">

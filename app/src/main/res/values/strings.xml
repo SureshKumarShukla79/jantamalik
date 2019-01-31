@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Janta Malik</string>
 
-    <string name="kendra"><b>Center</b></string>
+    <string name="kendra"><b>Center govt</b></string>
     <string name="taxkendra"><b>Center - Tax</b></string>
 
     <string name="Issues"><b>My issues</b></string>
@@ -38,7 +38,9 @@
     <string name="email_contact_modi">connect@mygov.nic.in</string>
     <string name="address_modi">7 Lok Kalyan Marg, New Delhi, 110011</string>
 
-    <string name="update_info">If information need to be update</string>
+    <string name="source_sansad">Source https://loksabha.nic.in</string>
+
+    <string name="update_info">Call and email your saansad. Don\'t hesitate.</string>
     <string name="donate_appeal">Show your support</string>
 
     <string name="support_email">jantamalik@filternet.in</string>

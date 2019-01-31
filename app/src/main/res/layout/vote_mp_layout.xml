@@ -22,45 +22,12 @@
         app:titleTextColor="@color/colorAccent" />
 
     <android.support.v7.widget.CardView
-        android:id="@+id/infographics_cardView"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/toolbar_MP_layout"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:onClick="openInfographics">
-
-            <TextView
-                android:id="@+id/democracy"
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_weight="1.00"
-                android:padding="8dp"
-                android:text="@string/democracy"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/black" />
-
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="right|end"
-                android:src="@drawable/right_black_arrow_24dp" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
         android:id="@+id/DOs_cardview_MP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:padding="10dp"
-        android:layout_below="@+id/infographics_cardView">
+        android:layout_below="@+id/toolbar_MP_layout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -153,29 +120,6 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="left"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_location_on_black_24dp" />
-
-                <TextView
-                    android:id="@+id/Area"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:paddingLeft="10dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
                 android:id="@+id/phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -242,6 +186,21 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/source_sansad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/source_sansad"
+            android:layout_gravity="start"
+            android:autoLink="web"
+            android:clickable="true"
+            android:textColorLink="@color/black"
+            android:layout_below="@id/nestedScroll"
+            android:focusable="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/black" />
+
         <LinearLayout
             android:id="@+id/contact_mp"
             android:layout_width="match_parent"
@@ -272,39 +231,17 @@
                 app:backgroundTint="@color/colorPrimary" />
         </LinearLayout>
 
-        <RelativeLayout
-            android:id="@+id/update_mp_info"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/update_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_alignTop="@+id/arrow"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/update_info"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black" />
 
-            <TextView
-                android:id="@+id/update_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/arrow"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="5dp"
-                android:text="@string/update_info"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/black" />
-
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/arrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_toEndOf="@+id/update_text"
-                android:layout_toRightOf="@+id/update_text"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="onclick_update_mp"
-                android:src="@drawable/ic_arrow_forward_white_24dp"
-                app:backgroundTint="@color/colorPrimary"
-                app:fabSize="mini" />
-        </RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>

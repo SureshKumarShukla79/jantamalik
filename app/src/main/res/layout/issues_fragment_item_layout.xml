@@ -12,13 +12,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/one"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/toolbar_MP_layout"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/one"
+            android:layout_below="@id/toolbar_MP_layout"
+            android:layout_margin="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -38,16 +35,12 @@
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/two"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/one"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/two"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_below="@id/one"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -66,16 +59,12 @@
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/three"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/two"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/three"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_below="@id/two"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -94,17 +83,12 @@
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-    //fourth
-    <android.support.v7.widget.CardView
-        android:id="@+id/four"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/three"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/four"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_below="@id/three"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -123,17 +107,12 @@
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-    //fifth
-    <android.support.v7.widget.CardView
-        android:id="@+id/five"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/four"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/five"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_below="@id/four"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -152,17 +131,12 @@
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-    //sixth
-    <android.support.v7.widget.CardView
-        android:id="@+id/six"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/five"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/six"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_below="@id/five"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -181,17 +155,12 @@
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-    //seventh
-    <android.support.v7.widget.CardView
-        android:id="@+id/seven"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/six"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/seven"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_below="@id/six"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -210,17 +179,12 @@
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
-    //eighth
-    <android.support.v7.widget.CardView
-        android:id="@+id/eight"
-        android:layout_width="match_parent"
-        android:layout_margin="8dp"
-        android:layout_below="@id/seven"
-        android:layout_height="wrap_content">
         <LinearLayout
+            android:id="@+id/eight"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:layout_below="@id/seven"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -239,7 +203,6 @@
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
                 android:textColor="@color/black" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.SwitchCompat
         android:id="@+id/nine"
