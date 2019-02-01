@@ -12,8 +12,6 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import in.filternet.jantamalik.DonateActivityJava.donate;
-
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.MainActivity.sUSER_CURRENT_LANGUAGE;
 import static in.filternet.jantamalik.MainActivity.setUI_Lang;
@@ -49,6 +47,7 @@ public class Contact extends AppCompatActivity {
         }
 
         setContentView(R.layout.contact);
+        setTitle(R.string.contact);
 
         ui_issue = findViewById(R.id.radio_issue);
         ui_update = findViewById(R.id.radio_update);
@@ -118,7 +117,14 @@ public class Contact extends AppCompatActivity {
 
 
     public void onclick_open_donate(View view) {
-        Intent intent = new Intent(this, donate.class);
+        Uri uri = Uri.parse("https://imjo.in/7mJBDn");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void onclick_github(View view) {
+        Uri uri = Uri.parse("https://github.com/SureshKumarShukla79/jantamalik");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 }

@@ -27,9 +27,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="in.filternet.jantamalik.DonateActivityJava.donate"
-            android:parentActivityName="in.filternet.jantamalik.MainActivity" />
-        <activity
             android:name="in.filternet.jantamalik.Kendra.VoteMP"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity

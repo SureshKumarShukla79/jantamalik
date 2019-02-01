@@ -41,7 +41,11 @@
     <string name="source_sansad">Source https://loksabha.nic.in</string>
 
     <string name="update_info">Call and email your saansad. Don\'t hesitate.</string>
-    <string name="donate_appeal">Show your support</string>
+
+    <string name="donate_appeal">To support app development, future research and adding state govt/nagar nigam, please donate to non-profit Filternet Foundation.</string>
+
+    <string name="team_list">Team :
+        \nMonika Bose, Sonal Shukla, Siddhesh Shah, Vikas Gupta and Suresh Shukla</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">Add Issue</string>
@@ -69,7 +73,7 @@
     <string name="tax_total_center"><b>Total tax to central govt - Twenty four lakh forty two thousand two hundred thirteen crores</b></string>
     <string name="tax_center_details">Where is our tax money spent?</string>
     <string name="crore">Crore</string>
-    <string name="interest">Interest</string>
+    <string name="interest">Interest 🔥🔥</string>
     <string name="defence">Defence</string>
     <string name="subsidy_food">Subsidy - food</string>
     <string name="pension">Pension</string>
@@ -78,11 +82,11 @@
     <string name="transport">Transport</string>
     <string name="tax_administration">Tax Administration</string>
     <string name="home_affairs">Home Affairs</string>
-    <string name="education">Education</string>
+    <string name="education">Education 🔥</string>
     <string name="others">Others</string>
     <string name="subsidy_fertilizer">Subsidy - fertilizer</string>
     <string name="agriculture_and_allied">Agriculture &amp; Allied</string>
-    <string name="health">Health</string>
+    <string name="health">Health 🔥</string>
     <string name="social_welfare">Social welfare</string>
     <string name="urban_development">Urban Development</string>
     <string name="energy">Energy</string>
@@ -142,5 +146,9 @@
     <string name="sunday_msg">Make the difference. Nation needs you!</string>
     <string name="sunday_msg_hi">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
     <string name="kendra_budget">24,42,213 crore</string>
+
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="mail_to_us">This app is made by Filternet Foundation in public interest.\nNote : This email will goto Filternet Foundation. It will not be forwarded to saansad or govt.</string>
 
 </resources>

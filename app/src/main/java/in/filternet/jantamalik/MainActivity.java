@@ -35,8 +35,6 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-import in.filternet.jantamalik.DonateActivityJava.donate;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
@@ -137,10 +135,6 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         Intent intent;
         switch (id){
-            case R.id.donate_menuItem:
-                intent = new Intent(this, donate.class);
-                startActivity(intent);
-                break;
             case R.id.contact_menuItem:
                 intent = new Intent(this, Contact.class);
                 intent.putExtra("feedback", true);
