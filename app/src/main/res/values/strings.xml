@@ -12,8 +12,7 @@
     <string name="menuItemDonate">Support us</string>
     <string name="menuItemContactUs">Contact us</string>
     <string name="menuItemShare">Share</string>
-    <string name="Donate_menuItem_description">Filternet Foundation is a registered non-profit (Section-8 Pvt Ltd).
-        \nTo support further research, click below</string>
+
     <string name="call_button">Call</string>
     <string name="email_button">Email</string>
     <string name="CrimeIssue">Crime</string>
@@ -42,7 +41,9 @@
 
     <string name="update_info">Call and email your saansad. Don\'t hesitate.</string>
 
-    <string name="donate_appeal">To support app development, future research and adding state govt/nagar nigam, please donate to non-profit Filternet Foundation.</string>
+    <string name="donate_appeal">To support app development, donate to Filternet Foundation.</string>
+    <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
+        \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
 
     <string name="team_list">Team :
         \nMonika Bose, Sonal Shukla, Siddhesh Shah, Vikas Gupta and Suresh Shukla</string>
@@ -108,7 +109,7 @@
     <string name="Option_Update">Update</string>
     <string name="Option_Later">Later</string>
     <string name="User_appeal">Add your issue,
-        \nIt will appear next week.</string>
+        \nSelected issues will appear next week.</string>
 
     <string name="add_issue_msg">Add Issue</string>
     <string name="update_information_msg">Update Information</string>
@@ -126,7 +127,7 @@
     <string name="government">Government enforces laws,
         \nprovides services to citizens</string>
     <string name="contact">Contact us</string>
-    <string name="source_text">Source https://www.indiabudget.gov.in/glance.asp</string>
+    <string name="source_text">2018-19 https://www.indiabudget.gov.in/glance.asp</string>
     <string name="head">Head</string>
 
     <string-array name="MP_state_values">

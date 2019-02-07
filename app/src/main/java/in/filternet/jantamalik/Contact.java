@@ -117,7 +117,7 @@ public class Contact extends AppCompatActivity {
 
 
     public void onclick_open_donate(View view) {
-        Uri uri = Uri.parse("https://imjo.in/7mJBDn");
+        Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

@@ -44,7 +44,7 @@
                     android:id="@+id/radio_issue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="4dp"
                     android:text="@string/add_issue_msg"
                     android:checked="false"
                     android:onClick="onclick_add_subject"
@@ -55,7 +55,7 @@
                     android:id="@+id/radio_update"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="6dp"
                     android:checked="false"
                     android:text="@string/update_information_msg"
                     android:onClick="onclick_add_subject"
@@ -66,7 +66,7 @@
                     android:id="@+id/radio_feedback"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="6dp"
                     android:text="@string/feedback_msg"
                     android:checked="false"
                     android:onClick="onclick_add_subject"
@@ -80,8 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/options"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="6dp"
                 android:layout_centerHorizontal="true"
                 android:text="@string/email_us_msg"
                 android:visibility="gone"
@@ -111,19 +110,31 @@
                 android:layout_height="wrap_content"
                 android:text="@string/donate_appeal"
                 android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Button
+                android:id="@+id/donate_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/donate_text"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="6dp"
                 android:layout_centerHorizontal="true"
                 android:text="@string/donate"
                 android:textColor="@color/colorAccent"
                 android:onClick="onclick_open_donate"
                 android:background="@drawable/button_styling"/>
+
+            <TextView
+                android:id="@+id/doha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/donate_button"
+                android:layout_marginTop="6dp"
+                android:text="@string/doha"
+                android:textColor="@color/black"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
         </RelativeLayout>
     </android.support.v7.widget.CardView>

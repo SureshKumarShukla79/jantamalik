@@ -40,7 +40,10 @@
 
     <string name="update_info">सांसद को फोन व ईमेल करें, हिचकिचाएँ नहीं।</string>
 
-    <string name="donate_appeal">भविष्य में एप को बेहतर करने के लिए, राज्य और नगर-निगम की जानकारी जोड़ने के लिए, गैर-मुनाफा फिल्टरनेट फाउंडेशन को दान दें।</string>
+    <string name="donate_appeal">एप बनाने के लिए, फिल्टरनेट फाउंडेशन को दान दें।</string>
+
+    <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
+        \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
 
     <string name="team_list">टीम :
         \nमोनिका बोस, सोनल शुक्ल, सिद्धेश शाह, विकास गुप्ता और सुरेश शुक्ल</string>
@@ -107,7 +110,7 @@
     <string name="Option_Update">हाँ</string>
     <string name="Option_Later">बाद में</string>
     <string name="User_appeal">अपने मुद्दों को जोड़ें,
-        \nअगले हफ्ते दिखाई देगा।</string>
+        \nचुने हुए मुद्दे अगले हफ्ते दिखेंगें</string>
 
     <string name="add_issue_msg">अपना मुद्दा लिखेंं</string>
     <string name="update_information_msg">सांसद की सही जानकारी देंं</string>
@@ -119,7 +122,7 @@
     <string name="loksabha">लोकसभा</string>
     <string name="government">केंद्र सरकार</string>
     <string name="contact">संपर्क करें</string>
-    <string name="source_text">जानकारी https://www.indiabudget.gov.in/glance.asp</string>
+    <string name="source_text">2018-19 https://www.indiabudget.gov.in/glance.asp</string>
     <string name="head">नाम</string>
 
     <string-array name="MP_state_values">
