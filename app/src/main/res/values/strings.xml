@@ -73,6 +73,10 @@
     <string name="tax_total_center"><b>Total tax to central govt - Twenty four lakh forty two thousand two hundred thirteen crores</b></string>
     <string name="tax_center_details">Where is our tax money spent?</string>
     <string name="crore">Crore</string>
+
+    <string name="interest1">हर 100 रू में से 23.58 रू ब्याज पर खर्च होता है</string>
+    <string name="defense1">हर 100 रू में से 11.58 रू रक्षा पर खर्च होता है</string>
+
     <string name="interest">Interest</string>
     <string name="defence">Defence</string>
     <string name="subsidy_food">Subsidy - food</string>

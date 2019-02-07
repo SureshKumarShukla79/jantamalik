@@ -9,15 +9,16 @@
     tools:context="in.filternet.jantamalik.Kendra.VoteMP">
 
     <TextView
-            android:id="@+id/state_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/state_text"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/black"
-            android:layout_alignParentTop="true"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"/>
+        android:id="@+id/state_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state_text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"/>
 
     <Spinner
         android:id="@+id/state_spinner"
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_alignTop="@+id/state_text"
         android:layout_toRightOf="@id/state_text"
         android:backgroundTint="@color/colorPrimary"
         android:gravity="center"
@@ -84,17 +86,20 @@
                     android:scaleType="centerInside"
                     android:background="@drawable/recyclerview_item_click_effect"
                     android:src="@drawable/vote" />
+
                 <TextView
                     android:id="@+id/vote2"
-                    android:layout_width="250dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left|bottom"
                     android:background="@drawable/recyclerview_item_click_effect"
                     android:gravity="left|bottom"
+                    android:layout_weight="1.00"
                     android:padding="10dp"
                     android:text="@string/MP"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
+
                 <ImageButton
                     android:id="@+id/vote3"
                     android:layout_width="wrap_content"
@@ -138,11 +143,12 @@
                     android:src="@drawable/note" />
                 <TextView
                     android:id="@+id/note2"
-                    android:layout_width="250dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left|bottom"
                     android:background="@drawable/recyclerview_item_click_effect"
                     android:gravity="left|bottom"
+                    android:layout_weight="1.00"
                     android:padding="10dp"
                     android:text="@string/kendra_budget"
                     android:textColor="@color/black"

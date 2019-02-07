@@ -69,9 +69,13 @@
     <string name="next_version">अगले संस्करण में आनेवाला है</string>
 
     <string name="tax_note">देश की प्रगति के लिए हम सब कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
-    <string name="tax_total_center"><b>केंद्र सरकार को टैक्स - चौबीस लाख बयालीस हजार दो सौ तेरह करोड़</b></string>
-    <string name="tax_center_details">हमारा टैक्स का पैसा कहाँ खर्च हो रहा है?</string>
+    <string name="tax_total_center"><b>केंद्र सरकार को कुल सालाना टैक्स - चौबीस लाख बयालीस हजार दो सौ तेरह करोड़ रू हम सब मिलकर देते हैं।</b></string>
+    <string name="tax_center_details">हमारा टैक्स का पैसा खर्च कहाँ हो रहा है?</string>
     <string name="crore">करोड़</string>
+
+    <string name="interest1">हर 100 रू में से 23.58 रू ब्याज पर खर्च होता है</string>
+    <string name="defense1">हर 100 रू में से 11.58 रू रक्षा पर खर्च होता है</string>
+
     <string name="interest">ब्याज</string>
     <string name="defence">रक्षा</string>
     <string name="subsidy_food">छूट - भोजन</string>
