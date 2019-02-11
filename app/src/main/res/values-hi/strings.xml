@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
 
-    <string name="kendra"><b>केन्द्र सरकार</b></string>
+    <string name="kendra"><b>केन्द्र</b></string>
     <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
 
+    <string name="Center_Subjects"><b>निम्न विषयों पर कानून बनाने और लागू करने की जिम्मेदारी</b></string>
     <string name="Issues"><b>मेरे मुद्दे</b></string>
     <string name="Money"><b>मेरा नोट</b></string>
     <string name="Vote"><b>मेरा वोट</b></string>
@@ -144,6 +145,11 @@
     <string name="notification_update">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
     <string name="kendra_budget">24,42,213 करोड़</string>
+
+    <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी, शिक्षा, रेल, राष्ट्रीय राजमार्ग, शेयर बाजार, पेट्रोल/सीएनजी पर कर, पोस्ट आफिस, नोट / सिक्के,
+        बैंक, कंपनी कानून, कंपनी टैक्स, बीमा, सामान की गुणवत्ता, पेट्रोल, पेट्रोल का दाम, खान और तेलक्षेत्र, खान में श्रम, सीबीआई, नागरिकता, पासपोर्ट, रक्षा,
+        वन, दवाई, जनगणना, अंतर-राज्यीय आवाजाही, दंड विधि, तलाक कानून, आदि
+        \n\nसंविधान की सातंवी अनुसूची से</string>
 
     <string name="phone">फोन</string>
     <string name="email">ईमेल</string>
