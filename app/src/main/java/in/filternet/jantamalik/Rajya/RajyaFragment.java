@@ -1,4 +1,4 @@
-package in.filternet.jantamalik.Kendra;
+package in.filternet.jantamalik.Rajya;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +16,20 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
-public class KendraFragment extends Fragment {
-    String TAG = "VoteFragment";
+public class RajyaFragment extends Fragment {
+    String TAG = "RajyaFragment";
 
     private View view;
     private TextView vote2, note2, govt1;
@@ -31,9 +38,9 @@ public class KendraFragment extends Fragment {
 
     private Intent intent;
     private Spinner spinnerState;
-    private Spinner spinnerMP;
+    private Spinner spinnerVidhayak;
     private ArrayAdapter arrayAdapterState;
-    private ArrayAdapter arrayAdapterMP;
+    private ArrayAdapter arrayAdapterVidhayak;
 
     private DataFilter dataFilter;
 
@@ -55,6 +62,7 @@ public class KendraFragment extends Fragment {
     public static final String sMLA = DEFAULT_MLA;
     public static final String sWARD = DEFAULT_WARD;
 
+    private boolean firsttime = true;
     private String mLanguage;
     public String AreaName;
 
@@ -70,7 +78,7 @@ public class KendraFragment extends Fragment {
 
         editor = mSharedPref.edit();
 
-        view = inflater.inflate(R.layout.kendra, container, false);
+        view = inflater.inflate(R.layout.rajya, container, false);
 
         vote1 = view.findViewById(R.id.vote1);
         vote2 = view.findViewById(R.id.vote2);
@@ -84,26 +92,26 @@ public class KendraFragment extends Fragment {
         govt2 = view.findViewById(R.id.govt2);
 
         spinnerState = view.findViewById(R.id.state_spinner);
-        spinnerMP = view.findViewById(R.id.MP_spinner);
+        spinnerVidhayak = view.findViewById(R.id.MP_spinner);
 
         // Populating GUI
         dataFilter = new DataFilter();
 
-        String State = mSharedPref.getString(sSTATE,DEFAULT_STATE);
-        String MP = mSharedPref.getString(sMP,DEFAULT_MP);
-        String MLA = mSharedPref.getString(sMLA,DEFAULT_MLA);
-        String Ward = mSharedPref.getString(sWARD,DEFAULT_WARD);
+        String State = mSharedPref.getString(sSTATE, DEFAULT_STATE);
+        String MP = mSharedPref.getString(sMP, DEFAULT_MP);
+        String MLA = mSharedPref.getString(sMLA, DEFAULT_MLA);
+        String Ward = mSharedPref.getString(sWARD, DEFAULT_WARD);
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
         // In case of Hindi, change the defaults
         if (mLanguage.equals(sLANGUAGE_HINDI)) {
-            if(State.equals(DEFAULT_STATE))
+            if (State.equals(DEFAULT_STATE))
                 State = hiDEFAULT_STATE;
-            if(MP.equals(DEFAULT_MP))
+            if (MP.equals(DEFAULT_MP))
                 MP = hiDEFAULT_MP;
-            if(MLA.equals(DEFAULT_MLA))
+            if (MLA.equals(DEFAULT_MLA))
                 MLA = hiDEFAULT_MLA;
-            if(Ward.equals(DEFAULT_WARD))
+            if (Ward.equals(DEFAULT_WARD))
                 Ward = hiDEFAULT_WARD;
         }
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
@@ -125,13 +133,17 @@ public class KendraFragment extends Fragment {
         //Log.e(TAG, "state def: " + State);
 
         //populating MP Area
-        arrayAdapterMP = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
-                dataFilter.getMPAreas(mLanguage,State));
-        arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerMP.setAdapter(arrayAdapterMP);
+        List<String> blanklist = new ArrayList<>();
+        blanklist.add(".");
+        firsttime = true;
+        arrayAdapterVidhayak = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
+                blanklist);
+        //dataFilter.getMPAreas(mLanguage,State)); // TBD
+        arrayAdapterVidhayak.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerVidhayak.setAdapter(arrayAdapterVidhayak);
 
-        spinnerPosition = arrayAdapterMP.getPosition(MP);
-        spinnerMP.setSelection(spinnerPosition);
+        /*spinnerPosition = arrayAdapterMP.getPosition(MP);
+        spinnerMP.setSelection(spinnerPosition);*/
         //Log.e(TAG, "MP def: " + MP);
         // defaults over
 
@@ -140,35 +152,49 @@ public class KendraFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
-               // Log.e(TAG, "spin state : " + i + " " + l + " " + State);
+                // Log.e(TAG, "spin state : " + i + " " + l + " " + State);
                 editor.putString(sSTATE, State).commit();
 
                 // Reload the state MP areas
-                arrayAdapterMP = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
-                        dataFilter.getMPAreas(mLanguage,State));
-                arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerMP.setAdapter(arrayAdapterMP);
+                arrayAdapterVidhayak = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
+                        dataFilter.getMPAreas(mLanguage, State));
+                arrayAdapterVidhayak.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                //spinnerMP.setAdapter(arrayAdapterMP);
 
-                String MP = mSharedPref.getString(sMP,DEFAULT_MP);
-                int spinnerPosition = arrayAdapterMP.getPosition(MP);
-                spinnerMP.setSelection(spinnerPosition);
+                String MP = mSharedPref.getString(sMP, DEFAULT_MP);
+                int spinnerPosition = arrayAdapterVidhayak.getPosition(MP);
+                //spinnerMP.setSelection(spinnerPosition);
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {}
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
         });
 
         //spinner constituency click handler
-        spinnerMP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnerVidhayak.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                AreaName = adapterView.getItemAtPosition(i).toString();
-                //Log.e(TAG, "spin MP : " + i + " " + l + " " + AreaName);
-                editor.putString(sMP, AreaName ).commit();
+                //AreaName = adapterView.getItemAtPosition(i).toString();
+                Log.e(TAG, "spin Vidhayak : " + i + " " + l + " " + AreaName);
+                //editor.putString(sMP, AreaName ).commit();
+
+                if (firsttime == true) {
+                    firsttime = false;
+                    Log.e("", "firsttime = false");
+                } else {
+                    Log.e("", "firsttime == false");
+                    tobedone(view);
+                }
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {}
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                if (firsttime == false) {
+                    Log.e("", "nothing firsttime false");
+                    tobedone(view);
+                }
+            }
         });
 
         vote_Click();
@@ -178,69 +204,85 @@ public class KendraFragment extends Fragment {
         return view;
     }
 
-    public void vote_Click(){
+    public void vote_Click() {
         vote1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), VoteMP.class);
-                startActivity(intent);
+                tobedone(view);
+                //intent = new Intent(view.getContext(), VoteVidhayak.class);
+                //startActivity(intent);
             }
         });
         vote2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             intent = new Intent(view.getContext(), VoteMP.class);
-             startActivity(intent);
+                tobedone(view);
+                //intent = new Intent(view.getContext(), VoteVidhayak.class);
+                //startActivity(intent);
             }
         });
-       vote3.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               intent = new Intent(view.getContext(), VoteMP.class);
-               startActivity(intent);
-           }
-       });
+        vote3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tobedone(view);
+                //intent = new Intent(view.getContext(), VoteVidhayak.class);
+                //startActivity(intent);
+            }
+        });
     }
 
-    public void note_Click(){
+    public void note_Click() {
         note1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), TaxKendra.class);
-                startActivity(intent);
+                tobedone(view);
+                //intent = new Intent(view.getContext(), TaxRajya.class);
+                //startActivity(intent);
             }
         });
         note2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), TaxKendra.class);
-                startActivity(intent);
+                tobedone(view);
+                //intent = new Intent(view.getContext(), TaxRajya.class);
+                //startActivity(intent);
             }
         });
         note3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), TaxKendra.class);
-                startActivity(intent);
+                tobedone(view);
+                //intent = new Intent(view.getContext(), TaxRajya.class);
+                //startActivity(intent);
             }
         });
     }
 
-    public void govt_Click(){
+    public void govt_Click() {
         govt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), Infographics.class);
+                intent = new Intent(view.getContext(), RajyaInfographics.class);
                 startActivity(intent);
             }
         });
         govt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), Infographics.class);
+                intent = new Intent(view.getContext(), RajyaInfographics.class);
                 startActivity(intent);
             }
         });
+    }
+
+    public void tobedone(View view) {
+        // Take the user to contact screen
+        Intent intent = new Intent(view.getContext(), Contact.class);
+        intent.putExtra("update_mp", true);
+        intent.putExtra("tab", 1);
+        startActivity(intent);
+        // Invite to join the team
+        Toast.makeText(getContext(), R.string.next_version, Toast.LENGTH_LONG).show();
     }
 }
 

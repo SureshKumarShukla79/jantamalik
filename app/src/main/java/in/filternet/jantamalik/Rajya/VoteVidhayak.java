@@ -1,4 +1,4 @@
-package in.filternet.jantamalik.Kendra;
+package in.filternet.jantamalik.Rajya;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -22,10 +23,10 @@ import static in.filternet.jantamalik.VoteJava.VoteFragment.DEFAULT_MP;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.hiDEFAULT_MP;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.sMP;
 
-public class VoteMP extends AppCompatActivity {
-    String TAG = "VoteMP";
+public class VoteVidhayak extends AppCompatActivity {
+    String TAG = "VoteVidhayak";
     private Toolbar toolbar;
-    private TextView name,phone,email, address;
+    private TextView name, phone, email, address;
     private de.hdodenhof.circleimageview.CircleImageView profile_pic;
     DataFilter.MP_info mp;
 
@@ -52,21 +53,21 @@ public class VoteMP extends AppCompatActivity {
         });
 
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        String MPArea = mSharedPref.getString(sMP,DEFAULT_MP);
+        String MPArea = mSharedPref.getString(sMP, DEFAULT_MP);
         String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
 
         DataFilter dataFilter = new DataFilter();
         //mp = dataFilter.new MP_info();
         mp = dataFilter.getMPInfo(current_language, MPArea);
 
-      //  Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
+        //  Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
         name.setText(mp.name);
         phone.setText(mp.phone);
         email.setText(mp.email);
         address.setText(mp.address);
 
         // Only Varanasi MP pic in app
-        if(MPArea.equals(DEFAULT_MP) || MPArea.equals(hiDEFAULT_MP))
+        if (MPArea.equals(DEFAULT_MP) || MPArea.equals(hiDEFAULT_MP))
             profile_pic.setImageResource(R.drawable.narendra_modi_pic);
         else
             profile_pic.setImageResource(R.drawable.politician_illustration);
@@ -80,12 +81,12 @@ public class VoteMP extends AppCompatActivity {
 
     private void back_button(View view) {
         Intent intent = new Intent(view.getContext(), MainActivity.class);
-        intent.putExtra(TAB_NUMBER, 0);
+        intent.putExtra(TAB_NUMBER, 1);
         startActivity(intent);
     }
 
     public void onclick_call_mp(View view) {
-        if(mp.phone.equals(""))
+        if (mp.phone.equals(""))
             return;
 
         Uri number = Uri.parse("tel:" + mp.phone);
@@ -93,14 +94,14 @@ public class VoteMP extends AppCompatActivity {
 
         try { // Calling not available on Tablet devices
             startActivity(callIntent);
-        } catch (Exception exception){
+        } catch (Exception exception) {
             Toast.makeText(this, "Unable to CALL", Toast.LENGTH_LONG).show();
             exception.printStackTrace();
         }
     }
 
     public void onclick_email_mp(View view) {
-        if(mp.email.equals(""))
+        if (mp.email.equals(""))
             return;
 
         String[] TO = {mp.email};
@@ -124,14 +125,17 @@ public class VoteMP extends AppCompatActivity {
         }
     }
 
-    public void onclick_update_mp(View view) {
+    public void onclick_update_Vidhayak(View view) {
         Intent intent = new Intent(this, Contact.class);
         intent.putExtra("update_mp", true);
+        intent.putExtra("tab", 1);
         startActivity(intent);
     }
 
-    public void onclick_MP(View view){
-        Intent intent = new Intent(view.getContext(), VoteMP.class);
+    public void onclick_Vidhayak(View view) {
+        Intent intent = new Intent(this, Contact.class);
+        intent.putExtra("update_mp", true);
+        intent.putExtra("tab", 1);
         startActivity(intent);
     }
 }

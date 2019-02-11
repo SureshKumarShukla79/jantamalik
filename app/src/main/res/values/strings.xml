@@ -2,6 +2,7 @@
     <string name="app_name">Janta Malik</string>
 
     <string name="kendra"><b>Center</b></string>
+    <string name="rajya"><b>State</b></string>
     <string name="taxkendra"><b>Center - Tax</b></string>
 
     <string name="Center_Subjects"><b>Responsibilities for making laws in following areas and law enforcement</b></string>
@@ -26,7 +27,7 @@
     <string name="Cleanliness">Cleanliness</string>
 
     <string name="MP">My Saansad/MP</string>
-    <string name="MLA">Vidhayak / MLA</string>
+    <string name="MLA">My Vidhayak(MLA)</string>
     <string name="Parshad">Parshad</string>
 
 
@@ -46,7 +47,7 @@
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
         \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
 
-    <string name="team_list">Team :
+    <string name="team_list">Join team :
         \nMonika Bose, Sonal Shukla, Siddhesh Shah, Vikas Gupta and Suresh Shukla</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
@@ -69,7 +70,7 @@
         \nAttending weddings, parties, public functions and social media</string>
     <string name="salary_Saansad"><b>Salary 2.7 lakh per month</b> (including allowances)
         \nTwo lakh seventy thousand rupees</string>
-    <string name="next_version">Coming in next version</string>
+    <string name="next_version">You are welcome to donate or join the team for next version</string>
 
     <string name="tax_note">For nation building, we all pay tax in various forms. Tax rates on common items :</string>
     <string name="tax_total_center"><b>Total tax to central govt - Twenty four lakh forty two thousand two hundred thirteen crores</b></string>
@@ -125,8 +126,15 @@
     <string name="loksabha">Loksabha makes new laws,
         \nasks questions to govt,
         \nanalyses tax spending</string>
-    <string name="government">Government enforces laws,
+    <string name="government_kendra">Government enforces laws,
         \nprovides services to citizens</string>
+
+    <string name="rajyasabha">Vidhansabha makes new laws,
+        \nasks questions to govt,
+        \nanalyses tax spending</string>
+    <string name="government_rajya">State government enforces laws,
+        \nprovides services to citizens</string>
+
     <string name="contact">Contact us</string>
     <string name="source_text">2018-19 https://www.indiabudget.gov.in/glance.asp</string>
     <string name="head">Head</string>
@@ -152,10 +160,18 @@
     <string name="sunday_msg">Make the difference. Nation needs you!</string>
     <string name="sunday_msg_hi">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
     <string name="kendra_budget">24,42,213 crore</string>
+    <string name="rajya_budget">\??? crore</string>
 
     <string name="kendra_subjects">Employment, Social security, Price control, UPSC, Education, Railway, National highway, Stock exchange, Post Office, Currency,
         Bank, Company law, Company tax, Insurance, Quality of goods, Petrol, Excise duty on Petrol/CNG, Mines and petroleum refinery, CBI, Citizenship, Passport, Defense,
         Forest, Medicine, Labour in mines, Census, inter-state migration, IPC, Divorce law, etc
+        \n\nFrom Seventh Schedule of Constitution</string>
+
+    <string name="rajya_subjects">Police, Public order, State Public Service Commission, officers and staff in High Court, Prisons, Powers of Municipality,
+        Hospitals and dispensaries, Pilgrimages, Liquor, Agriculture, Preservation, protection and stock of animal,
+        Water supplies - irrigation/canals, drainage, Land, Land revenue, Fisheries, Trade and commerce within the State, Markets and fairs,
+        Money-lending and money-lenders, Taxes on agricultural income, Taxes on the consumption or sale of electricity, Taxes on vehicles,
+        Education, Roads, Forest, etc
         \n\nFrom Seventh Schedule of Constitution</string>
 
     <string name="phone">Phone</string>

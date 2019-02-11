@@ -1,12 +1,10 @@
-package in.filternet.jantamalik;
+package in.filternet.jantamalik.Kendra;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
-
-import in.filternet.jantamalik.Kendra.MPdata;
 
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 

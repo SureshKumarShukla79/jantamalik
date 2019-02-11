@@ -14,9 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import in.filternet.jantamalik.DataFilter;
+import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.VoteMP;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
@@ -187,8 +186,6 @@ public class VoteFragment extends Fragment {
         });
 
         MP_Click();
-        MLA_Click();
-        Parshad_Click();
 
         return view;
     }
@@ -209,38 +206,6 @@ public class VoteFragment extends Fragment {
                startActivity(intent);
            }
        });
-    }
-
-    public void MLA_Click(){
-        buttonMP2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               Toast.makeText(view.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        imageButtonMP2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Coming soon", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    public void Parshad_Click(){
-        buttonMP3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),R.string.next_version, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        imageButtonMP3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(view.getContext(),R.string.next_version, Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }
 

@@ -71,6 +71,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), Contact.class);
                 intent.putExtra("add_issue", true);
+                intent.putExtra("tab", 2);
                 startActivity(intent);
             }
         });

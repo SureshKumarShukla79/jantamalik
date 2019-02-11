@@ -3,15 +3,17 @@ package in.filternet.jantamalik;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.MainActivity.sUSER_CURRENT_LANGUAGE;
 import static in.filternet.jantamalik.MainActivity.setUI_Lang;
@@ -23,7 +25,9 @@ public class Contact extends AppCompatActivity {
 
     private String TAG = "Contact";
     private boolean mAddIssue, mUpdateMP, mFeedback;
+    private int mTABnumber = 0;
     private String subject = "";
+    private Toolbar toolbar;
 
     private SharedPreferences mSharedPref;
     String mLanguage;
@@ -44,10 +48,10 @@ public class Contact extends AppCompatActivity {
             mAddIssue = savedInstanceState.getBoolean("add_issue");
             mUpdateMP = savedInstanceState.getBoolean("update_mp");
             mFeedback = savedInstanceState.getBoolean("feedback");
+            mTABnumber = savedInstanceState.getInt("tab");
         }
 
         setContentView(R.layout.contact);
-        setTitle(R.string.contact);
 
         ui_issue = findViewById(R.id.radio_issue);
         ui_update = findViewById(R.id.radio_update);
@@ -70,6 +74,21 @@ public class Contact extends AppCompatActivity {
                 ui_feedback.setChecked(true);
             }
         }
+
+        toolbar = findViewById(R.id.toolbar_contact);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                back_button(view);
+            }
+        });
+    }
+
+    private void back_button(View view) {
+        Intent intent = new Intent(view.getContext(), MainActivity.class);
+        intent.putExtra(TAB_NUMBER, mTABnumber);
+        startActivity(intent);
     }
 
     public void onclick_add_subject(View view) {

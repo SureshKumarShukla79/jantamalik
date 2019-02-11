@@ -23,7 +23,7 @@ public class Infographics extends AppCompatActivity {
         if (mLanguage.equals(sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(this, "hi");
         }
-        setContentView(R.layout.infographics_layout);
+        setContentView(R.layout.infographics_kendra);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         getSupportActionBar().setTitle(R.string.democracy);

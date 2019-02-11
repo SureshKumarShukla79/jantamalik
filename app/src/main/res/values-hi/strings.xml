@@ -2,6 +2,7 @@
     <string name="app_name"><b>जनता मालिक</b></string>
 
     <string name="kendra"><b>केन्द्र</b></string>
+    <string name="rajya"><b>राज्य</b></string>
     <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
 
     <string name="Center_Subjects"><b>निम्न विषयों पर कानून बनाने और लागू करने की जिम्मेदारी</b></string>
@@ -26,7 +27,7 @@
     <string name="Cleanliness">साफ सफाई</string>
 
     <string name="MP">मेरा सांसद</string>
-    <string name="MLA">विधायक</string>
+    <string name="MLA">मेरा विधायक</string>
     <string name="Parshad">पार्षद</string>
 
     <string name="mp_area">निर्वाचन क्षेत्र: </string>
@@ -46,7 +47,7 @@
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
         \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
 
-    <string name="team_list">टीम :
+    <string name="team_list">टीम में जुड़ें :
         \nमोनिका बोस, सोनल शुक्ल, सिद्धेश शाह, विकास गुप्ता और सुरेश शुक्ल</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
@@ -70,7 +71,7 @@
     <string name="salary_Saansad"><b>वेतन 2.7 लाख प्रतिमाह</b> (भत्ते मिलाकर)
         \nदो लाख सत्तर हजार रुपये</string>
 
-    <string name="next_version">अगले संस्करण में आनेवाला है</string>
+    <string name="next_version">आप भी दान दें या टीम में जुड़ें और अगले संस्करण में सहायता करें</string>
 
     <string name="tax_note">देश की प्रगति के लिए हम सब कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
     <string name="tax_total_center"><b>केंद्र सरकार को कुल सालाना टैक्स - चौबीस लाख बयालीस हजार दो सौ तेरह करोड़ रू हम सब मिलकर देते हैं।</b></string>
@@ -121,7 +122,14 @@
     <string name="switchText">यह मेरा मुद्दा है।</string>
     <string name="voter">वोटर</string>
     <string name="loksabha">लोकसभा</string>
-    <string name="government">केंद्र सरकार</string>
+    <string name="government_kendra">केंद्र सरकार</string>
+
+    <string name="rajyasabha">विधानसभा नये कानून बनाती है,
+        \nasks questions to govt,
+        \nanalyses tax spending</string>
+    <string name="government_rajya">State government enforces laws,
+        \nprovides services to citizens</string>
+
     <string name="contact">संपर्क करें</string>
     <string name="source_text">2018-19 https://www.indiabudget.gov.in/glance.asp</string>
     <string name="head">नाम</string>
@@ -145,10 +153,18 @@
     <string name="notification_update">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
     <string name="kendra_budget">24,42,213 करोड़</string>
+    <string name="rajya_budget">\??? करोड़</string>
 
     <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी, शिक्षा, रेल, राष्ट्रीय राजमार्ग, शेयर बाजार, पेट्रोल/सीएनजी पर कर, पोस्ट आफिस, नोट / सिक्के,
         बैंक, कंपनी कानून, कंपनी टैक्स, बीमा, सामान की गुणवत्ता, पेट्रोल, पेट्रोल का दाम, खान और तेलक्षेत्र, खान में श्रम, सीबीआई, नागरिकता, पासपोर्ट, रक्षा,
         वन, दवाई, जनगणना, अंतर-राज्यीय आवाजाही, दंड विधि, तलाक कानून, आदि
+        \n\nसंविधान की सातंवी अनुसूची से</string>
+
+    <string name="rajya_subjects">पुलिस, कानून व्यवस्था, राज्य लोकसेवा आयोग, उच्च न्यायालय के अधिकारी और सेवक, जेल, नगरनिगमों का गठन और शक्तियाँ,
+        अस्पताल और औषधालय, तीर्थयात्राएं, शराब, खेती, पशुधन,
+        जल - सिंचाई/ नहरें / निकास, भूमि, भूमि कर, मछलीपालन, राज्य के अंदर व्यवसाय कर, बाजार और मेेले,
+        साहूकारी, कृषि ऋण मुक्ति, खेती पर कर, बिजली कर, वाहन कर,
+        शिक्षा, सड़क, वन, आदि
         \n\nसंविधान की सातंवी अनुसूची से</string>
 
     <string name="phone">फोन</string>

@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import in.filternet.jantamalik.IssuesJava.IssuesFragment;
 import in.filternet.jantamalik.Kendra.KendraFragment;
-import in.filternet.jantamalik.VoteJava.VoteFragment;
+import in.filternet.jantamalik.Rajya.RajyaFragment;
 
 public class MainViewPagerAdapter extends FragmentPagerAdapter {
 
@@ -24,6 +24,9 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
                 KendraFragment kendra = new KendraFragment();
                 return kendra;
             case 1:
+                RajyaFragment rajya = new RajyaFragment();
+                return rajya;
+            case 2:
                 IssuesFragment issuesFragment = new IssuesFragment();
                 return issuesFragment;
             default:

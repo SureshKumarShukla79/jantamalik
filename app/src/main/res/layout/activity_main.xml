@@ -51,6 +51,10 @@
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/rajya" />
+            <android.support.design.widget.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/Issues" />
         </android.support.design.widget.TabLayout>
 

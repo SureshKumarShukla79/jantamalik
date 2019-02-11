@@ -33,16 +33,18 @@
             android:name="in.filternet.jantamalik.Kendra.TaxKendra"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
+            android:name="in.filternet.jantamalik.Contact"
+            android:theme="@style/AppTheme_NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true" />
+        <activity
             android:name="in.filternet.jantamalik.IssuesJava.IssuesItem"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
-        <activity
-            android:name="in.filternet.jantamalik.Contact"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:excludeFromRecents="true"
-            android:label="@string/contact"
-            android:parentActivityName="in.filternet.jantamalik.MainActivity" />
         <activity android:name=".Kendra.Infographics"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Rajya.RajyaInfographics"
+            android:theme="@style/AppTheme_NoActionBar" />
         <receiver
             android:name="in.filternet.jantamalik.Receiver"
             android:directBootAware="true">
