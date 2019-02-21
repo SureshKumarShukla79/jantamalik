@@ -5,7 +5,7 @@
     <string name="rajya"><b>राज्य</b></string>
     <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
 
-    <string name="Center_Subjects"><b>निम्न विषयों पर कानून बनाने और लागू करने की जिम्मेदारी</b></string>
+    <string name="Center_Subjects">सांसद की जिम्मेदारियाँ</string>
     <string name="Issues"><b>मेरे मुद्दे</b></string>
     <string name="Money"><b>मेरा नोट</b></string>
     <string name="Vote"><b>मेरा वोट</b></string>
@@ -61,7 +61,7 @@
     <string name="constitunecy_text">क्षेत्र</string>
     <string name="ward_text">वार्ड</string>
 
-    <string name="democracy">वोटर सरकार कैसे चलाते हैं?</string>
+    <string name="democracy">आप सरकार कैसे चलाते हैं?</string>
     <string name="mp_duty"><b>सांसद के जरूरी काम</b>
         \n1. मेरे सवालोंं को लोकसभा में पूछना और सरकार से जवाब लेना
         \n2. लोकसभा की बहसों में मेरे पक्ष को रखना
@@ -131,7 +131,8 @@
         \nprovides services to citizens</string>
 
     <string name="contact">संपर्क करें</string>
-    <string name="source_text">2018-19 https://www.indiabudget.gov.in/glance.asp</string>
+    <string name="source_text">सालाना बजट 2018-19 https://www.indiabudget.gov.in/budget2018-2019/ub2018-19/bag/bag6.pdf \n
+        अंतरिम बजट 2019-20 अप्रैल से लागू होगा और अगली सरकार द्वारा बदला जाएगा</string>
     <string name="head">नाम</string>
 
     <string-array name="MP_state_values">
@@ -152,13 +153,24 @@
 
     <string name="notification_update">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
+
+    <string name="kendra_budget_simple">24 लाख करोड़</string>
     <string name="kendra_budget">24,42,213 करोड़</string>
+
     <string name="rajya_budget">\??? करोड़</string>
 
-    <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी, शिक्षा, रेल, राष्ट्रीय राजमार्ग, शेयर बाजार, पेट्रोल/सीएनजी पर कर, पोस्ट आफिस, नोट / सिक्के,
-        बैंक, कंपनी कानून, कंपनी टैक्स, बीमा, सामान की गुणवत्ता, पेट्रोल, पेट्रोल का दाम, खान और तेलक्षेत्र, खान में श्रम, सीबीआई, नागरिकता, पासपोर्ट, रक्षा,
-        वन, दवाई, जनगणना, अंतर-राज्यीय आवाजाही, दंड विधि, तलाक कानून, आदि
-        \n\nसंविधान की सातंवी अनुसूची से</string>
+    <string name="list_source">संविधान की सातंवी अनुसूची से</string>
+
+    <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी,
+        \nशिक्षा, रेल, राष्ट्रीय राजमार्ग,
+        \nशेयर बाजार, पेट्रोल/सीएनजी पर कर, पोस्ट आफिस,
+        \nनोट / सिक्के, बैंक,
+        \nकंपनी कानून, कंपनी टैक्स, बीमा,
+        \nसामान की गुणवत्ता, पेट्रोल, पेट्रोल का दाम,
+        \nखान और तेलक्षेत्र, खान में श्रम, सीबीआई,
+        \nनागरिकता, पासपोर्ट, रक्षा,
+        \nवन, दवाई, जनगणना,
+        \nअंतर-राज्यीय आवाजाही, दंड विधि, तलाक कानून, आदि </string>
 
     <string name="rajya_subjects">पुलिस, कानून व्यवस्था, राज्य लोकसेवा आयोग, उच्च न्यायालय के अधिकारी और सेवक, जेल, नगरनिगमों का गठन और शक्तियाँ,
         अस्पताल और औषधालय, तीर्थयात्राएं, शराब, खेती, पशुधन,

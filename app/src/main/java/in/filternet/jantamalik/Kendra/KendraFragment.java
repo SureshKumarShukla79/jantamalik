@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -28,6 +29,7 @@ public class KendraFragment extends Fragment {
     private TextView vote2, note2, govt1;
     private ImageButton vote1, vote3, note1, note3;
     private ImageView govt2;
+    private LinearLayout duties;
 
     private Intent intent;
     private Spinner spinnerState;
@@ -82,6 +84,8 @@ public class KendraFragment extends Fragment {
 
         govt1 = view.findViewById(R.id.govt1);
         govt2 = view.findViewById(R.id.govt2);
+
+        duties = view.findViewById(R.id.duties);
 
         spinnerState = view.findViewById(R.id.state_spinner);
         spinnerMP = view.findViewById(R.id.MP_spinner);
@@ -174,6 +178,7 @@ public class KendraFragment extends Fragment {
         vote_Click();
         note_Click();
         govt_Click();
+        duties_Click();
 
         return view;
     }
@@ -238,6 +243,16 @@ public class KendraFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 intent = new Intent(view.getContext(), Infographics.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void duties_Click() {
+        duties.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(view.getContext(), DutiesKendra.class);
                 startActivity(intent);
             }
         });

@@ -5,7 +5,7 @@
     <string name="rajya"><b>State</b></string>
     <string name="taxkendra"><b>Center - Tax</b></string>
 
-    <string name="Center_Subjects"><b>Responsibilities for making laws in following areas and law enforcement</b></string>
+    <string name="Center_Subjects">Responsibilities of Saansad(MP)</string>
     <string name="Issues"><b>My issues</b></string>
     <string name="Money"><b>My note</b></string>
     <string name="Vote"><b>My vote</b></string>
@@ -61,7 +61,7 @@
     <string name="constitunecy_text">Area</string>
     <string name="ward_text">Ward</string>
 
-    <string name="democracy">How voters run government?</string>
+    <string name="democracy">How you run the government?</string>
     <string name="mp_duty"><b>Saansad Duties</b>
         \n1. Ask my questions and get answer from govt
         \n2. Put my points in debates in Parliament
@@ -136,7 +136,8 @@
         \nprovides services to citizens</string>
 
     <string name="contact">Contact us</string>
-    <string name="source_text">2018-19 https://www.indiabudget.gov.in/glance.asp</string>
+    <string name="source_text">Full budget 2018-19 https://www.indiabudget.gov.in/budget2018-2019/ub2018-19/bag/bag6.pdf \n
+        Interim budget 2019-20 is effective from April. It will be revised by next govt</string>
     <string name="head">Head</string>
 
     <string-array name="MP_state_values">
@@ -159,13 +160,23 @@
     <string name="notification_update_hi">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">Make the difference. Nation needs you!</string>
     <string name="sunday_msg_hi">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
+
+    <string name="kendra_budget_simple">24 lakh crore</string>
     <string name="kendra_budget">24,42,213 crore</string>
     <string name="rajya_budget">\??? crore</string>
 
-    <string name="kendra_subjects">Employment, Social security, Price control, UPSC, Education, Railway, National highway, Stock exchange, Post Office, Currency,
-        Bank, Company law, Company tax, Insurance, Quality of goods, Petrol, Excise duty on Petrol/CNG, Mines and petroleum refinery, CBI, Citizenship, Passport, Defense,
-        Forest, Medicine, Labour in mines, Census, inter-state migration, IPC, Divorce law, etc
-        \n\nFrom Seventh Schedule of Constitution</string>
+    <string name="list_source">From Seventh Schedule of Constitution</string>
+
+    <string name="kendra_subjects">Employment, Social security, Price control,
+        \nUPSC, Education, Railway,
+        \nNational highway, Stock exchange, Post Office,
+        \nCurrency, Bank, Company law, Company tax,
+        \nInsurance, Quality of goods, Petrol,
+        \nExcise duty on Petrol/CNG, Mines and petroleum refinery,
+        \nCBI, Citizenship, Passport,
+        \nDefense, Forest, Medicine,
+        \nLabour in mines, Census, inter-state migration,
+        \nIPC, Divorce law, etc</string>
 
     <string name="rajya_subjects">Police, Public order, State Public Service Commission, officers and staff in High Court, Prisons, Powers of Municipality,
         Hospitals and dispensaries, Pilgrimages, Liquor, Agriculture, Preservation, protection and stock of animal,

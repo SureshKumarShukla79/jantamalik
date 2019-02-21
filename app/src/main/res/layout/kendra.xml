@@ -95,7 +95,6 @@
                     android:scaleType="centerInside"
                     android:background="@drawable/recyclerview_item_click_effect"
                     android:src="@drawable/vote" />
-
                 <TextView
                     android:id="@+id/vote2"
                     android:layout_width="wrap_content"
@@ -159,7 +158,7 @@
                     android:gravity="left|bottom"
                     android:layout_weight="1.00"
                     android:padding="10dp"
-                    android:text="@string/kendra_budget"
+                    android:text="@string/kendra_budget_simple"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
                 <ImageButton
@@ -206,55 +205,50 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/nestedScroll"
-        android:layout_below="@id/infographics_cardView"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infographics_cardView"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="3dp"
+        app:cardBackgroundColor="@color/white">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/subjectCard"
+        <LinearLayout
+            android:id="@+id/duties"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="3dp"
-            app:cardBackgroundColor="@color/white">
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_gravity="right">
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:scaleType="centerInside"
+                android:src="@drawable/responsibility" />
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginLeft="40dp"
-                    android:text="@string/Center_Subjects"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom">
-                    <ImageButton
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:scaleType="centerInside"
-                        android:background="@drawable/recyclerview_item_click_effect"
-                        android:src="@drawable/responsibility" />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left|bottom"
-                        android:background="@drawable/recyclerview_item_click_effect"
-                        android:gravity="left|bottom"
-                        android:layout_weight="1.00"
-                        android:padding="10dp"
-                        android:text="@string/kendra_subjects"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_gravity="left"
+                android:layout_weight="1.00"
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="@string/Center_Subjects"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/kendra_list"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|end"
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:src="@drawable/right_black_arrow_24dp" />
+        </LinearLayout>
         </android.support.v7.widget.CardView>
-    </android.support.v4.widget.NestedScrollView>
 </RelativeLayout>
 </ScrollView>

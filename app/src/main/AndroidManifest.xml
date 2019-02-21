@@ -33,6 +33,9 @@
             android:name="in.filternet.jantamalik.Kendra.TaxKendra"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
+            android:name="in.filternet.jantamalik.Kendra.DutiesKendra"
+            android:theme="@style/AppTheme_NoActionBar" />
+        <activity
             android:name="in.filternet.jantamalik.Contact"
             android:theme="@style/AppTheme_NoActionBar"
             android:configChanges="orientation|keyboardHidden|screenSize"
