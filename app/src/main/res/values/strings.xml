@@ -6,6 +6,8 @@
     <string name="taxkendra"><b>Center - Tax</b></string>
 
     <string name="Center_Subjects">Responsibilities of Saansad(MP)</string>
+    <string name="State_Subjects">Responsibilities of Vidhayak(MLA)</string>
+
     <string name="Issues"><b>My issues</b></string>
     <string name="Money"><b>My note</b></string>
     <string name="Vote"><b>My vote</b></string>
@@ -119,21 +121,12 @@
     <string name="email_us_msg">Next</string>
     <string name="donate">Donate</string>
     <string name="switchText">I am facing this issue.</string>
-    <string name="voter">Voters elect representative
-    \nAsk questions from govt
-    \nGive opinions on bills
-    \nAsk details of govt work/budget</string>
-    <string name="loksabha">Loksabha makes new laws,
-        \nasks questions to govt,
-        \nanalyses tax spending</string>
-    <string name="government_kendra">Government enforces laws,
-        \nprovides services to citizens</string>
+    <string name="voter">Voters</string>
+    <string name="loksabha">Loksabha</string>
+    <string name="government_kendra">Government</string>
 
-    <string name="rajyasabha">Vidhansabha makes new laws,
-        \nasks questions to govt,
-        \nanalyses tax spending</string>
-    <string name="government_rajya">State government enforces laws,
-        \nprovides services to citizens</string>
+    <string name="rajyasabha">Vidhansabha</string>
+    <string name="government_rajya">State</string>
 
     <string name="contact">Contact us</string>
     <string name="source_text">Full budget 2018-19 https://www.indiabudget.gov.in/budget2018-2019/ub2018-19/bag/bag6.pdf \n
@@ -188,5 +181,9 @@
     <string name="phone">Phone</string>
     <string name="email">Email</string>
     <string name="mail_to_us">This app is made by Filternet Foundation in public interest.\nNote : This email will goto Filternet Foundation. It will not be forwarded to saansad or govt.</string>
+    <string name="work_in_progress">Work In Progress</string>
+    <string name="opensource">Open Source</string>
+    <string name="saansad_is_key">Right-to-Information query and Public-Interest-Litigation are secondary tools.
+        \n\nThey can not serve the role of a responsible Saansad(MP).</string>
 
 </resources>

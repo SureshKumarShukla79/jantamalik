@@ -134,7 +134,7 @@ public class RajyaFragment extends Fragment {
 
         //populating MP Area
         List<String> blanklist = new ArrayList<>();
-        blanklist.add(".");
+        blanklist.add(getString(R.string.work_in_progress));
         firsttime = true;
         arrayAdapterVidhayak = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
                 blanklist);

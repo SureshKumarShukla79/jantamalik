@@ -178,7 +178,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_centerHorizontal="true"
-                android:text="github"
+                android:text="@string/opensource"
                 android:textColor="@color/colorAccent"
                 android:onClick="onclick_github"
                 android:background="@drawable/button_styling"/>
