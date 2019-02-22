@@ -44,7 +44,7 @@
 
     <string name="update_info">सांसद को फोन व ईमेल करें, हिचकिचाएँ नहीं।</string>
 
-    <string name="donate_appeal">एप बनाने के लिए, फिल्टरनेट फाउंडेशन को दान दें।</string>
+    <string name="donate_appeal">ऐप बनाने के लिए, फिल्टरनेट फाउंडेशन को दान दें।</string>
 
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
         \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
@@ -95,7 +95,8 @@
     <string name="education">शिक्षा</string>
     <string name="others">अन्य</string>
     <string name="subsidy_fertilizer">छूट - उर्वरक</string>
-    <string name="agriculture_and_allied">कृषि और संबद्ध गतिविधि</string>
+    <string name="agriculture_and_allied">कृषि और संबद्ध
+        \nगतिविधि</string>
     <string name="health">स्वास्थ्य</string>
     <string name="social_welfare">सामाजिक कल्याण</string>
     <string name="urban_development">शहरी विकास</string>
@@ -107,7 +108,8 @@
     <string name="finance">वित्त</string>
     <string name="external_affairs">विदेशी मामले</string>
     <string name="union_territories">केंद्र शासित प्रदेश</string>
-    <string name="planning_and_statistics">योजना और सांख्यिकी</string>
+    <string name="planning_and_statistics">योजना और
+        \nसांख्यिकी</string>
     <string name="development_north_east">पूर्वोत्तर का विकास</string>
 
     <string name="version_update">ऐप का नया संस्करण आ गया है, डाउनलोड करें</string>
@@ -183,9 +185,15 @@
 
     <string name="phone">फोन</string>
     <string name="email">ईमेल</string>
-    <string name="mail_to_us">यह एप फिल्टरनेट फाउंडेशन द्वारा जनहित में बनाई गई है।\nजरूरी : यह ईमेल फिल्टरनेट फाउंडेशन को जाएगी। यह आगे सांसद या सरकार को नहीं भेजी जाएगी।</string>
+    <string name="mail_to_us">यह ऐप फिल्टरनेट फाउंडेशन द्वारा जनहित में बनाई गई है।\nजरूरी : यह ईमेल फिल्टरनेट फाउंडेशन को जाएगी। यह आगे सांसद या सरकार को नहीं भेजी जाएगी।</string>
     <string name="work_in_progress">कार्य प्रगति पर है</string>
     <string name="opensource">मुक्त स्रोत</string>
     <string name="saansad_is_key">सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।
         \n\nयह तरीके एक जिम्मेदार सांसद की कमी पूरी नहीं कर सकते।</string>
+
+    <string name="gst_biscuit">18% जीएसटी</string>
+    <string name="gst_cloth">12% जीएसटी</string>
+    <string name="tax_petrol">100% टैक्स</string>
+    <string name="itax_slabs">5,20,30 %</string>
+    <string name="gst_exercise_book">12% जीएसटी</string>
 </resources>

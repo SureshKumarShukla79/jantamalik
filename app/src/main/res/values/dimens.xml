@@ -2,5 +2,10 @@
 <resources>
     <dimen name="tax_image">80dp</dimen>
     <dimen name="small_image">60dp</dimen>
+
+    <dimen name="tax_image_H">53dp</dimen>
+    <dimen name="tax_image_W">80dp</dimen>
+
     <dimen name="arrow_tail_gap">8dp</dimen>
+    <dimen name="image_margin">2dp</dimen>
 </resources>

@@ -86,28 +86,29 @@
     <string name="defence">Defence</string>
     <string name="subsidy_food">Subsidy - food</string>
     <string name="pension">Pension</string>
-    <string name="transfer_to_states">Transfer to States</string>
-    <string name="rural_development">Rural Development</string>
+    <string name="transfer_to_states">Transfer to \nStates</string>
+    <string name="rural_development">Rural \nDevelopment</string>
     <string name="transport">Transport</string>
-    <string name="tax_administration">Tax Administration</string>
+    <string name="tax_administration">Tax \nAdministration</string>
     <string name="home_affairs">Home Affairs</string>
     <string name="education">Education</string>
     <string name="others">Others</string>
-    <string name="subsidy_fertilizer">Subsidy - fertilizer</string>
-    <string name="agriculture_and_allied">Agriculture &amp; Allied</string>
+    <string name="subsidy_fertilizer">Subsidy \nfertilizer</string>
+    <string name="agriculture_and_allied">Agriculture &amp; \nAllied</string>
     <string name="health">Health</string>
     <string name="social_welfare">Social welfare</string>
-    <string name="urban_development">Urban Development</string>
+    <string name="urban_development">Urban \nDevelopment</string>
     <string name="energy">Energy</string>
-    <string name="commerce_and_industry">Commerce &amp; Industry</string>
-    <string name="subsidy_petroleum">Subsidy - petroleum</string>
-    <string name="scientific_department">Scientific Department</string>
+    <string name="commerce_and_industry">Commerce and
+        \nIndustry</string>
+    <string name="subsidy_petroleum">Subsidy \npetroleum</string>
+    <string name="scientific_department">Scientific \nDepartment</string>
     <string name="it_and_telecom">IT and Telecom</string>
     <string name="finance">Finance</string>
     <string name="external_affairs">External Affairs</string>
-    <string name="union_territories">Union Territories</string>
-    <string name="planning_and_statistics">Planning &amp; Statistics</string>
-    <string name="development_north_east">Develop North-East</string>
+    <string name="union_territories">Union \nTerritories</string>
+    <string name="planning_and_statistics">Planning and \nStatistics</string>
+    <string name="development_north_east">Development of \nNorth-East</string>
 
     <string name="version_update">New version available, please update</string>
     <string name="Option_Update">Update</string>
@@ -185,5 +186,11 @@
     <string name="opensource">Open Source</string>
     <string name="saansad_is_key">Right-to-Information query and Public-Interest-Litigation are secondary tools.
         \n\nThey can not serve the role of a responsible Saansad(MP).</string>
+
+    <string name="gst_biscuit">18% GST</string>
+    <string name="gst_cloth">12% GST</string>
+    <string name="tax_petrol">100% Tax</string>
+    <string name="itax_slabs">5,20,30 %</string>
+    <string name="gst_exercise_book">12% GST</string>
 
 </resources>

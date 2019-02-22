@@ -165,8 +165,10 @@
         android:layout_below="@+id/grid_kendra"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:background="@drawable/linearlayout_border"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/image_margin"
         android:orientation="horizontal">
 
         <ImageView
