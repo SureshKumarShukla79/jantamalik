@@ -57,7 +57,7 @@
     <string name="update_contact_info">Update Information</string>
     <string name="feedback">Feedback</string>
 
-    <string name="share_message">Share Janta Malik app,\nCitizens can connect with MP/MLA/Parshad\nSee tax money spending\n</string>
+    <string name="share_message">I like Janta Malik app,\n- Citizens can easily connect with MP/MLA\n- See where govt is spending tax-money?\n</string>
 
     <string name="state_text">State</string>
     <string name="constitunecy_text">Area</string>
@@ -192,5 +192,8 @@
     <string name="tax_petrol">100% Tax</string>
     <string name="itax_slabs">5,20,30 %</string>
     <string name="gst_exercise_book">12% GST</string>
+    <string name="user_liking">If you like the app</string>
+    <string name="good">Share</string>
+    <string name="very_good">Donate</string>
 
 </resources>

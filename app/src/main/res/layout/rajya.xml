@@ -128,8 +128,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/voteCard"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="3dp"
+            android:layout_marginTop="1dp"
             app:cardBackgroundColor="@color/white">
 
             <LinearLayout
@@ -185,8 +185,8 @@
             android:id="@+id/infographics_cardView"
             android:layout_width="match_parent"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="20dp"
             android:layout_marginEnd="3dp"
+            android:layout_marginTop="1dp"
             android:layout_below="@id/noteCard"
             android:layout_height="wrap_content">
 
@@ -228,9 +228,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="3dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginEnd="3dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="10dp"
                 app:cardBackgroundColor="@color/white">
 
                 <LinearLayout

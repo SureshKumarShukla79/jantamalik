@@ -15,29 +15,29 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.support.design.widget.TabLayout;
 import android.view.View;
 import android.widget.Button;
-
-import java.util.Calendar;
-import java.util.Locale;
-import java.util.regex.Pattern;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -141,16 +141,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.share_menuItem:
-                intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("text/plain");
-
-                String shareBody = getString(R.string.share_message);
-                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
-                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
-               startActivity(intent);
+                onclick_share_button(getCurrentFocus());
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onclick_share_button(View view) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+
+        String shareBody = getString(R.string.share_message);
+        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
+        startActivity(intent);
+    }
+
+    public void onclick_open_donate(View view) {
+        Uri uri = Uri.parse("https://www.filternet.in/donate/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
     public void changeLanguage(View view){

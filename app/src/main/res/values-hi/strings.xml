@@ -57,7 +57,7 @@
     <string name="update_contact_info">जानकारी सही करें</string>
     <string name="feedback">सुझाव लिखें</string>
 
-    <string name="share_message">जनता मालिक ऐप डाउनलोड करें \nअपने सांसद, विधायक और पार्षद से संपर्क करें\nजानें टैक्स कहाँ खर्च हो रहा है\n</string>
+    <string name="share_message">मुझे जनता मालिक ऐप पसंद है।\n- अपने सांसद और विधायक से सीधा संपर्क करें।\n- जानें कि सरकार आपके टैक्स का पैसा कहाँ खर्च कर रही है?\n</string>
 
     <string name="state_text">राज्य</string>
     <string name="constitunecy_text">क्षेत्र</string>
@@ -196,4 +196,7 @@
     <string name="tax_petrol">100% टैक्स</string>
     <string name="itax_slabs">5,20,30 %</string>
     <string name="gst_exercise_book">12% जीएसटी</string>
+    <string name="user_liking">अगर आपको ऐप अच्छा लगा</string>
+    <string name="good">शेयर करें</string>
+    <string name="very_good">दान दें</string>
 </resources>
