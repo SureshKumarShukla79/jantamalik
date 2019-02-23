@@ -44,17 +44,16 @@
 
     <string name="update_info">सांसद को फोन व ईमेल करें, हिचकिचाएँ नहीं।</string>
 
-    <string name="donate_appeal">ऐप बनाने के लिए, फिल्टरनेट फाउंडेशन को दान दें।</string>
+    <string name="donate_appeal">हम एक गैर-मुनाफा संस्था हैं। आपके चंदे से ही काम आगे बढ़ता है।</string>
 
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
         \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
 
-    <string name="team_list">टीम में जुड़ें :
-        \nमोनिका बोस, सोनल शुक्ल, सिद्धेश शाह, विकास गुप्ता और सुरेश शुक्ल</string>
+    <string name="team_list">योगदान :
+        \nमोनिका बोस, सोनल शुक्ल, सिद्धेश शाह, विकास गुप्ता, शरद सेठ और सुरेश शुक्ल</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">अपने मुद्दे जोड़ें</string>
-    <string name="update_contact_info">जानकारी सही करें</string>
     <string name="feedback">सुझाव लिखें</string>
 
     <string name="share_message">मुझे जनता मालिक ऐप पसंद है।\n- अपने सांसद और विधायक से सीधा संपर्क करें।\n- जानें कि सरकार आपके टैक्स का पैसा कहाँ खर्च कर रही है?\n</string>
@@ -119,7 +118,7 @@
         \nचुने हुए मुद्दे अगले हफ्ते दिखेंगें</string>
 
     <string name="add_issue_msg">अपना मुद्दा लिखेंं</string>
-    <string name="update_information_msg">सांसद की सही जानकारी देंं</string>
+    <string name="update_contact_info">जानकारी सही करेंं। आपका नाम योगदान में जुड़ेगा।</string>
     <string name="feedback_msg">सुझाव दें</string>
     <string name="email_us_msg">आगे</string>
     <string name="donate">दान करें</string>
@@ -185,7 +184,7 @@
 
     <string name="phone">फोन</string>
     <string name="email">ईमेल</string>
-    <string name="mail_to_us">यह ऐप फिल्टरनेट फाउंडेशन द्वारा जनहित में बनाई गई है।\nजरूरी : यह ईमेल फिल्टरनेट फाउंडेशन को जाएगी। यह आगे सांसद या सरकार को नहीं भेजी जाएगी।</string>
+    <string name="mail_to_us">ऐप फिल्टरनेट फाउंडेशन द्वारा बनाई गई है।\nजरूरी : आपके ईमेल सांसद या विधायक को नहीं भेजी जाएगी।</string>
     <string name="work_in_progress">कार्य प्रगति पर है</string>
     <string name="opensource">मुक्त स्रोत</string>
     <string name="saansad_is_key">सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।

@@ -45,16 +45,16 @@
 
     <string name="update_info">Call and email your saansad. Don\'t hesitate.</string>
 
-    <string name="donate_appeal">To support app development, donate to Filternet Foundation.</string>
+    <string name="donate_appeal">We are a non-profit organization, your donation keeps us running.</string>
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
         \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
 
-    <string name="team_list">Join team :
-        \nMonika Bose, Sonal Shukla, Siddhesh Shah, Vikas Gupta and Suresh Shukla</string>
+    <string name="team_list">Contributors :
+        \nMonika Bose, Sonal Shukla, Siddhesh Shah, Vikas Gupta, Sharad Seth and Suresh Shukla</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">Add Issue</string>
-    <string name="update_contact_info">Update Information</string>
+    <string name="update_contact_info">Update Information. Your name will appear in contributors.</string>
     <string name="feedback">Feedback</string>
 
     <string name="share_message">I like Janta Malik app,\n- Citizens can easily connect with MP/MLA\n- See where govt is spending tax-money?\n</string>
@@ -117,7 +117,7 @@
         \nSelected issues will appear next week.</string>
 
     <string name="add_issue_msg">Add Issue</string>
-    <string name="update_information_msg">Update Information</string>
+
     <string name="feedback_msg">Feedback</string>
     <string name="email_us_msg">Next</string>
     <string name="donate">Donate</string>
@@ -181,7 +181,7 @@
 
     <string name="phone">Phone</string>
     <string name="email">Email</string>
-    <string name="mail_to_us">This app is made by Filternet Foundation in public interest.\nNote : This email will goto Filternet Foundation. It will not be forwarded to saansad or govt.</string>
+    <string name="mail_to_us">App is made by Filternet Foundation.\nNote : Your email will not be forwarded to Saansad or Vidhayak.</string>
     <string name="work_in_progress">Work In Progress</string>
     <string name="opensource">Open Source</string>
     <string name="saansad_is_key">Right-to-Information query and Public-Interest-Litigation are secondary tools.

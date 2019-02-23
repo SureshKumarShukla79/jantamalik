@@ -8,4 +8,6 @@
 
     <dimen name="arrow_tail_gap">8dp</dimen>
     <dimen name="image_margin">2dp</dimen>
+
+    <dimen name="screen_margin">4dp</dimen>
 </resources>

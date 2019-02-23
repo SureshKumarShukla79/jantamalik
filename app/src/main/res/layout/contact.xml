@@ -27,6 +27,8 @@
         android:id="@+id/message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
         android:layout_below="@+id/toolbar_contact"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/black"
@@ -36,6 +38,8 @@
         android:id="@+id/add_or_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
         android:layout_below="@+id/message"
         android:layout_marginTop="15dp"
         app:cardBackgroundColor="#dcdcdc">
@@ -68,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
                     android:checked="false"
-                    android:text="@string/update_information_msg"
+                    android:text="@string/update_contact_info"
                     android:onClick="onclick_add_subject"
                     android:buttonTint="@color/colorPrimaryDark"
                     android:textAppearance="?android:attr/textAppearanceLarge"/>
@@ -106,6 +110,8 @@
         android:id="@+id/donate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
         android:layout_below="@+id/add_or_update"
         android:layout_marginTop="15dp"
         app:cardBackgroundColor="#dcdcdc">
@@ -154,6 +160,8 @@
         android:id="@+id/team"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
         android:layout_below="@+id/donate"
         android:layout_marginTop="15dp"
         app:cardBackgroundColor="#dcdcdc">
@@ -178,6 +186,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_centerHorizontal="true"
+                android:padding="8dp"
                 android:text="@string/opensource"
                 android:textColor="@color/colorAccent"
                 android:onClick="onclick_github"
