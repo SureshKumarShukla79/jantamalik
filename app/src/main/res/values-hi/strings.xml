@@ -193,7 +193,7 @@
     <string name="gst_biscuit">18% जीएसटी</string>
     <string name="gst_cloth">12% जीएसटी</string>
     <string name="tax_petrol">100% टैक्स</string>
-    <string name="itax_slabs">5,20,30 %</string>
+    <string name="itax_slabs">5 / 20 / 30%</string>
     <string name="gst_exercise_book">12% जीएसटी</string>
     <string name="user_liking">अगर आपको ऐप अच्छा लगा</string>
     <string name="good">शेयर करें</string>

@@ -48,7 +48,7 @@ public class Contact extends AppCompatActivity {
             mAddIssue = savedInstanceState.getBoolean("add_issue");
             mUpdateMP = savedInstanceState.getBoolean("update_mp");
             mFeedback = savedInstanceState.getBoolean("feedback");
-            mTABnumber = savedInstanceState.getInt("tab");
+            mTABnumber = savedInstanceState.getInt(TAB_NUMBER);
         }
 
         setContentView(R.layout.contact);

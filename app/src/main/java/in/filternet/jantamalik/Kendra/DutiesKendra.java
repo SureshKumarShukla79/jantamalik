@@ -13,6 +13,7 @@ import android.view.View;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 
 public class DutiesKendra extends AppCompatActivity {
@@ -45,7 +46,7 @@ public class DutiesKendra extends AppCompatActivity {
 
     private void back_button(View view) {
         Intent intent = new Intent(view.getContext(), MainActivity.class);
-        intent.putExtra(TAB_NUMBER, 0);
+        intent.putExtra(TAB_NUMBER, TAB_KENDRA);
         startActivity(intent);
     }
 }

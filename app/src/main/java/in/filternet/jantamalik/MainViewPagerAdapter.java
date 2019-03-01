@@ -8,6 +8,10 @@ import in.filternet.jantamalik.IssuesJava.IssuesFragment;
 import in.filternet.jantamalik.Kendra.KendraFragment;
 import in.filternet.jantamalik.Rajya.RajyaFragment;
 
+import static in.filternet.jantamalik.MainActivity.TAB_ISSUES;
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
+
 public class MainViewPagerAdapter extends FragmentPagerAdapter {
 
     private  int numOfTabs;
@@ -20,13 +24,13 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position){
-            case 0:
+            case TAB_KENDRA:
                 KendraFragment kendra = new KendraFragment();
                 return kendra;
-            case 1:
+            case TAB_RAJYA:
                 RajyaFragment rajya = new RajyaFragment();
                 return rajya;
-            case 2:
+            case TAB_ISSUES:
                 IssuesFragment issuesFragment = new IssuesFragment();
                 return issuesFragment;
             default:

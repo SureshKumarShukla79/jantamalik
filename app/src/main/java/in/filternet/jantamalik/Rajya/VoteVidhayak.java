@@ -18,6 +18,7 @@ import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.DEFAULT_MP;
 import static in.filternet.jantamalik.VoteJava.VoteFragment.hiDEFAULT_MP;
@@ -81,7 +82,7 @@ public class VoteVidhayak extends AppCompatActivity {
 
     private void back_button(View view) {
         Intent intent = new Intent(view.getContext(), MainActivity.class);
-        intent.putExtra(TAB_NUMBER, 1);
+        intent.putExtra(TAB_NUMBER, TAB_RAJYA);
         startActivity(intent);
     }
 
@@ -128,14 +129,14 @@ public class VoteVidhayak extends AppCompatActivity {
     public void onclick_update_Vidhayak(View view) {
         Intent intent = new Intent(this, Contact.class);
         intent.putExtra("update_mp", true);
-        intent.putExtra("tab", 1);
+        intent.putExtra(TAB_NUMBER, TAB_RAJYA);
         startActivity(intent);
     }
 
     public void onclick_Vidhayak(View view) {
         Intent intent = new Intent(this, Contact.class);
         intent.putExtra("update_mp", true);
-        intent.putExtra("tab", 1);
+        intent.putExtra(TAB_NUMBER, TAB_RAJYA);
         startActivity(intent);
     }
 }

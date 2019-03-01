@@ -20,6 +20,8 @@ import in.filternet.jantamalik.ItemClickListener;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
+import static in.filternet.jantamalik.MainActivity.TAB_ISSUES;
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class IssuesFragment extends android.support.v4.app.Fragment implements ItemClickListener {
@@ -71,7 +73,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), Contact.class);
                 intent.putExtra("add_issue", true);
-                intent.putExtra("tab", 2);
+                intent.putExtra(TAB_NUMBER, TAB_ISSUES);
                 startActivity(intent);
             }
         });

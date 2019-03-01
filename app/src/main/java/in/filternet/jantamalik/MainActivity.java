@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String sLANGUAGE_ENGLISH = "en";
 
     public static final String TAB_NUMBER = "tab_number";
+    public static final int TAB_ISSUES = 0, TAB_RAJYA = 1, TAB_KENDRA = 2;
 
     private ViewPager viewPager;
     private TabLayout tabLayout;

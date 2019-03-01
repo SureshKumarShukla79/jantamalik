@@ -16,6 +16,7 @@ import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 
 public class TaxRajya extends AppCompatActivity {
 
@@ -59,7 +60,7 @@ public class TaxRajya extends AppCompatActivity {
 
     private void back_button(View view) {
         Intent intent = new Intent(view.getContext(), MainActivity.class);
-        intent.putExtra(TAB_NUMBER, 1);
+        intent.putExtra(TAB_NUMBER, TAB_RAJYA);
         startActivity(intent);
     }
 }

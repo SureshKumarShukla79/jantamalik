@@ -26,6 +26,8 @@ import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class RajyaFragment extends Fragment {
@@ -279,7 +281,7 @@ public class RajyaFragment extends Fragment {
         // Take the user to contact screen
         Intent intent = new Intent(view.getContext(), Contact.class);
         intent.putExtra("update_mp", true);
-        intent.putExtra("tab", 1);
+        intent.putExtra(TAB_NUMBER, TAB_RAJYA);
         startActivity(intent);
         // Invite to join the team
         Toast.makeText(getContext(), R.string.next_version, Toast.LENGTH_LONG).show();

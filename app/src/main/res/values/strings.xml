@@ -190,7 +190,7 @@
     <string name="gst_biscuit">18% GST</string>
     <string name="gst_cloth">12% GST</string>
     <string name="tax_petrol">100% Tax</string>
-    <string name="itax_slabs">5,20,30 %</string>
+    <string name="itax_slabs">5 / 20 / 30%</string>
     <string name="gst_exercise_book">12% GST</string>
     <string name="user_liking">If you like the app</string>
     <string name="good">Share</string>
