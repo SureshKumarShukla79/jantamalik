@@ -195,6 +195,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:src="@drawable/rights" />
                 <TextView
                     android:id="@+id/govt1"
                     android:background="@drawable/recyclerview_item_click_effect"

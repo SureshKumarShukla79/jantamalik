@@ -24,14 +24,14 @@
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:background="@color/greylight"
                 android:src="@drawable/voter" />
             <TextView
                 android:id="@+id/janta_issue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
@@ -50,14 +50,14 @@
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:background="@color/greylight"
                 android:src="@drawable/politician_illustration" />
             <TextView
                 android:id="@+id/saansad_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
@@ -76,14 +76,14 @@
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:background="@color/greylight"
                 android:src="@drawable/politician_illustration" />
             <TextView
                 android:id="@+id/vidhayak_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
@@ -102,14 +102,14 @@
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:background="@color/greylight"
                 android:src="@drawable/politician_illustration" />
             <TextView
                 android:id="@+id/parshad_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
@@ -128,14 +128,14 @@
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:background="@color/greylight"
                 android:src="@drawable/loksabha" />
             <TextView
                 android:id="@+id/parliament"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
@@ -154,14 +154,14 @@
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:background="@color/greylight"
                 android:src="@drawable/govt" />
             <TextView
                 android:id="@+id/centerGovt_issue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
@@ -180,14 +180,14 @@
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:background="@color/greylight"
                 android:src="@drawable/up_vidhansabha" />
             <TextView
                 android:id="@+id/stateGovt_issue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"
@@ -206,14 +206,14 @@
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
-                android:layout_gravity="left"
+                android:layout_gravity="top"
                 android:background="@color/greylight"
                 android:src="@drawable/nagar_nigam" />
             <TextView
                 android:id="@+id/municipality_issue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz"

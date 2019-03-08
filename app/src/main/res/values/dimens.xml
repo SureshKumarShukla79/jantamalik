@@ -10,4 +10,6 @@
     <dimen name="image_margin">2dp</dimen>
 
     <dimen name="screen_margin">4dp</dimen>
+
+    <dimen name="issue_text_left_margin">10dp</dimen>
 </resources>

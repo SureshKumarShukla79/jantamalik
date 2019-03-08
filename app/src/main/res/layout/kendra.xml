@@ -184,6 +184,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:scaleType="centerInside"
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:src="@drawable/rights" />
             <TextView
                 android:id="@+id/govt1"
                 android:background="@drawable/recyclerview_item_click_effect"
@@ -228,6 +236,7 @@
             <ImageButton
                 android:layout_width="60dp"
                 android:layout_height="60dp"
+                android:layout_gravity="center"
                 android:layout_margin="3dp"
                 android:background="@drawable/recyclerview_item_click_effect"
                 android:scaleType="centerInside"
@@ -255,41 +264,5 @@
         </LinearLayout>
         </android.support.v7.widget.CardView>
     </android.support.v4.widget.NestedScrollView>
-
-    <TextView
-        android:id="@+id/liking"
-        android:layout_below="@+id/scroll_duty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="@string/user_liking"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/black" />
-
-    <LinearLayout
-        android:layout_below="@+id/liking"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/good"
-            android:layout_margin="1dp"
-            android:textColor="@color/colorAccent"
-            android:onClick="onclick_share_button"
-            android:background="@drawable/button_styling" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/very_good"
-            android:layout_margin="1dp"
-            android:textColor="@color/colorAccent"
-            android:onClick="onclick_open_donate"
-            android:background="@drawable/button_styling" />
-    </LinearLayout>
 </RelativeLayout>
 </ScrollView>
