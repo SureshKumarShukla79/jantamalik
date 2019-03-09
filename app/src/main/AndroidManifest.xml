@@ -44,7 +44,7 @@
             android:name="in.filternet.jantamalik.IssuesJava.IssuesItem"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
         <activity android:name=".Kendra.Infographics"
-            android:parentActivityName=".MainActivity" />
+            android:theme="@style/AppTheme_NoActionBar" />
         <activity
             android:name=".Rajya.RajyaInfographics"
             android:theme="@style/AppTheme_NoActionBar" />

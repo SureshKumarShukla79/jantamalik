@@ -49,7 +49,8 @@
             android:layout_below="@id/state_text"
             android:layout_marginTop="15dp"
             android:paddingLeft="30dp"
-            android:paddingRight="35dp" />
+            android:paddingRight="35dp"
+            android:visibility="gone" />
 
         <Spinner
             android:id="@+id/MP_spinner"
@@ -61,7 +62,8 @@
             android:gravity="center"
             android:paddingTop="5dp"
             android:layout_alignTop="@+id/constituency_text"
-            android:layout_toRightOf="@id/constituency_text" />
+            android:layout_toRightOf="@id/constituency_text"
+            android:visibility="gone" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/voteCard"
