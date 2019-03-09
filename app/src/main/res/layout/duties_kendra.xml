@@ -21,23 +21,26 @@
             app:titleTextColor="@color/colorAccent" />
 
         <TextView
-            android:id="@+id/list_center"
+            android:id="@+id/shortlist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/toolbar_Tax_Kendra"
             android:layout_marginTop="3dp"
             android:background="@color/greylight"
-            android:text="@string/list_source"
+            android:text="@string/kendra_subjects"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:padding="8dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
             android:textColor="@color/black" />
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/nestedScroll"
-            android:layout_below="@id/list_center"
+            android:layout_below="@id/shortlist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp">
+            android:layout_margin="2dp"
+            android:visibility="gone">
 
             <TableLayout
                 android:id="@+id/datatable"
@@ -69,7 +72,7 @@
 
                     <TextView
                         android:gravity="center"
-                        android:text="5,75,795"
+                        android:text="2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/table_border_style"
@@ -1090,6 +1093,24 @@
             </TableLayout>
 
         </android.support.v4.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/list_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nestedScroll"
+            android:layout_marginTop="3dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@color/greylight"
+            android:text="@string/list_source"
+            android:autoLink="web"
+            android:clickable="true"
+            android:textColorLink="@color/black"
+            android:focusable="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="8dp"
+            android:textColor="@color/black" />
     </RelativeLayout>
 
 </ScrollView>

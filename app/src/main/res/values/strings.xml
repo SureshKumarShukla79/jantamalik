@@ -159,7 +159,8 @@
     <string name="kendra_budget">24,42,213 crore</string>
     <string name="rajya_budget">\??? crore</string>
 
-    <string name="list_source">From Seventh Schedule of Constitution</string>
+    <string name="list_source">From Seventh Schedule of Constitution
+        \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
 
     <string name="kendra_subjects">Employment, Social security, Price control,
         \nUPSC, Education, Railway,

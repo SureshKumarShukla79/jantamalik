@@ -162,7 +162,8 @@
 
     <string name="rajya_budget">\??? करोड़</string>
 
-    <string name="list_source">संविधान की सातंवी अनुसूची से</string>
+    <string name="list_source">संविधान की सातंवी अनुसूची से
+        \nhttp://www.legislative.gov.in/sites/default/files/coi-indexhindi.pdf</string>
 
     <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी,
         \nशिक्षा, रेल, राष्ट्रीय राजमार्ग,
