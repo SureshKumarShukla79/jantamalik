@@ -69,51 +69,6 @@
         android:layout_alignTop="@+id/constituency_text"
         android:layout_toRightOf="@id/constituency_text" />
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/DOs_cardview_MP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:padding="10dp"
-        android:layout_below="@+id/MP_spinner">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/DOs_Textview_MP"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:background="@color/greylight"
-                android:text="@string/mp_duty"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:padding="8dp"
-                android:textColor="@color/black" />
-            <TextView
-                android:id="@+id/DONTs_Textview_MP"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:background="@color/greylight"
-                android:padding="8dp"
-                android:text="@string/mp_optional"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-            <TextView
-                android:id="@+id/Salary_MP"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/greylight"
-                android:layout_marginTop="3dp"
-                android:padding="8dp"
-                android:text="@string/salary_Saansad"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
@@ -121,7 +76,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/gradientbackground"
         android:orientation="vertical"
-        android:layout_below="@+id/DOs_cardview_MP"
+        android:layout_below="@+id/MP_spinner"
         tools:layout_editor_absoluteX="40dp">
 
         <de.hdodenhof.circleimageview.CircleImageView

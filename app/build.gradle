@@ -8,8 +8,8 @@ android {
         targetSdkVersion 27
         versionCode 190101
         versionName "devel"
-        //versionCode 190222
-        //versionName "19.02.22"
+        //versionCode 190311
+        //versionName "19.03.11"
         //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

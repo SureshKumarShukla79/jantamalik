@@ -114,6 +114,9 @@
     <string name="version_update">ऐप का नया संस्करण आ गया है, डाउनलोड करें</string>
     <string name="Option_Update">हाँ</string>
     <string name="Option_Later">बाद में</string>
+
+    <string name="app_purpose">जो मुद्दे आपको रोज परेशान करते हैं.\nमुद्दे जिनपर अखबार, टीवी चुप रहते हैं.\n\nआपके लिए लाए हैं वो जानकारी,\nजो जनता को मालिक बनाती है!</string>
+
     <string name="User_appeal">अपने मुद्दों को जोड़ें,
         \nचुने हुए मुद्दे अगले हफ्ते दिखेंगें</string>
 
@@ -188,7 +191,7 @@
     <string name="mail_to_us">ऐप फिल्टरनेट फाउंडेशन द्वारा बनाई गई है।\nजरूरी : आपके ईमेल सांसद या विधायक को नहीं भेजी जाएगी।</string>
     <string name="work_in_progress">कार्य प्रगति पर है</string>
     <string name="opensource">मुक्त स्रोत</string>
-    <string name="saansad_is_key">सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।
+    <string name="saansad_is_key"><b>*</b> सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।
         \n\nयह तरीके एक जिम्मेदार सांसद की कमी पूरी नहीं कर सकते।</string>
 
     <string name="gst_biscuit">18% जीएसटी</string>

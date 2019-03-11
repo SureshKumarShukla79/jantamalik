@@ -113,6 +113,10 @@
     <string name="version_update">New version available, please update</string>
     <string name="Option_Update">Update</string>
     <string name="Option_Later">Later</string>
+
+    <string name="app_purpose">Issues which trouble you daily.
+        \nIssues on which media is silent.\nProviding vital information, which makes Janta as Malik!</string>
+
     <string name="User_appeal">Add your issue,
         \nSelected issues will appear next week.</string>
 
@@ -185,7 +189,7 @@
     <string name="mail_to_us">App is made by Filternet Foundation.\nNote : Your email will not be forwarded to Saansad or Vidhayak.</string>
     <string name="work_in_progress">Work In Progress</string>
     <string name="opensource">Open Source</string>
-    <string name="saansad_is_key">Right-to-Information query and Public-Interest-Litigation are secondary tools.
+    <string name="saansad_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
         \n\nThey can not serve the role of a responsible Saansad(MP).</string>
 
     <string name="gst_biscuit">18% GST</string>

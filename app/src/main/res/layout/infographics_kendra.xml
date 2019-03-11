@@ -1,198 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<ScrollView android:id="@+id/VoteMP_scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary"
-        app:title="@string/democracy"
-        app:titleTextColor="@color/colorAccent" />
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <GridLayout
-        android:id="@+id/grid_kendra"
-        android:layout_below="@+id/toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_centerHorizontal="true"
-        android:foregroundGravity="center"
-        android:layout_margin="1dp"
-        android:columnCount="3"
-        android:rowCount="3">
-
-        <LinearLayout
-            android:layout_row="0"
-            android:layout_column="0"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_gravity="center"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            app:title="@string/democracy"
+            app:titleTextColor="@color/colorAccent" />
+
+        <GridLayout
+            android:id="@+id/grid_kendra"
+            android:layout_below="@+id/toolbar"
             android:layout_width="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_centerHorizontal="true"
+            android:foregroundGravity="center"
+            android:layout_margin="1dp"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <LinearLayout
+                android:layout_row="0"
+                android:layout_column="0"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/tax_image"
+                    android:layout_height="@dimen/tax_image"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/voter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/voter" />
+            </LinearLayout>
 
             <ImageView
-                android:layout_width="@dimen/tax_image"
-                android:layout_height="@dimen/tax_image"
-                android:scaleType="centerInside"
-                android:src="@drawable/voter" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="@color/black"
-                android:text="@string/voter" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_row="0"
-            android:layout_column="1"
+                android:layout_row="0"
+                android:layout_column="1"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@color/colorAccent"
-            android:layout_gravity="center"
-                android:scaleType="centerCrop"
-            android:src="@drawable/ic_arrow_forward_black_24dp" />
-
-        <LinearLayout
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="@dimen/tax_image"
-                android:layout_height="@dimen/tax_image"
-                android:scaleType="centerInside"
                 android:layout_gravity="center"
-                android:src="@drawable/politician_illustration" />
-            <TextView
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+            <LinearLayout
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:textColor="@color/black"
-                android:text="@string/MP" />
-        </LinearLayout>
+                android:orientation="vertical">
 
-        <ImageView
-            android:layout_row="1"
-            android:layout_column="2"
+                <ImageView
+                    android:layout_width="@dimen/tax_image"
+                    android:layout_height="@dimen/tax_image"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center"
+                    android:src="@drawable/politician_illustration" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/MP" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_row="1"
+                android:layout_column="2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
-            android:layout_gravity="center"
+                android:layout_gravity="center"
                 android:scaleType="centerCrop"
-            android:src="@drawable/ic_arrow_downward_black_24dp" />
+                android:src="@drawable/ic_arrow_downward_black_24dp" />
 
-        <LinearLayout
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_gravity="center"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_marginTop="10dp"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+            <LinearLayout
+                android:layout_row="1"
+                android:layout_column="0"
                 android:layout_gravity="center"
-                android:foregroundGravity="center"
-                android:src="@drawable/dotted_arrow" />
-        </LinearLayout>
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:orientation="vertical"
+                android:visibility="gone">
 
-        <LinearLayout
-            android:layout_row="2"
-            android:layout_column="2"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:foregroundGravity="center"
+                    android:src="@drawable/dotted_arrow" />
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="160dp"
-                android:layout_height="@dimen/tax_image"
-                android:scaleType="centerInside"
+            <LinearLayout
+                android:layout_row="2"
+                android:layout_column="2"
                 android:layout_gravity="center"
-                android:src="@drawable/loksabha" />
-            <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:textColor="@color/black"
-                android:text="@string/loksabha" />
-        </LinearLayout>
+                android:orientation="vertical">
 
-        <ImageView
-            android:layout_row="2"
-            android:layout_column="1"
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="@dimen/tax_image"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center"
+                    android:src="@drawable/loksabha" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/loksabha" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_row="2"
+                android:layout_column="1"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:adjustViewBounds="true"
                 android:background="@color/colorAccent"
-            android:rotation="180"
-            android:layout_gravity="center"
+                android:rotation="180"
+                android:layout_gravity="center"
                 android:scaleType="centerCrop"
-            android:src="@drawable/ic_arrow_forward_black_24dp" />
+                android:src="@drawable/ic_arrow_forward_black_24dp" />
+
+            <LinearLayout
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/tax_image"
+                    android:layout_height="@dimen/tax_image"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center"
+                    android:background="@color/colorAccent"
+                    android:src="@drawable/govt" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:text="@string/government_kendra" />
+            </LinearLayout>
+        </GridLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/DOs_cardview_MP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="10dp"
+            android:layout_below="@+id/grid_kendra">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/DOs_Textview_MP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/greylight"
+                    android:text="@string/mp_duty"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:padding="8dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/DONTs_Textview_MP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/greylight"
+                    android:padding="8dp"
+                    android:text="@string/mp_optional"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/Salary_MP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/greylight"
+                    android:layout_marginTop="3dp"
+                    android:padding="8dp"
+                    android:text="@string/salary_Saansad"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
         <LinearLayout
-            android:layout_row="2"
-            android:layout_column="0"
+            android:layout_below="@+id/DOs_cardview_MP"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:layout_width="wrap_content"
+            android:background="@drawable/linearlayout_border"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:padding="10dp"
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="@dimen/tax_image"
-                android:layout_height="@dimen/tax_image"
-                android:scaleType="centerInside"
-                android:layout_gravity="center"
-                android:background="@color/colorAccent"
-                android:src="@drawable/govt" />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/dotted_arrow"
+                android:visibility="gone" />
+
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_gravity="center"
                 android:textColor="@color/black"
-                android:text="@string/government_kendra" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/saansad_is_key" />
         </LinearLayout>
-    </GridLayout>
 
-    <LinearLayout
-        android:layout_below="@+id/grid_kendra"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:background="@drawable/linearlayout_border"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/image_margin"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/dotted_arrow" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/saansad_is_key" />
-    </LinearLayout>
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
