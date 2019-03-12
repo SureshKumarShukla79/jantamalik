@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
 
+    <string name="team_list">योगदान :
+        \nमोनिका बोस, सोनल शुक्ल, फैजान मुस्तफा, निशंक त्रिपाठी, प्रत्यूश आनंद, रवीश कुमार, सिद्धेश शाह, शिवम राजदेव, शरद सेठ, सुरेश शुक्ल, विकास गुप्ता, विवेक सेठ</string>
+
     <string name="kendra"><b>केन्द्र</b></string>
     <string name="rajya"><b>राज्य</b></string>
     <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
@@ -48,9 +51,6 @@
 
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
         \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
-
-    <string name="team_list">योगदान :
-        \nमोनिका बोस, सोनल शुक्ल, सिद्धेश शाह, विकास गुप्ता, शरद सेठ और सुरेश शुक्ल</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">अपने मुद्दे जोड़ें</string>
@@ -165,7 +165,7 @@
 
     <string name="rajya_budget">\??? करोड़</string>
 
-    <string name="list_source">संविधान की सातंवी अनुसूची से
+    <string name="list_source">संविधान की सातंवी अनुसूची से, पन्ना 356-371
         \nhttp://www.legislative.gov.in/sites/default/files/coi-indexhindi.pdf</string>
 
     <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी,
@@ -188,7 +188,7 @@
 
     <string name="phone">फोन</string>
     <string name="email">ईमेल</string>
-    <string name="mail_to_us">ऐप फिल्टरनेट फाउंडेशन द्वारा बनाई गई है।\nजरूरी : आपके ईमेल सांसद या विधायक को नहीं भेजी जाएगी।</string>
+    <string name="mail_to_us">ऐप फिल्टरनेट फाउंडेशन द्वारा जनहित में बनाई गई है।</string>
     <string name="work_in_progress">कार्य प्रगति पर है</string>
     <string name="opensource">मुक्त स्रोत</string>
     <string name="saansad_is_key"><b>*</b> सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।

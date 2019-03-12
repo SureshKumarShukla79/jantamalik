@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Janta Malik</string>
 
+    <string name="team_list">Contributors :
+        \nMonika Bose, Sonal Shukla, Faizan Mustafa, Nishank Tripathi, Pratyush Anand, Ravish Kumar, Siddhesh Shah, Shivam Rajdev, Sharad Seth, Suresh Shukla, Vikas Gupta, Vivek Seth</string>
+
     <string name="kendra"><b>Center</b></string>
     <string name="rajya"><b>State</b></string>
     <string name="taxkendra"><b>Center - Tax</b></string>
@@ -48,9 +51,6 @@
     <string name="donate_appeal">We are a non-profit organization, your donation keeps us running.</string>
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
         \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
-
-    <string name="team_list">Contributors :
-        \nMonika Bose, Sonal Shukla, Siddhesh Shah, Vikas Gupta, Sharad Seth and Suresh Shukla</string>
 
     <string name="support_email">jantamalik@filternet.in</string>
     <string name="add_issue">Add Issue</string>
@@ -163,7 +163,7 @@
     <string name="kendra_budget">24,42,213 crore</string>
     <string name="rajya_budget">\??? crore</string>
 
-    <string name="list_source">From Seventh Schedule of Constitution
+    <string name="list_source">From Seventh Schedule of Constitution, page 194-202
         \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
 
     <string name="kendra_subjects">Employment, Social security, Price control,
@@ -186,7 +186,7 @@
 
     <string name="phone">Phone</string>
     <string name="email">Email</string>
-    <string name="mail_to_us">App is made by Filternet Foundation.\nNote : Your email will not be forwarded to Saansad or Vidhayak.</string>
+    <string name="mail_to_us">App is made by Filternet Foundation in public interest.</string>
     <string name="work_in_progress">Work In Progress</string>
     <string name="opensource">Open Source</string>
     <string name="saansad_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
