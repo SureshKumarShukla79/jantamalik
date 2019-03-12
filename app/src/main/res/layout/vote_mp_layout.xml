@@ -129,15 +129,24 @@
                 android:gravity="left"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_phone_black_24dp" />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_call_mp"
+                    android:src="@drawable/ic_phone_white_24dp"
+                    app:backgroundTint="@color/colorPrimary" />
 
                 <TextView
                     android:id="@+id/phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_call_mp"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -151,15 +160,24 @@
                 android:gravity="left"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@drawable/ic_email_black_24dp" />
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/email_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_email_mp"
+                    android:src="@drawable/ic_email_white_24dp"
+                    app:backgroundTint="@color/colorPrimary" />
 
                 <TextView
                     android:id="@+id/email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_email_mp"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -186,7 +204,6 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textStyle="bold" />
             </LinearLayout>
-
         </LinearLayout>
 
         <TextView
@@ -203,59 +220,6 @@
             android:focusable="true"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/black" />
-
-        <LinearLayout
-            android:id="@+id/contact_mp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/call"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="onclick_call_mp"
-                android:src="@drawable/ic_phone_white_24dp"
-                app:backgroundTint="@color/colorPrimary" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/phone"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/email_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="onclick_email_mp"
-                android:src="@drawable/ic_email_white_24dp"
-                app:backgroundTint="@color/colorPrimary" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/email"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-        </LinearLayout>
-        </LinearLayout>
-
         <TextView
             android:id="@+id/update_text"
             android:layout_width="wrap_content"
@@ -266,8 +230,6 @@
             android:text="@string/update_info"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/black" />
-
     </LinearLayout>
-
 </RelativeLayout>
 </ScrollView>
