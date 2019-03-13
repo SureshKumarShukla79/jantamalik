@@ -202,4 +202,12 @@
     <string name="user_liking">अगर आपको ऐप अच्छा लगा</string>
     <string name="good">शेयर करें</string>
     <string name="very_good">दान दें</string>
+
+    <string name="media_or_afeem">अखबार / टीवी या अफीम ?</string>
+    <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
+    <string name="jagran_group_links">https://youtu.be/8_-8SvxvHqA \n\nhttps://youtu.be/SY53lbYMuQ8 \n\nhttps://www.youtube.com/watch?v=m5G5_bJwceY</string>
+    <string name="media_income">मीडिया की आय के दो जरिेए हैं - ग्राहक और विज्ञापन।
+        \n\nसच बदल गया है।
+        \n\nआजकल मीडिया की ज्यादातर कमाई - पैसे देकर छापी और झूठ खबरों से हो रही है।
+        \n\nअपना पसंदीदा अखबार और टीवी चैनल जाँच लें -</string>
 </resources>

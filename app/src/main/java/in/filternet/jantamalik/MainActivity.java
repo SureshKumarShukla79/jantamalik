@@ -39,6 +39,8 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
+import in.filternet.jantamalik.IssuesJava.MediaOrAfeem;
+
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG ="MainActivity";
@@ -161,6 +163,11 @@ public class MainActivity extends AppCompatActivity {
     public void onclick_open_donate(View view) {
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void onclick_media(View view) {
+        Intent intent = new Intent(this, MediaOrAfeem.class);
         startActivity(intent);
     }
 

@@ -201,4 +201,12 @@
     <string name="good">Share</string>
     <string name="very_good">Donate</string>
 
+    <string name="media_or_afeem">TV/Newspaper or Afeem ?</string>
+    <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
+    <string name="jagran_group_links">https://youtu.be/8_-8SvxvHqA \n\nhttps://youtu.be/SY53lbYMuQ8 \n\nhttps://www.youtube.com/watch?v=m5G5_bJwceY</string>
+    <string name="media_income">Media earns from two sources - subscribers and advertisement.
+        \n\nNot anymore.
+        \n\nNowadays media earns mostly from paid + fake news.
+        \n\nCheck your favourite newspaper and news TV channel -</string>
+
 </resources>

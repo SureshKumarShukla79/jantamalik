@@ -56,7 +56,9 @@
                 <action android:name="android.intent.action.DATE_CHANGED" />
             </intent-filter>
         </receiver>
-
+        <activity
+            android:name=".IssuesJava.MediaOrAfeem"
+            android:theme="@style/AppTheme_NoActionBar" />
     </application>
 
 </manifest>
