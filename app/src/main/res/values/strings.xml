@@ -206,7 +206,71 @@
     <string name="jagran_group_links">https://youtu.be/8_-8SvxvHqA \n\nhttps://youtu.be/SY53lbYMuQ8 \n\nhttps://www.youtube.com/watch?v=m5G5_bJwceY</string>
     <string name="media_income">Media earns from two sources - subscribers and advertisement.
         \n\nNot anymore.
-        \n\nNowadays media earns mostly from paid + fake news.
-        \n\nCheck your favourite newspaper and news TV channel -</string>
+        \n\nNowadays many media houses earn a lot of money from paid + fake news.
+        \n\nCheck your favourite newspaper and news TV channel below -</string>
+
+    <string name="dainik_bhaskar_list">https://youtu.be/BfTwuNOTGSM
+        \n\nhttps://youtu.be/DGLpcqFe1-A
+        \n\nhttps://youtu.be/d71S2XNuNog</string>
+
+    <string name="times_group">Times Group -
+        \nThe Times Of India
+        \nThe Economic Times
+        \nZoom
+        \nRadio Mirchi 98.3 FM
+        \njung!ee pictures
+        \nTOI Blogs
+        \nनवभारत टाइम्स
+        \nTimes Now
+        \nET Now
+        \nMirror Now
+        \nZoom
+    \n</string>
+    <string name="times_group_list">https://youtu.be/u6xEcQln0Ps
+    \n\nhttps://youtu.be/c1eZbrt19zg
+    \n\nhttps://youtu.be/5btvR2vfe6U
+    \n\nhttps://youtu.be/kr4GNJyNfkc
+    \n\nhttps://youtu.be/</string>
+
+    <string name="zee_group">Zee Group</string>
+    <string name="zee_group_list">https://youtu.be/dEyu9ULiBK8
+    \n\nhttps://youtu.be/rV071AcAVNI
+    \n\nhttps://youtu.be/RDdQTHTWlgk
+    \n\nhttps://youtu.be/KSi2yLCVaoQ
+    \n\nhttps://youtu.be/cQf4VFaDPfA</string>
+
+    <string name="BigFM_list">https://youtu.be/fKYkM4vJxlU
+    \n\nhttps://youtu.be/_cHB97APrys
+    \n\nhttps://youtu.be/FJqCLt33Ys4</string>
+
+    <string name="TV18_list">https://youtu.be/ajBqO4_npk0
+        \n\nhttps://youtu.be/rrMG1STPNSQ</string>
+
+    <string name="india_today_group">India Today -\nआज तक, \ntv Today, \nतेज, \nदिल्ली आजतक, \nBusiness Today, \nCosmopolitan, \nMail Today</string>
+    <string name="india_today_list">https://youtu.be/jZBWF0qG5_c
+    \n\nhttps://youtu.be/jZBWF0qG5_c</string>
+
+    <string name="HT_media_group">Hindustan Times Media Group - हिंदुस्तान, Radio Nasha 107.2 FM, Hindustan Times, कादम्बिनी, नंदन, Fever 104 RM, mint</string>
+    <string name="HT_media_list">https://youtu.be/z3RGM10In_o
+    \n\nhttps://youtu.be/z_WRgFkjxRk
+    \n\nhttps://youtu.be/c2lr2jmiQcc</string>
+
+    <string name="abp_news">ABP News</string>
+    <string name="abp_news_list">https://youtu.be/47uik2v0ldU
+    \n\nhttps://youtu.be/sBXmunGeUL0
+    \n\nhttps://youtu.be/AzHLKRU5yq0</string>
+
+    <string name="NewIndianExpress_list">https://youtu.be/NWHlPUO-aCo
+    \n\nhttps://youtu.be/7JWGSbaxE6A</string>
+
+    <string name="OpenMagazine_list">https://youtu.be/iq_tGjnbLeQ
+    \n\nhttps://youtu.be/ndKX4BUT5MY</string>
+
+    <string name="SunGroup_list">https://youtu.be/nFE2I32j-jk
+    \n\nhttps://youtu.be/yIsHmeI52NM
+    \n\nhttps://youtu.be/ZnopMOw9jyw</string>
+
+    <string name="StarIndia_list">https://youtu.be/MiFeWxIaayQ
+    \n\nhttps://youtu.be/038ns-e_N5M</string>
 
 </resources>
