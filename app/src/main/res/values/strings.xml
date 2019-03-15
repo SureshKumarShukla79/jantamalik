@@ -273,4 +273,10 @@
     <string name="StarIndia_list">https://youtu.be/MiFeWxIaayQ
     \n\nhttps://youtu.be/038ns-e_N5M</string>
 
+    <string name="terms_and_condition">मुझे इस्तेमाल की शर्ते स्वीकार हैं।
+        \n\nI agree to terms and conditions of usage.
+        \n\nfilternet.in/terms-of-service/</string>
+    <string name="button_yes">हाँ/Yes</string>
+    <string name="button_no">नहीं/No</string>
+
 </resources>

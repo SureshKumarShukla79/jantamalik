@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -24,12 +25,17 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -44,6 +50,7 @@ import in.filternet.jantamalik.IssuesJava.MediaOrAfeem;
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG ="MainActivity";
+
     public final static String bDATE_CHANGE = "Date_Change";
     public final static String bNOTIFICATION_TIME_SET = "Notification_Time_Set";
     public final static String sCHANNEL_ID_SUNDAY = "Sunday";
@@ -51,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String sUSER_CURRENT_LANGUAGE = "User_Current_Language";
     public final static String sLANGUAGE_HINDI = "hi";
     public final static String sLANGUAGE_ENGLISH = "en";
+    public final static String bUSER_AGREE = "User_Agree";
 
     public static final String TAB_NUMBER = "tab_number";
     public static final int TAB_ISSUES = 0, TAB_RAJYA = 1, TAB_KENDRA = 2;
@@ -124,6 +132,51 @@ public class MainActivity extends AppCompatActivity {
         new VersionPrompt().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
         set_notification_time(this, true);
+
+        prompt_user_agree();
+    }
+
+    private void prompt_user_agree() {
+        boolean user_agree = mSharedPref.getBoolean(bUSER_AGREE, false);
+        if(user_agree) {
+            // nothong to do
+        } else {
+            TextView message = new TextView(this);
+            message.setHeight(205);
+            message.setPadding(30,30,30,0);
+            message.setLinkTextColor(Color.BLUE);
+            message.setGravity(Gravity.CENTER);
+            SpannableString s = new SpannableString(getText(R.string.terms_and_condition));
+            Linkify.addLinks(s, Linkify.WEB_URLS);
+            message.setText(s);
+            message.setMovementMethod(LinkMovementMethod.getInstance());
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+            builder.setView(message);
+            builder.setPositiveButton(R.string.button_yes, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int id) {
+                    mEditor.putBoolean(bUSER_AGREE, true).commit();
+                }
+            });
+            builder.setNegativeButton(R.string.button_no, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int id) {
+                    finish();
+                }
+            });
+
+            AlertDialog dialog = builder.create();
+            dialog.setCancelable(false);
+            dialog.show();
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        prompt_user_agree();
     }
 
     @Override
