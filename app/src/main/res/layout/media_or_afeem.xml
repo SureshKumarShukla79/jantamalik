@@ -24,8 +24,8 @@
             android:id="@+id/media_income"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:padding="10dp"
+            android:layout_margin="3dp"
+            android:padding="1dp"
             android:layout_below="@+id/toolbar">
 
             <TextView
@@ -54,7 +54,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Newspaper/ TV"
+                    android:text="@string/newspaper_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -62,7 +62,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="Truth or Afeem?"
+                    android:text="@string/truth_or_afeem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -77,441 +77,40 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="@string/jagran_group"
+                    android:text="@string/dainik_bhaskar"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="@string/jagran_group_links"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="India TV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/3bA-m_727R0"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Punjab Kesari"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/rqEJaW7Ok2I"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Sab TV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/MmZBtGt4Kx4"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Amar Ujala"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/OoAEOVuf-yI"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Sadhana Prime News"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/1qVK6zajI58"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="UNI"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/I7_6ZXePsog"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="9X Tashan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/IifKJgiY00M"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Samachar Plus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/J3TbL6BtJGk"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Hindi Khabar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/5iAFRGW0nN4"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Swatantra Bharat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/cjYB0MmEqqs"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Aj Hindi Daily"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/K6WLi9GvZ2s"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="India Watch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/uNXvnfRvR6Y"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="HNN 24X7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/8WwfOa0F0p8"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="ScoopWhoop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/xQSrLHgM_pI"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="DNA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/Mz0T8fMDtq0"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Rediff.com"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="https://youtu.be/6udsFUF7FiQ"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-            <!-- op 136 part 1 ends -->
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="Dainik Bhaskar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:text="@string/dainik_bhaskar_list"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/jagran_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="@string/jagran_group_links"
                     android:autoLink="web"
                     android:clickable="true"
                     android:textColorLink="@color/black"
@@ -541,6 +140,106 @@
                     android:clickable="true"
                     android:textColorLink="@color/black"
                     android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/amar_ujala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/OoAEOVuf-yI"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/india_today_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="@string/india_today_list"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/abp_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="@string/abp_news_list"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/india_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/3bA-m_727R0"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
@@ -555,7 +254,7 @@
                     android:gravity="center"
                     android:text="@string/zee_group"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -578,9 +277,360 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Big FM 92.7"
+                    android:text="@string/punjab_kesari"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/rqEJaW7Ok2I"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/sab_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/MmZBtGt4Kx4"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/sadhana_prime_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/1qVK6zajI58"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/uni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/I7_6ZXePsog"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/_9x_tashan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/IifKJgiY00M"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/samachar_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/J3TbL6BtJGk"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/hindi_khabar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/5iAFRGW0nN4"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/swatantra_bharat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/cjYB0MmEqqs"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/aaj_hindi_daily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/K6WLi9GvZ2s"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/india_watch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/uNXvnfRvR6Y"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/hnn_24x7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/8WwfOa0F0p8"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/scoopwhoop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/xQSrLHgM_pI"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/dna"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/Mz0T8fMDtq0"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/rediff_com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:text="https://youtu.be/6udsFUF7FiQ"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:textColorLink="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+            <!-- op 136 part 1 ends -->
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/big_fm_92_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -603,40 +653,15 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="TV 18"
+                    android:text="@string/tv_18"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
                     android:text="@string/TV18_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/india_today_group"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="@string/india_today_list"
                     android:autoLink="web"
                     android:clickable="true"
                     android:textColorLink="@color/black"
@@ -666,7 +691,7 @@
                     android:clickable="true"
                     android:textColorLink="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -678,32 +703,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="@string/abp_news"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:text="@string/TV18_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="ABN Andhra Jyoti"
+                    android:text="@string/abn_andhra_jyoti"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -728,7 +728,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="The New Indian Express, Indian Express, दिनेमानी (तमिल)"
+                    android:text="@string/TheNewIndianExpress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -741,7 +741,7 @@
                     android:clickable="true"
                     android:textColorLink="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -753,7 +753,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Dainik Sambad"
+                    android:text="@string/dainik_sambad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -778,7 +778,7 @@
 
             <TextView
                 android:gravity="center"
-                android:text="Bartaman"
+                android:text="@string/bartaman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/table_border_style"
@@ -803,9 +803,9 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Open Magazine"
+                    android:text="@string/open_magazine"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -828,7 +828,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="MVTV"
+                    android:text="@string/mvtv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -853,7 +853,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="India Voice"
+                    android:text="@string/india_voice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -878,7 +878,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="K News"
+                    android:text="@string/k_news"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -903,7 +903,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Dinamalar"
+                    android:text="@string/dinamalar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -928,7 +928,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="TV 5"
+                    android:text="@string/tv_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -953,7 +953,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Lokmat"
+                    android:text="@string/lokmat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -978,9 +978,9 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Sun Group - RED FM 93.5, SUN TV Network, Udaya"
+                    android:text="@string/sun_group"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -1003,7 +1003,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Swaraj Express"
+                    android:text="@string/swaraj_express"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1028,7 +1028,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Bharat Samachar"
+                    android:text="@string/bharat_samachar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1053,7 +1053,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Radio One"
+                    android:text="@string/radio_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1078,9 +1078,9 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Star India"
+                    android:text="@string/star_india"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -1103,7 +1103,7 @@
 
                 <TextView
                     android:gravity="center"
-                    android:text="Bharat Samachar"
+                    android:text="@string/paytm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1111,7 +1111,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/Gm26ogEOoXc"
+                    android:text="https://youtu.be/lvj8hRD1GY4"
                     android:autoLink="web"
                     android:clickable="true"
                     android:textColorLink="@color/black"

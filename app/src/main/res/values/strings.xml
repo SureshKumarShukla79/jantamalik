@@ -44,7 +44,7 @@
     <string name="email_contact_modi">connect@mygov.nic.in</string>
     <string name="address_modi">7 Lok Kalyan Marg, New Delhi, 110011</string>
 
-    <string name="source_sansad">Source https://loksabha.nic.in</string>
+    <string name="source_sansad">Loksabha website https://loksabha.nic.in</string>
 
     <string name="update_info">Call and email your saansad. Don\'t hesitate.</string>
 
@@ -202,12 +202,15 @@
     <string name="very_good">Donate</string>
 
     <string name="media_or_afeem">TV/Newspaper or Afeem ?</string>
+
     <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
-    <string name="jagran_group_links">https://youtu.be/8_-8SvxvHqA \n\nhttps://youtu.be/SY53lbYMuQ8 \n\nhttps://www.youtube.com/watch?v=m5G5_bJwceY</string>
+    <string name="jagran_group_links">https://youtu.be/8_-8SvxvHqA
+        \n\nhttps://youtu.be/SY53lbYMuQ8
+        \n\nhttps://youtu.be/m5G5_bJwceY</string>
+
     <string name="media_income">Media earns from two sources - subscribers and advertisement.
-        \n\nNot anymore.
-        \n\nNowadays many media houses earn a lot of money from paid + fake news.
-        \n\nCheck your favourite newspaper and news TV channel below -</string>
+        \n\nNot anymore. Nowadays many media houses earn a lot of money from paid + fake news.
+        \n\nCheck sting operation (hidden camera) of your favourite newspaper/news channel :</string>
 
     <string name="dainik_bhaskar_list">https://youtu.be/BfTwuNOTGSM
         \n\nhttps://youtu.be/DGLpcqFe1-A
@@ -219,20 +222,17 @@
         \nZoom
         \nRadio Mirchi 98.3 FM
         \njung!ee pictures
-        \nTOI Blogs
         \nनवभारत टाइम्स
         \nTimes Now
         \nET Now
-        \nMirror Now
-        \nZoom
-    \n</string>
+        \nMirror Now</string>
     <string name="times_group_list">https://youtu.be/u6xEcQln0Ps
     \n\nhttps://youtu.be/c1eZbrt19zg
     \n\nhttps://youtu.be/5btvR2vfe6U
-    \n\nhttps://youtu.be/kr4GNJyNfkc
-    \n\nhttps://youtu.be/</string>
+    \n\nhttps://youtu.be/kr4GNJyNfkc</string>
 
-    <string name="zee_group">Zee Group</string>
+    <string name="zee_group">Zee Group
+    \nZee News</string>
     <string name="zee_group_list">https://youtu.be/dEyu9ULiBK8
     \n\nhttps://youtu.be/rV071AcAVNI
     \n\nhttps://youtu.be/RDdQTHTWlgk
@@ -246,11 +246,25 @@
     <string name="TV18_list">https://youtu.be/ajBqO4_npk0
         \n\nhttps://youtu.be/rrMG1STPNSQ</string>
 
-    <string name="india_today_group">India Today -\nआज तक, \ntv Today, \nतेज, \nदिल्ली आजतक, \nBusiness Today, \nCosmopolitan, \nMail Today</string>
+    <string name="india_today_group">India Today -
+        \nAaj Tak,
+        \ntv Today,
+        \nतेज,
+        \nदिल्ली आजतक,
+        \nBusiness Today,
+        \nCosmopolitan,
+        \nMail Today</string>
     <string name="india_today_list">https://youtu.be/jZBWF0qG5_c
     \n\nhttps://youtu.be/jZBWF0qG5_c</string>
 
-    <string name="HT_media_group">Hindustan Times Media Group - हिंदुस्तान, Radio Nasha 107.2 FM, Hindustan Times, कादम्बिनी, नंदन, Fever 104 RM, mint</string>
+    <string name="HT_media_group">Hindustan Times Group
+        \nहिंदुस्तान
+        \nRadio Nasha 107.2 FM
+        \nHindustan Times
+        \nकादम्बिनी
+        \nनंदन
+        \nFever 104 RM
+        \nmint</string>
     <string name="HT_media_list">https://youtu.be/z3RGM10In_o
     \n\nhttps://youtu.be/z_WRgFkjxRk
     \n\nhttps://youtu.be/c2lr2jmiQcc</string>
@@ -278,5 +292,51 @@
         \n\nfilternet.in/terms-of-service/</string>
     <string name="button_yes">हाँ/Yes</string>
     <string name="button_no">नहीं/No</string>
+    <string name="TheNewIndianExpress">The New Indian Express,
+        \nदिनेमानी (तमिल)
+        \n\n<b>*</b>\'The New Indian Express\'
+        \nseparated from
+        \n\'Indian Express\' in 1999</string>
+
+    <string name="sun_group">Sun Group -
+        \nRED FM 93.5,
+        \nSUN TV Network,
+        \nUdaya</string>
+    <string name="newspaper_tv">Newspaper/ TV</string>
+    <string name="truth_or_afeem">Truth or Afeem?</string>
+    <string name="india_tv">India TV</string>
+    <string name="punjab_kesari">Punjab Kesari</string>
+    <string name="sab_tv">Sab TV</string>
+    <string name="amar_ujala">Amar Ujala</string>
+    <string name="sadhana_prime_news">Sadhana Prime News</string>
+    <string name="uni">UNI</string>
+    <string name="_9x_tashan">9X Tashan</string>
+    <string name="samachar_plus">Samachar Plus</string>
+    <string name="hindi_khabar">Hindi Khabar</string>
+    <string name="swatantra_bharat">Swatantra Bharat</string>
+    <string name="aaj_hindi_daily">Aaj Hindi Daily</string>
+    <string name="india_watch">India Watch</string>
+    <string name="hnn_24x7">HNN 24X7</string>
+    <string name="scoopwhoop">ScoopWhoop</string>
+    <string name="dna">DNA</string>
+    <string name="rediff_com">Rediff.com</string>
+    <string name="dainik_bhaskar">Dainik Bhaskar</string>
+    <string name="big_fm_92_7">Big FM 92.7</string>
+    <string name="tv_18">TV 18</string>
+    <string name="abn_andhra_jyoti">ABN Andhra Jyoti</string>
+    <string name="dainik_sambad">Dainik Sambad</string>
+    <string name="bartaman">Bartaman</string>
+    <string name="open_magazine">Open Magazine</string>
+    <string name="mvtv">MVTV</string>
+    <string name="india_voice">India Voice</string>
+    <string name="k_news">K News</string>
+    <string name="dinamalar">Dinamalar</string>
+    <string name="tv_5">TV 5</string>
+    <string name="lokmat">Lokmat</string>
+    <string name="swaraj_express">Swaraj Express</string>
+    <string name="bharat_samachar">Bharat Samachar</string>
+    <string name="radio_one">Radio One</string>
+    <string name="star_india">Star India</string>
+    <string name="paytm">Paytm</string>
 
 </resources>

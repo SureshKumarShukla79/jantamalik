@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        prompt_user_agree();
+        //prompt_user_agree(); // Was firing twice for a normal use case
     }
 
     @Override
