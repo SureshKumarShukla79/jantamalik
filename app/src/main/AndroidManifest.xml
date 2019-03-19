@@ -41,7 +41,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true" />
         <activity
-            android:name="in.filternet.jantamalik.IssuesJava.IssuesItem"
+            android:name="in.filternet.jantamalik.IssuesJava.Issues"
             android:parentActivityName="in.filternet.jantamalik.MainActivity" />
         <activity android:name=".Kendra.Infographics"
             android:theme="@style/AppTheme_NoActionBar" />
@@ -59,9 +59,6 @@
                 <action android:name="android.intent.action.DATE_CHANGED" />
             </intent-filter>
         </receiver>
-        <activity
-            android:name=".IssuesJava.MediaOrAfeem"
-            android:theme="@style/AppTheme_NoActionBar" />
     </application>
 
 </manifest>

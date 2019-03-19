@@ -45,7 +45,7 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
-import in.filternet.jantamalik.IssuesJava.MediaOrAfeem;
+import in.filternet.jantamalik.IssuesJava.Issues;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -220,7 +220,102 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclick_media(View view) {
-        Intent intent = new Intent(this, MediaOrAfeem.class);
+        int layout_id = R.layout.issue_media_or_afeem;
+        int title_id = R.string.media_or_afeem;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_mp_no_response(View view) {
+        int layout_id = R.layout.issue_mp_no_response;
+        int title_id = R.string.mp_no_response;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_clean(View view) {
+        int layout_id = R.layout.issue_cleanliness;
+        int title_id = R.string.cleanliness;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_road(View view) {
+        int layout_id = R.layout.issue_poor_road;
+        int title_id = R.string.poor_road;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_electricity(View view) {
+        int layout_id = R.layout.issue_electricity;
+        int title_id = R.string.electricity;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_police(View view) {
+        int layout_id = R.layout.issue_police;
+        int title_id = R.string.police;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_traffic(View view) {
+        int layout_id = R.layout.issue_traffic;
+        int title_id = R.string.traffic;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_curroption(View view) {
+        int layout_id = R.layout.issue_corruption;
+        int title_id = R.string.corruption;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_train(View view) {
+        int layout_id = R.layout.issue_train_delay;
+        int title_id = R.string.train;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
+    public void onclick_business(View view) {
+        int layout_id = R.layout.issue_business;
+        int title_id = R.string.business;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
         startActivity(intent);
     }
 

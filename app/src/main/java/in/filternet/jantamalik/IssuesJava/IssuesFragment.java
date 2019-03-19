@@ -24,18 +24,14 @@ import static in.filternet.jantamalik.MainActivity.TAB_ISSUES;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
-public class IssuesFragment extends android.support.v4.app.Fragment implements ItemClickListener {
+public class IssuesFragment extends android.support.v4.app.Fragment {
     View view;
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter adapter;
     private List<String> arr;
     private FloatingActionButton ui_add_issue;
     String current_language;
 
-    public static final String issueID = "issueID";
     private SharedPreferences mSharedPref;
-    @Nullable
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
@@ -47,26 +43,7 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         }
 
         view = inflater.inflate(R.layout.issues_fragment,container,false);
-        recyclerView = view.findViewById(R.id.Issues_recyclerview);
         ui_add_issue = view.findViewById(R.id.add_issue);
-
-        //use a linear layout manager
-        layoutManager = new LinearLayoutManager(view.getContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
-        //setting the adapter
-
-        arr = new ArrayList<>();
-        for(int i=0;i<IssuesData.issues.length;i++) {
-            if (current_language.equals(sLANGUAGE_HINDI))
-                arr.add(IssuesData.issues[i][9]);
-            else
-                arr.add(IssuesData.issues[i][0]);
-        }
-
-        adapter = new IssuesFragmentRecyclerViewAdapter(arr);
-        ((IssuesFragmentRecyclerViewAdapter) adapter).onItemClickListener(this);
-        recyclerView.setAdapter(adapter);
 
         ui_add_issue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,13 +56,6 @@ public class IssuesFragment extends android.support.v4.app.Fragment implements I
         });
 
         return view;
-    }
-
-    @Override
-    public void onClick(View view, int position) {
-            Intent i = new Intent(view.getContext(), IssuesItem.class);
-            i.putExtra(issueID, position);
-            startActivity(i);
     }
 }
 

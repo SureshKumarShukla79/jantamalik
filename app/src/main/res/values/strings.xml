@@ -202,6 +202,15 @@
     <string name="very_good">Donate</string>
 
     <string name="media_or_afeem">TV/Newspaper or Afeem ?</string>
+    <string name="mp_no_response">Saansad/Vidhayak doesn\'t respond</string>
+    <string name="cleanliness">Cleanliness</string>
+    <string name="poor_road">Poor Road</string>
+    <string name="electricity">Electricity</string>
+    <string name="police">Police</string>
+    <string name="traffic">Road jam/traffic</string>
+    <string name="corruption">Delay / corruption in govt offices</string>
+    <string name="train">Train delay</string>
+    <string name="business">Low ease-of-doing-business</string>
 
     <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
     <string name="jagran_group_links">https://youtu.be/8_-8SvxvHqA
@@ -338,5 +347,43 @@
     <string name="radio_one">Radio One</string>
     <string name="star_india">Star India</string>
     <string name="paytm">Paytm</string>
+
+    <string name="mp_voter">Call multiple times.\nWrite emails with objective facts and relief needed.
+        \n\nMeet at their home on Sunday 11 am. This gets quick notice and speedy results.</string>
+    <string name="mp_neta">During Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
+    <string name="mp_parliament">No law to remove irresponsible saansad before completing 5 year term.
+        \n\nChoose wisely next time.</string>
+
+    <string name="clean_voter">Cleanliness of roads, removing silt and stray animals is responsibility of local municipality.
+        \nIf local municipality does not take care, then state govt is responsible.</string>
+    <string name="clean_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+
+    <string name="road_voter">Road connectivity and road quality are responsibilities of state govt.</string>
+    <string name="road_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+
+    <string name="electricity_voter">Electricity - connection, quality and cost are responsibilities of state govt.</string>
+    <string name="electricity_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+
+    <string name="police_voter">Main police functions - patrolling, FIR lodging and investigation/chargesheet. Police quality - is responsibility of state govt.</string>
+    <string name="police_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+
+    <string name="traffic_voter">Traffic jam is common problem. Many reasons cause this - poor traffic police, too many vehicles (easy loan), poor city planning.
+        \n\nGovt are considering to lower driving license age to 17 years, to permit more riders on road.
+        \n\nRoad, traffic police and city planning - all three are responsibility of state govt.</string>
+    <string name="traffic_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+
+    <string name="corruption_voter">Delay or casual response or corruption in govt office is responsibility of concerned govt.</string>
+    <string name="corruption_neta">Its responsibility of Vidhayak/Saansad, to raise such issues to concerned minister heading the department. Contact them.</string>
+
+    <string name="train_voter">Train delays is responsibility of center govt.</string>
+    <string name="train_neta">Its responsibility of Saansad to raise issues to railway minister. Contact saansad/MP.</string>
+
+    <string name="business_voter">New businesses are backbone of economy. It creates new jobs.\nOpening a business is very difficult. Complex procedures waste precious time and energy.
+        \n\nWorld ranking of India is low (100th position in 2018).
+        \n\nMudra yojana for small loans is non-existent in banks
+        \n\nDue to poor law-n-order, investors hesitate to invest.</string>
+    <string name="business_neta"></string>
+    <string name="business_parliament_house">Making simpler laws is responsibility of Saansad.</string>
+    <string name="business_nagar_nigam">Law-n-order in state is responsibility of Vidhayak</string>
 
 </resources>

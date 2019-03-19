@@ -2,31 +2,19 @@
 
 <ScrollView android:id="@+id/VoteMP_scrollView"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:background="@color/colorPrimary"
-            app:title="@string/media_or_afeem"
-            app:titleTextColor="@color/colorAccent" />
+        android:layout_height="wrap_content">
 
         <android.support.v7.widget.CardView
             android:id="@+id/media_income"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
-            android:padding="1dp"
-            android:layout_below="@+id/toolbar">
+            android:padding="1dp">
 
             <TextView
                 android:id="@+id/DOs_Textview_MP"
@@ -45,7 +33,7 @@
             android:layout_below="@id/media_income"
             android:layout_width="match_parent"
             android:layout_margin="4dp"
-            android:stretchColumns="1"
+            android:stretchColumns="0"
             android:layout_height="wrap_content">
 
             <TableRow
@@ -59,14 +47,17 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:gravity="center"
                     android:text="@string/truth_or_afeem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
@@ -82,6 +73,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -107,6 +99,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -132,6 +125,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -157,6 +151,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -182,6 +177,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -207,6 +203,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -232,6 +229,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -257,6 +255,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -282,6 +281,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -307,6 +307,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -332,6 +333,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -357,6 +359,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -382,6 +385,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -393,6 +397,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
@@ -407,6 +412,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -432,6 +438,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -457,6 +464,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -482,6 +490,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -507,6 +516,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -532,6 +542,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -557,6 +568,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -582,6 +594,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -607,6 +620,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -633,6 +647,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -658,6 +673,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -683,6 +699,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -708,6 +725,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -733,6 +751,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -758,6 +777,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -783,6 +803,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/table_border_style"
                 android:padding="5dp"
+                android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
@@ -808,6 +829,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -833,6 +855,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -858,6 +881,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -883,6 +907,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -908,6 +933,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -933,6 +959,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -958,6 +985,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -983,6 +1011,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -1008,6 +1037,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -1033,6 +1063,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -1058,6 +1089,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -1083,6 +1115,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
@@ -1108,6 +1141,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
+                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
