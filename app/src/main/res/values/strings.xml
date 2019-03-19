@@ -72,6 +72,14 @@
         \nAttending weddings, parties, public functions and social media</string>
     <string name="salary_Saansad"><b>Salary 2.7 lakh per month</b> (including allowances)
         \nTwo lakh seventy thousand rupees</string>
+
+    <string name="mla_duty"><b>Vidhayak/MLA Duties</b>
+        \n1. Ask my questions and get answer from govt
+        \n2. Put my points in debates in Parliament
+        \n3. Share the govt tax spending and law enforcement status with me</string>
+    <string name="mla_optional"><b>Optional</b>
+        \nAttending weddings, parties, public functions and social media</string>
+
     <string name="next_version">You are welcome to donate or join the team for next version</string>
 
     <string name="tax_note">For nation building, we all pay tax in various forms. Tax rates on common items :</string>
@@ -131,7 +139,7 @@
     <string name="government_kendra">Government</string>
 
     <string name="rajyasabha">Vidhansabha</string>
-    <string name="government_rajya">State</string>
+    <string name="government_rajya">State govt</string>
 
     <string name="contact">Contact us</string>
     <string name="source_text">Full budget 2018-19 https://www.indiabudget.gov.in/budget2018-2019/ub2018-19/bag/bag6.pdf \n
@@ -191,6 +199,9 @@
     <string name="opensource">Open Source</string>
     <string name="saansad_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
         \n\nThey can not serve the role of a responsible Saansad(MP).</string>
+
+    <string name="vidhayak_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
+        \n\nThey can not serve the role of a responsible Vidhayak/MLA.</string>
 
     <string name="gst_biscuit">18% GST</string>
     <string name="gst_cloth">12% GST</string>

@@ -88,7 +88,7 @@
                         android:layout_height="60dp"
                         android:onClick="onclick_mp_no_response"
                         android:layout_gravity="center"
-                        android:src="@drawable/media" />
+                        android:src="@drawable/mp_no_response" />
 
                     <TextView
                         android:background="@drawable/recyclerview_item_click_effect"

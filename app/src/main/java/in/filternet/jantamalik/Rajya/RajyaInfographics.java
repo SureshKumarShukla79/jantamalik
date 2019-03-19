@@ -31,7 +31,7 @@ public class RajyaInfographics extends AppCompatActivity {
         }
         setContentView(R.layout.infographics_rajya);
 
-        toolbar = findViewById(R.id.toolbar_inforajya);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

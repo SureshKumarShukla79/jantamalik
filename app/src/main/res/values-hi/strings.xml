@@ -72,6 +72,13 @@
     <string name="salary_Saansad"><b>वेतन 2.7 लाख प्रतिमाह</b> (भत्ते मिलाकर)
         \nदो लाख सत्तर हजार रुपये</string>
 
+    <string name="mla_duty"><b>विधायक के जरूरी काम</b>
+        \n1. मेरे सवालोंं को विधानसभा में पूछना और सरकार से जवाब लेना
+        \n2. विधानसभा की बहसों में मेरे पक्ष को रखना
+        \n3. राज्य सरकार के खर्च और काम-काज का हिसाब समझकर मुझे बताना</string>
+    <string name="mla_optional"><b>गैर-जरूरी या वैकल्पिक</b>
+        \nशादी या पार्टी या समारोह में जाना, सोशल मीडिया</string>
+
     <string name="next_version">आप भी दान दें या टीम में जुड़ें और अगले संस्करण में सहायता करें</string>
 
     <string name="tax_note">देश की प्रगति के लिए हम सब कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
@@ -130,11 +137,8 @@
     <string name="loksabha">लोकसभा</string>
     <string name="government_kendra">केंद्र सरकार</string>
 
-    <string name="rajyasabha">विधानसभा नये कानून बनाती है,
-        \nasks questions to govt,
-        \nanalyses tax spending</string>
-    <string name="government_rajya">State government enforces laws,
-        \nprovides services to citizens</string>
+    <string name="rajyasabha">विधानसभा</string>
+    <string name="government_rajya">राज्य सरकार</string>
 
     <string name="contact">संपर्क करें</string>
     <string name="source_text">सालाना बजट 2018-19 https://www.indiabudget.gov.in/budget2018-2019/ub2018-19/bag/bag6.pdf \n
@@ -193,6 +197,9 @@
     <string name="opensource">मुक्त स्रोत</string>
     <string name="saansad_is_key"><b>*</b> सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।
         \n\nयह तरीके एक जिम्मेदार सांसद की कमी पूरी नहीं कर सकते।</string>
+
+    <string name="vidhayak_is_key"><b>*</b> सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।
+        \n\nयह तरीके एक जिम्मेदार विधायक की कमी पूरी नहीं कर सकते।</string>
 
     <string name="gst_biscuit">18% जीएसटी</string>
     <string name="gst_cloth">12% जीएसटी</string>

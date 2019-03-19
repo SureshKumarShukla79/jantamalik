@@ -24,7 +24,7 @@
             android:id="@+id/shortlist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/toolbar_Tax_Kendra"
+            android:layout_below="@+id/toolbar"
             android:layout_marginTop="3dp"
             android:background="@color/greylight"
             android:text="@string/rajya_subjects"
