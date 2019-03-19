@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +38,7 @@ public class RajyaFragment extends Fragment {
     private TextView vote2, note2, govt1;
     private ImageButton vote1, vote3, note1, note3;
     private ImageView govt2;
+    private CardView duties;
 
     private Intent intent;
     private Spinner spinnerState;
@@ -92,6 +94,8 @@ public class RajyaFragment extends Fragment {
 
         govt1 = view.findViewById(R.id.govt1);
         govt2 = view.findViewById(R.id.govt2);
+
+        duties = view.findViewById(R.id.duties);
 
         spinnerState = view.findViewById(R.id.state_spinner);
         spinnerVidhayak = view.findViewById(R.id.MP_spinner);
@@ -199,9 +203,10 @@ public class RajyaFragment extends Fragment {
             }
         });
 
+        govt_Click();
+        duties_Click();
         vote_Click();
         note_Click();
-        govt_Click();
 
         return view;
     }
@@ -272,6 +277,16 @@ public class RajyaFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 intent = new Intent(view.getContext(), RajyaInfographics.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void duties_Click() {
+        duties.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(view.getContext(), Duties.class);
                 startActivity(intent);
             }
         });

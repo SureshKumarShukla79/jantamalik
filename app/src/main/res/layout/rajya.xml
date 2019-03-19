@@ -15,15 +15,116 @@
         android:layout_margin="5dp"
         tools:context="in.filternet.jantamalik.Kendra.VoteMP">
 
+        <android.support.v7.widget.CardView
+            android:id="@+id/infographics_cardView"
+            android:layout_width="match_parent"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:src="@drawable/rights" />
+
+                <TextView
+                    android:id="@+id/govt1"
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1.00"
+                    android:padding="12dp"
+                    android:text="@string/democracy"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/govt2"
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|end"
+                    android:src="@drawable/right_black_arrow_24dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/duties"
+            android:layout_below="@id/infographics_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="40dp"
+                    android:text="@string/State_Subjects" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom">
+
+                    <ImageButton
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerInside"
+                        android:background="@drawable/recyclerview_item_click_effect"
+                        android:src="@drawable/responsibility" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_weight="1.00"
+                        android:background="@drawable/recyclerview_item_click_effect"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="@string/State_Subjects"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/kendra_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|end"
+                        android:background="@drawable/recyclerview_item_click_effect"
+                        android:src="@drawable/right_black_arrow_24dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
         <TextView
             android:id="@+id/state_text"
+            android:layout_below="@+id/duties"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/state_text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="6dp"
             android:paddingLeft="30dp"
             android:paddingRight="30dp" />
 
@@ -66,69 +167,10 @@
             android:visibility="gone" />
 
         <android.support.v7.widget.CardView
-            android:id="@+id/voteCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/constituency_text"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="3dp"
-            app:cardBackgroundColor="@color/white">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginLeft="40dp"
-                    android:text="@string/Vote" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom">
-
-                    <ImageButton
-                        android:id="@+id/vote1"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:scaleType="centerInside"
-                        android:background="@drawable/recyclerview_item_click_effect"
-                        android:src="@drawable/vote" />
-
-                    <TextView
-                        android:id="@+id/vote2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left|bottom"
-                        android:background="@drawable/recyclerview_item_click_effect"
-                        android:gravity="left|bottom"
-                        android:layout_weight="1.00"
-                        android:padding="10dp"
-                        android:text="@string/MLA"
-                        android:textColor="@color/black"
-                        android:textSize="25sp" />
-
-                    <ImageButton
-                        android:id="@+id/vote3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:background="@drawable/recyclerview_item_click_effect"
-                        android:src="@drawable/right_black_arrow_24dp" />
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
             android:id="@+id/noteCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/voteCard"
+            android:layout_below="@id/state_spinner"
             android:layout_marginStart="3dp"
             android:layout_marginEnd="3dp"
             android:layout_marginTop="1dp"
@@ -184,45 +226,61 @@
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
-            android:id="@+id/infographics_cardView"
+            android:id="@+id/voteCard"
             android:layout_width="match_parent"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/noteCard"
-            android:layout_height="wrap_content">
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="3dp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <ImageButton
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:scaleType="centerInside"
-                    android:background="@drawable/recyclerview_item_click_effect"
-                    android:src="@drawable/rights" />
                 <TextView
-                    android:id="@+id/govt1"
-                    android:background="@drawable/recyclerview_item_click_effect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_weight="1.00"
-                    android:padding="12dp"
-                    android:text="@string/democracy"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="40dp"
+                    android:text="@string/Vote" />
 
-                <ImageView
-                    android:id="@+id/govt2"
-                    android:background="@drawable/recyclerview_item_click_effect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="right|end"
-                    android:src="@drawable/right_black_arrow_24dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom">
+
+                    <ImageButton
+                        android:id="@+id/vote1"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerInside"
+                        android:background="@drawable/recyclerview_item_click_effect"
+                        android:src="@drawable/vote" />
+
+                    <TextView
+                        android:id="@+id/vote2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|bottom"
+                        android:background="@drawable/recyclerview_item_click_effect"
+                        android:gravity="left|bottom"
+                        android:layout_weight="1.00"
+                        android:padding="10dp"
+                        android:text="@string/MLA"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <ImageButton
+                        android:id="@+id/vote3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="@drawable/recyclerview_item_click_effect"
+                        android:src="@drawable/right_black_arrow_24dp" />
+                </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -232,54 +290,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/subjectCard"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="3dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginBottom="10dp"
-                app:cardBackgroundColor="@color/white">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorPrimary"
-                        android:layout_marginLeft="40dp"
-                        android:text="@string/State_Subjects" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right|bottom">
-
-                        <ImageButton
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:scaleType="centerInside"
-                            android:background="@drawable/recyclerview_item_click_effect"
-                            android:src="@drawable/responsibility" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left|bottom"
-                            android:background="@drawable/recyclerview_item_click_effect"
-                            android:gravity="left|bottom"
-                            android:layout_weight="1.00"
-                            android:padding="10dp"
-                            android:text="@string/rajya_subjects"
-                            android:textColor="@color/black"
-                            android:textAppearance="?android:attr/textAppearanceMedium" />
-                    </LinearLayout>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
         </android.support.v4.widget.NestedScrollView>
     </RelativeLayout>
 </ScrollView>

@@ -8,8 +8,8 @@
     <string name="rajya"><b>State</b></string>
     <string name="taxkendra"><b>Center - Tax</b></string>
 
-    <string name="Center_Subjects">Responsibilities of Saansad(MP)</string>
-    <string name="State_Subjects">Responsibilities of Vidhayak(MLA)</string>
+    <string name="Center_Subjects">Responsibilities of Saansad/MP</string>
+    <string name="State_Subjects">Responsibilities of Vidhayak/MLA</string>
 
     <string name="Issues"><b>My issues</b></string>
     <string name="Money"><b>My note</b></string>

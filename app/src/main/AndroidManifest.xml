@@ -48,6 +48,9 @@
         <activity
             android:name=".Rajya.RajyaInfographics"
             android:theme="@style/AppTheme_NoActionBar" />
+        <activity
+            android:name="in.filternet.jantamalik.Rajya.Duties"
+            android:theme="@style/AppTheme_NoActionBar" />
         <receiver
             android:name="in.filternet.jantamalik.Receiver"
             android:directBootAware="true">
