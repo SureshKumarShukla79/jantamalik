@@ -397,4 +397,61 @@
     <string name="business_parliament_house">Making simpler laws is responsibility of Saansad.</string>
     <string name="business_nagar_nigam">Law-n-order in state is responsibility of Vidhayak</string>
 
+    <!-- Vidhayak Duties -->
+    <string name="vidhayak_duty_police">Police</string>
+    <string name="vidhayak_duty_order">Public order</string>
+    <string name="vidhayak_duty_state_public_service">State Public Service Commission</string>
+    <string name="vidhayak_duty_high_court">Officers and Staff in High Court</string>
+    <string name="vidhayak_duty_prison">Prisons</string>
+    <string name="vidhayak_duty_municipality">Powers of Municipality</string>
+    <string name="vidhayak_duty_hospital">Hospitals and Dispensaries</string>
+    <string name="vidhayak_duty_pilgrim">Pilgrimages</string>
+    <string name="vidhayak_duty_Liquor">Liquor</string>
+    <string name="vidhayak_duty_agri">Agriculture</string>
+    <string name="vidhayak_duty_preserve">Preservation, Protection and Stock of animal</string>
+    <string name="vidhayak_duty_water_supply">Water supplies - irrigation/ canals/ drainage</string>
+    <string name="vidhayak_duty_land">Land, Land revenue</string>
+    <string name="vidhayak_duty_fish">Fisheries</string>
+    <string name="vidhayak_duty_trade">Trade and commerce within the State</string>
+    <string name="vidhayak_duty_market">Markets and fairs</string>
+    <string name="vidhayak_duty_money">Money-lending and money-lenders</string>
+    <string name="vidhayak_duty_agri_tax">Taxes on agricultural income</string>
+    <string name="vidhayak_duty_electric_tax">Taxes on the consumption or sale of electricity</string>
+    <string name="vidhayak_duty_vehicle_tax">Taxes on Vehicles, Education, Roads, Forest, etc</string>
+    <string name="vidhayak_duty_education">Education</string>
+    <string name="vidhayak_duty_road">Roads</string>
+    <string name="vidhayak_duty_forest">Forest, etc</string>
+
+    <!-- Saansad Duties -->
+    <string name="mp_duty_employment">Employment</string>
+    <string name="mp_duty_social_security">Social security</string>
+    <string name="mp_duty_price_control">Price control</string>
+    <string name="mp_duty_upsc">UPSC</string>
+    <string name="mp_duty_education">Education</string>
+    <string name="mp_duty_rail">Railway</string>
+    <string name="mp_duty_highway">National highway</string>
+    <string name="mp_duty_stock">Stock exchange</string>
+    <string name="mp_duty_po">Post Office</string>
+    <string name="mp_duty_currency">Currency</string>
+    <string name="mp_duty_bank">Bank</string>
+    <string name="mp_duty_company">Company law, Company tax</string>
+    <string name="mp_duty_insurance">Insurance</string>
+    <string name="mp_duty_quality">Quality of goods</string>
+    <string name="mp_duty_oil">Petrol, Excise duty on Petrol/CNG</string>
+    <string name="mp_duty_mine">Mines and petroleum refinery, Labour in mines</string>
+    <string name="mp_duty_cbi">CBI</string>
+    <string name="mp_duty_citizenship">Citizenship</string>
+    <string name="mp_duty_passport">Passport</string>
+    <string name="mp_duty_defense">Defense</string>
+    <string name="mp_duty_forest">Forest</string>
+    <string name="mp_duty_medicine">Medicine</string>
+    <string name="mp_duty_census">Census</string>
+    <string name="mp_duty_migration">Inter-state migration</string>
+    <string name="mp_duty_ipc">IPC</string>
+    <string name="mp_duty_divorce_law">Divorce law, etc</string>
+
+    <string name="issue_information">To ask question,
+        \nor add information / experience,
+        \nclick here</string>
+
 </resources>

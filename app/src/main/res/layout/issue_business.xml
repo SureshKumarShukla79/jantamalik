@@ -115,15 +115,38 @@
                 android:textColor="@color/black" />
         </LinearLayout>
 
-        <android.support.v7.widget.SwitchCompat
-            android:id="@+id/nine"
+        <RelativeLayout
+            android:id="@+id/update_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/nagar_nigam"
-            android:text="@string/switchText"
-            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:theme="@style/SwitchColor"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/update_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/issue_information"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:layout_alignTop="@+id/arrow"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onclick_update_issue"
+                android:src="@drawable/ic_arrow_forward_white_24dp"
+                android:layout_toRightOf="@+id/update_text"
+                android:layout_toEndOf="@+id/update_text"
+                app:backgroundTint="@color/colorPrimary"
+                app:fabSize="mini" />
+        </RelativeLayout>
+
     </RelativeLayout>
 </ScrollView>

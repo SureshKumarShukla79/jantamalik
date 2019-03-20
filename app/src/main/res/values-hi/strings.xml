@@ -356,4 +356,61 @@
     <string name="business_parliament_house">कानून को आसान बनाने की जिम्मेदारी सांसदों की है। सांसद को संपर्क करें।</string>
     <string name="business_nagar_nigam">राज्य में कानून व्यवस्था की जिम्मेदारी विधायकों की है। विधायक को संपर्क करें।</string>
 
+    <!-- Vidhayak Duties -->
+    <string name="vidhayak_duty_police">पुलिस</string>
+    <string name="vidhayak_duty_order">कानून व्यवस्था</string>
+    <string name="vidhayak_duty_state_public_service">राज्य लोकसेवा आयोग</string>
+    <string name="vidhayak_duty_high_court">उच्च न्यायालय के अधिकारी और सेवक</string>
+    <string name="vidhayak_duty_prison">जेल</string>
+    <string name="vidhayak_duty_municipality">नगरनिगमों का गठन और शक्तियाँ</string>
+    <string name="vidhayak_duty_hospital">अस्पताल और औषधालय</string>
+    <string name="vidhayak_duty_pilgrim">तीर्थयात्राएं</string>
+    <string name="vidhayak_duty_Liquor">शराब</string>
+    <string name="vidhayak_duty_agri">खेती</string>
+    <string name="vidhayak_duty_preserve">पशुधन</string>
+    <string name="vidhayak_duty_water_supply">जल - सिंचाई/ नहरें/ निकास</string>
+    <string name="vidhayak_duty_land">भूमि, भूमि कर</string>
+    <string name="vidhayak_duty_fish">मछलीपालन</string>
+    <string name="vidhayak_duty_trade">राज्य के अंदर व्यवसाय कर</string>
+    <string name="vidhayak_duty_market">बाजार और मेेले</string>
+    <string name="vidhayak_duty_money">साहूकारी और कृषि ऋण मुक्ति</string>
+    <string name="vidhayak_duty_agri_tax">खेती पर कर</string>
+    <string name="vidhayak_duty_electric_tax">बिजली कर</string>
+    <string name="vidhayak_duty_vehicle_tax">वाहन कर</string>
+    <string name="vidhayak_duty_education">शिक्षा</string>
+    <string name="vidhayak_duty_road">सड़क</string>
+    <string name="vidhayak_duty_forest">वन, आदि</string>
+
+    <!-- Saansad Duties -->
+    <string name="mp_duty_employment">रोजगार</string>
+    <string name="mp_duty_social_security">सामाजिक सुरक्षा</string>
+    <string name="mp_duty_price_control">Price control</string>
+    <string name="mp_duty_upsc">यूपीएससी</string>
+    <string name="mp_duty_education">शिक्षा</string>
+    <string name="mp_duty_rail">रेल</string>
+    <string name="mp_duty_highway">राष्ट्रीय राजमार्ग</string>
+    <string name="mp_duty_stock">शेयर बाजार</string>
+    <string name="mp_duty_po">पोस्ट आफिस</string>
+    <string name="mp_duty_currency">नोट / सिक्के</string>
+    <string name="mp_duty_bank">बैंक</string>
+    <string name="mp_duty_company">कंपनी कानून, कंपनी टैक्स</string>
+    <string name="mp_duty_insurance">बीमा</string>
+    <string name="mp_duty_quality">सामान की गुणवत्ता</string>
+    <string name="mp_duty_oil">पेट्रोल, पेट्रोल का दाम, पेट्रोल/सीएनजी पर कर</string>
+    <string name="mp_duty_mine">खान और तेलक्षेत्र, खान में श्रम</string>
+    <string name="mp_duty_cbi">सीबीआई</string>
+    <string name="mp_duty_citizenship">नागरिकता</string>
+    <string name="mp_duty_passport">पासपोर्ट</string>
+    <string name="mp_duty_defense">रक्षा</string>
+    <string name="mp_duty_forest">वन</string>
+    <string name="mp_duty_medicine">दवाई</string>
+    <string name="mp_duty_census">जनगणना</string>
+    <string name="mp_duty_migration">अंतर-राज्यीय आवाजाही</string>
+    <string name="mp_duty_ipc">दंड विधि</string>
+    <string name="mp_duty_divorce_law">तलाक कानून, आदि </string>
+
+    <string name="issue_information">कोई सवाल पूछने के लिए,
+        \nजानकारी / अनुभव जोड़ने के लिए,
+        \nक्लिक करें</string>
+
 </resources>
