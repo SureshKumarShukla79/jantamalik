@@ -215,7 +215,7 @@
             android:layout_gravity="start"
             android:autoLink="web"
             android:clickable="true"
-            android:textColorLink="@color/black"
+            android:textColorLink="@color/blue"
             android:layout_below="@id/nestedScroll"
             android:focusable="true"
             android:textAppearance="?android:attr/textAppearanceSmall"

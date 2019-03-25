@@ -78,10 +78,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l1"
                     android:text="@string/dainik_bhaskar_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -104,10 +103,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l2"
                     android:text="@string/jagran_group_links"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -130,10 +128,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l3"
                     android:text="@string/times_group_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
@@ -156,10 +153,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/OoAEOVuf-yI"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l4"
+                    android:text="@string/amar_ujala_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -182,10 +178,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l5"
                     android:text="@string/india_today_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -208,10 +203,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l6"
                     android:text="@string/abp_news_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -234,10 +228,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/3bA-m_727R0"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l7"
+                    android:text="@string/india_tv_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -260,10 +253,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l8"
                     android:text="@string/zee_group_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -286,10 +278,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/rqEJaW7Ok2I"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l9"
+                    android:text="@string/punjab_kesari_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -312,10 +303,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/MmZBtGt4Kx4"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l10"
+                    android:text="@string/sab_tv_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -338,10 +328,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/1qVK6zajI58"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l11"
+                    android:text="@string/sadhana_news_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -364,10 +353,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/I7_6ZXePsog"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l12"
+                    android:text="@string/uni_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -390,15 +378,13 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/IifKJgiY00M"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l13"
+                    android:text="@string/_9x_tashan_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
                     android:padding="5dp"
-                    android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
@@ -417,10 +403,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/J3TbL6BtJGk"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l14"
+                    android:text="@string/samachar_plus_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -443,10 +428,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/5iAFRGW0nN4"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l15"
+                    android:text="@string/hindi_khabar_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -469,10 +453,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/cjYB0MmEqqs"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l16"
+                    android:text="@string/swatantra_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -495,10 +478,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/K6WLi9GvZ2s"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l17"
+                    android:text="@string/aaj_hindi_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -521,10 +503,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/uNXvnfRvR6Y"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l18"
+                    android:text="@string/india_watch_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -547,10 +528,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/8WwfOa0F0p8"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l19"
+                    android:text="@string/hnn_24x7_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -573,10 +553,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/xQSrLHgM_pI"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l20"
+                    android:text="@string/scoopshoop_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -599,10 +578,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/Mz0T8fMDtq0"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l21"
+                    android:text="@string/dna_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -625,10 +603,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/6udsFUF7FiQ"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l22"
+                    android:text="@string/rediff_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -652,10 +629,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l23"
                     android:text="@string/BigFM_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -678,10 +654,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l24"
                     android:text="@string/TV18_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -704,10 +679,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l25"
                     android:text="@string/HT_media_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
@@ -730,10 +704,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/WLzOq1O17Mc"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l26"
+                    android:text="@string/abn_andhra_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -756,10 +729,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l27"
                     android:text="@string/NewIndianExpress_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
@@ -782,10 +754,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/y7wRn6s4GaY"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l28"
+                    android:text="@string/dainik_sambad_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -808,10 +779,9 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <TextView
-                android:text="https://youtu.be/t_9esHdidI0"
-                android:autoLink="web"
-                android:clickable="true"
-                android:textColorLink="@color/black"
+                android:id="@+id/l29"
+                android:text="@string/bartaman_list"
+                android:textColorLink="@color/blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/table_border_style"
@@ -834,10 +804,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l30"
                     android:text="@string/OpenMagazine_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -860,10 +829,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/2DVqzFap5rA"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l31"
+                    android:text="@string/mvtv_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -886,10 +854,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/F0Rd9A_Fi-8"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l32"
+                    android:text="@string/india_voice_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -912,10 +879,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/9In4zQ4Wreo"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l33"
+                    android:text="@string/k_news_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -938,10 +904,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/9ZnIkMwo68g"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l34"
+                    android:text="@string/dinamalar_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -964,10 +929,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/67EWmjDwH9M"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l35"
+                    android:text="@string/tv_5_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -990,10 +954,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/8ERMq0YjTFM"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l36"
+                    android:text="@string/lokmat_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1016,10 +979,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l37"
                     android:text="@string/SunGroup_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1042,10 +1004,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/hqSdMcvLlzM"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l38"
+                    android:text="@string/swarj_express_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1068,10 +1029,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/Gm26ogEOoXc"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l39"
+                    android:text="@string/bharat_samachar_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1094,10 +1054,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/g51sGCw-fzM"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l40"
+                    android:text="@string/radio_one_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1120,10 +1079,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
+                    android:id="@+id/l41"
                     android:text="@string/StarIndia_list"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"
@@ -1146,10 +1104,9 @@
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <TextView
-                    android:text="https://youtu.be/lvj8hRD1GY4"
-                    android:autoLink="web"
-                    android:clickable="true"
-                    android:textColorLink="@color/black"
+                    android:id="@+id/l42"
+                    android:text="@string/paytm_list"
+                    android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_border_style"

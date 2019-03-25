@@ -716,7 +716,7 @@
         android:textAlignment="center"
         android:autoLink="web"
         android:clickable="true"
-        android:textColorLink="@color/black"
+        android:textColorLink="@color/blue"
         android:layout_below="@id/nestedScroll"
         android:focusable="true" />
 </RelativeLayout>

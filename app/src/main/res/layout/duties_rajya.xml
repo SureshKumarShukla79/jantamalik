@@ -796,7 +796,7 @@
             android:text="@string/list_source"
             android:autoLink="web"
             android:clickable="true"
-            android:textColorLink="@color/black"
+            android:textColorLink="@color/blue"
             android:focusable="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:padding="8dp"

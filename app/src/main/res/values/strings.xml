@@ -224,17 +224,17 @@
     <string name="business">Low ease-of-doing-business</string>
 
     <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
-    <string name="jagran_group_links">https://youtu.be/8_-8SvxvHqA
-        \n\nhttps://youtu.be/SY53lbYMuQ8
-        \n\nhttps://youtu.be/m5G5_bJwceY</string>
+    <string name="jagran_group_links"><a href="https://youtu.be/8_-8SvxvHqA?t=135">Part 1</a>
+        \n\n<a href="https://youtu.be/SY53lbYMuQ8">Part 2</a>
+        \n\n<a href="https://youtu.be/m5G5_bJwceY">Part 3</a></string>
 
     <string name="media_income">Media earns from two sources - subscribers and advertisement.
         \n\nNot anymore. Nowadays many media houses earn a lot of money from paid + fake news.
         \n\nCheck sting operation (hidden camera) of your favourite newspaper/news channel :</string>
 
-    <string name="dainik_bhaskar_list">https://youtu.be/BfTwuNOTGSM
-        \n\nhttps://youtu.be/DGLpcqFe1-A
-        \n\nhttps://youtu.be/d71S2XNuNog</string>
+    <string name="dainik_bhaskar_list"><a href="https://youtu.be/BfTwuNOTGSM?t=135">Part 1</a>
+        \n\n<a href="https://youtu.be/DGLpcqFe1-A">Part 2</a>
+        \n\n<a href="https://youtu.be/d71S2XNuNog">Part 3</a></string>
 
     <string name="times_group">Times Group -
         \nThe Times Of India
@@ -246,25 +246,25 @@
         \nTimes Now
         \nET Now
         \nMirror Now</string>
-    <string name="times_group_list">https://youtu.be/u6xEcQln0Ps
-    \n\nhttps://youtu.be/c1eZbrt19zg
-    \n\nhttps://youtu.be/5btvR2vfe6U
-    \n\nhttps://youtu.be/kr4GNJyNfkc</string>
+    <string name="times_group_list"><a href="https://youtu.be/u6xEcQln0Ps?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/c1eZbrt19zg?t=135">Part 2</a>
+    \n\n<a href="https://youtu.be/5btvR2vfe6U">Part 3</a>
+    \n\n<a href="https://youtu.be/kr4GNJyNfkc">Part 4</a></string>
 
     <string name="zee_group">Zee Group
     \nZee News</string>
-    <string name="zee_group_list">https://youtu.be/dEyu9ULiBK8
-    \n\nhttps://youtu.be/rV071AcAVNI
-    \n\nhttps://youtu.be/RDdQTHTWlgk
-    \n\nhttps://youtu.be/KSi2yLCVaoQ
-    \n\nhttps://youtu.be/cQf4VFaDPfA</string>
+    <string name="zee_group_list"><a href="https://youtu.be/dEyu9ULiBK8?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/rV071AcAVNI">Part 2</a>
+    \n\n<a href="https://youtu.be/RDdQTHTWlgk">Part 3</a>
+    \n\n<a href="https://youtu.be/KSi2yLCVaoQ">Part 4</a>
+    \n\n<a href="https://youtu.be/cQf4VFaDPfA">Part 5</a></string>
 
-    <string name="BigFM_list">https://youtu.be/fKYkM4vJxlU
-    \n\nhttps://youtu.be/_cHB97APrys
-    \n\nhttps://youtu.be/FJqCLt33Ys4</string>
+    <string name="BigFM_list"><a href="https://youtu.be/fKYkM4vJxlU?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/_cHB97APrys">Part 2</a>
+    \n\n<a href="https://youtu.be/FJqCLt33Ys4">Part 3</a></string>
 
-    <string name="TV18_list">https://youtu.be/ajBqO4_npk0
-        \n\nhttps://youtu.be/rrMG1STPNSQ</string>
+    <string name="TV18_list"><a href="https://youtu.be/ajBqO4_npk0?t=135">Part 1</a>
+        \n\n<a href="https://youtu.be/rrMG1STPNSQ">Part 2</a></string>
 
     <string name="india_today_group">India Today -
         \nAaj Tak,
@@ -274,8 +274,8 @@
         \nBusiness Today,
         \nCosmopolitan,
         \nMail Today</string>
-    <string name="india_today_list">https://youtu.be/jZBWF0qG5_c
-    \n\nhttps://youtu.be/jZBWF0qG5_c</string>
+    <string name="india_today_list"><a href="https://youtu.be/jZBWF0qG5_c?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/4kL6JwN9Mzw">Part 2</a></string>
 
     <string name="HT_media_group">Hindustan Times Group
         \nहिंदुस्तान
@@ -285,27 +285,27 @@
         \nनंदन
         \nFever 104 RM
         \nmint</string>
-    <string name="HT_media_list">https://youtu.be/z3RGM10In_o
-    \n\nhttps://youtu.be/z_WRgFkjxRk
-    \n\nhttps://youtu.be/c2lr2jmiQcc</string>
+    <string name="HT_media_list"><a href="https://youtu.be/z3RGM10In_o?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/z_WRgFkjxRk">Part 2</a>
+    \n\n<a href="https://youtu.be/c2lr2jmiQcc">Part 3</a></string>
 
     <string name="abp_news">ABP News</string>
-    <string name="abp_news_list">https://youtu.be/47uik2v0ldU
-    \n\nhttps://youtu.be/sBXmunGeUL0
-    \n\nhttps://youtu.be/AzHLKRU5yq0</string>
+    <string name="abp_news_list"><a href="https://youtu.be/47uik2v0ldU?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/sBXmunGeUL0">Part 2</a>
+    \n\n<a href="https://youtu.be/AzHLKRU5yq0">Part 3</a></string>
 
-    <string name="NewIndianExpress_list">https://youtu.be/NWHlPUO-aCo
-    \n\nhttps://youtu.be/7JWGSbaxE6A</string>
+    <string name="NewIndianExpress_list"><a href="https://youtu.be/NWHlPUO-aCo?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/7JWGSbaxE6A">Part 2</a></string>
 
-    <string name="OpenMagazine_list">https://youtu.be/iq_tGjnbLeQ
-    \n\nhttps://youtu.be/ndKX4BUT5MY</string>
+    <string name="OpenMagazine_list"><a href="https://youtu.be/iq_tGjnbLeQ?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/ndKX4BUT5MY">Part 2</a></string>
 
-    <string name="SunGroup_list">https://youtu.be/nFE2I32j-jk
-    \n\nhttps://youtu.be/yIsHmeI52NM
-    \n\nhttps://youtu.be/ZnopMOw9jyw</string>
+    <string name="SunGroup_list"><a href="https://youtu.be/nFE2I32j-jk?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/yIsHmeI52NM">Part 2</a>
+    \n\n<a href="https://youtu.be/ZnopMOw9jyw">Part 3</a></string>
 
-    <string name="StarIndia_list">https://youtu.be/MiFeWxIaayQ
-    \n\nhttps://youtu.be/038ns-e_N5M</string>
+    <string name="StarIndia_list"><a href="https://youtu.be/MiFeWxIaayQ?t=135">Part 1</a>
+    \n\n<a href="https://youtu.be/038ns-e_N5M">Part 2</a></string>
 
     <string name="terms_and_condition">मुझे इस्तेमाल की शर्ते स्वीकार हैं।
         \n\nI agree to terms and conditions of usage.
@@ -327,7 +327,10 @@
     <string name="india_tv">India TV</string>
     <string name="punjab_kesari">Punjab Kesari</string>
     <string name="sab_tv">Sab TV</string>
+
     <string name="amar_ujala">Amar Ujala</string>
+    <string name="amar_ujala_list"><a href="https://youtu.be/OoAEOVuf-yI?t=135">Part 1</a></string>
+
     <string name="sadhana_prime_news">Sadhana Prime News</string>
     <string name="uni">UNI</string>
     <string name="_9x_tashan">9X Tashan</string>
@@ -453,5 +456,34 @@
     <string name="issue_information">To ask question,
         \nor add information / experience,
         \nclick here</string>
+
+    <string name="india_tv_list"><a href="https://youtu.be/3bA-m_727R0?t=135">Part 1</a></string>
+    <string name="punjab_kesari_list"><a href="https://youtu.be/rqEJaW7Ok2I?t=135">Part 1</a></string>
+    <string name="sab_tv_list"><a href="https://youtu.be/MmZBtGt4Kx4?t=135">Part 1</a></string>
+    <string name="sadhana_news_list"><a href="https://youtu.be/1qVK6zajI58?t=135">Part 1</a></string>
+    <string name="uni_list"><a href="https://youtu.be/I7_6ZXePsog?t=135">Part 1</a></string>
+    <string name="_9x_tashan_list"><a href="https://youtu.be/IifKJgiY00M?t=135">Part 1</a></string>
+    <string name="samachar_plus_list"><a href="https://youtu.be/J3TbL6BtJGk?t=135">Part 1</a></string>
+    <string name="hindi_khabar_list"><a href="https://youtu.be/5iAFRGW0nN4?t=135">Part 1</a></string>
+    <string name="swatantra_list"><a href="https://youtu.be/cjYB0MmEqqs?t=135">Part 1</a></string>
+    <string name="aaj_hindi_list"><a href="https://youtu.be/K6WLi9GvZ2s?t=135">Part 1</a></string>
+    <string name="india_watch_list"><a href="https://youtu.be/uNXvnfRvR6Y?t=135">Part 1</a></string>
+    <string name="hnn_24x7_list"><a href="https://youtu.be/8WwfOa0F0p8?t=135">Part 1</a></string>
+    <string name="scoopshoop_list"><a href="https://youtu.be/xQSrLHgM_pI?t=135">Part 1</a></string>
+    <string name="dna_list"><a href="https://youtu.be/Mz0T8fMDtq0?t=135">Part 1</a></string>
+    <string name="rediff_list"><a href="https://youtu.be/6udsFUF7FiQ?t=135">Part 1</a></string>
+    <string name="abn_andhra_list"><a href="https://youtu.be/WLzOq1O17Mc?t=135">Part 1</a></string>
+    <string name="dainik_sambad_list"><a href="https://youtu.be/y7wRn6s4GaY?t=135">Part 1</a></string>
+    <string name="bartaman_list"><a href="https://youtu.be/t_9esHdidI0?t=135">Part 1</a></string>
+    <string name="mvtv_list"><a href="https://youtu.be/2DVqzFap5rA?t=135">Part 1</a></string>
+    <string name="india_voice_list"><a href="https://youtu.be/F0Rd9A_Fi-8?t=135">Part 1</a></string>
+    <string name="k_news_list"><a href="https://youtu.be/9In4zQ4Wreo?t=135">Part 1</a></string>
+    <string name="dinamalar_list"><a href="https://youtu.be/9ZnIkMwo68g?t=135">Part 1</a></string>
+    <string name="tv_5_list"><a href="https://youtu.be/67EWmjDwH9M?t=135">Part 1</a></string>
+    <string name="swarj_express_list"><a href="https://youtu.be/hqSdMcvLlzM?t=135">Part 1</a></string>
+    <string name="bharat_samachar_list"><a href="https://youtu.be/Gm26ogEOoXc?t=135">Part 1</a></string>
+    <string name="radio_one_list"><a href="https://youtu.be/g51sGCw-fzM?t=135">Part 1</a></string>
+    <string name="paytm_list"><a href="https://youtu.be/lvj8hRD1GY4?t=135">Part 1</a></string>
+    <string name="lokmat_list"><a href="https://youtu.be/8ERMq0YjTFM?t=135">Part 1</a></string>
 
 </resources>
