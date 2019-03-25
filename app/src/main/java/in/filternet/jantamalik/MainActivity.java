@@ -90,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
             setUI_Lang(this, "hi");
         }
 
+        if (BuildConfig.RELEASE_MODE) { // To avoid developers screen recordings
+            //UXCam.startWithKey("6e8c27f340dd13d"); // uxcam SDK. This activity is entry activity
+        }
+
         setContentView(R.layout.activity_main);
 
         tabLayout = findViewById(R.id.tabs);
@@ -156,12 +160,14 @@ public class MainActivity extends AppCompatActivity {
             builder.setPositiveButton(R.string.button_yes, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int id) {
+                    FirebaseLogger.send(MainActivity.this, "Agree");
                     mEditor.putBoolean(bUSER_AGREE, true).commit();
                 }
             });
             builder.setNegativeButton(R.string.button_no, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int id) {
+                    FirebaseLogger.send(MainActivity.this, "Not_Agree");
                     finish();
                 }
             });
@@ -192,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         switch (id){
             case R.id.contact_menuItem:
+                FirebaseLogger.send(this, "Tap_Contact_Us");
                 intent = new Intent(this, Contact.class);
                 intent.putExtra("feedback", true);
                 startActivity(intent);
@@ -204,6 +211,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclick_share_button(View view) {
+        FirebaseLogger.send(this, "Tap_Share");
+
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
 
@@ -214,6 +223,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclick_open_donate(View view) {
+        FirebaseLogger.send(this, "Tap_Donate");
+
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
@@ -325,10 +336,14 @@ public class MainActivity extends AppCompatActivity {
         if(current_language == null || current_language.equals(sLANGUAGE_ENGLISH)) {
             mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
             setUI_Lang(this, "hi");
+
+            FirebaseLogger.send(this, "App_Lang_Hindi");
             //Toast.makeText(getApplicationContext(),"भाषा को सफलतापूर्वक बदल दिया गया है", Toast.LENGTH_SHORT).show();
         } else {
             mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
             setUI_Lang(this, "en");
+
+            FirebaseLogger.send(this, "App_Lang_Eng");
             //Toast.makeText(getApplicationContext(),"Language has successfully changed", Toast.LENGTH_SHORT).show();
         }
 
@@ -503,6 +518,8 @@ public class MainActivity extends AppCompatActivity {
                     builder.setPositiveButton(R.string.Option_Update, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
+                            FirebaseLogger.send(MainActivity.this, "Tap_Update_App");
+
                             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(URL_PLAYSTORE_MARKET)));
                         }
                     });
@@ -510,6 +527,8 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
                             mEditor.putBoolean(bAPP_UPDATE_LATER, true).commit();
+
+                            FirebaseLogger.send(MainActivity.this, "Tap_Update_Later");
                         }
                     });
 

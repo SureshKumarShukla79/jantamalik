@@ -59,6 +59,9 @@
                 <action android:name="android.intent.action.DATE_CHANGED" />
             </intent-filter>
         </receiver>
+
+        <!-- UXCam SDK -->
+        <service android:name="com.uxcam.service.HttpPostService" />
     </application>
 
 </manifest>

@@ -1,3 +1,9 @@
+repositories {
+    google()
+    maven { url 'http://sdk.uxcam.com/android/' } // UXCam
+
+    jcenter()
+}
 apply plugin: 'com.android.application'
 
 android {
@@ -8,19 +14,28 @@ android {
         targetSdkVersion 27
         versionCode 190101
         versionName "devel"
-        //versionCode 190320
-        //versionName "19.03.20"
+        //versionCode 190325
+        //versionName "19.03.25"
         //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField 'boolean', 'RELEASE_MODE', 'true'
+        }
+
+        debug {
+            buildConfigField 'boolean', 'RELEASE_MODE', 'false'
+            debuggable true
         }
     }
 }
 
 dependencies {
+    implementation 'com.uxcam:uxcam:2.6.2@aar' //UXCam
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
@@ -33,4 +48,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'org.jsoup:jsoup:1.10.3' // Downloaded library for app version fetch
+
+    implementation 'com.google.firebase:firebase-core:16.0.1' //Firebase
 }
+
+apply plugin: 'com.google.gms.google-services'  //Firebase
