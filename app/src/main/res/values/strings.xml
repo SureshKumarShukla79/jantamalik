@@ -207,6 +207,9 @@
     <string name="gst_cloth">12% GST</string>
     <string name="tax_petrol">100% Tax</string>
     <string name="itax_slabs">5 / 20 / 30%</string>
+
+    <string name="land_sale">Registry</string>
+
     <string name="gst_exercise_book">12% GST</string>
     <string name="user_liking">If you like the app</string>
     <string name="good">Share</string>
@@ -485,5 +488,25 @@
     <string name="radio_one_list"><a href="https://youtu.be/g51sGCw-fzM?t=135">Part 1</a></string>
     <string name="paytm_list"><a href="https://youtu.be/lvj8hRD1GY4?t=135">Part 1</a></string>
     <string name="lokmat_list"><a href="https://youtu.be/8ERMq0YjTFM?t=135">Part 1</a></string>
+
+    <string name="contact_mla">Call and email your vidhayak. Don\'t hesitate.</string>
+
+    <string name="rajya_tax">For development of state, we all pay tax in various forms. Tax rates on common items :</string>
+
+    <!--Budget Bihar-->
+    <string name="budget_bihar"><b>Bihar</b></string>
+    <string name="bihar_budget">1,76,990 crore</string>
+    <string name="bihar_tax_total"><b>Total tax to state govt - One lakh seventy six thousand nine hundred ninety crores</b></string>
+    <string name="bihar_education">Education</string>
+    <string name="bihar_pension">Pension</string>
+    <string name="bihar_rural_dev">Rural Development</string>
+    <string name="bihar_interest">Interest Payment</string>
+    <string name="bihar_rural_work">Rural works</string>
+    <string name="bihar_energy">Energy</string>
+    <string name="bihar_panchayti_raj">Panchayti Raj</string>
+    <string name="bihar_home">Home</string>
+    <string name="bihar_health">Health</string>
+    <string name="bihar_repay_loan">Repayment of Loans</string>
+    <string name="bihar_source_text">Full budget 2018-19 http://finance.bih.nic.in/Documents/Circulars/CN-02-28-02-2018.pdf</string>
 
 </resources>

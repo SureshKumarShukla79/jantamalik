@@ -8,7 +8,11 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,31 +23,37 @@ import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
-import static in.filternet.jantamalik.VoteJava.VoteFragment.DEFAULT_MP;
-import static in.filternet.jantamalik.VoteJava.VoteFragment.hiDEFAULT_MP;
-import static in.filternet.jantamalik.VoteJava.VoteFragment.sMP;
 
 public class VoteVidhayak extends AppCompatActivity {
     String TAG = "VoteVidhayak";
     private Toolbar toolbar;
     private TextView name, phone, email, address;
-    private de.hdodenhof.circleimageview.CircleImageView profile_pic;
-    DataFilter.MP_info mp;
+    private Spinner spinnerMLA;
+
+    private DataFilter.MP_info mla;
+    private ArrayAdapter mla_adapter;
+
+    private SharedPreferences mSharedPref;
+    private SharedPreferences.Editor editor;
+    private String MLAArea;
+    private String mLanguage;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.vote_mp_layout);
+        setContentView(R.layout.vote_mla_layout);
 
-        toolbar = findViewById(R.id.toolbar_MP_layout);
-        name = findViewById(R.id.MP_name);
+        mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        editor = mSharedPref.edit();
+
+        toolbar = findViewById(R.id.toolbar);
+        name = findViewById(R.id.MLA_name);
         phone = findViewById(R.id.phone);
         email = findViewById(R.id.email);
         address = findViewById(R.id.address);
-        profile_pic = findViewById(R.id.profile_image);
+        spinnerMLA = findViewById(R.id.MLA_spinner);
 
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -54,24 +64,68 @@ public class VoteVidhayak extends AppCompatActivity {
         });
 
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        String MPArea = mSharedPref.getString(sMP, DEFAULT_MP);
-        String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        MLAArea = mSharedPref.getString(MainActivity.sMLA, MainActivity.DEFAULT_MLA);
+        //Log.e(TAG, "MLAArea: " +MLAArea);
+        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
+
+        String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String MLA = mSharedPref.getString(MainActivity.sMLA, MainActivity.DEFAULT_MLA);
+        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
+
+        // In case of Hindi, change the defaults
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            if (State.equals(MainActivity.DEFAULT_STATE))
+                State = MainActivity.hiDEFAULT_STATE;
+            if (MLA.equals(MainActivity.DEFAULT_MLA))
+                MLA = MainActivity.hiDEFAULT_MLA;
+        }
+        //Log.e(TAG, "State : " + State + ", MLA Area: " + MLA);
+
+        // In case the db isn't initialised, do it now
+        editor.putString(MainActivity.sSTATE, State).commit();
+        editor.putString(MainActivity.sMLA, MLA).commit();
 
         DataFilter dataFilter = new DataFilter();
-        //mp = dataFilter.new MP_info();
-        mp = dataFilter.getMPInfo(current_language, MPArea);
 
-        //  Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
-        name.setText(mp.name);
-        phone.setText(mp.phone);
-        email.setText(mp.email);
-        address.setText(mp.address);
+        // Load defaults
+        mla_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item,
+                dataFilter.getMLAAreas(mLanguage, State));
+        mla_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerMLA.setAdapter(mla_adapter);
 
-        // Only Varanasi MP pic in app
-        if (MPArea.equals(DEFAULT_MP) || MPArea.equals(hiDEFAULT_MP))
-            profile_pic.setImageResource(R.drawable.narendra_modi_pic);
-        else
-            profile_pic.setImageResource(R.drawable.politician_illustration);
+        int spinnerPosition = mla_adapter.getPosition(MLA);
+        spinnerMLA.setSelection(spinnerPosition);
+        //Log.e(TAG, "MLA def: " + MLA);
+
+        //spinner constituency click handler
+        spinnerMLA.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                MLAArea = adapterView.getItemAtPosition(i).toString();
+                //Log.e(TAG, "spin MLA : " + i + " " + l + " " + MLAArea);
+                editor.putString(MainActivity.sMLA, MLAArea).commit();
+
+                updateMLA();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
+        updateMLA();
+
+    }
+
+    private void updateMLA() {
+        DataFilter dataFilter = new DataFilter();
+        mla = dataFilter.getMLAInfo(mLanguage, MLAArea);
+
+        Log.e(TAG, MLAArea + " " + mla.name + " " + mla.phone + " " + mla.email + " " + mla.address);
+        name.setText(mla.name);
+        phone.setText(mla.phone);
+        email.setText(mla.email);
+        address.setText(mla.address);
     }
 
     @Override
@@ -86,11 +140,11 @@ public class VoteVidhayak extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onclick_call_mp(View view) {
-        if (mp.phone.equals(""))
+    public void onclick_call_mla(View view) {
+        if (mla.phone.equals(""))
             return;
 
-        Uri number = Uri.parse("tel:" + mp.phone);
+        Uri number = Uri.parse("tel:" + mla.phone);
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
 
         try { // Calling not available on Tablet devices
@@ -101,11 +155,11 @@ public class VoteVidhayak extends AppCompatActivity {
         }
     }
 
-    public void onclick_email_mp(View view) {
-        if (mp.email.equals(""))
+    public void onclick_email_mla(View view) {
+        if (mla.email.equals(""))
             return;
 
-        String[] TO = {mp.email};
+        String[] TO = {mla.email};
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setData(Uri.parse("mailto:"));
         intent.setType("text/plain");

@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name="in.filternet.jantamalik.MainApplication"
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +18,7 @@
         tools:ignore="UnusedAttribute">
 
         <activity
-            android:name="in.filternet.jantamalik.MainActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme_NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,32 +27,40 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="in.filternet.jantamalik.Kendra.VoteMP"
+            android:name=".Kendra.VoteMP"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
-            android:name="in.filternet.jantamalik.Kendra.TaxKendra"
+            android:name=".Kendra.TaxKendra"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
-            android:name="in.filternet.jantamalik.Kendra.DutiesKendra"
+            android:name=".Kendra.DutiesKendra"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
-            android:name="in.filternet.jantamalik.Contact"
+            android:name=".Contact"
             android:theme="@style/AppTheme_NoActionBar"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true" />
         <activity
-            android:name="in.filternet.jantamalik.IssuesJava.Issues"
-            android:parentActivityName="in.filternet.jantamalik.MainActivity" />
-        <activity android:name=".Kendra.Infographics"
+            android:name=".IssuesJava.Issues"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Kendra.Infographics"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
             android:name=".Rajya.RajyaInfographics"
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
-            android:name="in.filternet.jantamalik.Rajya.Duties"
+            android:name=".Rajya.Duties"
             android:theme="@style/AppTheme_NoActionBar" />
+        <activity
+            android:name=".Rajya.TaxRajya"
+            android:theme="@style/AppTheme_NoActionBar" />
+        <activity
+            android:name=".Rajya.VoteVidhayak"
+            android:theme="@style/AppTheme_NoActionBar" />
+
         <receiver
-            android:name="in.filternet.jantamalik.Receiver"
+            android:name=".Receiver"
             android:directBootAware="true">
             <intent-filter android:priority="99">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

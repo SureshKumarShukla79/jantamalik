@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -38,21 +39,6 @@ public class VoteMP extends AppCompatActivity {
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
-
-    public static final String DEFAULT_STATE = "Uttar Pradesh";
-    public static final String DEFAULT_MP = "Varanasi";
-    public static final String DEFAULT_MLA = "Varanasi Cantt";
-    public static final String DEFAULT_WARD = "Chittupur, Sigra";
-
-    public static final String hiDEFAULT_STATE = "उत्तर प्रदेश";
-    public static final String hiDEFAULT_MP = "वाराणसी";
-    public static final String hiDEFAULT_MLA = "वाराणसी कैंट";
-    public static final String hiDEFAULT_WARD = "छित्तुपुर, सिगरा";
-
-    public static final String sSTATE = DEFAULT_STATE;
-    public static final String sMP = DEFAULT_MP;
-    public static final String sMLA = DEFAULT_MLA;
-    public static final String sWARD = DEFAULT_WARD;
 
     private String MPArea;
     private String mLanguage;
@@ -86,33 +72,33 @@ public class VoteMP extends AppCompatActivity {
         });
 
         final SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        MPArea = mSharedPref.getString(sMP, DEFAULT_MP);
-        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        MPArea = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
 
-        String State = mSharedPref.getString(sSTATE, DEFAULT_STATE);
-        String MP = mSharedPref.getString(sMP, DEFAULT_MP);
-        String MLA = mSharedPref.getString(sMLA, DEFAULT_MLA);
-        String Ward = mSharedPref.getString(sWARD, DEFAULT_WARD);
+        String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String MP = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+        String MLA = mSharedPref.getString(MainActivity.sMLA, MainActivity.DEFAULT_MLA);
+        String Ward = mSharedPref.getString(MainActivity.sWARD, MainActivity.DEFAULT_WARD);
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
         // In case of Hindi, change the defaults
         if (mLanguage.equals(sLANGUAGE_HINDI)) {
-            if (State.equals(DEFAULT_STATE))
-                State = hiDEFAULT_STATE;
-            if (MP.equals(DEFAULT_MP))
-                MP = hiDEFAULT_MP;
-            if (MLA.equals(DEFAULT_MLA))
-                MLA = hiDEFAULT_MLA;
-            if (Ward.equals(DEFAULT_WARD))
-                Ward = hiDEFAULT_WARD;
+            if (State.equals(MainActivity.DEFAULT_STATE))
+                State = MainActivity.hiDEFAULT_STATE;
+            if (MP.equals(MainActivity.DEFAULT_MP))
+                MP = MainActivity.hiDEFAULT_MP;
+            if (MLA.equals(MainActivity.DEFAULT_MLA))
+                MLA = MainActivity.hiDEFAULT_MLA;
+            if (Ward.equals(MainActivity.DEFAULT_WARD))
+                Ward = MainActivity.hiDEFAULT_WARD;
         }
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
         // In case the db isn't initialised, do it now
-        editor.putString(sSTATE, State).commit();
-        editor.putString(sMP, MP).commit();
-        editor.putString(sMLA, MLA).commit();
-        editor.putString(sWARD, Ward).commit();
+        editor.putString(MainActivity.sSTATE, State).commit();
+        editor.putString(MainActivity.sMP, MP).commit();
+        editor.putString(MainActivity.sMLA, MLA).commit();
+        editor.putString(MainActivity.sWARD, Ward).commit();
 
         // Populating GUI
         dataFilter = new DataFilter();
@@ -143,7 +129,7 @@ public class VoteMP extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
                 //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
-                editor.putString(sSTATE, State).commit();
+                editor.putString(MainActivity.sSTATE, State).commit();
 
                 // Reload the state MP areas
                 arrayAdapterMP = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item,
@@ -151,7 +137,7 @@ public class VoteMP extends AppCompatActivity {
                 arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerMP.setAdapter(arrayAdapterMP);
 
-                String MP = mSharedPref.getString(sMP, DEFAULT_MP);
+                String MP = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
                 int spinnerPosition = arrayAdapterMP.getPosition(MP);
                 spinnerMP.setSelection(spinnerPosition);
             }
@@ -167,7 +153,7 @@ public class VoteMP extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 MPArea = adapterView.getItemAtPosition(i).toString();
                 //Log.e(TAG, "spin MP : " + i + " " + l + " " + MPArea);
-                editor.putString(sMP, MPArea).commit();
+                editor.putString(MainActivity.sMP, MPArea).commit();
 
                 updateMP();
             }
@@ -192,7 +178,7 @@ public class VoteMP extends AppCompatActivity {
         address.setText(mp.address);
 
         // Only Varanasi MP pic in app
-        if (MPArea.equals(DEFAULT_MP) || MPArea.equals(hiDEFAULT_MP))
+        if (MPArea.equals(MainActivity.DEFAULT_MP) || MPArea.equals(MainActivity.hiDEFAULT_MP))
             profile_pic.setImageResource(R.drawable.narendra_modi_pic);
         else
             profile_pic.setImageResource(R.drawable.politician_illustration);

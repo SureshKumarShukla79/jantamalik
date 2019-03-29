@@ -19,9 +19,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.MainActivity;
@@ -29,60 +26,74 @@ import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class RajyaFragment extends Fragment {
     String TAG = "RajyaFragment";
 
-    private View view;
     private TextView vote2, note2, govt1;
     private ImageButton vote1, vote3, note1, note3;
     private ImageView govt2;
     private CardView duties;
-
-    private Intent intent;
     private Spinner spinnerState;
-    private Spinner spinnerVidhayak;
-    private ArrayAdapter arrayAdapterState;
-    private ArrayAdapter arrayAdapterVidhayak;
 
-    private DataFilter dataFilter;
-
+    private String mLanguage;
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
 
-    public static final String DEFAULT_STATE = "Uttar Pradesh";
-    public static final String DEFAULT_MP = "Varanasi";
-    public static final String DEFAULT_MLA = "Varanasi Cantt";
-    public static final String DEFAULT_WARD = "Chittupur, Sigra";
+    final private String[][] state_budget = {
+            //    "STATE"	    	                     "BUDGET"		      "राज्य"                             "बजट"
+            {	"Andaman and Nicobar Islands"	,	"? lakh crore"	    ,	"अण्डमान और निकोबार द्वीपसमूह"  ,     "? लाख करोड़"        }	,
+            {	"Andhra Pradesh"	            ,	"? lakh crore"      ,	"आन्ध्र प्रदेश"                 ,	    "? लाख करोड़"        }	,
+            {	"Assam"	                        ,	"? lakh crore" 	    ,   "असम"                     ,	    "? लाख करोड़"        }	,
+            {	"Bihar"	                        ,	"1.77 lakh crore"   ,	"बिहार"                     ,     "1.77 लाख करोड़"     }	,
+            {	"Chandigarh"	                ,	"? lakh crore"      ,	"चण्डीगढ़"                  ,	    "? लाख करोड़"        }	,
+            {	"Chhattisgarh"	                ,	"? lakh crore"      ,	"छत्तीसगढ़"                  ,	    "? लाख करोड़"        }	,
+            {	"Dadra and Nagar Haveli"	    ,	"? lakh crore"      ,	"दादरा और नगर हवेली"        ,	    "? लाख करोड़"        }	,
+            {	"Daman and Diu"	                ,	"? lakh crore"      ,	"दमन और दीव"              ,     "? लाख करोड़"        }	,
+            {	"Delhi"	                        ,	"? lakh crore" 	    ,   "दिल्ली"                    ,	    "? लाख करोड़"        }	,
+            {	"Goa"	                        ,	"? lakh crore"      ,	"गोवा"                     ,	    "? लाख करोड़"        }	,
+            {	"Gujarat"	                    ,	"? lakh crore"      ,	"गुजरात"                    ,	    "? लाख करोड़"        }	,
+            {	"Haryana"	                    ,	"? lakh crore"      ,	"हरियाणा"                   ,	    "? लाख करोड़"        }	,
+            {	"Himachal Pradesh"	            ,	"? lakh crore"	    ,	"हिमाचल प्रदेश"               ,     "? लाख करोड़"        }	,
+            {	"Jammu and Kashmir"	            ,	"? lakh crore"      ,	"जम्मू और कश्मीर"             ,	    "? लाख करोड़"        }	,
+            {	"Jharkhand"	                    ,	"? lakh crore"      ,	"झारखण्ड"                   ,	    "? लाख करोड़"        }	,
+            {	"Karnataka"	                    ,	"? lakh crore"      ,	"कर्नाटक"                    ,	"? लाख करोड़"        }	,
+            {	"Kerala"	                    ,	"? lakh crore" 	    ,   "केरल"                      ,	"? लाख करोड़"        }	,
+            {	"Lakshadweep"	                ,	"? lakh crore"      ,	"लक्षद्वीप"                    ,    "? लाख करोड़"        }	,
+            {	"Madhya Pradesh"	            ,	"? lakh crore"      ,	"मध्य प्रदेश"                  ,	"? लाख करोड़"        }	,
+            {	"Maharashtra"	                ,	"? lakh crore"      ,	"महाराष्ट्र"                    ,	    "? लाख करोड़"        }	,
+            {	"Manipur"	                    ,	"? lakh crore" 	    ,   "मणिपुर"                    ,	    "? लाख करोड़"        }	,
+            {	"Meghalaya"	                    ,	"? lakh crore"      ,	"मेघालय"                    ,    "? लाख करोड़"        }	,
+            {	"Mizoram"	                    ,	"? lakh crore"      ,	"मिज़ोरम"                    ,	    "? लाख करोड़"        }	,
+            {	"Nagaland"	                    ,	"? lakh crore"      ,	"नागालैण्ड"                   ,	"? लाख करोड़"        }	,
+            {	"Odisha"	                    ,	"? lakh crore"      ,	"ओडिशा"                    ,    "? लाख करोड़"        }	,
+            {	"Puducherry"	                ,	"? lakh crore"      ,	"पुदुच्चेरी"                    ,	"? लाख करोड़"        }	,
+            {	"Chhattisgarh"	                ,	"? lakh crore"      ,	"छत्तीसगढ़"                   ,    "? लाख करोड़"        }	,
+            {	"Punjab"	                    ,	"? lakh crore" 	    ,   "पंजाब"                     ,	    "? लाख करोड़"        }	,
+            {	"Rajasthan"	                    ,	"? lakh crore"      ,	"राजस्थान"                   ,    "? लाख करोड़"        }	,
+            {	"Sikkim"	                    ,	"? lakh crore"      ,	"सिक्किम"                   ,	    "? लाख करोड़"        }	,
+            {	"Tamil Nadu"	                ,	"? lakh crore"      ,	"तमिल नाडु"                  ,	 "? लाख करोड़"       }	,
+            {	"Telangana"	                    ,	"? lakh crore"      ,	"तेलंगाना"                    ,	 "? लाख करोड़"       }	,
+            {	"Tripura"	                    ,	"? lakh crore" 	    ,   "त्रिपुरा"                      ,	 "? लाख करोड़"       }	,
+            {	"Uttar Pradesh"	                ,	"? lakh crore"      ,	"उत्तर प्रदेश"                  ,	 "? लाख करोड़"       }	,
+            {	"Uttarakhand"	                ,	"? lakh crore"      ,	"उत्तराखण्ड"                   ,     "? लाख करोड़"       }	,
+            {	"West Bengal"	                ,	"? lakh crore"      ,	"पश्चिम बंगाल"                ,	  "? लाख करोड़"      }	,
+    };
 
-    public static final String hiDEFAULT_STATE = "उत्तर प्रदेश";
-    public static final String hiDEFAULT_MP = "वाराणसी";
-    public static final String hiDEFAULT_MLA = "वाराणसी कैंट";
-    public static final String hiDEFAULT_WARD = "छित्तुपुर, सिगरा";
-
-    public static final String sSTATE = DEFAULT_STATE;
-    public static final String sMP = DEFAULT_MP;
-    public static final String sMLA = DEFAULT_MLA;
-    public static final String sWARD = DEFAULT_WARD;
-
-    private boolean firsttime = true;
-    private String mLanguage;
-    public String AreaName;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, final Bundle savedInstanceState) {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
-        if (mLanguage.equals(sLANGUAGE_HINDI)) {
+        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(getActivity(), "hi");
         }
 
         editor = mSharedPref.edit();
 
-        view = inflater.inflate(R.layout.rajya, container, false);
+        View view = inflater.inflate(R.layout.rajya, container, false);
 
         vote1 = view.findViewById(R.id.vote1);
         vote2 = view.findViewById(R.id.vote2);
@@ -98,39 +109,23 @@ public class RajyaFragment extends Fragment {
         duties = view.findViewById(R.id.duties);
 
         spinnerState = view.findViewById(R.id.state_spinner);
-        spinnerVidhayak = view.findViewById(R.id.MP_spinner);
 
         // Populating GUI
-        dataFilter = new DataFilter();
+        DataFilter dataFilter = new DataFilter();
 
-        String State = mSharedPref.getString(sSTATE, DEFAULT_STATE);
-        String MP = mSharedPref.getString(sMP, DEFAULT_MP);
-        String MLA = mSharedPref.getString(sMLA, DEFAULT_MLA);
-        String Ward = mSharedPref.getString(sWARD, DEFAULT_WARD);
-        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
+        String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
 
         // In case of Hindi, change the defaults
-        if (mLanguage.equals(sLANGUAGE_HINDI)) {
-            if (State.equals(DEFAULT_STATE))
-                State = hiDEFAULT_STATE;
-            if (MP.equals(DEFAULT_MP))
-                MP = hiDEFAULT_MP;
-            if (MLA.equals(DEFAULT_MLA))
-                MLA = hiDEFAULT_MLA;
-            if (Ward.equals(DEFAULT_WARD))
-                Ward = hiDEFAULT_WARD;
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            if (State.equals(MainActivity.DEFAULT_STATE))
+                State = MainActivity.hiDEFAULT_STATE;
         }
-        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
         // In case the db isn't initialised, do it now
-        editor.putString(sSTATE, State).commit();
-        editor.putString(sMP, MP).commit();
-        editor.putString(sMLA, MLA).commit();
-        editor.putString(sWARD, Ward).commit();
+        editor.putString(MainActivity.sSTATE, State).commit();
 
         // Load defaults
-        arrayAdapterState = new ArrayAdapter(view.getContext(), android.R.layout.simple_spinner_item,
-                dataFilter.getStates(mLanguage));
+        ArrayAdapter arrayAdapterState = new ArrayAdapter(view.getContext(), android.R.layout.simple_spinner_item, dataFilter.getStates(mLanguage));
         arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerState.setAdapter(arrayAdapterState);
 
@@ -138,68 +133,19 @@ public class RajyaFragment extends Fragment {
         spinnerState.setSelection(spinnerPosition);
         //Log.e(TAG, "state def: " + State);
 
-        //populating MP Area
-        List<String> blanklist = new ArrayList<>();
-        blanklist.add(getString(R.string.work_in_progress));
-        firsttime = true;
-        arrayAdapterVidhayak = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
-                blanklist);
-        //dataFilter.getMPAreas(mLanguage,State)); // TBD
-        arrayAdapterVidhayak.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerVidhayak.setAdapter(arrayAdapterVidhayak);
-
-        /*spinnerPosition = arrayAdapterMP.getPosition(MP);
-        spinnerMP.setSelection(spinnerPosition);*/
-        //Log.e(TAG, "MP def: " + MP);
-        // defaults over
-
         // set for dynamic handling
         spinnerState.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
-                // Log.e(TAG, "spin state : " + i + " " + l + " " + State);
-                editor.putString(sSTATE, State).commit();
+                //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
+                editor.putString(MainActivity.sSTATE, State).commit();
 
-                // Reload the state MP areas
-                arrayAdapterVidhayak = new ArrayAdapter(getContext(), android.R.layout.simple_spinner_item,
-                        dataFilter.getMPAreas(mLanguage, State));
-                arrayAdapterVidhayak.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                //spinnerMP.setAdapter(arrayAdapterMP);
-
-                String MP = mSharedPref.getString(sMP, DEFAULT_MP);
-                int spinnerPosition = arrayAdapterVidhayak.getPosition(MP);
-                //spinnerMP.setSelection(spinnerPosition);
+                update_state_budget(State);
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
-            }
-        });
-
-        //spinner constituency click handler
-        spinnerVidhayak.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                //AreaName = adapterView.getItemAtPosition(i).toString();
-                Log.e(TAG, "spin Vidhayak : " + i + " " + l + " " + AreaName);
-                //editor.putString(sMP, AreaName ).commit();
-
-                if (firsttime == true) {
-                    firsttime = false;
-                    Log.e("", "firsttime = false");
-                } else {
-                    Log.e("", "firsttime == false");
-                    tobedone(view);
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-                if (firsttime == false) {
-                    Log.e("", "nothing firsttime false");
-                    tobedone(view);
-                }
             }
         });
 
@@ -211,12 +157,28 @@ public class RajyaFragment extends Fragment {
         return view;
     }
 
+    private void update_state_budget(String state) {
+        int state_column = 0, budget_column = 1;
+
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {    //In case of Hindi
+            state_column = 2;
+            budget_column = 3;
+        }
+
+        for (String[] i : state_budget) {
+            if (i[state_column].equals(state)) {
+                note2.setText(i[budget_column]);
+                break;
+            }
+        }
+    }
+
     public void vote_Click() {
         vote1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 tobedone(view);
-                //intent = new Intent(view.getContext(), VoteVidhayak.class);
+                //Intent intent = new Intent(view.getContext(), VoteVidhayak.class);
                 //startActivity(intent);
             }
         });
@@ -224,7 +186,7 @@ public class RajyaFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 tobedone(view);
-                //intent = new Intent(view.getContext(), VoteVidhayak.class);
+                //Intent intent = new Intent(view.getContext(), VoteVidhayak.class);
                 //startActivity(intent);
             }
         });
@@ -232,7 +194,7 @@ public class RajyaFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 tobedone(view);
-                //intent = new Intent(view.getContext(), VoteVidhayak.class);
+                //Intent intent = new Intent(view.getContext(), VoteVidhayak.class);
                 //startActivity(intent);
             }
         });
@@ -242,41 +204,71 @@ public class RajyaFragment extends Fragment {
         note1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tobedone(view);
-                //intent = new Intent(view.getContext(), TaxRajya.class);
-                //startActivity(intent);
+                int layout_id = get_layout_file();
+
+                if(layout_id != 0) {
+                    Intent intent = new Intent(view.getContext(), TaxRajya.class);
+                    intent.putExtra("layout_id", layout_id);
+                    startActivity(intent);
+                } else {
+                    tobedone(view);
+                }
             }
         });
         note2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tobedone(view);
-                //intent = new Intent(view.getContext(), TaxRajya.class);
-                //startActivity(intent);
+                int layout_id = get_layout_file();
+
+                if(layout_id != 0) {
+                    Intent intent = new Intent(view.getContext(), TaxRajya.class);
+                    intent.putExtra("layout_id", layout_id);
+                    startActivity(intent);
+                } else {
+                    tobedone(view);
+                }
             }
         });
         note3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tobedone(view);
-                //intent = new Intent(view.getContext(), TaxRajya.class);
-                //startActivity(intent);
+                int layout_id = get_layout_file();
+
+                if(layout_id != 0) {
+                    Intent intent = new Intent(view.getContext(), TaxRajya.class);
+                    intent.putExtra("layout_id", layout_id);
+                    startActivity(intent);
+                } else {
+                    tobedone(view);
+                }
             }
         });
+    }
+
+    private int get_layout_file() {
+        int layout_id;
+        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+
+        if(state.equals("Bihar") || state.equals("बिहार"))
+            layout_id = R.layout.budget_bihar;
+        else
+            layout_id = 0;
+
+        return layout_id;
     }
 
     public void govt_Click() {
         govt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), RajyaInfographics.class);
+                Intent intent = new Intent(view.getContext(), RajyaInfographics.class);
                 startActivity(intent);
             }
         });
         govt2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), RajyaInfographics.class);
+                Intent intent = new Intent(view.getContext(), RajyaInfographics.class);
                 startActivity(intent);
             }
         });
@@ -286,7 +278,7 @@ public class RajyaFragment extends Fragment {
         duties.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), Duties.class);
+                Intent intent = new Intent(view.getContext(), Duties.class);
                 startActivity(intent);
             }
         });

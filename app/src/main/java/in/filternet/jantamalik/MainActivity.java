@@ -63,6 +63,21 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAB_NUMBER = "tab_number";
     public static final int TAB_ISSUES = 0, TAB_RAJYA = 1, TAB_KENDRA = 2;
 
+    public static final String DEFAULT_STATE = "Uttar Pradesh";
+    public static final String DEFAULT_MP = "Varanasi";
+    public static final String DEFAULT_MLA = "Varanasi Cantt";
+    public static final String DEFAULT_WARD = "Chittupur, Sigra";
+
+    public static final String hiDEFAULT_STATE = "उत्तर प्रदेश";
+    public static final String hiDEFAULT_MP = "वाराणसी";
+    public static final String hiDEFAULT_MLA = "वाराणसी कैंट";
+    public static final String hiDEFAULT_WARD = "छित्तुपुर, सिगरा";
+
+    public static final String sSTATE = DEFAULT_STATE;
+    public static final String sMP = DEFAULT_MP;
+    public static final String sMLA = DEFAULT_MLA;
+    public static final String sWARD = DEFAULT_WARD;
+
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
