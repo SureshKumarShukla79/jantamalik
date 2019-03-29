@@ -58,6 +58,8 @@
         <activity
             android:name=".Rajya.VoteVidhayak"
             android:theme="@style/AppTheme_NoActionBar" />
+        <activity
+            android:name=".Puzzle" />
 
         <receiver
             android:name=".Receiver"

@@ -31,6 +31,19 @@
                 android:textStyle="bold"
                 android:textColor="@color/cardview_light_background"
                 android:background="@drawable/button_styling"/>
+
+            <Button
+                android:id="@+id/puzzle_button"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="end"
+                android:onClick="onclick_puzzle"
+                android:text="@string/puzzle"
+                android:textStyle="bold"
+                android:textColor="@color/cardview_light_background"
+                android:background="@drawable/button_styling"/>
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout

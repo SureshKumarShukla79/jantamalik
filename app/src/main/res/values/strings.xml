@@ -509,4 +509,11 @@
     <string name="bihar_repay_loan">Repayment of Loans</string>
     <string name="bihar_source_text">Full budget 2018-19 http://finance.bih.nic.in/Documents/Circulars/CN-02-28-02-2018.pdf</string>
 
+    <string name="puzzle">Puzzle</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="correct"><b>✅</b></string>
+    <string name="wrong_answer"><b>❌</b></string>
+
 </resources>

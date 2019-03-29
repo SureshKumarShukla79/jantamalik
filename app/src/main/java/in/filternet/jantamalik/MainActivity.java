@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String sLANGUAGE_HINDI = "hi";
     public final static String sLANGUAGE_ENGLISH = "en";
     public final static String bUSER_AGREE = "User_Agree";
+    public final static String bSMART_VOTER = "Smart_Voter";
 
     public static final String TAB_NUMBER = "tab_number";
     public static final int TAB_ISSUES = 0, TAB_RAJYA = 1, TAB_KENDRA = 2;
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
-    private Button ui_language_button;
+    private Button ui_language_button, ui_puzzle_button;
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
@@ -115,8 +116,14 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager_main);
         toolbar = findViewById(R.id.appbar);
         ui_language_button = findViewById(R.id.lanugage_button);
+        ui_puzzle_button = findViewById(R.id.puzzle_button);
 
         setSupportActionBar(toolbar);
+
+        boolean smart_voter = mSharedPref.getBoolean(bSMART_VOTER, false);
+        if(smart_voter) {
+            ui_puzzle_button.setText("Smart Voter");
+        }
 
         if(mLanguage.equals(sLANGUAGE_HINDI)) {
             ui_language_button.setText("EN");
@@ -193,11 +200,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        //prompt_user_agree(); // Was firing twice for a normal use case
+    public void onclick_puzzle(View view) {
+        boolean smart_voter = mSharedPref.getBoolean(bSMART_VOTER, false);
+        if(!smart_voter) {
+            Intent intent = new Intent(this, Puzzle.class);
+            startActivity(intent);
+        }
     }
 
     @Override

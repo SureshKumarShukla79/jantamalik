@@ -516,4 +516,11 @@
     <string name="bihar_repay_loan">कर्ज मूल भुगतान</string>
     <string name="bihar_source_text">सालाना बजट 2018-19 http://finance.bih.nic.in/Documents/Circulars/CN-02-28-02-2018.pdf</string>
 
+    <string name="puzzle">पहेली</string>
+    <string name="skip">बाहर जाएँ</string>
+    <string name="next">अगला</string>
+    <string name="finish">समाप्त</string>
+    <string name="correct"><b>✅</b></string>
+    <string name="wrong_answer"><b>❌</b></string>
+
 </resources>
