@@ -225,6 +225,7 @@
     <string name="corruption">Delay / corruption in govt offices</string>
     <string name="train">Train delay</string>
     <string name="business">Low ease-of-doing-business</string>
+    <string name="election_2019">Who to choose in 2019?  ⭐</string>
 
     <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
     <string name="jagran_group_links"><a href="https://youtu.be/8_-8SvxvHqA?t=135">Part 1</a>
@@ -515,5 +516,13 @@
     <string name="finish">Finish</string>
     <string name="correct"><b>✅</b></string>
     <string name="wrong_answer"><b>❌</b></string>
+
+    <string name="filter_text">Candidates are filtered on the basis of: \n\n
+        - Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)\n
+        - Candidate is not graduate (needs to make bills on 100 topics)\n
+        - Candidate is found guilty of heinous crime\n
+        - Candidates political party is guilty of illegal-foreign-funding
+    </string>
+    <string name="coming_soon">Coming soon...</string>
 
 </resources>

@@ -1,22 +1,37 @@
 package in.filternet.jantamalik.IssuesJava;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.LinkMovementMethod;
-import android.text.util.Linkify;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import in.filternet.jantamalik.Kendra.DataFilter;
+import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
+
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class Issues extends AppCompatActivity {
     private final static String TAG ="Issues";
 
+    private Spinner ui_spinner_state;
+    private Spinner ui_spinner_area;
+    private ArrayAdapter state_adapter, area_adapter;
+    private DataFilter dataFilter;
+
+    private SharedPreferences mSharedPref;
+    private SharedPreferences.Editor editor;
     private int layoutResID, titleID;
 
     @Override
@@ -31,12 +46,97 @@ public class Issues extends AppCompatActivity {
             //Log.e(TAG, "title_id: " + titleID);
         }
 
+        mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        editor = mSharedPref.edit();
+
         setContentView(layoutResID);
         this.setTitle(titleID);
 
         if(layoutResID == R.layout.issue_media_or_afeem) {
             make_clickable_links();
         }
+
+        if(layoutResID == R.layout.issue_election_2019) {
+            load_candidates();
+        }
+
+    }
+
+    private void load_candidates() {
+        ui_spinner_state = findViewById(R.id.state_spinner);
+        ui_spinner_area = findViewById(R.id.area_spinner);
+
+        final String language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
+        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String area = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+
+        // In case of Hindi, change the defaults
+        if (language.equals(sLANGUAGE_HINDI)) {
+            if (state.equals(MainActivity.DEFAULT_STATE))
+                state = MainActivity.hiDEFAULT_STATE;
+            if (area.equals(MainActivity.DEFAULT_MP))
+                area = MainActivity.hiDEFAULT_MP;
+        }
+
+        editor.putString(MainActivity.sSTATE, state).commit();
+        editor.putString(MainActivity.sMP, area).commit();
+
+        // Populating GUI
+        dataFilter = new DataFilter();
+        state_adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, dataFilter.getStates(language));
+        state_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ui_spinner_state.setAdapter(state_adapter);
+
+        int spinnerPosition = state_adapter.getPosition(state);
+        ui_spinner_state.setSelection(spinnerPosition);
+
+        area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(language, state));
+        area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ui_spinner_area.setAdapter(area_adapter);
+
+        spinnerPosition = area_adapter.getPosition(area);
+        ui_spinner_area.setSelection(spinnerPosition);
+
+        ui_spinner_state.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String state = ui_spinner_state.getItemAtPosition(ui_spinner_state.getSelectedItemPosition()).toString();
+                editor.putString(MainActivity.sSTATE, state).commit();
+
+                area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(language, state));
+                area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ui_spinner_area.setAdapter(area_adapter);
+
+                String MP = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+                int spinnerPosition = area_adapter.getPosition(MP);
+                ui_spinner_area.setSelection(spinnerPosition);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
+        //spinner constituency click handler
+        ui_spinner_area.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String area = adapterView.getItemAtPosition(i).toString();
+                editor.putString(MainActivity.sMP, area).commit();
+
+                update_candidate();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
+        update_candidate();
+
+    }
+
+    private void update_candidate() {
 
     }
 

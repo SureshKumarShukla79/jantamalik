@@ -223,6 +223,7 @@
     <string name="corruption">सरकारी दफ्तर में देरी/घूस</string>
     <string name="train">देर से चलती रेल</string>
     <string name="business">नये उद्योग (स्टार्टप) की मुश्किलें</string>
+    <string name="election_2019">2019 में किसे चुने?  ⭐</string>
 
     <string name="jagran_group">जागरण समूह -
         \nदैनिक जागरण,
@@ -522,5 +523,13 @@
     <string name="finish">समाप्त</string>
     <string name="correct"><b>✅</b></string>
     <string name="wrong_answer"><b>❌</b></string>
+
+    <string name="filter_text">उम्मीदवारों को नीचे दिए गए आधारों पर छँटनी की गई है:\n\n
+        - नतीजे के दिन उम्मीदवार की आयु 65 साल होगी (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)\n
+        - उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)\n
+        - उम्मीदवार गंभीर आपराधिक मामलों में दंडित है \n
+        - उम्मीदवार जिस राजनीतिक दल से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है
+    </string>
+    <string name="coming_soon">जल्द आ रहा है...</string>
 
 </resources>

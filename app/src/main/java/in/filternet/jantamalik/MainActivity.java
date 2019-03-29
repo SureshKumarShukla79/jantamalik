@@ -353,6 +353,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onclick_election_2019(View view) {
+        int layout_id = R.layout.issue_election_2019;
+        int title_id = R.string.election_2019;
+
+        Intent intent = new Intent(this, Issues.class);
+        intent.putExtra("layout_id", layout_id);
+        intent.putExtra("title_id", title_id);
+        startActivity(intent);
+    }
+
     public void changeLanguage(View view){
         String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null);
 
