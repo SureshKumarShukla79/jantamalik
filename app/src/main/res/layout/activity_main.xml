@@ -22,8 +22,8 @@
 
             <Button
                 android:id="@+id/lanugage_button"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_gravity="end"
@@ -34,8 +34,8 @@
 
             <Button
                 android:id="@+id/puzzle_button"
-                android:layout_width="65dp"
-                android:layout_height="45dp"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_gravity="end"
@@ -44,6 +44,16 @@
                 android:textStyle="bold"
                 android:textColor="@color/cardview_light_background"
                 android:background="@drawable/button_styling"/>
+
+            <ImageView
+                android:id="@+id/green_badge"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="end"
+                android:background="@drawable/green_badge"
+                android:visibility="gone"/>
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout

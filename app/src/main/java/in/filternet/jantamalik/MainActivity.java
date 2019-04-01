@@ -35,6 +35,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
+    private ImageView ui_green_badge;
     private Button ui_language_button, ui_puzzle_button;
 
     private SharedPreferences mSharedPref;
@@ -117,12 +119,14 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.appbar);
         ui_language_button = findViewById(R.id.lanugage_button);
         ui_puzzle_button = findViewById(R.id.puzzle_button);
+        ui_green_badge = findViewById(R.id.green_badge);
 
         setSupportActionBar(toolbar);
 
         boolean smart_voter = mSharedPref.getBoolean(bSMART_VOTER, false);
         if(smart_voter) {
-            ui_puzzle_button.setText("Smart Voter");
+            ui_puzzle_button.setVisibility(View.GONE);
+            ui_green_badge.setVisibility(View.VISIBLE);
         }
 
         if(mLanguage.equals(sLANGUAGE_HINDI)) {

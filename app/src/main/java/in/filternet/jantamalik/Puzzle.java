@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -21,7 +22,8 @@ public class Puzzle extends Activity {
 
     public final static String bQUE_ = "Que_";
 
-    TextView ui_question, ui_correct_answer, ui_wrong_answer;
+    TextView ui_question;
+    ImageView ui_correct_answer, ui_wrong_answer;
     Button ui_next, ui_skip;
     RadioGroup ui_option_group;
     RadioButton ui_option_1, ui_option_2, ui_option_3, ui_option_4;
@@ -74,7 +76,12 @@ public class Puzzle extends Activity {
             open_main_activity();
             return;
         }
-        ui_question.setText(Puzzle_Ques.questions[question_num][0]);
+
+        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            ui_question.setText(Puzzle_Ques.questions[question_num][5]);
+        } else {
+            ui_question.setText(Puzzle_Ques.questions[question_num][0]);
+        }
 
         //Create a list of radio buttons. Then, choose a radio button, randomly and place right/wrong options on it
         ArrayList<RadioButton> option = new ArrayList<>();
@@ -85,20 +92,36 @@ public class Puzzle extends Activity {
 
         //Choose random radio button and place right/wrong options on it
         int index = get_index(option.size());
-        option.get(index).setText(Puzzle_Ques.questions[question_num][1]);  //Place right answer on that index
+        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][6]);  //Place right answer on that index
+        } else {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][1]);  //Place right answer on that index
+        }
         option.remove(index);                                               //Remove the element of that index
         /** Removing the full option, ensures that even if random number repeats, it will go to another slot. **/
 
         index = get_index(option.size());
-        option.get(index).setText(Puzzle_Ques.questions[question_num][2]);
+        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][7]);
+        } else {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][2]);
+        }
         option.remove(index);
 
         index = get_index(option.size());
-        option.get(index).setText(Puzzle_Ques.questions[question_num][3]);
+        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][8]);
+        } else {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][3]);
+        }
         option.remove(index);
 
         index = get_index(option.size());
-        option.get(index).setText(Puzzle_Ques.questions[question_num][4]);
+        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][9]);
+        } else {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][4]);
+        }
         option.remove(index);
     }
 
