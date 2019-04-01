@@ -167,7 +167,12 @@ public class Puzzle extends Activity {
     }
 
     public void onclick_check_answer(View view) {
-        String correct_answer = Puzzle_Ques.questions[question_num][1];
+        String correct_answer;
+        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            correct_answer = Puzzle_Ques.questions[question_num][6];
+        } else {
+            correct_answer = Puzzle_Ques.questions[question_num][1];
+        }
 
         boolean checked =  ((RadioButton) view).isChecked();
         switch (view.getId()) {
