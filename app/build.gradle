@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.uxcam:uxcam:2.6.2@aar' //UXCam
+    implementation 'com.uxcam:uxcam:3.0.7@aar' //UXCam
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'

@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (BuildConfig.RELEASE_MODE) { // To avoid developers screen recordings
-            //UXCam.startWithKey("6e8c27f340dd13d"); // uxcam SDK. This activity is entry activity
+            //UXCam.startWithKey(""); // TODO uxcam SDK. This activity is entry activity
         }
 
         setContentView(R.layout.activity_main);
