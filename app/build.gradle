@@ -14,8 +14,8 @@ android {
         targetSdkVersion 27
         versionCode 190101
         versionName "devel"
-        //versionCode 190325
-        //versionName "19.03.25"
+        //versionCode 190402
+        //versionName "19.04.02"
         //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
