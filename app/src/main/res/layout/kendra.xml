@@ -236,6 +236,45 @@
         android:layout_margin="3dp">
 
         <LinearLayout
+            android:id="@+id/election_2019_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/chair" />
+
+            <TextView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:id="@+id/election_2019"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/election_2019"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/red_arrow" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
             android:id="@+id/media_or_afeem_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -412,45 +451,6 @@
                 android:padding="10dp"
                 android:layout_weight="1.0"
                 android:text="@string/business"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/red_arrow" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
-            android:id="@+id/election_2019_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:src="@drawable/chair" />
-
-            <TextView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:id="@+id/election_2019"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/election_2019"
                 android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 

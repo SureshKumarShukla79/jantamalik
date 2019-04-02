@@ -57,7 +57,7 @@
     <string name="add_issue">अपने मुद्दे जोड़ें</string>
     <string name="feedback">सुझाव लिखें</string>
 
-    <string name="share_message">मुझे जनता मालिक ऐप पसंद है।\n- अपने सांसद और विधायक से सीधा संपर्क करें।\n- जानें कि सरकार आपके टैक्स का पैसा कहाँ खर्च कर रही है?\n</string>
+    <string name="share_message">जनता मालिक ऐप लाया है\n- अपने सांसद और विधायक की जानकारी\n- आपके टैक्स के पैसे का हिसाब, सरकार कैसे खर्च कर रही है?\n\n<b>2019 में किसे चुनें, किसकी बनेगी सरकार?</b>\n</string>
 
     <string name="state_text">राज्य</string>
     <string name="constitunecy_text">क्षेत्र</string>
@@ -539,5 +539,6 @@
         - उम्मीदवार जिस राजनीतिक दल से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है
     </string>
     <string name="coming_soon">जल्द आ रहा है...</string>
+    <string name="apna_time_aayega">अपना टाइम आयेगा</string>
 
 </resources>

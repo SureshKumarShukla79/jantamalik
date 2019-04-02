@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +15,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class KendraFragment extends Fragment {
@@ -28,6 +32,7 @@ public class KendraFragment extends Fragment {
     private ImageButton vote1, vote3, note1, note3;
     private ImageView govt2;
     private LinearLayout duties;
+    private FloatingActionButton ui_add_issue;
 
     private Intent intent;
 
@@ -57,6 +62,18 @@ public class KendraFragment extends Fragment {
         govt2 = view.findViewById(R.id.govt2);
 
         duties = view.findViewById(R.id.duties);
+
+        ui_add_issue = view.findViewById(R.id.add_issue);
+
+        ui_add_issue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), Contact.class);
+                intent.putExtra("add_issue", true);
+                intent.putExtra(TAB_NUMBER, TAB_KENDRA);
+                startActivity(intent);
+            }
+        });
 
         vote_Click();
         note_Click();

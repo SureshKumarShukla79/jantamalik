@@ -14,7 +14,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import in.filternet.jantamalik.Kendra.DataFilter;
 
@@ -259,25 +258,36 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_update_issue(View view) {
-        String[] TO = {getString(R.string.support_email)};
+        Intent intent = new Intent(view.getContext(), Contact.class);
+        intent.putExtra("add_issue", true);
+        intent.putExtra("subject", getString(titleID));
+        if(kendra) {
+            intent.putExtra(TAB_NUMBER, TAB_KENDRA);
+        } else if(rajya) {
+            intent.putExtra(TAB_NUMBER, TAB_RAJYA);
+        } else if(corporation) {
+            intent.putExtra(TAB_NUMBER, TAB_CORPORATION);
+        }
+        startActivity(intent);
+    }
+
+    public void onclick_share_button(View view) {
+        FirebaseLogger.send(this, "Tap_Share");
+
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setData(Uri.parse("mailto:"));
         intent.setType("text/plain");
 
-        intent.setPackage("com.google.android.gm");
-        intent.putExtra(Intent.EXTRA_EMAIL, TO);
-        intent.putExtra(Intent.EXTRA_SUBJECT, getString(titleID));
-        try {
-            if (intent.resolveActivity(getPackageManager()) != null) {
-                //Log.e(TAG, "1st option");
-                startActivity(intent);
-            } else {
-                //Log.e(TAG, "2nd option");
-                startActivity(Intent.createChooser(intent, "Sending mail..."));
-                finish();
-            }
-        } catch (Exception ex) {
-            Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
-        }
+        String shareBody = getString(R.string.share_message);
+        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
+        startActivity(intent);
+    }
+
+    public void onclick_open_donate(View view) {
+        FirebaseLogger.send(this, "Tap_Donate");
+
+        Uri uri = Uri.parse("https://www.filternet.in/donate/");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 }

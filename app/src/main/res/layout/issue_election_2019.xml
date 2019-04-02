@@ -90,14 +90,24 @@
     </LinearLayout>
 
         <TextView
-            android:id="@+id/comong_soon"
+            android:id="@+id/coming_soon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/coming_soon"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
             android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:id="@+id/apna_time_aayega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/apna_time_aayega"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimary"/>
 
         <RelativeLayout
             android:id="@+id/update_info"

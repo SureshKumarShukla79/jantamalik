@@ -58,7 +58,7 @@
     <string name="update_contact_info">Update Information. Your name will appear in contributors.</string>
     <string name="feedback">Feedback</string>
 
-    <string name="share_message">I like Janta Malik app,\n- Citizens can easily connect with MP/MLA\n- See where govt is spending tax-money?\n</string>
+    <string name="share_message">Janta Malik app,\n- Know contact information of your MP/MLA\n- See where govt is spending tax-money?\n\n<b>Whom to choose in 2019? Who will make govt?</b>\n</string>
 
     <string name="state_text">State</string>
     <string name="constitunecy_text">Area</string>
@@ -532,5 +532,6 @@
         - Candidates political party is guilty of illegal-foreign-funding
     </string>
     <string name="coming_soon">Coming soon...</string>
+    <string name="apna_time_aayega">Apna Time Aayega</string>
 
 </resources>

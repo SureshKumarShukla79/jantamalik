@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.util.Log;
@@ -38,6 +39,7 @@ public class RajyaFragment extends Fragment {
     private ImageView govt2;
     private CardView duties;
     private Spinner spinnerState;
+    private FloatingActionButton ui_add_issue;
 
     private String mLanguage;
     private SharedPreferences mSharedPref;
@@ -112,6 +114,18 @@ public class RajyaFragment extends Fragment {
         duties = view.findViewById(R.id.duties);
 
         spinnerState = view.findViewById(R.id.state_spinner);
+
+        ui_add_issue = view.findViewById(R.id.add_issue);
+
+        ui_add_issue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), Contact.class);
+                intent.putExtra("add_issue", true);
+                intent.putExtra(TAB_NUMBER, TAB_RAJYA);
+                startActivity(intent);
+            }
+        });
 
         // Populating GUI
         DataFilter dataFilter = new DataFilter();
