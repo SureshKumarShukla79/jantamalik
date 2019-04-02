@@ -6,6 +6,7 @@
 
     <string name="kendra"><b>Center</b></string>
     <string name="rajya"><b>State</b></string>
+    <string name="corporation"><b>Corporation</b></string>
     <string name="taxkendra"><b>Center - Tax</b></string>
 
     <string name="Center_Subjects">Responsibilities of Saansad/MP</string>
@@ -216,7 +217,8 @@
     <string name="very_good">Donate</string>
 
     <string name="media_or_afeem">TV/Newspaper or Afeem ?</string>
-    <string name="mp_no_response">Saansad/Vidhayak doesn\'t respond</string>
+    <string name="mp_no_response">Saansad doesn\'t respond</string>
+    <string name="mla_no_response">Vidhayak doesn\'t respond</string>
     <string name="cleanliness">Cleanliness</string>
     <string name="poor_road">Poor Road</string>
     <string name="electricity">Electricity</string>
@@ -370,6 +372,12 @@
         \n\nMeet at their home on Sunday 11 am. This gets quick notice and speedy results.</string>
     <string name="mp_neta">During Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
     <string name="mp_parliament">No law to remove irresponsible saansad before completing 5 year term.
+        \n\nChoose wisely next time.</string>
+
+    <string name="mla_voter">Call multiple times.\nWrite emails with objective facts and relief needed.
+        \n\nMeet at their home on Sunday 11 am. This gets quick notice and speedy results.</string>
+    <string name="mla_neta">During Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
+    <string name="mla_parliament">No law to remove irresponsible vidhayak before completing 5 year term.
         \n\nChoose wisely next time.</string>
 
     <string name="clean_voter">Cleanliness of roads, removing silt and stray animals is responsibility of local municipality.

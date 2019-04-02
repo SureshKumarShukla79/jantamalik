@@ -41,8 +41,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:excludeFromRecents="true" />
         <activity
-            android:name=".IssuesJava.Issues"
-            android:parentActivityName=".MainActivity" />
+            android:name=".Issues"
+            android:theme="@style/AppTheme_NoActionBar" />
         <activity
             android:name=".Kendra.Infographics"
             android:theme="@style/AppTheme_NoActionBar" />

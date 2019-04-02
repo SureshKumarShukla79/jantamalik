@@ -6,10 +6,19 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <RelativeLayout
+    <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:title="@string/mp_no_response"
+            app:titleTextColor="@color/colorAccent" />
 
         <LinearLayout
             android:id="@+id/voter"
@@ -42,7 +51,6 @@
             android:layout_margin="8dp"
             android:padding="1dp"
             android:background="@drawable/linearlayout_border"
-            android:layout_below="@id/voter"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -68,7 +76,6 @@
             android:layout_margin="8dp"
             android:padding="1dp"
             android:background="@drawable/linearlayout_border"
-            android:layout_below="@id/neta"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageView
@@ -92,8 +99,7 @@
             android:id="@+id/update_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/parliament_house"
-            android:layout_marginTop="10dp"
+            android:layout_margin="3dp"
             android:gravity="center"
             android:orientation="horizontal">
             <TextView
@@ -102,7 +108,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/issue_information"
                 android:textColor="@color/black"
-                android:layout_marginTop="8dp"
                 android:layout_alignTop="@+id/arrow"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -120,5 +125,30 @@
                 app:backgroundTint="@color/colorPrimary"
                 app:fabSize="mini" />
         </RelativeLayout>
-    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/good"
+                android:layout_margin="1dp"
+                android:textColor="@color/colorAccent"
+                android:onClick="onclick_share_button"
+                android:background="@drawable/button_styling" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/very_good"
+                android:layout_margin="1dp"
+                android:textColor="@color/colorAccent"
+                android:onClick="onclick_open_donate"
+                android:background="@drawable/button_styling" />
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>

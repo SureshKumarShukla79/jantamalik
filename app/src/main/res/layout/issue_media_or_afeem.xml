@@ -6,9 +6,18 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:title="@string/media_or_afeem"
+            app:titleTextColor="@color/colorAccent" />
 
         <android.support.v7.widget.CardView
             android:id="@+id/media_income"
@@ -31,7 +40,6 @@
 
         <TableLayout
             android:id="@+id/table"
-            android:layout_below="@id/media_income"
             android:layout_width="match_parent"
             android:layout_margin="4dp"
             android:stretchColumns="1"
@@ -1120,8 +1128,7 @@
             android:id="@+id/update_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/table"
-            android:layout_marginTop="10dp"
+            android:layout_margin="3dp"
             android:gravity="center"
             android:orientation="horizontal">
             <TextView
@@ -1130,7 +1137,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/issue_information"
                 android:textColor="@color/black"
-                android:layout_marginTop="8dp"
                 android:layout_alignTop="@+id/arrow"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -1149,5 +1155,30 @@
                 app:fabSize="mini" />
         </RelativeLayout>
 
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/good"
+                android:layout_margin="1dp"
+                android:textColor="@color/colorAccent"
+                android:onClick="onclick_share_button"
+                android:background="@drawable/button_styling" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/very_good"
+                android:layout_margin="1dp"
+                android:textColor="@color/colorAccent"
+                android:onClick="onclick_open_donate"
+                android:background="@drawable/button_styling" />
+        </LinearLayout>
+
+    </LinearLayout>
 </ScrollView>

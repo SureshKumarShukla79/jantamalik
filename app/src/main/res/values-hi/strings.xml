@@ -6,6 +6,7 @@
 
     <string name="kendra"><b>केन्द्र</b></string>
     <string name="rajya"><b>राज्य</b></string>
+    <string name="corporation"><b>स्थानीय</b></string>
     <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
 
     <string name="Center_Subjects">सांसद की जिम्मेदारियाँ</string>
@@ -214,7 +215,8 @@
     <string name="very_good">दान दें</string>
 
     <string name="media_or_afeem">अखबार, टीवी चैनल या अफीम ?</string>
-    <string name="mp_no_response">सांसद/विधायक मेरी बात नहीं सुनता</string>
+    <string name="mp_no_response">सांसद मेरी बात नहीं सुनता</string>
+    <string name="mla_no_response">विधायक मेरी बात नहीं सुनता</string>
     <string name="cleanliness">सफाई</string>
     <string name="poor_road">सड़क</string>
     <string name="electricity">बिजली</string>
@@ -322,10 +324,16 @@
     <string name="star_india">स्टार इंडिया</string>
     <string name="paytm">पेटीएम</string>
 
-    <string name="mp_voter">सांसद/विधायक को फोन करें। तथ्यों के साथ ईमेल करें।
+    <string name="mp_voter">सांसद को फोन करें। तथ्यों के साथ ईमेल करें।
     \n\nउसके घर पर रविवार सुबह 11 बजे मिलें। यह जल्दी ध्यान खींचता है और जल्दी समाधान भी देता है।</string>
     <string name="mp_neta">अन्ना आंदोलन या जनलोकपाल आंदोलन के समय भी, घर के सामने आंदोलन करने का सबसे तेज असर पड़ा था।</string>
-    <string name="mp_parliament">गैर-जिम्मेदार सांसदय/विधायक को 5 साल पूरा होने से पहले हटाने का कोई कानून नहीं है।
+    <string name="mp_parliament">गैर-जिम्मेदार सांसद को 5 साल पूरा होने से पहले हटाने का कोई कानून नहीं है।
+        \n\nअगली बार ध्यान से चुनें।</string>
+
+    <string name="mla_voter">विधायक को फोन करें। तथ्यों के साथ ईमेल करें।
+    \n\nउसके घर पर रविवार सुबह 11 बजे मिलें। यह जल्दी ध्यान खींचता है और जल्दी समाधान भी देता है।</string>
+    <string name="mla_neta">अन्ना आंदोलन या जनलोकपाल आंदोलन के समय भी, घर के सामने आंदोलन करने का सबसे तेज असर पड़ा था।</string>
+    <string name="mla_parliament">गैर-जिम्मेदार विधायक को 5 साल पूरा होने से पहले हटाने का कोई कानून नहीं है।
         \n\nअगली बार ध्यान से चुनें।</string>
 
     <string name="clean_voter">सड़क पर गंदगी, सिल्ट, छुट्टा पशु जैसी समस्याएँ स्थानीय नगर निगम की जिम्मेदारी है।

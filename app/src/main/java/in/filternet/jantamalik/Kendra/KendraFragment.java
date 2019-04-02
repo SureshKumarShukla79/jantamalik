@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -61,6 +62,13 @@ public class KendraFragment extends Fragment {
         note_Click();
         govt_Click();
         duties_Click();
+
+        issue_media();
+        issue_mp_no_response();
+        issue_train();
+        issue_business();
+        issue_curroption();
+        issue_election_2019();
 
         return view;
     }
@@ -135,6 +143,115 @@ public class KendraFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 intent = new Intent(view.getContext(), DutiesKendra.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_media() {
+        LinearLayout media_or_afeem_layout = view.findViewById(R.id.media_or_afeem_layout);
+
+        media_or_afeem_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_media_or_afeem;
+                int title_id = R.string.media_or_afeem;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("kendra", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_mp_no_response() {
+        LinearLayout mp_no_response_layout = view.findViewById(R.id.mp_no_response_layout);
+
+        mp_no_response_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_mp_no_response;
+                int title_id = R.string.mp_no_response;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("kendra", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_curroption() {
+        LinearLayout corruption_layout = view.findViewById(R.id.corruption_layout);
+
+        corruption_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_corruption;
+                int title_id = R.string.corruption;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("kendra", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_train() {
+        LinearLayout train_delay_layout = view.findViewById(R.id.train_delay_layout);
+
+        train_delay_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_train_delay;
+                int title_id = R.string.train;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("kendra", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_business() {
+        LinearLayout business_layout = view.findViewById(R.id.business_layout);
+
+        business_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_business;
+                int title_id = R.string.business;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("kendra", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_election_2019() {
+        LinearLayout election_2019_layout = view.findViewById(R.id.election_2019_layout);
+
+        election_2019_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                int layout_id = R.layout.issue_election_2019;
+                int title_id = R.string.election_2019;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("kendra", true);
                 startActivity(intent);
             }
         });

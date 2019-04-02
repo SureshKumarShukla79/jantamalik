@@ -15,11 +15,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
@@ -30,6 +32,7 @@ import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 public class RajyaFragment extends Fragment {
     String TAG = "RajyaFragment";
 
+    private View view;
     private TextView vote2, note2, govt1;
     private ImageButton vote1, vote3, note1, note3;
     private ImageView govt2;
@@ -93,7 +96,7 @@ public class RajyaFragment extends Fragment {
 
         editor = mSharedPref.edit();
 
-        View view = inflater.inflate(R.layout.rajya, container, false);
+        view = inflater.inflate(R.layout.rajya, container, false);
 
         vote1 = view.findViewById(R.id.vote1);
         vote2 = view.findViewById(R.id.vote2);
@@ -153,6 +156,12 @@ public class RajyaFragment extends Fragment {
         duties_Click();
         vote_Click();
         note_Click();
+
+        issue_mla_no_response();
+        issue_electricity();
+        issue_police();
+        issue_road();
+        issue_traffic();
 
         return view;
     }
@@ -279,6 +288,96 @@ public class RajyaFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), Duties.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_electricity() {
+        LinearLayout electricity_layout = view.findViewById(R.id.electricity_layout);
+
+        electricity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_electricity;
+                int title_id = R.string.electricity;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_police() {
+        LinearLayout police_layout = view.findViewById(R.id.police_layout);
+
+        police_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_police;
+                int title_id = R.string.police;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_road() {
+        LinearLayout road_layout = view.findViewById(R.id.road_layout);
+
+        road_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_poor_road;
+                int title_id = R.string.poor_road;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_traffic() {
+        LinearLayout traffic_layout = view.findViewById(R.id.traffic_layout);
+
+        traffic_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_traffic;
+                int title_id = R.string.traffic;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_mla_no_response() {
+        LinearLayout mla_no_response_layout = view.findViewById(R.id.mla_no_response_layout);
+
+        mla_no_response_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_mla_no_response;
+                int title_id = R.string.mla_no_response;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
                 startActivity(intent);
             }
         });

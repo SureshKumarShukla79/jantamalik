@@ -1,4 +1,4 @@
-package in.filternet.jantamalik.IssuesJava;
+package in.filternet.jantamalik;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,14 +17,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import in.filternet.jantamalik.Kendra.DataFilter;
-import in.filternet.jantamalik.MainActivity;
-import in.filternet.jantamalik.R;
 
+import static in.filternet.jantamalik.MainActivity.TAB_CORPORATION;
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class Issues extends AppCompatActivity {
     private final static String TAG ="Issues";
 
+    private Toolbar toolbar;
     private Spinner ui_spinner_state;
     private Spinner ui_spinner_area;
     private ArrayAdapter state_adapter, area_adapter;
@@ -33,6 +36,7 @@ public class Issues extends AppCompatActivity {
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
     private int layoutResID, titleID;
+    private boolean kendra, rajya, corporation;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,13 +48,24 @@ public class Issues extends AppCompatActivity {
             //Log.e(TAG, "layout_id: " + layoutResID);
             titleID = savedInstanceState.getInt("title_id");
             //Log.e(TAG, "title_id: " + titleID);
+            kendra = savedInstanceState.getBoolean("kendra", false);
+            rajya = savedInstanceState.getBoolean("rajya", false);
+            corporation = savedInstanceState.getBoolean("corporation", false);
         }
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         editor = mSharedPref.edit();
 
         setContentView(layoutResID);
-        this.setTitle(titleID);
+
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                back_button(view);
+            }
+        });
 
         if(layoutResID == R.layout.issue_media_or_afeem) {
             make_clickable_links();
@@ -60,6 +75,18 @@ public class Issues extends AppCompatActivity {
             load_candidates();
         }
 
+    }
+
+    private void back_button(View view) {
+        Intent intent = new Intent(view.getContext(), MainActivity.class);
+        if(kendra) {
+            intent.putExtra(TAB_NUMBER, TAB_KENDRA);
+        } else if(rajya) {
+            intent.putExtra(TAB_NUMBER, TAB_RAJYA);
+        } else if(corporation) {
+            intent.putExtra(TAB_NUMBER, TAB_CORPORATION);
+        }
+        startActivity(intent);
     }
 
     private void load_candidates() {
@@ -83,7 +110,7 @@ public class Issues extends AppCompatActivity {
 
         // Populating GUI
         dataFilter = new DataFilter();
-        state_adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, dataFilter.getStates(language));
+        state_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_dropdown_item, dataFilter.getStates(language));
         state_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_spinner_state.setAdapter(state_adapter);
 

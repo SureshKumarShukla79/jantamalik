@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            app:title="@string/police"
+            app:title="@string/mla_no_response"
             app:titleTextColor="@color/colorAccent" />
 
         <LinearLayout
@@ -41,7 +41,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:layout_marginStart="@dimen/issue_text_left_margin"
-                android:text="@string/police_voter"
+                android:text="@string/mla_voter"
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -66,7 +66,32 @@
                 android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:layout_marginStart="@dimen/issue_text_left_margin"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/police_neta"
+                android:text="@string/mla_neta"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/parliament_house"
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:padding="1dp"
+            android:background="@drawable/linearlayout_border"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/small_image"
+                android:layout_height="@dimen/small_image"
+                android:layout_gravity="center"
+                android:background="@color/greylight"
+                android:src="@drawable/loksabha" />
+            <TextView
+                android:id="@+id/parliament"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
+                android:layout_marginStart="@dimen/issue_text_left_margin"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/mla_parliament"
                 android:textColor="@color/black" />
         </LinearLayout>
 

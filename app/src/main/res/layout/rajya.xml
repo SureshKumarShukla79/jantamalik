@@ -7,20 +7,19 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_margin="5dp"
         tools:context="in.filternet.jantamalik.Kendra.VoteMP">
 
         <android.support.v7.widget.CardView
             android:id="@+id/infographics_cardView"
             android:layout_width="match_parent"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginTop="1dp"
+            android:layout_margin="3dp"
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -60,31 +59,15 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/duties"
-            android:layout_below="@id/infographics_cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="10dp"
+            android:layout_margin="3dp"
             app:cardBackgroundColor="@color/white">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginLeft="40dp"
-                    android:text="@string/State_Subjects" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom">
+                    android:orientation="horizontal">
 
                     <ImageButton
                         android:layout_width="60dp"
@@ -93,18 +76,26 @@
                         android:background="@drawable/recyclerview_item_click_effect"
                         android:src="@drawable/responsibility" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="left"
+                        android:padding="5dp"
                         android:layout_weight="1.00"
-                        android:background="@drawable/recyclerview_item_click_effect"
-                        android:gravity="left"
-                        android:padding="10dp"
-                        android:text="@string/State_Subjects"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/black" />
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/State_Subjects" />
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/recyclerview_item_click_effect"
+                            android:text="@string/State_Subjects"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
                     <ImageView
                         android:id="@+id/kendra_list"
                         android:layout_width="wrap_content"
@@ -112,60 +103,46 @@
                         android:layout_gravity="right|end"
                         android:background="@drawable/recyclerview_item_click_effect"
                         android:src="@drawable/right_black_arrow_24dp" />
-                </LinearLayout>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:padding="5dp"
+        android:layout_weight="1.00"
+        android:orientation="horizontal">
+
         <TextView
             android:id="@+id/state_text"
-            android:layout_below="@+id/duties"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/state_text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black"
-            android:layout_marginTop="6dp"
             android:paddingLeft="30dp"
             android:paddingRight="30dp" />
 
         <Spinner
             android:id="@+id/state_spinner"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_alignTop="@+id/state_text"
-            android:layout_toRightOf="@id/state_text"
             android:backgroundTint="@color/colorPrimary"
-            android:gravity="center"
-            android:paddingTop="5dp" />
+            android:gravity="center" />
+    </LinearLayout>
 
         <android.support.v7.widget.CardView
             android:id="@+id/noteCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/state_spinner"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginTop="1dp"
+            android:layout_margin="3dp"
             app:cardBackgroundColor="@color/white">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginLeft="40dp"
-                    android:text="@string/Money" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom">
+                    android:orientation="horizontal">
 
                     <ImageButton
                         android:id="@+id/note1"
@@ -175,18 +152,28 @@
                         android:background="@drawable/recyclerview_item_click_effect"
                         android:src="@drawable/note" />
 
-                    <TextView
-                        android:id="@+id/note2"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="left|bottom"
-                        android:background="@drawable/recyclerview_item_click_effect"
-                        android:gravity="left|bottom"
+                        android:padding="5dp"
                         android:layout_weight="1.00"
-                        android:padding="10dp"
-                        android:text="@string/rajya_budget"
-                        android:textColor="@color/black"
-                        android:textSize="25sp" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/Money" />
+
+                        <TextView
+                            android:id="@+id/note2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/recyclerview_item_click_effect"
+                            android:text="@string/rajya_budget"
+                            android:textColor="@color/black"
+                            android:textSize="25sp" />
+                    </LinearLayout>
 
                     <ImageButton
                         android:id="@+id/note3"
@@ -196,32 +183,16 @@
                         android:background="@drawable/recyclerview_item_click_effect"
                         android:src="@drawable/right_black_arrow_24dp" />
                 </LinearLayout>
-            </LinearLayout>
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
             android:id="@+id/voteCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/noteCard"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="3dp"
+            android:layout_margin="3dp"
             app:cardBackgroundColor="@color/white">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_marginLeft="40dp"
-                    android:text="@string/Vote" />
-
-                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom">
@@ -234,36 +205,306 @@
                         android:background="@drawable/recyclerview_item_click_effect"
                         android:src="@drawable/vote" />
 
-                    <TextView
-                        android:id="@+id/vote2"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="left|bottom"
-                        android:background="@drawable/recyclerview_item_click_effect"
-                        android:gravity="left|bottom"
                         android:layout_weight="1.00"
-                        android:padding="10dp"
-                        android:text="@string/MLA"
-                        android:textColor="@color/black"
-                        android:textSize="25sp" />
+                        android:padding="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimary"
+                            android:text="@string/Vote" />
+                        <TextView
+                            android:id="@+id/vote2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/recyclerview_item_click_effect"
+                            android:text="@string/MLA"
+                            android:textColor="@color/black"
+                            android:textSize="25sp" />
+                    </LinearLayout>
 
                     <ImageButton
                         android:id="@+id/vote3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="right"
                         android:background="@drawable/recyclerview_item_click_effect"
                         android:src="@drawable/right_black_arrow_24dp" />
                 </LinearLayout>
-            </LinearLayout>
         </android.support.v7.widget.CardView>
 
-        <android.support.v4.widget.NestedScrollView
-            android:id="@+id/nestedScroll"
-            android:layout_below="@id/infographics_cardView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        </android.support.v4.widget.NestedScrollView>
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/wrong"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/issues"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/Issues"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:id="@+id/mla_no_response_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/mp_no_response" />
+
+            <TextView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:id="@+id/issue_mla_no_response"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/mla_no_response"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/red_arrow" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:id="@+id/road_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/poor_road" />
+
+            <TextView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:id="@+id/road"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/poor_road"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/red_arrow" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:id="@+id/traffic_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/traffic" />
+
+            <TextView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:id="@+id/traffic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/traffic"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/red_arrow" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:id="@+id/electricity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/electricity" />
+
+            <TextView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:id="@+id/electricity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/electricity"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/red_arrow" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:id="@+id/police_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/police" />
+
+            <TextView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:id="@+id/police"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/police"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <ImageView
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/red_arrow" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <TextView
+            android:padding="6dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/User_appeal"
+            android:visibility="visible" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_issue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_add_white_24dp"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_gravity="right" />
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/good"
+            android:layout_margin="1dp"
+            android:textColor="@color/colorAccent"
+            android:onClick="onclick_share_button"
+            android:background="@drawable/button_styling" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/very_good"
+            android:layout_margin="1dp"
+            android:textColor="@color/colorAccent"
+            android:onClick="onclick_open_donate"
+            android:background="@drawable/button_styling" />
+    </LinearLayout>
+
+    </LinearLayout>
 </ScrollView>
