@@ -11,7 +11,6 @@ import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -55,6 +54,7 @@ public class Contact extends AppCompatActivity {
             mUpdateMP = savedInstanceState.getBoolean("update_mp");
             mFeedback = savedInstanceState.getBoolean("feedback");
             mTABnumber = savedInstanceState.getInt(TAB_NUMBER);
+
             mIssueSubject = savedInstanceState.getString("subject");
         }
 
