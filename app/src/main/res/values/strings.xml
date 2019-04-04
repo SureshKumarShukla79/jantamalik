@@ -525,13 +525,16 @@
     <string name="correct"><b>✅</b></string>
     <string name="wrong_answer"><b>❌</b></string>
 
-    <string name="filter_text">Candidates are filtered on the basis of: \n\n
-        - Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)\n
-        - Candidate is not graduate (needs to make bills on 100 topics)\n
-        - Candidate is found guilty of heinous crime\n
-        - Candidates political party is guilty of illegal-foreign-funding
+    <string name="filter_text">Candidates are filtered as <b>useless</b> on the basis of:\n\n
+        ❌ Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)\n
+        ❌ Candidate is not graduate (needs to make bills on 100 topics)\n
+        ❌ Candidate is found guilty of heinous crimes\n
+        ❌ Candidates political party is guilty of illegal-foreign-funding. Puppet-govt with foreign-boss
     </string>
-    <string name="coming_soon">Coming soon...</string>
-    <string name="apna_time_aayega">Apna Time Aayega</string>
-
+    <string name="coming_soon">Coming soon...\nApna Time Aayega</string>
+    <string name="good_candidate"><b>Good</b> candidates</string>
+    <string name="bad_candidate"><b>Useless</b> candidates</string>
+    <string name="political_party">Political Party</string>
+    <string name="last_5_year">Last 5 years</string>
+    <string name="main_reason">Main reason</string>
 </resources>

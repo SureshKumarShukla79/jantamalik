@@ -2,17 +2,23 @@ package in.filternet.jantamalik;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import in.filternet.jantamalik.Kendra.DataFilter;
@@ -27,11 +33,13 @@ public class Issues extends AppCompatActivity {
     private final static String TAG ="Issues";
 
     private Toolbar toolbar;
-    private Spinner ui_spinner_state;
-    private Spinner ui_spinner_area;
+    private TextView ui_coming_soon;
+    private Spinner ui_spinner_state, ui_spinner_area;
+    private TableLayout ui_green_table, ui_red_table;
     private ArrayAdapter state_adapter, area_adapter;
     private DataFilter dataFilter;
 
+    private String mLanguage;
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
     private int layoutResID, titleID;
@@ -55,6 +63,8 @@ public class Issues extends AppCompatActivity {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         editor = mSharedPref.edit();
 
+        mLanguage  = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
+
         setContentView(layoutResID);
 
         toolbar = findViewById(R.id.toolbar);
@@ -71,7 +81,7 @@ public class Issues extends AppCompatActivity {
         }
 
         if(layoutResID == R.layout.issue_election_2019) {
-            load_candidates();
+            update_gui();
         }
 
     }
@@ -88,18 +98,19 @@ public class Issues extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void load_candidates() {
+    private void update_gui() {
         FirebaseLogger.send(this, "2019_election");
-
         ui_spinner_state = findViewById(R.id.state_spinner);
         ui_spinner_area = findViewById(R.id.area_spinner);
+        ui_green_table = findViewById(R.id.green_table);
+        ui_red_table = findViewById(R.id.red_table);
+        ui_coming_soon = findViewById(R.id.coming_soon);
 
-        final String language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
         String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
         String area = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
 
         // In case of Hindi, change the defaults
-        if (language.equals(sLANGUAGE_HINDI)) {
+        if (mLanguage.equals(sLANGUAGE_HINDI)) {
             if (state.equals(MainActivity.DEFAULT_STATE))
                 state = MainActivity.hiDEFAULT_STATE;
             if (area.equals(MainActivity.DEFAULT_MP))
@@ -111,14 +122,14 @@ public class Issues extends AppCompatActivity {
 
         // Populating GUI
         dataFilter = new DataFilter();
-        state_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_dropdown_item, dataFilter.getStates(language));
+        state_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_dropdown_item, dataFilter.getStates(mLanguage));
         state_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_spinner_state.setAdapter(state_adapter);
 
         int spinnerPosition = state_adapter.getPosition(state);
         ui_spinner_state.setSelection(spinnerPosition);
 
-        area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(language, state));
+        area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(mLanguage, state));
         area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_spinner_area.setAdapter(area_adapter);
 
@@ -131,7 +142,7 @@ public class Issues extends AppCompatActivity {
                 String state = ui_spinner_state.getItemAtPosition(ui_spinner_state.getSelectedItemPosition()).toString();
                 editor.putString(MainActivity.sSTATE, state).commit();
 
-                area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(language, state));
+                area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(mLanguage, state));
                 area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ui_spinner_area.setAdapter(area_adapter);
 
@@ -161,11 +172,166 @@ public class Issues extends AppCompatActivity {
         });
 
         update_candidate();
-
     }
 
     private void update_candidate() {
+        int total_green_candidate = num_of_candidate(Election_2019.green_bucket);
+        int total_red_candidate = num_of_candidate(Election_2019.red_bucket);
 
+        if(total_green_candidate > 0) {
+            ui_green_table.removeAllViews();
+            load_good_candidate(ui_green_table, total_green_candidate, Election_2019.green_bucket, R.drawable.table_border_style);
+            ui_green_table.setVisibility(View.VISIBLE);
+        }
+
+        if(total_red_candidate > 0) {
+            ui_red_table.removeAllViews();
+            load_bad_candidate(ui_red_table, total_red_candidate, Election_2019.red_bucket, R.drawable.table_border_red);
+            ui_red_table.setVisibility(View.VISIBLE);
+        }
+
+        if(total_green_candidate == 0 && total_red_candidate == 0){
+            ui_coming_soon.setVisibility(View.VISIBLE);
+            ui_green_table.setVisibility(View.GONE);
+            ui_red_table.setVisibility(View.GONE);
+        } else {
+            ui_coming_soon.setVisibility(View.GONE);
+        }
+    }
+
+    private void load_good_candidate(TableLayout table, int total_candidate, String[][] bucket, int color) {
+        int column = 3;
+
+        // Set table heads
+        TableRow row = new TableRow(this);
+        for(int j=0; j<=column; j++){
+            TextView text = new TextView(this);
+            if(j==0)
+                text.setText("\t\t");
+            else if(j==1)
+                text.setText(getString(R.string.good_candidate));
+            else if(j==2)
+                text.setText(getString(R.string.political_party));
+            else if(j==3)
+                text.setText(getString(R.string.last_5_year));
+            make_text_attractive(text, color);
+            row.addView(text);
+        }
+        table.addView(row);
+
+        // Fill the elements
+        int index = get_starting_index(bucket);
+        for(int i=index; i<(index+total_candidate); i++) {
+            // Set serial number
+            row = new TableRow(this);
+            TextView text = new TextView(this);
+            text.setText(bucket[i][1]);
+            make_text_attractive(text, color);
+            row.addView(text);
+
+            // Set candidate data
+            for(int j=0; j<column; j++) {
+                text = new TextView(this);
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    int j_hi = j + 5;
+                    text.setText(bucket[i][j_hi + 3]);
+                } else {
+                    text.setText(bucket[i][j + 3]);
+                }
+                make_text_attractive(text, color);
+                row.addView(text);
+            }
+            table.addView(row);
+            table.setGravity(Gravity.CENTER);
+        }
+    }
+
+    private void load_bad_candidate(TableLayout table, int total_candidate, String[][] bucket, int color) {
+        int column = 2;
+
+        // Set table heads
+        TableRow row = new TableRow(this);
+        for(int j=0; j<=column; j++){
+            TextView text = new TextView(this);
+            if(j==0)
+                text.setText("\t\t");
+            else if(j==1)
+                text.setText(getString(R.string.bad_candidate));
+            else if(j==2)
+                text.setText(getString(R.string.main_reason));
+            make_text_attractive(text, color);
+            row.addView(text);
+        }
+        table.addView(row);
+
+        // Fill the elements
+        int index = get_starting_index(bucket);
+        for(int i=index; i<(index+total_candidate); i++) {
+            // Set serial number
+            row = new TableRow(this);
+            TextView text = new TextView(this);
+            text.setText(bucket[i][1]);
+            make_text_attractive(text, color);
+            row.addView(text);
+
+            // Set candidate data
+            for(int j=0; j<column; j++){
+                text = new TextView(this);
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    int j_hi = j + 5;
+                    text.setText(bucket[i][j_hi + 3]);
+                } else {
+                    text.setText(bucket[i][j + 3]);
+                }
+                make_text_attractive(text, color);
+                row.addView(text);
+            }
+            table.addView(row);
+            table.setGravity(Gravity.CENTER);
+        }
+    }
+
+
+    private void make_text_attractive(TextView text, int color){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            text.setTextAppearance(R.style.TextAppearance_AppCompat_Large);
+        } else {
+            text.setTextAppearance(this, R.style.TextAppearance_AppCompat_Large);
+        }
+        text.setPadding(5,5,5,5);
+        text.setTextColor(Color.BLACK);
+        text.setGravity(Gravity.CENTER);
+        text.setBackgroundResource(color);
+    }
+
+    private int get_starting_index(String[][] bucket){
+        int index = 0, area_column = 2;
+        String constituency = mSharedPref.getString(MainActivity.sMP, null);
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            area_column = 7;
+        }
+
+        for (int i=0; i<bucket.length; i++) {
+            String area_name = bucket[i][area_column];
+            if (constituency.equals(area_name))
+                return i;
+        }
+        return index;
+    }
+
+    private int num_of_candidate(String[][] bucket) {
+        int num = 0, area_column = 2;
+        String constituency = mSharedPref.getString(MainActivity.sMP, null);
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            area_column = 7;
+        }
+
+        for (String[] i : bucket) {
+            String area_name = i[area_column];
+            if (constituency.equals(area_name))
+                num++;
+        }
+        return num;
     }
 
     private void make_clickable_links() {
