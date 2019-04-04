@@ -369,7 +369,7 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             mBuilder = new NotificationCompat.Builder(context)
                     .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
-                    .setSmallIcon(R.drawable.notification)
+                    .setSmallIcon(R.mipmap.ic_launcher)
                     .setContentTitle(context.getResources().getString(R.string.app_name))
                     .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
                     .setContentText(notification_text)
