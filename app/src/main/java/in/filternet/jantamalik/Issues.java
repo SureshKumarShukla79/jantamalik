@@ -89,6 +89,8 @@ public class Issues extends AppCompatActivity {
     }
 
     private void load_candidates() {
+        FirebaseLogger.send(this, "2019_election");
+
         ui_spinner_state = findViewById(R.id.state_spinner);
         ui_spinner_area = findViewById(R.id.area_spinner);
 

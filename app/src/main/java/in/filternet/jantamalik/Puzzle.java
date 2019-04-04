@@ -65,6 +65,7 @@ public class Puzzle extends Activity {
         ui_skip = findViewById(R.id.skip);
 
         update_question();
+        FirebaseLogger.send(this, "Quiz");
     }
 
     private void update_question() {
@@ -174,6 +175,8 @@ public class Puzzle extends Activity {
             correct_answer = Puzzle_Ques.questions[question_num][1];
         }
 
+        FirebaseLogger.send(this, "Q" + question_num);
+
         boolean checked =  ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.radio_1:
@@ -182,6 +185,7 @@ public class Puzzle extends Activity {
                     if(option.equals(correct_answer)) {
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
+                        FirebaseLogger.send(this, "A" + question_num);
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -196,6 +200,7 @@ public class Puzzle extends Activity {
                     if(option.equals(correct_answer)) {
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
+                        FirebaseLogger.send(this, "A" + question_num);
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -210,6 +215,7 @@ public class Puzzle extends Activity {
                     if(option.equals(correct_answer)) {
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
+                        FirebaseLogger.send(this, "A" + question_num);
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -224,6 +230,7 @@ public class Puzzle extends Activity {
                     if(option.equals(correct_answer)) {
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
+                        FirebaseLogger.send(this, "A" + question_num);
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);

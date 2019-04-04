@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(mLanguage.equals(sLANGUAGE_HINDI)) {
             setUI_Lang(this, "hi");
+            FirebaseLogger.send(this, "hi");
         }
 
         if (BuildConfig.RELEASE_MODE) { // To avoid developers screen recordings
@@ -125,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
         if(smart_voter) {
             ui_puzzle_button.setVisibility(View.GONE);
             ui_green_badge.setVisibility(View.VISIBLE);
+            FirebaseLogger.send(this, "Smart_Voter");
         }
 
         if(mLanguage.equals(sLANGUAGE_HINDI)) {
