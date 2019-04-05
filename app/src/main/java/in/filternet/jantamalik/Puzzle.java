@@ -1,11 +1,13 @@
 package in.filternet.jantamalik;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -22,7 +24,7 @@ public class Puzzle extends Activity {
 
     public final static String bQUE_ = "Que_";
 
-    TextView ui_question;
+    TextView ui_question, ui_question_no;
     ImageView ui_correct_answer, ui_wrong_answer;
     Button ui_next, ui_skip;
     RadioGroup ui_option_group;
@@ -32,7 +34,7 @@ public class Puzzle extends Activity {
     private SharedPreferences.Editor mEditor;
     private String mLanguage;
 
-    private int question_num = -1;
+    private int question_num = -1, number = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,7 @@ public class Puzzle extends Activity {
 
         setContentView(R.layout.puzzle);
 
+        ui_question_no = findViewById(R.id.question_no);
         ui_question = findViewById(R.id.question);
         ui_option_group = findViewById(R.id.options);
         ui_option_1 = findViewById(R.id.radio_1);
@@ -77,6 +80,8 @@ public class Puzzle extends Activity {
             open_main_activity();
             return;
         }
+
+        ui_question_no.setText(String.valueOf(++number));
 
         if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
             ui_question.setText(Puzzle_Ques.questions[question_num][5]);
@@ -151,8 +156,35 @@ public class Puzzle extends Activity {
         }
 
         mEditor.putBoolean(MainActivity.bSMART_VOTER, smart_voter).commit();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        if(smart_voter)
+            user_became_smart();
+        else {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    private void user_became_smart() {
+        ImageView image = new ImageView(this);
+        image.setImageResource(R.drawable.green_badge);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+        builder.setTitle(R.string.congratulation);
+        builder.setMessage(R.string.smart_voter);
+        builder.setView(image);
+        builder.setPositiveButton(R.string.user_thanks, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                FirebaseLogger.send(Puzzle.this, "Smart_Voter");
+
+                Intent intent = new Intent(Puzzle.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     public void onclick_skip(View view) {
