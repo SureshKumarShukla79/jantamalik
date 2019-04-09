@@ -66,7 +66,6 @@ public class Contact extends AppCompatActivity {
         ui_email_us = findViewById(R.id.email_us);
 
         if(mAddIssue || mUpdateMP || mFeedback) {
-            ui_email_us.setVisibility(View.VISIBLE);
 
             if(mAddIssue) {
                 if(mIssueSubject != null)
@@ -117,7 +116,6 @@ public class Contact extends AppCompatActivity {
                     subject = getString(R.string.feedback);
                 break;
         }
-        ui_email_us.setVisibility(View.VISIBLE);
     }
 
     public void onclick_email_us(View view) {

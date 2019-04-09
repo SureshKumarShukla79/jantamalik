@@ -3,6 +3,7 @@ package in.filternet.jantamalik;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,11 +12,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -34,6 +35,7 @@ public class Issues extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TextView ui_coming_soon;
+    private LinearLayout ui_source;
     private Spinner ui_spinner_state, ui_spinner_area;
     private TableLayout ui_green_table, ui_red_table;
     private ArrayAdapter state_adapter, area_adapter;
@@ -104,7 +106,13 @@ public class Issues extends AppCompatActivity {
         ui_spinner_area = findViewById(R.id.area_spinner);
         ui_green_table = findViewById(R.id.green_table);
         ui_red_table = findViewById(R.id.red_table);
+        ui_source = findViewById(R.id.source);
         ui_coming_soon = findViewById(R.id.coming_soon);
+
+        TextView ui_filter_text = findViewById(R.id.filter_text);
+        ui_filter_text.setMovementMethod(LinkMovementMethod.getInstance());
+        TextView ui_source_adr = findViewById(R.id.source_adr);
+        ui_source_adr.setMovementMethod(LinkMovementMethod.getInstance());
 
         String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
         String area = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
@@ -180,128 +188,136 @@ public class Issues extends AppCompatActivity {
 
         if(total_green_candidate > 0) {
             ui_green_table.removeAllViews();
-            load_good_candidate(ui_green_table, total_green_candidate, Election_2019.green_bucket, R.drawable.table_border_style);
+            load_good_candidate(total_green_candidate);
             ui_green_table.setVisibility(View.VISIBLE);
         }
 
         if(total_red_candidate > 0) {
             ui_red_table.removeAllViews();
-            load_bad_candidate(ui_red_table, total_red_candidate, Election_2019.red_bucket, R.drawable.table_border_red);
+            load_bad_candidate(total_red_candidate);
             ui_red_table.setVisibility(View.VISIBLE);
         }
 
         if(total_green_candidate == 0 && total_red_candidate == 0){
             ui_coming_soon.setVisibility(View.VISIBLE);
+            ui_source.setVisibility(View.GONE);
             ui_green_table.setVisibility(View.GONE);
             ui_red_table.setVisibility(View.GONE);
+        } else if(total_red_candidate == 0) {
+            ui_source.setVisibility(View.VISIBLE);
+            ui_red_table.setVisibility(View.GONE);
+            ui_coming_soon.setVisibility(View.GONE);
+        } else if(total_green_candidate == 0) {
+            ui_source.setVisibility(View.VISIBLE);
+            ui_green_table.setVisibility(View.GONE);
+            ui_coming_soon.setVisibility(View.GONE);
         } else {
+            ui_source.setVisibility(View.VISIBLE);
             ui_coming_soon.setVisibility(View.GONE);
         }
     }
 
-    private void load_good_candidate(TableLayout table, int total_candidate, String[][] bucket, int color) {
+    private void load_good_candidate(int total_candidate) {
         int column = 3;
+        String[][] bucket = Election_2019.green_bucket;
 
         // Set table heads
         TableRow row = new TableRow(this);
-        for(int j=0; j<=column; j++){
+        for(int j=0; j<column; j++){
             TextView text = new TextView(this);
-            if(j==0)
-                text.setText("\t\t");
-            else if(j==1)
+            if(j==0) {
                 text.setText(getString(R.string.good_candidate));
-            else if(j==2)
+                make_text_attractive(text, R.drawable.table_border_style);
+                text.setTypeface(null, Typeface.BOLD);
+            }
+            else if(j==1) {
                 text.setText(getString(R.string.political_party));
-            else if(j==3)
+                make_text_attractive(text, R.drawable.table_border_style);
+                text.setTypeface(null, Typeface.BOLD);
+            }
+            else if(j==2) {
                 text.setText(getString(R.string.last_5_year));
-            make_text_attractive(text, color);
+                make_text_attractive(text, R.drawable.table_border_style);
+                text.setTypeface(null, Typeface.BOLD);
+            }
+
             row.addView(text);
         }
-        table.addView(row);
+        ui_green_table.addView(row);
 
         // Fill the elements
         int index = get_starting_index(bucket);
         for(int i=index; i<(index+total_candidate); i++) {
-            // Set serial number
             row = new TableRow(this);
-            TextView text = new TextView(this);
-            text.setText(bucket[i][1]);
-            make_text_attractive(text, color);
-            row.addView(text);
-
             // Set candidate data
             for(int j=0; j<column; j++) {
-                text = new TextView(this);
+                TextView text = new TextView(this);
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
                     int j_hi = j + 5;
                     text.setText(bucket[i][j_hi + 3]);
                 } else {
                     text.setText(bucket[i][j + 3]);
                 }
-                make_text_attractive(text, color);
+                make_text_attractive(text, R.drawable.table_border_style);
                 row.addView(text);
             }
-            table.addView(row);
-            table.setGravity(Gravity.CENTER);
+            ui_green_table.addView(row);
+            ui_green_table.setGravity(Gravity.CENTER);
+            ui_green_table.setStretchAllColumns(false);
         }
     }
 
-    private void load_bad_candidate(TableLayout table, int total_candidate, String[][] bucket, int color) {
+    private void load_bad_candidate(int total_candidate) {
         int column = 2;
+        String[][] bucket = Election_2019.red_bucket;
 
         // Set table heads
         TableRow row = new TableRow(this);
-        for(int j=0; j<=column; j++){
+        for(int j=0; j<column; j++){
             TextView text = new TextView(this);
             if(j==0)
-                text.setText("\t\t");
-            else if(j==1)
                 text.setText(getString(R.string.bad_candidate));
-            else if(j==2)
+            else
                 text.setText(getString(R.string.main_reason));
-            make_text_attractive(text, color);
+            make_text_attractive(text, R.drawable.table_border_red);
+            text.setTypeface(null, Typeface.BOLD);
             row.addView(text);
         }
-        table.addView(row);
+        ui_red_table.addView(row);
 
         // Fill the elements
         int index = get_starting_index(bucket);
         for(int i=index; i<(index+total_candidate); i++) {
-            // Set serial number
-            row = new TableRow(this);
-            TextView text = new TextView(this);
-            text.setText(bucket[i][1]);
-            make_text_attractive(text, color);
-            row.addView(text);
-
             // Set candidate data
+            row = new TableRow(this);
             for(int j=0; j<column; j++){
-                text = new TextView(this);
+                TextView text = new TextView(this);
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
                     int j_hi = j + 5;
                     text.setText(bucket[i][j_hi + 3]);
                 } else {
                     text.setText(bucket[i][j + 3]);
                 }
-                make_text_attractive(text, color);
+                make_text_attractive(text, R.drawable.table_border_red);
                 row.addView(text);
             }
-            table.addView(row);
-            table.setGravity(Gravity.CENTER);
+            ui_red_table.addView(row);
+            ui_red_table.setGravity(Gravity.CENTER);
         }
     }
 
 
     private void make_text_attractive(TextView text, int color){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            text.setTextAppearance(R.style.TextAppearance_AppCompat_Large);
+            text.setTextAppearance(R.style.TextAppearance_AppCompat_Medium);
         } else {
-            text.setTextAppearance(this, R.style.TextAppearance_AppCompat_Large);
+            text.setTextAppearance(this, R.style.TextAppearance_AppCompat_Medium);
         }
         text.setPadding(5,5,5,5);
         text.setTextColor(Color.BLACK);
         text.setGravity(Gravity.CENTER);
         text.setBackgroundResource(color);
+        text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
     }
 
     private int get_starting_index(String[][] bucket){

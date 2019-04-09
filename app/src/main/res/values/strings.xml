@@ -2,7 +2,7 @@
     <string name="app_name">Janta Malik</string>
 
     <string name="team_list">Credits :
-        \nMonika Bose, Sonal Shukla, Faizan Mustafa, Nishank Tripathi, Pratyush Anand, Ravish Kumar, Siddhesh Shah, Shivam Rajdev, Sharad Seth, Suresh Shukla, Vikas Gupta, Vivek Seth</string>
+        \nAssociation for Democratic Reforms(ADR), Monika Bose, Sonal Shukla, Faizan Mustafa, Nishank Tripathi, Pratyush Anand, Ravish Kumar, Siddhesh Shah, Shivam Rajdev, Sharad Seth, Suresh Shukla, Vikas Gupta, Vivek Seth</string>
 
     <string name="kendra"><b>Center</b></string>
     <string name="rajya"><b>State</b></string>
@@ -525,21 +525,24 @@
     <string name="correct"><b>✅</b></string>
     <string name="wrong_answer"><b>❌</b></string>
 
-    <string name="filter_text">Candidates are filtered as <b>useless</b> on the basis of:\n\n
+    <string name="filter_text">Remaining candidates are filtered based on following criteria:\n
+        ❌ Candidates political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Puppet-govt with foreign-boss</a>\n
+        ❌ Candidate is found guilty of heinous crimes\n
         ❌ Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)\n
         ❌ Candidate is not graduate (needs to make bills on 100 topics)\n
-        ❌ Candidate is found guilty of heinous crimes\n
-        ❌ Candidates political party is guilty of illegal-foreign-funding. Puppet-govt with foreign-boss
     </string>
     <string name="coming_soon">Coming soon...\nApna Time Aayega</string>
-    <string name="good_candidate">Good \ncandidates</string>
-    <string name="bad_candidate">Useless \ncandidates</string>
-    <string name="political_party">Political \nParty</string>
-    <string name="last_5_year">Past \n5 years</string>
-    <string name="main_reason">Main \nreason</string>
+    <string name="good_candidate">Good candidates</string>
+    <string name="bad_candidate">Useless candidates</string>
+    <string name="political_party">Political Party</string>
+    <string name="last_5_year">Past 5 years</string>
+    <string name="main_reason">Main reason</string>
     <string name="puzzle_title"><b>Are you a smart voter?</b></string>
 
     <string name="congratulation">Congratulations</string>
     <string name="smart_voter">You are a <b>Smart Voter</b></string>
     <string name="user_thanks">Thank You</string>
+    <string name="election_2019_header_line">For good government,
+        \nchoose your MP wisely</string>
+    <string name="adr_source"><a href="https://adrindia.org">Association for Democratic Reforms</a></string>
 </resources>

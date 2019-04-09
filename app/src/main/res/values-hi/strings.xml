@@ -2,7 +2,7 @@
     <string name="app_name"><b>जनता मालिक</b></string>
 
     <string name="team_list">श्रेय :
-        \nमोनिका बोस, सोनल शुक्ल, फैजान मुस्तफा, निशंक त्रिपाठी, प्रत्यूश आनंद, रवीश कुमार, सिद्धेश शाह, शिवम राजदेव, शरद सेठ, सुरेश शुक्ल, विकास गुप्ता, विवेक सेठ</string>
+        \nएसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स(ADR), मोनिका बोस, सोनल शुक्ल, फैजान मुस्तफा, निशंक त्रिपाठी, प्रत्यूश आनंद, रवीश कुमार, सिद्धेश शाह, शिवम राजदेव, शरद सेठ, सुरेश शुक्ल, विकास गुप्ता, विवेक सेठ</string>
 
     <string name="kendra"><b>केन्द्र</b></string>
     <string name="rajya"><b>राज्य</b></string>
@@ -532,22 +532,24 @@
     <string name="correct"><b>✅</b></string>
     <string name="wrong_answer"><b>❌</b></string>
 
-    <string name="filter_text">नीचे दिए गए आधार पर उम्मीदवारों को <b>फालतू</b> पाया गया है:\n\n
-        ❌ नतीजे के दिन उम्मीदवार की आयु 65 साल होगी (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)\n
-        ❌ उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)\n
+    <string name="filter_text">बाकी उम्मीदवारों को नीचे दिए गए आधार पर छाँट दिया गया है:\n
+        ❌ उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://aajtak.intoday.in/story/delhi-hc-says-act-against-bjp-congress-over-foreign-funds-1-759217.html">कठपुतली सरकार, विदेशी मालिक</a>।\n
         ❌ उम्मीदवार गंभीर आपराधिक मामलों में दंडित है \n
-        ❌ उम्मीदवार जिस राजनीतिक दल से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। कठपुतली सरकार, विदेशी मालिक।
+        ❌ उम्मीदवार की आयु 65 साल या ज्यादा हैं (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)\n
+        ❌ उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)
     </string>
     <string name="coming_soon">जल्द आ रहा है...\nअपना टाइम आयेगा</string>
-    <string name="good_candidate">अच्छे \nउम्मीदवार</string>
-    <string name="bad_candidate">फालतू \nउम्मीदवार</string>
-    <string name="political_party">राजनीतिक \nदल</string>
-    <string name="last_5_year">बीतेे \n5 साल</string>
-    <string name="main_reason">मुख्य \nकारण</string>
+    <string name="good_candidate">अच्छे उम्मीदवार</string>
+    <string name="bad_candidate">फालतू उम्मीदवार</string>
+    <string name="political_party">राजनीतिक दल</string>
+    <string name="last_5_year">बीतेे 5 साल</string>
+    <string name="main_reason">मुख्य कारण</string>
     <string name="puzzle_title"><b>आप कितने जागरूक हैं?</b></string>
 
     <string name="congratulation">बधाई हो</string>
     <string name="smart_voter">आप बहुत <b>जागरूक वोटर</b> है</string>
     <string name="user_thanks">धन्यवाद</string>
-
+    <string name="election_2019_header_line">ना 15 लाख, ना 72 हजार\n
+        अच्छा सांसद, तो अच्छी सरकार</string>
+    <string name="adr_source"><a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
 </resources>
