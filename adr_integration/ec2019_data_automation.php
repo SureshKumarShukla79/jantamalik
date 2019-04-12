@@ -19,6 +19,7 @@ if ($conn->connect_error) {
 // get the list of seat/ constituencies
 foreach ($all_MPs as $array) {
     $constituency = $array[3];
+    $state = $array[0];
     $url = "https://myneta.info/api/ver4.1/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&apikey=" . $ADR_key;
     // save the json
     file_put_contents($constituency . ".json", fopen($url, 'r'));
@@ -31,18 +32,17 @@ foreach ($all_MPs as $array) {
     // for every seat, check json is not null
     if (empty($json) == false) {
         foreach ($json as $candidate) {
+            $i = 0;
             foreach ($candidate as $candidate_data) {
                 ++$i;
                 if ($i === 1) {
                     $name = $candidate_data;
                 } else if ($i === 2) {
-                    $constituency_name = $constituency;
-                    $constituency_name_hindi = $array[6];
+                    $hindi_constituency = $array[6];
                 } else if ($i === 3) {
                     $party = $candidate_data;
                 } else if ($i === 4) {
-                    $state = $candidate_data;
-                    $state_name_hindi = $array[1];
+                    $hindi_state = $array[1];
                 } else if ($i === 5) {
                     $date_of_election = $candidate_data;
                 } else if ($i === 6) {
@@ -76,103 +76,98 @@ foreach ($all_MPs as $array) {
                 } else if ($i === 20) {
                     $url = $candidate_data;
                 }
-            }
+            }   // json parsing of one array row over
             ++$total;
-        } // json parsing over
-        //echo $constituency_name_hindi;
-        //echo $state_name_hindi;
-        // check if case of NEW(insert) or CORRECTION(update)
-        $sql = "SELECT * FROM loksabha_2019 WHERE constituency = '$constituency' AND name='$name'";
-        $result = mysqli_query($conn, $sql) or trigger_error("Query Failed! SQL: $sql - Error: " . mysqli_error(), E_USER_ERROR);
-        if (mysqli_num_rows($result) > 0) {
-            echo "$constituency exists \n";
 
-            $sql = mysqli_query($conn, "UPDATE loksabha_2019 SET party = '$party',  date_of_election = '$date_of_election', sex = '$sex',  age = '$age', "
-                    . "serious_ipc_counts = '$serious_ipc_counts',  cases = '$cases', education = '$education',  total_assets = '$total_assets', "
-                    . "movable_assets = '$movable_assets',  immovable_assets = '$immovable_assets', liabilities = '$liabilities',  pan_given = '$pan_given',"
-                    . "self_income = '$self_income',  total_income = '$total_income', self_profession = '$self_profession',  position = '$position', "
-                    . "url = '$url',  hindi_state = '$state_name_hindi', hindi_constituency = '$constituency_name_hindi'"
-                    . "WHERE constituency = '$constituency' AND name='$name'");
+            $sql = "SELECT * FROM loksabha_2019 WHERE constituency = '$constituency' AND name='$name'";
+            $result = mysqli_query($conn, $sql) or die('Error:' . mysqli_error($conn));
+            if (mysqli_num_rows($result) > 0) {
+                $sql = mysqli_query($conn, "UPDATE loksabha_2019 SET party = '$party',  date_of_election = '$date_of_election', sex = '$sex',  age = '$age', "
+                        . "serious_ipc_counts = '$serious_ipc_counts',  cases = '$cases', education = '$education',  total_assets = '$total_assets', "
+                        . "movable_assets = '$movable_assets',  immovable_assets = '$immovable_assets', liabilities = '$liabilities',  pan_given = '$pan_given',"
+                        . "self_income = '$self_income',  total_income = '$total_income', self_profession = '$self_profession',  position = '$position', "
+                        . "url = '$url',  hindi_state = '$state_name_hindi', hindi_constituency = '$hindi_constituency'"
+                        . "WHERE constituency = '$constituency' AND name='$name'");
 
-            if (!$sql)
-                die('Error:' . mysql_error());
-        } else {
-            $sql = "INSERT INTO loksabha_2019 (name, constituency, party, state, date_of_election, sex, age, serious_ipc_counts,
+                if (!$sql)
+                    die('Error:' . mysqli_error($conn));
+            } else {
+                $sql = "INSERT INTO loksabha_2019 (name, constituency, party, state, date_of_election, sex, age, serious_ipc_counts,
 								cases, education, total_assets, movable_assets, immovable_assets, liabilities, pan_given,
 								self_income, total_income, self_profession, position, url, hindi_state, hindi_constituency)
-				VALUES ('$name', '$constituency_name', '$party', '$state', '$date_of_election', '$sex', '$age', '$serious_ipc_counts',
+				VALUES ('$name', '$constituency', '$party', '$state', '$date_of_election', '$sex', '$age', '$serious_ipc_counts',
 								'$cases', '$education', '$total_assets', '$movable_assets', '$immovable_assets', '$liabilities', '$pan_given',
-								'$self_income', '$total_income', '$self_profession', '$position', '$url', '$state_name_hindi', '$constituency_name_hindi')";
-        }
+								'$self_income', '$total_income', '$self_profession', '$position', '$url', '$hindi_state', '$hindi_constituency')";
 
-        if ($conn->query($sql) === TRUE) {
-            //nothing to do
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-
-        // Filter Congress and BJP
-        $sql = "SELECT name, party FROM loksabha_2019 WHERE constituency = '$constituency' and bucket = ''";
-        $result = mysqli_query($conn, $sql) or die('Error:' . mysql_error());
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                if ($row[party] === "BJP" || $row[party] === "INC") {
-                    $sql = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'illegal-foriegn-funding' WHERE constituency = '$constituency' AND name = '$row[name]'");
-                    if (!$sql)
-                        die('Error:' . mysql_error());
+                if ($conn->query($sql) === TRUE) {
+                    //nothing to do
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
                 }
             }
         }
+        //echo $constituency_name_hindi;
+        //echo $state_name_hindi;
+        //check if case of NEW(insert) or CORRECTION(update)
+        echo $state . ", " . $constituency . ", Total: " . $total . "\n";
+    } else {
+        echo $state . ", " . $constituency . ", FAIL: $json" . "\n";
+    }
+}
 
-        // Filter criminals
-        $sql = "SELECT name, serious_ipc_counts FROM loksabha_2019 WHERE constituency = '$constituency' and bucket = ''";
-        $result = mysqli_query($conn, $sql) or die('Error:' . mysql_error());
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                if ($row[serious_ipc_counts] > 0) {
-                    $sql = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'criminal cases' WHERE constituency = '$constituency' AND name = '$row[name]'");
-                    if (!$sql)
-                        die('Error:' . mysql_error());
-                }
-            }
-        }
-
-        // Filter aged-persons > 64
-        $sql = "SELECT name, age FROM loksabha_2019 WHERE constituency = '$constituency' and bucket = ''";
-        $result = mysqli_query($conn, $sql) or die('Error:' . mysql_error());
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                if ($row[age] > 64) {
-                    $sql = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'aged' WHERE constituency = '$constituency' AND name = '$row[name]'");
-                    if (!$sql)
-                        die('Error:' . mysql_error());
-                }
-            }
-        }
-
-        // Filter education < Graduate
-        $sql = "SELECT name, education FROM loksabha_2019 WHERE constituency = '$constituency' and bucket = ''";
-        $result = mysqli_query($conn, $sql) or die('Error:' . mysql_error());
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                if ($row[education] === "Illiterate" || $row[education] === "5th Pass" || $row[education] === "8th Pass" ||
-                        $row[education] === "10th Pass" || $row[education] === "12th Pass") {
-                    $sql = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'Not graduate' WHERE constituency = '$constituency' AND name = '$row[name]'");
-                    if (!$sql)
-                        die('Error:' . mysql_error());
-                }
-            }
-        }
-
-        // java array generation
-        $sql = "SELECT constituency, hindi_state, hindi_constituency, hindi_name, hindi_party FROM loksabha_2019 where constituency = '$constituency'";
-
-        $result = mysqli_query($conn, $sql) or trigger_error("Query Failed! SQL: $sql - Error: " . mysqli_error(), E_USER_ERROR);
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-                //echo $row["constituency"] . $row["hindi_state"] . $row["hindi_constituency"] . $row["hindi_name"] . $row["hindi_party"] . "\n";
-            }
+// Filter Congress and BJP
+$serach_BJP_INC = "SELECT name, party FROM loksabha_2019 WHERE bucket = ''";
+$result_BJP_INC = mysqli_query($conn, $serach_BJP_INC) or die('Error:' . mysqli_error($conn));
+if (mysqli_num_rows($result_BJP_INC) > 0) {
+    while ($row = mysqli_fetch_assoc($result_BJP_INC)) {
+        if ($row[party] === "BJP" || $row[party] === "INC") {
+            //echo "Name: $row[name], Party: $row[party]\n";
+            $filter_illegal_funding = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'ForeignFunding' WHERE name = '$row[name]' AND party = '$row[party]'");
+            if (!$filter_illegal_funding)
+                die('Error:' . $filter_illegal_funding . ' -> ' . mysqli_error($conn));
         }
     }
-    echo "Constituency: " . $constituency . ", Total: " . $total . "\n";
+}
+
+// Filter criminals
+$serach_criminals = "SELECT name, serious_ipc_counts FROM loksabha_2019 WHERE bucket = ''";
+$result_criminals = mysqli_query($conn, $serach_criminals) or die('Error:' . mysqli_error($conn));
+if (mysqli_num_rows($result_criminals) > 0) {
+    while ($row = mysqli_fetch_assoc($result_criminals)) {
+        if ($row[serious_ipc_counts] > 0) {
+            //echo "Name: $row[name], IPC_Counts: $row[serious_ipc_counts]\n";
+            $filter_criminals = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'CriminalCases' WHERE name = '$row[name]' AND serious_ipc_counts = '$row[serious_ipc_counts]'");
+            if (!$filter_criminals)
+                die('Error:' . $filter_criminals . ' -> ' . mysqli_error($conn));
+        }
+    }
+}
+
+// Filter candidate_age > 64
+$search_elders = "SELECT name, age FROM loksabha_2019 WHERE bucket = ''";
+$result_elders = mysqli_query($conn, $search_elders) or die('Error:' . mysqli_error($conn));
+if (mysqli_num_rows($result_elders) > 0) {
+    while ($row = mysqli_fetch_assoc($result_elders)) {
+        if ($row[age] > 64) {
+            //echo "Name: $row[name], Age: $row[age]\n";
+            $filter_elders = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'OverAged' WHERE name = '$row[name]' AND age = $row[age]");
+            if (!$filter_elders)
+                die('Error:' . $filter_elders . ' -> ' . mysqli_error($conn));
+        }
+    }
+}
+
+// Filter education < Graduate
+$serach_not_graduate = "SELECT name, education FROM loksabha_2019 WHERE bucket = ''";
+$result_not_graduate = mysqli_query($conn, $serach_not_graduate) or die('Error:' . mysqli_error($conn));
+if (mysqli_num_rows($result_not_graduate) > 0) {
+    while ($row = mysqli_fetch_assoc($result_not_graduate)) {
+        if ($row[education] == "Illiterate" || $row[education] == "5th Pass" || $row[education] == "8th Pass" ||
+                $row[education] == "10th Pass" || $row[education] == "12th Pass" || $row[education] == "Others") {
+            //echo "Name: $row[name], Education: $row[education]\n";
+            $filter_not_graduate = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'NotGraduate' WHERE name = '$row[name]' AND education = '$row[education]'");
+            if (!$filter_not_graduate)
+                die('Error:' . $filter_not_graduate . ' -> ' . mysqli_error($conn));
+        }
+    }
 }
