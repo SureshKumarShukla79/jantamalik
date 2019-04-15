@@ -18,11 +18,15 @@ if ($conn->connect_error) {
 
 // get the list of seat/ constituencies
 foreach ($all_MPs as $array) {
+    $time_total_before = microtime(true);
+
     $constituency = $array[3];
     $state = $array[0];
     $url = "https://myneta.info/api/ver4.1/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&apikey=" . $ADR_key;
     // save the json
+    $time_before = microtime(true);
     file_put_contents($constituency . ".json", fopen($url, 'r'));
+    $time_after = microtime(true);
 
     // parse the json for candidate details - filter them into good/bad buckets (arrays)
     $file_name = file_get_contents($constituency . ".json");
@@ -82,22 +86,23 @@ foreach ($all_MPs as $array) {
             $sql = "SELECT * FROM loksabha_2019 WHERE constituency = '$constituency' AND name='$name'";
             $result = mysqli_query($conn, $sql) or die('Error:' . mysqli_error($conn));
             if (mysqli_num_rows($result) > 0) {
-                $sql = mysqli_query($conn, "UPDATE loksabha_2019 SET party = '$party',  date_of_election = '$date_of_election', sex = '$sex',  age = '$age', "
+                $sql = "UPDATE loksabha_2019 SET party = '$party',  date_of_election = '$date_of_election', sex = '$sex',  age = '$age', "
                         . "serious_ipc_counts = '$serious_ipc_counts',  cases = '$cases', education = '$education',  total_assets = '$total_assets', "
                         . "movable_assets = '$movable_assets',  immovable_assets = '$immovable_assets', liabilities = '$liabilities',  pan_given = '$pan_given',"
                         . "self_income = '$self_income',  total_income = '$total_income', self_profession = '$self_profession',  position = '$position', "
-                        . "url = '$url',  hindi_state = '$state_name_hindi', hindi_constituency = '$hindi_constituency'"
-                        . "WHERE constituency = '$constituency' AND name='$name'");
+                        . "url = '$url'"
+                        . " WHERE constituency = '$constituency' AND name='$name'";
+                $tmp = mysqli_query($conn, $sql);
 
-                if (!$sql)
+                if (!$tmp)
                     die('Error:' . mysqli_error($conn));
             } else {
                 $sql = "INSERT INTO loksabha_2019 (name, constituency, party, state, date_of_election, sex, age, serious_ipc_counts,
 								cases, education, total_assets, movable_assets, immovable_assets, liabilities, pan_given,
-								self_income, total_income, self_profession, position, url, hindi_state, hindi_constituency)
+								self_income, total_income, self_profession, position, url)
 				VALUES ('$name', '$constituency', '$party', '$state', '$date_of_election', '$sex', '$age', '$serious_ipc_counts',
 								'$cases', '$education', '$total_assets', '$movable_assets', '$immovable_assets', '$liabilities', '$pan_given',
-								'$self_income', '$total_income', '$self_profession', '$position', '$url', '$hindi_state', '$hindi_constituency')";
+								'$self_income', '$total_income', '$self_profession', '$position', '$url')";
 
                 if ($conn->query($sql) === TRUE) {
                     //nothing to do
@@ -105,16 +110,20 @@ foreach ($all_MPs as $array) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
             }
+            //echo "sql: $sql\n";
         }
+
         //echo $constituency_name_hindi;
         //echo $state_name_hindi;
         //check if case of NEW(insert) or CORRECTION(update)
-        echo $state . ", " . $constituency . ", Total: " . $total . "\n";
+        //echo $state . ", " . $constituency . ", Total: " . $total . "\n";
     } else {
         echo $state . ", " . $constituency . ", FAIL: $json" . "\n";
     }
-}
 
+    $time_total_after = microtime(true);
+    //echo "Total " . ($time_total_after - $time_total_before) . " API " . ($time_after - $time_before) . "\n\n";
+} //ADR import complete into DB
 // Filter Congress and BJP
 $serach_BJP_INC = "SELECT name, party FROM loksabha_2019 WHERE bucket = ''";
 $result_BJP_INC = mysqli_query($conn, $serach_BJP_INC) or die('Error:' . mysqli_error($conn));
