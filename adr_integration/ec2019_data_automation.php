@@ -3,8 +3,6 @@
 require_once ("db.php");
 require_once ("state_consituency.php");
 
-header("Content-type: text/html; charset=utf-8");
-
 // Create connection
 $conn = new mysqli($servername, $user, $password, $database);
 
@@ -20,9 +18,11 @@ if ($conn->connect_error) {
 foreach ($all_MPs as $array) {
     $time_total_before = microtime(true);
 
-    $constituency = $array[3];
     $state = $array[0];
-    $url = "https://myneta.info/api/ver4.1/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&apikey=" . $ADR_key;
+    $constituency = $array[3];
+
+    $url = "https://api.myneta.info/ver4.3/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&apikey=" . $ADR_key;
+    echo $url . "\n";
     // save the json
     $time_before = microtime(true);
     file_put_contents($constituency . ".json", fopen($url, 'r'));
@@ -35,7 +35,20 @@ foreach ($all_MPs as $array) {
 
     // for every seat, check json is not null
     if (empty($json) == false) {
+
         foreach ($json as $candidate) {
+            //echo $candidate;
+            // check for return 1 - data coming soon
+            if ($candidate[0] === '1') {
+                echo $state . ", " . $constituency . ", COMING SOON \n";
+                break;
+            }
+            // check for return 2 - doesn't exist or spelling mistake
+            if ($candidate[0] === '2') {
+                echo $state . ", " . $constituency . ", SPELLING \n";
+                break;
+            }
+
             $i = 0;
             foreach ($candidate as $candidate_data) {
                 ++$i;
@@ -110,7 +123,7 @@ foreach ($all_MPs as $array) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
             }
-            //echo "sql: $sql\n";
+            echo "sql: $sql\n";
         }
 
         //echo $constituency_name_hindi;
