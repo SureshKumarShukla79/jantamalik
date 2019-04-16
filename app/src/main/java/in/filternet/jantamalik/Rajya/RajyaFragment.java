@@ -49,6 +49,7 @@ public class RajyaFragment extends Fragment {
             //    "STATE"	    	                     "BUDGET"		      "राज्य"                             "बजट"
             {	"Andaman and Nicobar Islands"	,	"? lakh crore"	    ,	"अण्डमान और निकोबार द्वीपसमूह"  ,     "? लाख करोड़"        }	,
             {	"Andhra Pradesh"	            ,	"? lakh crore"      ,	"आन्ध्र प्रदेश"                 ,	    "? लाख करोड़"        }	,
+            {	"Arunachal Pradesh"	            ,	"? lakh crore"      ,	"अरुणाचल प्रदेश"                 ,	    "? लाख करोड़"        }	,
             {	"Assam"	                        ,	"? lakh crore" 	    ,   "असम"                     ,	    "? लाख करोड़"        }	,
             {	"Bihar"	                        ,	"1.77 lakh crore"   ,	"बिहार"                     ,     "1.77 लाख करोड़"     }	,
             {	"Chandigarh"	                ,	"? lakh crore"      ,	"चण्डीगढ़"                  ,	    "? लाख करोड़"        }	,
@@ -73,7 +74,6 @@ public class RajyaFragment extends Fragment {
             {	"Nagaland"	                    ,	"? lakh crore"      ,	"नागालैण्ड"                   ,	"? लाख करोड़"        }	,
             {	"Odisha"	                    ,	"? lakh crore"      ,	"ओडिशा"                    ,    "? लाख करोड़"        }	,
             {	"Puducherry"	                ,	"? lakh crore"      ,	"पुदुच्चेरी"                    ,	"? लाख करोड़"        }	,
-            {	"Chhattisgarh"	                ,	"? lakh crore"      ,	"छत्तीसगढ़"                   ,    "? लाख करोड़"        }	,
             {	"Punjab"	                    ,	"? lakh crore" 	    ,   "पंजाब"                     ,	    "? लाख करोड़"        }	,
             {	"Rajasthan"	                    ,	"? lakh crore"      ,	"राजस्थान"                   ,    "? लाख करोड़"        }	,
             {	"Sikkim"	                    ,	"? lakh crore"      ,	"सिक्किम"                   ,	    "? लाख करोड़"        }	,

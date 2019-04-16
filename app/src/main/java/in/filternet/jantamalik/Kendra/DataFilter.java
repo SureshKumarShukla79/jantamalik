@@ -1,5 +1,9 @@
 package in.filternet.jantamalik.Kendra;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -64,12 +68,15 @@ public class DataFilter {
     }
 
 
-    public MP_info getMPInfo(String lang,String MPArea) {
+    public MP_info getMPInfo(Context context, String lang, String MPArea) {
       //  Log.e(TAG,lang+" "+MPArea);
-        int i,J=3,nameCol=4,phoneCol=9,emailCol=10,addCol=11;
+        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
+        String state = shared_pref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        int i,stateCol=0,J=3,nameCol=4,phoneCol=9,emailCol=10,addCol=11;
 
         MP_info mp_info = new MP_info();
         if (lang.equals(MainActivity.sLANGUAGE_HINDI)) {
+            stateCol=1;
             J = 6;
             nameCol = 7;
             phoneCol =9;
@@ -77,7 +84,7 @@ public class DataFilter {
             addCol =   11;
         }
         for(i=0;i<MPdata.all_MPs.length;i++){
-            if (MPArea.equals(MPdata.all_MPs[i][J])) {
+            if (state.equals(MPdata.all_MPs[i][stateCol]) && MPArea.equals(MPdata.all_MPs[i][J])) {
                 mp_info.name = MPdata.all_MPs[i][nameCol];
                 mp_info.phone = MPdata.all_MPs[i][phoneCol];
                 mp_info.email = MPdata.all_MPs[i][emailCol];

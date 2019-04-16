@@ -68,8 +68,8 @@
         \n1. मेरे सवालोंं को लोकसभा में पूछना और सरकार से जवाब लेना
         \n2. लोकसभा की बहसों में मेरे पक्ष को रखना
         \n3. सरकार के खर्च और काम-काज का हिसाब समझकर मुझे बताना</string>
-    <string name="mp_optional"><b>गैर-जरूरी या वैकल्पिक</b>
-        \nशादी या पार्टी या समारोह में जाना, सोशल मीडिया</string>
+    <string name="mp_optional"><b>सांसद लोगो से कैसे जुड़े</b>
+        \nअखबार में लेख या सोशल मीडिया या जनसभाओं में</string>
     <string name="salary_Saansad"><b>वेतन 2.7 लाख प्रतिमाह</b> (भत्ते मिलाकर)
         \nदो लाख सत्तर हजार रुपये</string>
 
@@ -538,7 +538,7 @@
         ❌ उम्मीदवार की आयु 65 साल या ज्यादा हैं (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)\n
         ❌ उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)
     </string>
-    <string name="coming_soon">जल्द आ रहा है...\nअपना टाइम आयेगा</string>
+    <string name="coming_soon">नामांकन पूरा नहीं हुआ है\nजल्द आयेगा</string>
     <string name="good_candidate">अच्छे उम्मीदवार</string>
     <string name="bad_candidate">फालतू उम्मीदवार</string>
     <string name="political_party">राजनीतिक दल</string>
@@ -549,7 +549,14 @@
     <string name="congratulation">बधाई हो</string>
     <string name="smart_voter">आप बहुत <b>जागरूक वोटर</b> है</string>
     <string name="user_thanks">धन्यवाद</string>
-    <string name="election_2019_header_line">ना 15 लाख, ना 72 हजार\n
-        अच्छा सांसद, तो अच्छी सरकार</string>
+    <string name="election_2019_header_line">1952 में नेहरूजी के नाम पर
+        \n2014 में मोदीजी के नाम पर
+        \n\n70 साल से बड़े नाम पर ही वोट दिया,
+        \nफिर 5-साल अपने सांसद का इंतजार किया
+        \n\nनतीजा देख लिया ???
+        \n9 अमीरों के पास, देश की आधी आबादी जितनी सम्पत्ति
+        \n\nतो अबकी बार,
+        \nना 15 लाख, ना 72 हजार
+        \nअच्छा सांसद तो अच्छी सरकार</string>
     <string name="adr_source"><a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
 </resources>

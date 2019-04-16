@@ -169,7 +169,7 @@ public class VoteMP extends AppCompatActivity {
     private void updateMP() {
         DataFilter dataFilter = new DataFilter();
         //mp = dataFilter.new MP_info();
-        mp = dataFilter.getMPInfo(mLanguage, MPArea);
+        mp = dataFilter.getMPInfo(this, mLanguage, MPArea);
 
         //Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
         name.setText(mp.name);

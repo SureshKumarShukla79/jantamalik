@@ -69,8 +69,8 @@
         \n1. Ask my questions and get answer from govt
         \n2. Put my points in debates in Parliament
         \n3. Share the govt spending and policies with me</string>
-    <string name="mp_optional"><b>Optional</b>
-        \nAttending weddings, parties, public functions and social media</string>
+    <string name="mp_optional"><b>How MP can communicate</b>
+        \nArticle in newspaper or social media or public meetings</string>
     <string name="salary_Saansad"><b>Salary 2.7 lakh per month</b> (including allowances)
         \nTwo lakh seventy thousand rupees</string>
 
@@ -531,7 +531,7 @@
         ❌ Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)\n
         ❌ Candidate is not graduate (needs to make bills on 100 topics)\n
     </string>
-    <string name="coming_soon">Coming soon...\nApna Time Aayega</string>
+    <string name="coming_soon">Nomination is under progress\nComing soon</string>
     <string name="good_candidate">Good candidates</string>
     <string name="bad_candidate">Useless candidates</string>
     <string name="political_party">Political Party</string>
@@ -542,7 +542,13 @@
     <string name="congratulation">Congratulations</string>
     <string name="smart_voter">You are a <b>Smart Voter</b></string>
     <string name="user_thanks">Thank You</string>
-    <string name="election_2019_header_line">For good government,
-        \nchoose your MP wisely</string>
+    <string name="election_2019_header_line">1952 we voted for Nehru
+        \n2014 we voted for Modi
+        \n\nFor 70 years we voted for big names,
+        \nThen wait for MP for 5 years
+        \n\nOutcome ???
+        \n9 rich men have more wealth than half population
+        \n\nThis time,
+        \nGood MPs for Good governance</string>
     <string name="adr_source"><a href="https://adrindia.org">Association for Democratic Reforms</a></string>
 </resources>

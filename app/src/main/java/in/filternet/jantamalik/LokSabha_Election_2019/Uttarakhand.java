@@ -1,0 +1,62 @@
+/* Auto-generated file from db2java.php*/
+package in.filternet.jantamalik.LokSabha_Election_2019;
+
+public class Uttarakhand {
+public static final String[][] green_bucket = {
+{"Uttarakhand",  "6083", "Almora", "K.L. Arya", "UKD", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5444",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6084", "Almora", "Dropadi Verma", "Uttarakhand Kranti Dal (Democratic)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5170",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6087", "Almora", "Vimla Arya", "UTTARAKHAND PARIVARTAN PARTY", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5169",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6088", "Almora", "Sunder Dhauni", "BSP", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4913",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6074", "Garhwal", "Dr. Ramendra Singh Bhandari", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5431",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6097", "Haridwar", "Dharmendra", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7183",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6098", "Haridwar", "Aadil", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5452",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6101", "Haridwar", "Narendra Chauhan", "Bhartiya Sarvodaya Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5451",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6103", "Haridwar", "Furkan Ali", "Pragatishil Samajwadi Party (Lohia)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5450",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6105", "Haridwar", "Dr. Antriksh Saini", "BSP", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4914",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6107", "Haridwar", "Surendra Kumar Upadhayay", "UKD", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5841",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6108", "Haridwar", "Lalit Kumar", "Peoples Party of India (Democratic)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5842",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6109", "Haridwar", "Reenu", "Hindusthan Nirman Dal", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7182",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6092", "Nainital-UdhamSingh Nagar", "Kailash Pandey", "CPI(ML)(L)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4997",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6093", "Nainital-UdhamSingh Nagar", "Navneet Agarwal", "BSP", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4999",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6060", "Tehri Garhwal", "Gopal Mani", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4994",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6068", "Tehri Garhwal", "Rajendra Purohit", "CPI(M)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4995",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6069", "Tehri Garhwal", "Sanjay Kundaliya", "Uttarakhand Pragatisheel Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5423",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6071", "Tehri Garhwal", "Brij Bhushan Karanwal", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5829",  "",  "", "", "", ""}, 
+{"Uttarakhand",  "6073", "Tehri Garhwal", "Barhm Dev Jha", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5424",  "",  "", "", "", ""}, 
+};
+
+public static final String[][] red_bucket = {
+{ "Uttarakhand",  "6085",  "Almora", "Pradeep Tamta", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6086",  "Almora", "Ajay Tamta", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6075",  "Garhwal", "Anandmani Dutt Joshi", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6076",  "Garhwal", "Dr. Mukesh Semwal", "CriminalCases",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6077",  "Garhwal", "Shanti Prasad Bhatt", "CriminalCases",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6078",  "Garhwal", "Dilendrr Pal Singh", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6079",  "Garhwal", "Tirath Singh Rawat", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6080",  "Garhwal", "Bhagwat Prasad", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6081",  "Garhwal", "Manish Khanduri", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6082",  "Garhwal", "Vinod Prasad Notiyal", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6096",  "Haridwar", "Ramesh Pokhriyal Nishank", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6099",  "Haridwar", "Tribirendra Singh Rawat", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6100",  "Haridwar", "Shishupal Singh", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6102",  "Haridwar", "Ambrish Kumar", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6104",  "Haridwar", "Bhanpal Singh", "OverAged",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6106",  "Haridwar", "Bachi Singh", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6089",  "Nainital-UdhamSingh Nagar", "Harish Rawat", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6090",  "Nainital-UdhamSingh Nagar", "Sukumar Vishwash", "OverAged",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6091",  "Nainital-UdhamSingh Nagar", "Prem Prasad Arya", "OverAged",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6094",  "Nainital-UdhamSingh Nagar", "Jyoti Prakash Tamta", "OverAged",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6095",  "Nainital-UdhamSingh Nagar", "Ajay Bhatt", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6059",  "Tehri Garhwal", "Sardar Khan", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6061",  "Tehri Garhwal", "Jay Prakash Upadhyay", "CriminalCases",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6062",  "Tehri Garhwal", "Mala Rajya Laxmi Shah", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6063",  "Tehri Garhwal", "Daulat Kunwar", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6064",  "Tehri Garhwal", "Madhu Shah", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6065",  "Tehri Garhwal", "Sanjay Goyal", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6066",  "Tehri Garhwal", "Anu Pant", "CriminalCases",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6067",  "Tehri Garhwal", "Satyapal", "CriminalCases",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6070",  "Tehri Garhwal", "Gautam Singh Bisht", "NotGraduate",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6072",  "Tehri Garhwal", "Pritam Singh", "ForeignFunding",  " ","",  "", "", " "}, 
+};
+
+}
