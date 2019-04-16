@@ -15,8 +15,8 @@ android {
 
         versionCode 190101
         versionName "devel"
-        //versionCode 190409
-        //versionName "19.04.09"
+        //versionCode 190416
+        //versionName "19.04.16"
     }
     buildTypes {
         release {
