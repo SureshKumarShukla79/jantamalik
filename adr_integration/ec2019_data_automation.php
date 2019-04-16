@@ -21,8 +21,8 @@ foreach ($all_MPs as $array) {
     $state = $array[0];
     $constituency = $array[3];
 
-    $url = "https://api.myneta.info/ver4.3/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&apikey=" . $ADR_key;
-    echo $url . "\n";
+    $url = "https://api.myneta.info/ver4.3/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&state=" . urlencode($state) . "&apikey=" . $ADR_key;
+    //echo $url . "\n";
     // save the json
     $time_before = microtime(true);
     file_put_contents($constituency . ".json", fopen($url, 'r'));
@@ -38,6 +38,11 @@ foreach ($all_MPs as $array) {
 
         foreach ($json as $candidate) {
             //echo $candidate;
+            //// check for return 0 - missing state
+            if ($candidate[0] === '0') {
+                echo $state . ", " . $constituency . ", MISSING STATE \n";
+                break;
+            }
             // check for return 1 - data coming soon
             if ($candidate[0] === '1') {
                 echo $state . ", " . $constituency . ", COMING SOON \n";
@@ -104,7 +109,7 @@ foreach ($all_MPs as $array) {
                         . "movable_assets = '$movable_assets',  immovable_assets = '$immovable_assets', liabilities = '$liabilities',  pan_given = '$pan_given',"
                         . "self_income = '$self_income',  total_income = '$total_income', self_profession = '$self_profession',  position = '$position', "
                         . "url = '$url'"
-                        . " WHERE constituency = '$constituency' AND name='$name'";
+                        . " WHERE state = '$state' AND constituency = '$constituency' AND name='$name'";
                 $tmp = mysqli_query($conn, $sql);
 
                 if (!$tmp)
@@ -123,7 +128,7 @@ foreach ($all_MPs as $array) {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }
             }
-            echo "sql: $sql\n";
+            //echo "sql: $sql\n";
         }
 
         //echo $constituency_name_hindi;

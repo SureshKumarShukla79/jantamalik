@@ -20,7 +20,7 @@ $state = $argv[1];
 $constituency = $argv[2];
 echo "\nState: $state, Constituency: $constituency";
 
-$url = "https://api.myneta.info/ver4.3/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&apikey=" . $ADR_key;
+$url = "https://api.myneta.info/ver4.3/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&state=" . urlencode($state) . "&apikey=" . $ADR_key;
 // save the json
 $time_before = microtime(true);
 file_put_contents($constituency . ".json", fopen($url, 'r'));
@@ -35,6 +35,11 @@ $total = 0;
 if (empty($json) == false) {
     foreach ($json as $candidate) {
         //echo $candidate;
+        // check for return 0 - missing state
+        if ($candidate[0] === '0') {
+            echo $state . ", " . $constituency . ", MISSING STATE \n";
+            exit(0);
+        }
         // check for return 1 - data coming soon
         if ($candidate[0] === '1') {
             echo $state . ", " . $constituency . ", COMING SOON \n";
@@ -100,8 +105,8 @@ if (empty($json) == false) {
                     . "serious_ipc_counts = '$serious_ipc_counts',  cases = '$cases', education = '$education',  total_assets = '$total_assets', "
                     . "movable_assets = '$movable_assets',  immovable_assets = '$immovable_assets', liabilities = '$liabilities',  pan_given = '$pan_given',"
                     . "self_income = '$self_income',  total_income = '$total_income', self_profession = '$self_profession',  position = '$position', "
-                    . "url = '$url'"
-                    . " WHERE constituency = '$constituency' AND name='$name'";
+                    . "url = '$url' "
+                    . "WHERE state = '$state' AND constituency = '$constituency' AND name='$name'";
             $tmp = mysqli_query($conn, $sql);
 
             if (!$tmp)
