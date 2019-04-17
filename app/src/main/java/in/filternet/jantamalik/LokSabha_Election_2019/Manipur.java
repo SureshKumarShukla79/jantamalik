@@ -3,12 +3,12 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Manipur {
 public static final String[][] green_bucket = {
-{"Manipur",  "4356", "Inner Manipur", "R.K. Anand", "North East India Development Party", "http://myneta.info/ls2014/candidate.php?candidate_id=6065",  "",  "", "", "", ""}, 
-{"Manipur",  "4357", "Inner Manipur", "Senjam Nandeshwore Singh", "Rashtriya Janhit Sangharsh Party", "http://myneta.info/ls2014/candidate.php?candidate_id=5674",  "",  "", "", "", ""}, 
-{"Manipur",  "4363", "Outer Manipur", "Ashang Kasar", "North East India Development Party", "http://myneta.info/ls2014/candidate.php?candidate_id=5681",  "",  "", "", "", ""}, 
-{"Manipur",  "4364", "Outer Manipur", "Hangkhanpau Taithul", "JD(U)", "http://myneta.info/ls2014/candidate.php?candidate_id=5678",  "",  "", "", "", ""}, 
-{"Manipur",  "4366", "Outer Manipur", "Lorho S. Pfoze", "NPF", "http://myneta.info/ls2014/candidate.php?candidate_id=4709",  "",  "", "", "", ""}, 
-{"Manipur",  "4368", "Outer Manipur", "Angam Karung Kom", "NCP", "http://myneta.info/ls2014/candidate.php?candidate_id=5679",  "",  "", "", "", ""}, 
+{"Manipur",  "4356", "Inner Manipur", "R.K. Anand", "North East India Development Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6065",  "",  "", "", "", ""}, 
+{"Manipur",  "4357", "Inner Manipur", "Senjam Nandeshwore Singh", "Rashtriya Janhit Sangharsh Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5674",  "",  "", "", "", ""}, 
+{"Manipur",  "4363", "Outer Manipur", "Ashang Kasar", "North East India Development Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5681",  "",  "", "", "", ""}, 
+{"Manipur",  "4364", "Outer Manipur", "Hangkhanpau Taithul", "JD(U)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5678",  "",  "", "", "", ""}, 
+{"Manipur",  "4366", "Outer Manipur", "Lorho S. Pfoze", "NPF", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4709",  "",  "", "", "", ""}, 
+{"Manipur",  "4368", "Outer Manipur", "Angam Karung Kom", "NCP", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5679",  "",  "", "", "", ""}, 
 };
 
 public static final String[][] red_bucket = {

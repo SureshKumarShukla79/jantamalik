@@ -3,11 +3,11 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Puducherry {
 public static final String[][] green_bucket = {
-{"Puducherry",  "4452", "Puducherry", "Baskaran.S", "Puducherry Development Party", "http://myneta.info/ls2014/candidate.php?candidate_id=7158",  "",  "", "", "", ""}, 
-{"Puducherry",  "4458", "Puducherry", "A.G.Pathimaraj", "BSP", "http://myneta.info/ls2014/candidate.php?candidate_id=7157",  "",  "", "", "", ""}, 
-{"Puducherry",  "4460", "Puducherry", "Tiravitamankai Alias Lourdhumary", "IND", "http://myneta.info/ls2014/candidate.php?candidate_id=7167",  "",  "", "", "", ""}, 
-{"Puducherry",  "4462", "Puducherry", "Dr. Narayanasamy Kesavan", "All India N.R. Congress", "http://myneta.info/ls2014/candidate.php?candidate_id=5102",  "",  "", "", "", ""}, 
-{"Puducherry",  "4464", "Puducherry", "Krishnamurthy.M", "IND", "http://myneta.info/ls2014/candidate.php?candidate_id=7161",  "",  "", "", "", ""}, 
+{"Puducherry",  "4452", "Puducherry", "Baskaran.S", "Puducherry Development Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7158",  "",  "", "", "", ""}, 
+{"Puducherry",  "4458", "Puducherry", "A.G.Pathimaraj", "BSP", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7157",  "",  "", "", "", ""}, 
+{"Puducherry",  "4460", "Puducherry", "Tiravitamankai Alias Lourdhumary", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7167",  "",  "", "", "", ""}, 
+{"Puducherry",  "4462", "Puducherry", "Dr. Narayanasamy Kesavan", "All India N.R. Congress", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5102",  "",  "", "", "", ""}, 
+{"Puducherry",  "4464", "Puducherry", "Krishnamurthy.M", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7161",  "",  "", "", "", ""}, 
 };
 
 public static final String[][] red_bucket = {

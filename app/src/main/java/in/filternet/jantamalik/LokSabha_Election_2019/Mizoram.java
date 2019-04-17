@@ -3,9 +3,9 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Mizoram {
 public static final String[][] green_bucket = {
-{"Mizoram",  "4380", "Mizoram", "Lalnghinglova Hmar", "IND", "http://myneta.info/ls2014/candidate.php?candidate_id=5118",  "",  "", "", "", ""}, 
-{"Mizoram",  "4383", "Mizoram", "Lal Hriatrenga Chhangte", "IND", "http://myneta.info/ls2014/candidate.php?candidate_id=4901",  "",  "", "", "", ""}, 
-{"Mizoram",  "4384", "Mizoram", "C Lalrosanga", "MNF", "http://myneta.info/ls2014/candidate.php?candidate_id=4900",  "",  "", "", "", ""}, 
+{"Mizoram",  "4380", "Mizoram", "Lalnghinglova Hmar", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5118",  "",  "", "", "", ""}, 
+{"Mizoram",  "4383", "Mizoram", "Lal Hriatrenga Chhangte", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4901",  "",  "", "", "", ""}, 
+{"Mizoram",  "4384", "Mizoram", "C Lalrosanga", "MNF", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4900",  "",  "", "", "", ""}, 
 };
 
 public static final String[][] red_bucket = {

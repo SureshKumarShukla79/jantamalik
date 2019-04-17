@@ -274,11 +274,6 @@ public class Issues extends AppCompatActivity {
                 bucket = Daman_and_Diu.green_bucket;
                 break;
 
-            case "Delhi":
-            case "दिल्ली":
-                bucket = Delhi.green_bucket;
-                break;
-
             case "Goa":
             case "गोवा":
                 bucket = Goa.green_bucket;
@@ -352,6 +347,11 @@ public class Issues extends AppCompatActivity {
             case "Nagaland":
             case "नागालैण्ड":
                 bucket = Nagaland.green_bucket;
+                break;
+
+            case "National Capital Territory of Delhi":
+            case "दिल्ली":
+                bucket = National_Capital_Territory_of_Delhi.green_bucket;
                 break;
 
             case "Odisha":
@@ -463,11 +463,6 @@ public class Issues extends AppCompatActivity {
                 bucket = Daman_and_Diu.red_bucket;
                 break;
 
-            case "Delhi":
-            case "दिल्ली":
-                bucket = Delhi.red_bucket;
-                break;
-
             case "Goa":
             case "गोवा":
                 bucket = Goa.red_bucket;
@@ -541,6 +536,11 @@ public class Issues extends AppCompatActivity {
             case "Nagaland":
             case "नागालैण्ड":
                 bucket = Nagaland.red_bucket;
+                break;
+
+            case "National Capital Territory of Delhi":
+            case "दिल्ली":
+                bucket = National_Capital_Territory_of_Delhi.red_bucket;
                 break;
 
             case "Odisha":

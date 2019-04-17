@@ -3,15 +3,15 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Chhattisgarh {
 public static final String[][] green_bucket = {
-{"Chhattisgarh",  "3638", "Bastar", "Ramu Ram Mourya", "CPI", "http://myneta.info/ls2014/candidate.php?candidate_id=7196",  "",  "", "", "", ""}, 
-{"Chhattisgarh",  "3641", "Bastar", "Paneesh Prasad Nag", "Ambedkarite Party of India", "http://myneta.info/ls2014/candidate.php?candidate_id=7197",  "",  "", "", "", ""}, 
-{"Chhattisgarh",  "3648", "Kanker", "Durgaprasad Thakur", "Ambedkarite Party of India", "http://myneta.info/ls2014/candidate.php?candidate_id=7169",  "",  "", "", "", ""}, 
-{"Chhattisgarh",  "3649", "Kanker", "Umashankar Bhandari", "SHS", "http://myneta.info/ls2014/candidate.php?candidate_id=7175",  "",  "", "", "", ""}, 
-{"Chhattisgarh",  "3652", "Kanker", "Mathan Singh Markam", "Bhartiya Shakti Chetna Party", "http://myneta.info/ls2014/candidate.php?candidate_id=7172",  "",  "", "", "", ""}, 
-{"Chhattisgarh",  "3629", "Mahasamund", "Champalal Patel", "IND", "http://myneta.info/ls2014/candidate.php?candidate_id=5418",  "",  "", "", "", ""}, 
-{"Chhattisgarh",  "3614", "Rajnandgaon", "Ravita Lakra (Dhruv)", "BSP", "http://myneta.info/ls2014/candidate.php?candidate_id=7153",  "",  "", "", "", ""}, 
-{"Chhattisgarh",  "3623", "Rajnandgaon", "Mahendra Kumar Sahu", "Forward Democratic Labour Party", "http://myneta.info/ls2014/candidate.php?candidate_id=5538",  "",  "", "", "", ""}, 
-{"Chhattisgarh",  "3624", "Rajnandgaon", "Baidya Shekhu Ram Verma", "Ambedkarite Party of India", "http://myneta.info/ls2014/candidate.php?candidate_id=5112",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3638", "Bastar", "Ramu Ram Mourya", "CPI", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7196",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3641", "Bastar", "Paneesh Prasad Nag", "Ambedkarite Party of India", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7197",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3648", "Kanker", "Durgaprasad Thakur", "Ambedkarite Party of India", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7169",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3649", "Kanker", "Umashankar Bhandari", "SHS", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7175",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3652", "Kanker", "Mathan Singh Markam", "Bhartiya Shakti Chetna Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7172",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3629", "Mahasamund", "Champalal Patel", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5418",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3614", "Rajnandgaon", "Ravita Lakra (Dhruv)", "BSP", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7153",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3623", "Rajnandgaon", "Mahendra Kumar Sahu", "Forward Democratic Labour Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5538",  "",  "", "", "", ""}, 
+{"Chhattisgarh",  "3624", "Rajnandgaon", "Baidya Shekhu Ram Verma", "Ambedkarite Party of India", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5112",  "",  "", "", "", ""}, 
 };
 
 public static final String[][] red_bucket = {

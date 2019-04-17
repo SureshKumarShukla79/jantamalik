@@ -3,10 +3,10 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Arunachal_Pradesh {
 public static final String[][] green_bucket = {
-{"Arunachal Pradesh",  "3402", "Arunachal West", "Subu Kechi", "Peoples Party of Arunachal", "http://myneta.info/ls2014/candidate.php?candidate_id=7186",  "",  "", "", "", ""}, 
-{"Arunachal Pradesh",  "3405", "Arunachal West", "Jarjum Ete", "JD(S)", "http://myneta.info/ls2014/candidate.php?candidate_id=7187",  "",  "", "", "", ""}, 
-{"Arunachal Pradesh",  "3406", "Arunachal West", "Jomin Nyokir Kara", "AIFB", "http://myneta.info/ls2014/candidate.php?candidate_id=7188",  "",  "", "", "", ""}, 
-{"Arunachal Pradesh",  "3407", "Arunachal West", "Rumak Jomoh", "IND", "http://myneta.info/ls2014/candidate.php?candidate_id=5124",  "",  "", "", "", ""}, 
+{"Arunachal Pradesh",  "3402", "Arunachal West", "Subu Kechi", "Peoples Party of Arunachal", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7186",  "",  "", "", "", ""}, 
+{"Arunachal Pradesh",  "3405", "Arunachal West", "Jarjum Ete", "JD(S)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7187",  "",  "", "", "", ""}, 
+{"Arunachal Pradesh",  "3406", "Arunachal West", "Jomin Nyokir Kara", "AIFB", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7188",  "",  "", "", "", ""}, 
+{"Arunachal Pradesh",  "3407", "Arunachal West", "Rumak Jomoh", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5124",  "",  "", "", "", ""}, 
 };
 
 public static final String[][] red_bucket = {
