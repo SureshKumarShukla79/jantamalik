@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 $time_total_before = microtime(true);
 $state = $argv[1];
 $constituency = $argv[2];
-echo "\nState: $state, Constituency: $constituency";
+//echo "\nState: $state, Constituency: $constituency";
 
 $url = "https://api.myneta.info/ver4.3/getDataLS2019BasicDetails.php?message=" . urlencode($constituency) . "&state=" . urlencode($state) . "&apikey=" . $ADR_key;
 // save the json
@@ -131,13 +131,13 @@ if (empty($json) == false) {
     //echo $constituency_name_hindi;
     //echo $state_name_hindi;
     //check if case of NEW(insert) or CORRECTION(update)
-    echo " Total: $total \n";
+    echo $state . ", " . $constituency . " Total: $total \n";
 } else {
     echo $state . ", " . $constituency . ", FAIL: $json" . "\n";
 }
 
 $time_total_after = microtime(true);
-echo "\nTotal " . ($time_total_after - $time_total_before) . " API " . ($time_after - $time_before) . "\n";
+//echo "\nTotal " . ($time_total_after - $time_total_before) . " API " . ($time_after - $time_before) . "\n";
 //ADR import complete into DB
 // Filter Congress and BJP
 $serach_BJP_INC = "SELECT name, party FROM loksabha_2019 WHERE bucket = ''";

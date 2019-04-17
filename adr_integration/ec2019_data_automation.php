@@ -45,7 +45,7 @@ foreach ($all_MPs as $array) {
             }
             // check for return 1 - data coming soon
             if ($candidate[0] === '1') {
-                echo $state . ", " . $constituency . ", COMING SOON \n";
+                //echo $state . ", " . $constituency . ", COMING SOON \n";
                 break;
             }
             // check for return 2 - doesn't exist or spelling mistake

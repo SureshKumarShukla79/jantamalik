@@ -27,16 +27,18 @@ if (mysqli_num_rows($result_green_bucket) > 0) {
             if ($tmp != '')
                 error_log("};\n\n", 3, $FILE);
 
-            $tmp = $prev_state;
+            $tmp = str_replace(" ", "_", $prev_state);
+            $tmp = str_replace("&", "and", $tmp);
 
             // path to android source file name
-            $FILE = "../app/src/main/java/in/filternet/jantamalik/LokSabha_Election_2019/" . str_replace(" ", "_", $prev_state) . ".java";
+            $FILE = "../app/src/main/java/in/filternet/jantamalik/LokSabha_Election_2019/" . $tmp . ".java";
+            //echo "State : $tmp\n";
             unlink($FILE);
 
             error_log("/* Auto-generated file from db2java.php*/
 package in.filternet.jantamalik.LokSabha_Election_2019;
 
-public class " . str_replace(" ", "_", $prev_state) . " {\n", 3, $FILE);
+public class " . str_replace(" ", "_", $tmp) . " {\n", 3, $FILE);
 
             error_log("public static final String[][] green_bucket = {\n", 3, $FILE);
         }
@@ -62,10 +64,11 @@ if (mysqli_num_rows($result_red_bucket) > 0) {
                 error_log("}", 3, $FILE);
             }
 
-            $tmp = $prev_state;
+            $tmp = str_replace(" ", "_", $prev_state);
+            $tmp = str_replace("&", "and", $tmp);
 
             // path to android source file name
-            $FILE = "../app/src/main/java/in/filternet/jantamalik/LokSabha_Election_2019/" . str_replace(" ", "_", $prev_state) . ".java";
+            $FILE = "../app/src/main/java/in/filternet/jantamalik/LokSabha_Election_2019/" . $tmp . ".java";
 
             error_log("public static final String[][] red_bucket = {\n", 3, $FILE);
         }
