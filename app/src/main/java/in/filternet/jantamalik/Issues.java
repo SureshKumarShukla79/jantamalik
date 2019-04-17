@@ -11,6 +11,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
@@ -629,7 +630,8 @@ public class Issues extends AppCompatActivity {
         ui_green_table.addView(row);
 
         // Fill the elements
-        for(int i=0; i<total_candidate; i++) {
+        int index = get_starting_index(bucket);
+        for(int i=index; i<(index+total_candidate); i++) {
             row = new TableRow(this);
             // Set candidate data
             for(int j=0; j<column; j++) {
@@ -640,15 +642,21 @@ public class Issues extends AppCompatActivity {
                 } else {
                     text.setText(bucket[i][j + 3]);
                 }*/
-                text.setText(bucket[i][j + 3]);
                 if(j==2) {
-                    Log.e(TAG, "Text: " + bucket[i][j + 3]);
-                    text.setLinksClickable(true);
-                    text.setLinkTextColor(Color.BLUE);
+                    text.setClickable(true);
                     text.setMovementMethod(LinkMovementMethod.getInstance());
+                    text.setPadding(5,5,5,5);
+                    text.setLinkTextColor(Color.BLUE);
+                    text.setGravity(Gravity.CENTER);
+                    text.setBackgroundResource(R.drawable.table_border_style);
+                    text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
+                    String url_link = "<a href='"+ bucket[i][j + 3] + "'> Know more </a>";// IMP: Don't lead space on left/right side of url, that doesn't work
+                    //Log.e(TAG, "Link: " + url_link);
+                    text.setText(Html.fromHtml(url_link));
+                } else {
+                    text.setText(bucket[i][j + 3]);
+                    make_text_attractive(text, R.drawable.table_border_style);
                 }
-
-                make_text_attractive(text, R.drawable.table_border_style);
                 row.addView(text);
             }
             ui_green_table.addView(row);
@@ -675,7 +683,8 @@ public class Issues extends AppCompatActivity {
         ui_red_table.addView(row);
 
         // Fill the elements
-        for(int i=0; i<total_candidate; i++) {
+        int index = get_starting_index(bucket);
+        for(int i=index; i<(index+total_candidate); i++) {
             // Set candidate data
             row = new TableRow(this);
             for(int j=0; j<column; j++){
@@ -695,6 +704,28 @@ public class Issues extends AppCompatActivity {
         }
     }
 
+    private int get_starting_index(String[][] bucket){
+        int index = 0, area_column = 2;
+        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String constituency = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            for(int i=0; i< MPdata.all_MPs.length; i++){
+                if (state.equals(MPdata.all_MPs[i][1]) && constituency.equals(MPdata.all_MPs[i][6])){
+                    state = MPdata.all_MPs[i][0];
+                    constituency = MPdata.all_MPs[i][3];
+                }
+            }
+            //area_column = 7;
+        }
+
+        for (int i=0; i<bucket.length; i++) {
+            String area_name = bucket[i][area_column];
+            if (constituency.equals(area_name))
+                return i;
+        }
+        return index;
+    }
 
     private void make_text_attractive(TextView text, int color){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -712,12 +743,15 @@ public class Issues extends AppCompatActivity {
 
     private int num_of_candidate(String[][] bucket) {
         int num = 0, area_column = 2;
-        String constituency = mSharedPref.getString(MainActivity.sMP, null);
+        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String constituency = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
 
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (constituency.equals(MPdata.all_MPs[i][6]))
+                if (state.equals(MPdata.all_MPs[i][1]) && constituency.equals(MPdata.all_MPs[i][6])) {
+                    state = MPdata.all_MPs[i][0];
                     constituency = MPdata.all_MPs[i][3];
+                }
             }
             //area_column = 7;
         }
