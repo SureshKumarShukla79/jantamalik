@@ -189,8 +189,7 @@ $serach_not_graduate = "SELECT name, education FROM loksabha_2019 WHERE bucket =
 $result_not_graduate = mysqli_query($conn, $serach_not_graduate) or die('Error:' . mysqli_error($conn));
 if (mysqli_num_rows($result_not_graduate) > 0) {
     while ($row = mysqli_fetch_assoc($result_not_graduate)) {
-        if ($row[education] == "Illiterate" || $row[education] == "5th Pass" || $row[education] == "8th Pass" ||
-                $row[education] == "10th Pass" || $row[education] == "12th Pass" || $row[education] == "Others") {
+        if ($row[education] != "Graduate" && $row[education] != "Graduate Professional" && $row[education] != "Post Graduate" && $row[education] != "Doctorate") {
             //echo "Name: $row[name], Education: $row[education]\n";
             $filter_not_graduate = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'NotGraduate' WHERE name = '$row[name]' AND education = '$row[education]'");
             if (!$filter_not_graduate)
