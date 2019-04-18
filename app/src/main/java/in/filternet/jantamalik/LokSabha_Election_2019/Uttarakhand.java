@@ -3,13 +3,11 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Uttarakhand {
 public static final String[][] green_bucket = {
-{"Uttarakhand",  "6083", "Almora", "K.L. Arya", "UKD", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5444",  "",  "", "", "", ""}, 
 {"Uttarakhand",  "6084", "Almora", "Dropadi Verma", "Uttarakhand Kranti Dal (Democratic)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5170",  "",  "", "", "", ""}, 
 {"Uttarakhand",  "6087", "Almora", "Vimla Arya", "UTTARAKHAND PARIVARTAN PARTY", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5169",  "",  "", "", "", ""}, 
 {"Uttarakhand",  "6088", "Almora", "Sunder Dhauni", "BSP", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4913",  "",  "", "", "", ""}, 
 {"Uttarakhand",  "6074", "Garhwal", "Dr. Ramendra Singh Bhandari", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5431",  "",  "", "", "", ""}, 
 {"Uttarakhand",  "6097", "Haridwar", "Dharmendra", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7183",  "",  "", "", "", ""}, 
-{"Uttarakhand",  "6098", "Haridwar", "Aadil", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5452",  "",  "", "", "", ""}, 
 {"Uttarakhand",  "6101", "Haridwar", "Narendra Chauhan", "Bhartiya Sarvodaya Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5451",  "",  "", "", "", ""}, 
 {"Uttarakhand",  "6103", "Haridwar", "Furkan Ali", "Pragatishil Samajwadi Party (Lohia)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5450",  "",  "", "", "", ""}, 
 {"Uttarakhand",  "6105", "Haridwar", "Dr. Antriksh Saini", "BSP", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4914",  "",  "", "", "", ""}, 
@@ -28,6 +26,7 @@ public static final String[][] green_bucket = {
 };
 
 public static final String[][] red_bucket = {
+        {"Uttarakhand", "6083", "Almora", "K.L. Arya", "NotGraduate", " ", "", "", "", " "},
 { "Uttarakhand",  "6085",  "Almora", "Pradeep Tamta", "ForeignFunding",  " ","",  "", "", " "}, 
 { "Uttarakhand",  "6086",  "Almora", "Ajay Tamta", "ForeignFunding",  " ","",  "", "", " "}, 
 { "Uttarakhand",  "6075",  "Garhwal", "Anandmani Dutt Joshi", "NotGraduate",  " ","",  "", "", " "}, 
@@ -38,7 +37,8 @@ public static final String[][] red_bucket = {
 { "Uttarakhand",  "6080",  "Garhwal", "Bhagwat Prasad", "NotGraduate",  " ","",  "", "", " "}, 
 { "Uttarakhand",  "6081",  "Garhwal", "Manish Khanduri", "ForeignFunding",  " ","",  "", "", " "}, 
 { "Uttarakhand",  "6082",  "Garhwal", "Vinod Prasad Notiyal", "NotGraduate",  " ","",  "", "", " "}, 
-{ "Uttarakhand",  "6096",  "Haridwar", "Ramesh Pokhriyal Nishank", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Uttarakhand",  "6096",  "Haridwar", "Ramesh Pokhriyal Nishank", "ForeignFunding",  " ","",  "", "", " "},
+        {"Uttarakhand", "6098", "Haridwar", "Aadil", "NotGraduate", " ", "", "", "", " "},
 { "Uttarakhand",  "6099",  "Haridwar", "Tribirendra Singh Rawat", "NotGraduate",  " ","",  "", "", " "}, 
 { "Uttarakhand",  "6100",  "Haridwar", "Shishupal Singh", "NotGraduate",  " ","",  "", "", " "}, 
 { "Uttarakhand",  "6102",  "Haridwar", "Ambrish Kumar", "ForeignFunding",  " ","",  "", "", " "}, 
