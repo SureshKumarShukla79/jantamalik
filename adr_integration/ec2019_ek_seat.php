@@ -140,57 +140,22 @@ $time_total_after = microtime(true);
 //echo "\nTotal " . ($time_total_after - $time_total_before) . " API " . ($time_after - $time_before) . "\n";
 //ADR import complete into DB
 // Filter Congress and BJP
-$serach_BJP_INC = "SELECT name, party FROM loksabha_2019 WHERE bucket = ''";
-$result_BJP_INC = mysqli_query($conn, $serach_BJP_INC) or die('Error:' . mysqli_error($conn));
-if (mysqli_num_rows($result_BJP_INC) > 0) {
-    while ($row = mysqli_fetch_assoc($result_BJP_INC)) {
-        if ($row[party] === "BJP" || $row[party] === "INC") {
-            //echo "Name: $row[name], Party: $row[party]\n";
-            $filter_illegal_funding = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'ForeignFunding' WHERE name = '$row[name]' AND party = '$row[party]'");
-            if (!$filter_illegal_funding)
-                die('Error:' . $filter_illegal_funding . ' -> ' . mysqli_error($conn));
-        }
-    }
-}
+$filter_illegal_funding = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'ForeignFunding' WHERE party='BJP' OR party='INC' ");
+if (!$filter_illegal_funding)
+    die('Error:' . $filter_illegal_funding . ' -> ' . mysqli_error($conn));
 
-// Filter criminals
-$serach_criminals = "SELECT name, serious_ipc_counts FROM loksabha_2019 WHERE bucket = ''";
-$result_criminals = mysqli_query($conn, $serach_criminals) or die('Error:' . mysqli_error($conn));
-if (mysqli_num_rows($result_criminals) > 0) {
-    while ($row = mysqli_fetch_assoc($result_criminals)) {
-        if ($row[serious_ipc_counts] > 0) {
-            //echo "Name: $row[name], IPC_Counts: $row[serious_ipc_counts]\n";
-            $filter_criminals = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'CriminalCases' WHERE name = '$row[name]' AND serious_ipc_counts = '$row[serious_ipc_counts]'");
-            if (!$filter_criminals)
-                die('Error:' . $filter_criminals . ' -> ' . mysqli_error($conn));
-        }
-    }
-}
+// Filter serious crime charges
+$filter_criminals = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'CriminalCases' WHERE bucket='' AND serious_ipc_counts >0 ");
+if (!$filter_criminals)
+    die('Error:' . $filter_criminals . ' -> ' . mysqli_error($conn));
 
 // Filter candidate_age > 64
-$search_elders = "SELECT name, age FROM loksabha_2019 WHERE bucket = ''";
-$result_elders = mysqli_query($conn, $search_elders) or die('Error:' . mysqli_error($conn));
-if (mysqli_num_rows($result_elders) > 0) {
-    while ($row = mysqli_fetch_assoc($result_elders)) {
-        if ($row[age] > 64) {
-            //echo "Name: $row[name], Age: $row[age]\n";
-            $filter_elders = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'OverAged' WHERE name = '$row[name]' AND age = $row[age]");
-            if (!$filter_elders)
-                die('Error:' . $filter_elders . ' -> ' . mysqli_error($conn));
-        }
-    }
-}
+$filter_elders = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'OverAged' WHERE bucket='' AND age > 64 ");
+if (!$filter_elders)
+    die('Error:' . $filter_elders . ' -> ' . mysqli_error($conn));
 
 // Filter education < Graduate
-$serach_not_graduate = "SELECT name, education FROM loksabha_2019 WHERE bucket = ''";
-$result_not_graduate = mysqli_query($conn, $serach_not_graduate) or die('Error:' . mysqli_error($conn));
-if (mysqli_num_rows($result_not_graduate) > 0) {
-    while ($row = mysqli_fetch_assoc($result_not_graduate)) {
-        if ($row[education] != "Graduate" && $row[education] != "Graduate Professional" && $row[education] != "Post Graduate" && $row[education] != "Doctorate") {
-            //echo "Name: $row[name], Education: $row[education]\n";
-            $filter_not_graduate = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'NotGraduate' WHERE name = '$row[name]' AND education = '$row[education]'");
-            if (!$filter_not_graduate)
-                die('Error:' . $filter_not_graduate . ' -> ' . mysqli_error($conn));
-        }
-    }
-}
+$filter_not_graduate = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'NotGraduate' WHERE bucket='' "
+        . "AND (education!='Graduate' AND education!='Graduate Professional' AND education!='Post Graduate' AND education!='Doctorate') ");
+if (!$filter_not_graduate)
+    die('Error:' . $filter_not_graduate . ' -> ' . mysqli_error($conn));

@@ -27,6 +27,7 @@ if (mysqli_num_rows($result_green_bucket) > 0) {
             if ($tmp != '')
                 error_log("};\n\n", 3, $FILE);
 
+            // The file name with & creates problems, so replacing it. JM app couldn't read as valid Java file.
             $tmp = str_replace(" ", "_", $prev_state);
             $tmp = str_replace("&", "and", $tmp);
 
@@ -64,6 +65,7 @@ if (mysqli_num_rows($result_red_bucket) > 0) {
                 error_log("}", 3, $FILE);
             }
 
+            // The file name with & creates problems, so replacing it. JM app couldn't read as valid Java file.
             $tmp = str_replace(" ", "_", $prev_state);
             $tmp = str_replace("&", "and", $tmp);
 
