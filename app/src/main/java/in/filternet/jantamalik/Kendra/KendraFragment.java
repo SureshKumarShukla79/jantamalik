@@ -28,10 +28,6 @@ public class KendraFragment extends Fragment {
     String TAG = "VoteFragment";
 
     private View view;
-    private TextView vote2, note2, govt1;
-    private ImageButton vote1, vote3, note1, note3;
-    private ImageView govt2;
-    private LinearLayout duties;
     private FloatingActionButton ui_add_issue;
 
     private Intent intent;
@@ -49,22 +45,7 @@ public class KendraFragment extends Fragment {
         }
 
         view = inflater.inflate(R.layout.kendra, container, false);
-
-        vote1 = view.findViewById(R.id.vote1);
-        vote2 = view.findViewById(R.id.vote2);
-        vote3 = view.findViewById(R.id.vote3);
-
-        note1 = view.findViewById(R.id.note1);
-        note2 = view.findViewById(R.id.note2);
-        note3 = view.findViewById(R.id.note3);
-
-        govt1 = view.findViewById(R.id.govt1);
-        govt2 = view.findViewById(R.id.govt2);
-
-        duties = view.findViewById(R.id.duties);
-
         ui_add_issue = view.findViewById(R.id.add_issue);
-
         ui_add_issue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,10 +56,10 @@ public class KendraFragment extends Fragment {
             }
         });
 
-        vote_Click();
-        note_Click();
-        govt_Click();
-        duties_Click();
+        vote();
+        note();
+        infographics();
+        responsibility();
 
         issue_media();
         issue_mp_no_response();
@@ -90,76 +71,49 @@ public class KendraFragment extends Fragment {
         return view;
     }
 
-    public void vote_Click(){
-        vote1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(view.getContext(), VoteMP.class);
-                startActivity(intent);
-            }
-        });
-        vote2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-             intent = new Intent(view.getContext(), VoteMP.class);
-             startActivity(intent);
-            }
-        });
-       vote3.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               intent = new Intent(view.getContext(), VoteMP.class);
-               startActivity(intent);
-           }
-       });
-    }
+    private void infographics() {
+        LinearLayout ui_infographics = view.findViewById(R.id.infographics);
 
-    public void note_Click(){
-        note1.setOnClickListener(new View.OnClickListener() {
+        ui_infographics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(view.getContext(), TaxKendra.class);
-                startActivity(intent);
-            }
-        });
-        note2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(view.getContext(), TaxKendra.class);
-                startActivity(intent);
-            }
-        });
-        note3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(view.getContext(), TaxKendra.class);
+                Intent intent = new Intent(view.getContext(), Infographics.class);
                 startActivity(intent);
             }
         });
     }
 
-    public void govt_Click(){
-        govt1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(view.getContext(), Infographics.class);
-                startActivity(intent);
-            }
-        });
-        govt2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                intent = new Intent(view.getContext(), Infographics.class);
-                startActivity(intent);
-            }
-        });
-    }
+    private void responsibility() {
+        LinearLayout ui_responsibility = view.findViewById(R.id.responsibility);
 
-    public void duties_Click() {
-        duties.setOnClickListener(new View.OnClickListener() {
+        ui_responsibility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 intent = new Intent(view.getContext(), DutiesKendra.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void note() {
+        LinearLayout ui_note = view.findViewById(R.id.note);
+
+        ui_note.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(view.getContext(), TaxKendra.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void vote() {
+        LinearLayout ui_vote = view.findViewById(R.id.vote);
+
+        ui_vote.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(view.getContext(), VoteMP.class);
                 startActivity(intent);
             }
         });

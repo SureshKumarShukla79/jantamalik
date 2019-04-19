@@ -44,6 +44,7 @@ import org.jsoup.select.Elements;
 
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
@@ -310,14 +311,13 @@ public class MainActivity extends AppCompatActivity {
         if(fresh) {// Fresh install: If time has elapsed then set from next Sunday 11:00 AM
             int current_hour = calendar.get(Calendar.HOUR_OF_DAY);
             int current_min = calendar.get(Calendar.MINUTE);
-            if ((current_hour * 60 + current_min) > (11 * 60))
-                calendar.add(Calendar.WEEK_OF_MONTH, 1);
+            if ((current_hour * 60 + current_min) > (20 * 60))
+                calendar.add(Calendar.DAY_OF_MONTH, 1);
         } else {
-            calendar.add(Calendar.WEEK_OF_MONTH, 1);
+            calendar.add(Calendar.DAY_OF_MONTH, 1);
         }
 
-        calendar.set(Calendar.DAY_OF_WEEK, 1);
-        calendar.set(Calendar.HOUR_OF_DAY, 11);
+        calendar.set(Calendar.HOUR_OF_DAY, 20);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
@@ -357,11 +357,13 @@ public class MainActivity extends AppCompatActivity {
 
         else if(CHANNEL_ID.equals(sCHANNEL_ID_SUNDAY)) {
             // Event handling chain doesn't handle language, so using tricks to achieve the effect
+            int question_num = new Random().nextInt(Puzzle_Ques.questions.length);
             if(current_language.equals(sLANGUAGE_HINDI)) {
-                notification_text = context.getString(R.string.sunday_msg_hi);
+                notification_text = Puzzle_Ques.questions[question_num][5]; //context.getString(R.string.sunday_msg_hi);
             } else {
-                notification_text = context.getString(R.string.sunday_msg);
+                notification_text = Puzzle_Ques.questions[question_num][0]; //context.getString(R.string.sunday_msg);
             }
+            //Log.e(TAG, question_num + notification_text);
             notification_name = sCHANNEL_ID_SUNDAY;
             notification_id = 2;
         }
@@ -373,6 +375,7 @@ public class MainActivity extends AppCompatActivity {
                     .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
                     .setSmallIcon(R.mipmap.ic_launcher)
                     .setContentTitle(context.getResources().getString(R.string.app_name))
+                    .setStyle(new NotificationCompat.BigTextStyle().bigText(notification_text))
                     .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
                     .setContentText(notification_text)
                     .setChannelId(CHANNEL_ID);

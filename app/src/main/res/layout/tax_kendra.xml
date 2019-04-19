@@ -464,6 +464,7 @@
             <TextView android:gravity="center" android:text="54,667" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView android:gravity="center" android:text="2.24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
         </TableRow>
+        <!--
         <TableRow android:layout_width="match_parent" android:layout_height="wrap_content">
             <TextView android:gravity="center" android:text="15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
             <TextView  android:text="@string/social_welfare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/table_border_style" android:padding="5dp" android:textAppearance="?android:attr/textAppearanceMedium"/>
@@ -704,6 +705,7 @@
                 android:padding="5dp"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
         </TableRow>
+        -->
     </TableLayout>
 
     </android.support.v4.widget.NestedScrollView>

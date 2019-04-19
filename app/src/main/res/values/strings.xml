@@ -65,10 +65,10 @@
     <string name="ward_text">Ward</string>
 
     <string name="democracy">How you run the government?</string>
-    <string name="mp_duty"><b>Saansad Duties</b>
-        \n1. Ask my questions and get answer from govt
-        \n2. Put my points in debates in Parliament
-        \n3. Share the govt spending and policies with me</string>
+    <string name="mp_duty"><b>We run govt through our MP</b>
+        \n1. MP asks my questions and get answer from govt
+        \n2. MP puts my points in debates in Parliament
+        \n3. MP shares the govt spending and policies with me</string>
     <string name="mp_optional"><b>How MP can communicate</b>
         \nArticle in newspaper or social media or public meetings</string>
     <string name="salary_Saansad"><b>Salary 2.7 lakh per month</b> (including allowances)
@@ -551,4 +551,5 @@
         \n\nThis time,
         \nGood MPs for Good governance</string>
     <string name="adr_source"><a href="https://adrindia.org">Association for Democratic Reforms</a></string>
+    <string name="know_more">Know more</string>
 </resources>
