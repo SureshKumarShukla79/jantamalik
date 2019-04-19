@@ -13,10 +13,10 @@ android {
         minSdkVersion 15
         targetSdkVersion 28
 
-        versionCode 190101
-        versionName "devel"
-        //versionCode 190418
-        //versionName "19.04.18"
+        //versionCode 190101
+        //versionName "devel"
+        versionCode 190419
+        versionName "19.04.19"
     }
     buildTypes {
         release {

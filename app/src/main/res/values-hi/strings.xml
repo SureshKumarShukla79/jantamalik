@@ -10,7 +10,7 @@
     <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
 
     <string name="Center_Subjects">सांसद की जिम्मेदारियाँ</string>
-    <string name="State_Subjects">विधायक की जिम्मेदारियाँ</string>
+    <string name="state_subjects">विधायक की जिम्मेदारियाँ</string>
 
     <string name="Issues"><b>मेरे मुद्दे</b></string>
     <string name="Money"><b>मेरा नोट</b></string>
@@ -170,7 +170,12 @@
 
     <string name="rajya_budget">\??? करोड़</string>
 
-    <string name="list_source">संविधान की सातंवी अनुसूची से, पन्ना 356-371
+    <string name="list_source_MP">सांसद निम्न विषयों पर कानून बनाता है
+        \n\nसंविधान की सातंवी अनुसूची से, पन्ना 356-371
+        \nhttp://www.legislative.gov.in/sites/default/files/coi-indexhindi.pdf</string>
+
+    <string name="list_source_MLA">विधायक निम्न विषयों पर कानून बनाता है
+        \n\nसंविधान की सातंवी अनुसूची से, पन्ना 356-371
         \nhttp://www.legislative.gov.in/sites/default/files/coi-indexhindi.pdf</string>
 
     <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी,
@@ -214,7 +219,7 @@
     <string name="good">शेयर करें</string>
     <string name="very_good">दान दें</string>
 
-    <string name="media_or_afeem">अखबार, टीवी चैनल या अफीम ?</string>
+    <string name="media_or_afeem">मीडिया या अफीम ?</string>
     <string name="mp_no_response">सांसद मेरी बात नहीं सुनता</string>
     <string name="mla_no_response">विधायक मेरी बात नहीं सुनता</string>
     <string name="cleanliness">सफाई</string>
@@ -533,7 +538,7 @@
     <string name="wrong_answer"><b>❌</b></string>
 
     <string name="filter_text">बाकी उम्मीदवारों को नीचे दिए गए आधार पर छाँट दिया गया है:\n
-        ❌ उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://aajtak.intoday.in/story/delhi-hc-says-act-against-bjp-congress-over-foreign-funds-1-759217.html">कठपुतली सरकार, विदेशी मालिक</a>।\n
+        ❌ उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://aajtak.intoday.in/story/delhi-hc-says-act-against-bjp-congress-over-foreign-funds-1-759217.html">कठपुतली सरकार, विदेशी मालिक  ></a>\n
         ❌ उम्मीदवार गंभीर आपराधिक मामलों में दंडित है \n
         ❌ उम्मीदवार की आयु 65 साल या ज्यादा हैं (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)\n
         ❌ उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)
@@ -559,5 +564,5 @@
         \nना 15 लाख, ना 72 हजार
         \nअच्छा सांसद तो अच्छी सरकार</string>
     <string name="adr_source"><a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
-    <string name="know_more">और जानें</string>
+    <string name="know_more">अधिक जानें</string>
 </resources>

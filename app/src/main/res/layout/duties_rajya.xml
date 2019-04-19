@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/VoteMP_scrollView"
+<ScrollView android:id="@+id/VoteMP_scrollView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -18,12 +17,30 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:background="@color/colorPrimary"
-            app:title="@string/State_Subjects"
+            app:title="@string/state_subjects"
             app:titleTextColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="3dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:background="@color/greylight"
+            android:text="@string/list_source_MLA"
+            android:autoLink="web"
+            android:clickable="true"
+            android:textColorLink="@color/blue"
+            android:focusable="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="8dp"
+            android:textColor="@color/black" />
 
         <TableLayout
             android:id="@+id/table"
-            android:layout_below="@id/toolbar"
+            android:layout_below="@id/list"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             android:layout_margin="4dp"
@@ -784,23 +801,6 @@
 
         </TableLayout>
 
-        <TextView
-            android:id="@+id/list_center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/table"
-            android:layout_marginTop="3dp"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:background="@color/greylight"
-            android:text="@string/list_source"
-            android:autoLink="web"
-            android:clickable="true"
-            android:textColorLink="@color/blue"
-            android:focusable="true"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:padding="8dp"
-            android:textColor="@color/black" />
     </RelativeLayout>
 
 </ScrollView>

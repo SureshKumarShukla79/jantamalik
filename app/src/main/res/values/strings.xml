@@ -9,8 +9,8 @@
     <string name="corporation"><b>Corporation</b></string>
     <string name="taxkendra"><b>Center - Tax</b></string>
 
-    <string name="Center_Subjects">Responsibilities of Saansad/MP</string>
-    <string name="State_Subjects">Responsibilities of Vidhayak/MLA</string>
+    <string name="Center_Subjects">Responsibilities of MP</string>
+    <string name="state_subjects">Responsibilities of MLA</string>
 
     <string name="Issues"><b>My issues</b></string>
     <string name="Money"><b>My note</b></string>
@@ -32,9 +32,9 @@
     <string name="WomenSafety">Women safety</string>
     <string name="Cleanliness">Cleanliness</string>
 
-    <string name="MP">My Saansad/MP</string>
-    <string name="MLA">My Vidhayak(MLA)</string>
-    <string name="Parshad">Parshad</string>
+    <string name="MP">My MP</string>
+    <string name="MLA">My MLA</string>
+    <string name="Parshad">Corporator</string>
 
 
     <string name="mp_area">Constituency: </string>
@@ -47,7 +47,7 @@
 
     <string name="source_sansad">Loksabha website https://loksabha.nic.in</string>
 
-    <string name="update_info">Call and email your saansad. Don\'t hesitate.</string>
+    <string name="update_info">Call and email your MP. Don\'t hesitate.</string>
 
     <string name="donate_appeal">We are a non-profit organization, your donation keeps us running.</string>
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
@@ -74,7 +74,7 @@
     <string name="salary_Saansad"><b>Salary 2.7 lakh per month</b> (including allowances)
         \nTwo lakh seventy thousand rupees</string>
 
-    <string name="mla_duty"><b>Vidhayak/MLA Duties</b>
+    <string name="mla_duty"><b>MLA Duties</b>
         \n1. Ask my questions and get answer from govt
         \n2. Put my points in debates in Parliament
         \n3. Share the govt tax spending and law enforcement status with me</string>
@@ -166,13 +166,18 @@
     <string name="notification_update">New version of app is available. Download.</string>
     <string name="notification_update_hi">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">Make the difference. Nation needs you!</string>
-    <string name="sunday_msg_hi">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
+    <string name="sunday_msg_hi">अपने अधिकार पहजानें, बेहतर भारत बनाएँ!</string>
 
     <string name="kendra_budget_simple">24 lakh crore</string>
     <string name="kendra_budget">24,42,213 crore</string>
     <string name="rajya_budget">\??? crore</string>
 
-    <string name="list_source">From Seventh Schedule of Constitution, page 194-202
+    <string name="list_source_MP">MP makes laws in following areas
+        \n\nFrom Seventh Schedule of Constitution, page 194-202
+        \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
+
+    <string name="list_source_MLA">MLA makes laws in following areas
+        \n\nFrom Seventh Schedule of Constitution, page 194-202
         \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
 
     <string name="kendra_subjects">Employment, Social security, Price control,
@@ -199,10 +204,10 @@
     <string name="work_in_progress">Work In Progress</string>
     <string name="opensource">Open Source</string>
     <string name="saansad_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
-        \n\nThey can not serve the role of a responsible Saansad(MP).</string>
+        \n\nThey can not serve the role of a responsible MP.</string>
 
     <string name="vidhayak_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
-        \n\nThey can not serve the role of a responsible Vidhayak/MLA.</string>
+        \n\nThey can not serve the role of a responsible MLA.</string>
 
     <string name="gst_biscuit">18% GST</string>
     <string name="gst_cloth">12% GST</string>
@@ -216,9 +221,9 @@
     <string name="good">Share</string>
     <string name="very_good">Donate</string>
 
-    <string name="media_or_afeem">TV/Newspaper or Afeem ?</string>
-    <string name="mp_no_response">Saansad doesn\'t respond</string>
-    <string name="mla_no_response">Vidhayak doesn\'t respond</string>
+    <string name="media_or_afeem">Media or Afeem ?</string>
+    <string name="mp_no_response">MP doesn\'t respond</string>
+    <string name="mla_no_response">MLA doesn\'t respond</string>
     <string name="cleanliness">Cleanliness</string>
     <string name="poor_road">Poor Road</string>
     <string name="electricity">Electricity</string>
@@ -371,46 +376,46 @@
     <string name="mp_voter">Call multiple times.\nWrite emails with objective facts and relief needed.
         \n\nMeet at their home on Sunday 11 am. This gets quick notice and speedy results.</string>
     <string name="mp_neta">During Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
-    <string name="mp_parliament">No law to remove irresponsible saansad before completing 5 year term.
+    <string name="mp_parliament">No law to remove irresponsible MP before completing 5 year term.
         \n\nChoose wisely next time.</string>
 
     <string name="mla_voter">Call multiple times.\nWrite emails with objective facts and relief needed.
         \n\nMeet at their home on Sunday 11 am. This gets quick notice and speedy results.</string>
     <string name="mla_neta">During Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
-    <string name="mla_parliament">No law to remove irresponsible vidhayak before completing 5 year term.
+    <string name="mla_parliament">No law to remove irresponsible MLA before completing 5 year term.
         \n\nChoose wisely next time.</string>
 
     <string name="clean_voter">Cleanliness of roads, removing silt and stray animals is responsibility of local municipality.
         \nIf local municipality does not take care, then state govt is responsible.</string>
-    <string name="clean_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+    <string name="clean_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
 
     <string name="road_voter">Road connectivity and road quality are responsibilities of state govt.</string>
-    <string name="road_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+    <string name="road_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
 
     <string name="electricity_voter">Electricity - connection, quality and cost are responsibilities of state govt.</string>
-    <string name="electricity_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+    <string name="electricity_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
 
     <string name="police_voter">Main police functions - patrolling, FIR lodging and investigation/chargesheet. Police quality - is responsibility of state govt.</string>
-    <string name="police_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+    <string name="police_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
 
     <string name="traffic_voter">Traffic jam is common problem. Many reasons cause this - poor traffic police, too many vehicles (easy loan), poor city planning.
         \n\nGovt are considering to lower driving license age to 17 years, to permit more riders on road.
         \n\nRoad, traffic police and city planning - all three are responsibility of state govt.</string>
-    <string name="traffic_neta">Its duty of Vidhayak to take up this issue with state govt. Contact Vidhayak(MLA).</string>
+    <string name="traffic_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
 
     <string name="corruption_voter">Delay or casual response or corruption in govt office is responsibility of concerned govt.</string>
-    <string name="corruption_neta">Its responsibility of Vidhayak/Saansad, to raise such issues to concerned minister heading the department. Contact them.</string>
+    <string name="corruption_neta">Its responsibility of MLA/MP, to raise such issues to concerned minister heading the department. Contact them.</string>
 
     <string name="train_voter">Train delays is responsibility of center govt.</string>
-    <string name="train_neta">Its responsibility of Saansad to raise issues to railway minister. Contact saansad/MP.</string>
+    <string name="train_neta">Its responsibility of MP to raise issues to railway minister. Contact MP.</string>
 
     <string name="business_voter">New businesses are backbone of economy. It creates new jobs.\nOpening a business is very difficult. Complex procedures waste precious time and energy.
         \n\nWorld ranking of India is low (100th position in 2018).
         \n\nMudra yojana for small loans is non-existent in banks
         \n\nDue to poor law-n-order, investors hesitate to invest.</string>
     <string name="business_neta"></string>
-    <string name="business_parliament_house">Making simpler laws is responsibility of Saansad.</string>
-    <string name="business_nagar_nigam">Law-n-order in state is responsibility of Vidhayak</string>
+    <string name="business_parliament_house">Making simpler laws is responsibility of MP.</string>
+    <string name="business_nagar_nigam">Law-n-order in state is responsibility of MLA</string>
 
     <!-- Vidhayak Duties -->
     <string name="vidhayak_duty_police">Police</string>
@@ -498,7 +503,7 @@
     <string name="paytm_list"><a href="https://youtu.be/lvj8hRD1GY4?t=135">Part 1</a></string>
     <string name="lokmat_list"><a href="https://youtu.be/8ERMq0YjTFM?t=135">Part 1</a></string>
 
-    <string name="contact_mla">Call and email your vidhayak. Don\'t hesitate.</string>
+    <string name="contact_mla">Call and email your MLA. Don\'t hesitate.</string>
 
     <string name="rajya_tax">For development of state, we all pay tax in various forms. Tax rates on common items :</string>
 
@@ -526,7 +531,7 @@
     <string name="wrong_answer"><b>❌</b></string>
 
     <string name="filter_text">Remaining candidates are filtered based on following criteria:\n
-        ❌ Candidates political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Puppet-govt with foreign-boss</a>\n
+        ❌ Candidates political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Puppet-govt with foreign-boss  ></a>\n
         ❌ Candidate is found guilty of heinous crimes\n
         ❌ Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)\n
         ❌ Candidate is not graduate (needs to make bills on 100 topics)\n

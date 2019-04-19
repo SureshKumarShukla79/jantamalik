@@ -116,32 +116,22 @@
                 android:background="@drawable/recyclerview_item_click_effect"
                 android:scaleType="centerInside"
                 android:src="@drawable/responsibility" />
-            <LinearLayout
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:background="@drawable/recyclerview_item_click_effect"
+                android:layout_gravity="center"
                 android:layout_weight="1.00"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimary"
-                    android:text="@string/Center_Subjects" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/recyclerview_item_click_effect"
-                    android:gravity="left"
-                    android:text="@string/Center_Subjects"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/black" />
-            </LinearLayout>
+                android:text="@string/Center_Subjects"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black" />
 
             <ImageView
                 android:id="@+id/kendra_list"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_gravity="right|end"
                 android:background="@drawable/recyclerview_item_click_effect"
                 android:src="@drawable/right_black_arrow_24dp" />
         </LinearLayout>
