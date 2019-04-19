@@ -281,7 +281,7 @@ public class Issues extends AppCompatActivity {
 
             case "Gujarat":
             case "गुजरात":
-                bucket = Gujrat.green_bucket;
+                bucket = Gujarat.green_bucket;
                 break;
 
             case "Haryana":
@@ -470,7 +470,7 @@ public class Issues extends AppCompatActivity {
 
             case "Gujarat":
             case "गुजरात":
-                bucket = Gujrat.red_bucket;
+                bucket = Gujarat.red_bucket;
                 break;
 
             case "Haryana":
@@ -636,12 +636,6 @@ public class Issues extends AppCompatActivity {
             // Set candidate data
             for(int j=0; j<column; j++) {
                 TextView text = new TextView(this);
-                /*if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-                    int j_hi = j + 5;
-                    text.setText(bucket[i][j_hi + 3]);
-                } else {
-                    text.setText(bucket[i][j + 3]);
-                }*/
                 if(j==2) {
                     text.setClickable(true);
                     text.setMovementMethod(LinkMovementMethod.getInstance());
@@ -650,11 +644,16 @@ public class Issues extends AppCompatActivity {
                     text.setGravity(Gravity.CENTER);
                     text.setBackgroundResource(R.drawable.table_border_style);
                     text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
-                    String url_link = "<a href='"+ bucket[i][j + 3] + "'> Know more </a>";// IMP: Don't lead space on left/right side of url, that doesn't work
+                    String url_link = "<a href='"+ bucket[i][j + 3] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
                     //Log.e(TAG, "Link: " + url_link);
                     text.setText(Html.fromHtml(url_link));
                 } else {
-                    text.setText(bucket[i][j + 3]);
+                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                        int j_hi = j + 5;
+                        text.setText(bucket[i][j_hi + 3]);
+                    } else {
+                        text.setText(bucket[i][j + 3]);
+                    }
                     make_text_attractive(text, R.drawable.table_border_style);
                 }
                 row.addView(text);
@@ -689,13 +688,29 @@ public class Issues extends AppCompatActivity {
             row = new TableRow(this);
             for(int j=0; j<column; j++){
                 TextView text = new TextView(this);
-                /*if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
                     int j_hi = j + 5;
-                    text.setText(bucket[i][j_hi + 3]);
+                    if(j==1) {
+                        switch (bucket[i][j + 3]) {
+                            case "ForeignFunding":
+                                text.setText("गैरकानूनी-विदेशी-चंदे की दोषी");
+                                break;
+                            case "CriminalCases":
+                                text.setText("आपराधिक मामले दर्ज");
+                                break;
+                            case "OverAged":
+                                text.setText("उम्र ज्यादा");
+                                break;
+                            case "NotGraduate":
+                                text.setText("ग्रेजुएट नहीं है");
+                                break;
+                        }
+                    } else {
+                        text.setText(bucket[i][j_hi + 3]);
+                    }
                 } else {
                     text.setText(bucket[i][j + 3]);
-                }*/
-                text.setText(bucket[i][j + 3]);
+                }
                 make_text_attractive(text, R.drawable.table_border_red);
                 row.addView(text);
             }

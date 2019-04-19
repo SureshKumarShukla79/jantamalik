@@ -3,20 +3,20 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Sikkim {
 public static final String[][] green_bucket = {
-{"Sikkim",  "4468", "Sikkim", "Rabin Rai", "All Indians Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5692",  "",  "", "", "", ""}, 
-{"Sikkim",  "4470", "Sikkim", "Narendra Adhikari", "Sikkim United Front", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5695",  "",  "", "", "", ""}, 
-{"Sikkim",  "4471", "Sikkim", "Dhiraj Kumar Rai", "Sikkim Republican Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5686",  "",  "", "", "", ""}, 
-{"Sikkim",  "4472", "Sikkim", "Mahendra Thapa", "IND", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5687",  "",  "", "", "", ""}, 
-{"Sikkim",  "4474", "Sikkim", "Biraj Adhikari", "Hamro Sikkim Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5689",  "",  "", "", "", ""}, 
-{"Sikkim",  "4476", "Sikkim", "Indra Hang Subba", "Sikkim Krantikari Morcha", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5694",  "",  "", "", "", ""}, 
-{"Sikkim",  "4477", "Sikkim", "Dek Bahadur Katwal", "SDF", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5685",  "",  "", "", "", ""}, 
+{"Sikkim",  "4468", "Sikkim", "Rabin Rai", "All Indians Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5692",  "सिक्किम",  "सिक्किम", "राबिन राय", "सभी भारतीय पार्टी", ""}, 
+{"Sikkim",  "4470", "Sikkim", "Narendra Adhikari", "Sikkim United Front", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5695",  "सिक्किम",  "सिक्किम", "नरेंद्र अधकारी", "सिक्किम संयुक्त मोर्चा", ""}, 
+{"Sikkim",  "4471", "Sikkim", "Dhiraj Kumar Rai", "Sikkim Republican Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5686",  "सिक्किम",  "सिक्किम", "धीरज कुमार राय", "सिक्किम रिपब्लिकन पार्टी", ""}, 
+{"Sikkim",  "4472", "Sikkim", "Mahendra Thapa", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5687",  "सिक्किम",  "सिक्किम", "महेंद्र थापा", "निर्दलीय", ""}, 
+{"Sikkim",  "4474", "Sikkim", "Biraj Adhikari", "Hamro Sikkim Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5689",  "सिक्किम",  "सिक्किम", "बिराज अधकारी", "हमरो सिक्किम पार्टी", ""}, 
+{"Sikkim",  "4476", "Sikkim", "Indra Hang Subba", "Sikkim Krantikari Morcha", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5694",  "सिक्किम",  "सिक्किम", "इंद्र हैंग सुब्बा", "सिक्किम क्रांतिकारी मोर्चा", ""}, 
+{"Sikkim",  "4477", "Sikkim", "Dek Bahadur Katwal", "Sikkim Democratic Front", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5685",  "सिक्किम",  "सिक्किम", "देक बहादुर कटवाल", "सिक्किम डेमोक्रेटिक फ्रंट", ""}, 
 };
 
 public static final String[][] red_bucket = {
-{ "Sikkim",  "4469",  "Sikkim", "Sunmaya Gurung", "NotGraduate",  " ","",  "", "", " "}, 
-{ "Sikkim",  "4473",  "Sikkim", "Bharat Basnet", "ForeignFunding",  " ","",  "", "", " "}, 
-{ "Sikkim",  "4475",  "Sikkim", "Passang Gyali Sherpa", "NotGraduate",  " ","",  "", "", " "}, 
-{ "Sikkim",  "4478",  "Sikkim", "Laten Sherpa", "ForeignFunding",  " ","",  "", "", " "}, 
+{ "Sikkim",  "4469",  "Sikkim", "Sunmaya Gurung", "NotGraduate",  " ","सिक्किम",  "सिक्किम", "सुनमाया गुरुंग", " "}, 
+{ "Sikkim",  "4473",  "Sikkim", "Bharat Basnet", "ForeignFunding",  " ","सिक्किम",  "सिक्किम", "भारत बेसनेट", " "}, 
+{ "Sikkim",  "4475",  "Sikkim", "Passang Gyali Sherpa", "NotGraduate",  " ","सिक्किम",  "सिक्किम", "पासंग ग्याली शेरपा", " "}, 
+{ "Sikkim",  "4478",  "Sikkim", "Laten Sherpa", "ForeignFunding",  " ","सिक्किम",  "सिक्किम", "लट्ठ शेरपा", " "}, 
 };
 
 }
