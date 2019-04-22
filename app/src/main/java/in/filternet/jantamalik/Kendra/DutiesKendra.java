@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import in.filternet.jantamalik.FirebaseLogger;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -33,6 +34,7 @@ public class DutiesKendra extends AppCompatActivity {
         }
 
         setContentView(R.layout.duties_kendra);
+        FirebaseLogger.send(this, "Kendra_Duties");
 
         toolbar = findViewById(R.id.toolbar_Tax_Kendra);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);

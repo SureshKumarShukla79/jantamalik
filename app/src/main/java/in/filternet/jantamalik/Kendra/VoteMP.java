@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.FirebaseLogger;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -49,6 +50,7 @@ public class VoteMP extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.vote_mp_layout);
+        FirebaseLogger.send(this, "Kendra_VoteMP");
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         editor = mSharedPref.edit();

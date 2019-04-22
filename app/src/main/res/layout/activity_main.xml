@@ -29,8 +29,8 @@
                 android:layout_gravity="end"
                 android:onClick="changeLanguage"
                 android:textStyle="bold"
-                android:textColor="@color/cardview_light_background"
-                android:background="@drawable/button_styling"/>
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/home_button"/>
 
             <Button
                 android:id="@+id/puzzle_button"
@@ -42,8 +42,8 @@
                 android:onClick="onclick_puzzle"
                 android:text="@string/puzzle"
                 android:textStyle="bold"
-                android:textColor="@color/cardview_light_background"
-                android:background="@drawable/button_styling"/>
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/home_button"/>
 
             <ImageView
                 android:id="@+id/green_badge"

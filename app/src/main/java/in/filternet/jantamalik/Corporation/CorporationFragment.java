@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import java.util.List;
 
 import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.FirebaseLogger;
 import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
@@ -53,12 +54,16 @@ public class CorporationFragment extends android.support.v4.app.Fragment {
             }
         });
 
+        FirebaseLogger.send(getContext(), "Corporation_Screen");
+
         issue_clean();
 
         return view;
     }
 
     private void issue_clean() {
+        FirebaseLogger.send(getContext(), "Issue_Clean");
+
         LinearLayout clean_layout = view.findViewById(R.id.cleanliness_layout);
 
         clean_layout.setOnClickListener(new View.OnClickListener() {

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import in.filternet.jantamalik.FirebaseLogger;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -30,6 +31,8 @@ public class RajyaInfographics extends AppCompatActivity {
             MainActivity.setUI_Lang(this, "hi");
         }
         setContentView(R.layout.infographics_rajya);
+
+        FirebaseLogger.send(this, "Rajya_Infographics");
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);

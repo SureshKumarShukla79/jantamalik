@@ -59,6 +59,7 @@ public class Contact extends AppCompatActivity {
         }
 
         setContentView(R.layout.contact);
+        FirebaseLogger.send(this, "Tap_Contact_Us");
 
         ui_issue = findViewById(R.id.radio_issue);
         ui_update = findViewById(R.id.radio_update);
@@ -119,6 +120,8 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_email_us(View view) {
+        FirebaseLogger.send(this, "Email" + subject);
+
         String state = mSharedPref.getString(MainActivity.sSTATE, null);
         String area = mSharedPref.getString(MainActivity.sMP, null);
 
@@ -146,18 +149,24 @@ public class Contact extends AppCompatActivity {
 
 
     public void onclick_open_donate(View view) {
+        FirebaseLogger.send(this, "Tap_Donate");
+
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
     public void onclick_github(View view) {
+        FirebaseLogger.send(this, "Tap_GitHub");
+
         Uri uri = Uri.parse("https://github.com/SureshKumarShukla79/jantamalik");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
     public void onclick_whatsapp_us(View view) {
+        FirebaseLogger.send(this, "WhatsApp" + subject);
+
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
         String whatsapp = "com.whatsapp";

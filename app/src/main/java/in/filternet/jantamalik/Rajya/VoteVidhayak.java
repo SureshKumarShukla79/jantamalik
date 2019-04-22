@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.FirebaseLogger;
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
@@ -44,6 +45,8 @@ public class VoteVidhayak extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.vote_mla_layout);
+
+        FirebaseLogger.send(this, "Rajya_VoteMLA");
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         editor = mSharedPref.edit();

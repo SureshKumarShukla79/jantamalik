@@ -235,7 +235,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         switch (id){
             case R.id.contact_menuItem:
-                FirebaseLogger.send(this, "Tap_Contact_Us");
                 intent = new Intent(this, Contact.class);
                 intent.putExtra("feedback", true);
                 startActivity(intent);

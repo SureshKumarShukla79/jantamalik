@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.FirebaseLogger;
 import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.MainActivity;
@@ -166,6 +167,8 @@ public class RajyaFragment extends Fragment {
             }
         });
 
+        FirebaseLogger.send(getContext(), "Rajya_Screen");
+
         govt_Click();
         duties_Click();
         vote_Click();
@@ -308,6 +311,8 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_electricity() {
+        FirebaseLogger.send(getContext(), "Issue_Electricity");
+
         LinearLayout electricity_layout = view.findViewById(R.id.electricity_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
@@ -326,6 +331,8 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_police() {
+        FirebaseLogger.send(getContext(), "Issue_Police");
+
         LinearLayout police_layout = view.findViewById(R.id.police_layout);
 
         police_layout.setOnClickListener(new View.OnClickListener() {
@@ -344,6 +351,8 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_road() {
+        FirebaseLogger.send(getContext(), "Issue_Road");
+
         LinearLayout road_layout = view.findViewById(R.id.road_layout);
 
         road_layout.setOnClickListener(new View.OnClickListener() {
@@ -362,6 +371,8 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_traffic() {
+        FirebaseLogger.send(getContext(), "Issue_Traffic");
+
         LinearLayout traffic_layout = view.findViewById(R.id.traffic_layout);
 
         traffic_layout.setOnClickListener(new View.OnClickListener() {
@@ -380,6 +391,8 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_mla_no_response() {
+        FirebaseLogger.send(getContext(), "Issue_MLA_No_Response");
+
         LinearLayout mla_no_response_layout = view.findViewById(R.id.mla_no_response_layout);
 
         mla_no_response_layout.setOnClickListener(new View.OnClickListener() {

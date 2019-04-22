@@ -105,7 +105,6 @@ public class Issues extends AppCompatActivity {
     }
 
     private void update_gui() {
-        FirebaseLogger.send(this, "2019_election");
         ui_spinner_state = findViewById(R.id.state_spinner);
         ui_spinner_area = findViewById(R.id.area_spinner);
         ui_green_table = findViewById(R.id.green_table);
