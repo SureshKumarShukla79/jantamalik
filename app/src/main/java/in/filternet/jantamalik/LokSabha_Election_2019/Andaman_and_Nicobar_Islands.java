@@ -3,11 +3,11 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Andaman_and_Nicobar_Islands {
 public static final String[][] green_bucket = {
-{"Andaman & Nicobar Islands",  "6351", "Andaman and Nicobar Islands", "Ayan Mandal", "All India Trinamool Congress", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4954",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "अयन मंडल", "अखिल भारतीय तृणमूल कांग्रेस", ""}, 
-{"Andaman & Nicobar Islands",  "6353", "Andaman and Nicobar Islands", "Paritosh Kumar Haldar", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5715",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "परितोष कुमार हलधर", "निर्दलीय", ""}, 
-{"Andaman & Nicobar Islands",  "6355", "Andaman and Nicobar Islands", "Prakash Minj", "Bahujan Samaj Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5458",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "प्रकाश मिंज", "बहुजन समाज पार्टी", ""}, 
-{"Andaman & Nicobar Islands",  "6356", "Andaman and Nicobar Islands", "S Sudershan Rao", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5717",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "एस सुदर्शन राव", "निर्दलीय", ""}, 
-{"Andaman & Nicobar Islands",  "6359", "Andaman and Nicobar Islands", "Gour Chandra Majumder", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7201",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "गौर चंद्र मजुमदार", "निर्दलीय", ""}, 
+{"Andaman & Nicobar Islands",  "6351", "Andaman and Nicobar Islands", "Ayan Mandal", "All India Trinamool Congress", "72.7Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4954",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "अयन मंडल", "अखिल भारतीय तृणमूल कांग्रेस", ""}, 
+{"Andaman & Nicobar Islands",  "6353", "Andaman and Nicobar Islands", "Paritosh Kumar Haldar", "Independent", "2Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5715",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "परितोष कुमार हलधर", "निर्दलीय", ""}, 
+{"Andaman & Nicobar Islands",  "6355", "Andaman and Nicobar Islands", "Prakash Minj", "Bahujan Samaj Party", "12.5Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5458",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "प्रकाश मिंज", "बहुजन समाज पार्टी", ""}, 
+{"Andaman & Nicobar Islands",  "6356", "Andaman and Nicobar Islands", "S Sudershan Rao", "Independent", "87.6Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5717",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "एस सुदर्शन राव", "निर्दलीय", ""}, 
+{"Andaman & Nicobar Islands",  "6359", "Andaman and Nicobar Islands", "Gour Chandra Majumder", "Independent", "60.6Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7201",  "अण्डमान और निकोबार द्वीपसमूह",  "अंडमान व नोकोबार द्वीप समूह", "गौर चंद्र मजुमदार", "निर्दलीय", ""}, 
 };
 
 public static final String[][] red_bucket = {

@@ -532,7 +532,7 @@
 
     <string name="filter_text">Remaining candidates are filtered based on following criteria:\n
         ❌ Candidates political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Puppet-govt with foreign-boss  ></a>\n
-        ❌ Candidate is found guilty of heinous crimes\n
+        ❌ Candidate is charged of serious crimes\n
         ❌ Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)\n
         ❌ Candidate is not graduate (needs to make bills on 100 topics)\n
     </string>
@@ -540,7 +540,7 @@
     <string name="good_candidate">Good candidates</string>
     <string name="bad_candidate">Useless candidates</string>
     <string name="political_party">Political Party</string>
-    <string name="last_5_year">Past 5 years</string>
+    <string name="total_assets">Total Assets</string>
     <string name="main_reason">Main reason</string>
     <string name="puzzle_title"><b>Are you a smart voter?</b></string>
 
@@ -557,4 +557,8 @@
         \nGood MPs for Good governance</string>
     <string name="adr_source"><a href="https://adrindia.org">Association for Democratic Reforms</a></string>
     <string name="know_more">Know more</string>
+    <string name="foreign_funding">Illegal foreign funding guilty</string>
+    <string name="criminal_case">Serious crimes</string>
+    <string name="aged">Over aged</string>
+    <string name="not_graduate">Not graduate</string>
 </resources>

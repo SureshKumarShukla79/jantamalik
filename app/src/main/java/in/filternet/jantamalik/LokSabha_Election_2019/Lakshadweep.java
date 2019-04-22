@@ -3,7 +3,7 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Lakshadweep {
 public static final String[][] green_bucket = {
-{"Lakshadweep",  "4030", "Lakshadweep", "Dr. Mohammed Sadique Kp", "Janata Dal (United)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4963",  "लक्षद्वीप",  "लक्षद्वीप", "डॉ। मोहम्मद साधिक के.पी.", "जनता दल (यूनाइटेड)", ""}, 
+{"Lakshadweep",  "4030", "Lakshadweep", "Dr. Mohammed Sadique Kp", "Janata Dal (United)", "5Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4963",  "लक्षद्वीप",  "लक्षद्वीप", "डॉ। मोहम्मद साधिक के.पी.", "जनता दल (यूनाइटेड)", ""}, 
 };
 
 public static final String[][] red_bucket = {

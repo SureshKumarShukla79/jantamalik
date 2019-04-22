@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // java array generation
-$green_bucket = "SELECT state, id, constituency, name, party, url, hindi_state, hindi_constituency, hindi_name, hindi_party, hindi_research "
+$green_bucket = "SELECT state, id, constituency, name, party, total_assets, url, hindi_state, hindi_constituency, hindi_name, hindi_party, hindi_research "
         . "FROM loksabha_2019 WHERE bucket = '' ORDER BY loksabha_2019.state ASC, loksabha_2019.constituency ASC";
 $result_green_bucket = mysqli_query($conn, $green_bucket) or die('Error:' . mysqli_error($conn));
 $prev_state = '';
@@ -43,7 +43,7 @@ public class " . str_replace(" ", "_", $tmp) . " {\n", 3, $FILE);
 
             error_log("public static final String[][] green_bucket = {\n", 3, $FILE);
         }
-        error_log("{\"$row[state]\",  \"$row[id]\", \"$row[constituency]\", \"$row[name]\", \"$row[party]\", \"$row[url]\",  "
+        error_log("{\"$row[state]\",  \"$row[id]\", \"$row[constituency]\", \"$row[name]\", \"$row[party]\", \"$row[total_assets]\", \"$row[url]\",  "
                 . "\"$row[hindi_state]\",  \"$row[hindi_constituency]\", \"$row[hindi_name]\", \"$row[hindi_party]\", \"$row[hindi_research]\"}, \n", 3, $FILE);
     }
 }

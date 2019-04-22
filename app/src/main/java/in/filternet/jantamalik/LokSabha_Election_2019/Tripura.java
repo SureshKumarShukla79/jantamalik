@@ -3,14 +3,14 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Tripura {
 public static final String[][] green_bucket = {
-{"Tripura",  "6053", "Tripura East", "Karnadhan Chakma", "Amra Bangalee", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5706",  "त्रिपुरा",  "त्रिपुरा पूर्व", "कर्णधन चकमा", "अमरा बंगले", ""}, 
-{"Tripura",  "6058", "Tripura East", "Chitta Ranjan Debbarma", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6073",  "त्रिपुरा",  "त्रिपुरा पूर्व", "चित्त रंजन देबबर्मा", "निर्दलीय", ""}, 
-{"Tripura",  "6039", "Tripura West", "Arun Kumar Bhaumik", "Socialist Unity Centre of India (Communist)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4937",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "अरुण कुमार भौमिक", "भारत का समाजवादी एकता केंद्र (कम्युनिस्ट)", ""}, 
-{"Tripura",  "6040", "Tripura West", "Kabrabam Dhirendra Singha", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4936",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "कबब्रम धीरेंद्र सिंघा", "निर्दलीय", ""}, 
-{"Tripura",  "6041", "Tripura West", "Prabir Debnath", "Amra Bangalee", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4699",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "प्रबीर देबनाथ", "अमरा बंगले", ""}, 
-{"Tripura",  "6042", "Tripura West", "Sankar Prasad Datta", "Communist Party of India (Marxist)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4628",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "शंकर प्रसाद दत्ता", "भारतीय कम्युनिस्ट पार्टी (मार्क्सवादी)", ""}, 
-{"Tripura",  "6045", "Tripura West", "Maman Khan", "All India Trinamool Congress", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5702",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "मामन खान", "अखिल भारतीय तृणमूल कांग्रेस", ""}, 
-{"Tripura",  "6046", "Tripura West", "Brishaketu Debbarma", "Indigenousn Peoples Front Of Tripura", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5701",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "ब्रिशकेतु देबबर्मा", "इंडिजिनस पीपुल्स फ्रंट ऑफ त्रिपुरा", ""}, 
+{"Tripura",  "6053", "Tripura East", "Karnadhan Chakma", "Amra Bangalee", "1.2Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5706",  "त्रिपुरा",  "त्रिपुरा पूर्व", "कर्णधन चकमा", "अमरा बंगले", ""}, 
+{"Tripura",  "6058", "Tripura East", "Chitta Ranjan Debbarma", "Independent", "1.5Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6073",  "त्रिपुरा",  "त्रिपुरा पूर्व", "चित्त रंजन देबबर्मा", "निर्दलीय", ""}, 
+{"Tripura",  "6039", "Tripura West", "Arun Kumar Bhaumik", "Socialist Unity Centre of India (Communist)", "54.6Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4937",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "अरुण कुमार भौमिक", "भारत का समाजवादी एकता केंद्र (कम्युनिस्ट)", ""}, 
+{"Tripura",  "6040", "Tripura West", "Kabrabam Dhirendra Singha", "Independent", "6587", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4936",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "कबब्रम धीरेंद्र सिंघा", "निर्दलीय", ""}, 
+{"Tripura",  "6041", "Tripura West", "Prabir Debnath", "Amra Bangalee", "1.2Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4699",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "प्रबीर देबनाथ", "अमरा बंगले", ""}, 
+{"Tripura",  "6042", "Tripura West", "Sankar Prasad Datta", "Communist Party of India (Marxist)", "2.8Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4628",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "शंकर प्रसाद दत्ता", "भारतीय कम्युनिस्ट पार्टी (मार्क्सवादी)", ""}, 
+{"Tripura",  "6045", "Tripura West", "Maman Khan", "All India Trinamool Congress", "49.8Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5702",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "मामन खान", "अखिल भारतीय तृणमूल कांग्रेस", ""}, 
+{"Tripura",  "6046", "Tripura West", "Brishaketu Debbarma", "Indigenousn Peoples Front Of Tripura", "34.6Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5701",  "त्रिपुरा",  "त्रिपुरा पश्चिम", "ब्रिशकेतु देबबर्मा", "इंडिजिनस पीपुल्स फ्रंट ऑफ त्रिपुरा", ""}, 
 };
 
 public static final String[][] red_bucket = {

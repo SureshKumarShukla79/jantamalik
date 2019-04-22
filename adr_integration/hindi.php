@@ -36,11 +36,14 @@ foreach ($short_form_party as $array) {
 echo "Done: Full form of party to DB\n";
 
 // Write party name in HINDI to DB
-foreach ($all_party as $party) {
-    $hindi_party = get_hindi($party);
-    $sql = "UPDATE loksabha_2019 SET hindi_party = '$hindi_party' WHERE party = '$party' AND hindi_party = ''";
-    //echo $sql;
-    $result = mysqli_query($conn, $sql) or die('Error:' . mysqli_error($conn));
+$sql = "SELECT DISTINCT party FROM loksabha_2019 WHERE hindi_party = ''";
+$result = mysqli_query($conn, $sql) or die('Error:' . mysqli_error($conn));
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $hindi_party = get_hindi($row[party]);
+        $sql = "UPDATE loksabha_2019 SET hindi_party = '$hindi_party' WHERE party = '$row[party]' AND hindi_party = ''";
+        $execute = mysqli_query($conn, $sql) or die('Error:' . mysqli_error($conn));
+    }
 }
 $sql = "UPDATE loksabha_2019 SET hindi_party = 'निर्दलीय' WHERE party = 'Independent'";
 $result = mysqli_query($conn, $sql) or die('Error:' . mysqli_error($conn));

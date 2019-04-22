@@ -3,9 +3,9 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Dadra_and_Nagar_Haveli {
 public static final String[][] green_bucket = {
-{"Dadra & Nagar Haveli",  "7903", "Dadra and Nagar Haveli", "Patel Ankita Amrutbhai", "Shiv Sena", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=9768",  "दादरा और नगर हवेली",  "दादरा और नगर हवेली", "पटेल अंकिता अमृतभाई", "शिवसेना", ""}, 
-{"Dadra & Nagar Haveli",  "7906", "Dadra and Nagar Haveli", "Kurada Deepakbhai", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7412",  "दादरा और नगर हवेली",  "दादरा और नगर हवेली", "कुरदा दीपभाई", "निर्दलीय", ""}, 
-{"Dadra & Nagar Haveli",  "7909", "Dadra and Nagar Haveli", "Delkar Mohanbhai Sanjibhai", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=8244",  "दादरा और नगर हवेली",  "दादरा और नगर हवेली", "डेलकर मोहनभाई संजीभाई", "निर्दलीय", ""}, 
+{"Dadra & Nagar Haveli",  "7903", "Dadra and Nagar Haveli", "Patel Ankita Amrutbhai", "Shiv Sena", "4.6Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=9768",  "दादरा और नगर हवेली",  "दादरा और नगर हवेली", "पटेल अंकिता अमृतभाई", "शिवसेना", ""}, 
+{"Dadra & Nagar Haveli",  "7906", "Dadra and Nagar Haveli", "Kurada Deepakbhai", "Independent", "20095", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7412",  "दादरा और नगर हवेली",  "दादरा और नगर हवेली", "कुरदा दीपभाई", "निर्दलीय", ""}, 
+{"Dadra & Nagar Haveli",  "7909", "Dadra and Nagar Haveli", "Delkar Mohanbhai Sanjibhai", "Independent", "70.9Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=8244",  "दादरा और नगर हवेली",  "दादरा और नगर हवेली", "डेलकर मोहनभाई संजीभाई", "निर्दलीय", ""}, 
 };
 
 public static final String[][] red_bucket = {

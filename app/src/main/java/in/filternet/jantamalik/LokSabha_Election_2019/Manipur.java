@@ -3,12 +3,12 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Manipur {
 public static final String[][] green_bucket = {
-{"Manipur",  "4356", "Inner Manipur", "R.K. Anand", "North East India Development Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6065",  "मणिपुर",  "इनर मणिपुर", "आरके आनंद", "नॉर्थ ईस्ट इंडिया डेवलपमेंट पार्टी", ""}, 
-{"Manipur",  "4357", "Inner Manipur", "Senjam Nandeshwore Singh", "Rashtriya Janhit Sangharsh Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5674",  "मणिपुर",  "इनर मणिपुर", "सेनजाम नंदेशवर सिंह", "राष्ट्रीय जनहित संघर्ष पार्टी", ""}, 
-{"Manipur",  "4363", "Outer Manipur", "Ashang Kasar", "North East India Development Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5681",  "मणिपुर",  "बाहरी मणिपुर", "अशंग कासर", "नॉर्थ ईस्ट इंडिया डेवलपमेंट पार्टी", ""}, 
-{"Manipur",  "4364", "Outer Manipur", "Hangkhanpau Taithul", "Janata Dal (United)", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5678",  "मणिपुर",  "बाहरी मणिपुर", "हेंगखानौ तैथुल", "जनता दल (यूनाइटेड)", ""}, 
-{"Manipur",  "4366", "Outer Manipur", "Lorho S. Pfoze", "Naga People's Front", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4709",  "मणिपुर",  "बाहरी मणिपुर", "लोरो एस। पीफोज़", "नागा पीपुल्स फ्रंट", ""}, 
-{"Manipur",  "4368", "Outer Manipur", "Angam Karung Kom", "Nationalist Congress Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5679",  "मणिपुर",  "बाहरी मणिपुर", "अंगम करुंग कोम", "राष्ट्रवादी कांग्रेस पार्टी", ""}, 
+{"Manipur",  "4356", "Inner Manipur", "R.K. Anand", "North East India Development Party", "52.7Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6065",  "मणिपुर",  "इनर मणिपुर", "आरके आनंद", "नॉर्थ ईस्ट इंडिया डेवलपमेंट पार्टी", ""}, 
+{"Manipur",  "4357", "Inner Manipur", "Senjam Nandeshwore Singh", "Rashtriya Janhit Sangharsh Party", "22.6Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5674",  "मणिपुर",  "इनर मणिपुर", "सेनजाम नंदेशवर सिंह", "राष्ट्रीय जनहित संघर्ष पार्टी", ""}, 
+{"Manipur",  "4363", "Outer Manipur", "Ashang Kasar", "North East India Development Party", "1.4Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5681",  "मणिपुर",  "बाहरी मणिपुर", "अशंग कासर", "नॉर्थ ईस्ट इंडिया डेवलपमेंट पार्टी", ""}, 
+{"Manipur",  "4364", "Outer Manipur", "Hangkhanpau Taithul", "Janata Dal (United)", "36Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5678",  "मणिपुर",  "बाहरी मणिपुर", "हेंगखानौ तैथुल", "जनता दल (यूनाइटेड)", ""}, 
+{"Manipur",  "4366", "Outer Manipur", "Lorho S. Pfoze", "Naga People's Front", "1.4Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4709",  "मणिपुर",  "बाहरी मणिपुर", "लोरो एस। पीफोज़", "नागा पीपुल्स फ्रंट", ""}, 
+{"Manipur",  "4368", "Outer Manipur", "Angam Karung Kom", "Nationalist Congress Party", "4.7Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5679",  "मणिपुर",  "बाहरी मणिपुर", "अंगम करुंग कोम", "राष्ट्रवादी कांग्रेस पार्टी", ""}, 
 };
 
 public static final String[][] red_bucket = {

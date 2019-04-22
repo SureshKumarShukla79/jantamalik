@@ -229,7 +229,7 @@ public class Issues extends AppCompatActivity {
 
         String state = mSharedPref.getString(MainActivity.sSTATE, null);
         switch (state) {
-            case "Andaman and Nicobar Islands":
+            case "Andaman & Nicobar Islands":
             case "अण्डमान और निकोबार द्वीपसमूह":
                 bucket = Andaman_and_Nicobar_Islands.green_bucket;
                 break;
@@ -264,12 +264,12 @@ public class Issues extends AppCompatActivity {
                 bucket = Chhattisgarh.green_bucket;
                 break;
 
-            case "Dadra and Nagar Haveli":
+            case "Dadra & Nagar Haveli":
             case "दादरा और नगर हवेली":
                 bucket = Dadra_and_Nagar_Haveli.green_bucket;
                 break;
 
-            case "Daman and Diu":
+            case "Daman & Diu":
             case "दमन और दीव":
                 bucket = Daman_and_Diu.green_bucket;
                 break;
@@ -294,7 +294,7 @@ public class Issues extends AppCompatActivity {
                 bucket = Himachal_Pradesh.green_bucket;
                 break;
 
-            case "Jammu and Kashmir":
+            case "Jammu & Kashmir":
             case "जम्मू और कश्मीर":
                 bucket = Jammu_and_Kashmir.green_bucket;
                 break;
@@ -418,7 +418,7 @@ public class Issues extends AppCompatActivity {
 
         String state = mSharedPref.getString(MainActivity.sSTATE, null);
         switch (state) {
-            case "Andaman and Nicobar Islands":
+            case "Andaman & Nicobar Islands":
             case "अण्डमान और निकोबार द्वीपसमूह":
                 bucket = Andaman_and_Nicobar_Islands.red_bucket;
                 break;
@@ -453,12 +453,12 @@ public class Issues extends AppCompatActivity {
                 bucket = Chhattisgarh.red_bucket;
                 break;
 
-            case "Dadra and Nagar Haveli":
+            case "Dadra & Nagar Haveli":
             case "दादरा और नगर हवेली":
                 bucket = Dadra_and_Nagar_Haveli.red_bucket;
                 break;
 
-            case "Daman and Diu":
+            case "Daman & Diu":
             case "दमन और दीव":
                 bucket = Daman_and_Diu.red_bucket;
                 break;
@@ -483,7 +483,7 @@ public class Issues extends AppCompatActivity {
                 bucket = Himachal_Pradesh.red_bucket;
                 break;
 
-            case "Jammu and Kashmir":
+            case "Jammu & Kashmir":
             case "जम्मू और कश्मीर":
                 bucket = Jammu_and_Kashmir.red_bucket;
                 break;
@@ -620,7 +620,7 @@ public class Issues extends AppCompatActivity {
                 text.setTypeface(null, Typeface.BOLD);
             }
             else if(j==2) {
-                text.setText(getString(R.string.last_5_year));
+                text.setText(getString(R.string.total_assets));
                 make_text_attractive(text, R.drawable.table_border_style);
                 text.setTypeface(null, Typeface.BOLD);
             }
@@ -644,12 +644,21 @@ public class Issues extends AppCompatActivity {
                     text.setGravity(Gravity.CENTER);
                     text.setBackgroundResource(R.drawable.table_border_style);
                     text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
-                    String url_link = "<a href='"+ bucket[i][j + 3] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
+
+                    String assets = bucket[i][j + 3];
+                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                        if (assets.contains("Lac"))
+                            assets = assets.replace("Lac", " लाख");
+                        else if (assets.contains("Crore"))
+                            assets = assets.replace("Crore", " करोड़");
+                    }
+
+                    String url_link = assets + "<a href='"+ bucket[i][j + 4] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
                     //Log.e(TAG, "Link: " + url_link);
                     text.setText(Html.fromHtml(url_link));
                 } else {
                     if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-                        int j_hi = j + 5;
+                        int j_hi = j + 6;
                         text.setText(bucket[i][j_hi + 3]);
                     } else {
                         text.setText(bucket[i][j + 3]);
@@ -688,29 +697,31 @@ public class Issues extends AppCompatActivity {
             row = new TableRow(this);
             for(int j=0; j<column; j++){
                 TextView text = new TextView(this);
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-                    int j_hi = j + 5;
-                    if(j==1) {
-                        switch (bucket[i][j + 3]) {
-                            case "ForeignFunding":
-                                text.setText("गैरकानूनी-विदेशी-चंदे की दोषी");
-                                break;
-                            case "CriminalCases":
-                                text.setText("आपराधिक मामले दर्ज");
-                                break;
-                            case "OverAged":
-                                text.setText("उम्र ज्यादा");
-                                break;
-                            case "NotGraduate":
-                                text.setText("ग्रेजुएट नहीं है");
-                                break;
-                        }
-                    } else {
-                        text.setText(bucket[i][j_hi + 3]);
+
+                if(j==1) {
+                switch (bucket[i][j + 3]) {
+                    case "ForeignFunding":
+                        text.setText(R.string.foreign_funding);
+                        break;
+                    case "CriminalCases":
+                        text.setText(R.string.criminal_case);
+                        break;
+                    case "OverAged":
+                        text.setText(R.string.aged);
+                        break;
+                    case "NotGraduate":
+                        text.setText(R.string.not_graduate);
+                        break;
                     }
                 } else {
-                    text.setText(bucket[i][j + 3]);
+                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                        int j_hi = j + 5;
+                        text.setText(bucket[i][j_hi + 3]);
+                    } else {
+                        text.setText(bucket[i][j + 3]);
+                    }
                 }
+
                 make_text_attractive(text, R.drawable.table_border_red);
                 row.addView(text);
             }

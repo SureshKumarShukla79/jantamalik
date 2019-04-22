@@ -539,7 +539,7 @@
 
     <string name="filter_text">बाकी उम्मीदवारों को नीचे दिए गए आधार पर छाँट दिया गया है:\n
         ❌ उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://aajtak.intoday.in/story/delhi-hc-says-act-against-bjp-congress-over-foreign-funds-1-759217.html">कठपुतली सरकार, विदेशी मालिक  ></a>\n
-        ❌ उम्मीदवार गंभीर आपराधिक मामलों में दंडित है \n
+        ❌ उम्मीदवार पर गंभीर आपराधिक मामले दर्ज है \n
         ❌ उम्मीदवार की आयु 65 साल या ज्यादा हैं (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)\n
         ❌ उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)
     </string>
@@ -547,7 +547,7 @@
     <string name="good_candidate">अच्छे उम्मीदवार</string>
     <string name="bad_candidate">फालतू उम्मीदवार</string>
     <string name="political_party">राजनीतिक दल</string>
-    <string name="last_5_year">बीतेे 5 साल</string>
+    <string name="total_assets">कुल संपत्ति</string>
     <string name="main_reason">मुख्य कारण</string>
     <string name="puzzle_title"><b>आप कितने जागरूक हैं?</b></string>
 
@@ -565,4 +565,8 @@
         \nअच्छा सांसद तो अच्छी सरकार</string>
     <string name="adr_source"><a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
     <string name="know_more">अधिक जानें</string>
+    <string name="foreign_funding">गैरकानूनी-विदेशी-चंदे की दोषी</string>
+    <string name="criminal_case">गंभीर आपराधिक मामले</string>
+    <string name="aged">उम्र ज्यादा</string>
+    <string name="not_graduate">ग्रेजुएट नहीं है</string>
 </resources>

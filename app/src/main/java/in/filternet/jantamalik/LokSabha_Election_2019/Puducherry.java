@@ -3,11 +3,11 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Puducherry {
 public static final String[][] green_bucket = {
-{"Puducherry",  "4452", "Puducherry", "Baskaran.S", "Puducherry Development Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7158",  "पुदुच्चेरी",  "पुडुचेरी", "Baskaran.S", "पुदुचेरी विकास पार्टी", ""}, 
-{"Puducherry",  "4458", "Puducherry", "A.G.Pathimaraj", "Bahujan Samaj Party", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7157",  "पुदुच्चेरी",  "पुडुचेरी", "AGPathimaraj", "बहुजन समाज पार्टी", ""}, 
-{"Puducherry",  "4460", "Puducherry", "Tiravitamankai Alias Lourdhumary", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7167",  "पुदुच्चेरी",  "पुडुचेरी", "तिरवितमंकई अलियास लूर्धुमरी", "निर्दलीय", ""}, 
-{"Puducherry",  "4462", "Puducherry", "Dr. Narayanasamy Kesavan", "All India N.R. Congress", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5102",  "पुदुच्चेरी",  "पुडुचेरी", "डॉ। नारायणसामी केशवन", "अखिल भारतीय एनआर कांग्रेस", ""}, 
-{"Puducherry",  "4464", "Puducherry", "Krishnamurthy.M", "Independent", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7161",  "पुदुच्चेरी",  "पुडुचेरी", "Krishnamurthy.M", "निर्दलीय", ""}, 
+{"Puducherry",  "4452", "Puducherry", "Baskaran.S", "Puducherry Development Party", "55.8Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7158",  "पुदुच्चेरी",  "पुडुचेरी", "Baskaran.S", "पुदुचेरी विकास पार्टी", ""}, 
+{"Puducherry",  "4458", "Puducherry", "A.G.Pathimaraj", "Bahujan Samaj Party", "4Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7157",  "पुदुच्चेरी",  "पुडुचेरी", "AGPathimaraj", "बहुजन समाज पार्टी", ""}, 
+{"Puducherry",  "4460", "Puducherry", "Tiravitamankai Alias Lourdhumary", "Independent", "33.6Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7167",  "पुदुच्चेरी",  "पुडुचेरी", "तिरवितमंकई अलियास लूर्धुमरी", "निर्दलीय", ""}, 
+{"Puducherry",  "4462", "Puducherry", "Dr. Narayanasamy Kesavan", "All India N.R. Congress", "8.4Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5102",  "पुदुच्चेरी",  "पुडुचेरी", "डॉ। नारायणसामी केशवन", "अखिल भारतीय एनआर कांग्रेस", ""}, 
+{"Puducherry",  "4464", "Puducherry", "Krishnamurthy.M", "Independent", "1.9Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7161",  "पुदुच्चेरी",  "पुडुचेरी", "Krishnamurthy.M", "निर्दलीय", ""}, 
 };
 
 public static final String[][] red_bucket = {
