@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String sLANGUAGE_ENGLISH = "en";
     public final static String bUSER_AGREE = "User_Agree";
     public final static String bSMART_VOTER = "Smart_Voter";
+    public final static String bAPP_UPDATE_LATER = "App_Update_Later";   //boolean
 
     public static final String TAB_NUMBER = "tab_number";
     public static final int TAB_KENDRA = 0, TAB_RAJYA = 1, TAB_CORPORATION = 2;
@@ -160,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
         //As per documentation, Starting with Build.VERSION_CODES.HONEYCOMB, tasks are executed on a single thread to avoid
         //common application errors caused by parallel execution. If we need parallel execution, then use executeOnExecutor()
+        mEditor.remove(bAPP_UPDATE_LATER).commit();
         new VersionPrompt().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
         set_notification_time(this, true);
@@ -211,6 +213,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Puzzle.class);
             startActivity(intent);
         }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        mEditor.remove(bAPP_UPDATE_LATER).commit();
+        new VersionPrompt().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     @Override
@@ -433,8 +442,6 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
 
-        //Shared Preference key
-        public final static String bAPP_UPDATE_LATER = "App_Update_Later";   //boolean
         private AlertDialog mAlertDialog;
 
         @Override
