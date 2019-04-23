@@ -8,7 +8,6 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -131,6 +130,11 @@ public class VoteMP extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
                 //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
+
+                String tmp = State;
+                tmp.replace(" ", "_");
+                tmp.replace("&", "_");
+                FirebaseLogger.send(getBaseContext(), tmp);
                 editor.putString(MainActivity.sSTATE, State).commit();
 
                 // Reload the state MP areas

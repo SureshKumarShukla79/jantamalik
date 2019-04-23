@@ -106,6 +106,10 @@ public class VoteVidhayak extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 MLAArea = adapterView.getItemAtPosition(i).toString();
                 //Log.e(TAG, "spin MLA : " + i + " " + l + " " + MLAArea);
+                String tmp = MLAArea;
+                tmp.replace(" ", "_");
+                tmp.replace("&", "_");
+                FirebaseLogger.send(getBaseContext(), tmp);
                 editor.putString(MainActivity.sMLA, MLAArea).commit();
 
                 updateMLA();

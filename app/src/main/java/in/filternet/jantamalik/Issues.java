@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,7 +25,42 @@ import android.widget.TextView;
 
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.MPdata;
-import in.filternet.jantamalik.LokSabha_Election_2019.*;
+import in.filternet.jantamalik.LokSabha_Election_2019.Andaman_and_Nicobar_Islands;
+import in.filternet.jantamalik.LokSabha_Election_2019.Andhra_Pradesh;
+import in.filternet.jantamalik.LokSabha_Election_2019.Arunachal_Pradesh;
+import in.filternet.jantamalik.LokSabha_Election_2019.Assam;
+import in.filternet.jantamalik.LokSabha_Election_2019.Bihar;
+import in.filternet.jantamalik.LokSabha_Election_2019.Chandigarh;
+import in.filternet.jantamalik.LokSabha_Election_2019.Chhattisgarh;
+import in.filternet.jantamalik.LokSabha_Election_2019.Dadra_and_Nagar_Haveli;
+import in.filternet.jantamalik.LokSabha_Election_2019.Daman_and_Diu;
+import in.filternet.jantamalik.LokSabha_Election_2019.Goa;
+import in.filternet.jantamalik.LokSabha_Election_2019.Gujarat;
+import in.filternet.jantamalik.LokSabha_Election_2019.Haryana;
+import in.filternet.jantamalik.LokSabha_Election_2019.Himachal_Pradesh;
+import in.filternet.jantamalik.LokSabha_Election_2019.Jammu_and_Kashmir;
+import in.filternet.jantamalik.LokSabha_Election_2019.Jharkhand;
+import in.filternet.jantamalik.LokSabha_Election_2019.Karnataka;
+import in.filternet.jantamalik.LokSabha_Election_2019.Kerala;
+import in.filternet.jantamalik.LokSabha_Election_2019.Lakshadweep;
+import in.filternet.jantamalik.LokSabha_Election_2019.Madhya_Pradesh;
+import in.filternet.jantamalik.LokSabha_Election_2019.Maharashtra;
+import in.filternet.jantamalik.LokSabha_Election_2019.Manipur;
+import in.filternet.jantamalik.LokSabha_Election_2019.Meghalaya;
+import in.filternet.jantamalik.LokSabha_Election_2019.Mizoram;
+import in.filternet.jantamalik.LokSabha_Election_2019.Nagaland;
+import in.filternet.jantamalik.LokSabha_Election_2019.National_Capital_Territory_of_Delhi;
+import in.filternet.jantamalik.LokSabha_Election_2019.Odisha;
+import in.filternet.jantamalik.LokSabha_Election_2019.Puducherry;
+import in.filternet.jantamalik.LokSabha_Election_2019.Punjab;
+import in.filternet.jantamalik.LokSabha_Election_2019.Rajasthan;
+import in.filternet.jantamalik.LokSabha_Election_2019.Sikkim;
+import in.filternet.jantamalik.LokSabha_Election_2019.Tamil_Nadu;
+import in.filternet.jantamalik.LokSabha_Election_2019.Telangana;
+import in.filternet.jantamalik.LokSabha_Election_2019.Tripura;
+import in.filternet.jantamalik.LokSabha_Election_2019.Uttar_Pradesh;
+import in.filternet.jantamalik.LokSabha_Election_2019.Uttarakhand;
+import in.filternet.jantamalik.LokSabha_Election_2019.West_Bengal;
 
 import static in.filternet.jantamalik.MainActivity.TAB_CORPORATION;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
@@ -151,6 +185,11 @@ public class Issues extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String state = ui_spinner_state.getItemAtPosition(ui_spinner_state.getSelectedItemPosition()).toString();
+
+                String tmp = state;
+                tmp.replace(" ", "_");
+                tmp.replace("&", "_");
+                FirebaseLogger.send(getBaseContext(), tmp);
                 editor.putString(MainActivity.sSTATE, state).commit();
 
                 area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(mLanguage, state));
@@ -172,6 +211,11 @@ public class Issues extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String area = adapterView.getItemAtPosition(i).toString();
+
+                String tmp = area;
+                tmp.replace(" ", "_");
+                tmp.replace("&", "_");
+                FirebaseLogger.send(getBaseContext(), tmp);
                 editor.putString(MainActivity.sMP, area).commit();
 
                 update_candidate();

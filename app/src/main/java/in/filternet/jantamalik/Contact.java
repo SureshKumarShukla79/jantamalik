@@ -120,8 +120,6 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_email_us(View view) {
-        FirebaseLogger.send(this, "Email" + subject);
-
         String state = mSharedPref.getString(MainActivity.sSTATE, null);
         String area = mSharedPref.getString(MainActivity.sMP, null);
 
@@ -165,7 +163,6 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_whatsapp_us(View view) {
-        FirebaseLogger.send(this, "WhatsApp" + subject);
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
