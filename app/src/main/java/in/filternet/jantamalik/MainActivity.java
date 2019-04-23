@@ -380,8 +380,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             mBuilder = new NotificationCompat.Builder(context)
-                    .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher))
-                    .setSmallIcon(R.mipmap.ic_launcher)
+                    .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_launcher))
+                    .setSmallIcon(R.drawable.small_icon)
                     .setContentTitle(context.getResources().getString(R.string.app_name))
                     .setStyle(new NotificationCompat.BigTextStyle().bigText(notification_text))
                     .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
