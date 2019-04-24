@@ -103,18 +103,14 @@ public class VoteMP extends AppCompatActivity {
                 //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
                 editor.putString(MainActivity.sSTATE, State).commit();
 
-                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                String tmp = State;
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
                     MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    String tmp = state_area.state;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getBaseContext(), tmp);
-                } else {
-                    String tmp = State;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getBaseContext(), tmp);
+                    tmp = MainActivity.State_Area.state;
                 }
+                tmp = tmp.replace(" ", "_");
+                tmp = tmp.replace("&", "and");
+                FirebaseLogger.send(getBaseContext(), tmp);
 
                 // Reload the state MP areas
                 arrayAdapterMP = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
@@ -139,18 +135,14 @@ public class VoteMP extends AppCompatActivity {
                 //Log.e(TAG, "spin MP : " + i + " " + l + " " + MPArea);
                 editor.putString(MainActivity.sMP_AREA, MPArea).commit();
 
-                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                String tmp = MPArea;
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
                     MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    String tmp = state_area.constituency_mp_area;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getBaseContext(), tmp);
-                } else {
-                    String tmp = MPArea;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getBaseContext(), tmp);
+                    tmp = MainActivity.State_Area.constituency_mp_area;
                 }
+                tmp = tmp.replace(" ", "_");
+                tmp = tmp.replace("&", "and");
+                FirebaseLogger.send(getBaseContext(), tmp);
 
                 updateMP();
             }

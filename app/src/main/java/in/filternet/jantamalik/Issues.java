@@ -66,7 +66,6 @@ import static in.filternet.jantamalik.MainActivity.TAB_CORPORATION;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class Issues extends AppCompatActivity {
     private final static String TAG ="Issues";
@@ -176,18 +175,14 @@ public class Issues extends AppCompatActivity {
                 String state = ui_spinner_state.getItemAtPosition(ui_spinner_state.getSelectedItemPosition()).toString();
                 editor.putString(MainActivity.sSTATE, state).commit();
 
-                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                String tmp = state;
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
                     MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    String tmp = state_area.state;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getBaseContext(), tmp);
-                } else {
-                    String tmp = state;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getBaseContext(), tmp);
+                    tmp = MainActivity.State_Area.state;
                 }
+                tmp = tmp.replace(" ", "_");
+                tmp = tmp.replace("&", "and");
+                FirebaseLogger.send(getBaseContext(), tmp);
 
                 area_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
                 area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -210,18 +205,14 @@ public class Issues extends AppCompatActivity {
                 String area = adapterView.getItemAtPosition(i).toString();
                 editor.putString(MainActivity.sMP_AREA, area).commit();
 
-                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                String tmp = area;
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
                     MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    String tmp = state_area.constituency_mp_area;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getBaseContext(), tmp);
-                } else {
-                    String tmp = area;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getBaseContext(), tmp);
+                    tmp = MainActivity.State_Area.constituency_mp_area;
                 }
+                tmp = tmp.replace(" ", "_");
+                tmp = tmp.replace("&", "and");
+                FirebaseLogger.send(getBaseContext(), tmp);
 
                 update_candidate();
             }

@@ -149,18 +149,14 @@ public class RajyaFragment extends Fragment {
                 Log.e(TAG, State);
                 editor.putString(MainActivity.sSTATE, State).commit();
 
-                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                String tmp = State;
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
                     MainActivity.State_Area state_area = MainActivity.get_state_and_area(getContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    String tmp = state_area.state;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getContext(), tmp);
-                } else {
-                    String tmp = State;
-                    tmp = tmp.replace(" ", "_");
-                    tmp = tmp.replace("&", "and");
-                    FirebaseLogger.send(getContext(), tmp);
+                    tmp = MainActivity.State_Area.state;
                 }
+                tmp = tmp.replace(" ", "_");
+                tmp = tmp.replace("&", "and");
+                FirebaseLogger.send(getContext(), tmp);
 
                 update_state_budget(State);
             }
