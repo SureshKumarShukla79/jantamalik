@@ -22,7 +22,6 @@ import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class VoteMP extends AppCompatActivity {
     String TAG = "VoteMP";
@@ -40,7 +39,6 @@ public class VoteMP extends AppCompatActivity {
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
 
-    private String MPArea;
     private String mLanguage;
 
     @Override
@@ -71,35 +69,10 @@ public class VoteMP extends AppCompatActivity {
                 back_button(view);
             }
         });
-
-        final SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        MPArea = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
         mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
 
         String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String MP = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
-        String MLA = mSharedPref.getString(MainActivity.sMLA, MainActivity.DEFAULT_MLA);
-        String Ward = mSharedPref.getString(MainActivity.sWARD, MainActivity.DEFAULT_WARD);
-        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
-
-        // In case of Hindi, change the defaults
-        if (mLanguage.equals(sLANGUAGE_HINDI)) {
-            if (State.equals(MainActivity.DEFAULT_STATE))
-                State = MainActivity.hiDEFAULT_STATE;
-            if (MP.equals(MainActivity.DEFAULT_MP))
-                MP = MainActivity.hiDEFAULT_MP;
-            if (MLA.equals(MainActivity.DEFAULT_MLA))
-                MLA = MainActivity.hiDEFAULT_MLA;
-            if (Ward.equals(MainActivity.DEFAULT_WARD))
-                Ward = MainActivity.hiDEFAULT_WARD;
-        }
-        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
-
-        // In case the db isn't initialised, do it now
-        editor.putString(MainActivity.sSTATE, State).commit();
-        editor.putString(MainActivity.sMP, MP).commit();
-        editor.putString(MainActivity.sMLA, MLA).commit();
-        editor.putString(MainActivity.sWARD, Ward).commit();
+        String MP = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
 
         // Populating GUI
         dataFilter = new DataFilter();
@@ -128,19 +101,27 @@ public class VoteMP extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
                 //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
-
-                String tmp = State;
-                tmp.replace(" ", "_");
-                tmp.replace("&", "_");
-                FirebaseLogger.send(getBaseContext(), tmp);
                 editor.putString(MainActivity.sSTATE, State).commit();
+
+                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    String tmp = state_area.state;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getBaseContext(), tmp);
+                } else {
+                    String tmp = State;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getBaseContext(), tmp);
+                }
 
                 // Reload the state MP areas
                 arrayAdapterMP = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
                 arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerMP.setAdapter(arrayAdapterMP);
 
-                String MP = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+                String MP = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
                 int spinnerPosition = arrayAdapterMP.getPosition(MP);
                 spinnerMP.setSelection(spinnerPosition);
             }
@@ -154,9 +135,22 @@ public class VoteMP extends AppCompatActivity {
         spinnerMP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                MPArea = adapterView.getItemAtPosition(i).toString();
+                String MPArea = adapterView.getItemAtPosition(i).toString();
                 //Log.e(TAG, "spin MP : " + i + " " + l + " " + MPArea);
-                editor.putString(MainActivity.sMP, MPArea).commit();
+                editor.putString(MainActivity.sMP_AREA, MPArea).commit();
+
+                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    String tmp = state_area.constituency_mp_area;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getBaseContext(), tmp);
+                } else {
+                    String tmp = MPArea;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getBaseContext(), tmp);
+                }
 
                 updateMP();
             }
@@ -171,6 +165,7 @@ public class VoteMP extends AppCompatActivity {
 
     private void updateMP() {
         DataFilter dataFilter = new DataFilter();
+        String MPArea = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
         //mp = dataFilter.new MP_info();
         mp = dataFilter.getMPInfo(this, mLanguage, MPArea);
 

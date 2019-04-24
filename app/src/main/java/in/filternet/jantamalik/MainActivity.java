@@ -47,6 +47,8 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.regex.Pattern;
 
+import in.filternet.jantamalik.Kendra.MPdata;
+
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG ="MainActivity";
@@ -75,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
     public static final String hiDEFAULT_MLA = "वाराणसी कैंट";
     public static final String hiDEFAULT_WARD = "छित्तुपुर, सिगरा";
 
-    public static final String sSTATE = DEFAULT_STATE;
-    public static final String sMP = DEFAULT_MP;
-    public static final String sMLA = DEFAULT_MLA;
-    public static final String sWARD = DEFAULT_WARD;
+    public static final String sSTATE = "State";
+    public static final String sMP_AREA = "MP_Area";
+    public static final String sMLA_AREA = "MLA_Area";
+    public static final String sWARD = "Ward";
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(mLanguage.equals(sLANGUAGE_HINDI)) {
             setUI_Lang(this, "hi");
-            FirebaseLogger.send(this, "hi");
+            FirebaseLogger.send(this, "App_Lang_Hindi");
         }
 
         if (BuildConfig.RELEASE_MODE) { // To avoid developers screen recordings
@@ -121,6 +123,31 @@ public class MainActivity extends AppCompatActivity {
         ui_language_button = findViewById(R.id.lanugage_button);
         ui_puzzle_button = findViewById(R.id.puzzle_button);
         ui_green_badge = findViewById(R.id.green_badge);
+
+        // Fresh Install, Save SharedPreferences
+        String State = mSharedPref.getString(sSTATE, DEFAULT_STATE);
+        String MP = mSharedPref.getString(sMP_AREA, DEFAULT_MP);
+        String MLA = mSharedPref.getString(sMLA_AREA, DEFAULT_MLA);
+        String Ward = mSharedPref.getString(sWARD, DEFAULT_WARD);
+        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
+
+        // In case of Hindi, change the defaults
+        if (mLanguage.equals(sLANGUAGE_HINDI)) {
+            if (State.equals(DEFAULT_STATE))
+                State = hiDEFAULT_STATE;
+            if (MP.equals(DEFAULT_MP))
+                MP = hiDEFAULT_MP;
+            if (MLA.equals(DEFAULT_MLA))
+                MLA = hiDEFAULT_MLA;
+            if (Ward.equals(DEFAULT_WARD))
+                Ward = hiDEFAULT_WARD;
+        }
+        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
+
+        mEditor.putString(MainActivity.sSTATE, State).commit();
+        mEditor.putString(MainActivity.sMP_AREA, MP).commit();
+        mEditor.putString(MainActivity.sMLA_AREA, MLA).commit();
+        mEditor.putString(MainActivity.sWARD, Ward).commit();
 
         setSupportActionBar(toolbar);
 
@@ -216,13 +243,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestart() {
-        super.onRestart();
-        mEditor.remove(bAPP_UPDATE_LATER).commit();
-        new VersionPrompt().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater =  getMenuInflater();
         menuInflater.inflate(R.menu.main_menu,menu);
@@ -283,6 +303,11 @@ public class MainActivity extends AppCompatActivity {
             //Toast.makeText(getApplicationContext(),"Language has successfully changed", Toast.LENGTH_SHORT).show();
         }
 
+        String language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null);
+        State_Area state_area = get_state_and_area(this, language);
+        mEditor.putString(sSTATE, state_area.state).commit();
+        mEditor.putString(sMP_AREA, state_area.constituency_mp_area).commit();
+
         this.recreate(); // refresh screen
     }
 
@@ -294,6 +319,37 @@ public class MainActivity extends AppCompatActivity {
         config.locale = locale;
         activity.getBaseContext().getResources().updateConfiguration(config,
                 activity.getBaseContext().getResources().getDisplayMetrics());
+    }
+
+    public static class State_Area{
+        public static String state;
+        public static String constituency_mp_area;
+    }
+
+    public static State_Area get_state_and_area(Context context, String language){
+        State_Area state_area = new State_Area();
+
+        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
+        String state = shared_pref.getString(sSTATE, DEFAULT_STATE);
+        String area = shared_pref.getString(sMP_AREA, DEFAULT_MP);
+
+        if (language.equals(sLANGUAGE_HINDI)) {
+            for(int i=0; i< MPdata.all_MPs.length; i++){
+                if (state.equals(MPdata.all_MPs[i][0]) && area.equals(MPdata.all_MPs[i][3])) {
+                    state_area.state = MPdata.all_MPs[i][1];
+                    state_area.constituency_mp_area = MPdata.all_MPs[i][6];
+                }
+            }
+        } else {
+            for(int i=0; i< MPdata.all_MPs.length; i++){
+                if (state.equals(MPdata.all_MPs[i][1]) && area.equals(MPdata.all_MPs[i][6])) {
+                    state_area.state = MPdata.all_MPs[i][0];
+                    state_area.constituency_mp_area = MPdata.all_MPs[i][3];
+                }
+            }
+        }
+        Log.e(TAG, "Value: " +  state_area.state + state_area.constituency_mp_area);
+        return state_area;
     }
 
     public static void set_notification_time(Context context, boolean fresh) {

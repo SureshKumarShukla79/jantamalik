@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -153,18 +152,7 @@ public class Issues extends AppCompatActivity {
         ui_source_adr.setMovementMethod(LinkMovementMethod.getInstance());
 
         String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String area = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
-
-        // In case of Hindi, change the defaults
-        if (mLanguage.equals(sLANGUAGE_HINDI)) {
-            if (state.equals(MainActivity.DEFAULT_STATE))
-                state = MainActivity.hiDEFAULT_STATE;
-            if (area.equals(MainActivity.DEFAULT_MP))
-                area = MainActivity.hiDEFAULT_MP;
-        }
-
-        editor.putString(MainActivity.sSTATE, state).commit();
-        editor.putString(MainActivity.sMP, area).commit();
+        String area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
 
         // Populating GUI
         dataFilter = new DataFilter();
@@ -186,18 +174,26 @@ public class Issues extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String state = ui_spinner_state.getItemAtPosition(ui_spinner_state.getSelectedItemPosition()).toString();
-
-                String tmp = state;
-                tmp.replace(" ", "_");
-                tmp.replace("&", "_");
-                FirebaseLogger.send(getBaseContext(), tmp);
                 editor.putString(MainActivity.sSTATE, state).commit();
+
+                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    String tmp = state_area.state;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getBaseContext(), tmp);
+                } else {
+                    String tmp = state;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getBaseContext(), tmp);
+                }
 
                 area_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
                 area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ui_spinner_area.setAdapter(area_adapter);
 
-                String MP = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+                String MP = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
                 int spinnerPosition = area_adapter.getPosition(MP);
                 ui_spinner_area.setSelection(spinnerPosition);
             }
@@ -212,12 +208,20 @@ public class Issues extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String area = adapterView.getItemAtPosition(i).toString();
+                editor.putString(MainActivity.sMP_AREA, area).commit();
 
-                String tmp = area;
-                tmp.replace(" ", "_");
-                tmp.replace("&", "_");
-                FirebaseLogger.send(getBaseContext(), tmp);
-                editor.putString(MainActivity.sMP, area).commit();
+                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    String tmp = state_area.constituency_mp_area;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getBaseContext(), tmp);
+                } else {
+                    String tmp = area;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getBaseContext(), tmp);
+                }
 
                 update_candidate();
             }
@@ -689,7 +693,7 @@ public class Issues extends AppCompatActivity {
                     text.setBackgroundResource(R.drawable.table_border_style);
                     text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
 
-                    String assets = bucket[i][j + 3];
+                    String assets = bucket[i][j + 2];
                     if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
                         if (assets.contains("Lac"))
                             assets = assets.replace("Lac", " लाख");
@@ -703,9 +707,9 @@ public class Issues extends AppCompatActivity {
                 } else {
                     if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
                         int j_hi = j + 6;
-                        text.setText(bucket[i][j_hi + 3]);
+                        text.setText(bucket[i][j_hi + 2]);
                     } else {
-                        text.setText(bucket[i][j + 3]);
+                        text.setText(bucket[i][j + 2]);
                     }
                     make_text_attractive(text, R.drawable.table_border_style);
                 }
@@ -743,26 +747,26 @@ public class Issues extends AppCompatActivity {
                 TextView text = new TextView(this);
 
                 if(j==1) {
-                switch (bucket[i][j + 3]) {
-                    case "ForeignFunding":
+                switch (bucket[i][j + 2]) {
+                    case "1":
                         text.setText(R.string.foreign_funding);
                         break;
-                    case "CriminalCases":
+                    case "2":
                         text.setText(R.string.criminal_case);
                         break;
-                    case "OverAged":
+                    case "3":
                         text.setText(R.string.aged);
                         break;
-                    case "NotGraduate":
+                    case "4":
                         text.setText(R.string.not_graduate);
                         break;
                     }
                 } else {
                     if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
                         int j_hi = j + 5;
-                        text.setText(bucket[i][j_hi + 3]);
+                        text.setText(bucket[i][j_hi + 2]);
                     } else {
-                        text.setText(bucket[i][j + 3]);
+                        text.setText(bucket[i][j + 2]);
                     }
                 }
 
@@ -775,9 +779,9 @@ public class Issues extends AppCompatActivity {
     }
 
     private int get_starting_index(String[][] bucket){
-        int index = 0, area_column = 2;
+        int index = 0, area_column = 1;
         String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String constituency = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+        String constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
 
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
@@ -812,9 +816,9 @@ public class Issues extends AppCompatActivity {
     }
 
     private int num_of_candidate(String[][] bucket) {
-        int num = 0, area_column = 2;
+        int num = 0, area_column = 1;
         String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String constituency = mSharedPref.getString(MainActivity.sMP, MainActivity.DEFAULT_MP);
+        String constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
 
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){

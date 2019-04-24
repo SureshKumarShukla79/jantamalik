@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -132,16 +133,6 @@ public class RajyaFragment extends Fragment {
 
         String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
 
-        // In case of Hindi, change the defaults
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            if (State.equals(MainActivity.DEFAULT_STATE))
-                State = MainActivity.hiDEFAULT_STATE;
-        }
-
-        // In case the db isn't initialised, do it now
-        editor.putString(MainActivity.sSTATE, State).commit();
-
-        // Load defaults
         ArrayAdapter arrayAdapterState = new ArrayAdapter(view.getContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
         arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerState.setAdapter(arrayAdapterState);
@@ -155,12 +146,21 @@ public class RajyaFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
-                //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
-                String tmp = State;
-                tmp.replace(" ", "_");
-                tmp.replace("&", "_");
-                FirebaseLogger.send(getContext(), tmp);
+                Log.e(TAG, State);
                 editor.putString(MainActivity.sSTATE, State).commit();
+
+                if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    String tmp = state_area.state;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getContext(), tmp);
+                } else {
+                    String tmp = State;
+                    tmp = tmp.replace(" ", "_");
+                    tmp = tmp.replace("&", "and");
+                    FirebaseLogger.send(getContext(), tmp);
+                }
 
                 update_state_budget(State);
             }

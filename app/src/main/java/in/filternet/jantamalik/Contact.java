@@ -121,7 +121,7 @@ public class Contact extends AppCompatActivity {
 
     public void onclick_email_us(View view) {
         String state = mSharedPref.getString(MainActivity.sSTATE, null);
-        String area = mSharedPref.getString(MainActivity.sMP, null);
+        String area = mSharedPref.getString(MainActivity.sMP_AREA, null);
 
         String[] TO = {getString(R.string.support_email)};
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -170,7 +170,7 @@ public class Contact extends AppCompatActivity {
 
         if(isPackageExist(this, intent, whatsapp)) {
             String state = mSharedPref.getString(MainActivity.sSTATE, null);
-            String area = mSharedPref.getString(MainActivity.sMP, null);
+            String area = mSharedPref.getString(MainActivity.sMP_AREA, null);
             try {
                 if (intent != null) {
                     Uri url = Uri.parse("https://wa.me/917570000787?text="+ area

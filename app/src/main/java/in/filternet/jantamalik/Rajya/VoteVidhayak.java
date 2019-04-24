@@ -36,7 +36,6 @@ public class VoteVidhayak extends AppCompatActivity {
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
-    private String MLAArea;
     private String mLanguage;
 
     @Override
@@ -67,26 +66,11 @@ public class VoteVidhayak extends AppCompatActivity {
         });
 
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        MLAArea = mSharedPref.getString(MainActivity.sMLA, MainActivity.DEFAULT_MLA);
-        //Log.e(TAG, "MLAArea: " +MLAArea);
         mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
 
         String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String MLA = mSharedPref.getString(MainActivity.sMLA, MainActivity.DEFAULT_MLA);
+        String MLA = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
-
-        // In case of Hindi, change the defaults
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            if (State.equals(MainActivity.DEFAULT_STATE))
-                State = MainActivity.hiDEFAULT_STATE;
-            if (MLA.equals(MainActivity.DEFAULT_MLA))
-                MLA = MainActivity.hiDEFAULT_MLA;
-        }
-        //Log.e(TAG, "State : " + State + ", MLA Area: " + MLA);
-
-        // In case the db isn't initialised, do it now
-        editor.putString(MainActivity.sSTATE, State).commit();
-        editor.putString(MainActivity.sMLA, MLA).commit();
 
         DataFilter dataFilter = new DataFilter();
 
@@ -103,13 +87,9 @@ public class VoteVidhayak extends AppCompatActivity {
         spinnerMLA.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                MLAArea = adapterView.getItemAtPosition(i).toString();
+                String MLAArea = adapterView.getItemAtPosition(i).toString();
                 //Log.e(TAG, "spin MLA : " + i + " " + l + " " + MLAArea);
-                String tmp = MLAArea;
-                tmp.replace(" ", "_");
-                tmp.replace("&", "_");
-                FirebaseLogger.send(getBaseContext(), tmp);
-                editor.putString(MainActivity.sMLA, MLAArea).commit();
+                editor.putString(MainActivity.sMLA_AREA, MLAArea).commit();
 
                 updateMLA();
             }
@@ -125,6 +105,7 @@ public class VoteVidhayak extends AppCompatActivity {
 
     private void updateMLA() {
         DataFilter dataFilter = new DataFilter();
+        String MLAArea = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
         mla = dataFilter.getMLAInfo(mLanguage, MLAArea);
 
         Log.e(TAG, MLAArea + " " + mla.name + " " + mla.phone + " " + mla.email + " " + mla.address);
