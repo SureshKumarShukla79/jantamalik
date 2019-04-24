@@ -140,22 +140,22 @@ $time_total_after = microtime(true);
 //echo "\nTotal " . ($time_total_after - $time_total_before) . " API " . ($time_after - $time_before) . "\n";
 //ADR import complete into DB
 // Filter Congress and BJP
-$filter_illegal_funding = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'ForeignFunding' WHERE party='BJP' OR party='INC' ");
+$filter_illegal_funding = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = '1' WHERE party='BJP' OR party='INC' ");
 if (!$filter_illegal_funding)
     die('Error:' . $filter_illegal_funding . ' -> ' . mysqli_error($conn));
 
 // Filter serious crime charges
-$filter_criminals = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'CriminalCases' WHERE bucket='' AND serious_ipc_counts >0 ");
+$filter_criminals = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = '2' WHERE bucket='' AND serious_ipc_counts >0 ");
 if (!$filter_criminals)
     die('Error:' . $filter_criminals . ' -> ' . mysqli_error($conn));
 
 // Filter candidate_age > 64
-$filter_elders = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'OverAged' WHERE bucket='' AND age > 64 ");
+$filter_elders = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = '3' WHERE bucket='' AND age > 64 ");
 if (!$filter_elders)
     die('Error:' . $filter_elders . ' -> ' . mysqli_error($conn));
 
 // Filter education < Graduate
-$filter_not_graduate = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = 'NotGraduate' WHERE bucket='' "
+$filter_not_graduate = mysqli_query($conn, "UPDATE loksabha_2019 SET bucket = '4' WHERE bucket='' "
         . "AND (education!='Graduate' AND education!='Graduate Professional' AND education!='Post Graduate' AND education!='Doctorate') ");
 if (!$filter_not_graduate)
     die('Error:' . $filter_not_graduate . ' -> ' . mysqli_error($conn));
