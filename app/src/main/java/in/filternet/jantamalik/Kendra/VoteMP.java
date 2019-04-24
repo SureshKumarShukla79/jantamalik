@@ -104,8 +104,7 @@ public class VoteMP extends AppCompatActivity {
         // Populating GUI
         dataFilter = new DataFilter();
         // Load defaults
-        arrayAdapterState = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item,
-                dataFilter.getStates(mLanguage));
+        arrayAdapterState = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
         arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerState.setAdapter(arrayAdapterState);
 
@@ -114,8 +113,7 @@ public class VoteMP extends AppCompatActivity {
         //Log.e(TAG, "state def: " + State);
 
         //populating MP Area
-        arrayAdapterMP = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item,
-                dataFilter.getMPAreas(mLanguage, State));
+        arrayAdapterMP = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
         arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMP.setAdapter(arrayAdapterMP);
 
@@ -138,8 +136,7 @@ public class VoteMP extends AppCompatActivity {
                 editor.putString(MainActivity.sSTATE, State).commit();
 
                 // Reload the state MP areas
-                arrayAdapterMP = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item,
-                        dataFilter.getMPAreas(mLanguage, State));
+                arrayAdapterMP = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
                 arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerMP.setAdapter(arrayAdapterMP);
 

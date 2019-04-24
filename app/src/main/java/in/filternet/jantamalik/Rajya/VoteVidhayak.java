@@ -91,8 +91,7 @@ public class VoteVidhayak extends AppCompatActivity {
         DataFilter dataFilter = new DataFilter();
 
         // Load defaults
-        mla_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item,
-                dataFilter.getMLAAreas(mLanguage, State));
+        mla_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMLAAreas(mLanguage, State));
         mla_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMLA.setAdapter(mla_adapter);
 

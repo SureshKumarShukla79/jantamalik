@@ -12,6 +12,7 @@
     <color name="light_yellow">#FDF5D1</color>
     <color name="yellow">#fdef2f</color>
     <color name="white">#ffffff</color>
-    <color name="blue">#2196F3</color>
+    <color name="blue">#214EF3</color>
     <color name="red">#f90408</color>
+    <color name="card_grey">#dcdcdc</color>
 </resources>

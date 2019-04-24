@@ -142,7 +142,7 @@ public class RajyaFragment extends Fragment {
         editor.putString(MainActivity.sSTATE, State).commit();
 
         // Load defaults
-        ArrayAdapter arrayAdapterState = new ArrayAdapter(view.getContext(), android.R.layout.simple_spinner_item, dataFilter.getStates(mLanguage));
+        ArrayAdapter arrayAdapterState = new ArrayAdapter(view.getContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
         arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerState.setAdapter(arrayAdapterState);
 

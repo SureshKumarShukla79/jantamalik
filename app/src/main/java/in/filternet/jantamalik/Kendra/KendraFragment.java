@@ -223,7 +223,7 @@ public class KendraFragment extends Fragment {
     }
 
     private void issue_election_2019() {
-        FirebaseLogger.send(getContext(), "2019_Election");
+        FirebaseLogger.send(getContext(), "Election_2019");
 
         LinearLayout election_2019_layout = view.findViewById(R.id.election_2019_layout);
 

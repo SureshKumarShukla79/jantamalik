@@ -222,6 +222,8 @@ public class Puzzle extends Activity {
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
                         ui_wrong_answer.setVisibility(View.VISIBLE);
+                        ui_option_1.setTextColor(getResources().getColor(R.color.white));
+                        ui_option_1.setBackgroundColor(getResources().getColor(R.color.red));
                     }
                 }
                 break;
@@ -237,6 +239,8 @@ public class Puzzle extends Activity {
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
                         ui_wrong_answer.setVisibility(View.VISIBLE);
+                        ui_option_2.setTextColor(getResources().getColor(R.color.white));
+                        ui_option_2.setBackgroundColor(getResources().getColor(R.color.red));
                     }
                 }
                 break;
@@ -252,6 +256,8 @@ public class Puzzle extends Activity {
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
                         ui_wrong_answer.setVisibility(View.VISIBLE);
+                        ui_option_3.setTextColor(getResources().getColor(R.color.white));
+                        ui_option_3.setBackgroundColor(getResources().getColor(R.color.red));
                     }
                 }
                 break;
@@ -267,6 +273,8 @@ public class Puzzle extends Activity {
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
                         ui_wrong_answer.setVisibility(View.VISIBLE);
+                        ui_option_4.setTextColor(getResources().getColor(R.color.white));
+                        ui_option_4.setBackgroundColor(getResources().getColor(R.color.red));
                     }
                 }
                 break;
@@ -274,7 +282,35 @@ public class Puzzle extends Activity {
 
         mEditor.commit();
 
+        show_correct_answer(correct_answer);
         enable_radio(false);
+    }
+
+    private void show_correct_answer(String answer) {
+        String option1 = ui_option_1.getText().toString();
+        String option2 = ui_option_2.getText().toString();
+        String option3 = ui_option_3.getText().toString();
+        String option4 = ui_option_4.getText().toString();
+
+        if(option1.equals(answer)) {
+            ui_option_1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            ui_option_1.setTextColor(getResources().getColor(R.color.white));
+        }
+
+        if(option2.equals(answer)) {
+            ui_option_2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            ui_option_2.setTextColor(getResources().getColor(R.color.white));
+        }
+
+        if(option3.equals(answer)) {
+            ui_option_3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            ui_option_3.setTextColor(getResources().getColor(R.color.white));
+        }
+
+        if(option4.equals(answer)) {
+            ui_option_4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            ui_option_4.setTextColor(getResources().getColor(R.color.white));
+        }
     }
 
     private void reset_radio_buttons() {
@@ -282,20 +318,23 @@ public class Puzzle extends Activity {
         ui_wrong_answer.setVisibility(View.INVISIBLE);
 
         ui_option_group.clearCheck();
+
+        ui_option_1.setTextColor(Color.BLACK);
+        ui_option_1.setBackgroundColor(getResources().getColor(R.color.card_grey));
+        ui_option_2.setTextColor(Color.BLACK);
+        ui_option_2.setBackgroundColor(getResources().getColor(R.color.card_grey));
+        ui_option_3.setTextColor(Color.BLACK);
+        ui_option_3.setBackgroundColor(getResources().getColor(R.color.card_grey));
+        ui_option_4.setTextColor(Color.BLACK);
+        ui_option_4.setBackgroundColor(getResources().getColor(R.color.card_grey));
+
         enable_radio(true);
     }
 
     private void enable_radio(boolean value) {
         ui_option_1.setEnabled(value);
-        ui_option_1.setTextColor(Color.BLACK);
-
         ui_option_2.setEnabled(value);
-        ui_option_2.setTextColor(Color.BLACK);
-
         ui_option_3.setEnabled(value);
-        ui_option_3.setTextColor(Color.BLACK);
-
         ui_option_4.setEnabled(value);
-        ui_option_4.setTextColor(Color.BLACK);
     }
 }

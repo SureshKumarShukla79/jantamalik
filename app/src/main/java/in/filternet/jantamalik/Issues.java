@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -167,14 +168,14 @@ public class Issues extends AppCompatActivity {
 
         // Populating GUI
         dataFilter = new DataFilter();
-        state_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_dropdown_item, dataFilter.getStates(mLanguage));
+        state_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
         state_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_spinner_state.setAdapter(state_adapter);
 
         int spinnerPosition = state_adapter.getPosition(state);
         ui_spinner_state.setSelection(spinnerPosition);
 
-        area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(mLanguage, state));
+        area_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
         area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_spinner_area.setAdapter(area_adapter);
 
@@ -192,7 +193,7 @@ public class Issues extends AppCompatActivity {
                 FirebaseLogger.send(getBaseContext(), tmp);
                 editor.putString(MainActivity.sSTATE, state).commit();
 
-                area_adapter = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_item, dataFilter.getMPAreas(mLanguage, state));
+                area_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
                 area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ui_spinner_area.setAdapter(area_adapter);
 

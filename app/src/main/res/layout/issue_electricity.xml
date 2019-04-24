@@ -20,6 +20,16 @@
             app:title="@string/electricity"
             app:titleTextColor="@color/colorAccent" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimaryDark"
+            android:padding="1dp"
+            android:src="@drawable/electricity" />
+
         <LinearLayout
             android:id="@+id/voter"
             android:layout_margin="8dp"
