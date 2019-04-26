@@ -547,6 +547,7 @@
     <string name="congratulation">Congratulations</string>
     <string name="smart_voter">You are a <b>Smart Voter</b></string>
     <string name="user_thanks">Thank You</string>
+    <string name="share">Share</string>
     <string name="election_2019_header_line">1952 we voted for Nehru
         \n2014 we voted for Modi
         \n\nFor 70 years we voted for big names,
@@ -561,4 +562,9 @@
     <string name="criminal_case">Serious crimes</string>
     <string name="aged">Over aged</string>
     <string name="not_graduate">Not graduate</string>
+
+    <string name="share_puzzle">I am a *Smart Voter* and you?
+        \nPlay voter awareness puzzle and become a Smart Voter
+        \n\nTo play, install: *Janta Malik* app</string>
+
 </resources>

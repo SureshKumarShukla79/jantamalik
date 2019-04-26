@@ -45,7 +45,7 @@
                 android:textColor="@color/colorPrimary"
                 android:background="@drawable/home_button"/>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/green_badge"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -53,6 +53,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_gravity="end"
                 android:background="@drawable/green_badge"
+                android:onClick="user_became_smart"
                 android:visibility="gone"/>
         </android.support.v7.widget.Toolbar>
 

@@ -554,6 +554,7 @@
     <string name="congratulation">बधाई हो</string>
     <string name="smart_voter">आप बहुत <b>जागरूक वोटर</b> है</string>
     <string name="user_thanks">धन्यवाद</string>
+    <string name="share">शेयर करें</string>
     <string name="election_2019_header_line">1952 में नेहरूजी के नाम पर
         \n2014 में मोदीजी के नाम पर
         \n\n70 साल से बड़े नाम पर ही वोट दिया,
@@ -569,4 +570,8 @@
     <string name="criminal_case">गंभीर आपराधिक मामले</string>
     <string name="aged">उम्र ज्यादा</string>
     <string name="not_graduate">ग्रेजुएट नहीं है</string>
+
+    <string name="share_puzzle">मैं एक *जागरूक वोटर* हुँ और आप?
+        \nखेलिए वोटर जागरूकता पहेली और बनिए जागरूक वोटर।
+        \n\nखेलने के लिए, डाउनलोड करें: *जनता मालिक* ऐप</string>
 </resources>

@@ -131,6 +131,17 @@ public class Puzzle extends Activity {
         option.remove(index);
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        boolean smart_voter = mSharedPref.getBoolean(MainActivity.bSMART_VOTER, false);
+        if(smart_voter) {
+            Intent intent = new Intent(Puzzle.this, MainActivity.class);
+            startActivity(intent);
+        }
+    }
+
     private int ask_question() {
         for(int i=question_num+1; i<Puzzle_Ques.questions.length; i++){
             boolean correct = mSharedPref.getBoolean(bQUE_+(i+1), false);
@@ -164,6 +175,7 @@ public class Puzzle extends Activity {
         }
     }
 
+    //One copy in MainActivity
     private void user_became_smart() {
         ImageView image = new ImageView(this);
         image.setImageResource(R.drawable.green_badge);
@@ -178,6 +190,19 @@ public class Puzzle extends Activity {
                 FirebaseLogger.send(Puzzle.this, "Smart_Voter");
 
                 Intent intent = new Intent(Puzzle.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        builder.setNeutralButton(R.string.share, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                FirebaseLogger.send(Puzzle.this, "Share_Puzzle");
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String shareBody = getString(R.string.share_puzzle);
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
                 startActivity(intent);
             }
         });

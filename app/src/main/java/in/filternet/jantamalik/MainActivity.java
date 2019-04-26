@@ -242,6 +242,40 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //One copy in Puzzle
+    public void user_became_smart(View view) {
+        ImageView image = new ImageView(this);
+        image.setImageResource(R.drawable.green_badge);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+        builder.setTitle(R.string.congratulation);
+        builder.setMessage(R.string.smart_voter);
+        builder.setView(image);
+        builder.setPositiveButton(R.string.user_thanks, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                FirebaseLogger.send(MainActivity.this, "Smart_Voter");
+            }
+        });
+        builder.setNeutralButton(R.string.share, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                FirebaseLogger.send(MainActivity.this, "Share_Puzzle");
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String shareBody = getString(R.string.share_puzzle);
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
+                startActivity(intent);
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.show();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater =  getMenuInflater();
