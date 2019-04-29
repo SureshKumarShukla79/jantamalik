@@ -523,7 +523,7 @@
     <string name="bihar_repay_loan">Repayment of Loans</string>
     <string name="bihar_source_text">Full budget 2018-19 http://finance.bih.nic.in/Documents/Circulars/CN-02-28-02-2018.pdf</string>
 
-    <string name="puzzle">Puzzle</string>
+    <string name="puzzle">Quiz</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>
     <string name="finish">Finish</string>
@@ -564,7 +564,7 @@
     <string name="not_graduate">Not graduate</string>
 
     <string name="share_puzzle">I am a *Smart Voter* and you?
-        \nPlay voter awareness puzzle and become a Smart Voter
+        \nPlay voter awareness quiz and become a Smart Voter
         \n\nTo play, install: *Janta Malik* app</string>
 
 </resources>
