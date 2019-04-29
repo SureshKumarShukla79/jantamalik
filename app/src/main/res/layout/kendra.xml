@@ -147,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|bottom">
-                <ImageButton
+                <ImageView
                     android:id="@+id/note1"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
@@ -174,7 +174,7 @@
                         android:textColor="@color/black"
                         android:textSize="25sp" />
                 </LinearLayout>
-                <ImageButton
+                <ImageView
                     android:id="@+id/note3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -196,7 +196,7 @@
                 android:layout_gravity="right|bottom"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/vote1"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
@@ -224,7 +224,7 @@
                         android:textColor="@color/black"
                         android:textSize="25sp" />
                 </LinearLayout>
-                <ImageButton
+                <ImageView
                     android:id="@+id/vote3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

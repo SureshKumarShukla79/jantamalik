@@ -146,13 +146,12 @@ public class RajyaFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
-                Log.e(TAG, State);
                 editor.putString(MainActivity.sSTATE, State).commit();
 
                 String tmp = State;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
-                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    tmp = MainActivity.State_Area.state;
+                    String state = MainActivity.get_state(getContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    tmp = state;
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");

@@ -551,10 +551,10 @@
     <string name="main_reason">मुख्य कारण</string>
     <string name="puzzle_title"><b>आप कितने जागरूक हैं?</b></string>
 
-    <string name="congratulation">बधाई हो</string>
+    <string name="congratulation">बधाई हो !</string>
     <string name="smart_voter">आप बहुत <b>जागरूक वोटर</b> है</string>
-    <string name="user_thanks">धन्यवाद</string>
-    <string name="share">शेयर करें</string>
+    <string name="user_thanks">बंद करें</string>
+    <string name="share">अपने दोस्तों से शेयर करें</string>
     <string name="election_2019_header_line">1952 में नेहरूजी के नाम पर
         \n2014 में मोदीजी के नाम पर
         \n\n70 साल से बड़े नाम पर ही वोट दिया,

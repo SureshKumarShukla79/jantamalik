@@ -105,8 +105,8 @@ public class VoteMP extends AppCompatActivity {
 
                 String tmp = State;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
-                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    tmp = MainActivity.State_Area.state;
+                    String state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    tmp = state;
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
@@ -137,8 +137,8 @@ public class VoteMP extends AppCompatActivity {
 
                 String tmp = MPArea;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
-                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    tmp = MainActivity.State_Area.constituency_mp_area;
+                    String area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    tmp = area;
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");

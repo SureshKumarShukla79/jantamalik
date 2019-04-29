@@ -137,6 +137,12 @@ public class Issues extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        back_button(toolbar.getRootView());
+    }
+
     private void update_gui() {
         ui_spinner_state = findViewById(R.id.state_spinner);
         ui_spinner_area = findViewById(R.id.area_spinner);
@@ -177,8 +183,8 @@ public class Issues extends AppCompatActivity {
 
                 String tmp = state;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
-                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    tmp = MainActivity.State_Area.state;
+                    String state_out = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    tmp = state_out;
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
@@ -207,8 +213,8 @@ public class Issues extends AppCompatActivity {
 
                 String tmp = area;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
-                    MainActivity.State_Area state_area = MainActivity.get_state_and_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    tmp = MainActivity.State_Area.constituency_mp_area;
+                    String area_out = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    tmp = area_out;
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");

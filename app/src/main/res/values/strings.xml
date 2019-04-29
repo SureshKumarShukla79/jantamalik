@@ -544,10 +544,10 @@
     <string name="main_reason">Main reason</string>
     <string name="puzzle_title"><b>Are you a smart voter?</b></string>
 
-    <string name="congratulation">Congratulations</string>
+    <string name="congratulation">Congratulations !</string>
     <string name="smart_voter">You are a <b>Smart Voter</b></string>
-    <string name="user_thanks">Thank You</string>
-    <string name="share">Share</string>
+    <string name="user_thanks">Close</string>
+    <string name="share">Share with friends</string>
     <string name="election_2019_header_line">1952 we voted for Nehru
         \n2014 we voted for Modi
         \n\nFor 70 years we voted for big names,

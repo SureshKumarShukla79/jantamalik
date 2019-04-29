@@ -338,9 +338,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         String language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null);
-        State_Area state_area = get_state_and_area(this, language);
-        mEditor.putString(sSTATE, state_area.state).commit();
-        mEditor.putString(sMP_AREA, state_area.constituency_mp_area).commit();
+        String state = get_state(this, language);
+        String area = get_area(this, language);
+        mEditor.putString(sSTATE, state).commit();
+        mEditor.putString(sMP_AREA, area).commit();
 
         this.recreate(); // refresh screen
     }
@@ -355,35 +356,49 @@ public class MainActivity extends AppCompatActivity {
                 activity.getBaseContext().getResources().getDisplayMetrics());
     }
 
-    public static class State_Area{
-        public static String state;
-        public static String constituency_mp_area;
-    }
-
-    public static State_Area get_state_and_area(Context context, String language){
-        State_Area state_area = new State_Area();
+    public static String get_state(Context context, String language){
+        String state = " ";
 
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
-        String state = shared_pref.getString(sSTATE, DEFAULT_STATE);
-        String area = shared_pref.getString(sMP_AREA, DEFAULT_MP);
+        String state_in = shared_pref.getString(sSTATE, DEFAULT_STATE);
 
         if (language.equals(sLANGUAGE_HINDI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state.equals(MPdata.all_MPs[i][0]) && area.equals(MPdata.all_MPs[i][3])) {
-                    state_area.state = MPdata.all_MPs[i][1];
-                    state_area.constituency_mp_area = MPdata.all_MPs[i][6];
+                if (state_in.equals(MPdata.all_MPs[i][0])) {
+                    state = MPdata.all_MPs[i][1];
                 }
             }
         } else {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state.equals(MPdata.all_MPs[i][1]) && area.equals(MPdata.all_MPs[i][6])) {
-                    state_area.state = MPdata.all_MPs[i][0];
-                    state_area.constituency_mp_area = MPdata.all_MPs[i][3];
+                if (state_in.equals(MPdata.all_MPs[i][1])) {
+                    state = MPdata.all_MPs[i][0];
                 }
             }
         }
-        Log.e(TAG, "Value: " +  state_area.state + state_area.constituency_mp_area);
-        return state_area;
+        return state;
+    }
+
+    public static String get_area(Context context, String language){
+        String area = " ";
+
+        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
+        String state_in = shared_pref.getString(sSTATE, DEFAULT_STATE);
+        String area_in = shared_pref.getString(sMP_AREA, DEFAULT_MP);
+
+        if (language.equals(sLANGUAGE_HINDI)) {
+            for(int i=0; i< MPdata.all_MPs.length; i++){
+                if (state_in.equals(MPdata.all_MPs[i][0]) && area_in.equals(MPdata.all_MPs[i][3])) {
+                    area = MPdata.all_MPs[i][6];
+                }
+            }
+        } else {
+            for(int i=0; i< MPdata.all_MPs.length; i++){
+                if (state_in.equals(MPdata.all_MPs[i][1]) && area_in.equals(MPdata.all_MPs[i][6])) {
+                    area = MPdata.all_MPs[i][3];
+                }
+            }
+        }
+        return area;
     }
 
     public static void set_notification_time(Context context, boolean fresh) {
