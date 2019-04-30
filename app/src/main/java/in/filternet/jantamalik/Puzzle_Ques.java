@@ -4,7 +4,7 @@ public class Puzzle_Ques {
 
     public static final String[][] questions = {
             //   "Question"	        "Answer & Option 1"	   "Option 2"           "Option 3"	        "Option 4"
-            {"When did you pay tax first time in your life?",
+            {"When did you pay tax first time in your life?", // Economy 1
                     "When I bought toffee/biscuit",
                     "My 1st Salary as Income Tax(TDS)",
                     "Family paid the hospital bill when I was born.",
@@ -14,7 +14,7 @@ public class Puzzle_Ques {
                     "मेरी पहली सैलरी पर टैक्स कटा था(टीडीएस)",
                     "मेरे पैदा होनेपर अस्पताल का बिल",
                     "मैंने कभी टैक्स नहीं दिया है"},
-            {"How much is central govt budget for 2018-19?",
+            {"How much is central govt budget for 2018-19?",// Ecoonomy 2
                     "24 lakh crore",
                     "2.5 lakh crore",
                     "3 lakh crore",
@@ -24,7 +24,7 @@ public class Puzzle_Ques {
                     "2.5 लाख करोड़",
                     "3 लाख करोड़",
                     "18 लाख करोड़"},
-            {"How do you run the govt?",
+            {"How do you run the govt?", // Political Rights 1
                     "Voter -> MP -> Loksabha -> Govt",
                     "Voter -> Govt -> MP -> Loksabha",
                     "Govt -> MP -> Loksabha -> Voter",
@@ -34,7 +34,7 @@ public class Puzzle_Ques {
                     "वोटर -> सरकार -> सांसद -> लोकसभा",
                     "सरकार -> सांसद -> लोकसभा -> वोटर",
                     "सांसद -> लोकसभा -> सरकार -> वोटर"},
-            {"Which political parties have been found guilty of illegal-foreign-funding in high court?",
+            {"Which political parties have been found guilty of illegal-foreign-funding in high court?", // Political Rights 2
                     "BJP and Congress",
                     "Congress only", "SP and BSP",
                     "All parties",
@@ -43,32 +43,33 @@ public class Puzzle_Ques {
                     "सिर्फ कांग्रेस",
                     "सपा और बसपा",
                     "सभी पार्टियाँ"},
-            {"What is priority of education in central govt budget?",
+            {"What is priority of education in central govt budget?", // Ecoonomy 3
                     "10", "3", "1", "7",
                     "केन्द्र सरकार के बजट में शिक्षा का कौन सा स्थान है?",
                     "10", "3", "1", "7"},
-            {"What is priority of health in central govt budget?",
+            {"What is priority of health in central govt budget?", // Ecoonomy 4
                     "14", "2", "5", "7",
                     "केन्द्र सरकार के बजट में स्वास्थ्य का कौन सा स्थान है?",
                     "14", "2", "5", "7"},
-            {"Does newspapers/news-channels show paid-fake-news frequently?",
-                    "Yes", "No", "Don't know", "Rarely",
+            {"Does newspapers/news-channels frequently show paid-news?", // Media 1
+                    "Yes", "No", "I can't detect it", "Rarely",
                     "क्या अाये दिन अखबार और न्यूज चैनल बिकी-झूठी-खबरें दिखाते हैं?",
-                    "हाँ", "नहीं", "पता नहीं", "कभी-कभी"},
-            {"Do you have contact information of your MP?", "Yes",
-                    "No",
-                    "Don't know",
-                    "Not sure",
-                    "क्या आपके पास सांसद की संपर्क जानकारी है?",
-                    "हाँ", "नहीं", "पता नहीं", "कह नहीं सकते"},
-            {"Should your MP/MLA explain govt budget and spending to people?",
+                    "हाँ", "नहीं", "मुझे पता ही नहीं चलता", "कभी-कभी"},
+            {"Who is responsible for - drinking water, road, traffic jam and electricity?", // Political Rights 3
+                    "MLA",
+                    "MP",
+                    "Municipal corporator",
+                    "Opposition",
+                    "कौन जिम्मेदार है - पीने का पानी, सड़क, ट्रैफिक जाम और बिजली के लिए?",
+                    "विधायक", "सांसद", "नगर निगम काॅरपोरेटर", "विपक्ष"},
+            {"Should your MP/MLA explain to you, the govt budget and spending?", // Ecoonomy 5
                     "Yes",
                     "No",
-                    "Don't know",
+                    "They never meet me",
                     "Not sure",
-                    "क्या आपके सांसद/विधायक को, जनता को, सरकार का बजट और खर्च समझाना चाहिए?",
-                    "हाँ", "नहीं", "पता नहीं", "कह नहीं सकते"},
-            {"When was the lokpal bill passed by loksabha?",
+                    "क्या आपके सांसद/विधायक ने आपको, सरकारी बजट और खर्च समझाना चाहिए?",
+                    "हाँ", "नहीं", "वो तो मिलता ही नहीं", "कह नहीं सकते"},
+            {"When was the lokpal bill passed by loksabha?", // Political Rights 4
                     "When people started protesting outside minister/MP house",
                     "When people protested in Ramlila ground",
                     "When Anna went to jail", "Don't know",
