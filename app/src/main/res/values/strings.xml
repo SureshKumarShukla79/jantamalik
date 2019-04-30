@@ -548,13 +548,11 @@
     <string name="smart_voter">You are a <b>Smart Voter</b></string>
     <string name="user_thanks">Close</string>
     <string name="share">Share with friends</string>
-    <string name="election_2019_header_line">1952 we voted for Nehru
-        \n2014 we voted for Modi
-        \n\nFor 70 years we voted for big names,
+    <string name="election_2019_header_line">For 70 years we voted for big names,
         \nThen wait for MP for 5 years
         \n\nOutcome ???
         \n9 rich men have more wealth than half population
-        \n\nThis time,
+        \n\nThis time select,
         \nGood MPs for Good governance</string>
     <string name="adr_source"><a href="https://adrindia.org">Association for Democratic Reforms</a></string>
     <string name="know_more">Know more ></string>

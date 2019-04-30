@@ -555,14 +555,11 @@
     <string name="smart_voter">आप बहुत <b>जागरूक वोटर</b> है</string>
     <string name="user_thanks">बंद करें</string>
     <string name="share">अपने दोस्तों से शेयर करें</string>
-    <string name="election_2019_header_line">1952 में नेहरूजी के नाम पर
-        \n2014 में मोदीजी के नाम पर
-        \n\n70 साल से बड़े नाम पर ही वोट दिया,
+    <string name="election_2019_header_line">70 साल से बड़े नाम पर ही वोट दिया,
         \nफिर 5-साल अपने सांसद का इंतजार किया
         \n\nनतीजा देख लिया ???
         \n9 अमीरों के पास, देश की आधी आबादी जितनी सम्पत्ति
         \n\nतो अबकी बार,
-        \nना 15 लाख, ना 72 हजार
         \nअच्छा सांसद तो अच्छी सरकार</string>
     <string name="adr_source"><a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
     <string name="know_more">अधिक जानें ></string>
