@@ -172,10 +172,17 @@ public class RajyaFragment extends Fragment {
         vote_Click();
         note_Click();
 
+        issue_hospital();
+        issue_drinking_water();
+        issue_agriculture_water();
+        issue_agriculture_loan();
+        issue_price_realization();
+        issue_agriculture_subsidy();
         issue_mla_no_response();
         issue_electricity();
         issue_police();
         issue_road();
+        issue_public_transport();
         issue_traffic();
 
         return view;
@@ -398,6 +405,146 @@ public class RajyaFragment extends Fragment {
             public void onClick(View view) {
                 int layout_id = R.layout.issue_mla_no_response;
                 int title_id = R.string.mla_no_response;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_hospital() {
+        FirebaseLogger.send(getContext(), "Issue_Hospital");
+
+        LinearLayout electricity_layout = view.findViewById(R.id.hospital_layout);
+
+        electricity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_hospital;
+                int title_id = R.string.hospital;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_drinking_water() {
+        FirebaseLogger.send(getContext(), "Issue_Drinking_Water");
+
+        LinearLayout electricity_layout = view.findViewById(R.id.drinking_water_layout);
+
+        electricity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_drinking_water;
+                int title_id = R.string.drinking_water;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_agriculture_water() {
+        FirebaseLogger.send(getContext(), "Issue_Agriculture_Water");
+
+        LinearLayout electricity_layout = view.findViewById(R.id.agriculture_water_layout);
+
+        electricity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_agriculture_water;
+                int title_id = R.string.agriculture_water;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_agriculture_loan() {
+        FirebaseLogger.send(getContext(), "Issue_Agriculture_Loan");
+
+        LinearLayout electricity_layout = view.findViewById(R.id.agriculture_loan_layout);
+
+        electricity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_agriculture_loan;
+                int title_id = R.string.agriculture_loan;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_price_realization() {
+        FirebaseLogger.send(getContext(), "Issue_Price_Realization");
+
+        LinearLayout electricity_layout = view.findViewById(R.id.price_realization_layout);
+
+        electricity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_price_realization;
+                int title_id = R.string.price_realization;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_agriculture_subsidy() {
+        FirebaseLogger.send(getContext(), "Issue_Agriculture_Subsidy");
+
+        LinearLayout electricity_layout = view.findViewById(R.id.agriculture_seed_layout);
+
+        electricity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_agriculture_subsidy;
+                int title_id = R.string.agriculture_subsidy;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("rajya", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_public_transport() {
+        FirebaseLogger.send(getContext(), "Issue_Public_Transport");
+
+        LinearLayout electricity_layout = view.findViewById(R.id.public_transport_layout);
+
+        electricity_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_public_transport;
+                int title_id = R.string.public_transport;
 
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);

@@ -113,7 +113,7 @@ foreach ($all_MPs as $array) {
                 $tmp = mysqli_query($conn, $sql);
 
                 if (!$tmp)
-                    die('Error:' . mysqli_error($conn));
+                    die('Error:' . mysqli_error($conn) . " " . $sql);
             } else {
                 $sql = "INSERT INTO loksabha_2019 (name, constituency, party, state, date_of_election, sex, age, serious_ipc_counts,
 								cases, education, total_assets, movable_assets, immovable_assets, liabilities, pan_given,
