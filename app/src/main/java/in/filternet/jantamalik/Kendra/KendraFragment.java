@@ -64,7 +64,6 @@ public class KendraFragment extends Fragment {
         infographics();
         responsibility();
 
-        issue_employment();
         issue_media();
         issue_mp_no_response();
         issue_train();
@@ -118,26 +117,6 @@ public class KendraFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 intent = new Intent(view.getContext(), VoteMP.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_employment() {
-        FirebaseLogger.send(getContext(), "Issue_Employment");
-
-        LinearLayout media_or_afeem_layout = view.findViewById(R.id.employment_layout);
-
-        media_or_afeem_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int layout_id = R.layout.issue_employment;
-                int title_id = R.string.employment;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("kendra", true);
                 startActivity(intent);
             }
         });
