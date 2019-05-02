@@ -227,12 +227,20 @@
     <string name="cleanliness">Cleanliness</string>
     <string name="poor_road">Poor Road</string>
     <string name="electricity">Electricity</string>
-    <string name="police">Police</string>
+    <string name="police">Police/Law and order</string>
     <string name="traffic">Road jam/traffic</string>
     <string name="corruption">Delay / corruption in govt offices</string>
     <string name="train">Train delay</string>
     <string name="business">Low ease-of-doing-business</string>
     <string name="election_2019">Who to choose in 2019?  ⭐</string>
+    <string name="employment">Better employment opportunities</string>
+    <string name="hospital">Better hospitals/primary healthcare centres</string>
+    <string name="drinking_water">Drinking water</string>
+    <string name="agriculture_water">Availability of water for agriculture</string>
+    <string name="agriculture_loan">Agriculture loan availability</string>
+    <string name="price_realization">High price realization for farm products</string>
+    <string name="agriculture_subsidy">Agricultural subsidy for seeds/fertilizers</string>
+    <string name="public_transport">Better public transport</string>
 
     <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
     <string name="jagran_group_links"><a href="https://youtu.be/8_-8SvxvHqA?t=135">Part 1</a>

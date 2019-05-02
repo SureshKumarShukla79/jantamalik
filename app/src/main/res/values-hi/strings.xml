@@ -225,12 +225,20 @@
     <string name="cleanliness">सफाई</string>
     <string name="poor_road">सड़क</string>
     <string name="electricity">बिजली</string>
-    <string name="police">पुलिस</string>
+    <string name="police">पुलिस/कानून-व्यवस्था</string>
     <string name="traffic">जाम में फंसी जनता</string>
     <string name="corruption">सरकारी दफ्तर में देरी/घूस</string>
     <string name="train">देर से चलती रेल</string>
     <string name="business">नये उद्योग (स्टार्टप) की मुश्किलें</string>
     <string name="election_2019">2019 में किसे चुने?  ⭐</string>
+    <string name="employment">रोजगार के बेहतर अवसर</string>
+    <string name="hospital">बेहतर अस्पताल/प्राथमिक स्वास्थ्य केंद्र </string>
+    <string name="drinking_water">पीने का पानी</string>
+    <string name="agriculture_water">कृषि के लिए पानी की उपलब्धता</string>
+    <string name="agriculture_loan">कृषि ऋण उपलब्धता</string>
+    <string name="price_realization">कृषि उत्पादों के लिए सही मूल्य</string>
+    <string name="agriculture_subsidy">बीज/उर्वरक के लिए कृषि सब्सिडी</string>
+    <string name="public_transport">बेहतर सार्वजनिक परिवहन</string>
 
     <string name="jagran_group">जागरण समूह -
         \nदैनिक जागरण,
