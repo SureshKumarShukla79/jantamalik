@@ -195,6 +195,7 @@ public class VoteMP extends AppCompatActivity {
 
         try { // Calling not available on Tablet devices
             startActivity(callIntent);
+            FirebaseLogger.send(this, "Contact_MP_Phone");
         } catch (Exception exception){
             Toast.makeText(this, "Unable to CALL", Toast.LENGTH_LONG).show();
             exception.printStackTrace();
@@ -221,6 +222,7 @@ public class VoteMP extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "Sending mail..."));
                 finish();
             }
+            FirebaseLogger.send(this, "Contact_MP_Email");
         } catch (Exception ex) {
             Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
         }

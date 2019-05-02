@@ -101,20 +101,27 @@ public class Contact extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private String firebase_tag = "";
     public void onclick_add_subject(View view) {
         boolean checked =  ((RadioButton) view).isChecked();
         switch (view.getId()) {
             case R.id.radio_issue:
-                if(checked)
+                if (checked) {
                     subject = getString(R.string.add_issue);
+                    firebase_tag = "User_Action_AddIssues";
+                }
                 break;
             case R.id.radio_update:
-                if(checked)
+                if (checked) {
                     subject = getString(R.string.update_contact_info);
+                    firebase_tag = "User_Action_UpdateInfo";
+                }
                 break;
             case R.id.radio_feedback:
-                if(checked)
+                if (checked) {
                     subject = getString(R.string.feedback);
+                    firebase_tag = "User_Action_Feedback";
+                }
                 break;
         }
     }
@@ -140,6 +147,9 @@ public class Contact extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "Sending mail..."));
                 finish();
             }
+
+            FirebaseLogger.send(this, firebase_tag);
+
         } catch (Exception ex) {
             Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
         }
