@@ -573,4 +573,27 @@
         \nPlay voter awareness quiz and become a Smart Voter
         \n\nTo play, install: *Janta Malik* app</string>
 
+    <string name="department"><b>Government Department</b></string>
+    <string name="vacancy"><b>Vacancies</b></string>
+    <string name="total"><b>Total</b></string>
+    <string name="total_vacancy"><b>23.8 lakh</b></string>
+    <string name="police_unemploy">Police</string>
+    <string name="teacher">School Teachers</string>
+    <string name="teacher_vacancy">10.1 lakh</string>
+    <string name="police_vacancy">5.4 lakh</string>
+    <string name="railway">Railway</string>
+    <string name="railway_vacancy">2.4 lakh</string>
+    <string name="anganwadi_workers">Anganwadi Workers</string>
+    <string name="anganwadi_vacancy">2.2 lakh</string>
+    <string name="health_centres">Health Centres</string>
+    <string name="health_centre_vacancy">1.5 lakh</string>
+    <string name="armed_forces">Armed Forces</string>
+    <string name="paramilitary_forces">Paramilitary Forces</string>
+    <string name="postal_department">Postal Department</string>
+    <string name="aiims">AIIMS</string>
+    <string name="higher_institutes">Other higher education institutes</string>
+    <string name="courts">Courts</string>
+
+    <string name="toi_source">Source:</string>
+    <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">The Times of India</a></string>
 </resources>

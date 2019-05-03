@@ -25,6 +25,7 @@ import android.widget.TextView;
 
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.MPdata;
+import in.filternet.jantamalik.Kendra.VoteMP;
 import in.filternet.jantamalik.LokSabha_Election_2019.Andaman_and_Nicobar_Islands;
 import in.filternet.jantamalik.LokSabha_Election_2019.Andhra_Pradesh;
 import in.filternet.jantamalik.LokSabha_Election_2019.Arunachal_Pradesh;
@@ -66,6 +67,7 @@ import static in.filternet.jantamalik.MainActivity.TAB_CORPORATION;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
+import static in.filternet.jantamalik.MainActivity.USER_SHARE_APP;
 
 public class Issues extends AppCompatActivity {
     private final static String TAG ="Issues";
@@ -117,10 +119,11 @@ public class Issues extends AppCompatActivity {
 
         if(layoutResID == R.layout.issue_media_or_afeem) {
             make_clickable_links();
-        }
-
-        if(layoutResID == R.layout.issue_election_2019) {
+        } else if (layoutResID == R.layout.issue_election_2019) {
             update_gui();
+        } else if (layoutResID == R.layout.issue_employment) {
+            TextView ui_toi_link = findViewById(R.id.toi_link);
+            ui_toi_link.setMovementMethod(LinkMovementMethod.getInstance());
         }
 
     }
@@ -949,7 +952,8 @@ public class Issues extends AppCompatActivity {
 
         String shareBody = getString(R.string.share_message);
         intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,
+                shareBody + USER_SHARE_APP);
         startActivity(intent);
     }
 
@@ -958,6 +962,13 @@ public class Issues extends AppCompatActivity {
 
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void onclick_my_MP_screen(View view) {
+        Intent intent = new Intent(view.getContext(), VoteMP.class);
+        intent.putExtra("layout_id", layoutResID);
+        intent.putExtra("title_id", titleID);
         startActivity(intent);
     }
 }

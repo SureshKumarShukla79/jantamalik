@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String sMLA_AREA = "MLA_Area";
     public static final String sWARD = "Ward";
 
+    public final static String URL_PLAYSTORE_MARKET = "https://play.google.com/store/apps/details?id=in.filternet.jantamalik";
+    public static final String USER_SHARE_APP = "\n" + URL_PLAYSTORE_MARKET + "&referrer=utm_source%3Dr";
+
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
@@ -266,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.setType("text/plain");
                 String shareBody = getString(R.string.share_puzzle);
                 intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
-                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + USER_SHARE_APP);
                 startActivity(intent);
             }
         });
@@ -308,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
 
         String shareBody = getString(R.string.share_message);
         intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + USER_SHARE_APP);
         startActivity(intent);
     }
 
@@ -588,8 +591,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        public final static String URL_PLAYSTORE_MARKET = "https://play.google.com/store/apps/details?id=in.filternet.jantamalik";
-
         //It retrieves the latest version by scraping the content of current version from play store at runtime
         public String get_PlayStoreVersion(){
             String playstoreVersion = null;
@@ -640,7 +641,7 @@ public class MainActivity extends AppCompatActivity {
         protected Boolean doInBackground(Void... params) {
             //Log.e(TAG, "doInBackground");
             String mobileVersion, playstoreVersion = null;
-            String urlOfAppFromPlayStore = VersionPrompt.URL_PLAYSTORE_MARKET;
+            String urlOfAppFromPlayStore = URL_PLAYSTORE_MARKET;
             try {
                 mobileVersion = context_v.getPackageManager().getPackageInfo(context_v.getPackageName(), 0).versionName;
                 Log.e(TAG, "Mobile version = " + mobileVersion);

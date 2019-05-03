@@ -579,4 +579,28 @@
     <string name="share_puzzle">मैं एक *जागरूक वोटर* हुँ और आप?
         \nखेलिए वोटर जागरूकता पहेली और बनिए जागरूक वोटर।
         \n\nखेलने के लिए, डाउनलोड करें: *जनता मालिक* ऐप</string>
+
+    <string name="department"><b>सरकारी विभाग</b></string>
+    <string name="vacancy"><b>रिक्तियाँ</b></string>
+    <string name="total"><b>कुल</b></string>
+    <string name="total_vacancy"><b>23.8 लाख</b></string>
+    <string name="teacher">स्कूली शिक्षक</string>
+    <string name="police_unemploy">पुलिस</string>
+    <string name="teacher_vacancy">10.1 लाख</string>
+    <string name="police_vacancy">5.4 लाख</string>
+    <string name="railway">रेलवे</string>
+    <string name="railway_vacancy">2.4 लाख</string>
+    <string name="anganwadi_workers">आंगनवाड़ी कार्यकर्ता</string>
+    <string name="anganwadi_vacancy">2.2 लाख</string>
+    <string name="health_centres">स्वास्थ्य केंद्र</string>
+    <string name="health_centre_vacancy">1.5 लाख</string>
+    <string name="armed_forces">सशस्त्र बल</string>
+    <string name="paramilitary_forces">अर्धसैनिक बल</string>
+    <string name="postal_department">डाक विभाग</string>
+    <string name="aiims">एम्स</string>
+    <string name="higher_institutes">अन्य उच्च शिक्षण संस्थान</string>
+    <string name="courts">अदालतों</string>
+
+    <string name="toi_source">स्त्रोत:</string>
+    <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">दी टाइम्स आॅफ इंडिया</a></string>
 </resources>

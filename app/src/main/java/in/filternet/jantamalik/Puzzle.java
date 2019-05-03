@@ -202,7 +202,7 @@ public class Puzzle extends Activity {
                 intent.setType("text/plain");
                 String shareBody = getString(R.string.share_puzzle);
                 intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
-                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + "\nhttps://play.google.com/store/apps/details?id=in.filternet.jantamalik");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + MainActivity.USER_SHARE_APP);
                 startActivity(intent);
             }
         });

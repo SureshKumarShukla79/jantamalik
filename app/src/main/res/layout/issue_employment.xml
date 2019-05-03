@@ -30,79 +30,521 @@
             android:padding="1dp"
             android:src="@drawable/unemployment" />
 
-        <LinearLayout
-            android:id="@+id/voter"
-            android:layout_margin="8dp"
-            android:padding="1dp"
-            android:background="@drawable/linearlayout_border"
+        <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="@dimen/small_image"
-                android:layout_height="@dimen/small_image"
-                android:layout_gravity="center"
-                android:background="@color/greylight"
-                android:src="@drawable/voter" />
-            <TextView
-                android:id="@+id/janta_issue"
-                android:layout_width="wrap_content"
+            android:layout_margin="4dp"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_marginLeft="@dimen/issue_text_left_margin"
-                android:layout_marginStart="@dimen/issue_text_left_margin"
-                android:text="@string/mp_voter"
-                android:textColor="@color/black" />
-        </LinearLayout>
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/vacancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/teacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l1"
+                    android:text="@string/teacher_vacancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:gravity="center"
+                    android:text="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/police_unemploy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l2"
+                    android:text="@string/police_vacancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/railway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l3"
+                    android:text="@string/railway_vacancy"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/anganwadi_workers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l4"
+                    android:text="@string/anganwadi_vacancy"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/health_centres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l5"
+                    android:text="@string/health_centre_vacancy"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/armed_forces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l6"
+                    android:text="62,084"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/paramilitary_forces"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l7"
+                    android:text="61,509"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/postal_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l8"
+                    android:text="54,263"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/aiims"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l9"
+                    android:text="21,740"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/higher_institutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l10"
+                    android:text="12,020"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text="11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/courts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l11"
+                    android:text="5,853"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:gravity="center"
+                    android:id="@+id/l42"
+                    android:text="@string/total_vacancy"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </TableRow>
+
+        </TableLayout>
 
         <LinearLayout
-            android:id="@+id/neta"
             android:layout_width="match_parent"
-            android:layout_margin="8dp"
-            android:padding="1dp"
-            android:background="@drawable/linearlayout_border"
             android:layout_height="wrap_content"
+            android:padding="5dp"
             android:orientation="horizontal">
-            <ImageView
-                android:layout_width="@dimen/small_image"
-                android:layout_height="@dimen/small_image"
-                android:layout_gravity="center"
-                android:background="@color/greylight"
-                android:src="@drawable/politician_illustration" />
-            <TextView
-                android:id="@+id/parshad_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/issue_text_left_margin"
-                android:layout_marginStart="@dimen/issue_text_left_margin"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/mp_neta"
-                android:textColor="@color/black" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/parliament_house"
-            android:layout_width="match_parent"
-            android:layout_margin="8dp"
-            android:padding="1dp"
-            android:background="@drawable/linearlayout_border"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="@dimen/small_image"
-                android:layout_height="@dimen/small_image"
-                android:layout_gravity="center"
-                android:background="@color/greylight"
-                android:src="@drawable/loksabha" />
             <TextView
-                android:id="@+id/parliament"
+                android:id="@+id/toi_source"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/issue_text_left_margin"
-                android:layout_marginStart="@dimen/issue_text_left_margin"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/mp_parliament"
-                android:textColor="@color/black" />
+                android:text="@string/toi_source"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_gravity="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/toi_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/toi_link"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColorLink="@color/blue"
+                android:visibility="visible"/>
         </LinearLayout>
 
         <RelativeLayout
