@@ -3,6 +3,12 @@ package in.filternet.jantamalik.LokSabha_Election_2019;
 
 public class Jammu_and_Kashmir {
 public static final String[][] green_bucket = {
+        {"Jammu & Kashmir", "Anantnag", "Mirza Sajad Hussain Beigh", "Independent", "60000", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=10679", "जम्मू और कश्मीर", "अनंतनाग", "मिर्जा सज्जाद हुसैन बेग", "निर्दलीय"},
+        {"Jammu & Kashmir", "Anantnag", "Surinder Singh", "Pragatishil Samajwadi Party (Lohia)", "80.9Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7850", "जम्मू और कश्मीर", "अनंतनाग", "सुरिंदर सिंह", "प्रगति समाजवादी पार्टी (लोहिया)"},
+        {"Jammu & Kashmir", "Anantnag", "Shams Khwaja", "Independent", "44240", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=10671", "जम्मू और कश्मीर", "अनंतनाग", "शम्स ख्वाजा", "निर्दलीय"},
+        {"Jammu & Kashmir", "Anantnag", "Ridwana Sanam", "Independent", "49Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=7018", "जम्मू और कश्मीर", "अनंतनाग", "रिडवाना सनम", "निर्दलीय"},
+        {"Jammu & Kashmir", "Anantnag", "Imtiyaz Ahmad Rather", "Independent", "7.9Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=10677", "जम्मू और कश्मीर", "अनंतनाग", "इम्तियाज अहमद राथर", "निर्दलीय"},
+        {"Jammu & Kashmir", "Anantnag", "Ali Mohammad Wani", "Independent", "1.3Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=10672", "जम्मू और कश्मीर", "अनंतनाग", "अली मोहम्मद वानी", "निर्दलीय"},
         {"Jammu & Kashmir", "Baramulla", "Syed Najeeb Shah Naqvi", "Independent", "1Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5643", "जम्मू और कश्मीर", "बारामूला", "सैयद नजीब शाह नकवी", "निर्दलीय"},
         {"Jammu & Kashmir", "Baramulla", "Abdul Qayoom Wani", "Jammu & Kashmir Peoples Democratic Party", "1.7Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=4876", "जम्मू और कश्मीर", "बारामूला", "अब्दुल कयूम वानी", "जम्मू और कश्मीर पीपुल्स डेमोक्रेटिक पार्टी"},
         {"Jammu & Kashmir", "Jammu", "Anil Singh", "Independent", "10000", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6048", "जम्मू और कश्मीर", "जम्मू", "अनिल सिंह", "निर्दलीय"},
@@ -13,7 +19,7 @@ public static final String[][] green_bucket = {
         {"Jammu & Kashmir", "Jammu", "Ajay Kumar", "Independent", "17.9Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6029", "जम्मू और कश्मीर", "जम्मू", "अजय कुमार", "निर्दलीय"},
         {"Jammu & Kashmir", "Jammu", "Mohd Younis", "Jammu & Kashmir Pir Panjal Awami Party", "9.3Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=5656", "जम्मू और कश्मीर", "जम्मू", "मोहम्मद यूनिस", "जम्मू और कश्मीर पीर पंजाल अवामी पार्टी"},
         {"Jammu & Kashmir", "Jammu", "Sakander Ahmad Nourani", "Independent", "4.2Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6054", "जम्मू और कश्मीर", "जम्मू", "सकंदर अहमद नूरानी", "निर्दलीय"},
-        {"Jammu & Kashmir", "Ladakh", "Sajjad Hussain", "Independent", "1.1Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=11951", "", "", "सज्जाद हुसैन", "निर्दलीय"},
+        {"Jammu & Kashmir", "Ladakh", "Sajjad Hussain", "Independent", "1.1Lac", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=11951", "जम्मू और कश्मीर", "लद्दाख", "सज्जाद हुसैन", "निर्दलीय"},
         {"Jammu & Kashmir", "Srinagar", "Irfan Raza Ansari", "Jammu & Kashmir People Conference", "66.9Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6006", "जम्मू और कश्मीर", "श्रीनगर", "इरफान रजा अंसारी", "जम्मू और कश्मीर लोग सम्मेलन"},
         {"Jammu & Kashmir", "Srinagar", "Bilal Sultan", "Independent", "1.2Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6011", "जम्मू और कश्मीर", "श्रीनगर", "बिलाल सुल्तान", "निर्दलीय"},
         {"Jammu & Kashmir", "Udhampur", "Lal Singh", "Dogra Swabhiman Sangathan Party", "2Crore", "http://myneta.info/LokSabha2019/candidate.php?candidate_id=6019", "जम्मू और कश्मीर", "उधमपुर", "लाल सिंह", "डोगरा स्वाभिमान संगठन पार्टी"},
@@ -24,6 +30,18 @@ public static final String[][] green_bucket = {
 };
 
 public static final String[][] red_bucket = {
+        {"Jammu & Kashmir", "Anantnag", "Kyasir Ahmad Sheikh", "2", " ", "जम्मू और कश्मीर", "अनंतनाग", "कासिर अहमद शेख", " "},
+        {"Jammu & Kashmir", "Anantnag", "Sanjay Kumar Dhar", "4", " ", "जम्मू और कश्मीर", "अनंतनाग", "संजय कुमार धर", " "},
+        {"Jammu & Kashmir", "Anantnag", "Ch. Zaffar Ali", "4", " ", "जम्मू और कश्मीर", "अनंतनाग", "अ। जफर अली", " "},
+        {"Jammu & Kashmir", "Anantnag", "Zubair Masoodi", "2", " ", "जम्मू और कश्मीर", "अनंतनाग", "जुबैर मसूदी", " "},
+        {"Jammu & Kashmir", "Anantnag", "Nisar Ahmad Wani", "4", " ", "जम्मू और कश्मीर", "अनंतनाग", "निसार अहमद वानी", " "},
+        {"Jammu & Kashmir", "Anantnag", "Hasnain Masoodi", "3", " ", "जम्मू और कश्मीर", "अनंतनाग", "हसनैन मसूदी", " "},
+        {"Jammu & Kashmir", "Anantnag", "Ghulam Ahmad Mir", "1", " ", "जम्मू और कश्मीर", "अनंतनाग", "गुलाम अहमद मीर", " "},
+        {"Jammu & Kashmir", "Anantnag", "Manzoor Ahmad Khan", "2", " ", "जम्मू और कश्मीर", "अनंतनाग", "मंज़ूर अहमद खान", " "},
+        {"Jammu & Kashmir", "Anantnag", "Riyaz Ahmad Bhat", "4", " ", "जम्मू और कश्मीर", "अनंतनाग", "रियाज अहमद भट", " "},
+        {"Jammu & Kashmir", "Anantnag", "Mehbooba Mufti", "2", " ", "जम्मू और कश्मीर", "अनंतनाग", "महबूबा मुफ्ती", " "},
+        {"Jammu & Kashmir", "Anantnag", "Sofi Yousuf", "1", " ", "जम्मू और कश्मीर", "अनंतनाग", "सोफी यूसुफ", " "},
+        {"Jammu & Kashmir", "Anantnag", "Gh. Mohd. Wani", "4", " ", "जम्मू और कश्मीर", "अनंतनाग", "Gh। मोहम्मद। वाणी", " "},
         {"Jammu & Kashmir", "Baramulla", "Mohd Maqbool War", "1", " ", "जम्मू और कश्मीर", "बारामूला", "मोहम्मद मकबूल वार", " "},
         {"Jammu & Kashmir", "Baramulla", "Haji Farooq Ahmad Mir", "1", " ", "जम्मू और कश्मीर", "बारामूला", "हाजी फारूक अहमद मीर", " "},
         {"Jammu & Kashmir", "Baramulla", "Engineer Rashid", "4", " ", "जम्मू और कश्मीर", "बारामूला", "इंजीनियर रशीद", " "},
@@ -47,9 +65,9 @@ public static final String[][] red_bucket = {
         {"Jammu & Kashmir", "Jammu", "Raman Bhalla", "1", " ", "जम्मू और कश्मीर", "जम्मू", "रमन भल्ला", " "},
         {"Jammu & Kashmir", "Jammu", "Bahadur", "4", " ", "जम्मू और कश्मीर", "जम्मू", "बहादुर", " "},
         {"Jammu & Kashmir", "Jammu", "Subash Chander", "4", " ", "जम्मू और कश्मीर", "जम्मू", "सुबाष चंदर", " "},
-        {"Jammu & Kashmir", "Ladakh", "Tsering Namgyal", "1", " ", "", "", "नमस्कारशील को नमस्कार", " "},
-        {"Jammu & Kashmir", "Ladakh", "Asgar Ali Karbalai", "4", " ", "", "", "असगर अली करबलाई", " "},
-        {"Jammu & Kashmir", "Ladakh", "Rigzin Spalbar", "1", " ", "", "", "रिगज़िन स्पालबार", " "},
+        {"Jammu & Kashmir", "Ladakh", "Tsering Namgyal", "1", " ", "जम्मू और कश्मीर", "लद्दाख", "नमस्कारशील को नमस्कार", " "},
+        {"Jammu & Kashmir", "Ladakh", "Asgar Ali Karbalai", "4", " ", "जम्मू और कश्मीर", "लद्दाख", "असगर अली करबलाई", " "},
+        {"Jammu & Kashmir", "Ladakh", "Rigzin Spalbar", "1", " ", "जम्मू और कश्मीर", "लद्दाख", "रिगज़िन स्पालबार", " "},
         {"Jammu & Kashmir", "Srinagar", "Abdul Khaliq Bhat", "4", " ", "जम्मू और कश्मीर", "श्रीनगर", "अब्दुल खालिक भट", " "},
         {"Jammu & Kashmir", "Srinagar", "Aga Syed Mohsin", "4", " ", "जम्मू और कश्मीर", "श्रीनगर", "आगा सैयद मोहसिन", " "},
         {"Jammu & Kashmir", "Srinagar", "Farooq Abdullah", "2", " ", "जम्मू और कश्मीर", "श्रीनगर", "फारूक अब्दुल्ला", " "},
