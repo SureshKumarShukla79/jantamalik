@@ -233,7 +233,7 @@
     <string name="train">Train delay</string>
     <string name="business">Low ease-of-doing-business</string>
     <string name="election_2019">Who to choose in 2019?  ⭐</string>
-    <string name="employment">Better employment opportunities</string>
+    <string name="employment">Unemployment</string>
     <string name="hospital">Better hospitals/primary healthcare centres</string>
     <string name="drinking_water">Drinking water</string>
     <string name="agriculture_water">Availability of water for agriculture</string>
@@ -576,8 +576,8 @@
     <string name="department"><b>Government Department</b></string>
     <string name="vacancy"><b>Vacancies</b></string>
     <string name="total"><b>Total</b></string>
-    <string name="total_vacancy"><b>23.8 lakh</b></string>
-    <string name="police_unemploy">Police</string>
+    <string name="total_vacancy"><b>24 lakh</b></string>
+    <string name="police_unemploy">Police *</string>
     <string name="teacher">School Teachers</string>
     <string name="teacher_vacancy">10.1 lakh</string>
     <string name="police_vacancy">5.4 lakh</string>
@@ -591,9 +591,9 @@
     <string name="paramilitary_forces">Paramilitary Forces</string>
     <string name="postal_department">Postal Department</string>
     <string name="aiims">AIIMS</string>
-    <string name="higher_institutes">Other higher education institutes</string>
+    <string name="higher_institutes">Higher education institutes</string>
     <string name="courts">Courts</string>
 
     <string name="toi_source">Source:</string>
-    <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">The Times of India</a></string>
+    <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">The Times of India</a> *State govt</string>
 </resources>

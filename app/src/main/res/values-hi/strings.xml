@@ -24,7 +24,7 @@
     <string name="call_button">कॉल करें</string>
     <string name="email_button">ईमेल करें</string>
     <string name="CrimeIssue">अपराध</string>
-    <string name="IssueUnemployment">बेरोजगारी</string>
+
     <string name="IssueInflation">महंगाई</string>
     <string name="IssueEducation">खराब शिक्षा</string>
     <string name="IssueClimate">प्रदूषण</string>
@@ -231,7 +231,7 @@
     <string name="train">देर से चलती रेल</string>
     <string name="business">नये उद्योग (स्टार्टप) की मुश्किलें</string>
     <string name="election_2019">2019 में किसे चुने?  ⭐</string>
-    <string name="employment">रोजगार के बेहतर अवसर</string>
+    <string name="employment">बेरोजगारी</string>
     <string name="hospital">बेहतर अस्पताल/प्राथमिक स्वास्थ्य केंद्र </string>
     <string name="drinking_water">पीने का पानी</string>
     <string name="agriculture_water">कृषि के लिए पानी की उपलब्धता</string>
@@ -581,11 +581,11 @@
         \n\nखेलने के लिए, डाउनलोड करें: *जनता मालिक* ऐप</string>
 
     <string name="department"><b>सरकारी विभाग</b></string>
-    <string name="vacancy"><b>रिक्तियाँ</b></string>
+    <string name="vacancy"><b>खाली पद</b></string>
     <string name="total"><b>कुल</b></string>
-    <string name="total_vacancy"><b>23.8 लाख</b></string>
+    <string name="total_vacancy"><b>24 लाख</b></string>
     <string name="teacher">स्कूली शिक्षक</string>
-    <string name="police_unemploy">पुलिस</string>
+    <string name="police_unemploy">पुलिस *</string>
     <string name="teacher_vacancy">10.1 लाख</string>
     <string name="police_vacancy">5.4 लाख</string>
     <string name="railway">रेलवे</string>
@@ -597,10 +597,10 @@
     <string name="armed_forces">सशस्त्र बल</string>
     <string name="paramilitary_forces">अर्धसैनिक बल</string>
     <string name="postal_department">डाक विभाग</string>
-    <string name="aiims">एम्स</string>
-    <string name="higher_institutes">अन्य उच्च शिक्षण संस्थान</string>
-    <string name="courts">अदालतों</string>
+    <string name="aiims">एम्स अस्पताल</string>
+    <string name="higher_institutes">उच्च शिक्षण संस्थान</string>
+    <string name="courts">अदालतें</string>
 
     <string name="toi_source">स्त्रोत:</string>
-    <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">दी टाइम्स आॅफ इंडिया</a></string>
+    <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">द टाइम्स आॅफ इंडिया</a> *राज्य सरकार</string>
 </resources>
