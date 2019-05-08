@@ -241,6 +241,7 @@
     <string name="price_realization">High price realization for farm products</string>
     <string name="agriculture_subsidy">Agricultural subsidy for seeds/fertilizers</string>
     <string name="public_transport">Better public transport</string>
+    <string name="sewage">Sewage</string>
 
     <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
     <string name="jagran_group_links"><a href="https://youtu.be/8_-8SvxvHqA?t=135">Part 1</a>
@@ -424,6 +425,10 @@
     <string name="business_neta"></string>
     <string name="business_parliament_house">Making simpler laws is responsibility of MP.</string>
     <string name="business_nagar_nigam">Law-n-order in state is responsibility of MLA</string>
+
+    <string name="sewage_voter">Sewage is responsibility of local municipality.
+        \nIf local municipality does not take care, then state govt is responsible.</string>
+    <string name="sewage_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
 
     <!-- Vidhayak Duties -->
     <string name="vidhayak_duty_police">Police</string>

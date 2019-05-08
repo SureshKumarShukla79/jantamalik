@@ -239,6 +239,7 @@
     <string name="price_realization">कृषि उत्पादों के लिए सही मूल्य</string>
     <string name="agriculture_subsidy">बीज/उर्वरक के लिए कृषि सब्सिडी</string>
     <string name="public_transport">बेहतर सार्वजनिक परिवहन</string>
+    <string name="sewage">सीवर</string>
 
     <string name="jagran_group">जागरण समूह -
         \nदैनिक जागरण,
@@ -380,6 +381,10 @@
     <string name="business_neta"></string>
     <string name="business_parliament_house">कानून को आसान बनाने की जिम्मेदारी सांसदों की है। सांसद को संपर्क करें।</string>
     <string name="business_nagar_nigam">राज्य में कानून व्यवस्था की जिम्मेदारी विधायकों की है। विधायक को संपर्क करें।</string>
+
+    <string name="sewage_voter">सीवर स्थानीय नगर निगम की जिम्मेदारी है।
+        \nअगर नगर निगम अपनी जिम्मेदारी नहीं निभाता तो यह राज्य सरकार की जिम्मेदारी है।</string>
+    <string name="sewage_neta">राज्य सरकार में समस्या उठाने की जिम्मेदारी विधायक की है। विधायक को संपर्क करें।</string>
 
     <!-- Vidhayak Duties -->
     <string name="vidhayak_duty_police">पुलिस</string>

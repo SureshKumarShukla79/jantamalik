@@ -57,8 +57,29 @@ public class CorporationFragment extends android.support.v4.app.Fragment {
         FirebaseLogger.send(getContext(), "Corporation_Screen");
 
         issue_clean();
+        issue_sewage();
 
         return view;
+    }
+
+    private void issue_sewage() {
+        FirebaseLogger.send(getContext(), "Issue_Sewage");
+
+        LinearLayout clean_layout = view.findViewById(R.id.sewage_layout);
+
+        clean_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int layout_id = R.layout.issue_sewage;
+                int title_id = R.string.sewage;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("corporation", true);
+                startActivity(intent);
+            }
+        });
     }
 
     private void issue_clean() {
