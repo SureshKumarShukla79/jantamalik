@@ -316,13 +316,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_electricity() {
-        FirebaseLogger.send(getContext(), "Issue_Electricity");
-
         LinearLayout electricity_layout = view.findViewById(R.id.electricity_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Electricity");
+
                 int layout_id = R.layout.issue_electricity;
                 int title_id = R.string.electricity;
 
@@ -336,13 +336,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_police() {
-        FirebaseLogger.send(getContext(), "Issue_Police");
-
         LinearLayout police_layout = view.findViewById(R.id.police_layout);
 
         police_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Police");
+
                 int layout_id = R.layout.issue_police;
                 int title_id = R.string.police;
 
@@ -356,13 +356,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_road() {
-        FirebaseLogger.send(getContext(), "Issue_Road");
-
         LinearLayout road_layout = view.findViewById(R.id.road_layout);
 
         road_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Road");
+
                 int layout_id = R.layout.issue_poor_road;
                 int title_id = R.string.poor_road;
 
@@ -376,13 +376,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_traffic() {
-        FirebaseLogger.send(getContext(), "Issue_Traffic");
-
         LinearLayout traffic_layout = view.findViewById(R.id.traffic_layout);
 
         traffic_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Traffic");
+
                 int layout_id = R.layout.issue_traffic;
                 int title_id = R.string.traffic;
 
@@ -396,13 +396,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_mla_no_response() {
-        FirebaseLogger.send(getContext(), "Issue_MLA_No_Response");
-
         LinearLayout mla_no_response_layout = view.findViewById(R.id.mla_no_response_layout);
 
         mla_no_response_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_MLA_No_Response");
+
                 int layout_id = R.layout.issue_mla_no_response;
                 int title_id = R.string.mla_no_response;
 
@@ -416,13 +416,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_hospital() {
-        FirebaseLogger.send(getContext(), "Issue_Hospital");
-
         LinearLayout electricity_layout = view.findViewById(R.id.hospital_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Hospital");
+
                 int layout_id = R.layout.issue_hospital;
                 int title_id = R.string.hospital;
 
@@ -436,13 +436,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_drinking_water() {
-        FirebaseLogger.send(getContext(), "Issue_Drinking_Water");
-
         LinearLayout electricity_layout = view.findViewById(R.id.drinking_water_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Drinking_Water");
+
                 int layout_id = R.layout.issue_drinking_water;
                 int title_id = R.string.drinking_water;
 
@@ -456,13 +456,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_agriculture_water() {
-        FirebaseLogger.send(getContext(), "Issue_Agriculture_Water");
-
         LinearLayout electricity_layout = view.findViewById(R.id.agriculture_water_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Agriculture_Water");
+
                 int layout_id = R.layout.issue_agriculture_water;
                 int title_id = R.string.agriculture_water;
 
@@ -476,13 +476,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_agriculture_loan() {
-        FirebaseLogger.send(getContext(), "Issue_Agriculture_Loan");
-
         LinearLayout electricity_layout = view.findViewById(R.id.agriculture_loan_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Agriculture_Loan");
+
                 int layout_id = R.layout.issue_agriculture_loan;
                 int title_id = R.string.agriculture_loan;
 
@@ -496,13 +496,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_price_realization() {
-        FirebaseLogger.send(getContext(), "Issue_Price_Realization");
-
         LinearLayout electricity_layout = view.findViewById(R.id.price_realization_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Price_Realization");
+
                 int layout_id = R.layout.issue_price_realization;
                 int title_id = R.string.price_realization;
 
@@ -516,13 +516,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_agriculture_subsidy() {
-        FirebaseLogger.send(getContext(), "Issue_Agriculture_Subsidy");
-
         LinearLayout electricity_layout = view.findViewById(R.id.agriculture_seed_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Agriculture_Subsidy");
+
                 int layout_id = R.layout.issue_agriculture_subsidy;
                 int title_id = R.string.agriculture_subsidy;
 
@@ -536,13 +536,13 @@ public class RajyaFragment extends Fragment {
     }
 
     private void issue_public_transport() {
-        FirebaseLogger.send(getContext(), "Issue_Public_Transport");
-
         LinearLayout electricity_layout = view.findViewById(R.id.public_transport_layout);
 
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Public_Transport");
+
                 int layout_id = R.layout.issue_public_transport;
                 int title_id = R.string.public_transport;
 

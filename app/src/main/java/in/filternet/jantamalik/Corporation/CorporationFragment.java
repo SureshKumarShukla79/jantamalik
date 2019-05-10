@@ -63,13 +63,13 @@ public class CorporationFragment extends android.support.v4.app.Fragment {
     }
 
     private void issue_sewage() {
-        FirebaseLogger.send(getContext(), "Issue_Sewage");
-
         LinearLayout clean_layout = view.findViewById(R.id.sewage_layout);
 
         clean_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Sewage");
+
                 int layout_id = R.layout.issue_sewage;
                 int title_id = R.string.sewage;
 
@@ -83,13 +83,13 @@ public class CorporationFragment extends android.support.v4.app.Fragment {
     }
 
     private void issue_clean() {
-        FirebaseLogger.send(getContext(), "Issue_Clean");
-
         LinearLayout clean_layout = view.findViewById(R.id.cleanliness_layout);
 
         clean_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FirebaseLogger.send(getContext(), "Issue_Clean");
+
                 int layout_id = R.layout.issue_cleanliness;
                 int title_id = R.string.cleanliness;
 
