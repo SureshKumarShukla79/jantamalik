@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar_Tax_Kendra"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -20,11 +20,21 @@
             app:title="@string/Center_Subjects"
             app:titleTextColor="@color/colorAccent" />
 
+        <ImageView
+            android:id="@+id/constitution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/colorPrimary"
+            android:padding="1dp"
+            android:src="@drawable/sanvidhaan" />
+
         <TextView
             android:id="@+id/list_center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/toolbar_Tax_Kendra"
+            android:layout_below="@+id/constitution"
             android:layout_marginTop="3dp"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -65,7 +75,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/unemployment" />
                 <TextView
                     android:text="@string/mp_duty_employment"
                     android:layout_width="wrap_content"
@@ -97,7 +107,7 @@
                 android:layout_gravity="center"
                 android:background="@color/colorPrimary"
                 android:padding="1dp"
-                android:src="@drawable/vacant" />
+                android:src="@drawable/social_security" />
             <TextView
                 android:text="@string/mp_duty_social_security"
                 android:layout_width="wrap_content"
@@ -130,7 +140,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant"/>
+                    android:src="@drawable/inflation"/>
                 <TextView
                     android:text="@string/mp_duty_price_control"
                     android:textColorLink="@color/black"
@@ -165,7 +175,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/upsc" />
 
                 <TextView
                     android:text="@string/mp_duty_upsc"
@@ -199,7 +209,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/education" />
                 <TextView
                     android:text="@string/mp_duty_education"
                     android:textColor="@color/black"
@@ -232,7 +242,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/rail" />
                 <TextView
                     android:text="@string/mp_duty_rail"
                     android:textColor="@color/black"
@@ -264,7 +274,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/nh_2" />
                 <TextView
                     android:text="@string/mp_duty_highway"
                     android:textColor="@color/black"
@@ -296,7 +306,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/share_market" />
                 <TextView
                     android:text="@string/mp_duty_stock"
                     android:textColor="@color/black"
@@ -328,7 +338,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/post" />
                 <TextView
                     android:text="@string/mp_duty_po"
                     android:textColor="@color/black"
@@ -360,7 +370,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/currency" />
                 <TextView
                     android:text="@string/mp_duty_currency"
                     android:textColor="@color/black"
@@ -392,7 +402,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/bank" />
                 <TextView
                     android:text="@string/mp_duty_bank"
                     android:textColor="@color/black"
@@ -424,7 +434,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/compay_law" />
                 <TextView
                     android:text="@string/mp_duty_company"
                     android:textColor="@color/black"
@@ -456,7 +466,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/bima" />
                 <TextView
                     android:text="@string/mp_duty_insurance"
                     android:textColor="@color/black"
@@ -489,7 +499,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/vegetable" />
                 <TextView
                     android:text="@string/mp_duty_quality"
                     android:textColor="@color/black"
@@ -521,7 +531,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/petrol" />
                 <TextView
                     android:text="@string/mp_duty_oil"
                     android:textColor="@color/black"
@@ -553,7 +563,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/mine" />
                 <TextView
                     android:text="@string/mp_duty_mine"
                     android:textColor="@color/black"
@@ -586,7 +596,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/cbi" />
                 <TextView
                     android:text="@string/mp_duty_cbi"
                     android:textColor="@color/black"
@@ -618,7 +628,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/aadhar" />
                 <TextView
                     android:text="@string/mp_duty_citizenship"
                     android:textColor="@color/black"
@@ -651,7 +661,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/passport" />
                 <TextView
                     android:text="@string/mp_duty_passport"
                     android:textColor="@color/black"
@@ -684,7 +694,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/defense" />
                 <TextView
                     android:text="@string/mp_duty_defense"
                     android:textColor="@color/black"
@@ -717,7 +727,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/forest" />
                 <TextView
                     android:text="@string/mp_duty_forest"
                     android:textColor="@color/black"
@@ -750,7 +760,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/medicine" />
                 <TextView
                     android:text="@string/mp_duty_medicine"
                     android:textColor="@color/black"
@@ -783,7 +793,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/census" />
                 <TextView
                     android:text="@string/mp_duty_census"
                     android:textColor="@color/black"
@@ -816,7 +826,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/migration" />
                 <TextView
                     android:text="@string/mp_duty_migration"
                     android:textColor="@color/black"
@@ -849,7 +859,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/ipc" />
                 <TextView
                     android:text="@string/mp_duty_ipc"
                     android:textColor="@color/black"
@@ -882,7 +892,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/divorce_law" />
                 <TextView
                     android:text="@string/mp_duty_divorce_law"
                     android:textColor="@color/black"

@@ -30,7 +30,7 @@
             android:src="@drawable/media" />
 
         <android.support.v7.widget.CardView
-            android:id="@+id/media_income"
+            android:id="@+id/spine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
@@ -42,6 +42,61 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:background="@color/greylight"
+                android:text="@string/spine_media"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+        </android.support.v7.widget.CardView>
+
+        <TableLayout
+           android:id="@+id/green_table"
+           android:layout_width="match_parent"
+           android:layout_margin="4dp"
+            android:stretchColumns="0"
+           android:layout_height="wrap_content">
+   
+           <TableRow
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center_horizontal">
+               <TextView
+                   android:gravity="center"
+                   android:text="@string/indian_express"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/table_border_style"
+                   android:padding="5dp"
+                   android:textColor="@color/black"
+                   android:textAppearance="?android:attr/textAppearanceMedium" />
+           </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+               <TextView
+                   android:gravity="center"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:text="@string/jansatta"
+                   android:background="@drawable/table_border_style"
+                   android:padding="5dp"
+                   android:textAppearance="?android:attr/textAppearanceMedium" />
+           </TableRow>
+        </TableLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/soldout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:background="@color/greylight"
                 android:text="@string/media_income"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:padding="8dp"
@@ -49,7 +104,7 @@
         </android.support.v7.widget.CardView>
 
         <TableLayout
-            android:id="@+id/table"
+            android:id="@+id/red_table"
             android:layout_width="match_parent"
             android:layout_margin="4dp"
             android:stretchColumns="1"
@@ -64,7 +119,7 @@
                     android:text="@string/newspaper_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -74,7 +129,7 @@
                     android:text="@string/truth_or_afeem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -90,7 +145,7 @@
                     android:text="@string/dainik_bhaskar"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -101,7 +156,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -115,7 +170,7 @@
                     android:text="@string/jagran_group"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -126,7 +181,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -140,7 +195,7 @@
                     android:text="@string/times_group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -151,7 +206,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -165,7 +220,7 @@
                     android:text="@string/amar_ujala"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -176,7 +231,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -190,7 +245,7 @@
                     android:text="@string/india_today_group"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -201,7 +256,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -215,7 +270,7 @@
                     android:text="@string/abp_news"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -226,7 +281,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -240,7 +295,7 @@
                     android:text="@string/india_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -251,7 +306,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -265,7 +320,7 @@
                     android:text="@string/zee_group"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -276,7 +331,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -290,7 +345,7 @@
                     android:text="@string/punjab_kesari"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -301,7 +356,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -315,7 +370,7 @@
                     android:text="@string/sab_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -326,7 +381,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -340,7 +395,7 @@
                     android:text="@string/sadhana_prime_news"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -351,7 +406,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -365,7 +420,7 @@
                     android:text="@string/uni"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -376,7 +431,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -390,7 +445,7 @@
                     android:text="@string/_9x_tashan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -401,7 +456,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -415,7 +470,7 @@
                     android:text="@string/samachar_plus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -426,7 +481,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -440,7 +495,7 @@
                     android:text="@string/hindi_khabar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -451,7 +506,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -465,7 +520,7 @@
                     android:text="@string/swatantra_bharat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -476,7 +531,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -490,7 +545,7 @@
                     android:text="@string/aaj_hindi_daily"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -501,7 +556,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -515,7 +570,7 @@
                     android:text="@string/india_watch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -526,7 +581,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -540,7 +595,7 @@
                     android:text="@string/hnn_24x7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -551,7 +606,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -565,7 +620,7 @@
                     android:text="@string/scoopwhoop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -576,7 +631,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -590,7 +645,7 @@
                     android:text="@string/dna"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -601,7 +656,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -615,7 +670,7 @@
                     android:text="@string/rediff_com"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -626,7 +681,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -641,7 +696,7 @@
                     android:text="@string/big_fm_92_7"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -652,7 +707,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -666,7 +721,7 @@
                     android:text="@string/tv_18"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -677,7 +732,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -691,7 +746,7 @@
                     android:text="@string/HT_media_group"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -702,7 +757,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -716,7 +771,7 @@
                     android:text="@string/abn_andhra_jyoti"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -727,7 +782,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -741,7 +796,7 @@
                     android:text="@string/TheNewIndianExpress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -752,7 +807,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -766,7 +821,7 @@
                     android:text="@string/dainik_sambad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -777,7 +832,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -791,7 +846,7 @@
                 android:text="@string/bartaman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/table_border_style"
+                android:background="@drawable/table_border_red"
                 android:padding="5dp"
                 android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -802,7 +857,7 @@
                 android:textColorLink="@color/blue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/table_border_style"
+                android:background="@drawable/table_border_red"
                 android:padding="5dp"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -816,7 +871,7 @@
                     android:text="@string/open_magazine"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -827,7 +882,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -841,7 +896,7 @@
                     android:text="@string/mvtv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -852,7 +907,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -866,7 +921,7 @@
                     android:text="@string/india_voice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -877,7 +932,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -891,7 +946,7 @@
                     android:text="@string/k_news"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -902,7 +957,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -916,7 +971,7 @@
                     android:text="@string/dinamalar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -927,7 +982,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -941,7 +996,7 @@
                     android:text="@string/tv_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -952,7 +1007,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -966,7 +1021,7 @@
                     android:text="@string/lokmat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -977,7 +1032,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -991,7 +1046,7 @@
                     android:text="@string/sun_group"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -1002,7 +1057,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -1016,7 +1071,7 @@
                     android:text="@string/swaraj_express"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -1027,7 +1082,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -1041,7 +1096,7 @@
                     android:text="@string/bharat_samachar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -1052,7 +1107,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -1066,7 +1121,7 @@
                     android:text="@string/radio_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -1077,7 +1132,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -1091,7 +1146,7 @@
                     android:text="@string/star_india"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -1102,7 +1157,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
@@ -1116,7 +1171,7 @@
                     android:text="@string/paytm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -1127,7 +1182,7 @@
                     android:textColorLink="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
+                    android:background="@drawable/table_border_red"
                     android:padding="5dp"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>

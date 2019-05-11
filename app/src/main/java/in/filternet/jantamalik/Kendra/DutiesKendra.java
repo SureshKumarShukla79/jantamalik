@@ -36,7 +36,7 @@ public class DutiesKendra extends AppCompatActivity {
         setContentView(R.layout.duties_kendra);
         FirebaseLogger.send(this, "Kendra_Duties");
 
-        toolbar = findViewById(R.id.toolbar_Tax_Kendra);
+        toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

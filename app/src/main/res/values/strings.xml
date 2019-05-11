@@ -248,9 +248,9 @@
         \n\n<a href="https://youtu.be/SY53lbYMuQ8">Part 2</a>
         \n\n<a href="https://youtu.be/m5G5_bJwceY">Part 3</a></string>
 
-    <string name="media_income">Media earns from two sources - subscribers and advertisement.
-        \n\nNot anymore. Nowadays many media houses earn a lot of money from paid + fake news.
-        \n\nCheck sting operation (hidden camera) of your favourite newspaper/news channel :</string>
+    <string name="spine_media">Good options for newspaper/news channel :</string>
+
+    <string name="media_income">Soldout media houses - accept black-money and show paid and fake news. Check sting operation of your newspaper/news channel :</string>
 
     <string name="dainik_bhaskar_list"><a href="https://youtu.be/BfTwuNOTGSM?t=135">Part 1</a>
         \n\n<a href="https://youtu.be/DGLpcqFe1-A">Part 2</a>
@@ -543,12 +543,13 @@
     <string name="correct"><b>✅</b></string>
     <string name="wrong_answer"><b>❌</b></string>
 
-    <string name="filter_text">Remaining candidates are filtered based on following criteria:\n
-        ❌ Candidates political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Puppet-govt with foreign-boss  ></a>\n
-        ❌ Candidate is charged of serious crimes\n
-        ❌ Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)\n
-        ❌ Candidate is not graduate (needs to make bills on 100 topics)\n
-    </string>
+    <string name="filter_text">Remaining candidates are filtered based on following criteria:</string>
+
+    <string name="illegal_foreign_funding">Candidates political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Neo-colonialism or Puppet-govt with foreign-boss  ></a></string>
+    <string name="criminal">Candidate is charged of serious crimes</string>
+    <string name="old">Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)</string>
+    <string name="no_graduate">Candidate is not graduate (needs to make bills on 100 topics)</string>
+
     <string name="coming_soon">Nomination is under progress\nComing soon</string>
     <string name="good_candidate">Good candidates</string>
     <string name="bad_candidate">Useless candidates</string>
@@ -601,4 +602,7 @@
 
     <string name="toi_source">Source:</string>
     <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">The Times of India</a> *State govt</string>
+
+    <string name="indian_express">Indian Express</string>
+    <string name="jansatta">जनसत्ता</string>
 </resources>

@@ -246,9 +246,9 @@
         \nमिड-डे,
         \nरेडियो सिटी 91.1 एफएम</string>
 
-    <string name="media_income">मीडिया की आय के दो जरिेए हैं - ग्राहक और विज्ञापन।
-        \n\nसच बदल गया है। आजकल मीडिया की ज्यादातर कमाई - पैसे देकर छापी और झूठ खबरों से हो रही है।
-        \n\nअपना पसंदीदा अखबार और टीवी चैनल का स्टिंग आपरेशन (छुपे कैमरा) जाँच लें :</string>
+    <string name="spine_media">अच्छे अखबार/न्यूज चैनल :</string>
+
+    <string name="media_income">बिके हुए मीडिया जो - कालाधन लेते है या पैसे लेकर झूठी खबरें छापते हैं। अपने अखबार और टीवी चैनल का स्टिंग आपरेशन जाँच लें :</string>
 
     <string name="terms_and_condition">मुझे इस्तेमाल की शर्ते स्वीकार हैं।
         \n\nI agree to terms and conditions of usage.
@@ -414,7 +414,7 @@
     <!-- Saansad Duties -->
     <string name="mp_duty_employment">रोजगार</string>
     <string name="mp_duty_social_security">सामाजिक सुरक्षा</string>
-    <string name="mp_duty_price_control">Price control</string>
+    <string name="mp_duty_price_control">महंगाई</string>
     <string name="mp_duty_upsc">यूपीएससी</string>
     <string name="mp_duty_education">शिक्षा</string>
     <string name="mp_duty_rail">रेल</string>
@@ -550,12 +550,12 @@
     <string name="correct"><b>✅</b></string>
     <string name="wrong_answer"><b>❌</b></string>
 
-    <string name="filter_text">बाकी उम्मीदवारों को नीचे दिए गए आधार पर छाँट दिया गया है:\n
-        ❌ उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://aajtak.intoday.in/story/delhi-hc-says-act-against-bjp-congress-over-foreign-funds-1-759217.html">कठपुतली सरकार, विदेशी मालिक  ></a>\n
-        ❌ उम्मीदवार पर गंभीर आपराधिक मामले दर्ज है \n
-        ❌ उम्मीदवार की आयु 65 साल या ज्यादा हैं (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)\n
-        ❌ उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)
-    </string>
+    <string name="filter_text">बाकी उम्मीदवारों को नीचे दिए गए आधार पर छाँट दिया गया है:</string>
+    <string name="illegal_foreign_funding">उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://aajtak.intoday.in/story/delhi-hc-says-act-against-bjp-congress-over-foreign-funds-1-759217.html">नव-उपनिवेशवाद या कठपुतली सरकार, विदेशी मालिक</a></string>
+    <string name="criminal">उम्मीदवार पर गंभीर आपराधिक मामले दर्ज है</string>
+    <string name="old">उम्मीदवार की आयु 65 साल या ज्यादा हैं (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)</string>
+    <string name="no_graduate">उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)</string>
+
     <string name="coming_soon">नामांकन पूरा नहीं हुआ है\nजल्द आयेगा</string>
     <string name="good_candidate">अच्छे उम्मीदवार</string>
     <string name="bad_candidate">फालतू उम्मीदवार</string>
@@ -579,7 +579,7 @@
     <string name="foreign_funding">गैरकानूनी विदेशी चंदे की दोषी</string>
     <string name="criminal_case">गंभीर आपराधिक मामले</string>
     <string name="aged">उम्र ज्यादा</string>
-    <string name="not_graduate">ग्रेजुएट नहीं है</string>
+    <string name="not_graduate">स्नातक नहीं है</string>
 
     <string name="share_puzzle">मैं एक *जागरूक वोटर* हुँ और आप?
         \nखेलिए वोटर जागरूकता पहेली और बनिए जागरूक वोटर।
@@ -606,6 +606,9 @@
     <string name="higher_institutes">उच्च शिक्षण संस्थान</string>
     <string name="courts">अदालतें</string>
 
-    <string name="toi_source">स्त्रोत:</string>
+    <string name="toi_source">स्त्रोत :</string>
     <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">द टाइम्स आॅफ इंडिया</a> *राज्य सरकार</string>
+
+    <string name="indian_express">इंडियन एक्सप्रेस</string>
+    <string name="jansatta">जनसत्ता</string>
 </resources>

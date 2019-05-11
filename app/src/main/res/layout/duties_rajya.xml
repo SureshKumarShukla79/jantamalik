@@ -20,11 +20,21 @@
             app:title="@string/state_subjects"
             app:titleTextColor="@color/colorAccent" />
 
+        <ImageView
+            android:id="@+id/constitution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/colorPrimary"
+            android:padding="1dp"
+            android:src="@drawable/sanvidhaan" />
+
         <TextView
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/toolbar"
+            android:layout_below="@+id/constitution"
             android:layout_marginTop="3dp"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -99,7 +109,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant"/>
+                    android:src="@drawable/ipc"/>
                 <TextView
                     android:text="@string/vidhayak_duty_order"
                     android:textColorLink="@color/black"
@@ -265,7 +275,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/hospital" />
                 <TextView
                     android:text="@string/vidhayak_duty_hospital"
                     android:textColor="@color/black"
@@ -425,7 +435,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/agriculture_water" />
                 <TextView
                     android:text="@string/vidhayak_duty_water_supply"
                     android:textColor="@color/black"
@@ -719,7 +729,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/education" />
                 <TextView
                     android:text="@string/vidhayak_duty_education"
                     android:textColor="@color/black"
@@ -785,7 +795,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vacant" />
+                    android:src="@drawable/forest" />
                 <TextView
                     android:text="@string/vidhayak_duty_forest"
                     android:textColor="@color/black"
