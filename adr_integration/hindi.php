@@ -75,5 +75,5 @@ function get_hindi($english_name) {
         $hindi_name = $responseDecoded['data']['translations'][0]['translatedText'];
         return $hindi_name;
     }
-    return " ";
+    return "";
 }
