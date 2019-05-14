@@ -68,12 +68,14 @@ function get_hindi($english_name) {
     $handle = curl_init($url);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
     $response = curl_exec($handle);
-    echo "Respone: $response";
     if ($response) {
         $responseDecoded = json_decode($response, true);
         curl_close($handle);
         $hindi_name = $responseDecoded['data']['translations'][0]['translatedText'];
         return $hindi_name;
+    } else {
+        echo "Respone: $response";
     }
+    
     return "";
 }
