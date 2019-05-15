@@ -545,14 +545,14 @@
 
     <string name="filter_text">Remaining candidates are filtered based on following criteria:</string>
 
-    <string name="illegal_foreign_funding">Candidates political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Neo-colonialism or Puppet-govt with foreign-boss  ></a></string>
+    <string name="illegal_foreign_funding">Candidate\'s political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Threat of Neo-colonialism, read more >></a></string>
     <string name="criminal">Candidate is charged of serious crimes</string>
     <string name="old">Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)</string>
     <string name="no_graduate">Candidate is not graduate (needs to make bills on 100 topics)</string>
 
     <string name="coming_soon">Nomination is under progress\nComing soon</string>
-    <string name="good_candidate">Good candidates</string>
-    <string name="bad_candidate">Useless candidates</string>
+    <string name="good_candidate">Candidate</string>
+    <string name="bad_candidate">Candidate</string>
     <string name="political_party">Political Party</string>
     <string name="total_assets">Total Assets</string>
     <string name="main_reason">Main reason</string>
@@ -564,13 +564,11 @@
     <string name="share">Share with friends</string>
     <string name="election_2019_header_line">For 70 years we voted for big names,
         \nThen wait for MP for 5 years
-        \n\nOutcome ???
-        \n9 rich men have more wealth than half population
         \n\nThis time select,
         \nGood MPs for Good governance</string>
     <string name="adr_source"><a href="https://adrindia.org">Association for Democratic Reforms</a></string>
     <string name="know_more">Know more ></string>
-    <string name="foreign_funding">Illegal foreign funding guilty</string>
+    <string name="foreign_funding">Party is guilty of illegal foreign funding</string>
     <string name="criminal_case">Serious crimes</string>
     <string name="aged">Over aged</string>
     <string name="not_graduate">Not graduate</string>

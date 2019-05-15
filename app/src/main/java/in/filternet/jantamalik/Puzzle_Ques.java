@@ -34,11 +34,11 @@ public class Puzzle_Ques {
                     "वोटर -> सरकार -> सांसद -> लोकसभा",
                     "सरकार -> सांसद -> लोकसभा -> वोटर",
                     "सांसद -> लोकसभा -> सरकार -> वोटर"},
-            {"Which political parties have been found guilty of illegal-foreign-funding in high court?", // Political Rights 2
+            {"Which political parties have been found guilty of illegal-foreign-funding in Delhi high court, in 2014?", // Political Rights 2
                     "BJP and Congress",
                     "Congress only", "SP and BSP",
                     "All parties",
-                    "किन राजनीतिक पार्टियों को हाईकोर्ट ने गैरकानूनी-विदेशी-चंदे का दोषी पाया है?",
+                    "किन राजनीतिक पार्टियों को दिल्ली हाईकोर्ट ने 2014 में, गैरकानूनी-विदेशी-चंदे का दोषी करार दिया?",
                     "भाजपा और कांग्रेस",
                     "सिर्फ कांग्रेस",
                     "सपा और बसपा",
