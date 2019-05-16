@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -701,7 +702,7 @@ public class Issues extends AppCompatActivity {
                             assets = assets.replace("Crore", " करोड़");
                     }
 
-                    String url_link = assets + "<a href='"+ bucket[i][j + 4] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
+                    String url_link = assets + "<a href='"+ bucket[i][j + 3] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
                     //Log.e(TAG, "Link: " + url_link);
                     text.setText(Html.fromHtml(url_link));
                 } else {

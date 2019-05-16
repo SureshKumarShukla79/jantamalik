@@ -545,7 +545,7 @@
 
     <string name="filter_text">Remaining candidates are filtered based on following criteria:</string>
 
-    <string name="illegal_foreign_funding">Candidate\'s political party is guilty of illegal-foreign-funding. <a href="https://www.thehindu.com/news/national/bjp-congress-flouted-foreign-funding-norms-delhi-hc/article5844269.ece">Threat of Neo-colonialism, read more >></a></string>
+    <string name="illegal_foreign_funding">Candidate\'s political party is guilty of illegal-foreign-funding. <a href="https://www.filternet.in/2019-battle-for-economic-freedom-of-india/">Read Delhi High Court verdict in detail >></a></string>
     <string name="criminal">Candidate is charged of serious crimes</string>
     <string name="old">Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)</string>
     <string name="no_graduate">Candidate is not graduate (needs to make bills on 100 topics)</string>
@@ -566,7 +566,7 @@
         \nThen wait for MP for 5 years
         \n\nThis time select,
         \nGood MPs for Good governance</string>
-    <string name="adr_source"><a href="https://adrindia.org">Association for Democratic Reforms</a></string>
+    <string name="adr_source">Source of candidate information : <a href="https://adrindia.org">Association for Democratic Reforms</a></string>
     <string name="know_more">Know more ></string>
     <string name="foreign_funding">Party is guilty of illegal foreign funding</string>
     <string name="criminal_case">Serious crimes</string>

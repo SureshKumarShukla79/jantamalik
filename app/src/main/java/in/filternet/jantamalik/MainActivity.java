@@ -3,6 +3,7 @@ package in.filternet.jantamalik;
 
 import android.app.Activity;
 import android.app.AlarmManager;
+import android.app.Dialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -13,6 +14,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -205,7 +207,8 @@ public class MainActivity extends AppCompatActivity {
             // nothong to do
         } else {
             TextView message = new TextView(this);
-            message.setHeight(205);
+            message.setTextSize((float) 20);
+            message.setHeight(325);
             message.setPadding(30,30,30,0);
             message.setLinkTextColor(Color.BLUE);
             message.setGravity(Gravity.CENTER);
@@ -231,7 +234,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            AlertDialog dialog = builder.create();
+            final AlertDialog dialog = builder.create();
+            dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+                @Override
+                public void onShow(DialogInterface dialog_interface) {
+                    Button positive = dialog.getButton(Dialog.BUTTON_POSITIVE);
+                    positive.setTextSize((float) 20);
+                    Button negative = dialog.getButton(Dialog.BUTTON_NEGATIVE);
+                    negative.setTextSize((float) 20);
+
+                    positive.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                    positive.setTypeface(positive.getTypeface(), Typeface.BOLD);
+                    negative.setTextColor(getResources().getColor(R.color.red));
+                    negative.setTypeface(positive.getTypeface(), Typeface.BOLD);
+                }
+            });
+
             dialog.setCancelable(false);
             dialog.show();
         }

@@ -551,7 +551,7 @@
     <string name="wrong_answer"><b>❌</b></string>
 
     <string name="filter_text">बाकी उम्मीदवारों को नीचे दिए गए आधार पर छाँट दिया गया है:</string>
-    <string name="illegal_foreign_funding">उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://aajtak.intoday.in/story/delhi-hc-says-act-against-bjp-congress-over-foreign-funds-1-759217.html">नव-उपनिवेशवाद का खतरा है, अधिक जानें >></a></string>
+    <string name="illegal_foreign_funding">उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://www.filternet.in/economic-freedom-of-india/">दिल्ली हाईकोर्ट के फैसले को विस्तार से जानें >></a></string>
     <string name="criminal">उम्मीदवार पर गंभीर आपराधिक मामले दर्ज है</string>
     <string name="old">उम्मीदवार की आयु 65 साल या ज्यादा हैं (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)</string>
     <string name="no_graduate">उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)</string>
@@ -572,7 +572,7 @@
         \nफिर 5-साल अपने सांसद का इंतजार किया
         \n\nतो अबकी बार,
         \nअच्छा सांसद तो अच्छी सरकार</string>
-    <string name="adr_source"><a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
+    <string name="adr_source">उम्मीदवार की जानकारी का स्रोत : <a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
     <string name="know_more">अधिक जानें ></string>
     <string name="foreign_funding">पार्टी गैरकानूनी विदेशी चंदे की दोषी है</string>
     <string name="criminal_case">गंभीर आपराधिक मामले</string>
