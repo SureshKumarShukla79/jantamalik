@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:focusableInTouchMode="true"
+    tools:context=".Language">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/choose_your_language"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text"
+        android:background="@drawable/india_map">
+
+        <Button
+            android:id="@+id/gujrati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/home_button"
+            android:text="ગુજરાતી"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="onclick_select_language"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/bangla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/gujrati"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginRight="90dp"
+            android:text="বাংলা"
+            android:onClick="onclick_select_language"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/home_button"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/gujrati"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="English"
+            android:onClick="onclick_select_language"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/home_button"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/hindi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/english"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="हिन्दी"
+            android:onClick="onclick_select_language"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/home_button"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/punjabi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/hindi"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="65dp"
+            android:layout_marginStart="65dp"
+            android:text="ਪੰਜਾਬੀ"
+            android:onClick="onclick_select_language"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/home_button"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/urdu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/punjabi"
+            android:layout_marginBottom="20dp"
+            android:layout_alignEnd="@+id/hindi"
+            android:layout_alignRight="@+id/hindi"
+            android:layout_marginRight="35dp"
+            android:layout_marginEnd="35dp"
+            android:text="اُردُو"
+            android:onClick="onclick_select_language"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/home_button"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/odia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bangla"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignEnd="@+id/bangla"
+            android:layout_alignRight="@+id/bangla"
+            android:text="ଓଡ଼ିଆ"
+            android:onClick="onclick_select_language"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/home_button"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/marathi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gujrati"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/home_button"
+            android:text="मराठी"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="onclick_select_language"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/telgu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/hindi"
+            android:layout_alignLeft="@+id/hindi"
+            android:layout_margin="35dp"
+            android:layout_below="@+id/odia"
+            android:background="@drawable/home_button"
+            android:text="తెలుగు"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="onclick_select_language"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/tamil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/hindi"
+            android:layout_alignLeft="@+id/hindi"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/telgu"
+            android:background="@drawable/home_button"
+            android:text="தமிழ்"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="onclick_select_language"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/kannada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/marathi"
+            android:layout_margin="35dp"
+            android:background="@drawable/home_button"
+            android:text="ಕನ್ನಡ"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="onclick_select_language"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Button
+            android:id="@+id/malyalam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tamil"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignEnd="@id/punjabi"
+            android:layout_alignRight="@id/punjabi"
+            android:background="@drawable/home_button"
+            android:text="മലയാളം"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="onclick_select_language"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

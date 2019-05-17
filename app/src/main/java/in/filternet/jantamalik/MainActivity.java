@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String bUSER_AGREE = "User_Agree";
     public final static String bSMART_VOTER = "Smart_Voter";
     public final static String bAPP_UPDATE_LATER = "App_Update_Later";   //boolean
+    public final static String sUSER_SELECT_LANGUAGE = "User_Select_Language";
 
     public static final String TAB_NUMBER = "tab_number";
     public static final int TAB_KENDRA = 0, TAB_RAJYA = 1, TAB_CORPORATION = 2;
@@ -120,6 +121,11 @@ public class MainActivity extends AppCompatActivity {
             //UXCam.startWithKey(""); // uxcam SDK. This activity is entry activity
         }
 
+        String user_select_language = mSharedPref.getString(sUSER_SELECT_LANGUAGE, null);
+        if (user_select_language == null) {
+            choose_language();
+            return;
+        }
         setContentView(R.layout.activity_main);
 
         tabLayout = findViewById(R.id.tabs);
@@ -199,6 +205,12 @@ public class MainActivity extends AppCompatActivity {
         set_notification_time(this, true);
 
         prompt_user_agree();
+    }
+
+    private void choose_language() {
+        Intent intent = new Intent(this, Language.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     private void prompt_user_agree() {
