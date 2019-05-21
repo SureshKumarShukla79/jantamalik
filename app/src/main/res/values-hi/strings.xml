@@ -613,5 +613,32 @@
     <string name="indian_express">इंडियन एक्सप्रेस</string>
     <string name="jansatta">जनसत्ता</string>
     <string name="choose_your_language">अपनी भाषा चुनें</string>
-    <string name="contact_us">हमसे सम्पर्क करें</string>
+
+    <string name="contact_your_mp">सांसद से सम्पर्क करें</string>
+    <string name="contact_your_mla">विधायक से सम्पर्क करें</string>
+    <string name="contact_your_parshad">पार्षद से सम्पर्क करें</string>
+
+    <string name="law_under_research">इससे जुडे़ कानून पर शोध जारी है</string>
+    <string name="tax_under_research">इस पर खर्च होने वाले टैक्स पर शोध जारी है</string>
+    <string name="agriculture_loan_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 18 वां विषय है।</string>
+    <string name="agriculture_subsidy_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 14 वां विषय है।</string>
+    <string name="agriculture_water_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 17 वां विषय है।</string>
+    <string name="drinking_water_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 17 वां विषय है।</string>
+    <string name="hospital_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 6 वां विषय है।</string>
+    <string name="public_transport_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 13 वां विषय है।</string>
+    <string name="price_realiztion_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 46 वां विषय है।</string>
+    <string name="employment_samvidhaan">संविधान की सातवीं अनुसूची में यह केन्द्र और राज्य दोनों का विषय है। समवर्ती सूची में यह 23 वां और 26 वां विषय है।</string>
+    <string name="cleanliness_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 5 वां विषय है।</string>
+    <string name="sewage_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 5 वां विषय है।</string>
+    <string name="electricity_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 53 वां विषय है।</string>
+    <string name="police_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 1(पहला) और 2(दूसरा) विषय है।</string>
+    <string name="poor_road_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 13 वां विषय है।</string>
+    <string name="train_delay_samvidhaan">संविधान की सातवीं अनुसूची में यह केन्द्र का विषय है। केन्द्र सूची में यह 22 वां विषय है।</string>
+    <string name="traffic_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 1(पहला) विषय है।</string>
+    <string name="business_samvidhaan">संविधान की सातवीं अनुसूची में यह केन्द्र का विषय है। केन्द्र सूची में यह 41 वां, 42 वां, 43 वां और 44 वां विषय है।</string>
+
+    <string name="corruption_law">भ्रष्टाचार निरोधी कानून, लोकपाल कानून</string>
+
+    <string name="mla_missing">विधायक की जानकारी जल्द ही जोड़ दी जाएगी</string>
+    <string name="parshad_missing">पार्षद की जानकारी जल्द ही जोड़ दी जाएगी</string>
 </resources>

@@ -6,568 +6,662 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            app:title="@string/employment"
-            app:titleTextColor="@color/colorAccent" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_gravity="center"
-            android:background="@color/colorPrimaryDark"
-            android:padding="1dp"
-            android:src="@drawable/unemployment" />
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:stretchColumns="1">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text=""
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/department"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/vacancy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/teacher"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l1"
-                    android:text="@string/teacher_vacancy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:textColor="@color/black"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-                <TextView
-                    android:gravity="center"
-                    android:text="2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/police_unemploy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l2"
-                    android:text="@string/police_vacancy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:textColor="@color/black"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/railway"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l3"
-                    android:text="@string/railway_vacancy"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/anganwadi_workers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l4"
-                    android:text="@string/anganwadi_vacancy"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/health_centres"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l5"
-                    android:text="@string/health_centre_vacancy"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/armed_forces"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l6"
-                    android:text="62,084"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/paramilitary_forces"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l7"
-                    android:text="61,509"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/postal_department"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l8"
-                    android:text="54,263"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/aiims"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l9"
-                    android:text="21,740"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/higher_institutes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l10"
-                    android:text="12,020"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text="11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/courts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l11"
-                    android:text="5,853"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal">
-
-                <TextView
-                    android:gravity="center"
-                    android:text=""
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:text="@string/total"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:gravity="center"
-                    android:id="@+id/l42"
-                    android:text="@string/total_vacancy"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </TableRow>
-
-        </TableLayout>
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:focusable="true"
+        android:clickable="true"
+        android:onClick="onclick_update_issue"
+        android:src="@drawable/ic_add_white_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="mini" />
 
         <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/toi_source"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/toi_source"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_gravity="center"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/black"
-                android:visibility="visible"/>
-
-            <TextView
-                android:id="@+id/toi_link"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/toi_link"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColorLink="@color/blue"
-                android:visibility="visible"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/update_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:gravity="center"
             android:orientation="vertical">
-            <TextView
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:title="@string/employment"
+                app:titleTextColor="@color/colorAccent" />
+
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/issue_information"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimaryDark"
+                android:padding="1dp"
+                android:src="@drawable/unemployment" />
+
+            <LinearLayout
+                android:id="@+id/voter"
+                android:layout_margin="8dp"
+                android:padding="1dp"
+                android:background="@drawable/linearlayout_border"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/small_image"
+                    android:layout_height="@dimen/small_image"
+                    android:layout_gravity="center"
+                    android:background="@color/greylight"
+                    android:src="@drawable/sanvidhaan" />
+                <TextView
+                    android:id="@+id/janta_issue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginLeft="@dimen/issue_text_left_margin"
+                    android:layout_marginStart="@dimen/issue_text_left_margin"
+                    android:text="@string/employment_samvidhaan"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/neta"
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:padding="1dp"
+                android:background="@drawable/linearlayout_border"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/small_image"
+                    android:layout_height="@dimen/small_image"
+                    android:layout_gravity="center"
+                    android:background="@color/greylight"
+                    android:src="@drawable/compay_law" />
+                <TextView
+                    android:id="@+id/parshad_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/issue_text_left_margin"
+                    android:layout_marginStart="@dimen/issue_text_left_margin"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/law_under_research"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/parliament_house"
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:padding="1dp"
+                android:background="@drawable/linearlayout_border"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/small_image"
+                    android:layout_height="@dimen/small_image"
+                    android:layout_gravity="center"
+                    android:background="@color/greylight"
+                    android:src="@drawable/note" />
+                <TextView
+                    android:id="@+id/parliament"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/issue_text_left_margin"
+                    android:layout_marginStart="@dimen/issue_text_left_margin"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/tax_under_research"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/department"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/vacancy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/teacher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l1"
+                        android:text="@string/teacher_vacancy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:textColor="@color/black"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:gravity="center"
+                        android:text="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/police_unemploy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l2"
+                        android:text="@string/police_vacancy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:textColor="@color/black"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/railway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l3"
+                        android:text="@string/railway_vacancy"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/anganwadi_workers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l4"
+                        android:text="@string/anganwadi_vacancy"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/health_centres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l5"
+                        android:text="@string/health_centre_vacancy"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/armed_forces"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l6"
+                        android:text="62,084"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/paramilitary_forces"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l7"
+                        android:text="61,509"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/postal_department"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l8"
+                        android:text="54,263"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/aiims"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l9"
+                        android:text="21,740"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/higher_institutes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l10"
+                        android:text="12,020"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/courts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l11"
+                        android:text="5,853"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/l42"
+                        android:text="@string/total_vacancy"
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/toi_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toi_source"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/black"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/toi_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toi_link"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColorLink="@color/blue"
+                    android:visibility="visible"/>
+            </LinearLayout>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/contact_us"
+                android:layout_gravity="center"
+                android:text="@string/contact_your_mp"
                 android:textColor="@color/white"
-                android:onClick="onclick_update_issue"
-                app:backgroundTint="@color/colorPrimary" />
+                android:padding="8dp"
+                android:background="@drawable/contact_button"
+                android:onClick="onclick_my_MP_screen"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/contact_your_mla"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:layout_margin="8dp"
+                android:onClick="onclick_my_MLA_screen"
+                android:background="@drawable/contact_button"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 </ScrollView>

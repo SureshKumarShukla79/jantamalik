@@ -6,7 +6,26 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <LinearLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:focusable="true"
+        android:clickable="true"
+        android:onClick="onclick_update_issue"
+        android:src="@drawable/ic_add_white_24dp"
+        app:backgroundTint="@color/colorPrimary"
+        app:fabSize="mini" />
+
+        <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +62,7 @@
                 android:layout_height="@dimen/small_image"
                 android:layout_gravity="center"
                 android:background="@color/greylight"
-                android:src="@drawable/voter" />
+                android:src="@drawable/sanvidhaan" />
             <TextView
                 android:id="@+id/janta_issue"
                 android:layout_width="wrap_content"
@@ -51,7 +70,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:layout_marginStart="@dimen/issue_text_left_margin"
-                android:text="@string/business_voter"
+                android:text="@string/business_samvidhaan"
                 android:textColor="@color/black" />
         </LinearLayout>
 
@@ -81,24 +100,20 @@
                 android:textColor="@color/black" />
         </LinearLayout>
 
-        <FrameLayout
+        <LinearLayout
             android:id="@+id/parliament_house"
             android:layout_width="match_parent"
             android:layout_margin="8dp"
             android:padding="1dp"
+            android:orientation="horizontal"
             android:background="@drawable/linearlayout_border"
-            android:layout_height="wrap_content"
-            android:onClick="onclick_my_MP_screen">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+            android:layout_height="wrap_content">
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
                 android:layout_gravity="center"
                 android:background="@color/greylight"
-                android:src="@drawable/loksabha" />
+                android:src="@drawable/compay_law" />
             <TextView
                 android:id="@+id/parliament"
                 android:layout_width="wrap_content"
@@ -106,41 +121,24 @@
                 android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:layout_marginStart="@dimen/issue_text_left_margin"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/business_parliament_house"
+                android:text="@string/law_under_research"
                 android:textColor="@color/black" />
-            </LinearLayout>
-            <android.support.design.widget.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_gravity="end"
-                android:focusable="true"
-                android:clickable="true"
-                android:onClick="onclick_my_MP_screen"
-                android:src="@drawable/ic_arrow_forward_white_24dp"
-                app:backgroundTint="@color/colorPrimary"
-                app:fabSize="mini" />
-        </FrameLayout>
+        </LinearLayout>
 
-        <FrameLayout
+        <LinearLayout
             android:id="@+id/nagar_nigam"
             android:layout_width="match_parent"
             android:layout_margin="8dp"
             android:padding="1dp"
+            android:orientation="horizontal"
             android:background="@drawable/linearlayout_border"
             android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
             <ImageView
                 android:layout_width="@dimen/small_image"
                 android:layout_height="@dimen/small_image"
                 android:layout_gravity="center"
                 android:background="@color/greylight"
-                android:src="@drawable/up_vidhansabha" />
+                android:src="@drawable/note" />
             <TextView
                 android:id="@+id/municipality_issue"
                 android:layout_width="wrap_content"
@@ -148,45 +146,21 @@
                 android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:layout_marginStart="@dimen/issue_text_left_margin"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/business_nagar_nigam"
+                android:text="@string/tax_under_research"
                 android:textColor="@color/black" />
-            </LinearLayout>
-            <android.support.design.widget.FloatingActionButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_gravity="end"
-                android:focusable="true"
-                android:clickable="true"
-                android:src="@drawable/ic_arrow_forward_white_24dp"
-                app:backgroundTint="@color/colorPrimary"
-                app:fabSize="mini" />
-        </FrameLayout>
-
-        <LinearLayout
-            android:id="@+id/update_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="3dp"
-            android:gravity="center"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/issue_information"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contact_us"
-                android:textColor="@color/white"
-                android:onClick="onclick_update_issue"
-                app:backgroundTint="@color/colorPrimary" />
         </LinearLayout>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/contact_your_mp"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:background="@drawable/contact_button"
+            android:onClick="onclick_my_MP_screen"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
     </LinearLayout>
+    </RelativeLayout>
 </ScrollView>

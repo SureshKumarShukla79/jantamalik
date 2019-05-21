@@ -13,7 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -23,6 +22,7 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.MPdata;
@@ -64,11 +64,8 @@ import in.filternet.jantamalik.LokSabha_Election_2019.Uttar_Pradesh;
 import in.filternet.jantamalik.LokSabha_Election_2019.Uttarakhand;
 import in.filternet.jantamalik.LokSabha_Election_2019.West_Bengal;
 
-import static in.filternet.jantamalik.MainActivity.TAB_CORPORATION;
 import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
-import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 import static in.filternet.jantamalik.MainActivity.USER_SHARE_APP;
 
 public class Issues extends AppCompatActivity {
@@ -959,5 +956,13 @@ public class Issues extends AppCompatActivity {
         intent.putExtra("layout_id", layoutResID);
         intent.putExtra("title_id", titleID);
         startActivity(intent);
+    }
+
+    public void onclick_my_MLA_screen(View view) {
+        Toast.makeText(getApplicationContext(), getText(R.string.mla_missing), Toast.LENGTH_LONG).show();
+    }
+
+    public void onclick_my_Parshad_screen(View view) {
+        Toast.makeText(getApplicationContext(), getText(R.string.parshad_missing), Toast.LENGTH_LONG).show();
     }
 }

@@ -76,11 +76,17 @@ public class Contact extends AppCompatActivity {
                 ui_issue.setChecked(true);
             }
             else if(mUpdateMP) {
-                subject = getString(R.string.update_contact_info);
+                if(mIssueSubject != null)
+                    subject = mIssueSubject;
+                else
+                    subject = getString(R.string.update_contact_info);
                 ui_update.setChecked(true);
             }
             else if(mFeedback) {
-                subject = getString(R.string.feedback);
+                if(mIssueSubject != null)
+                    subject = mIssueSubject;
+                else
+                    subject = getString(R.string.feedback);
                 ui_feedback.setChecked(true);
             }
         }
@@ -107,19 +113,28 @@ public class Contact extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.radio_issue:
                 if (checked) {
-                    subject = getString(R.string.add_issue);
+                    if(mIssueSubject != null)
+                        subject = mIssueSubject;
+                    else
+                        subject = getString(R.string.add_issue);
                     firebase_tag = "User_Action_AddIssues";
                 }
                 break;
             case R.id.radio_update:
                 if (checked) {
-                    subject = getString(R.string.update_contact_info);
+                    if(mIssueSubject != null)
+                        subject = mIssueSubject;
+                    else
+                        subject = getString(R.string.update_contact_info);
                     firebase_tag = "User_Action_UpdateInfo";
                 }
                 break;
             case R.id.radio_feedback:
                 if (checked) {
-                    subject = getString(R.string.feedback);
+                    if(mIssueSubject != null)
+                        subject = mIssueSubject;
+                    else
+                        subject = getString(R.string.feedback);
                     firebase_tag = "User_Action_Feedback";
                 }
                 break;
