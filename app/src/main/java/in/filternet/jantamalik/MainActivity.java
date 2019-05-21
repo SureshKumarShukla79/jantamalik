@@ -457,13 +457,14 @@ public class MainActivity extends AppCompatActivity {
         if(fresh) {// Fresh install: If time has elapsed then set from next Sunday 11:00 AM
             int current_hour = calendar.get(Calendar.HOUR_OF_DAY);
             int current_min = calendar.get(Calendar.MINUTE);
-            if ((current_hour * 60 + current_min) > (20 * 60))
-                calendar.add(Calendar.DAY_OF_MONTH, 1);
+            if ((current_hour * 60 + current_min) > (11 * 60))
+                calendar.add(Calendar.WEEK_OF_MONTH, 1);
         } else {
-            calendar.add(Calendar.DAY_OF_MONTH, 1);
+            calendar.add(Calendar.WEEK_OF_MONTH, 1);
         }
 
-        calendar.set(Calendar.HOUR_OF_DAY, 20);
+        calendar.set(Calendar.DAY_OF_WEEK, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 11);
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
