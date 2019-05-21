@@ -24,7 +24,6 @@
     <string name="call_button">Call</string>
     <string name="email_button">Email</string>
     <string name="CrimeIssue">Crime</string>
-    <string name="IssueUnemployment">Unemployment</string>
     <string name="IssueInflation">Inflation</string>
     <string name="IssueEducation">Poor educational institutions</string>
     <string name="IssueClimate">Pollution</string>
@@ -34,8 +33,11 @@
 
     <string name="MP">My MP</string>
     <string name="MLA">My MLA</string>
-    <string name="Parshad">Corporator</string>
+    <string name="Parshad">My Corporator</string>
 
+    <string name="mp">MP</string>
+    <string name="mla">MLA</string>
+    <string name="parshad">Corporator</string>
 
     <string name="mp_area">Constituency: </string>
 
@@ -484,8 +486,7 @@
     <string name="mp_duty_divorce_law">Divorce law, etc</string>
 
     <string name="issue_information">To ask question,
-        \nor add information / experience,
-        \nclick here</string>
+        \nor add information / experience</string>
 
     <string name="india_tv_list"><a href="https://youtu.be/3bA-m_727R0?t=135">Part 1</a></string>
     <string name="punjab_kesari_list"><a href="https://youtu.be/rqEJaW7Ok2I?t=135">Part 1</a></string>
@@ -604,4 +605,5 @@
     <string name="indian_express">Indian Express</string>
     <string name="jansatta">जनसत्ता</string>
     <string name="choose_your_language">Choose your language</string>
+    <string name="contact_us">Contact US</string>
 </resources>

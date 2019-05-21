@@ -20,45 +20,6 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
-            android:id="@+id/election_2019_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:src="@drawable/chair" />
-
-            <TextView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:id="@+id/election_2019"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/election_2019"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/red_arrow" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
         android:layout_margin="3dp"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -235,28 +196,6 @@
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="3dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/wrong"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:background="@drawable/issues"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/recyclerview_item_click_effect"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:text="@string/Issues"
-            android:textColor="@color/colorPrimary"/>
-    </LinearLayout>
-
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -264,7 +203,7 @@
         android:layout_margin="3dp">
 
         <LinearLayout
-            android:id="@+id/employment_layout"
+            android:id="@+id/election_2019_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -273,16 +212,17 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:src="@drawable/unemployment" />
+                android:src="@drawable/chair" />
 
             <TextView
                 android:background="@drawable/recyclerview_item_click_effect"
+                android:id="@+id/election_2019"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:padding="10dp"
                 android:layout_weight="1.0"
-                android:text="@string/employment"
+                android:text="@string/election_2019"
                 android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -291,234 +231,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:src="@drawable/red_arrow" />
+                android:src="@drawable/right_black_arrow_24dp" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
-            android:id="@+id/media_or_afeem_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:src="@drawable/media" />
-
-            <TextView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:id="@+id/tv_news"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/media_or_afeem"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/red_arrow" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
-            android:id="@+id/mp_no_response_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:src="@drawable/mp_no_response" />
-
-            <TextView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:id="@+id/issue_mp_no_response"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/mp_no_response"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/red_arrow" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
-            android:id="@+id/train_delay_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:src="@drawable/train" />
-
-            <TextView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:id="@+id/train"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/train"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/red_arrow" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
-            android:id="@+id/corruption_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:src="@drawable/corruption" />
-
-            <TextView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:id="@+id/corruption"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/corruption"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/red_arrow" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
-            android:id="@+id/business_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:src="@drawable/business" />
-
-            <TextView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:id="@+id/business"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/business"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <ImageView
-                android:background="@drawable/recyclerview_item_click_effect"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/red_arrow" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <TextView
-            android:padding="6dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/User_appeal"
-            android:visibility="visible" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/add_issue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:src="@drawable/ic_add_white_24dp"
-            app:backgroundTint="@color/colorPrimary"
-            android:layout_gravity="right" />
     </android.support.v7.widget.CardView>
 
     <LinearLayout
-        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">

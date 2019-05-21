@@ -71,6 +71,11 @@
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:icon="@drawable/issues"
+                android:text="@string/Issues" />
+            <android.support.design.widget.TabItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:icon="@drawable/nation"
                 android:text="@string/kendra" />
             <android.support.design.widget.TabItem

@@ -29,8 +29,6 @@ public class KendraFragment extends Fragment {
     String TAG = "VoteFragment";
 
     private View view;
-    private FloatingActionButton ui_add_issue;
-
     private Intent intent;
 
     private SharedPreferences mSharedPref;
@@ -46,16 +44,6 @@ public class KendraFragment extends Fragment {
         }
 
         view = inflater.inflate(R.layout.kendra, container, false);
-        ui_add_issue = view.findViewById(R.id.add_issue);
-        ui_add_issue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), Contact.class);
-                intent.putExtra("add_issue", true);
-                intent.putExtra(TAB_NUMBER, TAB_KENDRA);
-                startActivity(intent);
-            }
-        });
 
         FirebaseLogger.send(getContext(), "Kendra_Screen");
 
@@ -63,13 +51,6 @@ public class KendraFragment extends Fragment {
         note();
         infographics();
         responsibility();
-
-        issue_employment();
-        issue_media();
-        issue_mp_no_response();
-        issue_train();
-        issue_business();
-        issue_curroption();
         issue_election_2019();
 
         return view;
@@ -118,126 +99,6 @@ public class KendraFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 intent = new Intent(view.getContext(), VoteMP.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_employment() {
-        LinearLayout media_or_afeem_layout = view.findViewById(R.id.employment_layout);
-
-        media_or_afeem_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Employment");
-
-                int layout_id = R.layout.issue_employment;
-                int title_id = R.string.employment;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("kendra", true);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_media() {
-        LinearLayout media_or_afeem_layout = view.findViewById(R.id.media_or_afeem_layout);
-
-        media_or_afeem_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Media");
-
-                int layout_id = R.layout.issue_media_or_afeem;
-                int title_id = R.string.media_or_afeem;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("kendra", true);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_mp_no_response() {
-        LinearLayout mp_no_response_layout = view.findViewById(R.id.mp_no_response_layout);
-
-        mp_no_response_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_MP_No_Response");
-
-                int layout_id = R.layout.issue_mp_no_response;
-                int title_id = R.string.mp_no_response;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("kendra", true);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_curroption() {
-        LinearLayout corruption_layout = view.findViewById(R.id.corruption_layout);
-
-        corruption_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Corruption");
-
-                int layout_id = R.layout.issue_corruption;
-                int title_id = R.string.corruption;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("kendra", true);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_train() {
-        LinearLayout train_delay_layout = view.findViewById(R.id.train_delay_layout);
-
-        train_delay_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Train_Delay");
-
-                int layout_id = R.layout.issue_train_delay;
-                int title_id = R.string.train;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("kendra", true);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_business() {
-        LinearLayout business_layout = view.findViewById(R.id.business_layout);
-
-        business_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Business");
-
-                int layout_id = R.layout.issue_business;
-                int title_id = R.string.business;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("kendra", true);
                 startActivity(intent);
             }
         });

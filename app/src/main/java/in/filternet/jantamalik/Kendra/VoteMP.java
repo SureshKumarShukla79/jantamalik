@@ -195,7 +195,6 @@ public class VoteMP extends AppCompatActivity {
             Intent intent = new Intent(view.getContext(), Issues.class);
             intent.putExtra("layout_id", layoutResID);
             intent.putExtra("title_id", titleID);
-            intent.putExtra("kendra", true);
             startActivity(intent);
         } else {
             Intent intent = new Intent(view.getContext(), MainActivity.class);

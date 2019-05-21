@@ -9,6 +9,7 @@ import in.filternet.jantamalik.Kendra.KendraFragment;
 import in.filternet.jantamalik.Rajya.RajyaFragment;
 
 import static in.filternet.jantamalik.MainActivity.TAB_CORPORATION;
+import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 
@@ -24,6 +25,9 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position){
+            case TAB_ISSUE:
+                IssueFragment issues = new IssueFragment();
+                return issues;
             case TAB_KENDRA:
                 KendraFragment kendra = new KendraFragment();
                 return kendra;

@@ -65,6 +65,7 @@ import in.filternet.jantamalik.LokSabha_Election_2019.Uttarakhand;
 import in.filternet.jantamalik.LokSabha_Election_2019.West_Bengal;
 
 import static in.filternet.jantamalik.MainActivity.TAB_CORPORATION;
+import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
@@ -85,7 +86,7 @@ public class Issues extends AppCompatActivity {
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
     private int layoutResID, titleID;
-    private boolean kendra, rajya, corporation;
+    private boolean issues;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -97,9 +98,7 @@ public class Issues extends AppCompatActivity {
             //Log.e(TAG, "layout_id: " + layoutResID);
             titleID = savedInstanceState.getInt("title_id");
             //Log.e(TAG, "title_id: " + titleID);
-            kendra = savedInstanceState.getBoolean("kendra", false);
-            rajya = savedInstanceState.getBoolean("rajya", false);
-            corporation = savedInstanceState.getBoolean("corporation", false);
+            issues = savedInstanceState.getBoolean("issues", false);
         }
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
@@ -131,13 +130,6 @@ public class Issues extends AppCompatActivity {
 
     private void back_button(View view) {
         Intent intent = new Intent(view.getContext(), MainActivity.class);
-        if(kendra) {
-            intent.putExtra(TAB_NUMBER, TAB_KENDRA);
-        } else if(rajya) {
-            intent.putExtra(TAB_NUMBER, TAB_RAJYA);
-        } else if(corporation) {
-            intent.putExtra(TAB_NUMBER, TAB_CORPORATION);
-        }
         startActivity(intent);
     }
 
@@ -935,12 +927,8 @@ public class Issues extends AppCompatActivity {
         Intent intent = new Intent(view.getContext(), Contact.class);
         intent.putExtra("add_issue", true);
         intent.putExtra("subject", getString(titleID));
-        if(kendra) {
-            intent.putExtra(TAB_NUMBER, TAB_KENDRA);
-        } else if(rajya) {
-            intent.putExtra(TAB_NUMBER, TAB_RAJYA);
-        } else if(corporation) {
-            intent.putExtra(TAB_NUMBER, TAB_CORPORATION);
+        if(issues) {
+            intent.putExtra(TAB_NUMBER, TAB_ISSUE);
         }
         startActivity(intent);
     }
