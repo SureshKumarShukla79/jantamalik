@@ -80,7 +80,8 @@ public class IssueFragment extends Fragment {
         media_or_afeem_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Employment");
+                String event_name = "Issue_Employment";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_employment;
                 int title_id = R.string.employment;
@@ -88,6 +89,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -100,7 +102,8 @@ public class IssueFragment extends Fragment {
         media_or_afeem_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Media");
+                String event_name = "Issue_Media";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_media_or_afeem;
                 int title_id = R.string.media_or_afeem;
@@ -108,6 +111,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -120,7 +124,8 @@ public class IssueFragment extends Fragment {
         mp_no_response_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_MP_No_Response");
+                String event_name = "Issue_MP_No_Response";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_mp_no_response;
                 int title_id = R.string.mp_no_response;
@@ -128,6 +133,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -140,7 +146,8 @@ public class IssueFragment extends Fragment {
         corruption_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Corruption");
+                String event_name = "Issue_Corruption";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_corruption;
                 int title_id = R.string.corruption;
@@ -148,6 +155,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -160,7 +168,8 @@ public class IssueFragment extends Fragment {
         train_delay_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Train_Delay");
+                String event_name = "Issue_Train_Delay";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_train_delay;
                 int title_id = R.string.train;
@@ -168,6 +177,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -180,7 +190,8 @@ public class IssueFragment extends Fragment {
         business_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Business");
+                String event_name = "Issue_Business";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_business;
                 int title_id = R.string.business;
@@ -188,6 +199,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -200,7 +212,8 @@ public class IssueFragment extends Fragment {
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Electricity");
+                String event_name = "Issue_Electricity";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_electricity;
                 int title_id = R.string.electricity;
@@ -208,6 +221,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -220,7 +234,8 @@ public class IssueFragment extends Fragment {
         police_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Police");
+                String event_name = "Issue_Police";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_police;
                 int title_id = R.string.police;
@@ -228,6 +243,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -240,7 +256,8 @@ public class IssueFragment extends Fragment {
         road_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Road");
+                String event_name = "Issue_Road";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_poor_road;
                 int title_id = R.string.poor_road;
@@ -248,6 +265,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -260,7 +278,8 @@ public class IssueFragment extends Fragment {
         traffic_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Traffic");
+                String event_name = "Issue_Traffic";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_traffic;
                 int title_id = R.string.traffic;
@@ -268,6 +287,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -280,7 +300,8 @@ public class IssueFragment extends Fragment {
         mla_no_response_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_MLA_No_Response");
+                String event_name = "Issue_MLA_No_Response";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_mla_no_response;
                 int title_id = R.string.mla_no_response;
@@ -288,6 +309,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -300,7 +322,8 @@ public class IssueFragment extends Fragment {
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Hospital");
+                String event_name = "Issue_Hospital";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_hospital;
                 int title_id = R.string.hospital;
@@ -308,6 +331,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -320,7 +344,8 @@ public class IssueFragment extends Fragment {
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Drinking_Water");
+                String event_name = "Issue_Drinking_Water";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_drinking_water;
                 int title_id = R.string.drinking_water;
@@ -328,6 +353,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -340,7 +366,8 @@ public class IssueFragment extends Fragment {
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Agriculture_Water");
+                String event_name = "Issue_Agriculture_Water";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_agriculture_water;
                 int title_id = R.string.agriculture_water;
@@ -348,6 +375,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -360,7 +388,8 @@ public class IssueFragment extends Fragment {
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Agriculture_Loan");
+                String event_name = "Issue_Agriculture_Loan";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_agriculture_loan;
                 int title_id = R.string.agriculture_loan;
@@ -368,6 +397,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -380,7 +410,8 @@ public class IssueFragment extends Fragment {
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Price_Realization");
+                String event_name = "Issue_Price_Realization";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_price_realization;
                 int title_id = R.string.price_realization;
@@ -388,6 +419,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -400,7 +432,8 @@ public class IssueFragment extends Fragment {
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Agriculture_Subsidy");
+                String event_name = "Issue_Agriculture_Subsidy";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_agriculture_subsidy;
                 int title_id = R.string.agriculture_subsidy;
@@ -408,6 +441,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -420,7 +454,8 @@ public class IssueFragment extends Fragment {
         electricity_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Public_Transport");
+                String event_name = "Issue_Public_Transport";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_public_transport;
                 int title_id = R.string.public_transport;
@@ -428,6 +463,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -440,7 +476,8 @@ public class IssueFragment extends Fragment {
         clean_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Sewage");
+                String event_name = "Issue_Sewage";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_sewage;
                 int title_id = R.string.sewage;
@@ -448,6 +485,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }
@@ -460,7 +498,8 @@ public class IssueFragment extends Fragment {
         clean_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Issue_Clean");
+                String event_name = "Issue_Clean";
+                FirebaseLogger.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_cleanliness;
                 int title_id = R.string.cleanliness;
@@ -468,6 +507,7 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);
                 intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
                 intent.putExtra("issues", true);
                 startActivity(intent);
             }

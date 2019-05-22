@@ -83,6 +83,7 @@ public class Issues extends AppCompatActivity {
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
     private int layoutResID, titleID;
+    private String titleName;
     private boolean issues;
 
     @Override
@@ -95,6 +96,7 @@ public class Issues extends AppCompatActivity {
             //Log.e(TAG, "layout_id: " + layoutResID);
             titleID = savedInstanceState.getInt("title_id");
             //Log.e(TAG, "title_id: " + titleID);
+            titleName = savedInstanceState.getString("title");
             issues = savedInstanceState.getBoolean("issues", false);
         }
 
@@ -952,6 +954,8 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_MP_screen(View view) {
+        FirebaseLogger.send(this, titleName + "_Contact_MP");
+
         Intent intent = new Intent(view.getContext(), VoteMP.class);
         intent.putExtra("layout_id", layoutResID);
         intent.putExtra("title_id", titleID);
@@ -959,10 +963,14 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_MLA_screen(View view) {
+        FirebaseLogger.send(this, titleName + "_Contact_MLA");
+
         Toast.makeText(getApplicationContext(), getText(R.string.mla_missing), Toast.LENGTH_LONG).show();
     }
 
     public void onclick_my_Parshad_screen(View view) {
+        FirebaseLogger.send(this, titleName + "_Contact_Parshad");
+
         Toast.makeText(getApplicationContext(), getText(R.string.parshad_missing), Toast.LENGTH_LONG).show();
     }
 }
