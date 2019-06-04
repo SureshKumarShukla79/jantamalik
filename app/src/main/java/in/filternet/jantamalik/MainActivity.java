@@ -398,12 +398,12 @@ public class MainActivity extends AppCompatActivity {
         if (language.equals(sLANGUAGE_HINDI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
                 if (state_in.equals(MPdata.all_MPs[i][0])) {
-                    state = MPdata.all_MPs[i][1];
+                    state = MPdata.all_MPs[i][3];
                 }
             }
         } else {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state_in.equals(MPdata.all_MPs[i][1])) {
+                if (state_in.equals(MPdata.all_MPs[i][3])) {
                     state = MPdata.all_MPs[i][0];
                 }
             }
@@ -420,14 +420,14 @@ public class MainActivity extends AppCompatActivity {
 
         if (language.equals(sLANGUAGE_HINDI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state_in.equals(MPdata.all_MPs[i][0]) && area_in.equals(MPdata.all_MPs[i][3])) {
-                    area = MPdata.all_MPs[i][6];
+                if (state_in.equals(MPdata.all_MPs[i][0]) && area_in.equals(MPdata.all_MPs[i][1])) {
+                    area = MPdata.all_MPs[i][4];
                 }
             }
         } else {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state_in.equals(MPdata.all_MPs[i][1]) && area_in.equals(MPdata.all_MPs[i][6])) {
-                    area = MPdata.all_MPs[i][3];
+                if (state_in.equals(MPdata.all_MPs[i][3]) && area_in.equals(MPdata.all_MPs[i][4])) {
+                    area = MPdata.all_MPs[i][1];
                 }
             }
         }

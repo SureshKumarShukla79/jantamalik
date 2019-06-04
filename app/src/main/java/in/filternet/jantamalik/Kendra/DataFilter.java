@@ -22,7 +22,7 @@ public class DataFilter {
         int i,J=0;
 
         if (lang.equals(MainActivity.sLANGUAGE_HINDI))
-            J=1;//hindi states in 8th column
+            J=3;//hindi states in 3rd column
 
         states = new ArrayList<>();
          for(i = 0; i < MPdata.all_MPs.length; i++) {
@@ -40,10 +40,10 @@ public class DataFilter {
     }
 
     public List<String> getMPAreas(String lang,String getState) {
-        int i,J=0,K=3;
+        int i,J=0,K=1;
         if (lang.equals(MainActivity.sLANGUAGE_HINDI)) {
-            J = 1;
-            K = 6;
+            J = 3;      //hindi state
+            K = 4;      //hindi constituency
         }
 
         // Treemap to keep data sorted names of Areas.
@@ -64,7 +64,13 @@ public class DataFilter {
     }
 
     public class MP_info{
-        public  String name,phone,email,address;
+        public String name;
+        public String phone;
+        public String phone2;
+        public String phone3;
+        public String email;
+        public String email2;
+        public String address;
     }
 
 
@@ -72,23 +78,27 @@ public class DataFilter {
       //  Log.e(TAG,lang+" "+MPArea);
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
         String state = shared_pref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        int i,stateCol=0,J=3,nameCol=4,phoneCol=9,emailCol=10,addCol=11;
+
+        int state_column = 0, area_column = 1, name_column = 2;
+        int phone_column = 6, phone2_column = 7, phone3_column = 8;
+        int email_column = 9, email2_column = 10;
+        int address_column = 11;
 
         MP_info mp_info = new MP_info();
         if (lang.equals(MainActivity.sLANGUAGE_HINDI)) {
-            stateCol=1;
-            J = 6;
-            nameCol = 7;
-            phoneCol =9;
-            emailCol =10;
-            addCol =   11;
+            state_column = 3;
+            area_column = 4;
+            name_column = 5;
         }
-        for(i=0;i<MPdata.all_MPs.length;i++){
-            if (state.equals(MPdata.all_MPs[i][stateCol]) && MPArea.equals(MPdata.all_MPs[i][J])) {
-                mp_info.name = MPdata.all_MPs[i][nameCol];
-                mp_info.phone = MPdata.all_MPs[i][phoneCol];
-                mp_info.email = MPdata.all_MPs[i][emailCol];
-                mp_info.address = MPdata.all_MPs[i][addCol];
+        for(int i=0; i<MPdata.all_MPs.length; i++){
+            if (state.equals(MPdata.all_MPs[i][state_column]) && MPArea.equals(MPdata.all_MPs[i][area_column])) {
+                mp_info.name = MPdata.all_MPs[i][name_column];
+                mp_info.phone = MPdata.all_MPs[i][phone_column];
+                mp_info.phone2 = MPdata.all_MPs[i][phone2_column];
+                mp_info.phone3 = MPdata.all_MPs[i][phone3_column];
+                mp_info.email = MPdata.all_MPs[i][email_column];
+                mp_info.email2 = MPdata.all_MPs[i][email2_column];
+                mp_info.address = MPdata.all_MPs[i][address_column];
             } else
                 continue;
         }

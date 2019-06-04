@@ -65,6 +65,7 @@ import in.filternet.jantamalik.LokSabha_Election_2019.Uttarakhand;
 import in.filternet.jantamalik.LokSabha_Election_2019.West_Bengal;
 
 import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.USER_SHARE_APP;
 
@@ -84,7 +85,7 @@ public class Issues extends AppCompatActivity {
     private SharedPreferences.Editor editor;
     private int layoutResID, titleID;
     private String titleName;
-    private boolean issues;
+    private boolean issues, kendra;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -98,6 +99,7 @@ public class Issues extends AppCompatActivity {
             //Log.e(TAG, "title_id: " + titleID);
             titleName = savedInstanceState.getString("title");
             issues = savedInstanceState.getBoolean("issues", false);
+            kendra = savedInstanceState.getBoolean("kendra", false);
         }
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
@@ -129,6 +131,9 @@ public class Issues extends AppCompatActivity {
 
     private void back_button(View view) {
         Intent intent = new Intent(view.getContext(), MainActivity.class);
+        if(kendra) {
+            intent.putExtra(TAB_NUMBER, TAB_KENDRA);
+        }
         startActivity(intent);
     }
 
@@ -777,9 +782,9 @@ public class Issues extends AppCompatActivity {
 
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state.equals(MPdata.all_MPs[i][1]) && constituency.equals(MPdata.all_MPs[i][6])){
+                if (state.equals(MPdata.all_MPs[i][3]) && constituency.equals(MPdata.all_MPs[i][4])){
                     state = MPdata.all_MPs[i][0];
-                    constituency = MPdata.all_MPs[i][3];
+                    constituency = MPdata.all_MPs[i][1];
                 }
             }
             //area_column = 7;
@@ -814,9 +819,9 @@ public class Issues extends AppCompatActivity {
 
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state.equals(MPdata.all_MPs[i][1]) && constituency.equals(MPdata.all_MPs[i][6])) {
+                if (state.equals(MPdata.all_MPs[i][3]) && constituency.equals(MPdata.all_MPs[i][4])) {
                     state = MPdata.all_MPs[i][0];
-                    constituency = MPdata.all_MPs[i][3];
+                    constituency = MPdata.all_MPs[i][1];
                 }
             }
             //area_column = 7;

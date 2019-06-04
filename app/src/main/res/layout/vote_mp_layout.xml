@@ -130,7 +130,6 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
@@ -161,14 +160,73 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/email_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:orientation="horizontal">
 
                 <android.support.design.widget.FloatingActionButton
-                    android:id="@+id/email_button"
+                    android:id="@+id/call2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_call_mp"
+                    android:src="@drawable/ic_phone_white_24dp"
+                    app:backgroundTint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/phone2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_call_mp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/call3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_call_mp"
+                    android:src="@drawable/ic_phone_white_24dp"
+                    app:backgroundTint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/phone3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_call_mp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/mail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -197,7 +255,38 @@
                 android:gravity="left"
                 android:orientation="horizontal">
 
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/mail2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_email_mp"
+                    android:src="@drawable/ic_email_white_24dp"
+                    app:backgroundTint="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/email2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_email_mp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
                 <ImageView
+                    android:id="@+id/image_address"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:src="@drawable/ic_store_mall_directory_black_24dp" />
@@ -226,7 +315,8 @@
             android:layout_below="@id/nestedScroll"
             android:focusable="true"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:visibility="gone"/>
         <TextView
             android:id="@+id/update_text"
             android:layout_width="wrap_content"

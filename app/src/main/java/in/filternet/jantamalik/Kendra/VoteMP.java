@@ -1,16 +1,20 @@
 package in.filternet.jantamalik.Kendra;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,8 +31,9 @@ import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 public class VoteMP extends AppCompatActivity {
     String TAG = "VoteMP";
     private Toolbar toolbar;
-    private TextView name,phone,email, address;
-    private de.hdodenhof.circleimageview.CircleImageView profile_pic;
+    private ImageView ui_image_address;
+    private TextView ui_name, ui_phone, ui_phone2, ui_phone3, ui_email, ui_email2, ui_address;
+    private FloatingActionButton ui_call, ui_call2, ui_call3, ui_mail, ui_mail2;
     DataFilter.MP_info mp;
 
     private Spinner spinnerState;
@@ -63,11 +68,19 @@ public class VoteMP extends AppCompatActivity {
         editor = mSharedPref.edit();
 
         toolbar = findViewById(R.id.toolbar_MP_layout);
-        name = findViewById(R.id.MP_name);
-        phone = findViewById(R.id.phone);
-        email = findViewById(R.id.email);
-        address = findViewById(R.id.address);
-        profile_pic = findViewById(R.id.profile_image);
+        ui_name = findViewById(R.id.MP_name);
+        ui_phone = findViewById(R.id.phone);
+        ui_call = findViewById(R.id.call);
+        ui_phone2 = findViewById(R.id.phone2);
+        ui_call2 = findViewById(R.id.call2);
+        ui_phone3 = findViewById(R.id.phone3);
+        ui_call3 = findViewById(R.id.call3);
+        ui_email = findViewById(R.id.email);
+        ui_mail = findViewById(R.id.mail);
+        ui_email2 = findViewById(R.id.email2);
+        ui_mail2 = findViewById(R.id.mail2);
+        ui_image_address = findViewById(R.id.image_address);
+        ui_address = findViewById(R.id.address);
 
         spinnerState = findViewById(R.id.state_spinner);
         spinnerMP = findViewById(R.id.MP_spinner);
@@ -165,23 +178,74 @@ public class VoteMP extends AppCompatActivity {
         updateMP();
     }
 
+    @SuppressLint("RestrictedApi")
     private void updateMP() {
         DataFilter dataFilter = new DataFilter();
         String MPArea = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
         //mp = dataFilter.new MP_info();
         mp = dataFilter.getMPInfo(this, mLanguage, MPArea);
 
-        //Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
-        name.setText(mp.name);
-        phone.setText(mp.phone);
-        email.setText(mp.email);
-        address.setText(mp.address);
+        Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
+        ui_name.setText(mp.name);
 
-        // Only Varanasi MP pic in app
-        if (MPArea.equals(MainActivity.DEFAULT_MP) || MPArea.equals(MainActivity.hiDEFAULT_MP))
-            profile_pic.setImageResource(R.drawable.narendra_modi_pic);
-        else
-            profile_pic.setImageResource(R.drawable.politician_illustration);
+        if(mp.phone == null || mp.phone.equals("")) {
+            ui_call.setVisibility(View.GONE);
+            ui_phone.setVisibility(View.GONE);
+        } else {
+            ui_phone.setText(mp.phone);
+            ui_call.setVisibility(View.VISIBLE);
+            ui_phone.setVisibility(View.VISIBLE);
+        }
+
+        if(mp.phone2 == null || mp.phone2.equals("")) {
+            ui_call2.setVisibility(View.GONE);
+            ui_phone2.setVisibility(View.GONE);
+        }
+        else {
+            ui_phone2.setText(mp.phone2);
+            ui_call2.setVisibility(View.VISIBLE);
+            ui_phone2.setVisibility(View.VISIBLE);
+        }
+
+        if(mp.phone3 == null || mp.phone3.equals("")) {
+            ui_call3.setVisibility(View.GONE);
+            ui_phone3.setVisibility(View.GONE);
+        }
+        else {
+            ui_phone3.setText(mp.phone3);
+            ui_call3.setVisibility(View.VISIBLE);
+            ui_phone3.setVisibility(View.VISIBLE);
+        }
+
+        if(mp.email == null || mp.email.equals("")) {
+            ui_mail.setVisibility(View.GONE);
+            ui_email.setVisibility(View.GONE);
+        }
+        else {
+            ui_email.setText(mp.email);
+            ui_mail.setVisibility(View.VISIBLE);
+            ui_email.setVisibility(View.VISIBLE);
+        }
+
+        if(mp.email2 == null || mp.email2.equals("")) {
+            ui_mail2.setVisibility(View.GONE);
+            ui_email2.setVisibility(View.GONE);
+        }
+        else {
+            ui_email2.setText(mp.email2);
+            ui_mail2.setVisibility(View.VISIBLE);
+            ui_email2.setVisibility(View.VISIBLE);
+        }
+
+        if(mp.address == null || mp.address.equals("")) {
+            ui_address.setVisibility(View.GONE);
+            ui_image_address.setVisibility(View.GONE);
+        } else {
+            ui_address.setText(mp.address);
+            ui_address.setVisibility(View.VISIBLE);
+            ui_image_address.setVisibility(View.VISIBLE);
+        }
+
     }
 
     @Override
@@ -204,10 +268,25 @@ public class VoteMP extends AppCompatActivity {
     }
 
     public void onclick_call_mp(View view) {
-        if(mp.phone.equals(""))
+        if(mp.phone.equals("") && mp.phone2.equals("") && mp.phone3.equals(""))
             return;
 
-        Uri number = Uri.parse("tel:" + mp.phone);
+        Uri number = null;
+        switch (view.getId()) {
+            case R.id.phone:
+            case R.id.call:
+                number = Uri.parse("tel:" + mp.phone);
+                break;
+            case R.id.phone2:
+            case R.id.call2:
+                number = Uri.parse("tel:" + mp.phone2);
+                break;
+            case R.id.phone3:
+            case R.id.call3:
+                number = Uri.parse("tel:" + mp.phone3);
+                break;
+        }
+
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
 
         try { // Calling not available on Tablet devices
@@ -220,10 +299,22 @@ public class VoteMP extends AppCompatActivity {
     }
 
     public void onclick_email_mp(View view) {
-        if(mp.email.equals(""))
+        if(mp.email.equals("") && mp.email2.equals(""))
             return;
 
-        String[] TO = {mp.email};
+        String[] TO = new String[0];
+
+        switch (view.getId()) {
+            case R.id.email:
+            case R.id.mail:
+                TO = new String[]{mp.email};
+                break;
+            case R.id.email2:
+            case R.id.mail2:
+                TO = new String[]{mp.email2};
+                break;
+        }
+
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setData(Uri.parse("mailto:"));
         intent.setType("text/plain");
