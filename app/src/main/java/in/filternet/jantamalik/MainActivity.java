@@ -390,7 +390,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static String get_state(Context context, String language){
-        String state = " ";
+        String state = " "; // TODO why one space
 
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
         String state_in = shared_pref.getString(sSTATE, DEFAULT_STATE);
@@ -412,7 +412,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static String get_area(Context context, String language){
-        String area = " ";
+        String area = " "; // TODO why one space
 
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
         String state_in = shared_pref.getString(sSTATE, DEFAULT_STATE);

@@ -48,7 +48,7 @@
     <string name="email_contact_modi">connect@mygov.nic.in</string>
     <string name="address_modi">7 लोक कल्याण मार्ग, नई दिल्ली, 110011</string>
 
-    <string name="source_sansad">लोकसभा वेबसाइट से https://loksabha.nic.in</string>
+    <string name="source_sansad">स्रोत - नामांकन चुनाव आयोग https://myneta.info</string>
 
     <string name="update_info">सांसद को फोन व ईमेल करें, हिचकिचाएँ नहीं।</string>
 
@@ -641,4 +641,6 @@
 
     <string name="mla_missing">विधायक की जानकारी जल्द ही जोड़ दी जाएगी</string>
     <string name="parshad_missing">पार्षद की जानकारी जल्द ही जोड़ दी जाएगी</string>
+
+    <string name="join_local_whatsapp_group">स्थानीय जनता मालिक ग्रुप से जुड़ें</string>
 </resources>

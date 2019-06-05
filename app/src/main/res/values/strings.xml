@@ -47,7 +47,7 @@
     <string name="email_contact_modi">connect@mygov.nic.in</string>
     <string name="address_modi">7 Lok Kalyan Marg, New Delhi, 110011</string>
 
-    <string name="source_sansad">Loksabha website https://loksabha.nic.in</string>
+    <string name="source_sansad">Source - Election Commission affidavit https://myneta.info</string>
 
     <string name="update_info">Call and email your MP. Don\'t hesitate.</string>
 
@@ -634,4 +634,6 @@
 
     <string name="mla_missing">Information of MLA will be added soon</string>
     <string name="parshad_missing">Information of Corporator will be added soon</string>
+
+    <string name="join_local_whatsapp_group">Join local Janta Malik Group</string>
 </resources>

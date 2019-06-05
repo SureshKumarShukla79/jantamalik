@@ -316,7 +316,7 @@
             android:focusable="true"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/black"
-            android:visibility="gone"/>
+            android:visibility="visible" />
         <TextView
             android:id="@+id/update_text"
             android:layout_width="wrap_content"
@@ -326,7 +326,39 @@
             android:layout_marginLeft="5dp"
             android:text="@string/update_info"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/whatsapp_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/join_local_whatsapp_group"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:onClick="onclick_WhatsApp"
+                android:textColorLink="@color/blue"
+                android:focusable="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/whatsapp_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="onclick_WhatsApp"
+                android:src="@drawable/whatsapp"
+                app:backgroundTint="@color/colorPrimary" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
 </ScrollView>

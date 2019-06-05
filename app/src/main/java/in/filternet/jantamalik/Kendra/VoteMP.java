@@ -1,6 +1,7 @@
 package in.filternet.jantamalik.Kendra;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -10,11 +11,11 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ public class VoteMP extends AppCompatActivity {
     private ImageView ui_image_address;
     private TextView ui_name, ui_phone, ui_phone2, ui_phone3, ui_email, ui_email2, ui_address;
     private FloatingActionButton ui_call, ui_call2, ui_call3, ui_mail, ui_mail2;
+    private LinearLayout ui_whatsapp_group;
     DataFilter.MP_info mp;
 
     private Spinner spinnerState;
@@ -81,6 +83,8 @@ public class VoteMP extends AppCompatActivity {
         ui_mail2 = findViewById(R.id.mail2);
         ui_image_address = findViewById(R.id.image_address);
         ui_address = findViewById(R.id.address);
+
+        ui_whatsapp_group = findViewById(R.id.whatsapp_group);
 
         spinnerState = findViewById(R.id.state_spinner);
         spinnerMP = findViewById(R.id.MP_spinner);
@@ -185,7 +189,7 @@ public class VoteMP extends AppCompatActivity {
         //mp = dataFilter.new MP_info();
         mp = dataFilter.getMPInfo(this, mLanguage, MPArea);
 
-        Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
+        //Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
         ui_name.setText(mp.name);
 
         if(mp.phone == null || mp.phone.equals("")) {
@@ -246,6 +250,18 @@ public class VoteMP extends AppCompatActivity {
             ui_image_address.setVisibility(View.VISIBLE);
         }
 
+        // Get English version and then WhatsApp group link
+        String state = "", area = "";
+        state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+        area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+        //Log.e(TAG, state + "," + area);
+
+        String tmp = getLoksabha_Group(getBaseContext(), state, area);
+        if (tmp.equals("")) {
+            ui_whatsapp_group.setVisibility(View.GONE);
+        } else {
+            ui_whatsapp_group.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -345,5 +361,32 @@ public class VoteMP extends AppCompatActivity {
     public void onclick_MP(View view){
         Intent intent = new Intent(view.getContext(), VoteMP.class);
         startActivity(intent);
+    }
+
+    public void onclick_WhatsApp(View view) {
+        //Log.e(TAG, "whats icon clicked" + mWhatsapp_group);
+        if (mWhatsapp_group.equals(""))
+            return;
+        Uri uri = Uri.parse(mWhatsapp_group);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    private String mWhatsapp_group = "";
+
+    private String getLoksabha_Group(Context context, String state, String area) {
+        mWhatsapp_group = "";
+        //Log.e(TAG, state + " " + area);
+
+        for (int i = 0; i < LokSabhaGroups.all_groups.length; i++) {
+            if (state.equals(LokSabhaGroups.all_groups[i][0])
+                    && area.equals(LokSabhaGroups.all_groups[i][1])) {
+                mWhatsapp_group = LokSabhaGroups.all_groups[i][2];
+            } else
+                continue;
+        }
+        //Log.e(TAG, tmp);
+
+        return mWhatsapp_group;
     }
 }

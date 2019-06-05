@@ -214,7 +214,7 @@ public class Contact extends AppCompatActivity {
         }
     }
 
-    private boolean isPackageExist(Context context, Intent intent, String packageName) {
+    public static boolean isPackageExist(Context context, Intent intent, String packageName) {
         try {
             PackageManager packageManager = context.getPackageManager();
             List<ResolveInfo> activities = packageManager.queryIntentActivities(intent,
