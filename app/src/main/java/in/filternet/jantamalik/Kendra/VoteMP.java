@@ -252,8 +252,13 @@ public class VoteMP extends AppCompatActivity {
 
         // Get English version and then WhatsApp group link
         String state = "", area = "";
-        state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-        area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+            area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+        } else {
+            state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+            area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+        }
         //Log.e(TAG, state + "," + area);
 
         String tmp = getLoksabha_Group(getBaseContext(), state, area);
