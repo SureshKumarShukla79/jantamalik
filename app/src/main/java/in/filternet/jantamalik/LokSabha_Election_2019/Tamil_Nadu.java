@@ -598,6 +598,7 @@ public static final String[][] red_bucket = {
         {"Tamil Nadu", "Ramanathapuram", "B. Krishnaraja", "4", " ", "तमिल नाडु", "रामनाथपुरम", "बी। कृष्णराज", " "},
         {"Tamil Nadu", "Ramanathapuram", "P. Loganathan", "4", " ", "तमिल नाडु", "रामनाथपुरम", "पी। लोगनाथन", " "},
         {"Tamil Nadu", "Ramanathapuram", "Alla Pichai", "3", " ", "तमिल नाडु", "रामनाथपुरम", "अल्ला पिचाई", " "},
+        { "Tamil Nadu", "Ramanathapuram", "K. Navaskani", "2",  " ","तमिल नाडु",  "रामनाथपुरम", "के.नावासकनी", " "},
         {"Tamil Nadu", "Salem", "Rasa.A", "2", " ", "तमिल नाडु", "सलेम", "Rasa.A", " "},
         {"Tamil Nadu", "Salem", "Mohan.P", "4", " ", "तमिल नाडु", "सलेम", "Mohan.P", " "},
         {"Tamil Nadu", "Salem", "Parthiban.S.R", "2", " ", "तमिल नाडु", "सलेम", "Parthiban.SR", " "},

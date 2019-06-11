@@ -415,6 +415,7 @@ public class Madhya_Pradesh {
             {"Madhya Pradesh", "Sidhi", "Gyani Jaiswal", "4", " ", "मध्य प्रदेश", "सीधी", "ज्ञानी जायसवाल", " "},
             {"Madhya Pradesh", "Sidhi", "Nirmala Prajapati", "4", " ", "मध्य प्रदेश", "सीधी", "निर्मला प्रजापति", " "},
             {"Madhya Pradesh", "Sidhi", "Ramkumar Jaysval", "3", " ", "मध्य प्रदेश", "सीधी", "रामकुमार जैसवाल", " "},
+            { "Madhya Pradesh", "Sidhi", "Riti Pathak", "1",  " ","मध्य प्रदेश",  "सीधी", "रीती पाठक", " "},
             {"Madhya Pradesh", "Tikamgarh", "Virendra Kumar", "1", " ", "मध्य प्रदेश", "टीकमगढ़", "वीरेन्द्र कुमार", " "},
             {"Madhya Pradesh", "Tikamgarh", "Ahirwar Shripat Shikshak", "4", " ", "मध्य प्रदेश", "टीकमगढ़", "अहिरवार श्रीपत शिक्षा", " "},
             {"Madhya Pradesh", "Tikamgarh", "Suresh Kumar Kori", "4", " ", "मध्य प्रदेश", "टीकमगढ़", "सुरेश कुमार कोरी", " "},
