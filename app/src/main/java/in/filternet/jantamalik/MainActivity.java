@@ -106,6 +106,22 @@ public class MainActivity extends AppCompatActivity {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPref.edit();
 
+        if (BuildConfig.RELEASE_MODE) { // To avoid developers screen recordings
+            //UXCam.startWithKey(""); // uxcam SDK. This activity is entry activity
+        }
+
+        String user_select_language = mSharedPref.getString(sUSER_SELECT_LANGUAGE, null);
+        if (user_select_language == null) {
+            choose_language();
+            return;
+        }
+
+        if(user_select_language.equals("Hindi")) {
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
+        } else {
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
+        }
+
         mLanguage = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null); // first launch
         if (mLanguage == null){
             mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
@@ -117,15 +133,6 @@ public class MainActivity extends AppCompatActivity {
             FirebaseLogger.send(this, "App_Lang_Hindi");
         }
 
-        if (BuildConfig.RELEASE_MODE) { // To avoid developers screen recordings
-            //UXCam.startWithKey(""); // uxcam SDK. This activity is entry activity
-        }
-
-        String user_select_language = mSharedPref.getString(sUSER_SELECT_LANGUAGE, null);
-        if (user_select_language == null) {
-            choose_language();
-            return;
-        }
         setContentView(R.layout.activity_main);
 
         tabLayout = findViewById(R.id.tabs);
