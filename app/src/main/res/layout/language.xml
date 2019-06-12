@@ -75,6 +75,8 @@
             android:layout_marginBottom="10dp"
             android:layout_centerHorizontal="true"
             android:text="हिन्दी"
+            android:textSize="30dp"
+            android:textStyle="bold"
             android:onClick="onclick_select_language"
             android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/home_button"
