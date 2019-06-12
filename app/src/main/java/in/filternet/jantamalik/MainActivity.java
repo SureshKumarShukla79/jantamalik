@@ -116,21 +116,23 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if (user_select_language.equals("English")) {
-            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
-        } else { // All others will default to Hindi till we get translators.
-            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
-        }
-
         mLanguage = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null); // first launch
         if (mLanguage == null){
-            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
-            mLanguage = sLANGUAGE_HINDI; // default - Hindi 58 crore. English 2 crore.
+            if (user_select_language.equals("English")) {
+                mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
+                mLanguage = sLANGUAGE_ENGLISH;
+            } else { // All others will default to Hindi till we get translators.
+                mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
+                mLanguage = sLANGUAGE_HINDI;
+            }
         }
 
         if(mLanguage.equals(sLANGUAGE_HINDI)) {
             setUI_Lang(this, "hi");
             FirebaseLogger.send(this, "App_Lang_Hindi");
+        } else {
+            setUI_Lang(this, "en");
+            FirebaseLogger.send(this, "App_Lang_Eng");
         }
 
         setContentView(R.layout.activity_main);
