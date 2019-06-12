@@ -116,10 +116,10 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        if(user_select_language.equals("Hindi")) {
-            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
-        } else {
+        if (user_select_language.equals("English")) {
             mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
+        } else { // All others will default to Hindi till we get translators.
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
         }
 
         mLanguage = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null); // first launch
