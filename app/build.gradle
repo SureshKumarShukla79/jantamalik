@@ -18,8 +18,8 @@ android {
         versionName "devel"
 
         // Production
-        //versionCode 190612
-        //versionName "19.06.12"
+        //versionCode 190613
+        //versionName "19.06.13"
     }
     buildTypes {
         release {
