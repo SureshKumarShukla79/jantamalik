@@ -48,6 +48,7 @@ public class IssueFragment extends Fragment {
             }
         });
 
+        issue_inflation();
         issue_employment();
         issue_media();
         issue_mp_no_response();
@@ -75,9 +76,9 @@ public class IssueFragment extends Fragment {
     }
 
     private void issue_employment() {
-        LinearLayout media_or_afeem_layout = view.findViewById(R.id.employment_layout);
+        LinearLayout employment_layout = view.findViewById(R.id.employment_layout);
 
-        media_or_afeem_layout.setOnClickListener(new View.OnClickListener() {
+        employment_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String event_name = "Issue_Employment";
@@ -503,6 +504,29 @@ public class IssueFragment extends Fragment {
 
                 int layout_id = R.layout.issue_cleanliness;
                 int title_id = R.string.cleanliness;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
+                intent.putExtra("issues", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_inflation() {
+        //http://gstcouncil.gov.in/sites/default/files/NOTIFICATION%20PDF/goods-rates-booklet-03July2017.pdf
+        LinearLayout clean_layout = view.findViewById(R.id.inflation_layout);
+
+        clean_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String event_name = "Issue_Inflation";
+                FirebaseLogger.send(getContext(), event_name);
+
+                int layout_id = R.layout.issue_inflation;
+                int title_id = R.string.inflation;
 
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);

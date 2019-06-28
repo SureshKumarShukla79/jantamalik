@@ -21,6 +21,8 @@ public class Language extends AppCompatActivity {
         mEditor = mSharedPref.edit();
 
         setContentView(R.layout.language);
+
+        FirebaseLogger.send(this, "Language");
     }
 
     public void onclick_select_language(View view) {

@@ -244,6 +244,7 @@
     <string name="agriculture_subsidy">बीज/उर्वरक के लिए कृषि सब्सिडी</string>
     <string name="public_transport">बेहतर सार्वजनिक परिवहन</string>
     <string name="sewage">सीवर</string>
+    <string name="inflation">महंगाई</string>
 
     <string name="jagran_group">जागरण समूह -
         \nदैनिक जागरण,
@@ -643,4 +644,19 @@
     <string name="parshad_missing">पार्षद की जानकारी जल्द ही जोड़ दी जाएगी</string>
 
     <string name="join_local_whatsapp_group">स्थानीय जनता मालिक ग्रुप से जुड़ें</string>
+
+    <string name="name"><b>वस्तु का नाम</b></string>
+    <string name="gst"><b>\t\tजीएसटी\t\t</b></string>
+    <string name="parle_g">बिस्कुट</string>
+    <string name="petrol">पेट्रोल</string>
+    <string name="lpg">एलपीजी गैस सिलेण्डर</string>
+    <string name="dress">कपडे़</string>
+    <string name="book">किताबें</string>
+    <string name="edible_oil">खाने योग्य तेल</string>
+    <string name="hair_oil">बालों का तेल</string>
+    <string name="icecream">आइसक्रीम</string>
+    <string name="soap">साबुन</string>
+    <string name="toothpaste">टुथपेस्ट</string>
+    <string name="milk">दूध का पैकेट</string>
 </resources>
+

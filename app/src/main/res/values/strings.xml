@@ -244,6 +244,7 @@
     <string name="agriculture_subsidy">Agricultural subsidy for seeds/fertilizers</string>
     <string name="public_transport">Better public transport</string>
     <string name="sewage">Sewage</string>
+    <string name="inflation">Price control</string>
 
     <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
     <string name="jagran_group_links"><a href="https://youtu.be/8_-8SvxvHqA?t=135">Part 1</a>
@@ -636,4 +637,18 @@
     <string name="parshad_missing">Information of Corporator will be added soon</string>
 
     <string name="join_local_whatsapp_group">Join local Janta Malik Group</string>
+
+    <string name="name"><b>Item Name</b></string>
+    <string name="gst"><b>\t\tGST\t\t</b></string>
+    <string name="parle_g">Biscuits</string>
+    <string name="petrol">Petrol</string>
+    <string name="lpg">LPG gas cynlider</string>
+    <string name="dress">Clothes</string>
+    <string name="book">Books</string>
+    <string name="edible_oil">Edible oil</string>
+    <string name="hair_oil">Hair oil</string>
+    <string name="icecream">Ice cream</string>
+    <string name="soap">Soap</string>
+    <string name="toothpaste">Toothpaste</string>
+    <string name="milk">Packet of milk</string>
 </resources>
