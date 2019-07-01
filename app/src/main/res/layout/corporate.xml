@@ -21,14 +21,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/good"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_margin="1dp"
-                    android:textColor="@color/colorAccent"
+                    android:src="@drawable/share"
                     android:onClick="onclick_share_button"
-                    android:background="@drawable/button_styling" />
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="1dp" />
 
                 <Button
                     android:layout_width="wrap_content"
@@ -37,7 +39,8 @@
                     android:layout_margin="1dp"
                     android:textColor="@color/colorAccent"
                     android:onClick="onclick_open_donate"
-                    android:background="@drawable/button_styling" />
+                    android:background="@drawable/button_styling"
+                    android:visibility="gone"/>
             </LinearLayout>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

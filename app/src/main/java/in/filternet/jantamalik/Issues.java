@@ -747,6 +747,8 @@ public class Issues extends AppCompatActivity {
                 switch (bucket[i][j + 2]) {
                     case "1":
                         text.setText(R.string.foreign_funding);
+                        text.setMovementMethod(LinkMovementMethod.getInstance());
+                        text.setLinksClickable(true);
                         break;
                     case "2":
                         text.setText(R.string.criminal_case);
@@ -768,6 +770,8 @@ public class Issues extends AppCompatActivity {
                 }
 
                 make_text_attractive(text, R.drawable.table_border_red);
+                text.setLinkTextColor(Color.BLUE);
+
                 row.addView(text);
             }
             ui_red_table.addView(row);

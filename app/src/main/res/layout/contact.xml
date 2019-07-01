@@ -34,14 +34,41 @@
         android:textColor="@color/black"
         android:text="@string/mail_to_us"/>
 
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_below="@+id/message"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/blue"
+        android:text="@string/website"
+        android:onClick="onclick_open_website"/>
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/screen_margin"
+        android:layout_marginEnd="@dimen/screen_margin"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/website"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/blue"
+        android:text="@string/phone_number"
+        android:onClick="onclick_call_us"/>
+
     <android.support.v7.widget.CardView
         android:id="@+id/add_or_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/screen_margin"
         android:layout_marginEnd="@dimen/screen_margin"
-        android:layout_below="@+id/message"
-        android:layout_marginTop="15dp"
+        android:layout_below="@+id/phone_number"
+        android:layout_marginTop="10dp"
         app:cardBackgroundColor="#dcdcdc">
 
         <RelativeLayout
@@ -131,7 +158,8 @@
         android:layout_marginEnd="@dimen/screen_margin"
         android:layout_below="@+id/add_or_update"
         android:layout_marginTop="15dp"
-        app:cardBackgroundColor="#dcdcdc">
+        app:cardBackgroundColor="#dcdcdc"
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -205,6 +233,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/open_source"
+                android:gravity="center"
                 android:text="@string/team_list"
                 android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceMedium" />

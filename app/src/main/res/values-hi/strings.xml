@@ -1,8 +1,20 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
 
-    <string name="team_list">श्रेय :
-        \nएसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स(ADR), मोनिका बोस, सोनल शुक्ल, फैजान मुस्तफा, निशंक त्रिपाठी, प्रत्यूश आनंद, रवीश कुमार, सिद्धेश शाह, शिवम राजदेव, शरद सेठ, सुरेश शुक्ल, विकास गुप्ता, विवेक सेठ</string>
+    <string name="team_list"><u>श्रेय</u> :
+        \nएसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स(ADR)
+        \nमोनिका बोस
+        \nसोनल शुक्ल
+        \nफैजान मुस्तफा
+        \nनिशंक त्रिपाठी
+        \nप्रत्यूश आनंद
+        \nरवीश कुमार
+        \nसिद्धेश शाह
+        \nशिवम राजदेव
+        \nशरद सेठ
+        \nसुरेश शुक्ल
+        \nविकास गुप्ता
+        \nविवेक सेठ</string>
 
     <string name="kendra"><b>केन्द्र</b></string>
     <string name="rajya"><b>राज्य</b></string>
@@ -578,10 +590,10 @@
         \nअच्छा सांसद तो अच्छी सरकार</string>
     <string name="adr_source">उम्मीदवार की जानकारी का स्रोत : <a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
     <string name="know_more">अधिक जानें ></string>
-    <string name="foreign_funding">पार्टी गैरकानूनी विदेशी चंदे की दोषी है</string>
+    <string name="foreign_funding"><a href="https://www.filternet.in/economic-freedom-of-india/">पार्टी गैरकानूनी विदेशी चंदे की दोषी है</a></string>
     <string name="criminal_case">गंभीर आपराधिक मामले</string>
-    <string name="aged">उम्र ज्यादा</string>
-    <string name="not_graduate">स्नातक नहीं है</string>
+    <string name="aged">65 से ज्यादा उम्र</string>
+    <string name="not_graduate">ग्रेजुएट नहीं है</string>
 
     <string name="share_puzzle">मैं एक *जागरूक वोटर* हुँ और आप?
         \nखेलिए वोटर जागरूकता पहेली और बनिए जागरूक वोटर।
@@ -658,5 +670,7 @@
     <string name="soap">साबुन</string>
     <string name="toothpaste">टुथपेस्ट</string>
     <string name="milk">दूध का पैकेट</string>
+    <string name="website"><u>www.filternet.in</u></string>
+    <string name="phone_number">+91-7570000787</string>
 </resources>
 

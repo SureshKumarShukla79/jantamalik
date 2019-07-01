@@ -233,4 +233,23 @@ public class Contact extends AppCompatActivity {
         }
         return false;
     }
+
+    public void onclick_call_us(View view) {
+        Uri number = Uri.parse("tel:" + getString(R.string.phone_number));
+        Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
+        FirebaseLogger.send(this, "Tap_Call_Us");
+
+        try { // Calling not available on Tablet devices
+            startActivity(callIntent);
+        } catch (Exception exception){
+            Toast.makeText(this, "Unable to CALL", Toast.LENGTH_LONG).show();
+            exception.printStackTrace();
+        }
+    }
+
+    public void onclick_open_website(View view) {
+        FirebaseLogger.send(this, "Tap_Open_Website");
+
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://filternet.in")));
+    }
 }

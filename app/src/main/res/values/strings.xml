@@ -1,8 +1,20 @@
 <resources>
     <string name="app_name">Janta Malik</string>
 
-    <string name="team_list">Credits :
-        \nAssociation for Democratic Reforms(ADR), Monika Bose, Sonal Shukla, Faizan Mustafa, Nishank Tripathi, Pratyush Anand, Ravish Kumar, Siddhesh Shah, Shivam Rajdev, Sharad Seth, Suresh Shukla, Vikas Gupta, Vivek Seth</string>
+    <string name="team_list"><u>Credits</u> :
+        \nAssociation for Democratic Reforms(ADR)
+        \nMonika Bose
+        \nSonal Shukla
+        \nFaizan Mustafa
+        \nNishank Tripathi
+        \nPratyush Anand
+        \nRavish Kumar
+        \nSiddhesh Shah
+        \nShivam Rajdev
+        \nSharad Seth
+        \nSuresh Shukla
+        \nVikas Gupta
+        \nVivek Seth</string>
 
     <string name="kendra"><b>Center</b></string>
     <string name="rajya"><b>State</b></string>
@@ -570,9 +582,9 @@
         \nGood MPs for Good governance</string>
     <string name="adr_source">Source of candidate information : <a href="https://adrindia.org">Association for Democratic Reforms</a></string>
     <string name="know_more">Know more ></string>
-    <string name="foreign_funding">Party is guilty of illegal foreign funding</string>
+    <string name="foreign_funding"><a href="https://www.filternet.in/2019-battle-for-economic-freedom-of-india/">Party is guilty of illegal foreign funding</a></string>
     <string name="criminal_case">Serious crimes</string>
-    <string name="aged">Over aged</string>
+    <string name="aged">Above 65 years</string>
     <string name="not_graduate">Not graduate</string>
 
     <string name="share_puzzle">I am a *Smart Voter* and you?
@@ -651,4 +663,6 @@
     <string name="soap">Soap</string>
     <string name="toothpaste">Toothpaste</string>
     <string name="milk">Packet of milk</string>
+    <string name="website"><u>www.filternet.in</u></string>
+    <string name="phone_number">+91-7570000787</string>
 </resources>
