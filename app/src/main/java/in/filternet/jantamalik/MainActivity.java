@@ -266,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
 
                     positive.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                     positive.setTypeface(positive.getTypeface(), Typeface.BOLD);
-                    negative.setTextColor(getResources().getColor(R.color.red));
+                    negative.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                     negative.setTypeface(positive.getTypeface(), Typeface.BOLD);
                 }
             });
