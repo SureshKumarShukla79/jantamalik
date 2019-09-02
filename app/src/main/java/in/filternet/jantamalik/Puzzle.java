@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,7 +25,7 @@ public class Puzzle extends Activity {
 
     public final static String bQUE_ = "Que_";
 
-    TextView ui_question, ui_question_no;
+    TextView ui_question, ui_question_no, ui_detail;
     ImageView ui_correct_answer, ui_wrong_answer;
     Button ui_next, ui_skip;
     RadioGroup ui_option_group;
@@ -66,6 +67,7 @@ public class Puzzle extends Activity {
         ui_wrong_answer = findViewById(R.id.wrong);
         ui_next = findViewById(R.id.next);
         ui_skip = findViewById(R.id.skip);
+        ui_detail = findViewById(R.id.detail);
 
         update_question();
         FirebaseLogger.send(this, "Quiz");
@@ -84,7 +86,7 @@ public class Puzzle extends Activity {
         ui_question_no.setText(String.valueOf(++number));
 
         if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            ui_question.setText(Puzzle_Ques.questions[question_num][5]);
+            ui_question.setText(Puzzle_Ques.questions[question_num][6]);
         } else {
             ui_question.setText(Puzzle_Ques.questions[question_num][0]);
         }
@@ -99,7 +101,7 @@ public class Puzzle extends Activity {
         //Choose random radio button and place right/wrong options on it
         int index = get_index(option.size());
         if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][6]);  //Place right answer on that index
+            option.get(index).setText(Puzzle_Ques.questions[question_num][7]);  //Place right answer on that index
         } else {
             option.get(index).setText(Puzzle_Ques.questions[question_num][1]);  //Place right answer on that index
         }
@@ -108,7 +110,7 @@ public class Puzzle extends Activity {
 
         index = get_index(option.size());
         if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][7]);
+            option.get(index).setText(Puzzle_Ques.questions[question_num][8]);
         } else {
             option.get(index).setText(Puzzle_Ques.questions[question_num][2]);
         }
@@ -116,7 +118,7 @@ public class Puzzle extends Activity {
 
         index = get_index(option.size());
         if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][8]);
+            option.get(index).setText(Puzzle_Ques.questions[question_num][9]);
         } else {
             option.get(index).setText(Puzzle_Ques.questions[question_num][3]);
         }
@@ -124,7 +126,7 @@ public class Puzzle extends Activity {
 
         index = get_index(option.size());
         if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][9]);
+            option.get(index).setText(Puzzle_Ques.questions[question_num][10]);
         } else {
             option.get(index).setText(Puzzle_Ques.questions[question_num][4]);
         }
@@ -227,9 +229,11 @@ public class Puzzle extends Activity {
     public void onclick_check_answer(View view) {
         String correct_answer;
         if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            correct_answer = Puzzle_Ques.questions[question_num][6];
+            correct_answer = Puzzle_Ques.questions[question_num][7];
+            ui_detail.setText(Puzzle_Ques.questions[question_num][11]);
         } else {
             correct_answer = Puzzle_Ques.questions[question_num][1];
+            ui_detail.setText(Puzzle_Ques.questions[question_num][5]);
         }
 
         FirebaseLogger.send(this, "Q" + question_num);
@@ -307,6 +311,7 @@ public class Puzzle extends Activity {
 
         mEditor.commit();
 
+        ui_detail.setVisibility(View.VISIBLE);
         show_correct_answer(correct_answer);
         enable_radio(false);
     }
@@ -341,6 +346,7 @@ public class Puzzle extends Activity {
     private void reset_radio_buttons() {
         ui_correct_answer.setVisibility(View.INVISIBLE);
         ui_wrong_answer.setVisibility(View.INVISIBLE);
+        ui_detail.setVisibility(View.INVISIBLE);
 
         ui_option_group.clearCheck();
 
