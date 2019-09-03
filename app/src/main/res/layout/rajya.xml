@@ -202,13 +202,13 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/colorPrimary"
                             android:text="@string/Vote" />
                         <TextView
                             android:id="@+id/vote2"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/recyclerview_item_click_effect"
                             android:text="@string/MLA"
