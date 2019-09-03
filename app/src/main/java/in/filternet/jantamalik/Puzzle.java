@@ -8,7 +8,6 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -239,11 +238,15 @@ public class Puzzle extends Activity {
         FirebaseLogger.send(this, "Q" + question_num);
 
         boolean checked =  ((RadioButton) view).isChecked();
+
+        // IMP - On Android 9 Samsung (Monika) phone, options had a trailing space. This made
+        // length 4 and it didn't match Hindi(Yes). Very odd but that what happened. So instead of equals using contains.
+        // Same in display function below.
         switch (view.getId()) {
             case R.id.radio_1:
                 if(checked) {
                     String option = ui_option_1.getText().toString();
-                    if(option.equals(correct_answer)) {
+                    if (option.contains(correct_answer)) {
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
                         FirebaseLogger.send(this, "A" + question_num);
@@ -260,7 +263,7 @@ public class Puzzle extends Activity {
             case R.id.radio_2:
                 if(checked) {
                     String option = ui_option_2.getText().toString();
-                    if(option.equals(correct_answer)) {
+                    if (option.contains(correct_answer)) {
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
                         FirebaseLogger.send(this, "A" + question_num);
@@ -277,7 +280,7 @@ public class Puzzle extends Activity {
             case R.id.radio_3:
                 if(checked) {
                     String option = ui_option_3.getText().toString();
-                    if(option.equals(correct_answer)) {
+                    if (option.contains(correct_answer)) {
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
                         FirebaseLogger.send(this, "A" + question_num);
@@ -294,7 +297,7 @@ public class Puzzle extends Activity {
             case R.id.radio_4:
                 if(checked) {
                     String option = ui_option_4.getText().toString();
-                    if(option.equals(correct_answer)) {
+                    if (option.contains(correct_answer)) {
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
                         FirebaseLogger.send(this, "A" + question_num);
@@ -322,22 +325,23 @@ public class Puzzle extends Activity {
         String option3 = ui_option_3.getText().toString();
         String option4 = ui_option_4.getText().toString();
 
-        if(option1.equals(answer)) {
+        // See contains explanation above. Bugfix.
+        if (option1.contains(answer)) {
             ui_option_1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             ui_option_1.setTextColor(getResources().getColor(R.color.white));
         }
 
-        if(option2.equals(answer)) {
+        if (option2.contains(answer)) {
             ui_option_2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             ui_option_2.setTextColor(getResources().getColor(R.color.white));
         }
 
-        if(option3.equals(answer)) {
+        if (option3.contains(answer)) {
             ui_option_3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             ui_option_3.setTextColor(getResources().getColor(R.color.white));
         }
 
-        if(option4.equals(answer)) {
+        if (option4.contains(answer)) {
             ui_option_4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             ui_option_4.setTextColor(getResources().getColor(R.color.white));
         }
