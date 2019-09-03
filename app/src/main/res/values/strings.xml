@@ -72,7 +72,11 @@
     <string name="update_contact_info">Update Information. Your name will appear in contributors.</string>
     <string name="feedback">Feedback</string>
 
-    <string name="share_message">Janta Malik app,\n- Know contact information of your MP/MLA\n- See where govt is spending tax-money?\n\n<b>Whom to choose in 2019? Who will make govt?</b>\n</string>
+    <string name="share_message">Everyone loves discount 😀
+        \n\n Discounts are 2-steps away
+        \n1 Install Janta Malik App
+        \n2 Follow the tip given in app
+        \n</string>
 
     <string name="state_text">State</string>
     <string name="constitunecy_text">Area</string>
@@ -256,7 +260,7 @@
     <string name="agriculture_subsidy">Agricultural subsidy for seeds/fertilizers</string>
     <string name="public_transport">Better public transport</string>
     <string name="sewage">Sewage</string>
-    <string name="inflation">Price control</string>
+    <string name="inflation">Discount</string>
 
     <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
     <string name="jagran_group_links"><a href="https://youtu.be/8_-8SvxvHqA?t=135">Part 1</a>
@@ -667,4 +671,9 @@
     <string name="milk">Packet of milk</string>
     <string name="website"><u>www.filternet.in</u></string>
     <string name="phone_number">+91-7570000787</string>
+
+    <string name="gst_tax">Tax rates are governed by the GST Council which consists of centre and all the states.
+        \n<b>India has highest GST rate.</b>
+        \nSingapore has only 7% GST
+        \n\nContact your MP/MLA to reduce GST rates.</string>
 </resources>

@@ -50,6 +50,7 @@
                 android:src="@drawable/grocery_store" />
 
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/voter"
                 android:layout_margin="8dp"
                 android:padding="1dp"
@@ -75,6 +76,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/neta"
                 android:layout_width="match_parent"
                 android:layout_margin="8dp"
@@ -119,7 +121,7 @@
                     android:layout_marginLeft="@dimen/issue_text_left_margin"
                     android:layout_marginStart="@dimen/issue_text_left_margin"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/tax_under_research"
+                    android:text="@string/gst_tax"
                     android:textColor="@color/black" />
             </LinearLayout>
 

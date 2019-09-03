@@ -75,6 +75,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/neta"
                 android:layout_width="match_parent"
                 android:layout_margin="8dp"
@@ -99,6 +100,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:id="@+id/parliament_house"
                 android:layout_width="match_parent"
                 android:layout_margin="8dp"

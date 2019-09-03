@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String sUSER_SELECT_LANGUAGE = "User_Select_Language";
 
     public static final String TAB_NUMBER = "tab_number";
-    public static final int TAB_ISSUE = 0, TAB_KENDRA = 1, TAB_RAJYA = 2, TAB_CORPORATION = 3;
+    public static final int TAB_ISSUE = 0, TAB_KENDRA = 1, TAB_RAJYA = 2;
 
     public static final String DEFAULT_STATE = "Uttar Pradesh";
     public static final String DEFAULT_MP = "Varanasi";

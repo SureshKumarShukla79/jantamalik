@@ -1,26 +1,17 @@
 package in.filternet.jantamalik.Corporation;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
-import java.util.List;
-
-import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.FirebaseLogger;
-import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
-import static in.filternet.jantamalik.MainActivity.TAB_CORPORATION;
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
 public class CorporationFragment extends android.support.v4.app.Fragment {
