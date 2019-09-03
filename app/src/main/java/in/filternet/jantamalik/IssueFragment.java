@@ -2,19 +2,17 @@ package in.filternet.jantamalik;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
-import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 
@@ -62,7 +60,7 @@ public class IssueFragment extends Fragment {
         issue_agriculture_loan();
         issue_price_realization();
         issue_agriculture_subsidy();
-        issue_mla_no_response();
+
         issue_electricity();
         issue_police();
         issue_road();
@@ -284,28 +282,6 @@ public class IssueFragment extends Fragment {
 
                 int layout_id = R.layout.issue_traffic;
                 int title_id = R.string.traffic;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("title", event_name);
-                intent.putExtra("issues", true);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_mla_no_response() {
-        LinearLayout mla_no_response_layout = view.findViewById(R.id.mla_no_response_layout);
-
-        mla_no_response_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String event_name = "Issue_MLA_No_Response";
-                FirebaseLogger.send(getContext(), event_name);
-
-                int layout_id = R.layout.issue_mla_no_response;
-                int title_id = R.string.mla_no_response;
 
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);

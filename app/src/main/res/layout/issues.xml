@@ -143,6 +143,65 @@
         android:layout_margin="3dp">
 
         <LinearLayout
+            android:id="@+id/mp_no_response_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:backgroundTint="@color/light_green"
+            android:background="@drawable/recyclerview_item_click_effect">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/issue_pic_left_margin"
+                android:src="@drawable/protest" />
+
+            <TextView
+                android:background="@color/light_green"
+                android:id="@+id/issue_mp_no_response"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/mp_no_response"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/light_green">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:backgroundTint="@color/light_green"
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:src="@drawable/right_black_arrow_24dp" />
+
+                <TextView
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/light_green"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
             android:id="@+id/hospital_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -666,65 +725,6 @@
         android:layout_margin="3dp">
 
         <LinearLayout
-            android:id="@+id/mp_no_response_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:backgroundTint="@color/light_green"
-            android:background="@drawable/recyclerview_item_click_effect">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/issue_pic_left_margin"
-                android:src="@drawable/mp_no_response" />
-
-            <TextView
-                android:background="@color/light_green"
-                android:id="@+id/issue_mp_no_response"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/mp_no_response"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/light_green">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:backgroundTint="@color/light_green"
-                    android:background="@drawable/recyclerview_item_click_effect"
-                    android:src="@drawable/right_black_arrow_24dp" />
-
-                <TextView
-                    android:background="@drawable/recyclerview_item_click_effect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mp"
-                    android:textColor="@color/black"
-                    android:backgroundTint="@color/light_green"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
             android:id="@+id/media_or_afeem_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -949,65 +949,6 @@
                     android:text="@string/mp"
                     android:textColor="@color/black"
                     android:backgroundTint="@color/light_green"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-            </LinearLayout>
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
-
-        <LinearLayout
-            android:id="@+id/mla_no_response_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:backgroundTint="@color/light_pink"
-            android:background="@drawable/recyclerview_item_click_effect">
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="@dimen/issue_pic_left_margin"
-                android:layout_gravity="center"
-                android:src="@drawable/mp_no_response" />
-
-            <TextView
-                android:background="@color/light_pink"
-                android:id="@+id/issue_mla_no_response"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:padding="10dp"
-                android:layout_weight="1.0"
-                android:text="@string/mla_no_response"
-                android:textColor="@color/black"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@color/light_pink">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:backgroundTint="@color/light_pink"
-                    android:background="@drawable/recyclerview_item_click_effect"
-                    android:src="@drawable/right_black_arrow_24dp" />
-
-                <TextView
-                    android:background="@drawable/recyclerview_item_click_effect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/mla"
-                    android:textColor="@color/black"
-                    android:backgroundTint="@color/light_pink"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
             </LinearLayout>
         </LinearLayout>

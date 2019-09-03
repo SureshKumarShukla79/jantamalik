@@ -47,7 +47,7 @@
                 android:layout_gravity="center"
                 android:background="@color/colorPrimaryDark"
                 android:padding="1dp"
-                android:src="@drawable/mp_no_response" />
+                android:src="@drawable/protest" />
 
             <LinearLayout
                 android:id="@+id/voter"
@@ -133,7 +133,8 @@
                 android:padding="8dp"
                 android:background="@drawable/contact_button"
                 android:onClick="onclick_my_MP_screen"
-                android:textAppearance="?android:attr/textAppearanceLarge"/>
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:visibility="gone" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

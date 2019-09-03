@@ -236,8 +236,8 @@
     <string name="very_good">Donate</string>
 
     <string name="media_or_afeem">Media or Afeem ?</string>
-    <string name="mp_no_response">MP doesn\'t respond</string>
-    <string name="mla_no_response">MLA doesn\'t respond</string>
+    <string name="mp_no_response">Where to protest?</string>
+
     <string name="cleanliness">Cleanliness</string>
     <string name="poor_road">Poor Road</string>
     <string name="electricity">Electricity</string>
@@ -397,8 +397,10 @@
     <string name="star_india">Star India</string>
     <string name="paytm">Paytm</string>
 
-    <string name="mp_voter">Call multiple times.\nWrite emails with objective facts and relief needed.
-        \n\nMeet at their home on Sunday 11 am. This gets quick notice and speedy results.</string>
+    <string name="mp_voter">Call the concerned public representative (MP/MLA).
+        \nWrite emails with facts and action required.
+        \nMeet at their home.
+        \n\n<b>If above steps don\'t work, then protest outside MP/MLAs home. This gets quick results.</b></string>
     <string name="mp_neta">During Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
     <string name="mp_parliament">No law to remove irresponsible MP before completing 5 year term.
         \n\nChoose wisely next time.</string>

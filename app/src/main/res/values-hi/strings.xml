@@ -236,8 +236,7 @@
     <string name="very_good">दान दें</string>
 
     <string name="media_or_afeem">मीडिया या अफीम ?</string>
-    <string name="mp_no_response">सांसद मेरी बात नहीं सुनता</string>
-    <string name="mla_no_response">विधायक मेरी बात नहीं सुनता</string>
+    <string name="mp_no_response">धरना कहाँ पर दें?</string>
     <string name="cleanliness">सफाई</string>
     <string name="poor_road">सड़क</string>
     <string name="electricity">बिजली</string>
@@ -355,9 +354,11 @@
     <string name="star_india">स्टार इंडिया</string>
     <string name="paytm">पेटीएम</string>
 
-    <string name="mp_voter">सांसद को फोन करें। तथ्यों के साथ ईमेल करें।
-    \n\nउसके घर पर रविवार सुबह 11 बजे मिलें। यह जल्दी ध्यान खींचता है और जल्दी समाधान भी देता है।</string>
-    <string name="mp_neta">अन्ना आंदोलन या जनलोकपाल आंदोलन के समय भी, घर के सामने आंदोलन करने का सबसे तेज असर पड़ा था।</string>
+    <string name="mp_voter">संबंधित जन-प्रतिनिधि (सांसद या विधायक) को फोन करें।
+        \nतथ्यों के साथ ईमेल करें।
+        \nउसके घर पर मिलें।
+        \n\n<b>अब भी बात न बने तो घर के सामने शांतिपूर्ण तरीके से धरना दें। यह बहुत जल्दी ध्यान खींचता है और जल्दी समाधान भी देता है।</b></string>
+    <string name="mp_neta">अन्ना आंदोलन या जनलोकपाल बिल के समय भी, घर के सामने आंदोलन करने का सबसे तेज असर पड़ा था।</string>
     <string name="mp_parliament">गैर-जिम्मेदार सांसद को 5 साल पूरा होने से पहले हटाने का कोई कानून नहीं है।
         \n\nअगली बार ध्यान से चुनें।</string>
 
