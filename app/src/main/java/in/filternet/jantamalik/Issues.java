@@ -974,7 +974,9 @@ public class Issues extends AppCompatActivity {
     public void onclick_my_MLA_screen(View view) {
         FirebaseLogger.send(this, titleName + "_Contact_MLA");
 
-        Toast.makeText(getApplicationContext(), getText(R.string.mla_missing), Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(view.getContext(), MainActivity.class);
+        intent.putExtra("rajya", true);
+        startActivity(intent);
     }
 
     public void onclick_my_Parshad_screen(View view) {

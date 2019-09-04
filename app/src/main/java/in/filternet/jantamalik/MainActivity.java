@@ -98,10 +98,16 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences.Editor mEditor;
 
     String mLanguage;
+    boolean rajya;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        savedInstanceState = getIntent().getExtras();
+        if(savedInstanceState != null) {
+            rajya = savedInstanceState.getBoolean("rajya");
+        }
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPref.edit();
@@ -202,8 +208,11 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {}
         });
 
-        Intent intent =getIntent();
+        Intent intent = getIntent();
         int num = intent.getIntExtra(TAB_NUMBER, 0);
+        if(rajya) {
+            num = intent.getIntExtra(TAB_NUMBER, TAB_RAJYA);
+        }
         viewPager.setCurrentItem(num);
 
         //As per documentation, Starting with Build.VERSION_CODES.HONEYCOMB, tasks are executed on a single thread to avoid

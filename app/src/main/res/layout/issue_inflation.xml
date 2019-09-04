@@ -420,50 +420,6 @@
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
                         android:padding="1dp"
-                        android:src="@drawable/hair_oil" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="@string/hair_oil"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="18%"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:textColor="@color/black"
-                        android:padding="5dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 6 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@color/colorPrimary"
-                        android:padding="1dp"
                         android:src="@drawable/edible_oil" />
 
                     <TextView
@@ -494,7 +450,7 @@
 
                     <TextView
                         android:gravity="center"
-                        android:text=" 7 "
+                        android:text=" 6 "
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
@@ -538,7 +494,7 @@
 
                     <TextView
                         android:gravity="center"
-                        android:text=" 8 "
+                        android:text=" 7 "
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
@@ -582,7 +538,7 @@
 
                     <TextView
                         android:gravity="center"
-                        android:text=" 9 "
+                        android:text=" 8 "
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
@@ -611,6 +567,50 @@
                     <TextView
                         android:gravity="center"
                         android:text="12%"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:textColor="@color/black"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:gravity="center"
+                        android:text=" 9 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:padding="1dp"
+                        android:src="@drawable/bike" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/motorbike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/table_border_style"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="28%"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
