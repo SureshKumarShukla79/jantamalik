@@ -288,11 +288,11 @@
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
                         android:padding="1dp"
-                        android:src="@drawable/toothpaste" />
+                        android:src="@drawable/soap" />
 
                     <TextView
                         android:gravity="center"
-                        android:text="@string/toothpaste"
+                        android:text="@string/soap"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
@@ -332,138 +332,6 @@
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
                         android:padding="1dp"
-                        android:src="@drawable/soap" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="@string/soap"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="18%"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:textColor="@color/black"
-                        android:padding="5dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 4 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@color/colorPrimary"
-                        android:padding="1dp"
-                        android:src="@drawable/icecream" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="@string/icecream"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="18%"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:textColor="@color/black"
-                        android:padding="5dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 5 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@color/colorPrimary"
-                        android:padding="1dp"
-                        android:src="@drawable/edible_oil" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="@string/edible_oil"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="5%"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/black" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 6 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@color/colorPrimary"
-                        android:padding="1dp"
                         android:src="@drawable/lpg" />
 
                     <TextView
@@ -488,48 +356,48 @@
                 </TableRow>
 
                 <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
 
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 7 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:gravity="center"
+                    android:text=" 4 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@color/colorPrimary"
-                        android:padding="1dp"
-                        android:src="@drawable/education" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:padding="1dp"
+                    android:src="@drawable/lipstick" />
 
-                    <TextView
-                        android:gravity="center"
-                        android:text="@string/book"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                <TextView
+                    android:gravity="center"
+                    android:text="@string/makeup_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                    <TextView
-                        android:gravity="center"
-                        android:text="12%"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:textColor="@color/black"
-                        android:padding="5dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/table_border_style"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="28%"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+            </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -538,7 +406,7 @@
 
                     <TextView
                         android:gravity="center"
-                        android:text=" 8 "
+                        android:text=" 5 "
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
@@ -582,7 +450,7 @@
 
                     <TextView
                         android:gravity="center"
-                        android:text=" 9 "
+                        android:text=" 6 "
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
@@ -626,7 +494,7 @@
 
                     <TextView
                         android:gravity="center"
-                        android:text=" 10 "
+                        android:text=" 7 "
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
