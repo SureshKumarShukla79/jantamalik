@@ -103,7 +103,7 @@
     <string name="next_version">आप भी दान दें या टीम में जुड़ें और अगले संस्करण में सहायता करें</string>
 
     <string name="tax_note">देश की प्रगति के लिए हम सब कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
-    <string name="tax_total_center"><b>केंद्र सरकार को कुल सालाना टैक्स - चौबीस लाख बयालीस हजार दो सौ तेरह करोड़ रू हम सब मिलकर देते हैं।</b></string>
+    <string name="tax_total_center"><b>केंद्र सरकार को कुल सालाना टैक्स - सत्ताइस लाख छियासी हजार तीन सौ पचास करोड़ रू हम सब मिलकर देते हैं।</b></string>
     <string name="tax_center_details">हमारा टैक्स का पैसा खर्च कहाँ हो रहा है?</string>
     <string name="crore">करोड़</string>
 
@@ -120,7 +120,7 @@
     <string name="tax_administration">टैक्स प्रशासन</string>
     <string name="home_affairs">गृह मंत्रालय</string>
     <string name="education">शिक्षा</string>
-    <string name="others">अन्य</string>
+    <string name="others">अन्य सभी खर्चे</string>
     <string name="subsidy_fertilizer">छूट - उर्वरक</string>
     <string name="agriculture_and_allied">कृषि और संबद्ध
         \nगतिविधि</string>
@@ -162,8 +162,7 @@
     <string name="government_rajya">राज्य सरकार</string>
 
     <string name="contact">संपर्क करें</string>
-    <string name="source_text">सालाना बजट 2018-19 https://www.indiabudget.gov.in/budget2018-2019/ub2018-19/bag/bag6.pdf \n
-        अंतरिम बजट 2019-20 अप्रैल से लागू होगा और अगली सरकार द्वारा बदला जाएगा</string>
+    <string name="source_text">सालाना बजट 2019-20 https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf</string>
     <string name="head">नाम</string>
 
     <string-array name="MP_state_values">
@@ -185,8 +184,8 @@
     <string name="notification_update">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="sunday_msg">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
 
-    <string name="kendra_budget_simple">24 लाख करोड़</string>
-    <string name="kendra_budget">24,42,213 करोड़</string>
+    <string name="kendra_budget_simple">27 लाख करोड़</string>
+    <string name="kendra_budget">27,86,350 करोड़</string>
 
     <string name="rajya_budget">\??? करोड़</string>
 
@@ -681,8 +680,8 @@
     <string name="phone_number">+91-7570000787</string>
 
     <string name="gst_tax">टैक्स की दरें जीएसटी परिषद द्वारा निर्धारित की जाती है। इसमें केंद्र और राज्य दोनों के प्रतिनिधि होते हैं।
-        \n<b>भारत में सबसे ऊँची जीएसटी दरें हैं।</b>
+        \n<b>पूरे विश्व में भारत में ही जीएसटी की दरें सबसे ज्यादा हैं।</b>
         \nसिंगापुर में सिर्फ 7% जीएसटी है।
-        \n\nअपने सांसद/विधायक से कहकर जीएसटी कम करवाएँ।</string>
+        \n\nअपने सांसद और विधायक दोनों से कहकर आज ही जीएसटी कम करवाएँ।</string>
 </resources>
 

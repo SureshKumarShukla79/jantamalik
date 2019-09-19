@@ -102,7 +102,7 @@
     <string name="next_version">You are welcome to donate or join the team for next version</string>
 
     <string name="tax_note">For nation building, we all pay tax in various forms. Tax rates on common items :</string>
-    <string name="tax_total_center"><b>Total tax to central govt - Twenty four lakh forty two thousand two hundred thirteen crores</b></string>
+    <string name="tax_total_center"><b>Total tax to central govt - Twenty seven lakh eighty six thousand three hundred fifty crores</b></string>
     <string name="tax_center_details">Where is our tax money spent?</string>
     <string name="crore">Crore</string>
 
@@ -119,7 +119,7 @@
     <string name="tax_administration">Tax \nAdministration</string>
     <string name="home_affairs">Home Affairs</string>
     <string name="education">Education</string>
-    <string name="others">Others</string>
+    <string name="others">Other expenses</string>
     <string name="subsidy_fertilizer">Subsidy \nfertilizer</string>
     <string name="agriculture_and_allied">Agriculture &amp; \nAllied</string>
     <string name="health">Health</string>
@@ -161,8 +161,7 @@
     <string name="government_rajya">State govt</string>
 
     <string name="contact">Contact us</string>
-    <string name="source_text">Full budget 2018-19 https://www.indiabudget.gov.in/budget2018-2019/ub2018-19/bag/bag6.pdf \n
-        Interim budget 2019-20 is effective from April. It will be revised by next govt</string>
+    <string name="source_text">Budget 2019-20 https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf</string>
     <string name="head">Head</string>
 
     <string-array name="MP_state_values">
@@ -186,8 +185,8 @@
     <string name="sunday_msg">Make the difference. Nation needs you!</string>
     <string name="sunday_msg_hi">अपने अधिकार पहजानें, बेहतर भारत बनाएँ!</string>
 
-    <string name="kendra_budget_simple">24 lakh crore</string>
-    <string name="kendra_budget">24,42,213 crore</string>
+    <string name="kendra_budget_simple">27 lakh crore</string>
+    <string name="kendra_budget">27,86,350 crore</string>
     <string name="rajya_budget">\??? crore</string>
 
     <string name="list_source_MP">MP makes laws in following areas
@@ -624,7 +623,7 @@
     <string name="indian_express">Indian Express</string>
     <string name="jansatta">जनसत्ता</string>
 
-    <string name="choose_your_language">Choose your language</string>
+    <string name="choose_your_language">अपनी भाषा चुनें</string>
     <string name="contact_your_mp">Contact your MP</string>
     <string name="contact_your_mla">Contact your MLA</string>
     <string name="contact_your_parshad">Contact your Corporator</string>
@@ -670,12 +669,12 @@
     <string name="toothpaste">Toothpaste</string>
     <string name="milk">Packet of milk</string>
     <string name="motorbike">Scooty, Motorcycle</string>
-    <string name="makeup_items">Makeup items</string>
+    <string name="makeup_items">Beauty products</string>
     <string name="website"><u>www.filternet.in</u></string>
     <string name="phone_number">+91-7570000787</string>
 
     <string name="gst_tax">Tax rates are governed by the GST Council which consists of centre and all the states.
-        \n<b>India has highest GST rate.</b>
+        \n<b>India has highest GST rates across world.</b>
         \nSingapore has only 7% GST
-        \n\nContact your MP/MLA to reduce GST rates.</string>
+        \n\nContact your MP and MLA, to reduce GST today.</string>
 </resources>
