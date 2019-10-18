@@ -113,7 +113,8 @@
                     android:layout_height="@dimen/small_image"
                     android:layout_gravity="center"
                     android:background="@color/greylight"
-                    android:src="@drawable/note" />
+                    android:src="@drawable/note"
+                    android:visibility="gone" />
                 <TextView
                     android:id="@+id/parliament"
                     android:layout_width="wrap_content"
@@ -142,17 +143,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text=""
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -162,7 +153,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/table_border_style"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -172,9 +163,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/table_border_style"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 </TableRow>
 
                 <TableRow
@@ -182,22 +174,12 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal">
 
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 1 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
-                        android:padding="1dp"
+                        android:padding="@dimen/gst_discount"
                         android:src="@drawable/tax_parleg" />
 
                     <TextView
@@ -206,7 +188,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -218,53 +200,9 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
                         android:textColor="@color/black"
-                        android:padding="5dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:visibility="gone">
-
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 2 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:padding="@dimen/gst_discount"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@color/colorPrimary"
-                        android:padding="1dp"
-                        android:src="@drawable/milk_packet" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="@string/milk"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="18%"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:textColor="@color/black"
-                        android:padding="5dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
                 </TableRow>
 
                 <TableRow
@@ -272,22 +210,12 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal">
 
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 2 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
-                        android:padding="1dp"
+                        android:padding="@dimen/gst_discount"
                         android:src="@drawable/soap" />
 
                     <TextView
@@ -296,7 +224,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -307,52 +235,9 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
                         android:textColor="@color/black"
-                        android:padding="5dp"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
-
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 3 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
+                        android:padding="@dimen/gst_discount"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_gravity="center"
-                        android:background="@color/colorPrimary"
-                        android:padding="1dp"
-                        android:src="@drawable/lpg" />
-
-                    <TextView
-                        android:gravity="center"
-                        android:text="@string/lpg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:text="5%"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@color/black" />
                 </TableRow>
 
                 <TableRow
@@ -360,22 +245,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal">
 
-                <TextView
-                    android:gravity="center"
-                    android:text=" 4 "
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/table_border_style"
-                    android:padding="5dp"
-                    android:textColor="@color/black"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
-                    android:padding="1dp"
+                    android:padding="@dimen/gst_discount"
                     android:src="@drawable/lipstick" />
 
                 <TextView
@@ -384,7 +259,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
-                    android:padding="5dp"
+                    android:padding="@dimen/gst_discount"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -393,10 +268,11 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/table_border_style"
                     android:gravity="center"
-                    android:padding="5dp"
+                    android:padding="@dimen/gst_discount"
                     android:text="28%"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
             </TableRow>
 
                 <TableRow
@@ -404,22 +280,12 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal">
 
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 5 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
-                        android:padding="1dp"
+                        android:padding="@dimen/gst_discount"
                         android:src="@drawable/tax_cloth" />
 
                     <TextView
@@ -428,7 +294,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -439,8 +305,9 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
                         android:textColor="@color/black"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 </TableRow>
 
                 <TableRow
@@ -448,22 +315,12 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal">
 
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 6 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
-                        android:padding="1dp"
+                        android:padding="@dimen/gst_discount"
                         android:src="@drawable/bike" />
 
                     <TextView
@@ -472,7 +329,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -485,6 +342,7 @@
                         android:textColor="@color/black"
                         android:padding="5dp"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 </TableRow>
 
                 <TableRow
@@ -492,22 +350,12 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal">
 
-                    <TextView
-                        android:gravity="center"
-                        android:text=" 7 "
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/table_border_style"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textAppearance="?android:attr/textAppearanceMedium" />
-
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
-                        android:padding="1dp"
+                        android:padding="@dimen/gst_discount"
                         android:src="@drawable/petrol" />
 
                     <TextView
@@ -516,7 +364,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textColor="@color/black"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -527,11 +375,22 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/table_border_style"
                         android:textColor="@color/black"
-                        android:padding="5dp"
+                        android:padding="@dimen/gst_discount"
                         android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 </TableRow>
 
             </TableLayout>
+
+            <TextView
+                android:id="@+id/nudge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
+                android:layout_marginStart="@dimen/issue_text_left_margin"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/nudge"
+                android:textColor="@color/black" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -556,6 +415,16 @@
                 android:onClick="onclick_my_MLA_screen"
                 android:background="@drawable/contact_button"
                 android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+                android:id="@+id/faq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/issue_text_left_margin"
+                android:layout_marginStart="@dimen/issue_text_left_margin"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/gst_faq"
+                android:textColor="@color/black" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

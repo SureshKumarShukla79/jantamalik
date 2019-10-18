@@ -656,7 +656,7 @@
     <string name="join_local_whatsapp_group">Join local Janta Malik Group</string>
 
     <string name="name"><b>Item Name</b></string>
-    <string name="gst"><b>\t\tGST\t\t</b></string>
+    <string name="gst"><b>\tGST\t</b></string>
     <string name="parle_g">Biscuits</string>
     <string name="petrol">Petrol</string>
     <string name="lpg">LPG gas cynlider</string>
@@ -673,8 +673,10 @@
     <string name="website"><u>www.filternet.in</u></string>
     <string name="phone_number">+91-7570000787</string>
 
-    <string name="gst_tax">Tax rates are governed by the GST Council which consists of centre and all the states.
+    <string name="gst_tax">Tax rates are governed by the GST Council which consists of MPs and MLAs.
         \n<b>India has highest GST rates across world.</b>
-        \nSingapore has only 7% GST
-        \n\nContact your MP and MLA, to reduce GST today.</string>
+        </string>
+    <string name="nudge">Singapore has only 7% GST. Ask your MP/MLA to reduce our GST to 7% to get discount rates.</string>
+    <string name="gst_faq">Your MP/MLA may be part of majority. They can influence govt.</string>
+    <string name="discount_nat_7_gst">At 7%</string>
 </resources>

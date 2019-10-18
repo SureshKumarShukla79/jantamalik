@@ -13,4 +13,6 @@
 
     <dimen name="issue_text_left_margin">10dp</dimen>
     <dimen name="issue_pic_left_margin">3dp</dimen>
+
+    <dimen name="gst_discount">2dp</dimen>
 </resources>

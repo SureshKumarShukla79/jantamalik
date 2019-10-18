@@ -662,7 +662,7 @@
     <string name="join_local_whatsapp_group">स्थानीय जनता मालिक ग्रुप से जुड़ें</string>
 
     <string name="name"><b>वस्तु का नाम</b></string>
-    <string name="gst"><b>\t\tजीएसटी\t\t</b></string>
+    <string name="gst"><b>\tजीएसटी\t</b></string>
     <string name="parle_g">बिस्कुट</string>
     <string name="petrol">पेट्रोल</string>
     <string name="lpg">एलपीजी गैस सिलेण्डर</string>
@@ -679,9 +679,11 @@
     <string name="website"><u>www.filternet.in</u></string>
     <string name="phone_number">+91-7570000787</string>
 
-    <string name="gst_tax">टैक्स की दरें जीएसटी परिषद द्वारा निर्धारित की जाती है। इसमें केंद्र और राज्य दोनों के प्रतिनिधि होते हैं।
-        \n<b>पूरे विश्व में भारत में ही जीएसटी की दरें सबसे ज्यादा हैं।</b>
-        \nसिंगापुर में सिर्फ 7% जीएसटी है।
-        \n\nअपने सांसद और विधायक दोनों से कहकर आज ही जीएसटी कम करवाएँ।</string>
+    <string name="gst_tax">टैक्स की दरें जीएसटी परिषद द्वारा निर्धारित की जाती है जिसमें सांसद और विधायक आपके प्रतिनिधि होते हैं।
+        \n<b>पूरे विश्व में सिर्फ भारत में ही जीएसटी की 5 दरें हैं और सबसे महंगी भी हैं।</b>
+        </string>
+    <string name="nudge">\nसिंगापुर में सिर्फ 7% जीएसटी है। अपने सांसद और विधायक से कहकर हमारा जीएसटी रेट 7% करवाएं और भारी छूट पाएं। </string>
+    <string name="gst_faq">आपके सांसद/विधायक बहुमत का हिस्सा हो सकते हैं। वे सरकार से यह मांग कर सकते हैं।</string>
+    <string name="discount_nat_7_gst">7% दर</string>
 </resources>
 
