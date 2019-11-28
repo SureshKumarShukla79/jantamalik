@@ -78,8 +78,8 @@
         \n2 Follow the tip given in app
         \n</string>
 
-    <string name="state_text">State</string>
-    <string name="constitunecy_text">Area</string>
+    <string name="state_text">State:</string>
+    <string name="constitunecy_text">Area:</string>
     <string name="ward_text">Ward</string>
 
     <string name="democracy">How you run the government?</string>
@@ -345,11 +345,16 @@
     <string name="StarIndia_list"><a href="https://youtu.be/MiFeWxIaayQ?t=135">Part 1</a>
     \n\n<a href="https://youtu.be/038ns-e_N5M">Part 2</a></string>
 
-    <string name="terms_and_condition">मुझे इस्तेमाल की शर्ते स्वीकार हैं।
-        \n\nI agree to terms and conditions of usage.
+    <string name="terms_and_condition_en">I agree to terms and conditions of usage.
         \n\nfilternet.in/terms-of-service/</string>
-    <string name="button_yes">हाँ/Yes</string>
-    <string name="button_no">नहीं/No</string>
+    <string name="button_yes_en">Yes</string>
+    <string name="button_no_en">No</string>
+
+    <string name="terms_and_condition_hi">मुझे इस्तेमाल की शर्ते स्वीकार हैं।
+        \n\nfilternet.in/terms-of-service/</string>
+    <string name="button_yes_hi">हाँ</string>
+    <string name="button_no_hi">नहीं</string>
+
     <string name="TheNewIndianExpress">The New Indian Express,
         \nदिनेमानी (तमिल)
         \n\n<b>*</b>\'The New Indian Express\'

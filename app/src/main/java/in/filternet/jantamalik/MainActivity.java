@@ -21,6 +21,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.ViewPager;
@@ -32,12 +33,16 @@ import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -49,6 +54,7 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.regex.Pattern;
 
+import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.MPdata;
 
 public class MainActivity extends AppCompatActivity {
@@ -238,25 +244,39 @@ public class MainActivity extends AppCompatActivity {
         } else {
             TextView message = new TextView(this);
             message.setTextSize((float) 20);
-            message.setHeight(325);
+            message.setHeight(200);
             message.setPadding(30,30,30,0);
             message.setLinkTextColor(Color.BLUE);
             message.setGravity(Gravity.CENTER);
-            SpannableString s = new SpannableString(getText(R.string.terms_and_condition));
+
+            String terms_and_condition = "", button_yes = "", button_no = "";
+            if(mLanguage.equals(sLANGUAGE_ENGLISH)) {
+                terms_and_condition = getResources().getString(R.string.terms_and_condition_en);
+                button_yes = getResources().getString(R.string.button_yes_en);
+                button_no = getResources().getString(R.string.button_no_en);
+            } else {
+                terms_and_condition = getResources().getString(R.string.terms_and_condition_hi);
+                button_yes = getResources().getString(R.string.button_yes_hi);
+                button_no = getResources().getString(R.string.button_no_hi);
+            }
+
+            SpannableString s = new SpannableString(terms_and_condition);
             Linkify.addLinks(s, Linkify.WEB_URLS);
             message.setText(s);
             message.setMovementMethod(LinkMovementMethod.getInstance());
 
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
             builder.setView(message);
-            builder.setPositiveButton(R.string.button_yes, new DialogInterface.OnClickListener() {
+            builder.setPositiveButton(button_yes, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int id) {
                     FirebaseLogger.send(MainActivity.this, "Agree");
                     mEditor.putBoolean(bUSER_AGREE, true).commit();
+
+                    ask_user_preference();
                 }
             });
-            builder.setNegativeButton(R.string.button_no, new DialogInterface.OnClickListener() {
+            builder.setNegativeButton(button_no, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int id) {
                     FirebaseLogger.send(MainActivity.this, "Not_Agree");
@@ -283,6 +303,103 @@ public class MainActivity extends AppCompatActivity {
             dialog.setCancelable(false);
             dialog.show();
         }
+    }
+
+    private void ask_user_preference() {
+        LayoutInflater inflater = getLayoutInflater();
+        View ui_preference_layout = inflater.inflate(R.layout.user_preference, null);
+        final Spinner ui_state_spinner = ui_preference_layout.findViewById(R.id.state_spinner);
+        final Spinner ui_constituency_spinner = ui_preference_layout.findViewById(R.id.constituency_spinner);
+        final FloatingActionButton ui_done = ui_preference_layout.findViewById(R.id.done);
+
+        final String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        Log.e(TAG, "State: " + state);
+        String constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+        Log.e(TAG, "Constituency: " + constituency);
+
+        final DataFilter data_filter = new DataFilter();
+
+        //populating state
+        ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, data_filter.getStates(mLanguage));
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ui_state_spinner.setAdapter(adapter);
+        int position = adapter.getPosition(state);
+        ui_state_spinner.setSelection(position);
+
+        //populating constituency
+        adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, data_filter.getMPAreas(mLanguage, state));
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ui_constituency_spinner.setAdapter(adapter);
+
+        position = adapter.getPosition(constituency);
+        ui_constituency_spinner.setSelection(position);
+
+        ui_state_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected_state = ui_state_spinner.getItemAtPosition(ui_state_spinner.getSelectedItemPosition()).toString();
+                //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
+                mEditor.putString(MainActivity.sSTATE, selected_state).commit();
+
+                // Reload the state MP areas
+                ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, data_filter.getMPAreas(mLanguage, selected_state));
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ui_constituency_spinner.setAdapter(adapter);
+
+                String selected_constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+                int spinnerPosition = adapter.getPosition(selected_constituency);
+                ui_constituency_spinner.setSelection(spinnerPosition);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
+        //spinner constituency click handler
+        ui_constituency_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected_constituency = adapterView.getItemAtPosition(i).toString();
+                //Log.e(TAG, "spin MP : " + i + " " + l + " " + MPArea);
+                mEditor.putString(MainActivity.sMP_AREA, selected_constituency).commit();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setView(ui_preference_layout);
+        alert.setCancelable(false);
+        final AlertDialog dialog = alert.create();
+
+        ui_done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Send selected entries (state & constituency) to Firebase
+                String selected_state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                    selected_state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                }
+                selected_state = selected_state.replace(" ", "_");
+                selected_state = selected_state.replace("&", "and");
+                FirebaseLogger.send(getBaseContext(), selected_state);
+
+                String selected_constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                    selected_constituency = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                }
+                selected_constituency = selected_constituency.replace(" ", "_");
+                selected_constituency = selected_constituency.replace("&", "and");
+                FirebaseLogger.send(getBaseContext(), selected_constituency);
+
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
     public void onclick_puzzle(View view) {

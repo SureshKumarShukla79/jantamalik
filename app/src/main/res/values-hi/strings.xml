@@ -79,8 +79,8 @@
         \n2 ऐप में दिया तरीका अपनाना होगा
         \n</string>
 
-    <string name="state_text">राज्य</string>
-    <string name="constitunecy_text">क्षेत्र</string>
+    <string name="state_text">राज्य:</string>
+    <string name="constitunecy_text">क्षेत्र:</string>
     <string name="ward_text">वार्ड</string>
 
     <string name="democracy">आप सरकार कैसे चलाते हैं?</string>
@@ -269,11 +269,15 @@
 
     <string name="media_income">बिके हुए मीडिया जो - कालाधन लेते है या पैसे लेकर झूठी खबरें छापते हैं। अपने अखबार और टीवी चैनल का स्टिंग आपरेशन जाँच लें :</string>
 
-    <string name="terms_and_condition">मुझे इस्तेमाल की शर्ते स्वीकार हैं।
-        \n\nI agree to terms and conditions of usage.
+    <string name="terms_and_condition_en">I agree to terms and conditions of usage.
         \n\nfilternet.in/terms-of-service/</string>
-    <string name="button_yes">हाँ/Yes</string>
-    <string name="button_no">नहीं/No</string>
+    <string name="button_yes_en">Yes</string>
+    <string name="button_no_en">No</string>
+
+    <string name="terms_and_condition_hi">मुझे इस्तेमाल की शर्ते स्वीकार हैं।
+        \n\nfilternet.in/terms-of-service/</string>
+    <string name="button_yes_hi">हाँ</string>
+    <string name="button_no_hi">नहीं</string>
 
     <string name="TheNewIndianExpress">द न्यू इंडियन एक्सप्रेस,
         \nदिनेमानी (तमिल)
