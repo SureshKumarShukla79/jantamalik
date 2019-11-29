@@ -8,6 +8,16 @@
     android:background="@drawable/table_border_style"
     android:padding="@dimen/issue_text_left_margin">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_state_and_constituency"
+        android:layout_gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"/>
+
     <LinearLayout
         android:id="@+id/state"
         android:layout_width="match_parent"
@@ -40,7 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:padding="5dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
         <TextView
             android:id="@+id/constituency_text"
             android:layout_width="wrap_content"
@@ -70,6 +81,7 @@
         android:focusable="true"
         android:onClick="onclick_email_mp"
         android:src="@drawable/ic_arrow_forward_white_24dp"
-        app:backgroundTint="@color/colorPrimaryDark" />
+        app:backgroundTint="@color/colorPrimaryDark"
+        android:visibility="invisible"/>
 
 </LinearLayout>

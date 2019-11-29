@@ -1,6 +1,7 @@
 package in.filternet.jantamalik;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.Dialog;
@@ -42,6 +43,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -50,6 +52,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 import java.util.regex.Pattern;
@@ -76,13 +79,13 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAB_NUMBER = "tab_number";
     public static final int TAB_ISSUE = 0, TAB_KENDRA = 1, TAB_RAJYA = 2;
 
-    public static final String DEFAULT_STATE = "Uttar Pradesh";
-    public static final String DEFAULT_MP = "Varanasi";
+    public static final String DEFAULT_STATE = "Select State";
+    public static final String DEFAULT_MP = "Select Area";
     public static final String DEFAULT_MLA = "Varanasi Cantt";
     public static final String DEFAULT_WARD = "Chittupur, Sigra";
 
-    public static final String hiDEFAULT_STATE = "उत्तर प्रदेश";
-    public static final String hiDEFAULT_MP = "वाराणसी";
+    public static final String hiDEFAULT_STATE = "राज्य चुनें";
+    public static final String hiDEFAULT_MP = "क्षेत्र चुनें";
     public static final String hiDEFAULT_MLA = "वाराणसी कैंट";
     public static final String hiDEFAULT_WARD = "छित्तुपुर, सिगरा";
 
@@ -244,7 +247,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             TextView message = new TextView(this);
             message.setTextSize((float) 20);
-            message.setHeight(200);
+            message.setHeight(250);
             message.setPadding(30,30,30,0);
             message.setLinkTextColor(Color.BLUE);
             message.setGravity(Gravity.CENTER);
@@ -309,46 +312,49 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = getLayoutInflater();
         View ui_preference_layout = inflater.inflate(R.layout.user_preference, null);
         final Spinner ui_state_spinner = ui_preference_layout.findViewById(R.id.state_spinner);
+        final LinearLayout ui_constituency = ui_preference_layout.findViewById(R.id.constituency);
         final Spinner ui_constituency_spinner = ui_preference_layout.findViewById(R.id.constituency_spinner);
         final FloatingActionButton ui_done = ui_preference_layout.findViewById(R.id.done);
-
-        final String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        Log.e(TAG, "State: " + state);
-        String constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
-        Log.e(TAG, "Constituency: " + constituency);
 
         final DataFilter data_filter = new DataFilter();
 
         //populating state
-        ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, data_filter.getStates(mLanguage));
+        final List<String> state_list = data_filter.getStates(mLanguage);
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+            state_list.add(hiDEFAULT_STATE);
+        } else {
+            state_list.add(DEFAULT_STATE);
+        }
+
+        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.spinner_text_style, state_list);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_state_spinner.setAdapter(adapter);
-        int position = adapter.getPosition(state);
-        ui_state_spinner.setSelection(position);
-
-        //populating constituency
-        adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, data_filter.getMPAreas(mLanguage, state));
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ui_constituency_spinner.setAdapter(adapter);
-
-        position = adapter.getPosition(constituency);
-        ui_constituency_spinner.setSelection(position);
+        ui_state_spinner.setSelection(state_list.size() - 1);
 
         ui_state_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String selected_state = ui_state_spinner.getItemAtPosition(ui_state_spinner.getSelectedItemPosition()).toString();
-                //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
+                if (selected_state.equals(MainActivity.DEFAULT_STATE) || selected_state.equals(MainActivity.hiDEFAULT_STATE)) {
+                    return;
+                }
+
+                state_list.remove(state_list.size() - 1);
+                ui_constituency.setVisibility(View.VISIBLE);
                 mEditor.putString(MainActivity.sSTATE, selected_state).commit();
 
-                // Reload the state MP areas
-                ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, data_filter.getMPAreas(mLanguage, selected_state));
+                //populating constituency
+                List<String> constituency_list = data_filter.getMPAreas(mLanguage, selected_state);
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    constituency_list.add(hiDEFAULT_MP);
+                } else {
+                    constituency_list.add(DEFAULT_MP);
+                }
+
+                ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, constituency_list);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ui_constituency_spinner.setAdapter(adapter);
-
-                String selected_constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
-                int spinnerPosition = adapter.getPosition(selected_constituency);
-                ui_constituency_spinner.setSelection(spinnerPosition);
+                ui_constituency_spinner.setSelection(constituency_list.size() - 1);
             }
 
             @Override
@@ -358,11 +364,17 @@ public class MainActivity extends AppCompatActivity {
 
         //spinner constituency click handler
         ui_constituency_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @SuppressLint("RestrictedApi")
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String selected_constituency = adapterView.getItemAtPosition(i).toString();
-                //Log.e(TAG, "spin MP : " + i + " " + l + " " + MPArea);
+                if (selected_constituency.equals(MainActivity.DEFAULT_MP) || selected_constituency.equals(MainActivity.hiDEFAULT_MP)) {
+                    ui_done.setVisibility(View.INVISIBLE);
+                    return;
+                }
+
                 mEditor.putString(MainActivity.sMP_AREA, selected_constituency).commit();
+                ui_done.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -378,8 +390,10 @@ public class MainActivity extends AppCompatActivity {
         ui_done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Send selected entries (state & constituency) to Firebase
                 String selected_state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+                String selected_constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+
+                // Send selected entries (state & constituency) to Firebase
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
                     selected_state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                 }
@@ -387,7 +401,6 @@ public class MainActivity extends AppCompatActivity {
                 selected_state = selected_state.replace("&", "and");
                 FirebaseLogger.send(getBaseContext(), selected_state);
 
-                String selected_constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
                     selected_constituency = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                 }

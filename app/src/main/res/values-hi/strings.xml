@@ -689,5 +689,8 @@
     <string name="nudge">\nसिंगापुर में सिर्फ 7% जीएसटी है। अपने सांसद और विधायक से कहकर हमारा जीएसटी रेट 7% करवाएं और भारी छूट पाएं। </string>
     <string name="gst_faq">आपके सांसद/विधायक बहुमत का हिस्सा हो सकते हैं। वे सरकार से यह मांग कर सकते हैं।</string>
     <string name="discount_nat_7_gst">7% दर</string>
+    <string name="select_state_and_constituency">अपना राज्य और निर्वाचन क्षेत्र चुनें</string>
+    <string name="no_selection">Select valid options</string>
+    <string name="select_state">Select state</string>
 </resources>
 
