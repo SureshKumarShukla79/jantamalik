@@ -202,6 +202,123 @@
         android:layout_margin="3dp">
 
         <LinearLayout
+            android:id="@+id/spiritual_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:backgroundTint="@color/light_orange"
+            android:background="@drawable/recyclerview_item_click_effect">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/issue_pic_left_margin"
+                android:layout_gravity="center"
+                android:background="@color/light_orange"
+                android:src="@drawable/spiritual" />
+
+            <TextView
+                android:background="@color/light_orange"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/spiritual"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/light_orange">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:backgroundTint="@color/light_orange"
+                    android:src="@drawable/right_black_arrow_24dp" />
+                <TextView
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/light_green"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
+            android:id="@+id/girl_safety_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:backgroundTint="@color/light_green"
+            android:background="@drawable/recyclerview_item_click_effect">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="@dimen/issue_pic_left_margin"
+                android:layout_gravity="center"
+                android:background="@color/light_green"
+                android:src="@drawable/girl_safety" />
+
+            <TextView
+                android:background="@color/light_green"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/girl_safety"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/light_green">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:backgroundTint="@color/light_green"
+                    android:src="@drawable/right_black_arrow_24dp" />
+
+                <TextView
+                    android:background="@drawable/recyclerview_item_click_effect"
+                    android:backgroundTint="@color/light_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mp"
+                    android:textColor="@color/black"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="3dp">
+
+        <LinearLayout
             android:id="@+id/hospital_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

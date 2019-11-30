@@ -70,7 +70,54 @@ public class IssueFragment extends Fragment {
         issue_clean();
         issue_sewage();
 
+        issue_spiritual();
+        issue_girl_safety();
+
         return view;
+    }
+
+    private void issue_spiritual() {
+        LinearLayout spiritual_layout = view.findViewById(R.id.spiritual_layout);
+
+        spiritual_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String event_name = "Issue_Spiritual";
+                FirebaseLogger.send(getContext(), event_name);
+
+                int layout_id = R.layout.issue_spiritual;
+                int title_id = R.string.spiritual;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
+                intent.putExtra("issues", true);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void issue_girl_safety() {
+        LinearLayout spiritual_layout = view.findViewById(R.id.girl_safety_layout);
+
+        spiritual_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String event_name = "Issue_Girl_Safety";
+                FirebaseLogger.send(getContext(), event_name);
+
+                int layout_id = R.layout.issue_girl_safety;
+                int title_id = R.string.girl_safety;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
+                intent.putExtra("issues", true);
+                startActivity(intent);
+            }
+        });
     }
 
     private void issue_employment() {

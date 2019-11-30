@@ -687,4 +687,6 @@
     <string name="select_state_and_constituency">Select your state and constituency</string>
     <string name="no_selection">Select valid options</string>
     <string name="select_state">Select state</string>
+    <string name="spiritual">Spiritual</string>
+    <string name="girl_safety">Girls safety</string>
 </resources>
