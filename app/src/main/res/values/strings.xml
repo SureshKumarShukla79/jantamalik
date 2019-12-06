@@ -688,5 +688,16 @@
     <string name="no_selection">Select valid options</string>
     <string name="select_state">Select state</string>
     <string name="spiritual">Spiritual</string>
+    <string name="spiritual_details">Spirituality is decreasing very fast.
+        \n\nPeople don\'t keep Geeta, Gangajal or drink Cow milk anymore. Very few understand the aim of life and how to reach it.
+        \n\nGood and bad deeds, heaven and hell, law of karma are considered a myth.
+        \n\nHigh-quality texts like Spiritual interpretation of Geeta written by enlightened Yogi\'s is unknown to most.</string>
+    <string name="geeta_shops">Above book has commentary from Lahiri Mahashaya, Pandit Gopinath Kaviraj and Bhupendranath Sanyal. This book is found in select shops:
+        \n\n1. Vishwa Vidyalaya Prakashan, Chowk, Varanasi
+        \n\n2. Manas Granthagar, Nr Sankat Mochan Mandir, Varanasi
+        \n\n3. Ganga Saran Books, D-58/51-A, Opp Kuber Complex, Rathyatra, Varanasi\n9935523813
+    </string>
+
     <string name="girl_safety">Girls safety</string>
+    <string name="girl_safety_details">Girls safety is discussed in video \n\nhttps://www.youtube.com/watch?v=GZ1OgMwyEBs</string>
 </resources>

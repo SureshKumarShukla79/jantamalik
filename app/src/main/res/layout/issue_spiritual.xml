@@ -54,9 +54,27 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_margin="@dimen/issue_text_left_margin"
-                android:text="@string/employment_samvidhaan"
+                android:text="@string/spiritual_details"
                 android:textColor="@color/black" />
 
+            <ImageView
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:padding="1dp"
+                android:src="@drawable/spiritual_geeta" />
+
+            <TextView
+                android:id="@+id/list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_margin="@dimen/issue_text_left_margin"
+                android:text="@string/geeta_shops"
+                android:textColor="@color/black" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>
