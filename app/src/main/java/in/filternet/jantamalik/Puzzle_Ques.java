@@ -52,15 +52,15 @@ public class Puzzle_Ques {
                     "सभी पार्टियाँ",
                     "2014 में दोनों पार्टियों को अपराधी घोषित किया। 17 वकीलों ने इनके पक्ष में बहस की पर हार गए।"},
             {"What is priority of education in central govt budget?", // Ecoonomy 3
-                    "11", "3", "1", "7",
+                    "11", "3", "1", "13",
                     "Many countries have 6% or higher budget allocated for education. India spends less than 3%",
                     "केन्द्र सरकार के बजट में शिक्षा का कौन सा स्थान है?",
-                    "11", "3", "1", "7",
+                    "11", "3", "1", "13",
                     "कई देशों में शिक्षा का बजट 6% से ज्यादा है। भारत सरकार 3% भी खर्च नहीं करती।"},
             {"What is priority of health in central govt budget?", // Ecoonomy 4
-                    "13", "2", "5", "7", "",
+                    "13", "2", "5", "15", "",
                     "केन्द्र सरकार के बजट में स्वास्थ्य का कौन सा स्थान है?",
-                    "13", "2", "5", "7", ""},
+                    "13", "2", "5", "15", ""},
             {"Does newspapers/news-channels frequently show paid-news?", // Media 1
                     "Yes", "No", "I can't detect it", "Rarely",
                     "CobraPost sting operation 2018 caught many popular media houses ready to publish propoganda for money.",
