@@ -1,13 +1,19 @@
 package in.filternet.jantamalik;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -34,7 +40,7 @@ public class Puzzle extends Activity {
     private SharedPreferences.Editor mEditor;
     private String mLanguage;
 
-    private int question_num = -1, number = 0;
+    private int question_num = -1, number = 0, score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -171,8 +177,7 @@ public class Puzzle extends Activity {
         if(smart_voter)
             user_became_smart();
         else {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            show_score();
         }
     }
 
@@ -214,7 +219,49 @@ public class Puzzle extends Activity {
     }
 
     public void onclick_skip(View view) {
-        open_main_activity();
+        show_score();
+    }
+
+    private void show_score() {
+        TextView message = new TextView(this);
+        message.setTextSize((float) 30);
+        message.setHeight(250);
+        message.setTextColor(Color.BLACK);
+        message.setPadding(30,30,30,0);
+        message.setGravity(Gravity.CENTER);
+
+        String score_text = "", button_ok = "";
+        score_text = getResources().getString(R.string.score) + score + "/" + number;
+        button_ok = getResources().getString(R.string.ok);
+
+        SpannableString s = new SpannableString(score_text);
+        message.setText(s);
+        message.setMovementMethod(LinkMovementMethod.getInstance());
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+        builder.setView(message);
+        builder.setPositiveButton(button_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                Intent intent = new Intent(Puzzle.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        final AlertDialog dialog = builder.create();
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog_interface) {
+                Button button = dialog.getButton(Dialog.BUTTON_POSITIVE);
+                button.setTextSize((float) 20);
+
+                button.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                button.setTypeface(button.getTypeface(), Typeface.BOLD);
+            }
+        });
+
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     public void onclick_next(View view) {
@@ -247,6 +294,8 @@ public class Puzzle extends Activity {
                 if(checked) {
                     String option = ui_option_1.getText().toString();
                     if (option.contains(correct_answer)) {
+                        ++score;
+
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
                         FirebaseLogger.send(this, "A" + question_num);
@@ -264,6 +313,8 @@ public class Puzzle extends Activity {
                 if(checked) {
                     String option = ui_option_2.getText().toString();
                     if (option.contains(correct_answer)) {
+                        ++score;
+
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
                         FirebaseLogger.send(this, "A" + question_num);
@@ -281,6 +332,8 @@ public class Puzzle extends Activity {
                 if(checked) {
                     String option = ui_option_3.getText().toString();
                     if (option.contains(correct_answer)) {
+                        ++score;
+
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
                         FirebaseLogger.send(this, "A" + question_num);
@@ -298,6 +351,8 @@ public class Puzzle extends Activity {
                 if(checked) {
                     String option = ui_option_4.getText().toString();
                     if (option.contains(correct_answer)) {
+                        ++score;
+
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
                         FirebaseLogger.send(this, "A" + question_num);
