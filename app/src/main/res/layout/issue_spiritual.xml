@@ -74,6 +74,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_margin="@dimen/issue_text_left_margin"
                 android:text="@string/geeta_shops"
+                android:autoLink="all"
+                android:textColorLink="@color/blue"
                 android:textColor="@color/black" />
         </LinearLayout>
     </RelativeLayout>
