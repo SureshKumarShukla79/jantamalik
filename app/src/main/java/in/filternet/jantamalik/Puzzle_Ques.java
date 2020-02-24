@@ -76,15 +76,15 @@ public class Puzzle_Ques {
                     "कौन जिम्मेदार है - पीने का पानी, सड़क, ट्रैफिक जाम और बिजली के लिए?",
                     "विधायक", "सांसद", "नगर निगम काॅरपोरेटर", "विपक्ष",
                     "संविधान की 7वीं अनुसूची के अनुसार यह राज्य सरकार के विषय हैं। विधायक जन प्रतिनिधि के रूप में जिम्मेदार है।"},
-            {"Should your MP/MLA explain to you, the govt budget and spending?", // Ecoonomy 5
+            {"Have you ever read constitution? Especially 7th schedule", // Constitution
                     "Yes",
                     "No",
-                    "They never meet me",
+                    "Only preamble",
                     "Not sure",
-                    "Loksabha runs for 6 months. Remaining 6 months are for MP to meet citizens, to know their concerns, share information.",
-                    "क्या आपके सांसद/विधायक ने आपको, सरकारी बजट और खर्च समझाना चाहिए?",
-                    "हाँ", "नहीं", "वो तो मिलता ही नहीं", "कह नहीं सकते",
-                    "लोकसभा 6 महीने चलती है, 6 महीने बंद रहती है। सांसद को यह समय - लोगों से मिलने, बजट समझाने आदि के लिए मिलता है।"},
+                    "Most of us have not read it. Interesting fact is that newspaper editors and news channel reporters analyse, without even reading it.",
+                    "क्या आपने कभी संविधान पढ़ा है? खासतौर पर 7वीं अनुसूची",
+                    "हाँ", "नहीं", "सिर्फ प्रस्तावना", "कह नहीं सकते",
+                    "हम में से ज्यादातर लोग कभी संविधान नहीं पढ़ते। मजेदार बात है कि अखबार के संपादक और न्यूज चैनल के पत्रकार भी इसे पढ़े बिना ही काम चलाते हैं।"},
             {"When was the lokpal bill passed by loksabha?", // Political Rights 4
                     "When people started protesting outside minister/MP house",
                     "When people protested in Ramlila ground",
