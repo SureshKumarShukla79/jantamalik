@@ -684,12 +684,13 @@
     <string name="website"><u>www.filternet.in</u></string>
     <string name="phone_number">+91-7570000787</string>
 
-    <string name="gst_tax">टैक्स की दरें जीएसटी परिषद द्वारा निर्धारित की जाती है जिसमें सांसद और विधायक आपके प्रतिनिधि होते हैं।
-        \n<b>पूरे विश्व में सिर्फ भारत में ही जीएसटी की 5 दरें हैं और सबसे महंगी भी हैं।</b>
+    <string name="gst_tax">सिंगापुर में सिर्फ 7% जीएसटी है फिर भी पढ़ाई और दवाई मुफ्त है।
+        \n<b>भारत में जीएसटी की 5 दरें हैं  (5, 12, 18, 28, 100) फिर भी पढ़ाई और दवाई मुफ्त नहीं है।</b>
         </string>
-    <string name="nudge">\nसिंगापुर में सिर्फ 7% जीएसटी है। अपने सांसद और विधायक से कहकर हमारा जीएसटी रेट 7% करवाएं और भारी छूट पाएं। </string>
+    <string name="nudge">टैक्स की दरें जीएसटी परिषद द्वारा निर्धारित की जाती है, जिसमें सांसद और विधायक ही निर्णय लेते हैं। अपने सांसद/विधायक से कहकर जीएसटी रेट 7% करवाएं और भारी छूट पाएं। </string>
     <string name="gst_faq">आपके सांसद/विधायक बहुमत का हिस्सा हो सकते हैं। वे सरकार से यह मांग कर सकते हैं।</string>
     <string name="discount_nat_7_gst">7% दर</string>
+
     <string name="select_state_and_constituency">अपना राज्य और निर्वाचन क्षेत्र चुनें</string>
     <string name="no_selection">Select valid options</string>
     <string name="select_state">Select state</string>
