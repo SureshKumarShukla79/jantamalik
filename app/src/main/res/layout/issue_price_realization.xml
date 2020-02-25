@@ -81,7 +81,8 @@
                 android:padding="1dp"
                 android:background="@drawable/linearlayout_border"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
                 <ImageView
                     android:layout_width="@dimen/small_image"
                     android:layout_height="@dimen/small_image"
@@ -106,7 +107,8 @@
                 android:padding="1dp"
                 android:background="@drawable/linearlayout_border"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
                 <ImageView
                     android:layout_width="@dimen/small_image"
                     android:layout_height="@dimen/small_image"
