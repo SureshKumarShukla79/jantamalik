@@ -18,8 +18,8 @@ android {
         versionName "devel"
 
         // Production
-        //versionCode 2000224  // silly mistake extra Zero after Year.
-        //versionName "20.02.24"
+        //versionCode 2000226  // silly mistake extra Zero after Year.
+        //versionName "20.02.26"
     }
     buildTypes {
         release {
