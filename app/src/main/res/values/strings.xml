@@ -637,22 +637,12 @@
     <string name="law_under_research">The law related to this subject is under research</string>
     <string name="tax_under_research">The tax spend on this subject is under research</string>
 
-    <string name="agriculture_loan_samvidhaan">As per constitution 7th schedule, this is State subject. This is 18th item in state list.</string>
-    <string name="agriculture_subsidy_samvidhaan">As per constitution 7th schedule, this is State subject. This is 18th item in state list.</string>
-    <string name="agriculture_water_samvidhaan">As per constitution 7th schedule, this is State subject. This is 17th item in state list.</string>
-    <string name="drinking_water_samvidhaan">As per constitution 7th schedule, this is State subject. This is 17th item in state list.</string>
-    <string name="hospital_samvidhaan">As per constitution 7th schedule, this is State subject. This is 6th item in state list.</string>
-    <string name="public_transport_samvidhaan">As per constitution 7th schedule, this is State subject. This is 13th item in state list.</string>
-    <string name="price_realiztion_samvidhaan">As per constitution 7th schedule, this is State subject. This is 46th item in state list.</string>
-    <string name="employment_samvidhaan">As per constitution 7th schedule, the responsibility of this subject is Centre as well as State. This is 23rd and 26th item in concurrent list.</string>
-    <string name="cleanliness_samvidhaan">As per constitution 7th schedule, this is State subject. This is 5th item in state list.</string>
-    <string name="sewage_samvidhaan">As per constitution 7th schedule, this is State subject. This is 5th item in state list.</string>
-    <string name="electricity_samvidhaan">As per constitution 7th schedule, this is State subject. This is 53th item in state list.</string>
-    <string name="police_samvidhaan">As per constitution 7th schedule, this is State subject. This is 1st and 2nd item in state list.</string>
-    <string name="poor_road_samvidhaan">As per constitution 7th schedule, this is State subject. This is 13th item in state list.</string>
-    <string name="train_delay_samvidhaan">As per constitution 7th schedule, this is Centre subject. This is 22nd item in centre list.</string>
-    <string name="traffic_samvidhaan">As per constitution 7th schedule, this is State subject. This is 1st item in state list.</string>
-    <string name="business_samvidhaan">As per constitution 7th schedule, this is Centre subject. This is 41st, 42nd, 43th and 44th item in centre list.</string>
+    <string name="vidhan_sabha">As per constitution this is subject of Vidhan Sabha (State government).
+        \n\nYour public representative in Vidhan Sabha is elected MLA.</string>
+    <string name="lok_sabha">As per constitution this is subject of Loksabha (Center government).
+        \n\nYour public representative in Loksabha is elected MP.</string>
+    <string name="vidhansabha_n_loksabha_common">As per constitution this subject is common to Vidhan Sabha (State government) and Loksabha (Center government).
+        \n\nYour public representative in Vidhan Sabha is MLA and in Loksabha is MP.</string>
 
     <string name="corruption_law">Prevention of Corruption Law, Lokpal Bill</string>
 

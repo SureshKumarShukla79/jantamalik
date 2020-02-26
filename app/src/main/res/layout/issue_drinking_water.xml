@@ -70,7 +70,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_marginLeft="@dimen/issue_text_left_margin"
                 android:layout_marginStart="@dimen/issue_text_left_margin"
-                android:text="@string/drinking_water_samvidhaan"
+                android:text="@string/vidhan_sabha"
                 android:textColor="@color/black" />
         </LinearLayout>
 

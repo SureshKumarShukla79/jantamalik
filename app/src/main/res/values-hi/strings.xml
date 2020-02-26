@@ -642,22 +642,13 @@
 
     <string name="law_under_research">इससे जुडे़ कानून पर शोध जारी है</string>
     <string name="tax_under_research">इस पर खर्च होने वाले टैक्स पर शोध जारी है</string>
-    <string name="agriculture_loan_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 18 वां विषय है।</string>
-    <string name="agriculture_subsidy_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 14 वां विषय है।</string>
-    <string name="agriculture_water_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 17 वां विषय है।</string>
-    <string name="drinking_water_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 17 वां विषय है।</string>
-    <string name="hospital_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 6 वां विषय है।</string>
-    <string name="public_transport_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 13 वां विषय है।</string>
-    <string name="price_realiztion_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 46 वां विषय है।</string>
-    <string name="employment_samvidhaan">संविधान की सातवीं अनुसूची में यह केन्द्र और राज्य दोनों का विषय है। समवर्ती सूची में यह 23 वां और 26 वां विषय है।</string>
-    <string name="cleanliness_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 5 वां विषय है।</string>
-    <string name="sewage_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 5 वां विषय है।</string>
-    <string name="electricity_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 53 वां विषय है।</string>
-    <string name="police_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 1(पहला) और 2(दूसरा) विषय है।</string>
-    <string name="poor_road_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 13 वां विषय है।</string>
-    <string name="train_delay_samvidhaan">संविधान की सातवीं अनुसूची में यह केन्द्र का विषय है। केन्द्र सूची में यह 22 वां विषय है।</string>
-    <string name="traffic_samvidhaan">संविधान की सातवीं अनुसूची में यह राज्य का विषय है। राज्य सूची में यह 1(पहला) विषय है।</string>
-    <string name="business_samvidhaan">संविधान की सातवीं अनुसूची में यह केन्द्र का विषय है। केन्द्र सूची में यह 41 वां, 42 वां, 43 वां और 44 वां विषय है।</string>
+
+    <string name="vidhan_sabha">संविधान के अनुसार यह विधानसभा (राज्य सरकार) का विषय है।
+        \n\nविधानसभा में आपका जन प्रतिनिधि चुना हुआ विधायक होता है।</string>
+    <string name="lok_sabha">संविधान के अनुसार यह लोकसभा (केन्द्र सरकार) का विषय है।
+        \n\nलोकसभा में आपका जन प्रतिनिधि चुना हुआ सांसद होता है।</string>
+    <string name="vidhansabha_n_loksabha_common">संविधान के अनुसार यह विधानसभा (राज्य सरकार) और लोकसभा (केन्द्र सरकार) दोनों का विषय है।
+        \n\nविधानसभा में आपका जन प्रतिनिधि चुना हुआ विधायक होता है। लोकसभा में आपका जन प्रतिनिधि चुना हुआ सांसद होता है।</string>
 
     <string name="corruption_law">भ्रष्टाचार निरोधी कानून, लोकपाल कानून</string>
 
@@ -716,5 +707,6 @@
 
     <string name="ok">ठीक है</string>
     <string name="score"><b>आपका स्कोर:</b>\n</string>
+
 </resources>
 
