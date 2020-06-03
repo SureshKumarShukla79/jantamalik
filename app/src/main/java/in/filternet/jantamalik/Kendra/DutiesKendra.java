@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import in.filternet.jantamalik.FirebaseLogger;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -41,7 +41,7 @@ public class DutiesKendra extends AppCompatActivity {
         }
 
         setContentView(R.layout.duties_kendra);
-        FirebaseLogger.send(this, TAG);
+        LogEvents.send(this, TAG);
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);

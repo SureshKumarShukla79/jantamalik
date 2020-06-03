@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import in.filternet.jantamalik.FirebaseLogger;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -42,7 +42,7 @@ public class Duties extends AppCompatActivity {
 
         setContentView(R.layout.duties_rajya);
 
-        FirebaseLogger.send(this, "Rajya_Duties");
+        LogEvents.send(this, "Rajya_Duties");
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);

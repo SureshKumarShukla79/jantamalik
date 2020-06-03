@@ -23,7 +23,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import in.filternet.jantamalik.Contact;
-import in.filternet.jantamalik.FirebaseLogger;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
@@ -66,7 +66,7 @@ public class VoteMP extends AppCompatActivity {
         }
 
         setContentView(R.layout.vote_mp_layout);
-        FirebaseLogger.send(this, TAG);
+        LogEvents.send(this, TAG);
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         editor = mSharedPref.edit();
@@ -139,7 +139,7 @@ public class VoteMP extends AppCompatActivity {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                FirebaseLogger.send(getBaseContext(), tmp);
+                LogEvents.send(getBaseContext(), tmp);
 
                 // Reload the state MP areas
                 arrayAdapterMP = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
@@ -171,7 +171,7 @@ public class VoteMP extends AppCompatActivity {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                FirebaseLogger.send(getBaseContext(), tmp);
+                LogEvents.send(getBaseContext(), tmp);
 
                 updateMP();
             }
@@ -314,7 +314,7 @@ public class VoteMP extends AppCompatActivity {
 
         try { // Calling not available on Tablet devices
             startActivity(callIntent);
-            FirebaseLogger.send(this, "MP_Phone");
+            LogEvents.send(this, "MP_Phone");
         } catch (Exception exception){
             Toast.makeText(this, "Unable to CALL", Toast.LENGTH_LONG).show();
             exception.printStackTrace();
@@ -353,7 +353,7 @@ public class VoteMP extends AppCompatActivity {
                 startActivity(Intent.createChooser(intent, "Sending mail..."));
                 finish();
             }
-            FirebaseLogger.send(this, "MP_Email");
+            LogEvents.send(this, "MP_Email");
         } catch (Exception ex) {
             Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
         }

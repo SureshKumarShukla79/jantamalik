@@ -21,7 +21,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import in.filternet.jantamalik.Contact;
-import in.filternet.jantamalik.FirebaseLogger;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
@@ -144,7 +144,7 @@ public class RajyaFragment extends Fragment {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                FirebaseLogger.send(getContext(), tmp);
+                LogEvents.send(getContext(), tmp);
 
                 update_state_budget(State);
             }
@@ -154,7 +154,7 @@ public class RajyaFragment extends Fragment {
             }
         });
 
-        FirebaseLogger.send(getContext(), TAG);
+        LogEvents.send(getContext(), TAG);
 
         govt_Click();
         duties_Click();

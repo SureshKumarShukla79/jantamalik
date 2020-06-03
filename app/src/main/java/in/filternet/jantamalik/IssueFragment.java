@@ -42,7 +42,7 @@ public class IssueFragment extends Fragment {
 
         view = inflater.inflate(R.layout.issues, container, false);
 
-        FirebaseLogger.send(getContext(), TAG);
+        LogEvents.send(getContext(), TAG);
 
         ui_add_issue = view.findViewById(R.id.add_issue);
         ui_add_issue.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +92,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Spiritual";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_spiritual;
                 int title_id = R.string.spiritual;
@@ -114,7 +114,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "GirlSafety";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_girl_safety;
                 int title_id = R.string.girl_safety;
@@ -136,7 +136,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Employment";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_employment;
                 int title_id = R.string.employment;
@@ -158,7 +158,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Media";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_media_or_afeem;
                 int title_id = R.string.media_or_afeem;
@@ -180,7 +180,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Protest";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_mp_no_response;
                 int title_id = R.string.mp_no_response;
@@ -202,7 +202,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Corruption";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_corruption;
                 int title_id = R.string.corruption;
@@ -224,7 +224,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Train_Delay";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_train_delay;
                 int title_id = R.string.train;
@@ -246,7 +246,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Business";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_business;
                 int title_id = R.string.business;
@@ -268,7 +268,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Electricity";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_electricity;
                 int title_id = R.string.electricity;
@@ -290,7 +290,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Police";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_police;
                 int title_id = R.string.police;
@@ -312,7 +312,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Poor_Road";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_poor_road;
                 int title_id = R.string.poor_road;
@@ -334,7 +334,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Traffic";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_traffic;
                 int title_id = R.string.traffic;
@@ -356,7 +356,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Hospital";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_hospital;
                 int title_id = R.string.hospital;
@@ -378,7 +378,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Drink_Water";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_drinking_water;
                 int title_id = R.string.drinking_water;
@@ -400,7 +400,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Agri_Water";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_agriculture_water;
                 int title_id = R.string.agriculture_water;
@@ -422,7 +422,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Agri_Loan";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_agriculture_loan;
                 int title_id = R.string.agriculture_loan;
@@ -444,7 +444,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Price_Realization";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_price_realization;
                 int title_id = R.string.price_realization;
@@ -466,7 +466,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Agri_Subsidy";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_agriculture_subsidy;
                 int title_id = R.string.agriculture_subsidy;
@@ -488,7 +488,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Public_Transport";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_public_transport;
                 int title_id = R.string.public_transport;
@@ -510,7 +510,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Sewage";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_sewage;
                 int title_id = R.string.sewage;
@@ -532,7 +532,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Clean";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_cleanliness;
                 int title_id = R.string.cleanliness;
@@ -555,7 +555,7 @@ public class IssueFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String event_name = "Inflation";
-                FirebaseLogger.send(getContext(), event_name);
+                LogEvents.send(getContext(), event_name);
 
                 int layout_id = R.layout.issue_inflation;
                 int title_id = R.string.inflation;

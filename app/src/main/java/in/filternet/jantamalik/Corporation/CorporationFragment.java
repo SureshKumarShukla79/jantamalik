@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import in.filternet.jantamalik.FirebaseLogger;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -42,7 +42,7 @@ public class CorporationFragment extends Fragment {
 
         view = inflater.inflate(R.layout.corporate,container,false);
 
-        FirebaseLogger.send(getContext(), TAG);
+        LogEvents.send(getContext(), TAG);
 
         return view;
     }

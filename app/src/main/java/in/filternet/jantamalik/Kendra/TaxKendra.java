@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import in.filternet.jantamalik.FirebaseLogger;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -44,7 +44,7 @@ public class TaxKendra extends AppCompatActivity {
         }
 
         setContentView(R.layout.tax_kendra);
-        FirebaseLogger.send(this, TAG);
+        LogEvents.send(this, TAG);
 
         toolbar = findViewById(R.id.toolbar_Tax_Kendra);
         interest = findViewById(R.id.interest);

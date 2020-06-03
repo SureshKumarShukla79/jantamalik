@@ -66,7 +66,7 @@ public class Contact extends AppCompatActivity {
         }
 
         setContentView(R.layout.contact);
-        FirebaseLogger.send(this, "Contact_Us");
+        LogEvents.send(this, "Contact_Us");
 
         ui_issue = findViewById(R.id.radio_issue);
         ui_update = findViewById(R.id.radio_update);
@@ -170,7 +170,7 @@ public class Contact extends AppCompatActivity {
                 finish();
             }
 
-            FirebaseLogger.send(this, firebase_tag);
+            LogEvents.send(this, firebase_tag);
 
         } catch (Exception ex) {
             Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
@@ -179,7 +179,7 @@ public class Contact extends AppCompatActivity {
 
 
     public void onclick_open_donate(View view) {
-        FirebaseLogger.send(this, "Donate");
+        LogEvents.send(this, "Donate");
 
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -187,7 +187,7 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_github(View view) {
-        FirebaseLogger.send(this, "GitHub");
+        LogEvents.send(this, "GitHub");
 
         Uri uri = Uri.parse("https://github.com/SureshKumarShukla79/jantamalik");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -195,7 +195,7 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_credits(View view) {
-        FirebaseLogger.send(this, "Credits");
+        LogEvents.send(this, "Credits");
 
         Uri uri = Uri.parse("https://www.filternet.in/volunteer/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -252,7 +252,7 @@ public class Contact extends AppCompatActivity {
     public void onclick_call_us(View view) {
         Uri number = Uri.parse("tel:" + getString(R.string.phone_number));
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-        FirebaseLogger.send(this, "Call_Us");
+        LogEvents.send(this, "Call_Us");
 
         try { // Calling not available on Tablet devices
             startActivity(callIntent);
@@ -263,7 +263,7 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_open_website(View view) {
-        FirebaseLogger.send(this, "Open_Website");
+        LogEvents.send(this, "Open_Website");
 
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://filternet.in")));
     }

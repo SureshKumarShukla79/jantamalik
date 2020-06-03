@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import in.filternet.jantamalik.FirebaseLogger;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
@@ -44,7 +44,7 @@ public class KendraFragment extends Fragment {
 
         view = inflater.inflate(R.layout.kendra, container, false);
 
-        FirebaseLogger.send(getContext(), TAG);
+        LogEvents.send(getContext(), TAG);
 
         vote();
         note();
@@ -109,7 +109,7 @@ public class KendraFragment extends Fragment {
         election_2019_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseLogger.send(getContext(), "Election_2019");
+                LogEvents.send(getContext(), "Election_2019");
 
                 int layout_id = R.layout.issue_election_2019;
                 int title_id = R.string.election_2019;

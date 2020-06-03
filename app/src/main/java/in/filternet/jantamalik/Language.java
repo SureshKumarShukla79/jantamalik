@@ -25,7 +25,7 @@ public class Language extends AppCompatActivity {
 
         setContentView(R.layout.language);
 
-        FirebaseLogger.send(this, TAG);
+        LogEvents.send(this, TAG);
     }
 
     public void onclick_select_language(View view) {
@@ -73,7 +73,7 @@ public class Language extends AppCompatActivity {
         }
 
         mEditor.putString(MainActivity.sUSER_SELECT_LANGUAGE, language).commit();
-        FirebaseLogger.send(this, language);
+        LogEvents.send(this, language);
 
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

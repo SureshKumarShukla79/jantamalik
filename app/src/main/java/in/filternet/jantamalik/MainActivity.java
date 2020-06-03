@@ -148,13 +148,13 @@ public class MainActivity extends AppCompatActivity {
 
         if (mLanguage.equals(sLANGUAGE_ENGLISH)){
             setUI_Lang(this, "en");
-            FirebaseLogger.send(this, "App_Lang_Eng");
+            LogEvents.send(this, "App_Lang_Eng");
         } else if(mLanguage.equals(sLANGUAGE_MARATHI)) {
             setUI_Lang(this, "mr");
-            FirebaseLogger.send(this, "App_Lang_Marathi");
+            LogEvents.send(this, "App_Lang_Marathi");
         } else {
             setUI_Lang(this, "hi");
-            FirebaseLogger.send(this, "App_Lang_Hindi");
+            LogEvents.send(this, "App_Lang_Hindi");
         }
 
         if(mLanguage.equals(sLANGUAGE_HINDI) && !user_select_language.equals("Hindi") && !prev_user_select_language.equals(user_select_language)) {
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
         if(smart_voter) {
             ui_puzzle_button.setVisibility(View.GONE);
             ui_green_badge.setVisibility(View.VISIBLE);
-            FirebaseLogger.send(this, "Smart_Voter");
+            LogEvents.send(this, "Smart_Voter");
         }
 
         final MainViewPagerAdapter mainViewPagerAdapter = new MainViewPagerAdapter(getSupportFragmentManager(),
@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setPositiveButton(button_yes, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int id) {
-                    FirebaseLogger.send(MainActivity.this, "Agree");
+                    LogEvents.send(MainActivity.this, "Agree");
                     mEditor.putBoolean(bUSER_AGREE, true).commit();
 
                     ask_user_preference();
@@ -292,7 +292,7 @@ public class MainActivity extends AppCompatActivity {
             builder.setNegativeButton(button_no, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int id) {
-                    FirebaseLogger.send(MainActivity.this, "Not_Agree");
+                    LogEvents.send(MainActivity.this, "Not_Agree");
                     finish();
                 }
             });
@@ -464,14 +464,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 selected_state = selected_state.replace(" ", "_");
                 selected_state = selected_state.replace("&", "and");
-                FirebaseLogger.send(getBaseContext(), selected_state);
+                LogEvents.send(getBaseContext(), selected_state);
 
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     selected_constituency = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                 }
                 selected_constituency = selected_constituency.replace(" ", "_");
                 selected_constituency = selected_constituency.replace("&", "and");
-                FirebaseLogger.send(getBaseContext(), selected_constituency);
+                LogEvents.send(getBaseContext(), selected_constituency);
 
                 dialog.dismiss();
             }
@@ -500,13 +500,13 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.user_thanks, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                FirebaseLogger.send(MainActivity.this, "Smart_Voter");
+                LogEvents.send(MainActivity.this, "Smart_Voter");
             }
         });
         builder.setNeutralButton(R.string.share, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                FirebaseLogger.send(MainActivity.this, "Share_Puzzle");
+                LogEvents.send(MainActivity.this, "Share_Puzzle");
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
@@ -547,7 +547,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclick_share_button(View view) {
-        FirebaseLogger.send(this, "Share");
+        LogEvents.send(this, "Share");
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
@@ -559,7 +559,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclick_open_donate(View view) {
-        FirebaseLogger.send(this, "Donate");
+        LogEvents.send(this, "Donate");
 
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -824,7 +824,7 @@ public class MainActivity extends AppCompatActivity {
                     builder.setPositiveButton(R.string.Option_Update, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-                            FirebaseLogger.send(MainActivity.this, "Update_App");
+                            LogEvents.send(MainActivity.this, "Update_App");
 
                             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(URL_PLAYSTORE_MARKET)));
                         }
@@ -834,7 +834,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int id) {
                             mEditor.putBoolean(bAPP_UPDATE_LATER, true).commit();
 
-                            FirebaseLogger.send(MainActivity.this, "Update_Later");
+                            LogEvents.send(MainActivity.this, "Update_Later");
                         }
                     });
 
@@ -848,7 +848,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
-                    //FirebaseLogger.send("Got_Update");
+                    //LogEvents.send("Got_Update");
                 }
             }
         }

@@ -189,7 +189,7 @@ public class Issues extends AppCompatActivity {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                FirebaseLogger.send(getBaseContext(), tmp);
+                LogEvents.send(getBaseContext(), tmp);
 
                 area_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
                 area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -219,7 +219,7 @@ public class Issues extends AppCompatActivity {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                FirebaseLogger.send(getBaseContext(), tmp);
+                LogEvents.send(getBaseContext(), tmp);
 
                 update_candidate();
             }
@@ -943,7 +943,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_share_button(View view) {
-        FirebaseLogger.send(this, "Share");
+        LogEvents.send(this, "Share");
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
@@ -956,7 +956,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_open_donate(View view) {
-        FirebaseLogger.send(this, "Donate");
+        LogEvents.send(this, "Donate");
 
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -964,7 +964,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_MP_screen(View view) {
-        FirebaseLogger.send(this, titleName + "_MP");
+        LogEvents.send(this, titleName + "_MP");
 
         Intent intent = new Intent(view.getContext(), VoteMP.class);
         intent.putExtra("layout_id", layoutResID);
@@ -973,7 +973,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_MLA_screen(View view) {
-        FirebaseLogger.send(this, titleName + "_MLA");
+        LogEvents.send(this, titleName + "_MLA");
 
         Intent intent = new Intent(view.getContext(), MainActivity.class);
         intent.putExtra("rajya", true);
@@ -981,7 +981,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_Parshad_screen(View view) {
-        FirebaseLogger.send(this, titleName + "_Parshad");
+        LogEvents.send(this, titleName + "_Parshad");
 
         Toast.makeText(getApplicationContext(), getText(R.string.parshad_missing), Toast.LENGTH_LONG).show();
     }

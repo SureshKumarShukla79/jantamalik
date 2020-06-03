@@ -46,7 +46,7 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'org.jsoup:jsoup:1.10.3' // Downloaded library for app version fetch
-    implementation 'com.google.firebase:firebase-core:16.0.1' //Firebase
+    //implementation 'com.google.firebase:firebase-core:16.0.1' //Firebase
 }
 
 apply plugin: 'com.google.gms.google-services'  //Firebase

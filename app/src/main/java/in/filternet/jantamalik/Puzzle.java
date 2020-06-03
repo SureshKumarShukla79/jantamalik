@@ -79,7 +79,7 @@ public class Puzzle extends Activity {
         ui_detail = findViewById(R.id.detail);
 
         update_question();
-        FirebaseLogger.send(this, "Puzzle");
+        LogEvents.send(this, "Puzzle");
     }
 
     private void update_question() {
@@ -197,7 +197,7 @@ public class Puzzle extends Activity {
         builder.setPositiveButton(R.string.user_thanks, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                FirebaseLogger.send(Puzzle.this, "Smart_Voter");
+                LogEvents.send(Puzzle.this, "Smart_Voter");
 
                 Intent intent = new Intent(Puzzle.this, MainActivity.class);
                 startActivity(intent);
@@ -206,7 +206,7 @@ public class Puzzle extends Activity {
         builder.setNeutralButton(R.string.share, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-                FirebaseLogger.send(Puzzle.this, "Share_Puzzle");
+                LogEvents.send(Puzzle.this, "Share_Puzzle");
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
@@ -286,7 +286,7 @@ public class Puzzle extends Activity {
             ui_detail.setText(Puzzle_Ques.questions[question_num][11]);
         }
 
-        FirebaseLogger.send(this, "Q" + question_num);
+        LogEvents.send(this, "Q" + question_num);
 
         boolean checked =  ((RadioButton) view).isChecked();
 
@@ -302,7 +302,7 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        FirebaseLogger.send(this, "A" + question_num);
+                        LogEvents.send(this, "A" + question_num);
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -321,7 +321,7 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        FirebaseLogger.send(this, "A" + question_num);
+                        LogEvents.send(this, "A" + question_num);
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -340,7 +340,7 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        FirebaseLogger.send(this, "A" + question_num);
+                        LogEvents.send(this, "A" + question_num);
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -359,7 +359,7 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        FirebaseLogger.send(this, "A" + question_num);
+                        LogEvents.send(this, "A" + question_num);
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);

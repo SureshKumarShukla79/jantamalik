@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import in.filternet.jantamalik.FirebaseLogger;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -39,7 +39,7 @@ public class Infographics extends AppCompatActivity {
         }
 
         setContentView(R.layout.infographics_kendra);
-        FirebaseLogger.send(this, "Kendra_Infographics");
+        LogEvents.send(this, "Kendra_Infographics");
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
