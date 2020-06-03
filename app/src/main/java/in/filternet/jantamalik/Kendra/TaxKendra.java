@@ -36,6 +36,10 @@ public class TaxKendra extends AppCompatActivity {
             MainActivity.setUI_Lang(this, "hi");
         }
 
+        if(current_language != null && current_language.equals(MainActivity.sLANGUAGE_MARATHI)) {
+            MainActivity.setUI_Lang(this, "mr");
+        }
+
         setContentView(R.layout.tax_kendra);
         FirebaseLogger.send(this, "Kendra_Tax");
 

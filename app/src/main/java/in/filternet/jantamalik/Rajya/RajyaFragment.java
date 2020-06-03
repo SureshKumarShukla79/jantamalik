@@ -97,6 +97,10 @@ public class RajyaFragment extends Fragment {
             MainActivity.setUI_Lang(getActivity(), "hi");
         }
 
+        if (mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+            MainActivity.setUI_Lang(getActivity(), "mr");
+        }
+
         editor = mSharedPref.edit();
 
         view = inflater.inflate(R.layout.rajya, container, false);
@@ -137,7 +141,7 @@ public class RajyaFragment extends Fragment {
                 editor.putString(MainActivity.sSTATE, State).commit();
 
                 String tmp = State;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)  || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     String state = MainActivity.get_state(getContext(), MainActivity.sLANGUAGE_ENGLISH);
                     tmp = state;
                 }
@@ -166,7 +170,7 @@ public class RajyaFragment extends Fragment {
     private void update_state_budget(String state) {
         int state_column = 0, budget_column = 1;
 
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {    //In case of Hindi
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {    //In case of Hindi
             state_column = 3;
             budget_column = 4;
         }
@@ -185,7 +189,7 @@ public class RajyaFragment extends Fragment {
 
         String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
 
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {    //In case of Hindi
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {    //In case of Hindi
             state_column = 3;
         }
 

@@ -44,6 +44,10 @@ public class TaxRajya extends AppCompatActivity {
             MainActivity.setUI_Lang(this, "hi");
         }
 
+        if (current_language != null && current_language.equals(MainActivity.sLANGUAGE_MARATHI)) {
+            MainActivity.setUI_Lang(this, "mr");
+        }
+
         setContentView(layoutResID);
 
         FirebaseLogger.send(this, "Rajya_Tax");

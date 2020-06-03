@@ -69,7 +69,7 @@ public class VoteVidhayak extends AppCompatActivity {
         mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
 
         String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String MLA = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
+        String MLA = mSharedPref.getString(MainActivity.sMLA_AREA, "");
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
         DataFilter dataFilter = new DataFilter();
@@ -105,7 +105,7 @@ public class VoteVidhayak extends AppCompatActivity {
 
     private void updateMLA() {
         DataFilter dataFilter = new DataFilter();
-        String MLAArea = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
+        String MLAArea = mSharedPref.getString(MainActivity.sMLA_AREA, "");
         mla = dataFilter.getMLAInfo(mLanguage, MLAArea);
 
         Log.e(TAG, MLAArea + " " + mla.name + " " + mla.phone + " " + mla.email + " " + mla.address);

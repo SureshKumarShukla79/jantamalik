@@ -131,7 +131,7 @@ public class VoteMP extends AppCompatActivity {
                 editor.putString(MainActivity.sSTATE, State).commit();
 
                 String tmp = State;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     String state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                     tmp = state;
                 }
@@ -163,7 +163,7 @@ public class VoteMP extends AppCompatActivity {
                 editor.putString(MainActivity.sMP_AREA, MPArea).commit();
 
                 String tmp = MPArea;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     String area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                     tmp = area;
                 }
@@ -252,7 +252,7 @@ public class VoteMP extends AppCompatActivity {
 
         // Get English version and then WhatsApp group link
         String state = "", area = "";
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
             state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
             area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
         } else {

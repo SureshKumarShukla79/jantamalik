@@ -182,7 +182,9 @@
         <item>छित्तुपुर, सिगरा</item>
     </string-array>
 
-    <string name="notification_update">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
+    <string name="notification_update">New version of app is available. Download.</string>
+    <string name="notification_update_hi">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
+    <string name="notification_update_mr">अ‍ॅपची नवीन व्हर्जन उपलब्ध आहे, डाउनलोड करा</string>
     <string name="sunday_msg">हम बेहतर इसे बनाएँ, इसका लाभ उठाएँ!</string>
 
     <string name="kendra_budget_simple">27 लाख करोड़</string>
@@ -279,6 +281,11 @@
         \n\nfilternet.in/terms-of-service/</string>
     <string name="button_yes_hi">हाँ</string>
     <string name="button_no_hi">नहीं</string>
+
+    <string name="terms_and_condition_mr">मी वापर अटी व शर्तींशी सहमत आहे।
+        \n\nfilternet.in/terms-of-service/</string>
+    <string name="button_yes_mr">हो</string>
+    <string name="button_no_mr">नाही</string>
 
     <string name="TheNewIndianExpress">द न्यू इंडियन एक्सप्रेस,
         \nदिनेमानी (तमिल)

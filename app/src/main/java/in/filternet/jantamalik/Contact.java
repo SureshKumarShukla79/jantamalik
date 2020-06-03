@@ -19,6 +19,7 @@ import java.util.List;
 
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 import static in.filternet.jantamalik.MainActivity.sUSER_CURRENT_LANGUAGE;
 import static in.filternet.jantamalik.MainActivity.setUI_Lang;
 
@@ -46,6 +47,10 @@ public class Contact extends AppCompatActivity {
         mLanguage = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI); // first launch
         if(mLanguage.equals(sLANGUAGE_HINDI)) {
             setUI_Lang(this, "hi");
+        }
+
+        if(mLanguage.equals(sLANGUAGE_MARATHI)) {
+            setUI_Lang(this, "mr");
         }
 
         savedInstanceState = getIntent().getExtras();

@@ -42,6 +42,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String sCHANNEL_ID_UPDATE = "Update";
     public final static String sUSER_CURRENT_LANGUAGE = "User_Current_Language";
     public final static String sLANGUAGE_HINDI = "hi";
+    public final static String sLANGUAGE_MARATHI = "mr";
     public final static String sLANGUAGE_ENGLISH = "en";
     public final static String bUSER_AGREE = "User_Agree";
     public final static String bSMART_VOTER = "Smart_Voter";
@@ -81,13 +83,12 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String DEFAULT_STATE = "Select State";
     public static final String DEFAULT_MP = "Select Area";
-    public static final String DEFAULT_MLA = "Varanasi Cantt";
-    public static final String DEFAULT_WARD = "Chittupur, Sigra";
 
     public static final String hiDEFAULT_STATE = "राज्य चुनें";
     public static final String hiDEFAULT_MP = "क्षेत्र चुनें";
-    public static final String hiDEFAULT_MLA = "वाराणसी कैंट";
-    public static final String hiDEFAULT_WARD = "छित्तुपुर, सिगरा";
+
+    public static final String mrDEFAULT_STATE = "राज्य निवडा";
+    public static final String mrDEFAULT_MP = "क्षेत्र निवडा";
 
     public static final String sSTATE = "State";
     public static final String sMP_AREA = "MP_Area";
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private Toolbar toolbar;
     private ImageView ui_green_badge;
-    private Button ui_language_button, ui_puzzle_button;
+    private Button ui_puzzle_button;
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
@@ -132,22 +133,26 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mLanguage = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null); // first launch
-        if (mLanguage == null){
-            if (user_select_language.equals("English")) {
-                mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
-                mLanguage = sLANGUAGE_ENGLISH;
-            } else { // All others will default to Hindi till we get translators.
-                mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
-                mLanguage = sLANGUAGE_HINDI;
-            }
+        if (user_select_language.equals("English")) {
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
+            mLanguage = sLANGUAGE_ENGLISH;
+        } else if (user_select_language.equals("Marathi")){
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_MARATHI).commit();
+            mLanguage = sLANGUAGE_MARATHI;
+        } else { // All others will default to Hindi till we get translators.
+            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
+            mLanguage = sLANGUAGE_HINDI;
         }
 
-        if(mLanguage.equals(sLANGUAGE_HINDI)) {
-            setUI_Lang(this, "hi");
-            FirebaseLogger.send(this, "App_Lang_Hindi");
-        } else {
+        if (mLanguage.equals(sLANGUAGE_ENGLISH)){
             setUI_Lang(this, "en");
             FirebaseLogger.send(this, "App_Lang_Eng");
+        } else if(mLanguage.equals(sLANGUAGE_MARATHI)) {
+            setUI_Lang(this, "mr");
+            FirebaseLogger.send(this, "App_Lang_Marathi");
+        } else {
+            setUI_Lang(this, "hi");
+            FirebaseLogger.send(this, "App_Lang_Hindi");
         }
 
         setContentView(R.layout.activity_main);
@@ -155,15 +160,12 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewPager_main);
         toolbar = findViewById(R.id.appbar);
-        ui_language_button = findViewById(R.id.lanugage_button);
         ui_puzzle_button = findViewById(R.id.puzzle_button);
         ui_green_badge = findViewById(R.id.green_badge);
 
         // Fresh Install, Save SharedPreferences
         String State = mSharedPref.getString(sSTATE, DEFAULT_STATE);
         String MP = mSharedPref.getString(sMP_AREA, DEFAULT_MP);
-        String MLA = mSharedPref.getString(sMLA_AREA, DEFAULT_MLA);
-        String Ward = mSharedPref.getString(sWARD, DEFAULT_WARD);
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
         // In case of Hindi, change the defaults
@@ -172,17 +174,19 @@ public class MainActivity extends AppCompatActivity {
                 State = hiDEFAULT_STATE;
             if (MP.equals(DEFAULT_MP))
                 MP = hiDEFAULT_MP;
-            if (MLA.equals(DEFAULT_MLA))
-                MLA = hiDEFAULT_MLA;
-            if (Ward.equals(DEFAULT_WARD))
-                Ward = hiDEFAULT_WARD;
+        }
+
+        // In case of Marathi, change the defaults
+        if (mLanguage.equals(sLANGUAGE_MARATHI)) {
+            if (State.equals(DEFAULT_STATE))
+                State = mrDEFAULT_STATE;
+            if (MP.equals(DEFAULT_MP))
+                MP = mrDEFAULT_MP;
         }
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
         mEditor.putString(MainActivity.sSTATE, State).commit();
         mEditor.putString(MainActivity.sMP_AREA, MP).commit();
-        mEditor.putString(MainActivity.sMLA_AREA, MLA).commit();
-        mEditor.putString(MainActivity.sWARD, Ward).commit();
 
         setSupportActionBar(toolbar);
 
@@ -191,12 +195,6 @@ public class MainActivity extends AppCompatActivity {
             ui_puzzle_button.setVisibility(View.GONE);
             ui_green_badge.setVisibility(View.VISIBLE);
             FirebaseLogger.send(this, "Smart_Voter");
-        }
-
-        if(mLanguage.equals(sLANGUAGE_HINDI)) {
-            ui_language_button.setText("EN");
-        } else {
-            ui_language_button.setText("हिन्दी");
         }
 
         final MainViewPagerAdapter mainViewPagerAdapter = new MainViewPagerAdapter(getSupportFragmentManager(),
@@ -257,6 +255,10 @@ public class MainActivity extends AppCompatActivity {
                 terms_and_condition = getResources().getString(R.string.terms_and_condition_en);
                 button_yes = getResources().getString(R.string.button_yes_en);
                 button_no = getResources().getString(R.string.button_no_en);
+            } else if(mLanguage.equals(sLANGUAGE_MARATHI)) {
+                terms_and_condition = getResources().getString(R.string.terms_and_condition_mr);
+                button_yes = getResources().getString(R.string.button_yes_mr);
+                button_no = getResources().getString(R.string.button_no_mr);
             } else {
                 terms_and_condition = getResources().getString(R.string.terms_and_condition_hi);
                 button_yes = getResources().getString(R.string.button_yes_hi);
@@ -320,10 +322,12 @@ public class MainActivity extends AppCompatActivity {
 
         //populating state
         final List<String> state_list = data_filter.getStates(mLanguage);
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            state_list.add(hiDEFAULT_STATE);
-        } else {
+        if (mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
             state_list.add(DEFAULT_STATE);
+        } if (mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+            state_list.add(mrDEFAULT_STATE);
+        } else {
+            state_list.add(hiDEFAULT_STATE);
         }
 
         ArrayAdapter adapter = new ArrayAdapter(this, R.layout.spinner_text_style, state_list);
@@ -335,7 +339,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String selected_state = ui_state_spinner.getItemAtPosition(ui_state_spinner.getSelectedItemPosition()).toString();
-                if (selected_state.equals(MainActivity.DEFAULT_STATE) || selected_state.equals(MainActivity.hiDEFAULT_STATE)) {
+                if (selected_state.equals(MainActivity.DEFAULT_STATE)
+                        || selected_state.equals(MainActivity.hiDEFAULT_STATE)
+                        || selected_state.equals(MainActivity.mrDEFAULT_STATE)) {
                     return;
                 }
 
@@ -345,10 +351,12 @@ public class MainActivity extends AppCompatActivity {
 
                 //populating constituency
                 List<String> constituency_list = data_filter.getMPAreas(mLanguage, selected_state);
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-                    constituency_list.add(hiDEFAULT_MP);
-                } else {
+                if (mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
                     constituency_list.add(DEFAULT_MP);
+                } else if (mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+                    constituency_list.add(mrDEFAULT_MP);
+                } else {
+                    constituency_list.add(hiDEFAULT_MP);
                 }
 
                 ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, constituency_list);
@@ -368,7 +376,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String selected_constituency = adapterView.getItemAtPosition(i).toString();
-                if (selected_constituency.equals(MainActivity.DEFAULT_MP) || selected_constituency.equals(MainActivity.hiDEFAULT_MP)) {
+                if (selected_constituency.equals(MainActivity.DEFAULT_MP)
+                        || selected_constituency.equals(MainActivity.hiDEFAULT_MP)
+                        || selected_constituency.equals(MainActivity.mrDEFAULT_MP)) {
                     ui_done.setVisibility(View.INVISIBLE);
                     return;
                 }
@@ -394,14 +404,14 @@ public class MainActivity extends AppCompatActivity {
                 String selected_constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
 
                 // Send selected entries (state & constituency) to Firebase
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     selected_state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                 }
                 selected_state = selected_state.replace(" ", "_");
                 selected_state = selected_state.replace("&", "and");
                 FirebaseLogger.send(getBaseContext(), selected_state);
 
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     selected_constituency = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                 }
                 selected_constituency = selected_constituency.replace(" ", "_");
@@ -502,29 +512,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void changeLanguage(View view){
-        String current_language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null);
-
-        if(current_language == null || current_language.equals(sLANGUAGE_ENGLISH)) {
-            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI).commit();
-            setUI_Lang(this, "hi");
-
-            FirebaseLogger.send(this, "App_Lang_Hindi");
-            //Toast.makeText(getApplicationContext(),"भाषा को सफलतापूर्वक बदल दिया गया है", Toast.LENGTH_SHORT).show();
-        } else {
-            mEditor.putString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_ENGLISH).commit();
-            setUI_Lang(this, "en");
-
-            FirebaseLogger.send(this, "App_Lang_Eng");
-            //Toast.makeText(getApplicationContext(),"Language has successfully changed", Toast.LENGTH_SHORT).show();
-        }
-
-        String language = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, null);
-        String state = get_state(this, language);
-        String area = get_area(this, language);
-        mEditor.putString(sSTATE, state).commit();
-        mEditor.putString(sMP_AREA, area).commit();
-
-        this.recreate(); // refresh screen
+        Intent intent = new Intent(this, Language.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     public static void setUI_Lang(Activity activity, String lang) { // before setContentView
@@ -543,16 +533,16 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
         String state_in = shared_pref.getString(sSTATE, DEFAULT_STATE);
 
-        if (language.equals(sLANGUAGE_HINDI)) {
+        if (language.equals(sLANGUAGE_ENGLISH)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state_in.equals(MPdata.all_MPs[i][0])) {
-                    state = MPdata.all_MPs[i][3];
+                if (state_in.equals(MPdata.all_MPs[i][3])) {
+                    state = MPdata.all_MPs[i][0];
                 }
             }
         } else {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state_in.equals(MPdata.all_MPs[i][3])) {
-                    state = MPdata.all_MPs[i][0];
+                if (state_in.equals(MPdata.all_MPs[i][0])) {
+                    state = MPdata.all_MPs[i][3];
                 }
             }
         }
@@ -566,16 +556,16 @@ public class MainActivity extends AppCompatActivity {
         String state_in = shared_pref.getString(sSTATE, DEFAULT_STATE);
         String area_in = shared_pref.getString(sMP_AREA, DEFAULT_MP);
 
-        if (language.equals(sLANGUAGE_HINDI)) {
+        if (language.equals(sLANGUAGE_ENGLISH)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state_in.equals(MPdata.all_MPs[i][0]) && area_in.equals(MPdata.all_MPs[i][1])) {
-                    area = MPdata.all_MPs[i][4];
+                if (state_in.equals(MPdata.all_MPs[i][3]) && area_in.equals(MPdata.all_MPs[i][4])) {
+                    area = MPdata.all_MPs[i][1];
                 }
             }
         } else {
             for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state_in.equals(MPdata.all_MPs[i][3]) && area_in.equals(MPdata.all_MPs[i][4])) {
-                    area = MPdata.all_MPs[i][1];
+                if (state_in.equals(MPdata.all_MPs[i][0]) && area_in.equals(MPdata.all_MPs[i][1])) {
+                    area = MPdata.all_MPs[i][4];
                 }
             }
         }
@@ -641,10 +631,12 @@ public class MainActivity extends AppCompatActivity {
         int notification_id = 0;
 
         if(CHANNEL_ID.equals(sCHANNEL_ID_UPDATE)) {
-            if(current_language.equals(sLANGUAGE_HINDI)) {
-                notification_text = context.getString(R.string.notification_update_hi);
-            } else {
+            if(current_language.equals(sLANGUAGE_ENGLISH)) {
                 notification_text = context.getString(R.string.notification_update);
+            } else if(current_language.equals(sLANGUAGE_MARATHI)) {
+                notification_text = context.getString(R.string.notification_update_mr);
+            } else {
+                notification_text = context.getString(R.string.notification_update_hi);
             }
             notification_name = sCHANNEL_ID_UPDATE;
             notification_id = 1;
@@ -653,10 +645,10 @@ public class MainActivity extends AppCompatActivity {
         else if(CHANNEL_ID.equals(sCHANNEL_ID_SUNDAY)) {
             // Event handling chain doesn't handle language, so using tricks to achieve the effect
             int question_num = new Random().nextInt(Puzzle_Ques.questions.length);
-            if(current_language.equals(sLANGUAGE_HINDI)) {
-                notification_text = Puzzle_Ques.questions[question_num][5]; //context.getString(R.string.sunday_msg_hi);
+            if(current_language.equals(sLANGUAGE_ENGLISH)) {
+                notification_text = Puzzle_Ques.questions[question_num][0]; //context.getString(R.string.sunday_msg_hi);
             } else {
-                notification_text = Puzzle_Ques.questions[question_num][0]; //context.getString(R.string.sunday_msg);
+                notification_text = Puzzle_Ques.questions[question_num][6]; //context.getString(R.string.sunday_msg);
             }
             //Log.e(TAG, question_num + notification_text);
             notification_name = sCHANNEL_ID_SUNDAY;

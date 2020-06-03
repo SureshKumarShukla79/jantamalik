@@ -16,6 +16,7 @@ import in.filternet.jantamalik.R;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class RajyaInfographics extends AppCompatActivity {
     private Toolbar toolbar;
@@ -29,6 +30,10 @@ public class RajyaInfographics extends AppCompatActivity {
         String mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
         if (mLanguage.equals(sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(this, "hi");
+        }
+
+        if (mLanguage.equals(sLANGUAGE_MARATHI)) {
+            MainActivity.setUI_Lang(this, "mr");
         }
         setContentView(R.layout.infographics_rajya);
 

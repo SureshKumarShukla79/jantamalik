@@ -20,7 +20,7 @@
             app:title="@string/app_name"
             app:titleTextColor="#ffffff">
 
-            <Button
+            <ImageButton
                 android:id="@+id/lanugage_button"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -30,7 +30,7 @@
                 android:onClick="changeLanguage"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
-                android:background="@drawable/home_button"/>
+                android:background="@drawable/language_icon"/>
 
             <Button
                 android:id="@+id/puzzle_button"

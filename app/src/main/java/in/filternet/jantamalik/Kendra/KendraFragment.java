@@ -24,6 +24,7 @@ import in.filternet.jantamalik.R;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class KendraFragment extends Fragment {
     String TAG = "VoteFragment";
@@ -41,6 +42,10 @@ public class KendraFragment extends Fragment {
         String mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
         if (mLanguage.equals(sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(getActivity(), "hi");
+        }
+
+        if (mLanguage.equals(sLANGUAGE_MARATHI)) {
+            MainActivity.setUI_Lang(getActivity(), "mr");
         }
 
         view = inflater.inflate(R.layout.kendra, container, false);

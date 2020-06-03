@@ -21,7 +21,7 @@ public class DataFilter {
 
         int i,J=0;
 
-        if (lang.equals(MainActivity.sLANGUAGE_HINDI))
+        if (lang.equals(MainActivity.sLANGUAGE_HINDI) || lang.equals(MainActivity.sLANGUAGE_MARATHI))
             J=3;//hindi states in 3rd column
 
         states = new ArrayList<>();
@@ -41,7 +41,7 @@ public class DataFilter {
 
     public List<String> getMPAreas(String lang,String getState) {
         int i,J=0,K=1;
-        if (lang.equals(MainActivity.sLANGUAGE_HINDI)) {
+        if (lang.equals(MainActivity.sLANGUAGE_HINDI) || lang.equals(MainActivity.sLANGUAGE_MARATHI)) {
             J = 3;      //hindi state
             K = 4;      //hindi constituency
         }
@@ -85,7 +85,7 @@ public class DataFilter {
         int address_column = 11;
 
         MP_info mp_info = new MP_info();
-        if (lang.equals(MainActivity.sLANGUAGE_HINDI)) {
+        if (lang.equals(MainActivity.sLANGUAGE_HINDI) || lang.equals(MainActivity.sLANGUAGE_MARATHI)) {
             state_column = 3;
             area_column = 4;
             name_column = 5;
@@ -109,7 +109,7 @@ public class DataFilter {
 
     public List<String> getMLAAreas(String lang, String getState) {
         int i,J=0,K=3;
-        if (lang.equals(MainActivity.sLANGUAGE_HINDI)) {
+        if (lang.equals(MainActivity.sLANGUAGE_HINDI) || lang.equals(MainActivity.sLANGUAGE_MARATHI)) {
             J = 1;
             K = 6;
         }
@@ -136,7 +136,7 @@ public class DataFilter {
         int i,J=3,nameCol=4,phoneCol=9,emailCol=10,addCol=11;
 
         MP_info mla_info = new MP_info();
-        if (lang.equals(MainActivity.sLANGUAGE_HINDI)) {
+        if (lang.equals(MainActivity.sLANGUAGE_HINDI) || lang.equals(MainActivity.sLANGUAGE_MARATHI)) {
             J = 6;
             nameCol = 7;
         }

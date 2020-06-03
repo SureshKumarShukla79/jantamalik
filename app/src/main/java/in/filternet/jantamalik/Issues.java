@@ -182,7 +182,7 @@ public class Issues extends AppCompatActivity {
                 editor.putString(MainActivity.sSTATE, state).commit();
 
                 String tmp = state;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     String state_out = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                     tmp = state_out;
                 }
@@ -212,7 +212,7 @@ public class Issues extends AppCompatActivity {
                 editor.putString(MainActivity.sMP_AREA, area).commit();
 
                 String tmp = area;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {// Firebase needs English, cant handle Hindi
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     String area_out = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                     tmp = area_out;
                 }
@@ -691,7 +691,7 @@ public class Issues extends AppCompatActivity {
                     text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
 
                     String assets = bucket[i][j + 2];
-                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
                         if (assets.contains("Lac"))
                             assets = assets.replace("Lac", " लाख");
                         else if (assets.contains("Crore"))
@@ -702,7 +702,7 @@ public class Issues extends AppCompatActivity {
                     //Log.e(TAG, "Link: " + url_link);
                     text.setText(Html.fromHtml(url_link));
                 } else {
-                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
                         int j_hi = j + 6;
                         text.setText(bucket[i][j_hi + 2]);
                     } else {
@@ -761,7 +761,7 @@ public class Issues extends AppCompatActivity {
                         break;
                     }
                 } else {
-                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
                         int j_hi = j + 5;
                         text.setText(bucket[i][j_hi + 2]);
                     } else {
@@ -784,7 +784,7 @@ public class Issues extends AppCompatActivity {
         String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
         String constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
 
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
                 if (state.equals(MPdata.all_MPs[i][3]) && constituency.equals(MPdata.all_MPs[i][4])){
                     state = MPdata.all_MPs[i][0];
@@ -821,7 +821,7 @@ public class Issues extends AppCompatActivity {
         String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
         String constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
 
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
                 if (state.equals(MPdata.all_MPs[i][3]) && constituency.equals(MPdata.all_MPs[i][4])) {
                     state = MPdata.all_MPs[i][0];

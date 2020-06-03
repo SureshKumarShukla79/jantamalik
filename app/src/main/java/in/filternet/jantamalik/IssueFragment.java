@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
+import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class IssueFragment extends Fragment {
 
@@ -29,6 +30,10 @@ public class IssueFragment extends Fragment {
         String mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
         if (mLanguage.equals(sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(getActivity(), "hi");
+        }
+
+        if (mLanguage.equals(sLANGUAGE_MARATHI)) {
+            MainActivity.setUI_Lang(getActivity(), "mr");
         }
 
         view = inflater.inflate(R.layout.issues, container, false);

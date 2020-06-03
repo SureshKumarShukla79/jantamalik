@@ -59,6 +59,10 @@ public class Puzzle extends Activity {
             MainActivity.setUI_Lang(this, "hi");
         }
 
+        if(mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+            MainActivity.setUI_Lang(this, "mr");
+        }
+
         setContentView(R.layout.puzzle);
 
         ui_question_no = findViewById(R.id.question_no);
@@ -90,10 +94,10 @@ public class Puzzle extends Activity {
 
         ui_question_no.setText(String.valueOf(++number));
 
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            ui_question.setText(Puzzle_Ques.questions[question_num][6]);
-        } else {
+        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
             ui_question.setText(Puzzle_Ques.questions[question_num][0]);
+        } else {
+            ui_question.setText(Puzzle_Ques.questions[question_num][6]);
         }
 
         //Create a list of radio buttons. Then, choose a radio button, randomly and place right/wrong options on it
@@ -105,35 +109,35 @@ public class Puzzle extends Activity {
 
         //Choose random radio button and place right/wrong options on it
         int index = get_index(option.size());
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][7]);  //Place right answer on that index
-        } else {
+        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
             option.get(index).setText(Puzzle_Ques.questions[question_num][1]);  //Place right answer on that index
+        } else {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][7]);  //Place right answer on that index
         }
         option.remove(index);                                               //Remove the element of that index
         /** Removing the full option, ensures that even if random number repeats, it will go to another slot. **/
 
         index = get_index(option.size());
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][8]);
-        } else {
+        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
             option.get(index).setText(Puzzle_Ques.questions[question_num][2]);
+        } else {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][8]);
         }
         option.remove(index);
 
         index = get_index(option.size());
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][9]);
-        } else {
+        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
             option.get(index).setText(Puzzle_Ques.questions[question_num][3]);
+        } else {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][9]);
         }
         option.remove(index);
 
         index = get_index(option.size());
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][10]);
-        } else {
+        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
             option.get(index).setText(Puzzle_Ques.questions[question_num][4]);
+        } else {
+            option.get(index).setText(Puzzle_Ques.questions[question_num][10]);
         }
         option.remove(index);
     }
@@ -274,12 +278,12 @@ public class Puzzle extends Activity {
 
     public void onclick_check_answer(View view) {
         String correct_answer;
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            correct_answer = Puzzle_Ques.questions[question_num][7];
-            ui_detail.setText(Puzzle_Ques.questions[question_num][11]);
-        } else {
+        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
             correct_answer = Puzzle_Ques.questions[question_num][1];
             ui_detail.setText(Puzzle_Ques.questions[question_num][5]);
+        } else {
+            correct_answer = Puzzle_Ques.questions[question_num][7];
+            ui_detail.setText(Puzzle_Ques.questions[question_num][11]);
         }
 
         FirebaseLogger.send(this, "Q" + question_num);
