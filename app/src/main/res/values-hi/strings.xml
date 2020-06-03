@@ -1,21 +1,7 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
 
-    <string name="team_list"><u>श्रेय</u> :
-        \nएसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स(ADR)
-        \nमोनिका बोस
-        \nसोनल शुक्ल
-        \nफैजान मुस्तफा
-        \nकौशल कुशवाहा
-        \nनिशंक त्रिपाठी
-        \nप्रत्यूश आनंद
-        \nरवीश कुमार
-        \nसिद्धेश शाह
-        \nशिवम राजदेव
-        \nशरद सेठ
-        \nसुरेश शुक्ल
-        \nविकास गुप्ता
-        \nविवेक सेठ</string>
+    <string name="team_list"><u>श्रेय</u></string>
 
     <string name="kendra"><b>केन्द्र</b></string>
     <string name="rajya"><b>राज्य</b></string>

@@ -18,7 +18,7 @@
     android:layout_margin="2dp"
     tools:context="in.filternet.jantamalik.Kendra.VoteMP">
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_margin="3dp"
         android:layout_height="wrap_content">
@@ -55,9 +55,9 @@
                 android:layout_gravity="right|end"
                 android:src="@drawable/right_black_arrow_24dp" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
@@ -96,9 +96,9 @@
                 android:background="@drawable/recyclerview_item_click_effect"
                 android:src="@drawable/right_black_arrow_24dp" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
@@ -143,9 +143,9 @@
                     android:background="@drawable/recyclerview_item_click_effect"
                     android:src="@drawable/right_black_arrow_24dp" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
@@ -194,9 +194,9 @@
                     android:src="@drawable/right_black_arrow_24dp" />
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
@@ -233,7 +233,7 @@
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/right_black_arrow_24dp" />
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:layout_margin="10dp"

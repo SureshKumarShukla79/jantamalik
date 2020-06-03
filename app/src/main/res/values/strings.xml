@@ -1,21 +1,7 @@
 <resources>
     <string name="app_name">Janta Malik</string>
 
-    <string name="team_list"><u>Credits</u> :
-        \nAssociation for Democratic Reforms(ADR)
-        \nMonika Bose
-        \nSonal Shukla
-        \nFaizan Mustafa
-        \nKaushal Kushwaha
-        \nNishank Tripathi
-        \nPratyush Anand
-        \nRavish Kumar
-        \nSiddhesh Shah
-        \nShivam Rajdev
-        \nSharad Seth
-        \nSuresh Shukla
-        \nVikas Gupta
-        \nVivek Seth</string>
+    <string name="team_list"><u>Credits</u></string>
 
     <string name="kendra"><b>Center</b></string>
     <string name="rajya"><b>State</b></string>

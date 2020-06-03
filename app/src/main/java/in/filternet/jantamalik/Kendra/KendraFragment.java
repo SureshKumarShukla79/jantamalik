@@ -4,25 +4,19 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import in.filternet.jantamalik.Contact;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import in.filternet.jantamalik.FirebaseLogger;
 import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
-import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 

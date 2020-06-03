@@ -50,7 +50,7 @@
             android:textColor="@color/black"
             android:text=""/>
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/answers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
 
                 </RadioGroup>
             </RelativeLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     <ImageView
         android:id="@+id/correct"

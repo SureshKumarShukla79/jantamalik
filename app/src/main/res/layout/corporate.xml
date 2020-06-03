@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:padding="5dp">
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -43,5 +43,5 @@
                     android:visibility="gone"/>
             </LinearLayout>
         </LinearLayout>
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

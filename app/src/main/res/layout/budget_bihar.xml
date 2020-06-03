@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -239,7 +239,7 @@
             android:padding="8dp"
             android:textColor="@color/black" />
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/nestedScroll"
             android:layout_below="@id/tax_details"
             android:layout_width="match_parent"
@@ -393,7 +393,7 @@
                 </TableRow>
             </TableLayout>
 
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
         <TextView
             android:layout_width="match_parent"

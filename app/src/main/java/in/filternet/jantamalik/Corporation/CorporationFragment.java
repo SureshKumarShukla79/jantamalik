@@ -3,10 +3,12 @@ package in.filternet.jantamalik.Corporation;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
 import in.filternet.jantamalik.FirebaseLogger;
 import in.filternet.jantamalik.MainActivity;
@@ -15,7 +17,7 @@ import in.filternet.jantamalik.R;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
-public class CorporationFragment extends android.support.v4.app.Fragment {
+public class CorporationFragment extends Fragment {
     View view;
     String current_language;
 
