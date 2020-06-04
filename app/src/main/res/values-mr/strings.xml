@@ -2,21 +2,7 @@
 <resources>
     <string name="app_name">जनता मालिक </string>
 
-    <string name="team_list"><u>Credits</u> :
-        \nअसोसिएशन फॉर डेमोक्रॅटिक रिफॉर्म्स (एडीआर)
-        \nमोनिका बोस
-        \nसोनल शुक्ला
-        \nफैजान मुस्तफा
-        \nकौशल कुशवाह
-        \nनिशांक त्रिपाठी
-        \nप्रतयुष आनंद
-        \nरविष कुमार
-        \nसिद्धेश शाह
-        \nशिवम राजडेव
-        \nशरध सेठ
-        \nसुरेश शुक्ला
-        \nविकास गुप्ता
-        \nविवेक सेठ </string>
+    <string name="team_list">श्रेय</string>
 
     <string name="kendra"><b>केन्द्र</b></string>
     <string name="rajya"><b>राज्य</b></string>

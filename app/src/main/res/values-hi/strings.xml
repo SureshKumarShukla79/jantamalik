@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
 
-    <string name="team_list"><u>श्रेय</u></string>
+    <string name="team_list">श्रेय</string>
 
     <string name="kendra"><b>केन्द्र</b></string>
     <string name="rajya"><b>राज्य</b></string>

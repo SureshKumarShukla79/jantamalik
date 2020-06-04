@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Janta Malik</string>
 
-    <string name="team_list"><u>Credits</u></string>
+    <string name="team_list">Credits</string>
 
     <string name="kendra"><b>Center</b></string>
     <string name="rajya"><b>State</b></string>
@@ -50,7 +50,7 @@
 
     <string name="update_info">Call and email your MP. Don\'t hesitate.</string>
 
-    <string name="donate_appeal">We are a non-profit organization, your donation keeps us running.</string>
+    <string name="donate_appeal">Filternet Foundation is a non-profit organization, your donation keeps this project running.</string>
     <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
         \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
 
@@ -207,7 +207,7 @@
     <string name="email">Email</string>
     <string name="mail_to_us">App is made by Filternet Foundation in public interest.</string>
     <string name="work_in_progress">Work In Progress</string>
-    <string name="opensource">Open Source</string>
+    <string name="opensource">Open Source (github)</string>
     <string name="saansad_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
         \n\nThey can not serve the role of a responsible MP.</string>
 

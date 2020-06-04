@@ -179,7 +179,7 @@ public class Contact extends AppCompatActivity {
 
 
     public void onclick_open_donate(View view) {
-        FirebaseLogger.send(this, "Tap_Donate");
+        FirebaseLogger.send(this, "Donate");
 
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -187,9 +187,17 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_github(View view) {
-        FirebaseLogger.send(this, "Tap_GitHub");
+        FirebaseLogger.send(this, "GitHub");
 
         Uri uri = Uri.parse("https://github.com/SureshKumarShukla79/jantamalik");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void onclick_credits(View view) {
+        FirebaseLogger.send(this, "Credits");
+
+        Uri uri = Uri.parse("https://www.filternet.in/volunteer/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
