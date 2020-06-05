@@ -694,4 +694,8 @@
 
     <string name="ok">OK</string>
     <string name="score"><b>Your score:</b>\n</string>
+
+    <string name="no_language_support">We are unable to support this language.
+        \nSorry for the inconvenience</string>
+    <string name="button_ok">OK</string>
 </resources>

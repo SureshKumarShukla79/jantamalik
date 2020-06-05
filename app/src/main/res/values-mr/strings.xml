@@ -695,4 +695,8 @@
 
     <string name="ok">ठीक आहे </string>
     <string name="score"><b>तुमचा स्कोर :</b>\n</string>
+
+    <string name="no_language_support">आम्ही या भाषेचे समर्थन करण्यास अक्षम आहोत।
+        \nगैरसोयीबद्दल क्षमस्व।</string>
+    <string name="button_ok">OK</string>
 </resources>

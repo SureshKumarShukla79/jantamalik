@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
     String mLanguage;
     boolean rajya;
+    private static String prev_user_select_language = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,6 +155,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             setUI_Lang(this, "hi");
             FirebaseLogger.send(this, "App_Lang_Hindi");
+        }
+
+        if(mLanguage.equals(sLANGUAGE_HINDI) && !user_select_language.equals("Hindi") && !prev_user_select_language.equals(user_select_language)) {
+            prompt_no_language_support();
+            prev_user_select_language = user_select_language;
+        } else {
+            prompt_user_agree();
         }
 
         setContentView(R.layout.activity_main);
@@ -229,8 +237,6 @@ public class MainActivity extends AppCompatActivity {
         new VersionPrompt().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
         set_notification_time(this, true);
-
-        prompt_user_agree();
     }
 
     private void choose_language() {
@@ -309,6 +315,54 @@ public class MainActivity extends AppCompatActivity {
             dialog.setCancelable(false);
             dialog.show();
         }
+    }
+
+    private void prompt_no_language_support() {
+        TextView message = new TextView(this);
+        message.setTextSize((float) 20);
+        message.setHeight(250);
+        message.setPadding(30,30,30,0);
+        message.setGravity(Gravity.CENTER);
+
+        String text_to_show = "", button_ok = "";
+        if(mLanguage.equals(sLANGUAGE_ENGLISH)) {
+            text_to_show = getResources().getString(R.string.no_language_support);
+            button_ok = getResources().getString(R.string.button_ok);
+        } else if(mLanguage.equals(sLANGUAGE_MARATHI)) {
+            text_to_show = getResources().getString(R.string.no_language_support);
+            button_ok = getResources().getString(R.string.button_ok);
+        } else {
+            text_to_show = getResources().getString(R.string.no_language_support);
+            button_ok = getResources().getString(R.string.button_ok);
+        }
+
+        SpannableString s = new SpannableString(text_to_show);
+        message.setText(s);
+        message.setMovementMethod(LinkMovementMethod.getInstance());
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+        builder.setView(message);
+        builder.setPositiveButton(button_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+
+                prompt_user_agree();
+            }
+        });
+
+        final AlertDialog dialog = builder.create();
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog_interface) {
+                Button neutral = dialog.getButton(Dialog.BUTTON_NEUTRAL);
+                neutral.setTextSize((float) 20);
+                neutral.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                neutral.setTypeface(neutral.getTypeface(), Typeface.BOLD);
+            }
+        });
+
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     private void ask_user_preference() {
