@@ -21,7 +21,7 @@ import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class KendraFragment extends Fragment {
-    String TAG = "VoteFragment";
+    String TAG = "KendraFragment";
 
     private View view;
     private Intent intent;
@@ -44,7 +44,7 @@ public class KendraFragment extends Fragment {
 
         view = inflater.inflate(R.layout.kendra, container, false);
 
-        FirebaseLogger.send(getContext(), "Kendra_Screen");
+        FirebaseLogger.send(getContext(), TAG);
 
         vote();
         note();

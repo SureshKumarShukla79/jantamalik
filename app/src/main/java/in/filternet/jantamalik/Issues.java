@@ -943,7 +943,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_share_button(View view) {
-        FirebaseLogger.send(this, "Tap_Share");
+        FirebaseLogger.send(this, "Share");
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
@@ -956,7 +956,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_open_donate(View view) {
-        FirebaseLogger.send(this, "Tap_Donate");
+        FirebaseLogger.send(this, "Donate");
 
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -964,7 +964,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_MP_screen(View view) {
-        FirebaseLogger.send(this, titleName + "_Contact_MP");
+        FirebaseLogger.send(this, titleName + "_MP");
 
         Intent intent = new Intent(view.getContext(), VoteMP.class);
         intent.putExtra("layout_id", layoutResID);
@@ -973,7 +973,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_MLA_screen(View view) {
-        FirebaseLogger.send(this, titleName + "_Contact_MLA");
+        FirebaseLogger.send(this, titleName + "_MLA");
 
         Intent intent = new Intent(view.getContext(), MainActivity.class);
         intent.putExtra("rajya", true);
@@ -981,7 +981,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_Parshad_screen(View view) {
-        FirebaseLogger.send(this, titleName + "_Contact_Parshad");
+        FirebaseLogger.send(this, titleName + "_Parshad");
 
         Toast.makeText(getApplicationContext(), getText(R.string.parshad_missing), Toast.LENGTH_LONG).show();
     }

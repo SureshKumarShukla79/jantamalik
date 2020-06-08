@@ -66,7 +66,7 @@ public class Contact extends AppCompatActivity {
         }
 
         setContentView(R.layout.contact);
-        FirebaseLogger.send(this, "Tap_Contact_Us");
+        FirebaseLogger.send(this, "Contact_Us");
 
         ui_issue = findViewById(R.id.radio_issue);
         ui_update = findViewById(R.id.radio_update);
@@ -124,7 +124,7 @@ public class Contact extends AppCompatActivity {
                         subject = mIssueSubject;
                     else
                         subject = getString(R.string.add_issue);
-                    firebase_tag = "User_Action_AddIssues";
+                    firebase_tag = "AddIssues";
                 }
                 break;
             case R.id.radio_update:
@@ -133,7 +133,7 @@ public class Contact extends AppCompatActivity {
                         subject = mIssueSubject;
                     else
                         subject = getString(R.string.update_contact_info);
-                    firebase_tag = "User_Action_UpdateInfo";
+                    firebase_tag = "UpdateInfo";
                 }
                 break;
             case R.id.radio_feedback:
@@ -142,7 +142,7 @@ public class Contact extends AppCompatActivity {
                         subject = mIssueSubject;
                     else
                         subject = getString(R.string.feedback);
-                    firebase_tag = "User_Action_Feedback";
+                    firebase_tag = "Feedback";
                 }
                 break;
         }
@@ -252,7 +252,7 @@ public class Contact extends AppCompatActivity {
     public void onclick_call_us(View view) {
         Uri number = Uri.parse("tel:" + getString(R.string.phone_number));
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-        FirebaseLogger.send(this, "Tap_Call_Us");
+        FirebaseLogger.send(this, "Call_Us");
 
         try { // Calling not available on Tablet devices
             startActivity(callIntent);
@@ -263,7 +263,7 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_open_website(View view) {
-        FirebaseLogger.send(this, "Tap_Open_Website");
+        FirebaseLogger.send(this, "Open_Website");
 
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://filternet.in")));
     }

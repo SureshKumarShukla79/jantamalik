@@ -154,7 +154,7 @@ public class RajyaFragment extends Fragment {
             }
         });
 
-        FirebaseLogger.send(getContext(), "Rajya_Screen");
+        FirebaseLogger.send(getContext(), TAG);
 
         govt_Click();
         duties_Click();

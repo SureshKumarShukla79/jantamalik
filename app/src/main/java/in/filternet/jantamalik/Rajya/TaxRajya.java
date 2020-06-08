@@ -49,7 +49,7 @@ public class TaxRajya extends AppCompatActivity {
 
         setContentView(layoutResID);
 
-        FirebaseLogger.send(this, "Rajya_Tax");
+        FirebaseLogger.send(this, TAG);
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);

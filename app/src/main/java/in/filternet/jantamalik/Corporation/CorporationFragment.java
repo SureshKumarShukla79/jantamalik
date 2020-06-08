@@ -18,6 +18,9 @@ import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class CorporationFragment extends Fragment {
+
+    private final static String TAG ="CorporationFragment";
+
     View view;
     String current_language;
 
@@ -39,7 +42,7 @@ public class CorporationFragment extends Fragment {
 
         view = inflater.inflate(R.layout.corporate,container,false);
 
-        FirebaseLogger.send(getContext(), "Corporation_Screen");
+        FirebaseLogger.send(getContext(), TAG);
 
         return view;
     }

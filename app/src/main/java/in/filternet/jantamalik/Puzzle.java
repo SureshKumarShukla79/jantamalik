@@ -79,7 +79,7 @@ public class Puzzle extends Activity {
         ui_detail = findViewById(R.id.detail);
 
         update_question();
-        FirebaseLogger.send(this, "Quiz");
+        FirebaseLogger.send(this, "Puzzle");
     }
 
     private void update_question() {

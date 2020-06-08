@@ -342,10 +342,9 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
         builder.setView(message);
-        builder.setPositiveButton(button_ok, new DialogInterface.OnClickListener() {
+        builder.setNeutralButton(button_ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
-
                 prompt_user_agree();
             }
         });
@@ -547,7 +546,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclick_share_button(View view) {
-        FirebaseLogger.send(this, "Tap_Share");
+        FirebaseLogger.send(this, "Share");
 
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("text/plain");
@@ -559,7 +558,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclick_open_donate(View view) {
-        FirebaseLogger.send(this, "Tap_Donate");
+        FirebaseLogger.send(this, "Donate");
 
         Uri uri = Uri.parse("https://www.filternet.in/donate/");
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -788,7 +787,7 @@ public class MainActivity extends AppCompatActivity {
                     builder.setPositiveButton(R.string.Option_Update, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int id) {
-                            FirebaseLogger.send(MainActivity.this, "Tap_Update_App");
+                            FirebaseLogger.send(MainActivity.this, "Update_App");
 
                             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(URL_PLAYSTORE_MARKET)));
                         }
@@ -798,7 +797,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int id) {
                             mEditor.putBoolean(bAPP_UPDATE_LATER, true).commit();
 
-                            FirebaseLogger.send(MainActivity.this, "Tap_Update_Later");
+                            FirebaseLogger.send(MainActivity.this, "Update_Later");
                         }
                     });
 

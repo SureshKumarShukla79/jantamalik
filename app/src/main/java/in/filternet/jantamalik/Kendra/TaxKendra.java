@@ -22,6 +22,8 @@ import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 
 public class TaxKendra extends AppCompatActivity {
 
+    private final static String TAG ="TaxKendra";
+
     private SharedPreferences mSharedPref;
     private Toolbar toolbar;
     private TextView interest, education, health;
@@ -42,7 +44,7 @@ public class TaxKendra extends AppCompatActivity {
         }
 
         setContentView(R.layout.tax_kendra);
-        FirebaseLogger.send(this, "Kendra_Tax");
+        FirebaseLogger.send(this, TAG);
 
         toolbar = findViewById(R.id.toolbar_Tax_Kendra);
         interest = findViewById(R.id.interest);

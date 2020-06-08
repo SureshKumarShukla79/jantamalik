@@ -20,6 +20,8 @@ import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 
 public class DutiesKendra extends AppCompatActivity {
 
+    private final static String TAG ="DutiesKendra";
+
     private SharedPreferences mSharedPref;
     private Toolbar toolbar;
 
@@ -39,7 +41,7 @@ public class DutiesKendra extends AppCompatActivity {
         }
 
         setContentView(R.layout.duties_kendra);
-        FirebaseLogger.send(this, "Kendra_Duties");
+        FirebaseLogger.send(this, TAG);
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);

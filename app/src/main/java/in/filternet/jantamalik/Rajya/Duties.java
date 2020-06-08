@@ -20,6 +20,8 @@ import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 
 public class Duties extends AppCompatActivity {
 
+    private final static String TAG ="Duties";
+
     private SharedPreferences mSharedPref;
     private Toolbar toolbar;
 

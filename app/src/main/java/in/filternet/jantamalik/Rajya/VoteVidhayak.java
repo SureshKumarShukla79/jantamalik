@@ -46,7 +46,7 @@ public class VoteVidhayak extends AppCompatActivity {
 
         setContentView(R.layout.vote_mla_layout);
 
-        FirebaseLogger.send(this, "Rajya_VoteMLA");
+        FirebaseLogger.send(this, TAG);
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         editor = mSharedPref.edit();

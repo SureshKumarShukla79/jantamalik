@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Language extends AppCompatActivity {
 
+    private final static String TAG ="Language";
+
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
 
@@ -23,7 +25,7 @@ public class Language extends AppCompatActivity {
 
         setContentView(R.layout.language);
 
-        FirebaseLogger.send(this, "Language");
+        FirebaseLogger.send(this, TAG);
     }
 
     public void onclick_select_language(View view) {

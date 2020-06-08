@@ -20,6 +20,9 @@ import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class RajyaInfographics extends AppCompatActivity {
+
+    private final static String TAG ="RajyaInfographics";
+
     private Toolbar toolbar;
 
     @Override
@@ -38,7 +41,7 @@ public class RajyaInfographics extends AppCompatActivity {
         }
         setContentView(R.layout.infographics_rajya);
 
-        FirebaseLogger.send(this, "Rajya_Infographics");
+        FirebaseLogger.send(this, TAG);
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
