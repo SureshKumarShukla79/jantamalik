@@ -177,25 +177,26 @@ public class MainActivity extends AppCompatActivity {
         String MP = mSharedPref.getString(sMP_AREA, DEFAULT_MP);
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
-        // In case of Hindi, change the defaults
-        if (mLanguage.equals(sLANGUAGE_HINDI)) {
-            if (State.equals(DEFAULT_STATE))
-                State = hiDEFAULT_STATE;
-            if (MP.equals(DEFAULT_MP))
-                MP = hiDEFAULT_MP;
-        }
-
-        // In case of Marathi, change the defaults
-        if (mLanguage.equals(sLANGUAGE_MARATHI)) {
-            if (State.equals(DEFAULT_STATE))
+        if(State.equals(DEFAULT_STATE) || State.equals(hiDEFAULT_STATE) || State.equals(mrDEFAULT_STATE)) {
+            if (mLanguage.equals(sLANGUAGE_ENGLISH)) {  // In case of English, change the defaults
+                State = DEFAULT_STATE;
+                MP = DEFAULT_MP;
+            } else if (mLanguage.equals(sLANGUAGE_MARATHI)) {   // In case of Marathi, change the defaults
                 State = mrDEFAULT_STATE;
-            if (MP.equals(DEFAULT_MP))
                 MP = mrDEFAULT_MP;
-        }
-        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
+            } else {    // In case of Hindi, change the defaults
+                State = hiDEFAULT_STATE;
+                MP = hiDEFAULT_MP;
+            }
 
-        mEditor.putString(MainActivity.sSTATE, State).commit();
-        mEditor.putString(MainActivity.sMP_AREA, MP).commit();
+            mEditor.putString(MainActivity.sSTATE, State).commit();
+            mEditor.putString(MainActivity.sMP_AREA, MP).commit();
+        } else {
+            String state = MainActivity.get_state(this, mLanguage);
+            String area = MainActivity.get_area(this, mLanguage);
+            mEditor.putString(MainActivity.sSTATE, state).commit();
+            mEditor.putString(MainActivity.sMP_AREA, area).commit();
+        }
 
         setSupportActionBar(toolbar);
 
@@ -342,7 +343,7 @@ public class MainActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
         builder.setView(message);
-        builder.setNeutralButton(button_ok, new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(button_ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 prompt_user_agree();
@@ -353,10 +354,10 @@ public class MainActivity extends AppCompatActivity {
         dialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface dialog_interface) {
-                Button neutral = dialog.getButton(Dialog.BUTTON_NEUTRAL);
-                neutral.setTextSize((float) 20);
-                neutral.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
-                neutral.setTypeface(neutral.getTypeface(), Typeface.BOLD);
+                Button button = dialog.getButton(Dialog.BUTTON_POSITIVE);
+                button.setTextSize((float) 20);
+                button.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                button.setTypeface(button.getTypeface(), Typeface.BOLD);
             }
         });
 
@@ -593,10 +594,28 @@ public class MainActivity extends AppCompatActivity {
                     state = MPdata.all_MPs[i][0];
                 }
             }
+
+            //State is still empty which means user selected preference is already in English then no need to change
+            if(state.equals(" ")) {
+                for (int i = 0; i < MPdata.all_MPs.length; i++) {
+                    if (state_in.equals(MPdata.all_MPs[i][0])) {
+                        state = state_in;
+                    }
+                }
+            }
         } else {
             for(int i=0; i< MPdata.all_MPs.length; i++){
                 if (state_in.equals(MPdata.all_MPs[i][0])) {
                     state = MPdata.all_MPs[i][3];
+                }
+            }
+
+            //State is still empty which means user selected preference is already in Hindi then no need to change
+            if(state.equals(" ")) {
+                for (int i = 0; i < MPdata.all_MPs.length; i++) {
+                    if (state_in.equals(MPdata.all_MPs[i][3])) {
+                        state = state_in;
+                    }
                 }
             }
         }
@@ -616,10 +635,28 @@ public class MainActivity extends AppCompatActivity {
                     area = MPdata.all_MPs[i][1];
                 }
             }
+
+            //Area is still empty which means user selected preference is already in Hindi then no need to change
+            if(area.equals(" ")) {
+                for (int i = 0; i < MPdata.all_MPs.length; i++) {
+                    if (state_in.equals(MPdata.all_MPs[i][0]) && area_in.equals(MPdata.all_MPs[i][1])) {
+                        area = area_in;
+                    }
+                }
+            }
         } else {
             for(int i=0; i< MPdata.all_MPs.length; i++){
                 if (state_in.equals(MPdata.all_MPs[i][0]) && area_in.equals(MPdata.all_MPs[i][1])) {
                     area = MPdata.all_MPs[i][4];
+                }
+            }
+
+            //Area is still empty which means user selected preference is already in Hindi then no need to change
+            if(area.equals(" ")) {
+                for (int i = 0; i < MPdata.all_MPs.length; i++) {
+                    if (state_in.equals(MPdata.all_MPs[i][3]) && area_in.equals(MPdata.all_MPs[i][4])) {
+                        area = area_in;
+                    }
                 }
             }
         }
