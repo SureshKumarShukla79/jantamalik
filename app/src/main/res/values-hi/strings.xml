@@ -701,8 +701,7 @@
     <string name="ok">ठीक है</string>
     <string name="score"><b>आपका स्कोर:</b>\n</string>
 
-    <string name="no_language_support">हम इस भाषा का समर्थन करने में असमर्थ हैं।
-        \nअसुविधा के लिए खेद है।</string>
+    <string name="no_language_support">यह भाषा अभी नहीं जोड़ी गई है। अाप इसमें अनुवाद जोड़कर इसे बोलनेवाले लोगों की मदद कर सकते हैं।</string>
     <string name="button_ok">ठीक है</string>
 
 </resources>
