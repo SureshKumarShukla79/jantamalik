@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -286,7 +287,7 @@ public class Puzzle extends Activity {
             ui_detail.setText(Puzzle_Ques.questions[question_num][11]);
         }
 
-        LogEvents.send(this, "Q" + question_num);
+        LogEvents.send(this, "Q" + (question_num+1));
 
         boolean checked =  ((RadioButton) view).isChecked();
 
@@ -302,7 +303,7 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        LogEvents.send(this, "A" + question_num);
+                        LogEvents.send(this, "A" + (question_num+1));
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -321,7 +322,7 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        LogEvents.send(this, "A" + question_num);
+                        LogEvents.send(this, "A" + (question_num+1));
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -340,7 +341,7 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        LogEvents.send(this, "A" + question_num);
+                        LogEvents.send(this, "A" + (question_num+1));
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -359,7 +360,7 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        LogEvents.send(this, "A" + question_num);
+                        LogEvents.send(this, "A" + (question_num+1));
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
