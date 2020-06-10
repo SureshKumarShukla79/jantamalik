@@ -114,7 +114,6 @@ public class Contact extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private String firebase_tag = "";
     public void onclick_add_subject(View view) {
         boolean checked =  ((RadioButton) view).isChecked();
         switch (view.getId()) {
@@ -124,7 +123,8 @@ public class Contact extends AppCompatActivity {
                         subject = mIssueSubject;
                     else
                         subject = getString(R.string.add_issue);
-                    firebase_tag = "AddIssues";
+
+                    LogEvents.send(this, "AddIssues");
                 }
                 break;
             case R.id.radio_update:
@@ -133,7 +133,8 @@ public class Contact extends AppCompatActivity {
                         subject = mIssueSubject;
                     else
                         subject = getString(R.string.update_contact_info);
-                    firebase_tag = "UpdateInfo";
+
+                    LogEvents.send(this, "UpdateInfo");
                 }
                 break;
             case R.id.radio_feedback:
@@ -142,7 +143,8 @@ public class Contact extends AppCompatActivity {
                         subject = mIssueSubject;
                     else
                         subject = getString(R.string.feedback);
-                    firebase_tag = "Feedback";
+
+                    LogEvents.send(this, "Feedback");
                 }
                 break;
         }
@@ -170,8 +172,7 @@ public class Contact extends AppCompatActivity {
                 finish();
             }
 
-            LogEvents.send(this, firebase_tag);
-
+            LogEvents.send(this, "SendingEmail");
         } catch (Exception ex) {
             Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
         }
@@ -218,6 +219,8 @@ public class Contact extends AppCompatActivity {
                     intent.setAction(Intent.ACTION_VIEW);
                     intent.setData(url);
                     startActivity(intent);
+
+                    LogEvents.send(this, "SendingWhatsApp");
                 } else {
                     Toast.makeText(this, "Sending failed", Toast.LENGTH_LONG).show();
                 }
@@ -252,10 +255,10 @@ public class Contact extends AppCompatActivity {
     public void onclick_call_us(View view) {
         Uri number = Uri.parse("tel:" + getString(R.string.phone_number));
         Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-        LogEvents.send(this, "Call_Us");
 
         try { // Calling not available on Tablet devices
             startActivity(callIntent);
+            LogEvents.send(this, "Call_Us");
         } catch (Exception exception){
             Toast.makeText(this, "Unable to CALL", Toast.LENGTH_LONG).show();
             exception.printStackTrace();
