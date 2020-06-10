@@ -73,7 +73,7 @@ public class Language extends AppCompatActivity {
         }
 
         mEditor.putString(MainActivity.sUSER_SELECT_LANGUAGE, language).commit();
-        LogEvents.sendWithValue(this, "language", language);
+        LogEvents.sendWithValue(this, "lang", language);
 
         Intent intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);

@@ -28,7 +28,7 @@ public final class LogEvents {
     }
 
     public static void sendWithValue(Context context, String name, String value) {
-        //if (BuildConfig.RELEASE_MODE) // during DEBUG or development comment this out
+        if (BuildConfig.RELEASE_MODE) // during DEBUG or development comment this out
         {
             if (!Common.checkNetconnectivity(context)) {
                 return;
