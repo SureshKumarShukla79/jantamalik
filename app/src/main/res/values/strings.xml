@@ -40,29 +40,22 @@
 
     <string name="mp_area">Constituency: </string>
 
-    <string name="MP_modi">Narendra Modi</string>
-    <string name="constituency_info_modi">Constituency: Varanasi</string>
-    <string name="contact_no_modi">+91-11-23012312</string>
-    <string name="email_contact_modi">connect@mygov.nic.in</string>
-    <string name="address_modi">7 Lok Kalyan Marg, New Delhi, 110011</string>
-
     <string name="source_sansad">Source - Election Commission affidavit https://myneta.info</string>
 
     <string name="update_info">Call and email your MP. Don\'t hesitate.</string>
 
     <string name="donate_appeal">Filternet Foundation is a non-profit organization, your donation keeps this project running.</string>
-    <string name="doha">चिड़िया चोंच भर ले गई, नदी न घटयो नीर
-        \nदान दिेए धन ना घटे, कह गए दास कबीर</string>
 
-    <string name="support_email">jantamalik@filternet.in</string>
+    <string name="support_email">support@filternet.in</string>
     <string name="add_issue">Add Issue</string>
     <string name="update_contact_info">Update Information. Your name will appear in contributors.</string>
     <string name="feedback">Feedback</string>
 
-    <string name="share_message">Everyone loves discount 😀
-        \n\n Discounts are 2-steps away
+    <string name="share_message">Lets improve our governance 😀
+        \n\n Yes, it is possible.
+        \n Biggest challenge is to find - who is responsible t solve the problem!
         \n1 Install Janta Malik App
-        \n2 Follow the tip given in app
+        \n2 Check your voter awareness, solve issues
         \n</string>
 
     <string name="state_text">State:</string>
@@ -92,9 +85,6 @@
     <string name="tax_total_center"><b>Total tax to central govt - Twenty seven lakh eighty six thousand three hundred fifty crores</b></string>
     <string name="tax_center_details">Where is our tax money spent?</string>
     <string name="crore">Crore</string>
-
-    <string name="interest1">हर 100 रू में से 23.58 रू ब्याज पर खर्च होता है</string>
-    <string name="defense1">हर 100 रू में से 11.58 रू रक्षा पर खर्च होता है</string>
 
     <string name="interest">Interest</string>
     <string name="defence">Defence</string>
@@ -170,8 +160,6 @@
     <string name="notification_update">New version of app is available. Download.</string>
     <string name="notification_update_hi">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
     <string name="notification_update_mr">अ‍ॅपची नवीन व्हर्जन उपलब्ध आहे, डाउनलोड करा</string>
-    <string name="sunday_msg">Make the difference. Nation needs you!</string>
-    <string name="sunday_msg_hi">अपने अधिकार पहजानें, बेहतर भारत बनाएँ!</string>
 
     <string name="kendra_budget_simple">27 lakh crore</string>
     <string name="kendra_budget">27,86,350 crore</string>
