@@ -21,7 +21,7 @@ import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class IssueFragment extends Fragment {
 
-    private final static String TAG ="IssueFragment";
+    private final static String TAG = "Issue";
 
     private FloatingActionButton ui_add_issue;
     private View view;

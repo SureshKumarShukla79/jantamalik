@@ -23,13 +23,15 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import in.filternet.jantamalik.Contact;
-import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.Issues;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.sMP_AREA;
+import static in.filternet.jantamalik.MainActivity.sSTATE;
 
 public class VoteMP extends AppCompatActivity {
     String TAG = "VoteMP";
@@ -100,8 +102,8 @@ public class VoteMP extends AppCompatActivity {
         });
         mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
 
-        String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String MP = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+        String State = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
+        String MP = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
 
         // Populating GUI
         dataFilter = new DataFilter();
@@ -130,7 +132,7 @@ public class VoteMP extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
                 //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
-                editor.putString(MainActivity.sSTATE, State).commit();
+                editor.putString(sSTATE, State).commit();
 
                 String tmp = State;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
@@ -139,14 +141,14 @@ public class VoteMP extends AppCompatActivity {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                LogEvents.send(getBaseContext(), tmp);
+                LogEvents.sendWithValue(getBaseContext(), sSTATE, tmp);
 
                 // Reload the state MP areas
                 arrayAdapterMP = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
                 arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerMP.setAdapter(arrayAdapterMP);
 
-                String MP = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+                String MP = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
                 int spinnerPosition = arrayAdapterMP.getPosition(MP);
                 spinnerMP.setSelection(spinnerPosition);
             }
@@ -162,7 +164,7 @@ public class VoteMP extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String MPArea = adapterView.getItemAtPosition(i).toString();
                 //Log.e(TAG, "spin MP : " + i + " " + l + " " + MPArea);
-                editor.putString(MainActivity.sMP_AREA, MPArea).commit();
+                editor.putString(sMP_AREA, MPArea).commit();
 
                 String tmp = MPArea;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
@@ -171,7 +173,7 @@ public class VoteMP extends AppCompatActivity {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                LogEvents.send(getBaseContext(), tmp);
+                LogEvents.sendWithValue(getBaseContext(), sMP_AREA, tmp);
 
                 updateMP();
             }
@@ -187,7 +189,7 @@ public class VoteMP extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     private void updateMP() {
         DataFilter dataFilter = new DataFilter();
-        String MPArea = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+        String MPArea = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
         //mp = dataFilter.new MP_info();
         mp = dataFilter.getMPInfo(this, mLanguage, MPArea);
 
@@ -258,8 +260,8 @@ public class VoteMP extends AppCompatActivity {
             state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
             area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
         } else {
-            state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-            area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+            state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
+            area = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
         }
         //Log.e(TAG, state + "," + area);
 

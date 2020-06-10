@@ -69,6 +69,8 @@ import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.USER_SHARE_APP;
+import static in.filternet.jantamalik.MainActivity.sMP_AREA;
+import static in.filternet.jantamalik.MainActivity.sSTATE;
 
 public class Issues extends AppCompatActivity {
     private final static String TAG ="Issues";
@@ -157,8 +159,8 @@ public class Issues extends AppCompatActivity {
         TextView ui_source_adr = findViewById(R.id.source_adr);
         ui_source_adr.setMovementMethod(LinkMovementMethod.getInstance());
 
-        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+        String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
+        String area = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
 
         // Populating GUI
         dataFilter = new DataFilter();
@@ -180,7 +182,7 @@ public class Issues extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String state = ui_spinner_state.getItemAtPosition(ui_spinner_state.getSelectedItemPosition()).toString();
-                editor.putString(MainActivity.sSTATE, state).commit();
+                editor.putString(sSTATE, state).commit();
 
                 String tmp = state;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
@@ -189,13 +191,13 @@ public class Issues extends AppCompatActivity {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                LogEvents.send(getBaseContext(), tmp);
+                LogEvents.sendWithValue(getBaseContext(), sSTATE, tmp);
 
                 area_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
                 area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ui_spinner_area.setAdapter(area_adapter);
 
-                String MP = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+                String MP = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
                 int spinnerPosition = area_adapter.getPosition(MP);
                 ui_spinner_area.setSelection(spinnerPosition);
             }
@@ -210,7 +212,7 @@ public class Issues extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String area = adapterView.getItemAtPosition(i).toString();
-                editor.putString(MainActivity.sMP_AREA, area).commit();
+                editor.putString(sMP_AREA, area).commit();
 
                 String tmp = area;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
@@ -219,7 +221,7 @@ public class Issues extends AppCompatActivity {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                LogEvents.send(getBaseContext(), tmp);
+                LogEvents.sendWithValue(getBaseContext(), sMP_AREA, tmp);
 
                 update_candidate();
             }
@@ -273,7 +275,7 @@ public class Issues extends AppCompatActivity {
     private String[][] get_green_bucket() {
         String[][] bucket = new String[0][];
 
-        String state = mSharedPref.getString(MainActivity.sSTATE, null);
+        String state = mSharedPref.getString(sSTATE, null);
         switch (state) {
             case "Andaman & Nicobar Islands":
             case "अण्डमान और निकोबार द्वीपसमूह":
@@ -462,7 +464,7 @@ public class Issues extends AppCompatActivity {
     private String[][] get_red_bucket() {
         String[][] bucket = new String[0][];
 
-        String state = mSharedPref.getString(MainActivity.sSTATE, null);
+        String state = mSharedPref.getString(sSTATE, null);
         switch (state) {
             case "Andaman & Nicobar Islands":
             case "अण्डमान और निकोबार द्वीपसमूह":
@@ -782,8 +784,8 @@ public class Issues extends AppCompatActivity {
 
     private int get_starting_index(String[][] bucket){
         int index = 0, area_column = 1;
-        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+        String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
+        String constituency = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
 
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){
@@ -819,8 +821,8 @@ public class Issues extends AppCompatActivity {
 
     private int num_of_candidate(String[][] bucket) {
         int num = 0, area_column = 1;
-        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+        String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
+        String constituency = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
 
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
             for(int i=0; i< MPdata.all_MPs.length; i++){

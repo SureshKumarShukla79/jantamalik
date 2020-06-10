@@ -148,13 +148,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (mLanguage.equals(sLANGUAGE_ENGLISH)){
             setUI_Lang(this, "en");
-            LogEvents.send(this, "App_Lang_Eng");
         } else if(mLanguage.equals(sLANGUAGE_MARATHI)) {
             setUI_Lang(this, "mr");
-            LogEvents.send(this, "App_Lang_Marathi");
         } else {
             setUI_Lang(this, "hi");
-            LogEvents.send(this, "App_Lang_Hindi");
         }
 
         if(mLanguage.equals(sLANGUAGE_HINDI) && !user_select_language.equals("Hindi") && !prev_user_select_language.equals(user_select_language)) {
@@ -464,14 +461,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 selected_state = selected_state.replace(" ", "_");
                 selected_state = selected_state.replace("&", "and");
-                LogEvents.send(getBaseContext(), selected_state);
+                LogEvents.sendWithValue(getBaseContext(), sSTATE, selected_state);
 
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
                     selected_constituency = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                 }
                 selected_constituency = selected_constituency.replace(" ", "_");
                 selected_constituency = selected_constituency.replace("&", "and");
-                LogEvents.send(getBaseContext(), selected_constituency);
+                LogEvents.sendWithValue(getBaseContext(), sMP_AREA, selected_constituency);
 
                 dialog.dismiss();
             }

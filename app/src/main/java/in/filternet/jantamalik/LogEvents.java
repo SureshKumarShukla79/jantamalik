@@ -1,6 +1,7 @@
 package in.filternet.jantamalik;
 
 import android.content.Context;
+import android.os.Build;
 import android.util.JsonReader;
 import android.util.Log;
 
@@ -10,30 +11,42 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 
 
 public final class LogEvents {
     private static String TAG = "LogEvents";
 
+    //private final static String CLOUD_VERSION = "devel";  // Cloud side PHP version
+    private final static String CLOUD_VERSION = "20.06.10";  // Cloud side PHP version
+    private final static String URL_BASE_SSL = "https://db.filternet.in/jantamalik/" + CLOUD_VERSION;
+    private static final String URL_ANALYTICS = URL_BASE_SSL + "/" + "analytics.php"; // logs / UX tracer
+
     public static void send(Context context, String s){
-        if (BuildConfig.RELEASE_MODE) // during DEBUG or development comment this out
+        sendWithValue(context, s, ""); // only evant name, no value
+    }
+
+    public static void sendWithValue(Context context, String name, String value) {
+        //if (BuildConfig.RELEASE_MODE) // during DEBUG or development comment this out
         {
             if (!Common.checkNetconnectivity(context)) {
                 return;
             }
 
-            new Event_2_Server(context, s).start();
+            new Event_2_Server(context, name, value).start();
         }
     }
 
     private static class Event_2_Server extends Thread {
         Context context;
         String event_name;
+        String event_value;
 
-        Event_2_Server(Context cntxt, String s) {
+        Event_2_Server(Context cntxt, String name, String value) {
             context = cntxt;
-            event_name = s;
+            event_name = name;
+            event_value = value;
         }
 
         @Override
@@ -43,9 +56,9 @@ public final class LogEvents {
             //Log.e(TAG, "sending");
             JsonReader reader = null;
             URL url = null;
-            Exception exception = null;
+
             try {
-                url = new URL(Common.URL_ANALYTICS);
+                url = new URL(URL_ANALYTICS);
                 Common.SSLv3_bugfix();
                 urlc = (HttpURLConnection) url.openConnection();
                 urlc.setDoOutput(true);
@@ -63,8 +76,9 @@ public final class LogEvents {
                     return;
                 }
                 param.put("did", device_id);
-
                 param.put("event", event_name);
+                if (!event_value.equals("")) // case of name-value pair
+                    param.put("value", event_value);
 
                 DataOutputStream os = new DataOutputStream(urlc.getOutputStream());
                 os.writeBytes(Common.getPostDataString(param));
@@ -73,28 +87,22 @@ public final class LogEvents {
 
                 // Command response processing
                 InputStream response = new BufferedInputStream(urlc.getInputStream());
-                reader = new JsonReader(new InputStreamReader(response, "UTF-8"));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                    reader = new JsonReader(new InputStreamReader(response, StandardCharsets.UTF_8));
+                } else {
+                    reader = new JsonReader(new InputStreamReader(response));
+                }
                 reader.beginObject();
                 reader.setLenient(true);
 
                 //Log.e(TAG, "Server response " + reader.toString());
-
                 reader.close();
                 response.close();
                 urlc.disconnect();
-                return;
             } catch (Exception e) {
-                exception = e;
-            } finally {
-                //Log.e(TAG, "URL " + url);
-                if (exception != null) {
-                    exception.printStackTrace();
-                }
-                if (urlc != null) {
-                    urlc.disconnect();
-                }
+                e.printStackTrace();
+                urlc.disconnect();
             }
-            return;
         }
     }
 }

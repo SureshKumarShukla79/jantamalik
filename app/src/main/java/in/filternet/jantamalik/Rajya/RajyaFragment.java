@@ -21,16 +21,17 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import in.filternet.jantamalik.Contact;
-import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.Kendra.DataFilter;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
+import static in.filternet.jantamalik.MainActivity.sSTATE;
 
 public class RajyaFragment extends Fragment {
-    String TAG = "RajyaFragment";
+    String TAG = "Rajya";
 
     private View view;
     private TextView vote2, note2, govt1;
@@ -120,7 +121,7 @@ public class RajyaFragment extends Fragment {
         // Populating GUI
         DataFilter dataFilter = new DataFilter();
 
-        String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String State = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
 
         ArrayAdapter arrayAdapterState = new ArrayAdapter(view.getContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
         arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -135,7 +136,7 @@ public class RajyaFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
-                editor.putString(MainActivity.sSTATE, State).commit();
+                editor.putString(sSTATE, State).commit();
 
                 String tmp = State;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI)  || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
@@ -144,7 +145,7 @@ public class RajyaFragment extends Fragment {
                 }
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
-                LogEvents.send(getContext(), tmp);
+                LogEvents.sendWithValue(getContext(), sSTATE, tmp);
 
                 update_state_budget(State);
             }
@@ -184,7 +185,7 @@ public class RajyaFragment extends Fragment {
         String url = " ";
         int state_column = 0, mla_link_column = 2;
 
-        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
 
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {    //In case of Hindi
             state_column = 3;
@@ -288,7 +289,7 @@ public class RajyaFragment extends Fragment {
 
     private int get_layout_file() {
         int layout_id;
-        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
 
         if(state.equals("Bihar") || state.equals("बिहार"))
             layout_id = R.layout.budget_bihar;

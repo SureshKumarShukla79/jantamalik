@@ -12,8 +12,8 @@ import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.Issues;
+import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
@@ -21,7 +21,7 @@ import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
 import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class KendraFragment extends Fragment {
-    String TAG = "KendraFragment";
+    String TAG = "Kendra";
 
     private View view;
     private Intent intent;

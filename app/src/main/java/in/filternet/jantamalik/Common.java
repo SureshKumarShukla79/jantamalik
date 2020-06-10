@@ -29,12 +29,6 @@ import javax.net.ssl.SSLSocketFactory;
 public class Common {
     private final static String TAG = "Common";
 
-    //public final static String CLOUD_VERSION = "devel";  // Cloud side PHP version
-    public final static String CLOUD_VERSION = "20.06.08";  // Cloud side PHP version
-    public final static String URL_BASE_SSL = "https://db.filternet.in/jantamalik/" + CLOUD_VERSION;
-
-    public static final String URL_ANALYTICS = URL_BASE_SSL + "/" + "analytics.php"; // logs / UX tracer
-
     public static boolean checkNetconnectivity(Context context) {
         ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
