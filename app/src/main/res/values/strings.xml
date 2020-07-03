@@ -40,7 +40,7 @@
 
     <string name="mp_area">Constituency: </string>
 
-    <string name="source_sansad">Source - Election Commission affidavit https://myneta.info</string>
+    <string name="source_sansad">Source - Affidavit file to Election Commission https://myneta.info</string>
 
     <string name="update_info">Call and email your MP. Don\'t hesitate.</string>
 
@@ -386,13 +386,13 @@
     <string name="star_india">Star India</string>
     <string name="paytm">Paytm</string>
 
-    <string name="mp_voter">Call the concerned public representative (MP/MLA).
-        \nWrite emails with facts and action required.
-        \nMeet at their home.
-        \n\n<b>If above steps don\'t work, then protest outside MP/MLAs home. This gets quick results.</b></string>
-    <string name="mp_neta">During Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
-    <string name="mp_parliament">No law to remove irresponsible MP before completing 5 year term.
-        \n\nChoose wisely next time.</string>
+    <string name="mp_voter">- Call the public representative.
+        \n- Write emails with facts and action required.
+        \n- Meet at their home.</string>
+    <string name="mp_protest"><b>If this doesn\'t work</b></string>
+    <string name="mp_neta"><b>If above steps don\'t work, then protest outside MP/MLAs home. This gets quick results.</b>
+        \n\nDuring Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
+    <string name="mp_parliament">No law to remove irresponsible MP before completing 5 year term.</string>
 
     <string name="mla_voter">Call multiple times.\nWrite emails with objective facts and relief needed.
         \n\nMeet at their home on Sunday 11 am. This gets quick notice and speedy results.</string>
@@ -685,4 +685,6 @@
 
     <string name="no_language_support">This language is not available. You may translate it for your community.</string>
     <string name="button_ok">OK</string>
+
+    <string name="option"><b>How we voted?</b></string>
 </resources>
