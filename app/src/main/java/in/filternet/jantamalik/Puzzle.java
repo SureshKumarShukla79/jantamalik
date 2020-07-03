@@ -303,7 +303,6 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        LogEvents.send(this, "A" + (question_num+1));
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -311,6 +310,7 @@ public class Puzzle extends Activity {
                         ui_option_1.setTextColor(getResources().getColor(R.color.white));
                         ui_option_1.setBackgroundColor(getResources().getColor(R.color.red));
                     }
+                    LogEvents.send(this, "A" + (question_num+1));
                 }
                 break;
 
@@ -322,7 +322,6 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        LogEvents.send(this, "A" + (question_num+1));
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -330,6 +329,7 @@ public class Puzzle extends Activity {
                         ui_option_2.setTextColor(getResources().getColor(R.color.white));
                         ui_option_2.setBackgroundColor(getResources().getColor(R.color.red));
                     }
+                    LogEvents.send(this, "A" + (question_num+1));
                 }
                 break;
 
@@ -341,7 +341,6 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        LogEvents.send(this, "A" + (question_num+1));
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -349,6 +348,7 @@ public class Puzzle extends Activity {
                         ui_option_3.setTextColor(getResources().getColor(R.color.white));
                         ui_option_3.setBackgroundColor(getResources().getColor(R.color.red));
                     }
+                    LogEvents.send(this, "A" + (question_num+1));
                 }
                 break;
 
@@ -360,7 +360,6 @@ public class Puzzle extends Activity {
 
                         mEditor.putBoolean(bQUE_+(question_num+1), true);
                         ui_correct_answer.setVisibility(View.VISIBLE);
-                        LogEvents.send(this, "A" + (question_num+1));
                     }
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
@@ -368,6 +367,7 @@ public class Puzzle extends Activity {
                         ui_option_4.setTextColor(getResources().getColor(R.color.white));
                         ui_option_4.setBackgroundColor(getResources().getColor(R.color.red));
                     }
+                    LogEvents.send(this, "A" + (question_num+1));
                 }
                 break;
         }
