@@ -1,5 +1,6 @@
 package in.filternet.jantamalik;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -7,9 +8,11 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -55,6 +58,7 @@ public class IssueFragment extends Fragment {
             }
         });
 
+        play_puzzle();
         issue_inflation();
         issue_employment();
         issue_media();
@@ -83,6 +87,57 @@ public class IssueFragment extends Fragment {
         issue_girl_safety();
 
         return view;
+    }
+
+    private void play_puzzle() {
+        LinearLayout ui_puzzle = view.findViewById(R.id.puzzle);
+
+        ui_puzzle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean smart_voter = mSharedPref.getBoolean(MainActivity.bSMART_VOTER, false);
+                if(smart_voter) {
+                    user_became_smart();
+                } else {
+                    Intent intent = new Intent(view.getContext(), Puzzle.class);
+                    startActivity(intent);
+                }
+            }
+        });
+    }
+
+    //One copy in Puzzle and MainActivity
+    private void user_became_smart() {
+        ImageView image = new ImageView(getContext());
+        image.setImageResource(R.drawable.green_badge);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext(), R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+        builder.setTitle(R.string.congratulation);
+        builder.setMessage(R.string.smart_voter);
+        builder.setView(image);
+        builder.setPositiveButton(R.string.user_thanks, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                LogEvents.send(getContext(), "Smart_Voter");
+            }
+        });
+        builder.setNeutralButton(R.string.share, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                LogEvents.send(getContext(), "Share_Puzzle");
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String shareBody = getString(R.string.share_puzzle);
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + MainActivity.USER_SHARE_APP);
+                startActivity(intent);
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     private void issue_spiritual() {

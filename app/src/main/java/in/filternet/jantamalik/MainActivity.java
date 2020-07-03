@@ -102,8 +102,6 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
-    private ImageView ui_green_badge;
-    private Button ui_puzzle_button;
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
@@ -166,8 +164,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewPager_main);
         toolbar = findViewById(R.id.appbar);
-        ui_puzzle_button = findViewById(R.id.puzzle_button);
-        ui_green_badge = findViewById(R.id.green_badge);
 
         // Fresh Install, Save SharedPreferences
         String State = mSharedPref.getString(sSTATE, DEFAULT_STATE);
@@ -196,13 +192,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         setSupportActionBar(toolbar);
-
-        boolean smart_voter = mSharedPref.getBoolean(bSMART_VOTER, false);
-        if(smart_voter) {
-            ui_puzzle_button.setVisibility(View.GONE);
-            ui_green_badge.setVisibility(View.VISIBLE);
-            LogEvents.send(this, "Smart_Voter");
-        }
 
         final MainViewPagerAdapter mainViewPagerAdapter = new MainViewPagerAdapter(getSupportFragmentManager(),
                 tabLayout.getTabCount());
@@ -483,40 +472,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Puzzle.class);
             startActivity(intent);
         }
-    }
-
-    //One copy in Puzzle
-    public void user_became_smart(View view) {
-        ImageView image = new ImageView(this);
-        image.setImageResource(R.drawable.green_badge);
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
-        builder.setTitle(R.string.congratulation);
-        builder.setMessage(R.string.smart_voter);
-        builder.setView(image);
-        builder.setPositiveButton(R.string.user_thanks, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int id) {
-                LogEvents.send(MainActivity.this, "Smart_Voter");
-            }
-        });
-        builder.setNeutralButton(R.string.share, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int id) {
-                LogEvents.send(MainActivity.this, "Share_Puzzle");
-
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("text/plain");
-                String shareBody = getString(R.string.share_puzzle);
-                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
-                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + USER_SHARE_APP);
-                startActivity(intent);
-            }
-        });
-
-        AlertDialog dialog = builder.create();
-        dialog.setCancelable(false);
-        dialog.show();
     }
 
     @Override

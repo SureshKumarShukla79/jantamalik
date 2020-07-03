@@ -235,6 +235,7 @@ public class VoteMP extends AppCompatActivity {
                 LogEvents.sendWithValue(getBaseContext(), sMP_AREA, tmp);
 
                 updateMP();
+                update_candidate();
             }
 
             @Override
@@ -243,6 +244,7 @@ public class VoteMP extends AppCompatActivity {
         });
 
         updateMP();
+        update_candidate();
     }
 
     @SuppressLint("RestrictedApi")

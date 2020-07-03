@@ -568,7 +568,7 @@
     <string name="political_party">राजनीतिक दल</string>
     <string name="total_assets">कुल संपत्ति</string>
     <string name="main_reason">मुख्य कारण</string>
-    <string name="puzzle_title"><b>आप कितने जागरूक हैं?</b></string>
+    <string name="puzzle_title">आप कितने जागरूक हैं?</string>
 
     <string name="congratulation">बधाई हो !</string>
     <string name="smart_voter">आप बहुत <b>जागरूक वोटर</b> है</string>
@@ -693,6 +693,7 @@
     <string name="button_ok">ठीक है</string>
 
     <string name="option"><b>हमने कैसे चुना था?</b></string>
+    <string name="puzzle_text">वोटर जागरूकता पहेली</string>
 
 </resources>
 

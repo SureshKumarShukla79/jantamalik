@@ -562,7 +562,7 @@
     <string name="political_party">राजकीय पक्ष</string>
     <string name="total_assets">एकूण मालमत्ता</string>
     <string name="main_reason">मुख्य कारण</string>
-    <string name="puzzle_title"><b>तुम्ही हुशार मतदार आहात का?</b></string>
+    <string name="puzzle_title">तुम्ही हुशार मतदार आहात का?</string>
 
     <string name="congratulation">अभिनंदन!</string>
     <string name="smart_voter">आपण <b> हुशार  मतदाता आहात</b></string>
@@ -688,4 +688,5 @@
     <string name="button_ok">OK</string>
 
     <string name="option"><b>आम्ही कसे निवडले?</b></string>
+    <string name="puzzle_text">वोटर जागरूकता पहेली</string>
 </resources>

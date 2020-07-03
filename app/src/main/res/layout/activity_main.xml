@@ -43,7 +43,8 @@
                 android:text="@string/puzzle"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
-                android:background="@drawable/home_button"/>
+                android:background="@drawable/home_button"
+                android:visibility="gone"/>
 
             <ImageButton
                 android:id="@+id/green_badge"
