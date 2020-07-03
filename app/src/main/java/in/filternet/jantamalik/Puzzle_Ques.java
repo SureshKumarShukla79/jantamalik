@@ -72,17 +72,17 @@ public class Puzzle_Ques {
                     "MP",
                     "Municipal corporator",
                     "Opposition",
-                    "7th schedule of constitution clearly assigns these areas to state govt. MLA as public represenative is responsible.",
+                    "Constitution article 246 clearly assigns these areas to state govt. As public representative MLA is responsible.",
                     "कौन जिम्मेदार है - पीने का पानी, सड़क, ट्रैफिक जाम और बिजली के लिए?",
                     "विधायक", "सांसद", "नगर निगम काॅरपोरेटर", "विपक्ष",
-                    "संविधान की 7वीं अनुसूची के अनुसार यह राज्य सरकार के विषय हैं। विधायक जन प्रतिनिधि के रूप में जिम्मेदार है।"},
-            {"Have you ever read constitution? Especially 7th schedule", // Constitution
+                    "संविधान के अनुच्छेद 246 के अनुसार यह राज्य सरकार के विषय हैं। जन प्रतिनिधि के रूप में विधायक जिम्मेदार है।"},
+            {"Have you ever read constitution? Especially article 246", // Constitution
                     "Yes",
                     "No",
                     "Only preamble",
                     "Not sure",
                     "Most of us have not read it. Interesting fact is that newspaper editors and news channel reporters analyse, without even reading it.",
-                    "क्या आपने कभी संविधान पढ़ा है? खासतौर पर 7वीं अनुसूची",
+                    "क्या आपने कभी संविधान पढ़ा है? खासतौर पर अनुच्छेद 246",
                     "हाँ", "नहीं", "सिर्फ प्रस्तावना", "कह नहीं सकते",
                     "हम में से ज्यादातर लोग कभी संविधान नहीं पढ़ते। मजेदार बात है कि अखबार के संपादक और न्यूज चैनल के पत्रकार भी इसे पढ़े बिना ही काम चलाते हैं।"},
             {"When was the lokpal bill passed by loksabha?", // Political Rights 4
