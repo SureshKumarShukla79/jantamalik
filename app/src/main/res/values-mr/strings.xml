@@ -223,11 +223,11 @@
     <string name="electricity">वीज </string>
     <string name="police">पोलिस /कायदा व सुव्यवस्था </string>
     <string name="traffic">वाहतूक ठप्प </string>
-    <string name="corruption">सरकारी कार्यालयांमधील विलंब / भ्रष्टाचार </string>
+    <string name="corruption">सरकारी कार्यालयांमधील भ्रष्टाचार</string>
     <string name="train">उशिरा चालणाऱ्या रेल्वे </string>
     <string name="business">नवीन उद्योगांची समस्या (स्टार्टअप)</string>
     <string name="election_2019">2019 लोकसभा निवडणुका</string>
-    <string name="employment">सरकारी नोकरी  </string>
+    <string name="employment">नौकरी</string>
     <string name="hospital">उत्तम रुग्णालय / प्राथमिक आरोग्य केंद्र</string>
     <string name="drinking_water">पिण्याचे पाणी </string>
     <string name="agriculture_water">शेतीसाठी पाण्याची उपलब्धता</string>

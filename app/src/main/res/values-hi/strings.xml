@@ -222,11 +222,11 @@
     <string name="electricity">बिजली</string>
     <string name="police">पुलिस/कानून-व्यवस्था</string>
     <string name="traffic">जाम में फंसी जनता</string>
-    <string name="corruption">सरकारी दफ्तर में देरी/घूस</string>
+    <string name="corruption">दफ्तर में घूस</string>
     <string name="train">देर से चलती रेल</string>
     <string name="business">नये उद्योग (स्टार्टप) की मुश्किलें</string>
     <string name="election_2019">2019 लोकसभा चुनाव</string>
-    <string name="employment">सरकारी नौकरी</string>
+    <string name="employment">नौकरी</string>
     <string name="hospital">बेहतर अस्पताल/प्राथमिक स्वास्थ्य केंद्र </string>
     <string name="drinking_water">पीने का पानी</string>
     <string name="agriculture_water">कृषि के लिए पानी की उपलब्धता</string>
