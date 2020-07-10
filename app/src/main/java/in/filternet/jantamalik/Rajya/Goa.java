@@ -27,7 +27,7 @@
 		{"Goa", "Navelim", "Luizinho Faleiro", "गोवा", "Navelim", "Luizinho Faleiro",  "  9822198414", "", "", " luizinhofaleiro@gmail.com", "", " 14/c, Luchel, caminho de Monte, Borda, Margao goa "}, 
 		{"Goa", "Nuvem", "Wilfred Nazareth Menino Dsa", "गोवा", "Nuvem", "Wilfred Nazareth Menino Dsa",  "  9822135324", "", "", " freda.dsa@gmail.com", "", " H.No. 31, P.o. Majorda, Dongorim, Nuvem-Salcete, Goa "},
 		{"Goa", "Panaji", "Atanasio Monserrate", "गोवा", "Panaji", "Atanasio Monserrate",  "  9822100010", "", "", " babushmonserrate@rediffmail.com ", "", " H.No 167 Galli Taleigo Tiswadi Goa 403002 "},
-		{"Goa", "Pernem", "Manohar Trimbak Ajgaonkar", "गोवा", "Pernem", "Manohar Trimbak Ajgaonkar",  "  9822388366", "", "", " ", "", " H No. 394, Behind Masjid, Dando, Margao, Goa "},
+		{"Goa", "Pernem", "Manohar Trimbak Ajgaonkar", "गोवा", "Pernem", "Manohar Trimbak Ajgaonkar",  "  9822388366", "", "", "", "", " H No. 394, Behind Masjid, Dando, Margao, Goa "},
 		{"Goa", "Ponda", "Ravi Sitaram Naik", "गोवा", "Ponda", "Ravi Sitaram Naik",  "  9922508066", "", "", " ravinaik2k17@gmail.com", "", " H.NO.9/207/7 Ravikiran Ravi Nagar Khadpaband Ponda Goa "}, 
 		{"Goa", "Poriem", "Pratapsingh R Rane", "गोवा", "Poriem", "Pratapsingh R Rane",  "  9822103838", "", "", " patrane@hotmail.com", "", " H.No. 41, Deulwada, Vithalapur, PO. Sanquelim Goa "}, 
 		{"Goa", "Priol", "Govind Shepu Gaude", "गोवा", "Priol", "Govind Shepu Gaude",  "  9890928949", "", "", " vishravani@gmail.com", "", " H.No. 144/E Dhonsi Nageshi-Bandora, ponda-Goa "}, 
