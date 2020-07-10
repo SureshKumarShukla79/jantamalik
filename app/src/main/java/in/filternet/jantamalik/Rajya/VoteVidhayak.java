@@ -24,6 +24,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.filternet.jantamalik.Contact;
+import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
@@ -49,11 +50,20 @@ public class VoteVidhayak extends AppCompatActivity {
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
     private String mLanguage;
+    private int layoutResID = 0, titleID = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        savedInstanceState = getIntent().getExtras();
+        if(savedInstanceState != null) {
+            layoutResID = savedInstanceState.getInt("layout_id");
+            //Log.e(TAG, "layout_id: " + layoutResID);
+            titleID = savedInstanceState.getInt("title_id");
+            //Log.e(TAG, "title_id: " + titleID);
+        }
 
         setContentView(R.layout.vote_mla_layout);
 
@@ -233,9 +243,16 @@ public class VoteVidhayak extends AppCompatActivity {
     }
 
     private void back_button(View view) {
-        Intent intent = new Intent(view.getContext(), MainActivity.class);
-        intent.putExtra(TAB_NUMBER, TAB_RAJYA);
-        startActivity(intent);
+        if(layoutResID != 0 && titleID != 0) {
+            Intent intent = new Intent(view.getContext(), Issues.class);
+            intent.putExtra("layout_id", layoutResID);
+            intent.putExtra("title_id", titleID);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(view.getContext(), MainActivity.class);
+            intent.putExtra(TAB_NUMBER, TAB_RAJYA);
+            startActivity(intent);
+        }
     }
 
     public void onclick_call_mla(View view) {

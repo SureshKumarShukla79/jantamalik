@@ -64,6 +64,7 @@ import in.filternet.jantamalik.LokSabha_Election_2019.Tripura;
 import in.filternet.jantamalik.LokSabha_Election_2019.Uttar_Pradesh;
 import in.filternet.jantamalik.LokSabha_Election_2019.Uttarakhand;
 import in.filternet.jantamalik.LokSabha_Election_2019.West_Bengal;
+import in.filternet.jantamalik.Rajya.VoteVidhayak;
 
 import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
@@ -975,11 +976,29 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_my_MLA_screen(View view) {
-        LogEvents.send(this, titleName + "_MLA");
+        String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
+        if(DataFilter.is_union_territory(state)) {
 
-        Intent intent = new Intent(view.getContext(), MainActivity.class);
-        intent.putExtra("rajya", true);
-        startActivity(intent);
+            Uri uri = Uri.parse("https://myneta.info/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+
+        } else if((state.equals("Arunachal Pradesh") || state.equals("अरुणाचल प्रदेश"))
+                || (state.equals("Gujarat") || state.equals("गुजरात"))
+                || (state.equals("Himachal Pradesh") || state.equals("हिमाचल प्रदेश"))){
+
+            Intent intent = new Intent(view.getContext(), MainActivity.class);
+            intent.putExtra("rajya", true);
+            startActivity(intent);
+
+        } else {
+            LogEvents.send(this, titleName + "_MLA");
+
+            Intent intent = new Intent(view.getContext(), VoteVidhayak.class);
+            intent.putExtra("layout_id", layoutResID);
+            intent.putExtra("title_id", titleID);
+            startActivity(intent);
+        }
     }
 
     public void onclick_my_Parshad_screen(View view) {
