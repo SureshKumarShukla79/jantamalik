@@ -186,6 +186,11 @@ public class MainActivity extends AppCompatActivity {
 
             mEditor.putString(MainActivity.sSTATE, State).commit();
             mEditor.putString(MainActivity.sMP_AREA, MP).commit();
+
+            boolean user_agree = mSharedPref.getBoolean(bUSER_AGREE, false);
+            if(user_agree) {
+                ask_user_preference();
+            }
         } else {
             String state = MainActivity.get_state(this, mLanguage);
             String area = MainActivity.get_area(this, mLanguage);
@@ -369,7 +374,7 @@ public class MainActivity extends AppCompatActivity {
         final List<String> state_list = data_filter.getStates(mLanguage);
         if (mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
             state_list.add(DEFAULT_STATE);
-        } if (mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+        } else if (mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
             state_list.add(mrDEFAULT_STATE);
         } else {
             state_list.add(hiDEFAULT_STATE);
