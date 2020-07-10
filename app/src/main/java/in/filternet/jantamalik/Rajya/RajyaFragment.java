@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,11 +35,12 @@ public class RajyaFragment extends Fragment {
     String TAG = "Rajya";
 
     private View view;
-    private TextView vote2, note2, govt1;
-    private ImageButton vote1, vote3, note1, note3;
+    private TextView note2, govt1;
+    private ImageButton note1, note3;
     private ImageView govt2;
     private CardView duties;
     private Spinner spinnerState;
+    private LinearLayout ui_vote;
 
     private String mLanguage;
     private SharedPreferences mSharedPref;
@@ -103,10 +105,6 @@ public class RajyaFragment extends Fragment {
 
         view = inflater.inflate(R.layout.rajya, container, false);
 
-        vote1 = view.findViewById(R.id.vote1);
-        vote2 = view.findViewById(R.id.vote2);
-        vote3 = view.findViewById(R.id.vote3);
-
         note1 = view.findViewById(R.id.note1);
         note2 = view.findViewById(R.id.note2);
         note3 = view.findViewById(R.id.note3);
@@ -117,6 +115,7 @@ public class RajyaFragment extends Fragment {
         duties = view.findViewById(R.id.duties);
 
         spinnerState = view.findViewById(R.id.state_spinner);
+        ui_vote = view.findViewById(R.id.vote);
 
         // Populating GUI
         DataFilter dataFilter = new DataFilter();
@@ -148,6 +147,8 @@ public class RajyaFragment extends Fragment {
                 LogEvents.sendWithValue(getContext(), sSTATE, tmp);
 
                 update_state_budget(State);
+
+                hide_MLA_for_union_territory(State);
             }
 
             @Override
@@ -159,10 +160,24 @@ public class RajyaFragment extends Fragment {
 
         govt_Click();
         duties_Click();
-        vote_Click();
+        vote();
         note_Click();
 
         return view;
+    }
+
+    private void hide_MLA_for_union_territory(String state) {
+        if(state!=null && !state.equals("")
+                && ((state.equals("Andaman & Nicobar Islands") || state.equals("अण्डमान और निकोबार द्वीपसमूह"))
+                || (state.equals("Chandigarh") || state.equals("चण्डीगढ़"))
+                || (state.equals("Dadra & Nagar Haveli") || state.equals("दादरा और नगर हवेली"))
+                || (state.equals("Daman & Diu") || state.equals("दमन और दीव"))
+                || (state.equals("Lakshadweep") || state.equals("लक्षद्वीप")))) {
+
+            ui_vote.setVisibility(View.GONE);
+        } else {
+            ui_vote.setVisibility(View.VISIBLE);
+        }
     }
 
     private void update_state_budget(String state) {
@@ -200,43 +215,25 @@ public class RajyaFragment extends Fragment {
         return url;
     }
 
-    public void vote_Click() {
-        vote1.setOnClickListener(new View.OnClickListener() {
+    private void vote() {
+        ui_vote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = get_state_url();
-                if(url != null && !url.equals(" ")) {
-                    Uri uri = Uri.parse(url);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
+                String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
+                if(state!=null && !state.equals("")
+                        && ((state.equals("Arunachal Pradesh") || state.equals("अरुणाचल प्रदेश"))
+                        || (state.equals("Gujarat") || state.equals("गुजरात"))
+                        || (state.equals("Himachal Pradesh") || state.equals("हिमाचल प्रदेश")))) {
+
+                    String url = get_state_url();
+                    if(url != null && !url.equals(" ")) {
+                        Uri uri = Uri.parse(url);
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                    }
                 } else {
-                    tobedone(view);
-                }
-            }
-        });
-        vote2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String url = get_state_url();
-                if(url != null && !url.equals(" ")) {
-                    Uri uri = Uri.parse(url);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    Intent intent = new Intent(view.getContext(), VoteVidhayak.class);
                     startActivity(intent);
-                } else {
-                    tobedone(view);
-                }
-            }
-        });
-        vote3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String url = get_state_url();
-                if(url != null && !url.equals(" ")) {
-                    Uri uri = Uri.parse(url);
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                    startActivity(intent);
-                } else {
-                    tobedone(view);
                 }
             }
         });

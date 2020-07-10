@@ -21,31 +21,32 @@
             app:title="@string/MLA"
             app:titleTextColor="@color/colorAccent" />
 
-        <TextView
-            android:id="@+id/constituency_text"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/constituency"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/constitunecy_text"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/black"
+            android:layout_margin="3dp"
             android:layout_below="@id/toolbar"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="35dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="35dp"/>
+            android:padding="5dp"
+            android:layout_weight="1.00"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/constituency_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/constituency_text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"
+                android:paddingLeft="30dp"
+                android:paddingRight="35dp" />
 
-        <Spinner
-            android:id="@+id/MLA_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:gravity="center"
-            android:paddingTop="5dp"
-            android:layout_alignTop="@+id/constituency_text"
-            android:layout_toRightOf="@id/constituency_text" />
+            <Spinner
+                android:id="@+id/MLA_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:gravity="center" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -54,7 +55,7 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/gradientbackground"
             android:orientation="vertical"
-            android:layout_below="@+id/MLA_spinner"
+            android:layout_below="@+id/constituency"
             tools:layout_editor_absoluteX="40dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -66,7 +67,8 @@
                 android:layout_marginTop="5dp"
                 android:src="@drawable/politician_illustration"
                 app:civ_border_color="@color/black"
-                app:civ_border_width="3dp" />
+                app:civ_border_width="3dp"
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/MLA_name"
@@ -76,7 +78,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:textColor="#fff"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -101,7 +103,6 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/phone_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="left"
@@ -132,14 +133,73 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/email_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="left"
                     android:orientation="horizontal">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/email_button"
+                        android:id="@+id/call2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="onclick_call_mla"
+                        android:src="@drawable/ic_phone_white_24dp"
+                        app:backgroundTint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/phone2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="onclick_call_mla"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/call3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="onclick_call_mla"
+                        android:src="@drawable/ic_phone_white_24dp"
+                        app:backgroundTint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/phone3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="onclick_call_mla"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/mail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
@@ -168,7 +228,38 @@
                     android:gravity="left"
                     android:orientation="horizontal">
 
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/mail2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="onclick_email_mla"
+                        android:src="@drawable/ic_email_white_24dp"
+                        app:backgroundTint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/email2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="onclick_email_mla"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal">
+
                     <ImageView
+                        android:id="@+id/image_address"
                         android:layout_width="36dp"
                         android:layout_height="36dp"
                         android:src="@drawable/ic_store_mall_directory_black_24dp" />
@@ -197,17 +288,214 @@
                 android:layout_below="@id/nestedScroll"
                 android:focusable="true"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:visibility="visible" />
             <TextView
                 android:id="@+id/update_text"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/arrow"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="5dp"
-                android:text="@string/contact_mla"
+                android:layout_marginTop="10dp"
+                android:text="@string/mp_voter"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:background="@drawable/table_border_style">
+
+                <TextView
+                    android:id="@+id/mp_protest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mp_protest"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/expand_more"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/mp_protest"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_expand_more"
+                    android:onClick="onclick_show_protest"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/expand_less"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/mp_protest"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_expand_less"
+                    android:onClick="onclick_hide_protest"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/protest"
+                    android:layout_width="match_parent"
+                    android:padding="1dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/mp_protest"
+                    android:background="@drawable/linearlayout_border"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/parshad_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/issue_text_left_margin"
+                        android:layout_marginStart="@dimen/issue_text_left_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/mp_neta"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/parliament"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/issue_text_left_margin"
+                        android:layout_marginStart="@dimen/issue_text_left_margin"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/mp_parliament"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:visibility="gone"
+                android:background="@drawable/table_border_style">
+
+                <TextView
+                    android:id="@+id/option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/option"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/black"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/expand_option"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/option"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_expand_more"
+                    android:onClick="onclick_show_options"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/hide_option"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/option"
+                    android:src="@drawable/ic_expand_less"
+                    android:onClick="onclick_hide_options"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="4dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/mp_options"
+                    android:layout_width="match_parent"
+                    android:padding="1dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/option"
+                    android:background="@drawable/linearlayout_border"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <TableLayout
+                        android:id="@+id/green_table"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:padding="2dp"
+                        android:visibility="visible">
+                    </TableLayout>
+
+                    <TableLayout
+                        android:id="@+id/red_table"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="2dp"
+                        android:padding="2dp"
+                        android:visibility="visible">
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:id="@+id/source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/adr"/>
+
+                        <TextView
+                            android:id="@+id/source_adr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/adr_source"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColorLink="@color/blue"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/whatsapp_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/join_local_whatsapp_group"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:textColorLink="@color/blue"
+                    android:focusable="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/whatsapp_us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onclick_WhatsApp"
+                    android:src="@drawable/whatsapp"
+                    app:backgroundTint="@color/colorPrimary" />
+            </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

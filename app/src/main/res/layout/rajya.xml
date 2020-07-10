@@ -175,19 +175,18 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/voteCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dp"
             app:cardBackgroundColor="@color/white">
 
             <LinearLayout
-                    android:layout_width="match_parent"
+                android:id="@+id/vote"
+                android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom">
 
-                    <ImageButton
-                        android:id="@+id/vote1"
+                    <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:scaleType="centerInside"
@@ -207,7 +206,6 @@
                             android:textColor="@color/colorPrimary"
                             android:text="@string/Vote" />
                         <TextView
-                            android:id="@+id/vote2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/recyclerview_item_click_effect"
@@ -216,8 +214,7 @@
                             android:textSize="25sp" />
                     </LinearLayout>
 
-                    <ImageButton
-                        android:id="@+id/vote3"
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="right"

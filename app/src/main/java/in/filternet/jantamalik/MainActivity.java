@@ -35,7 +35,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -84,12 +83,15 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String DEFAULT_STATE = "Select State";
     public static final String DEFAULT_MP = "Select Area";
+    public static final String DEFAULT_MLA = "Select Area";
 
     public static final String hiDEFAULT_STATE = "राज्य चुनें";
     public static final String hiDEFAULT_MP = "क्षेत्र चुनें";
+    public static final String hiDEFAULT_MLA = "क्षेत्र चुनें";
 
     public static final String mrDEFAULT_STATE = "राज्य निवडा";
     public static final String mrDEFAULT_MP = "क्षेत्र निवडा";
+    public static final String mrDEFAULT_MLA = "क्षेत्र निवडा";
 
     public static final String sSTATE = "State";
     public static final String sMP_AREA = "MP_Area";
@@ -357,6 +359,8 @@ public class MainActivity extends AppCompatActivity {
         final Spinner ui_state_spinner = ui_preference_layout.findViewById(R.id.state_spinner);
         final LinearLayout ui_constituency = ui_preference_layout.findViewById(R.id.constituency);
         final Spinner ui_constituency_spinner = ui_preference_layout.findViewById(R.id.constituency_spinner);
+        final LinearLayout ui_assembly = ui_preference_layout.findViewById(R.id.assembly);
+        final Spinner ui_assembly_spinner = ui_preference_layout.findViewById(R.id.assembly_spinner);
         final FloatingActionButton ui_done = ui_preference_layout.findViewById(R.id.done);
 
         final DataFilter data_filter = new DataFilter();
@@ -420,11 +424,89 @@ public class MainActivity extends AppCompatActivity {
                 if (selected_constituency.equals(MainActivity.DEFAULT_MP)
                         || selected_constituency.equals(MainActivity.hiDEFAULT_MP)
                         || selected_constituency.equals(MainActivity.mrDEFAULT_MP)) {
-                    ui_done.setVisibility(View.INVISIBLE);
                     return;
                 }
 
                 mEditor.putString(MainActivity.sMP_AREA, selected_constituency).commit();
+
+                String state = mSharedPref.getString(MainActivity.sSTATE, hiDEFAULT_STATE);
+                if (mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
+                    state = mSharedPref.getString(MainActivity.sSTATE, DEFAULT_STATE);
+                } else if (mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+                    state = mSharedPref.getString(MainActivity.sSTATE, mrDEFAULT_STATE);
+                }
+
+                //Log.e(TAG, "state: " + state);
+
+                if(state!=null && !state.equals("")
+                        && ((state.equals("Andaman & Nicobar Islands") || state.equals("अण्डमान और निकोबार द्वीपसमूह"))
+                        || (state.equals("Arunachal Pradesh") || state.equals("अरुणाचल प्रदेश"))
+                        || (state.equals("Chandigarh") || state.equals("चण्डीगढ़"))
+                        || (state.equals("Dadra & Nagar Haveli") || state.equals("दादरा और नगर हवेली"))
+                        || (state.equals("Daman & Diu") || state.equals("दमन और दीव"))
+                        || (state.equals("Gujarat") || state.equals("गुजरात"))
+                        || (state.equals("Himachal Pradesh") || state.equals("हिमाचल प्रदेश"))
+                        || (state.equals("Lakshadweep") || state.equals("लक्षद्वीप")))) {
+
+                    ui_assembly.setVisibility(View.GONE);
+                    ui_done.setVisibility(View.VISIBLE);
+                } else {
+
+                    ui_assembly.setVisibility(View.VISIBLE);
+
+                    //Log.e(TAG, "selected_constituency: " + selected_constituency);
+                    //populating assembly
+                    List<String> assembly_list = null;
+                    if (data_filter.has_MP_2_MLA_mapping(selected_constituency)) {
+
+                        assembly_list = data_filter.get_MLA_area_as_per_MP_area(selected_constituency);
+                        if (mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
+                            assembly_list.add(DEFAULT_MLA);
+                        } else if (mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+                            assembly_list.add(mrDEFAULT_MLA);
+                        } else {
+                            assembly_list.add(hiDEFAULT_MLA);
+                        }
+
+                    } else {
+
+                        assembly_list = data_filter.get_MLA_area_as_per_state(mLanguage, state);
+                        if (mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
+                            assembly_list.add(DEFAULT_MLA);
+                        } else if (mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+                            assembly_list.add(mrDEFAULT_MLA);
+                        } else {
+                            assembly_list.add(hiDEFAULT_MLA);
+                        }
+                    }
+
+                    ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, assembly_list);
+                    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                    ui_assembly_spinner.setAdapter(adapter);
+                    ui_assembly_spinner.setSelection(assembly_list.size() - 1);
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
+        //spinner constituency click handler
+        ui_assembly_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @SuppressLint("RestrictedApi")
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected_assembly = adapterView.getItemAtPosition(i).toString();
+                if (selected_assembly.equals(MainActivity.DEFAULT_MLA)
+                        || selected_assembly.equals(MainActivity.hiDEFAULT_MLA)
+                        || selected_assembly.equals(MainActivity.mrDEFAULT_MLA)) {
+                    ui_done.setVisibility(View.INVISIBLE);
+                    return;
+                }
+
+                mEditor.putString(MainActivity.sMLA_AREA, selected_assembly).commit();
                 ui_done.setVisibility(View.VISIBLE);
             }
 

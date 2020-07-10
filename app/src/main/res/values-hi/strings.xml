@@ -58,8 +58,9 @@
         \n2 अपनी जागरूकता बढ़ाइए, समाधान पाइए
         \n</string>
 
-    <string name="state_text">राज्य:</string>
-    <string name="constitunecy_text">क्षेत्र:</string>
+    <string name="state_text">राज्य</string>
+    <string name="constituency_text">लोकसभा</string>
+    <string name="assembly_text">विधानसभा</string>
     <string name="ward_text">वार्ड</string>
 
     <string name="democracy">आप सरकार कैसे चलाते हैं?</string>
@@ -663,7 +664,7 @@
     <string name="gst_faq">आपके सांसद/विधायक बहुमत का हिस्सा हो सकते हैं। वे सरकार से यह मांग कर सकते हैं।</string>
     <string name="discount_nat_7_gst">7% दर</string>
 
-    <string name="select_state_and_constituency">अपना राज्य और निर्वाचन क्षेत्र चुनें</string>
+    <string name="select_state_and_constituency">चुनें</string>
     <string name="no_selection">Select valid options</string>
     <string name="select_state">Select state</string>
     <string name="spiritual">आध्यात्म</string>

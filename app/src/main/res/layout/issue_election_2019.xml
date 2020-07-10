@@ -98,7 +98,7 @@
             android:id="@+id/constituency_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/constitunecy_text"
+            android:text="@string/constituency_text"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/black"
             android:paddingLeft="30dp"

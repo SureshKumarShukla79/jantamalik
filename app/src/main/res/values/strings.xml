@@ -38,7 +38,7 @@
     <string name="mla">MLA</string>
     <string name="parshad">Corporator</string>
 
-    <string name="mp_area">Constituency: </string>
+    <string name="mp_area">Constituency:</string>
 
     <string name="source_sansad">Source - Affidavit file to Election Commission https://myneta.info</string>
 
@@ -58,8 +58,9 @@
         \n2 Check your voter awareness, solve issues
         \n</string>
 
-    <string name="state_text">State:</string>
-    <string name="constitunecy_text">Area:</string>
+    <string name="state_text">State</string>
+    <string name="constituency_text">MP area</string>
+    <string name="assembly_text">MLA area</string>
     <string name="ward_text">Ward</string>
 
     <string name="democracy">How you run the government?</string>
@@ -656,7 +657,7 @@
     <string name="gst_faq">Your MP/MLA may be part of majority. They can influence govt.</string>
     <string name="discount_nat_7_gst">At 7%</string>
 
-    <string name="select_state_and_constituency">Select your state and constituency</string>
+    <string name="select_state_and_constituency">Select</string>
     <string name="no_selection">Select valid options</string>
     <string name="select_state">Select state</string>
     <string name="spiritual">Spiritual</string>

@@ -59,8 +59,9 @@
         \n2आपली जागरूकता वाढवा, समाधान व्हा
         \n</string>
 
-    <string name="state_text">राज्य :</string>
-    <string name="constitunecy_text">क्षेत्र :</string>
+    <string name="state_text">राज्य</string>
+    <string name="constituency_text">लोकसभा</string>
+    <string name="assembly_text">विधानसभा</string>
     <string name="ward_text">वॉर्ड </string>
 
     <string name="democracy">तुम्ही सरकार कशी चालवतात  ?</string>
@@ -657,7 +658,7 @@
     <string name="gst_faq">आपला खासदार / आमदार बहुमताचा भाग असू शकतात. ते सरकारवर प्रभाव टाकू शकतात । </string>
     <string name="discount_nat_7_gst">7% दर </string>
 
-    <string name="select_state_and_constituency">आपले राज्य आणि मतदारसंघ निवडा</string>
+    <string name="select_state_and_constituency">निवडा</string>
     <string name="no_selection">वैध पर्याय निवडा</string>
     <string name="select_state">राज्य निवडा </string>
     <string name="spiritual">अध्यात्मिक</string>
@@ -689,4 +690,5 @@
 
     <string name="option"><b>आम्ही कसे निवडले?</b></string>
     <string name="puzzle_text">वोटर जागरूकता पहेली</string>
+
 </resources>

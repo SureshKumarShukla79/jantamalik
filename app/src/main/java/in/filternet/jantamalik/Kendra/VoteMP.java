@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -79,7 +80,7 @@ import static in.filternet.jantamalik.MainActivity.sMP_AREA;
 import static in.filternet.jantamalik.MainActivity.sSTATE;
 
 public class VoteMP extends AppCompatActivity {
-    String TAG = "VoteMP";
+    static String TAG = "VoteMP";
     private Toolbar toolbar;
     private ImageView ui_image_address;
     private CircleImageView ui_expand_protest, ui_hide_protest, ui_expand_mp_option, ui_hide_mp_option;
@@ -326,7 +327,7 @@ public class VoteMP extends AppCompatActivity {
         }
         //Log.e(TAG, state + "," + area);
 
-        String tmp = getLoksabha_Group(getBaseContext(), state, area);
+        String tmp = getLoksabha_Group(this);
         if (tmp.equals("")) {
             ui_whatsapp_group.setVisibility(View.GONE);
         } else {
@@ -435,29 +436,40 @@ public class VoteMP extends AppCompatActivity {
 
     public void onclick_WhatsApp(View view) {
         //Log.e(TAG, "whats icon clicked" + mWhatsapp_group);
-        if (mWhatsapp_group.equals(""))
+        String whatsapp_group = getLoksabha_Group(this);
+        if (whatsapp_group.equals(""))
             return;
-        Uri uri = Uri.parse(mWhatsapp_group);
+        Uri uri = Uri.parse(whatsapp_group);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
 
-    private String mWhatsapp_group = "";
+    public static String getLoksabha_Group(Context context) {
+        String whatsapp_group = "";
 
-    private String getLoksabha_Group(Context context, String state, String area) {
-        mWhatsapp_group = "";
-        //Log.e(TAG, state + " " + area);
+        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
+        String state = shared_pref.getString(sSTATE, MainActivity.DEFAULT_STATE);
+        String area = shared_pref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
+
+        // Get English version and then WhatsApp group link
+        String language = shared_pref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
+        if(language.equals(MainActivity.sLANGUAGE_HINDI) || language.equals(MainActivity.sLANGUAGE_MARATHI)) {
+            state = MainActivity.get_state(context, MainActivity.sLANGUAGE_ENGLISH);
+            area = MainActivity.get_area(context, MainActivity.sLANGUAGE_ENGLISH);
+        }
+
+        Log.e(TAG, state + " " + area);
 
         for (int i = 0; i < LokSabhaGroups.all_groups.length; i++) {
             if (state.equals(LokSabhaGroups.all_groups[i][0])
                     && area.equals(LokSabhaGroups.all_groups[i][1])) {
-                mWhatsapp_group = LokSabhaGroups.all_groups[i][2];
+                whatsapp_group = LokSabhaGroups.all_groups[i][2];
             } else
                 continue;
         }
         //Log.e(TAG, tmp);
 
-        return mWhatsapp_group;
+        return whatsapp_group;
     }
 
     public void onclick_show_protest(View view) {
