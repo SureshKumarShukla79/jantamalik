@@ -170,22 +170,28 @@ public class MainActivity extends AppCompatActivity {
         // Fresh Install, Save SharedPreferences
         String State = mSharedPref.getString(sSTATE, DEFAULT_STATE);
         String MP = mSharedPref.getString(sMP_AREA, DEFAULT_MP);
+        String MLA = mSharedPref.getString(sMP_AREA, DEFAULT_MLA);
         //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
 
         if(State.equals(DEFAULT_STATE) || State.equals(hiDEFAULT_STATE) || State.equals(mrDEFAULT_STATE)) {
+
             if (mLanguage.equals(sLANGUAGE_ENGLISH)) {  // In case of English, change the defaults
                 State = DEFAULT_STATE;
                 MP = DEFAULT_MP;
+                MLA = DEFAULT_MLA;
             } else if (mLanguage.equals(sLANGUAGE_MARATHI)) {   // In case of Marathi, change the defaults
                 State = mrDEFAULT_STATE;
                 MP = mrDEFAULT_MP;
+                MLA = mrDEFAULT_MLA;
             } else {    // In case of Hindi, change the defaults
                 State = hiDEFAULT_STATE;
                 MP = hiDEFAULT_MP;
+                MLA = hiDEFAULT_MLA;
             }
 
             mEditor.putString(MainActivity.sSTATE, State).commit();
             mEditor.putString(MainActivity.sMP_AREA, MP).commit();
+            mEditor.putString(MainActivity.sMLA_AREA, MLA).commit();
 
             boolean user_agree = mSharedPref.getBoolean(bUSER_AGREE, false);
             if(user_agree) {
@@ -443,15 +449,10 @@ public class MainActivity extends AppCompatActivity {
 
                 //Log.e(TAG, "state: " + state);
 
-                if(state!=null && !state.equals("")
-                        && ((state.equals("Andaman & Nicobar Islands") || state.equals("अण्डमान और निकोबार द्वीपसमूह"))
+                if(state!=null && !state.equals("") && (DataFilter.is_union_territory(state)
                         || (state.equals("Arunachal Pradesh") || state.equals("अरुणाचल प्रदेश"))
-                        || (state.equals("Chandigarh") || state.equals("चण्डीगढ़"))
-                        || (state.equals("Dadra & Nagar Haveli") || state.equals("दादरा और नगर हवेली"))
-                        || (state.equals("Daman & Diu") || state.equals("दमन और दीव"))
                         || (state.equals("Gujarat") || state.equals("गुजरात"))
-                        || (state.equals("Himachal Pradesh") || state.equals("हिमाचल प्रदेश"))
-                        || (state.equals("Lakshadweep") || state.equals("लक्षद्वीप")))) {
+                        || (state.equals("Himachal Pradesh") || state.equals("हिमाचल प्रदेश")))) {
 
                     ui_assembly.setVisibility(View.GONE);
                     ui_done.setVisibility(View.VISIBLE);

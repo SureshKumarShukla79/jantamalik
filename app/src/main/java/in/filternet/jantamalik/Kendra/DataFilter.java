@@ -389,4 +389,14 @@ public class DataFilter {
 
         return infos;
     }
+
+    public static boolean is_union_territory(String state){
+        return (state.equals("Andaman & Nicobar Islands") || state.equals("अण्डमान और निकोबार द्वीपसमूह"))
+                || (state.equals("Chandigarh") || state.equals("चण्डीगढ़"))
+                || (state.equals("Dadra & Nagar Haveli") || state.equals("दादरा और नगर हवेली"))
+                || (state.equals("Daman & Diu") || state.equals("दमन और दीव"))
+                || (state.equals("Lakshadweep") || state.equals("लक्षद्वीप"))
+                || (state.equals("Jammu & Kashmir") || state.equals("जम्मू और कश्मीर"))
+                || (state.equals("Ladakh") || state.equals("लद्दाख"));
+    }
 }

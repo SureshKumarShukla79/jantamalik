@@ -148,7 +148,11 @@ public class RajyaFragment extends Fragment {
 
                 update_state_budget(State);
 
-                hide_MLA_for_union_territory(State);
+                if(DataFilter.is_union_territory(State)) {
+                    ui_vote.setVisibility(View.GONE);
+                } else {
+                    ui_vote.setVisibility(View.VISIBLE);
+                }
             }
 
             @Override
@@ -164,20 +168,6 @@ public class RajyaFragment extends Fragment {
         note_Click();
 
         return view;
-    }
-
-    private void hide_MLA_for_union_territory(String state) {
-        if(state!=null && !state.equals("")
-                && ((state.equals("Andaman & Nicobar Islands") || state.equals("अण्डमान और निकोबार द्वीपसमूह"))
-                || (state.equals("Chandigarh") || state.equals("चण्डीगढ़"))
-                || (state.equals("Dadra & Nagar Haveli") || state.equals("दादरा और नगर हवेली"))
-                || (state.equals("Daman & Diu") || state.equals("दमन और दीव"))
-                || (state.equals("Lakshadweep") || state.equals("लक्षद्वीप")))) {
-
-            ui_vote.setVisibility(View.GONE);
-        } else {
-            ui_vote.setVisibility(View.VISIBLE);
-        }
     }
 
     private void update_state_budget(String state) {
