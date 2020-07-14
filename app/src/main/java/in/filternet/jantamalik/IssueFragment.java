@@ -62,7 +62,7 @@ public class IssueFragment extends Fragment {
         issue_inflation();
         issue_employment();
         issue_media();
-        issue_mp_no_response();
+
         issue_train();
         issue_business();
         issue_curroption();
@@ -217,28 +217,6 @@ public class IssueFragment extends Fragment {
 
                 int layout_id = R.layout.issue_media_or_afeem;
                 int title_id = R.string.media_or_afeem;
-
-                Intent intent = new Intent(view.getContext(), Issues.class);
-                intent.putExtra("layout_id", layout_id);
-                intent.putExtra("title_id", title_id);
-                intent.putExtra("title", event_name);
-                intent.putExtra("issues", true);
-                startActivity(intent);
-            }
-        });
-    }
-
-    private void issue_mp_no_response() {
-        LinearLayout mp_no_response_layout = view.findViewById(R.id.mp_no_response_layout);
-
-        mp_no_response_layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String event_name = "Protest";
-                LogEvents.send(getContext(), event_name);
-
-                int layout_id = R.layout.issue_mp_no_response;
-                int title_id = R.string.mp_no_response;
 
                 Intent intent = new Intent(view.getContext(), Issues.class);
                 intent.putExtra("layout_id", layout_id);

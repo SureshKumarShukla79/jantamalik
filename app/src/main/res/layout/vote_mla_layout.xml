@@ -356,17 +356,7 @@
                         android:layout_marginLeft="@dimen/issue_text_left_margin"
                         android:layout_marginStart="@dimen/issue_text_left_margin"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/mp_neta"
-                        android:textColor="@color/black" />
-
-                    <TextView
-                        android:id="@+id/parliament"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/issue_text_left_margin"
-                        android:layout_marginStart="@dimen/issue_text_left_margin"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/mp_parliament"
+                        android:text="@string/mla_neta"
                         android:textColor="@color/black" />
                 </LinearLayout>
             </RelativeLayout>
