@@ -217,7 +217,7 @@ public class Issues extends AppCompatActivity {
 
                 String tmp = area;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
-                    String area_out = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    String area_out = MainActivity.get_MP_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                     tmp = area_out;
                 }
                 tmp = tmp.replace(" ", "_");

@@ -199,9 +199,12 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             String state = MainActivity.get_state(this, mLanguage);
-            String area = MainActivity.get_area(this, mLanguage);
+            String mp_area = MainActivity.get_MP_area(this, mLanguage);
+            String mla_area = MainActivity.get_MLA_area(this, mLanguage);
+
             mEditor.putString(MainActivity.sSTATE, state).commit();
-            mEditor.putString(MainActivity.sMP_AREA, area).commit();
+            mEditor.putString(MainActivity.sMP_AREA, mp_area).commit();
+            mEditor.putString(MainActivity.sMLA_AREA, mla_area).commit();
         }
 
         setSupportActionBar(toolbar);
@@ -463,7 +466,7 @@ public class MainActivity extends AppCompatActivity {
                     //Log.e(TAG, "selected_constituency: " + selected_constituency);
                     //populating assembly
                     List<String> assembly_list = null;
-                    if (data_filter.has_MP_2_MLA_mapping(selected_constituency)) {
+                    if (data_filter.has_MP_2_MLA_mapping(state, selected_constituency)) {
 
                         assembly_list = data_filter.get_MLA_area_as_per_MP_area(selected_constituency);
                         if (mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
@@ -531,6 +534,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String selected_state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
                 String selected_constituency = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+                String selected_assembly = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
 
                 // Send selected entries (state & constituency) to Firebase
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
@@ -541,11 +545,18 @@ public class MainActivity extends AppCompatActivity {
                 LogEvents.sendWithValue(getBaseContext(), sSTATE, selected_state);
 
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
-                    selected_constituency = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    selected_constituency = MainActivity.get_MP_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                 }
                 selected_constituency = selected_constituency.replace(" ", "_");
                 selected_constituency = selected_constituency.replace("&", "and");
                 LogEvents.sendWithValue(getBaseContext(), sMP_AREA, selected_constituency);
+
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
+                    selected_assembly = MainActivity.get_MLA_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                }
+                selected_assembly = selected_assembly.replace(" ", "_");
+                selected_assembly = selected_assembly.replace("&", "and");
+                LogEvents.sendWithValue(getBaseContext(), sMLA_AREA, selected_assembly);
 
                 dialog.dismiss();
             }
@@ -662,7 +673,7 @@ public class MainActivity extends AppCompatActivity {
         return state;
     }
 
-    public static String get_area(Context context, String language){
+    public static String get_MP_area(Context context, String language){
         String area = " "; // TODO why one space
 
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
@@ -701,6 +712,45 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         return area;
+    }
+
+    public static String get_MLA_area(Context context, String language){
+        String mla_area = " "; // TODO why one space
+        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
+        String state_in = shared_pref.getString(sSTATE, DEFAULT_STATE);
+        String area_in = shared_pref.getString(sMLA_AREA, DEFAULT_MLA);
+        String[][] infos = DataFilter.get_MLA_areas_of_state(state_in);
+
+        if (language.equals(sLANGUAGE_ENGLISH)) {
+            for (String[] info : infos) {
+                if (state_in.equals(info[3]) && area_in.equals(info[4])) {
+                    mla_area = info[1];
+                }
+            }
+            //Area is still empty which means user selected preference is already in Hindi then no need to change
+            if(mla_area.equals(" ")) {
+                for (int i = 0; i < infos.length; i++) {
+                    if (state_in.equals(infos[i][0]) && area_in.equals(infos[i][1])) {
+                        mla_area = area_in;
+                    }
+                }
+            }
+        } else {
+            for(int i=0; i< infos.length; i++){
+                if (state_in.equals(infos[i][0]) && area_in.equals(infos[i][1])) {
+                    mla_area =infos[i][4];
+                }
+            }
+            //Area is still empty which means user selected preference is already in Hindi then no need to change
+            if(mla_area.equals(" ")) {
+                for (int i = 0; i < infos.length; i++) {
+                    if (state_in.equals(infos) && area_in.equals(MPdata.all_MPs[i][4])) {
+                        mla_area = area_in;
+                    }
+                }
+            }
+        }
+        return mla_area;
     }
 
     public static void set_notification_time(Context context, boolean fresh) {

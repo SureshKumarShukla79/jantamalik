@@ -33,6 +33,7 @@ import in.filternet.jantamalik.R;
 import static in.filternet.jantamalik.Kendra.VoteMP.getLoksabha_Group;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
+import static in.filternet.jantamalik.MainActivity.sMLA_AREA;
 
 public class VoteVidhayak extends AppCompatActivity {
     String TAG = "VoteVidhayak";
@@ -117,7 +118,7 @@ public class VoteVidhayak extends AppCompatActivity {
         DataFilter dataFilter = new DataFilter();
 
         // Load defaults
-        if (mp_area != null && dataFilter.has_MP_2_MLA_mapping(mp_area)) {
+        if (mp_area != null && dataFilter.has_MP_2_MLA_mapping(State, mp_area)) {
             mla_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_MP_area(mp_area));
         } else {
             mla_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_state(mLanguage, State));
@@ -137,6 +138,14 @@ public class VoteVidhayak extends AppCompatActivity {
                 String MLAArea = adapterView.getItemAtPosition(i).toString();
                 //Log.e(TAG, "spin MLA : " + i + " " + l + " " + MLAArea);
                 editor.putString(MainActivity.sMLA_AREA, MLAArea).commit();
+
+                String tmp = MLAArea;
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
+                    tmp = MainActivity.get_MLA_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                }
+                tmp = tmp.replace(" ", "_");
+                tmp = tmp.replace("&", "and");
+                LogEvents.sendWithValue(getBaseContext(), sMLA_AREA, tmp);
 
                 updateMLA();
             }

@@ -161,13 +161,13 @@ public class DataFilter {
     }
 
     public List<String> get_MLA_area_as_per_MP_area(String MP_area) {
-        int mp_area_column = 0;
+        int mp_area_column = 1;
 
         // Treemap to keep data sorted names of Areas.
         TreeMap<String,Integer> areas = new TreeMap<>();
         for(int i=0; i< MP_2_MLA.mapping.length; i++){
             if (MP_area.equals(MP_2_MLA.mapping[i][mp_area_column])) {
-                for (int k = 1; k < MP_2_MLA.mapping[i].length; k++) {
+                for (int k = 2; k < MP_2_MLA.mapping[i].length; k++) {
                     areas.put(MP_2_MLA.mapping[i][k], i);
                 }
             }
@@ -214,11 +214,11 @@ public class DataFilter {
         return mla_info;
     }
 
-    public boolean has_MP_2_MLA_mapping(String MP_area) {
-        int mp_area_column = 0;
+    public boolean has_MP_2_MLA_mapping(String state, String MP_area) {
+        int state_column = 0, mp_area_column = 1;
 
         for(int i=0; i< MP_2_MLA.mapping.length; i++){
-            if (MP_area.equals(MP_2_MLA.mapping[i][mp_area_column])) {
+            if (state.equals(MP_2_MLA.mapping[i][state_column]) && MP_area.equals(MP_2_MLA.mapping[i][mp_area_column])) {
                 //Log.e(TAG, "has_MP_2_MLA_mapping: true");
                 return true;
             }
@@ -227,7 +227,7 @@ public class DataFilter {
         return false;
     }
 
-    private String[][] get_MLA_areas_of_state(String state) {
+    public static String[][] get_MLA_areas_of_state(String state) {
         String[][] infos = new String[0][];
 
         switch (state) {

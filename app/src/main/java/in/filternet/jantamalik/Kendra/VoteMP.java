@@ -228,7 +228,7 @@ public class VoteMP extends AppCompatActivity {
 
                 String tmp = MPArea;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
-                    String area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
+                    String area = MainActivity.get_MP_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
                     tmp = area;
                 }
                 tmp = tmp.replace(" ", "_");
@@ -315,17 +315,6 @@ public class VoteMP extends AppCompatActivity {
             ui_address.setVisibility(View.VISIBLE);
             ui_image_address.setVisibility(View.VISIBLE);
         }
-
-        // Get English version and then WhatsApp group link
-        String state = "", area = "";
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-            state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-            area = MainActivity.get_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-        } else {
-            state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
-            area = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
-        }
-        //Log.e(TAG, state + "," + area);
 
         String tmp = getLoksabha_Group(this);
         if (tmp.equals("")) {
@@ -455,10 +444,10 @@ public class VoteMP extends AppCompatActivity {
         String language = shared_pref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
         if(language.equals(MainActivity.sLANGUAGE_HINDI) || language.equals(MainActivity.sLANGUAGE_MARATHI)) {
             state = MainActivity.get_state(context, MainActivity.sLANGUAGE_ENGLISH);
-            area = MainActivity.get_area(context, MainActivity.sLANGUAGE_ENGLISH);
+            area = MainActivity.get_MP_area(context, MainActivity.sLANGUAGE_ENGLISH);
         }
 
-        Log.e(TAG, state + " " + area);
+        //Log.e(TAG, state + " " + area);
 
         for (int i = 0; i < LokSabhaGroups.all_groups.length; i++) {
             if (state.equals(LokSabhaGroups.all_groups[i][0])
