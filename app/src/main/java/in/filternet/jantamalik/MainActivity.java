@@ -170,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
         // Fresh Install, Save SharedPreferences
         String State = mSharedPref.getString(sSTATE, DEFAULT_STATE);
         String MP = mSharedPref.getString(sMP_AREA, DEFAULT_MP);
-        String MLA = mSharedPref.getString(sMP_AREA, DEFAULT_MLA);
-        //Log.e(TAG, "state : " + State + " " + MP + " " + MLA + " " + Ward);
+        String MLA = mSharedPref.getString(sMLA_AREA, DEFAULT_MLA);
+        //Log.e(TAG, "Def : " + State + " " + MP + " " + MLA );
 
         if(State.equals(DEFAULT_STATE) || State.equals(hiDEFAULT_STATE) || State.equals(mrDEFAULT_STATE)) {
 
@@ -718,34 +718,34 @@ public class MainActivity extends AppCompatActivity {
         String mla_area = " "; // TODO why one space
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
         String state_in = shared_pref.getString(sSTATE, DEFAULT_STATE);
-        String area_in = shared_pref.getString(sMLA_AREA, DEFAULT_MLA);
+        String mla_area_in = shared_pref.getString(sMLA_AREA, DEFAULT_MLA);
         String[][] infos = DataFilter.get_MLA_areas_of_state(state_in);
 
         if (language.equals(sLANGUAGE_ENGLISH)) {
             for (String[] info : infos) {
-                if (state_in.equals(info[3]) && area_in.equals(info[4])) {
+                if (state_in.equals(info[3]) && mla_area_in.equals(info[4])) {
                     mla_area = info[1];
                 }
             }
-            //Area is still empty which means user selected preference is already in Hindi then no need to change
+            //Area is still empty which means user selected preference is already in English then no need to change
             if(mla_area.equals(" ")) {
-                for (int i = 0; i < infos.length; i++) {
-                    if (state_in.equals(infos[i][0]) && area_in.equals(infos[i][1])) {
-                        mla_area = area_in;
+                for (String[] info : infos) {
+                    if (state_in.equals(info[0]) && mla_area_in.equals(info[1])) {
+                        mla_area = mla_area_in;
                     }
                 }
             }
         } else {
-            for(int i=0; i< infos.length; i++){
-                if (state_in.equals(infos[i][0]) && area_in.equals(infos[i][1])) {
-                    mla_area =infos[i][4];
+            for (String[] info : infos) {
+                if (state_in.equals(info[0]) && mla_area_in.equals(info[1])) {
+                    mla_area = info[4];
                 }
             }
             //Area is still empty which means user selected preference is already in Hindi then no need to change
             if(mla_area.equals(" ")) {
-                for (int i = 0; i < infos.length; i++) {
-                    if (state_in.equals(infos) && area_in.equals(MPdata.all_MPs[i][4])) {
-                        mla_area = area_in;
+                for (String[] info : infos) {
+                    if (state_in.equals(info[3]) && mla_area_in.equals(info[4])) {
+                        mla_area = mla_area_in;
                     }
                 }
             }

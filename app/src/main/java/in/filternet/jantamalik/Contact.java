@@ -151,8 +151,9 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_email_us(View view) {
-        String state = mSharedPref.getString(MainActivity.sSTATE, null);
-        String area = mSharedPref.getString(MainActivity.sMP_AREA, null);
+        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+        String MP_area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+        String MLA_area = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
 
         String[] TO = {getString(R.string.support_email)};
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -161,7 +162,7 @@ public class Contact extends AppCompatActivity {
 
         intent.setPackage("com.google.android.gm");
         intent.putExtra(Intent.EXTRA_EMAIL, TO);
-        intent.putExtra(Intent.EXTRA_SUBJECT, area + ", " + state + "\n" + subject);
+        intent.putExtra(Intent.EXTRA_SUBJECT, MLA_area + ", " + MP_area + ", " + state + "\n" + subject);
         try {
             if (intent.resolveActivity(getPackageManager()) != null) {
                 //Log.e(TAG, "1st option");
@@ -210,11 +211,12 @@ public class Contact extends AppCompatActivity {
         String whatsapp = "com.whatsapp";
 
         if(isPackageExist(this, intent, whatsapp)) {
-            String state = mSharedPref.getString(MainActivity.sSTATE, null);
-            String area = mSharedPref.getString(MainActivity.sMP_AREA, null);
+            String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
+            String MP_area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
+            String MLA_area = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
             try {
                 if (intent != null) {
-                    Uri url = Uri.parse("https://wa.me/917570000787?text="+ area
+                    Uri url = Uri.parse("https://wa.me/917570000787?text="+ MLA_area + ", " + MP_area
                             + ", "+ state + "\n\n" + subject + "\n");
                     intent.setAction(Intent.ACTION_VIEW);
                     intent.setData(url);
