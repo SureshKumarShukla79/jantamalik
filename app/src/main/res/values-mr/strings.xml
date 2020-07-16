@@ -167,13 +167,10 @@
     <string name="kendra_budget">२७,८६,३५० कोटी </string>
     <string name="rajya_budget">\??? कोटी </string>
 
-    <string name="list_source_MP">खासदार खालील क्षेत्रात कायदे बनवतात
-        \n\nसंविधानाच्या अनुच्छेद 246, पृष्ठ 194-202
-        \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
-
-    <string name="list_source_MLA">आमदार  खालील क्षेत्रात कायदे बनवतात
-        \n\nसंविधानाच्या अनुच्छेद 246, पृष्ठ 194-202
-        \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
+    <string name="list_source_MP">स्रोत: खासदार खालील क्षेत्रात कायदे बनवतात:</string>
+    <string name="list_source_MLA">स्रोत: आमदार  खालील क्षेत्रात कायदे बनवतात:</string>
+    <string name="source_responsibility_MP_MLA">स्रोत: संविधानाच्या अनुच्छेद 246 से, पन्ना 356-371
+        \nhttp://www.legislative.gov.in/sites/default/files/coi-indexhindi.pdf</string>
 
     <string name="kendra_subjects">रोजगार , सामाजिक सुरक्षा , किंमत नियंत्रण ,
         \nयूपीएचसी , शिक्षण , रेल्वे ,

@@ -166,12 +166,9 @@
     <string name="kendra_budget">27,86,350 crore</string>
     <string name="rajya_budget">\??? crore</string>
 
-    <string name="list_source_MP">MP makes laws in following areas
-        \n\nConstitution Article 246, page 194-202
-        \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
-
-    <string name="list_source_MLA">MLA makes laws in following areas
-        \n\nConstitution Article 246, page 194-202
+    <string name="list_source_MP">MP makes laws in following areas:</string>
+    <string name="list_source_MLA">MLA makes laws in following areas:</string>
+    <string name="source_responsibility_MP_MLA">Source: Constitution Article 246, page 194-202
         \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
 
     <string name="kendra_subjects">Employment, Social security, Price control,

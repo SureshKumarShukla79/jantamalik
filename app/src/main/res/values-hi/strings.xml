@@ -167,12 +167,9 @@
 
     <string name="rajya_budget">\??? करोड़</string>
 
-    <string name="list_source_MP">सांसद निम्न विषयों पर कानून बनाता है
-        \n\nसंविधान अनुच्छेद 246 से, पन्ना 356-371
-        \nhttp://www.legislative.gov.in/sites/default/files/coi-indexhindi.pdf</string>
-
-    <string name="list_source_MLA">विधायक निम्न विषयों पर कानून बनाता है
-        \n\nसंविधान अनुच्छेद 246 से, पन्ना 356-371
+    <string name="list_source_MP">सांसद निम्न विषयों पर कानून बनाता है:</string>
+    <string name="list_source_MLA">विधायक निम्न विषयों पर कानून बनाता है:</string>
+    <string name="source_responsibility_MP_MLA">स्रोत: संविधान अनुच्छेद 246 से, पन्ना 356-371
         \nhttp://www.legislative.gov.in/sites/default/files/coi-indexhindi.pdf</string>
 
     <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी,
