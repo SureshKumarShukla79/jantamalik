@@ -18,6 +18,32 @@
     android:layout_margin="2dp"
     tools:context="in.filternet.jantamalik.Kendra.VoteMP">
 
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greylight"
+        android:text="@string/source_responsibility_MP_MLA"
+        android:autoLink="web"
+        android:clickable="true"
+        android:textColorLink="@color/blue"
+        android:focusable="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/disclaimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greylight"
+        android:text="@string/disclaimer"
+        android:autoLink="web"
+        android:clickable="true"
+        android:textColorLink="@color/blue"
+        android:focusable="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/black" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
