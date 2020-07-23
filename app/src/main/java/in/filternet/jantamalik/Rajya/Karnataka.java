@@ -12,7 +12,7 @@
 		{"Karnataka", "Arabhavi", "Balachandra Lakshmanarao Jarakiholi", "कर्नाटक", "Arabhavi", "Balachandra Lakshmanarao Jarakiholi",  "  9986300111", "", "", " nsfgokak@gmail.com", "", " NSF Guest house,near byali kata,gokak "}, 
 		{"Karnataka", "Arakalgud", "A T Ramaswamy", "कर्नाटक", "Arakalgud", "A T Ramaswamy",  "  9448120305", "", "", "", "", " Bisalahalli Village, Handrangi Post, Konanur Hobli,Arkalgudu Taluk,Hassan Dist. "}, 
 		{"Karnataka", "Arsikere", "K.m Shivalinge Gowda", "कर्नाटक", "Arsikere", "K.m Shivalinge Gowda",  "  9448132265", "", "", "", "", " MANSA NILYA MARUTHI NAGAR ARISISKERE TOWN-573103 "},
-		{"Karnataka", "Athani", "Mahesh Iranagouda Kumathalli", "कर्नाटक", "Athani", "Mahesh Iranagouda Kumathalli",  "  ", "", "", "", "", ""},
+				{"Karnataka", "Athani", "Mahesh Iranagouda Kumathalli", "कर्नाटक", "Athani", "Mahesh Iranagouda Kumathalli", "", "", "", "", "", ""},
 		{"Karnataka", "Aurad", "Prabhu Chauhan", "कर्नाटक", "Aurad", "Prabhu Chauhan",  "  9480359894", "", "", " prabhuchouhan2@gmail.com", "", " Ghamasubhayi Thanda, Bhonthi Thaluk, Aurad(B) Bidar Dist., "},
 		{"Karnataka", "B.t.m Layout", "Ramalinga Reddy", "कर्नाटक", "B.t.m Layout", "Ramalinga Reddy",  "  9945984444", " 080-22237240", "", "", "", " #455/7, 15th Cross Lakkasandra, Bangalore 560030 "}, 
 		{"Karnataka", "Babaleshwar", "Mallanagoud Basanagoud Patil", "कर्नाटक", "Babaleshwar", "Mallanagoud Basanagoud Patil",  "  08352-261770", "", "", " mbpatil1964@rediffmail.com", "", " Near Mugulakhod Mutt, Solapur Road, Vijayapur-586103 "}, 

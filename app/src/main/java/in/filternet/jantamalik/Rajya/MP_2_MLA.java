@@ -301,7 +301,7 @@ public final class MP_2_MLA {
             {"West Bengal", "Ghatal", "Panskura Paschim", "Sabang", "Pingla", "Debra", "Daspur", "Ghatal (SC)", "Keshpur (SC)"},
             {"पश्चिम बंगाल", "घाटाल", "पाँसकुड़ा पश्चिम", "सबंग", "पिंगला", "डेबरा", "दासपुर", "घाटाल (एस सी)", "केशपुर (एस सी)"},
             {"West Bengal", "Hooghly", "Singur", "Chandannagar", "Chunchura", "Balagarh (SC)", "Pandua", "Saptagram", "Dhanekhali (SC)"},
-            {"पश्चिम बंगाल", "हुगली", "सिंगुर", "चन्दननगर", "चुन्चुरा", "बालागढ़ (एस सी)", "पांडुआ", "सप्तग्राम", "धनेखली (एस सी)"},
+            {"पश्चिम बंगाल", "हुगली", "सिंगुर", "चन्दननगर", "चिन्सुरा", "बालागढ़ (एस सी)", "पांडुआ", "सप्तग्राम", "धनखेली (एस सी)"},
             {"West Bengal", "Howrah", "Bally", "Howrah Uttar", "Howrah Madhya", "Shibpur", "Howrah Dakshin", "Sankrail (SC)", "Panchla"},
             {"पश्चिम बंगाल", "हावड़ा", "बाली", "हावड़ा उत्तर", "हावड़ा मध्य", "शिबपुर", "हावड़ा दक्षिण", "सांकराइल (एस सी)", "पांचला"},
             {"West Bengal", "Jadavpur", "Baruipur Purba (SC)", "Baruipur Paschim", "Sonarpur Dakshin", "Bhangar", "Jadavpur", "Sonarpur Uttar", "Tollyganj"},

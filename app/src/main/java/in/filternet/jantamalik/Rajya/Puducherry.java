@@ -14,7 +14,7 @@
 		{"Puducherry", "Kalapet", "M.o.h.f. Shahjahan", "पुदुच्चेरी", "Kalapet", "M.o.h.f. Shahjahan",  "  09952407120", "", "", " shahj3120@gmail.com", "", " 64, Suffren Street, Puduchery -605001 "},
 		{"Puducherry", "Kamaraj Nagar", "A. Johnkumar", "पुदुच्चेरी", "Kamaraj Nagar", "A. Johnkumar",  "  9790580961", " 9655680961", "", " newrinatv@gmail.com", "", " No 28, Savaripadayatchi Street, Nellithopre, Puducherry-605005 "},
 		{"Puducherry", "Karaikal North", "P.r.n. Thirumurugan", "पुदुच्चेरी", "Karaikal North", "P.r.n. Thirumurugan",  "  04368-266100", " 04368-228585", " 9344488811", " prnthirumurugan72@gmail.com", "", " R/O No. 57, North Street, Karaikovilpathu, Karaikal 609609, karaikal District, Puducherry "},
-		{"Puducherry", "Karaikal South", "K.a.u. Assana", "पुदुच्चेरी", "Karaikal South", "K.a.u. Assana",  "  ", "", "", " faizalrose21@gmail.com", "", " Res. No- 51, Duplex Street, Karaikal Town & Dist "}, 
+				{"Puducherry", "Karaikal South", "K.a.u. Assana", "पुदुच्चेरी", "Karaikal South", "K.a.u. Assana", "", "", "", " faizalrose21@gmail.com", "", " Res. No- 51, Duplex Street, Karaikal Town & Dist "},
 		{"Puducherry", "Lawspet", "V.p. Sivakolundhu", "पुदुच्चेरी", "Lawspet", "V.p. Sivakolundhu",  "  9894755559", "", "", "", "", " No.5, First Cross Street, Kumaran Nagar Extension, Lawspet, Puducherry-605008 "}, 
 		{"Puducherry", "Mahe", "Dr.v. Ramachandran", "पुदुच्चेरी", "Mahe", "Dr.v. Ramachandran",  "  0490-2358825", " 9496404293", "", "", "", " Deepam Pandakkal Po. Naluthara Mahe, Puducherry State Pin-673310 "}, 
 		{"Puducherry", "Mangalam", "S.v. Sugumaran", "पुदुच्चेरी", "Mangalam", "S.v. Sugumaran",  "  9443338493", "", "", " svsugumaran@gmail.com", "", " N0.24,Mariyamman Koil Street,Madhagadipet, Puducherry-605107 "}, 
@@ -32,7 +32,7 @@
 		{"Puducherry", "Raj Bhavan", "K. Lakshminarayanan", "पुदुच्चेरी", "Raj Bhavan", "K. Lakshminarayanan",  "  0413-2338181", "9443238181", "", " lakshminarayananpdy@gmail.com", "", " No:95,Peumal koil street,Puducherry-605001. "},
 		{"Puducherry", "Thattanchavady", "K. Venkatesan", "पुदुच्चेरी", "Thattanchavady", "K. Venkatesan",  "  9443325425", "", "", " thangamoil@gmail.com ", "", " 104 Muthumariamman Koil Street Punducherry-605001 "},
 		{"Puducherry", "Thirubhuvanai", "Kopiga B", "पुदुच्चेरी", "Thirubhuvanai", "Kopiga B",  "  9943385281", "", "", "", "", " No:14,Thaneer thoti street,Thiruvandarkoil,periyapet,puducherry-605102. "},
-		{"Puducherry", "Thirunallar", "Kamalakannan. R", "पुदुच्चेरी", "Thirunallar", "Kamalakannan. R",  "  ", "", "", " 04368-251888", "", " Resident of No. 100, North Vellalar Street, Ambagarathur, Thirunallar Commune "}, 
+				{"Puducherry", "Thirunallar", "Kamalakannan. R", "पुदुच्चेरी", "Thirunallar", "Kamalakannan. R", "", "", "", " 04368-251888", "", " Resident of No. 100, North Vellalar Street, Ambagarathur, Thirunallar Commune "},
 		{"Puducherry", "Villianur", "A. Namassivayam", "पुदुच्चेरी", "Villianur", "A. Namassivayam",  "  9443265665", "", "", " namassivayam55@gmail.com", "", " No:1,Mandhakarai street,Manaveli,Arumbarthapuram post,Puducherry. "}, 
 		{"Puducherry", "Yanam", "Malladi Krishna Rao", "पुदुच्चेरी", "Yanam", "Malladi Krishna Rao",  "  09442646666", " 08842321999", "", "", "", " Resident of Door No. 09-07-020, Yerra Gardens Agraharam, Yanam "}, 
 
