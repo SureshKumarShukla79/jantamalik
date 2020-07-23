@@ -19,4 +19,6 @@
     <color name="light_pink">#FFE6EF</color>
     <color name="tint_yellow">#FFFDEB</color>
     <color name="light_orange">#FFE9CF</color>
+    <color name="twitter_blue">#008FFF</color>
+    <color name="fb_blue">#0017B4</color>
 </resources>

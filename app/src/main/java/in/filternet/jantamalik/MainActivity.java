@@ -609,6 +609,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onclick_twitter_button(View view) {
+        LogEvents.send(this, "Twitter");
+
+        Uri uri = Uri.parse("https://twitter.com/sureshkrshukla");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void onclick_fb_button(View view) {
+        LogEvents.send(this, "Facebook");
+
+        Uri uri = Uri.parse("https://facebook.com/जनता-मालिक-ऐप-Janta-Malik-App-103698761402979");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
     public void onclick_open_donate(View view) {
         LogEvents.send(this, "Donate");
 

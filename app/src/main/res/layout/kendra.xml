@@ -9,9 +9,6 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -243,14 +240,34 @@
         android:layout_height="wrap_content">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/facebook_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/facebook"
+            android:onClick="onclick_fb_button"
+            app:civ_border_color="@color/fb_blue"
+            app:civ_border_width="1dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_margin="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/share"
             android:onClick="onclick_share_button"
             app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="1dp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/twitter_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/twitter"
+            android:onClick="onclick_twitter_button"
+            app:civ_border_color="@color/twitter_blue"
             app:civ_border_width="1dp" />
 
         <Button
