@@ -27,7 +27,7 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_margin="1dp"
-                    android:src="@drawable/share"
+                    android:src="@drawable/share1"
                     android:onClick="onclick_share_button"
                     app:civ_border_color="@color/colorPrimaryDark"
                     app:civ_border_width="1dp" />

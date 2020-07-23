@@ -1436,17 +1436,6 @@
             app:civ_border_width="1dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/share"
-            android:onClick="onclick_share_button"
-            app:civ_border_color="@color/colorPrimaryDark"
-            app:civ_border_width="1dp" />
-
-        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/twitter_image"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -1456,6 +1445,19 @@
             android:onClick="onclick_twitter_button"
             app:civ_border_color="@color/twitter_blue"
             app:civ_border_width="1dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/share1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onclick_share_button"
+            android:scaleX="-1"
+            android:src="@drawable/share1"
+            android:backgroundTint="@color/colorPrimary" />
 
         <Button
             android:layout_width="wrap_content"
