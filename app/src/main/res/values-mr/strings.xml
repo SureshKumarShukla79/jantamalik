@@ -169,8 +169,10 @@
 
     <string name="list_source_MP">स्रोत: खासदार खालील क्षेत्रात कायदे बनवतात:</string>
     <string name="list_source_MLA">स्रोत: आमदार  खालील क्षेत्रात कायदे बनवतात:</string>
-    <string name="source_responsibility_MP_MLA"><b>स्रोत</b>: संविधानाच्या अनुच्छेद 246 से, पन्ना 356-371
-        \nhttp://www.legislative.gov.in/sites/default/files/coi-indexhindi.pdf</string>
+    <string name="source_responsibility_MP_MLA"><b>स्रोत</b>: संविधानाच्या - 7वीं अनुसूची
+        \nलघु https://db.filternet.in/jantamalik/7thSchedule-HI.pdf
+        \n
+        \nसंपूर्ण http://legislative.gov.in/sites/default/files/CONSTITUTION%20OF%20INDIA-2019-UPLOAD.pdf</string>
 
     <string name="disclaimer"><b>स्पष्टीकरण</b>: यह ऐप किसी भी सरकारी विभाग से नहीं जुड़ी है।</string>
 
@@ -190,7 +192,7 @@
                       पाणीपुरवठा - सिंचन / कालवे, निचरा, जमीन , जमिनीचा महसूल  ,मासेमारी, राज्यातील व्यापार व वाणिज्य , बाजारपेठा आणि जत्रा,
                       सावकार व सावकारी , कृषी उत्पन्नावर कर, विजेचा वापर किंवा विक्री यावर कर, वाहनांवरचा कर ,
                       शिक्षण , रस्ते , वन , ई
-        \n\nसंविधानाच्या अनुच्छेद 246</string>
+        \n\nसंविधानाच्या 7वीं अनुसूची</string>
 
     <string name="phone">फोन </string>
     <string name="email">ईमेल </string>
@@ -615,11 +617,11 @@
     <string name="law_under_research">या विषयाशी संबंधित कायदा संशोधनात आहे</string>
     <string name="tax_under_research">या विषयावरील कर खर्च संशोधनात आहे</string>
 
-    <string name="vidhan_sabha">स्त्रोत: संविधाना अनुच्छेद 246 हा विधानसभेचा विषय आहे (राज्य सरकार) ।
+    <string name="vidhan_sabha">स्त्रोत: nसंविधानाच्या 7वीं अनुसूची हा विधानसभेचा विषय आहे (राज्य सरकार) ।
         \n\nविधानसभेतील आपले लोकप्रतिनिधी आमदार निवडून आले आहेत । </string>
-    <string name="lok_sabha">स्त्रोत: संविधाना अनुच्छेद 246 नुसार हा लोकसभा (केंद्र सरकार) चा विषय आहे.
+    <string name="lok_sabha">स्त्रोत: nसंविधानाच्या 7वीं अनुसूची नुसार हा लोकसभा (केंद्र सरकार) चा विषय आहे.
         \n\nलोकसभेतील आपले लोकप्रतिनिधी खासदार म्हणून निवडून आले आहेत । </string>
-    <string name="vidhansabha_n_loksabha_common">स्त्रोत: संविधाना अनुच्छेद 246 नुसार हा विषय विधानसभा (राज्य सरकार) आणि लोकसभा (केंद्र सरकार) मध्ये सामान्य आहे.
+    <string name="vidhansabha_n_loksabha_common">स्त्रोत: nसंविधानाच्या 7वीं अनुसूची नुसार हा विषय विधानसभा (राज्य सरकार) आणि लोकसभा (केंद्र सरकार) मध्ये सामान्य आहे.
         \n\nविधानसभेतील आपले लोकप्रतिनिधी आमदार आहेत आणि लोकसभेत खासदार आहेत । </string>
 
     <string name="corruption_law">भ्रष्टाचार प्रतिबंध कायदा, लोकपाल कायदा </string>

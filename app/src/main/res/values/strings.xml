@@ -168,8 +168,10 @@
 
     <string name="list_source_MP">MP makes laws in following areas:</string>
     <string name="list_source_MLA">MLA makes laws in following areas:</string>
-    <string name="source_responsibility_MP_MLA"><b>Source</b>: Constitution Article 246, page 194-202
-        \nhttp://www.legislative.gov.in/sites/default/files/COI-updated-as-31072018.pdf</string>
+    <string name="source_responsibility_MP_MLA"><b>Source</b>: Constitution - 7th schedule
+        \nShort https://db.filternet.in/jantamalik/7thSchedule-EN.pdf
+        \n
+        \nFULL http://legislative.gov.in/sites/default/files/COI-updated.pdf</string>
 
     <string name="disclaimer"><b>Disclaimer</b>: This app doesn\'t represent any government entity.</string>
 
@@ -189,7 +191,7 @@
         Water supplies - irrigation/canals, drainage, Land, Land revenue, Fisheries, Trade and commerce within the State, Markets and fairs,
         Money-lending and money-lenders, Taxes on agricultural income, Taxes on the consumption or sale of electricity, Taxes on vehicles,
         Education, Roads, Forest, etc
-        \n\nConstitution Article 246</string>
+        \n\nConstitution 7th schedule</string>
 
     <string name="phone">Phone</string>
     <string name="email">Email</string>
@@ -614,11 +616,11 @@
     <string name="law_under_research">The law related to this subject is under research</string>
     <string name="tax_under_research">The tax spend on this subject is under research</string>
 
-    <string name="vidhan_sabha">Source: Constitution article 246 this is subject of Vidhan Sabha (State government).
+    <string name="vidhan_sabha">Source: Constitution 7th schedule this is subject of Vidhan Sabha (State government).
         \n\nYour public representative in Vidhan Sabha is elected MLA.</string>
-    <string name="lok_sabha">Source: Constitution article 246 this is subject of Loksabha (Center government).
+    <string name="lok_sabha">Source: Constitution 7th schedule this is subject of Loksabha (Center government).
         \n\nYour public representative in Loksabha is elected MP.</string>
-    <string name="vidhansabha_n_loksabha_common">Source: Constitution article 246 this subject is common to Vidhan Sabha (State government) and Loksabha (Center government).
+    <string name="vidhansabha_n_loksabha_common">Source: Constitution 7th schedule this subject is common to Vidhan Sabha (State government) and Loksabha (Center government).
         \n\nYour public representative in Vidhan Sabha is MLA and in Loksabha is MP.</string>
 
     <string name="corruption_law">Prevention of Corruption Law, Lokpal Bill</string>
