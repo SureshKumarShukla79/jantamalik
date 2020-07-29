@@ -232,7 +232,7 @@ public final class MPdata {
 		{"Madhya Pradesh", "Mandla", "Faggan Singh Kulaste", "मध्य प्रदेश", "मंडला", "फग्गन सिंह कुलस्ते",  "9868180495",  "", "", "fskulaste@gmail.com", "", "MUKAM JEVRA, PO. DEVRIKALA, TEHSIL NARAYANGANJ"}, 
 		{"Madhya Pradesh", "Mandsour", "Sudheer Gupta", "मध्य प्रदेश", "मंदसौर", "सुधीर गुप्ता",  "9425105331",  "9013869242", "", "sudhirgupta2760@gmail.com", "", "R/O- 2/2, Housing Colony Mandsour Teh- Mandsour Dist- Mandsour 458001"}, 
 		{"Madhya Pradesh", "Morena", "Narendra Singh Tomar", "मध्य प्रदेश", "मोरैना", "नरेंद्र सिंह तोमर",  "9425603838",  "", "", "nstomaroffice@gmail.com", "", "Gali No- 4, Arya Nagar, Murar, Gwalior-474006 (MP)"}, 
-		{"Madhya Pradesh", "Rajgarh", "Rodmal Nagar", "मध्य प्रदेश", "राजगढ़", "रोडमल नगर",  "9425021506",  "", "", "rodmalnagar@gmail.com", "", "R/o- M B Road Pachor, Dist Rajgarh"}, 
+		{"Madhya Pradesh", "Rajgarh", "Rodmal Nagar", "मध्य प्रदेश", "राजगढ़", "रोडमल नागर",  "9425021506",  "", "", "rodmalnagar@gmail.com", "", "R/o- M B Road Pachor, Dist Rajgarh"},
 		{"Madhya Pradesh", "Ratlam", "Guman Singh Damor", "मध्य प्रदेश", "रतलाम", "गुमान सिंह डामोर",  "9425059533",  "9589059533", "", "gsdamor@gmail.com", "", "Village-Umarkot, Tehsil-Rama, Dist Jhabua"}, 
 		{"Madhya Pradesh", "Rewa", "Janardan Prasad Mishra", "मध्य प्रदेश", "रीवा", "जनार्दन प्रसाद मिश्र",  "9926984118",  "", "", "janardan.bjp@gmail.com", "", "Ro- vill. Post Hinota tehsil Semriya Dist. Rewa M.P"}, 
 		{"Madhya Pradesh", "Sagar", "Rajbahadur Singh", "मध्य प्रदेश", "सागर", "राजबहादुर सिंह",  "9300846438",  "", "", "rrajbahadur29@gmail.com", "", "H No-46, Vrindavan Ward no-044, Gopalganj, Sagar Teh & Dist Sagar MP"}, 
