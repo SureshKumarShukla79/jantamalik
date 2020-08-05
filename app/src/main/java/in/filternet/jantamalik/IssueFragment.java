@@ -11,11 +11,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
@@ -59,6 +59,7 @@ public class IssueFragment extends Fragment {
         });
 
         play_puzzle();
+        open_constitution();
         issue_inflation();
         issue_employment();
         issue_media();
@@ -87,6 +88,28 @@ public class IssueFragment extends Fragment {
         issue_girl_safety();
 
         return view;
+    }
+
+    private void open_constitution() {
+        LinearLayout ui_constitution = view.findViewById(R.id.constitution_layout);
+
+        ui_constitution.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String event_name = "Constitution";
+                LogEvents.send(getContext(), event_name);
+
+                int layout_id = R.layout.issue_constitution;
+                int title_id = R.string.constitution_text;
+
+                Intent intent = new Intent(view.getContext(), Issues.class);
+                intent.putExtra("layout_id", layout_id);
+                intent.putExtra("title_id", title_id);
+                intent.putExtra("title", event_name);
+                intent.putExtra("issues", true);
+                startActivity(intent);
+            }
+        });
     }
 
     private void play_puzzle() {

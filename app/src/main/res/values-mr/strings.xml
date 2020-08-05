@@ -688,5 +688,9 @@
 
     <string name="option"><b>आम्ही कसे निवडले?</b></string>
     <string name="puzzle_text">जागरूकता पहेली</string>
+    <string name="constitution_text">माझा शब्द शासन आहे</string>
+    <string name="buy_constitution_details">आज ऑनलाईन ऑर्डर करा (सिर्फ ₹.100/- 😊)
+    \n\n<u>अमेजन</u>:- https://www.amazon.in/gp/product/B0818XVFFS/ref=ox_sc_act_title_3?smid=A1PKK5TIH3CQO0&amp;psc=1
+    \n\n<u>भारतीय डाक</u>:- https://www.lawliterature.in/product/bharat-ka-samvidhan-anusuchiyon-sahit/</string>
 
 </resources>
