@@ -170,9 +170,7 @@
     <string name="list_source_MP">स्रोत: खासदार खालील क्षेत्रात कायदे बनवतात:</string>
     <string name="list_source_MLA">स्रोत: आमदार  खालील क्षेत्रात कायदे बनवतात:</string>
     <string name="source_responsibility_MP_MLA"><b>स्रोत</b>: संविधानाच्या - 7वीं अनुसूची
-        \nलघु https://db.filternet.in/jantamalik/7thSchedule-HI.pdf
-        \n
-        \nसंपूर्ण http://legislative.gov.in/sites/default/files/CONSTITUTION%20OF%20INDIA-2019-UPLOAD.pdf</string>
+        \nhttps://db.filternet.in/jantamalik/7thSchedule-HI.pdf</string>
 
     <string name="disclaimer"><b>स्पष्टीकरण</b>: यह ऐप किसी भी सरकारी विभाग से नहीं जुड़ी है।</string>
 
@@ -688,9 +686,15 @@
 
     <string name="option"><b>आम्ही कसे निवडले?</b></string>
     <string name="puzzle_text">जागरूकता पहेली</string>
-    <string name="constitution_text">माझा शब्द शासन आहे</string>
-    <string name="buy_constitution_details">आज ऑनलाईन ऑर्डर करा (सिर्फ ₹.100/- 😊)
-    \n\n<u>अमेजन</u>:- https://www.amazon.in/gp/product/B0818XVFFS/ref=ox_sc_act_title_3?smid=A1PKK5TIH3CQO0&amp;psc=1
-    \n\n<u>भारतीय डाक</u>:- https://www.lawliterature.in/product/bharat-ka-samvidhan-anusuchiyon-sahit/</string>
+
+    <string name="constitution_text">संविधान ??</string>
+    <string name="constitution_1">मेरा वचन ही है शासन</string>
+    <string name="constitution_2">हमें माहिषमती का संविधान पता है,
+        \nलेकिन भारत का ?</string>
+    <string name="constitution_online"><a href="http://legislative.gov.in/sites/default/files/CONSTITUTION%20OF%20INDIA-2019-UPLOAD.pdf">आनलाईन पढ़ें</a></string>
+
+    <string name="constitution_buy">आज ही एक कापी मगाएं (सिर्फ ₹ 100/-)</string>
+    <string name="constitution_amazon"><a href="https://www.amazon.in/gp/product/B0818XVFFS/ref=ox_sc_act_title_3?smid=A1PKK5TIH3CQO0&amp;psc=1">अमेजन</a>
+        \t\t<a href="https://www.lawliterature.in/product/bharat-ka-samvidhan-anusuchiyon-sahit/">भारतीय डाक</a></string>
 
 </resources>

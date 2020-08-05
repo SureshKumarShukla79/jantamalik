@@ -123,12 +123,14 @@ public class Issues extends AppCompatActivity {
         });
 
         if(layoutResID == R.layout.issue_media_or_afeem) {
-            make_clickable_links();
+            make_clickable_links_media(); // href alone doesn't work
         } else if (layoutResID == R.layout.issue_election_2019) {
             update_gui();
         } else if (layoutResID == R.layout.issue_employment) {
             TextView ui_toi_link = findViewById(R.id.toi_link);
             ui_toi_link.setMovementMethod(LinkMovementMethod.getInstance());
+        } else if (layoutResID == R.layout.issue_constitution) {
+            make_clickable_links_constitution(); // href alone doesn't work
         }
 
     }
@@ -844,7 +846,14 @@ public class Issues extends AppCompatActivity {
         return num;
     }
 
-    private void make_clickable_links() {
+    private void make_clickable_links_constitution() {
+        TextView cX = findViewById(R.id.c1);
+        cX.setMovementMethod(LinkMovementMethod.getInstance());
+        cX = findViewById(R.id.c2);
+        cX.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    private void make_clickable_links_media() {
         TextView l1 = findViewById(R.id.l1);
         l1.setMovementMethod(LinkMovementMethod.getInstance());
         TextView l2 = findViewById(R.id.l2);

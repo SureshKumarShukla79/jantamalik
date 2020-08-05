@@ -38,6 +38,17 @@
                 app:title="@string/constitution_text"
                 app:titleTextColor="@color/colorAccent" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/issue_text_left_margin"
+                android:autoLink="web"
+                android:gravity="center|center_horizontal"
+                android:text="@string/constitution_1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"
+                android:textColorLink="@color/blue" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,17 +57,46 @@
                 android:layout_gravity="center"
                 android:background="@color/colorPrimaryDark"
                 android:padding="1dp"
-                android:src="@drawable/shivgami_poster" />
+                android:src="@drawable/shivgami" />
 
             <TextView
-                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/issue_text_left_margin"
+                android:autoLink="web"
+                android:gravity="center|center_horizontal"
+                android:text="@string/constitution_2"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"
+                android:textColorLink="@color/blue" />
+
+            <TextView
+                android:id="@+id/c1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_margin="@dimen/issue_text_left_margin"
-                android:text="@string/buy_constitution_details"
+                android:text="@string/constitution_online"
                 android:textColor="@color/black"
-                android:autoLink="web"
+                android:textColorLink="@color/blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_margin="@dimen/issue_text_left_margin"
+                android:text="@string/constitution_buy"
+                android:textColor="@color/black"
+                android:textColorLink="@color/blue" />
+
+            <TextView
+                android:id="@+id/c2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_margin="@dimen/issue_text_left_margin"
+                android:text="@string/constitution_amazon"
+                android:textColor="@color/black"
                 android:textColorLink="@color/blue"/>
 
         </LinearLayout>
