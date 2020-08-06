@@ -3,6 +3,7 @@ package in.filternet.jantamalik;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -27,14 +29,16 @@ public class IssueFragment extends Fragment {
     private final static String TAG = "Issue";
 
     private FloatingActionButton ui_add_issue;
+    private TextView ui_source_7th_schedule;
     private View view;
+    private String mLanguage;
     private SharedPreferences mSharedPref;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, final Bundle savedInstanceState) {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-        String mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
+        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
         if (mLanguage.equals(sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(getActivity(), "hi");
         }
@@ -54,6 +58,21 @@ public class IssueFragment extends Fragment {
                 Intent intent = new Intent(view.getContext(), Contact.class);
                 intent.putExtra("add_issue", true);
                 intent.putExtra(TAB_NUMBER, TAB_ISSUE);
+                startActivity(intent);
+            }
+        });
+
+        ui_source_7th_schedule = view.findViewById(R.id.source);
+        ui_source_7th_schedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LogEvents.send(view.getContext(), "7th_schedule");
+
+                String url = "https://db.filternet.in/jantamalik/7thSchedule-EN.pdf";
+                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
+                    url = "https://db.filternet.in/jantamalik/7thSchedule-HI.pdf";
+                }
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
             }
         });

@@ -168,8 +168,7 @@
 
     <string name="list_source_MP">MP makes laws in following areas:</string>
     <string name="list_source_MLA">MLA makes laws in following areas:</string>
-    <string name="source_responsibility_MP_MLA"><b>Source</b>: Constitution - 7th schedule
-        \nhttps://db.filternet.in/jantamalik/7thSchedule-EN.pdf</string>
+    <string name="source_responsibility_MP_MLA"><b>Source</b>: <font fgcolor='#214EF3'><u>Constitution - 7th schedule</u></font></string>
 
     <string name="disclaimer"><b>Disclaimer</b>: This app doesn\'t represent any government entity.</string>
 
@@ -690,9 +689,9 @@
     <string name="constitution_1">My word is law</string>
     <string name="constitution_2">We know Mahishmati constitution,
         \nwhat about India\'s ?</string>
-    <string name="constitution_online">Read <a href="http://legislative.gov.in/sites/default/files/COI-updated.pdf">online</a></string>
+    <string name="constitution_online">Read <font fgcolor='#214EF3'><u>online</u></font></string>
     <string name="constitution_buy">Order a copy today (Only Rs 100/-)</string>
-    <string name="constitution_amazon"><a href="https://www.amazon.in/gp/product/B088QP1KGP/ref=ox_sc_act_title_5?smid=A1PKK5TIH3CQO0&amp;psc=1">Amazon</a>
-        \t\t<a href="https://www.lawliterature.in/product/the-constitution-of-india-including-coloured-preamble-signatures-speech/">Indian Post</a></string>
+    <string name="constitution_amazon"><font fgcolor='#214EF3'><u>Amazon</u></font></string>
+    <string name="constitution_post"><font fgcolor='#214EF3'><u>Indian Post</u></font></string>
 
 </resources>

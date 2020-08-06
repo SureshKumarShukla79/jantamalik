@@ -24,7 +24,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.MPdata;
 import in.filternet.jantamalik.Kendra.VoteMP;
@@ -129,8 +128,6 @@ public class Issues extends AppCompatActivity {
         } else if (layoutResID == R.layout.issue_employment) {
             TextView ui_toi_link = findViewById(R.id.toi_link);
             ui_toi_link.setMovementMethod(LinkMovementMethod.getInstance());
-        } else if (layoutResID == R.layout.issue_constitution) {
-            make_clickable_links_constitution(); // href alone doesn't work
         }
 
     }
@@ -846,11 +843,37 @@ public class Issues extends AppCompatActivity {
         return num;
     }
 
-    private void make_clickable_links_constitution() {
-        TextView cX = findViewById(R.id.c1);
-        cX.setMovementMethod(LinkMovementMethod.getInstance());
-        cX = findViewById(R.id.c2);
-        cX.setMovementMethod(LinkMovementMethod.getInstance());
+    public void onclick_read_online(View view) {
+        LogEvents.send(this, "Read_Online");
+
+        String url = "http://legislative.gov.in/sites/default/files/COI-updated.pdf";
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
+            url = "http://legislative.gov.in/sites/default/files/CONSTITUTION%20OF%20INDIA-2019-UPLOAD.pdf";
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
+    }
+
+    public void onclick_amazon(View view) {
+        LogEvents.send(this, "Buy_Amazon");
+
+        String url = "https://www.amazon.in/gp/product/B088QP1KGP/ref=ox_sc_act_title_5?smid=A1PKK5TIH3CQO0&amp;psc=1";
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
+            url = "https://www.amazon.in/gp/product/B0818XVFFS/ref=ox_sc_act_title_3?smid=A1PKK5TIH3CQO0&amp;psc=1";
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
+    }
+
+    public void onclick_post(View view) {
+        LogEvents.send(this, "Buy_Post");
+
+        String url = "https://www.lawliterature.in/product/the-constitution-of-india-including-coloured-preamble-signatures-speech/";
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
+            url = "https://www.lawliterature.in/product/bharat-ka-samvidhan-anusuchiyon-sahit/";
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 
     private void make_clickable_links_media() {
