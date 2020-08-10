@@ -4,13 +4,12 @@ package in.filternet.jantamalik.Rajya;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
+import androidx.preference.PreferenceManager;
 import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
