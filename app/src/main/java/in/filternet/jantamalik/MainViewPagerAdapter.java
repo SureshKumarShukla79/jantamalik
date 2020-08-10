@@ -15,7 +15,7 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
 
     private  int numOfTabs;
 
-    public MainViewPagerAdapter(FragmentManager fm, int numOfTabs) {
+    MainViewPagerAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
         this.numOfTabs = numOfTabs;
     }

@@ -405,7 +405,7 @@ public class MainActivity extends AppCompatActivity {
             state_list.add(hiDEFAULT_STATE);
         }
 
-        ArrayAdapter adapter = new ArrayAdapter(this, R.layout.spinner_text_style, state_list);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_text_style, state_list);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_state_spinner.setAdapter(adapter);
         ui_state_spinner.setSelection(state_list.size() - 1);
@@ -434,7 +434,7 @@ public class MainActivity extends AppCompatActivity {
                     constituency_list.add(hiDEFAULT_MP);
                 }
 
-                ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, constituency_list);
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, constituency_list);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ui_constituency_spinner.setAdapter(adapter);
                 ui_constituency_spinner.setSelection(constituency_list.size() - 1);
@@ -505,7 +505,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
 
-                    ArrayAdapter adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, assembly_list);
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, assembly_list);
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     ui_assembly_spinner.setAdapter(adapter);
                     ui_assembly_spinner.setSelection(assembly_list.size() - 1);

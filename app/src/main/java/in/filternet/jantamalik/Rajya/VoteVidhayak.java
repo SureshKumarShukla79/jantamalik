@@ -46,7 +46,7 @@ public class VoteVidhayak extends AppCompatActivity {
     private Spinner spinnerMLA;
 
     private DataFilter.MP_info mla;
-    private ArrayAdapter mla_adapter;
+    private ArrayAdapter<String> mla_adapter;
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
@@ -119,9 +119,9 @@ public class VoteVidhayak extends AppCompatActivity {
 
         // Load defaults
         if (mp_area != null && dataFilter.has_MP_2_MLA_mapping(State, mp_area)) {
-            mla_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_MP_area(mp_area));
+            mla_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_MP_area(mp_area));
         } else {
-            mla_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_state(mLanguage, State));
+            mla_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_state(mLanguage, State));
         }
 
         mla_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

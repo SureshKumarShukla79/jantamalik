@@ -80,7 +80,8 @@ public class Issues extends AppCompatActivity {
     private LinearLayout ui_source;
     private Spinner ui_spinner_state, ui_spinner_area;
     private TableLayout ui_green_table, ui_red_table;
-    private ArrayAdapter state_adapter, area_adapter;
+    private ArrayAdapter<String> state_adapter;
+    private ArrayAdapter<String> area_adapter;
     private DataFilter dataFilter;
 
     private String mLanguage;
@@ -164,14 +165,14 @@ public class Issues extends AppCompatActivity {
 
         // Populating GUI
         dataFilter = new DataFilter();
-        state_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
+        state_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
         state_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_spinner_state.setAdapter(state_adapter);
 
         int spinnerPosition = state_adapter.getPosition(state);
         ui_spinner_state.setSelection(spinnerPosition);
 
-        area_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
+        area_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
         area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_spinner_area.setAdapter(area_adapter);
 
@@ -193,7 +194,7 @@ public class Issues extends AppCompatActivity {
                 tmp = tmp.replace("&", "and");
                 LogEvents.sendWithValue(getBaseContext(), sSTATE, tmp);
 
-                area_adapter = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
+                area_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, state));
                 area_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ui_spinner_area.setAdapter(area_adapter);
 

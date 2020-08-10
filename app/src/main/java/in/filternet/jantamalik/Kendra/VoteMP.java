@@ -92,8 +92,8 @@ public class VoteMP extends AppCompatActivity {
 
     private Spinner spinnerState;
     private Spinner spinnerMP;
-    private ArrayAdapter arrayAdapterState;
-    private ArrayAdapter arrayAdapterMP;
+    private ArrayAdapter<String> arrayAdapterState;
+    private ArrayAdapter<String> arrayAdapterMP;
     private DataFilter dataFilter;
 
     private SharedPreferences mSharedPref;
@@ -168,7 +168,7 @@ public class VoteMP extends AppCompatActivity {
         // Populating GUI
         dataFilter = new DataFilter();
         // Load defaults
-        arrayAdapterState = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
+        arrayAdapterState = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
         arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerState.setAdapter(arrayAdapterState);
 
@@ -177,7 +177,7 @@ public class VoteMP extends AppCompatActivity {
         //Log.e(TAG, "state def: " + State);
 
         //populating MP Area
-        arrayAdapterMP = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
+        arrayAdapterMP = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
         arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMP.setAdapter(arrayAdapterMP);
 
@@ -204,7 +204,7 @@ public class VoteMP extends AppCompatActivity {
                 LogEvents.sendWithValue(getBaseContext(), sSTATE, tmp);
 
                 // Reload the state MP areas
-                arrayAdapterMP = new ArrayAdapter(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
+                arrayAdapterMP = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
                 arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spinnerMP.setAdapter(arrayAdapterMP);
 
