@@ -307,9 +307,15 @@ public class MainActivity extends AppCompatActivity {
                     Button negative = dialog.getButton(Dialog.BUTTON_NEGATIVE);
                     negative.setTextSize((float) 20);
 
-                    positive.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                        positive.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
+                        negative.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
+                    } else {
+                        positive.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+                        negative.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+                    }
+
                     positive.setTypeface(positive.getTypeface(), Typeface.BOLD);
-                    negative.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
                     negative.setTypeface(positive.getTypeface(), Typeface.BOLD);
                 }
             });
@@ -317,6 +323,11 @@ public class MainActivity extends AppCompatActivity {
             dialog.setCancelable(false);
             dialog.show();
         }
+    }
+
+    @SuppressWarnings("deprecation")
+    private int get_color_for_lower_version(int color) {
+        return getResources().getColor(color);
     }
 
     private void prompt_no_language_support() {
@@ -357,7 +368,13 @@ public class MainActivity extends AppCompatActivity {
             public void onShow(DialogInterface dialog_interface) {
                 Button button = dialog.getButton(Dialog.BUTTON_POSITIVE);
                 button.setTextSize((float) 20);
-                button.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    button.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
+                } else {
+                    button.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+                }
+
                 button.setTypeface(button.getTypeface(), Typeface.BOLD);
             }
         });

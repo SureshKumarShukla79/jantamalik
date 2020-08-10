@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
@@ -259,7 +260,12 @@ public class Puzzle extends Activity {
                 Button button = dialog.getButton(Dialog.BUTTON_POSITIVE);
                 button.setTextSize((float) 20);
 
-                button.setTextColor(getResources().getColor(R.color.colorPrimaryDark));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    button.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
+                } else {
+                    button.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+                }
+
                 button.setTypeface(button.getTypeface(), Typeface.BOLD);
             }
         });
@@ -274,6 +280,11 @@ public class Puzzle extends Activity {
         } else {
             update_question();
         }
+    }
+
+    @SuppressWarnings("deprecation")
+    private int get_color_for_lower_version(int color) {
+        return getResources().getColor(color);
     }
 
     public void onclick_check_answer(View view) {
@@ -306,8 +317,15 @@ public class Puzzle extends Activity {
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
                         ui_wrong_answer.setVisibility(View.VISIBLE);
-                        ui_option_1.setTextColor(getResources().getColor(R.color.white));
-                        ui_option_1.setBackgroundColor(getResources().getColor(R.color.red));
+
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                            ui_option_1.setTextColor(getResources().getColor(R.color.white, null));
+                            ui_option_1.setBackgroundColor(getResources().getColor(R.color.red, null));
+                        } else {
+                            ui_option_1.setTextColor(get_color_for_lower_version(R.color.white));
+                            ui_option_1.setBackgroundColor(get_color_for_lower_version(R.color.red));
+                        }
+
                     }
                     LogEvents.send(this, "A" + (question_num+1));
                 }
@@ -325,8 +343,14 @@ public class Puzzle extends Activity {
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
                         ui_wrong_answer.setVisibility(View.VISIBLE);
-                        ui_option_2.setTextColor(getResources().getColor(R.color.white));
-                        ui_option_2.setBackgroundColor(getResources().getColor(R.color.red));
+
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                            ui_option_2.setTextColor(getResources().getColor(R.color.white, null));
+                            ui_option_2.setBackgroundColor(getResources().getColor(R.color.red, null));
+                        } else {
+                            ui_option_2.setTextColor(get_color_for_lower_version(R.color.white));
+                            ui_option_2.setBackgroundColor(get_color_for_lower_version(R.color.red));
+                        }
                     }
                     LogEvents.send(this, "A" + (question_num+1));
                 }
@@ -344,8 +368,14 @@ public class Puzzle extends Activity {
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
                         ui_wrong_answer.setVisibility(View.VISIBLE);
-                        ui_option_3.setTextColor(getResources().getColor(R.color.white));
-                        ui_option_3.setBackgroundColor(getResources().getColor(R.color.red));
+
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                            ui_option_3.setTextColor(getResources().getColor(R.color.white, null));
+                            ui_option_3.setBackgroundColor(getResources().getColor(R.color.red, null));
+                        } else {
+                            ui_option_3.setTextColor(get_color_for_lower_version(R.color.white));
+                            ui_option_3.setBackgroundColor(get_color_for_lower_version(R.color.red));
+                        }
                     }
                     LogEvents.send(this, "A" + (question_num+1));
                 }
@@ -363,8 +393,14 @@ public class Puzzle extends Activity {
                     else {
                         mEditor.putBoolean(bQUE_+(question_num+1), false);
                         ui_wrong_answer.setVisibility(View.VISIBLE);
-                        ui_option_4.setTextColor(getResources().getColor(R.color.white));
-                        ui_option_4.setBackgroundColor(getResources().getColor(R.color.red));
+
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                            ui_option_4.setTextColor(getResources().getColor(R.color.white, null));
+                            ui_option_4.setBackgroundColor(getResources().getColor(R.color.red, null));
+                        } else {
+                            ui_option_3.setTextColor(get_color_for_lower_version(R.color.white));
+                            ui_option_3.setBackgroundColor(get_color_for_lower_version(R.color.red));
+                        }
                     }
                     LogEvents.send(this, "A" + (question_num+1));
                 }
@@ -386,23 +422,43 @@ public class Puzzle extends Activity {
 
         // See contains explanation above. Bugfix.
         if (option1.contains(answer)) {
-            ui_option_1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            ui_option_1.setTextColor(getResources().getColor(R.color.white));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                ui_option_1.setTextColor(getResources().getColor(R.color.white, null));
+                ui_option_1.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark, null));
+            } else {
+                ui_option_1.setTextColor(get_color_for_lower_version(R.color.white));
+                ui_option_1.setBackgroundColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+            }
         }
 
         if (option2.contains(answer)) {
-            ui_option_2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            ui_option_2.setTextColor(getResources().getColor(R.color.white));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                ui_option_2.setTextColor(getResources().getColor(R.color.white, null));
+                ui_option_2.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark, null));
+            } else {
+                ui_option_2.setTextColor(get_color_for_lower_version(R.color.white));
+                ui_option_2.setBackgroundColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+            }
         }
 
         if (option3.contains(answer)) {
-            ui_option_3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            ui_option_3.setTextColor(getResources().getColor(R.color.white));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                ui_option_3.setTextColor(getResources().getColor(R.color.white, null));
+                ui_option_3.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark, null));
+            } else {
+                ui_option_3.setTextColor(get_color_for_lower_version(R.color.white));
+                ui_option_3.setBackgroundColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+            }
         }
 
         if (option4.contains(answer)) {
-            ui_option_4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-            ui_option_4.setTextColor(getResources().getColor(R.color.white));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                ui_option_4.setTextColor(getResources().getColor(R.color.white, null));
+                ui_option_4.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark, null));
+            } else {
+                ui_option_4.setTextColor(get_color_for_lower_version(R.color.white));
+                ui_option_4.setBackgroundColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+            }
         }
     }
 
@@ -414,13 +470,22 @@ public class Puzzle extends Activity {
         ui_option_group.clearCheck();
 
         ui_option_1.setTextColor(Color.BLACK);
-        ui_option_1.setBackgroundColor(getResources().getColor(R.color.card_grey));
         ui_option_2.setTextColor(Color.BLACK);
-        ui_option_2.setBackgroundColor(getResources().getColor(R.color.card_grey));
         ui_option_3.setTextColor(Color.BLACK);
-        ui_option_3.setBackgroundColor(getResources().getColor(R.color.card_grey));
         ui_option_4.setTextColor(Color.BLACK);
-        ui_option_4.setBackgroundColor(getResources().getColor(R.color.card_grey));
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            ui_option_1.setBackgroundColor(getResources().getColor(R.color.card_grey, null));
+            ui_option_2.setBackgroundColor(getResources().getColor(R.color.card_grey, null));
+            ui_option_3.setBackgroundColor(getResources().getColor(R.color.card_grey, null));
+            ui_option_4.setBackgroundColor(getResources().getColor(R.color.card_grey, null));
+        } else {
+            ui_option_1.setBackgroundColor(get_color_for_lower_version(R.color.card_grey));
+            ui_option_2.setBackgroundColor(get_color_for_lower_version(R.color.card_grey));
+            ui_option_3.setBackgroundColor(get_color_for_lower_version(R.color.card_grey));
+            ui_option_4.setBackgroundColor(get_color_for_lower_version(R.color.card_grey));
+        }
 
         enable_radio(true);
     }
