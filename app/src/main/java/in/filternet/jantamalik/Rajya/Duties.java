@@ -3,6 +3,7 @@ package in.filternet.jantamalik.Rajya;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -23,6 +24,7 @@ public class Duties extends AppCompatActivity {
 
     private SharedPreferences mSharedPref;
     private Toolbar toolbar;
+    private String mLanguage;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,12 +32,12 @@ public class Duties extends AppCompatActivity {
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
-        String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, null);
-        if (current_language != null && current_language.equals(MainActivity.sLANGUAGE_HINDI)) {
+        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, null);
+        if (mLanguage != null && mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
             MainActivity.setUI_Lang(this, "hi");
         }
 
-        if (current_language != null && current_language.equals(MainActivity.sLANGUAGE_MARATHI)) {
+        if (mLanguage != null && mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
             MainActivity.setUI_Lang(this, "mr");
         }
 
@@ -56,6 +58,17 @@ public class Duties extends AppCompatActivity {
     private void back_button(View view) {
         Intent intent = new Intent(view.getContext(), MainActivity.class);
         intent.putExtra(TAB_NUMBER, TAB_RAJYA);
+        startActivity(intent);
+    }
+
+    public void onclick_source(View view) {
+        LogEvents.send(this, "7th_schedule");
+
+        String url = "https://db.filternet.in/jantamalik/7thSchedule-EN.pdf";
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
+            url = "https://db.filternet.in/jantamalik/7thSchedule-HI.pdf";
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }
 }

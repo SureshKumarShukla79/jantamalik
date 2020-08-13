@@ -908,6 +908,17 @@
         </TableLayout>
 
         <TextView
+            android:id="@+id/online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_margin="@dimen/issue_text_left_margin"
+            android:text="@string/constitution_online"
+            android:textColor="@color/black"
+            android:textColorLink="@color/blue"
+            android:clickable="true"
+            android:onClick="onclick_read_online"/>
+        <TextView
             android:id="@+id/source"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -915,13 +926,12 @@
             android:layout_marginTop="3dp"
             android:background="@color/greylight"
             android:text="@string/source_responsibility_MP_MLA"
-            android:autoLink="web"
             android:clickable="true"
             android:textColorLink="@color/blue"
-            android:focusable="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:padding="8dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:onClick="onclick_source"/>
     </RelativeLayout>
 
 </ScrollView>

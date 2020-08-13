@@ -825,7 +825,8 @@
             android:focusable="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:padding="8dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:onClick="onclick_source"/>
 
     </RelativeLayout>
 
