@@ -651,13 +651,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void setUI_Lang(Activity activity, String lang) { // before setContentView
-        String languageToLoad = lang; // your language
-        Locale locale = new Locale(languageToLoad);
+        Locale locale = new Locale(lang);
         Locale.setDefault(locale);
         Configuration config = new Configuration();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { //API 24
+            config.setLocale(locale);
+        } else {
+            set_locale_for_lower_version(config, locale);
+        }
+
+        activity.getBaseContext().getResources().updateConfiguration(config, activity.getBaseContext().getResources().getDisplayMetrics());
+    }
+
+    @SuppressWarnings("deprecation")
+    private static void set_locale_for_lower_version(Configuration config, Locale locale) {
         config.locale = locale;
-        activity.getBaseContext().getResources().updateConfiguration(config,
-                activity.getBaseContext().getResources().getDisplayMetrics());
     }
 
     public static String get_state(Context context, String language){
