@@ -5,23 +5,23 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.preference.PreferenceManager;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
+import androidx.preference.PreferenceManager;
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.Issues;
@@ -43,6 +43,7 @@ public class VoteVidhayak extends AppCompatActivity {
     private TextView ui_name, ui_phone, ui_phone2, ui_phone3, ui_email, ui_email2, ui_address, ui_source_adr;
     private FloatingActionButton ui_call, ui_call2, ui_call3, ui_mail, ui_mail2;
     private LinearLayout ui_whatsapp_group, ui_protest, ui_source;
+    private RelativeLayout ui_no_progress;
     private Spinner spinnerMLA;
 
     private DataFilter.MP_info mla;
@@ -51,6 +52,7 @@ public class VoteVidhayak extends AppCompatActivity {
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
     private String mLanguage;
+    private boolean mProtestVisibility = false;
     private int layoutResID = 0, titleID = 0;
 
     @Override
@@ -87,6 +89,7 @@ public class VoteVidhayak extends AppCompatActivity {
         ui_mail2 = findViewById(R.id.mail2);
         ui_image_address = findViewById(R.id.image_address);
         ui_address = findViewById(R.id.address);
+        ui_no_progress = findViewById(R.id.no_progress);
         ui_expand_protest = findViewById(R.id.expand_more);
         ui_hide_protest = findViewById(R.id.expand_less);
         ui_protest = findViewById(R.id.protest);
@@ -157,6 +160,19 @@ public class VoteVidhayak extends AppCompatActivity {
 
         updateMLA();
 
+        ui_no_progress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!mProtestVisibility) {
+                    mProtestVisibility = true;
+                    show_protest();
+                }
+                else {
+                    mProtestVisibility = false;
+                    hide_protest();
+                }
+            }
+        });
     }
 
     @SuppressLint("RestrictedApi")
@@ -348,6 +364,10 @@ public class VoteVidhayak extends AppCompatActivity {
     }
 
     public void onclick_show_protest(View view) {
+        show_protest();
+    }
+
+    private void show_protest() {
         LogEvents.send(this, "Protest");
 
         ui_expand_protest.setVisibility(View.GONE);
@@ -356,8 +376,13 @@ public class VoteVidhayak extends AppCompatActivity {
     }
 
     public void onclick_hide_protest(View view) {
+        hide_protest();
+    }
+
+    private void hide_protest() {
         ui_expand_protest.setVisibility(View.VISIBLE);
         ui_protest.setVisibility(View.GONE);
         ui_hide_protest.setVisibility(View.GONE);
     }
+
 }

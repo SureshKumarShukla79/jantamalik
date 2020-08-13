@@ -9,28 +9,27 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.preference.PreferenceManager;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
+import androidx.preference.PreferenceManager;
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.Issues;
@@ -88,6 +87,7 @@ public class VoteMP extends AppCompatActivity {
     private FloatingActionButton ui_call, ui_call2, ui_call3, ui_mail, ui_mail2;
     private LinearLayout ui_whatsapp_group, ui_protest, ui_mp_options, ui_source;
     private TableLayout ui_green_table, ui_red_table;
+    private RelativeLayout ui_no_progress, ui_other_options;
     DataFilter.MP_info mp;
 
     private Spinner spinnerState;
@@ -100,6 +100,7 @@ public class VoteMP extends AppCompatActivity {
     private SharedPreferences.Editor editor;
 
     private String mLanguage;
+    private boolean mProtestVisibility = false, mOtherOptions = false;
     private int layoutResID = 0, titleID = 0;
 
     @Override
@@ -135,9 +136,11 @@ public class VoteMP extends AppCompatActivity {
         ui_mail2 = findViewById(R.id.mail2);
         ui_image_address = findViewById(R.id.image_address);
         ui_address = findViewById(R.id.address);
+        ui_no_progress = findViewById(R.id.no_progress);
         ui_expand_protest = findViewById(R.id.expand_more);
         ui_hide_protest = findViewById(R.id.expand_less);
         ui_protest = findViewById(R.id.protest);
+        ui_other_options = findViewById(R.id.other_options);
         ui_mp_options = findViewById(R.id.mp_options);
         ui_expand_mp_option = findViewById(R.id.expand_option);
         ui_hide_mp_option = findViewById(R.id.hide_option);
@@ -246,6 +249,34 @@ public class VoteMP extends AppCompatActivity {
 
         updateMP();
         update_candidate();
+
+        ui_no_progress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!mProtestVisibility) {
+                    mProtestVisibility = true;
+                    show_protest();
+                }
+                else {
+                    mProtestVisibility = false;
+                    hide_protest();
+                }
+            }
+        });
+
+        ui_other_options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!mOtherOptions) {
+                    mOtherOptions = true;
+                    show_options();
+                }
+                else {
+                    mOtherOptions = false;
+                    hide_options();
+                }
+            }
+        });
     }
 
     @SuppressLint("RestrictedApi")
@@ -462,6 +493,10 @@ public class VoteMP extends AppCompatActivity {
     }
 
     public void onclick_show_protest(View view) {
+        show_protest();
+    }
+
+    private void show_protest() {
         LogEvents.send(this, "Protest");
 
         ui_expand_protest.setVisibility(View.GONE);
@@ -470,12 +505,20 @@ public class VoteMP extends AppCompatActivity {
     }
 
     public void onclick_hide_protest(View view) {
+        hide_protest();
+    }
+
+    private void hide_protest() {
         ui_expand_protest.setVisibility(View.VISIBLE);
         ui_protest.setVisibility(View.GONE);
         ui_hide_protest.setVisibility(View.GONE);
     }
 
     public void onclick_show_options(View view) {
+        show_options();
+    }
+
+    private void show_options() {
         LogEvents.send(this, "Election_2019");
 
         ui_expand_mp_option.setVisibility(View.GONE);
@@ -486,6 +529,10 @@ public class VoteMP extends AppCompatActivity {
     }
 
     public void onclick_hide_options(View view) {
+        hide_options();
+    }
+
+    private void hide_options() {
         ui_expand_mp_option.setVisibility(View.VISIBLE);
         ui_mp_options.setVisibility(View.GONE);
         ui_hide_mp_option.setVisibility(View.GONE);
