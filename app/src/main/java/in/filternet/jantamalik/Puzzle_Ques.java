@@ -9,7 +9,7 @@ public class Puzzle_Ques {
                     "My 1st Salary as Income Tax(TDS)",
                     "Family paid the hospital bill when I was born.",
                     "I never paid tax",
-                    "When you bought tofee or biscuit, you as the customer paod tax. On a 5 rupee ParleG, about 90p is tax. Tax goes to central and state govt.",
+                    "When you bought toffee or biscuit, you as the customer paid tax. On a 5 rupee ParleG, about 90p is tax. Tax goes to central and state govt.",
                     "आपने जीवन में पहली बार टैक्स कब दिया था?",
                     "जब मैनें टाॅफी या बिस्कुट खरीदी",
                     "मेरी पहली सैलरी पर टैक्स कटा था(टीडीएस)",
