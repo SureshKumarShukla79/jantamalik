@@ -2,11 +2,11 @@ package in.filternet.jantamalik;
 
 public class Constants {
 
-    public static final String COI_English_full = "http://legislative.gov.in/sites/default/files/COI-updated.pdf";
-    public static final String COI_Hindi_full = "http://legislative.gov.in/sites/default/files/CONSTITUTION%20OF%20INDIA-2019-UPLOAD.pdf";
+    public static final String COI_English_full = "https://db.filternet.in/jantamalik/Constitution.pdf"; // http://legislative.gov.in/sites/default/files/COI-updated.pdf
+    public static final String COI_Hindi_full = "https://db.filternet.in/jantamalik/%E0%A4%B8%E0%A4%82%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8.pdf"; // http://legislative.gov.in/sites/default/files/CONSTITUTION%20OF%20INDIA-2019-UPLOAD.pdf
 
-    public static final String COI_English_7th_schedule = "https://db.filternet.in/jantamalik/7thSchedule-EN.pdf";
-    public static final String COI_Hindi_7th_schedule = "https://db.filternet.in/jantamalik/7thSchedule-HI.pdf";
+    public static final String COI_English_7th_schedule = "https://db.filternet.in/jantamalik/Constitution-Mini.pdf";
+    public static final String COI_Hindi_7th_schedule = "https://db.filternet.in/jantamalik/%E0%A4%B8%E0%A4%82%E0%A4%B5%E0%A4%BF%E0%A4%A7%E0%A4%BE%E0%A4%A8-%E0%A4%B2%E0%A4%98%E0%A5%81.pdf";
 
     //public final static String CLOUD_VERSION = "devel";  // Cloud side PHP version
     public final static String CLOUD_VERSION = "20.06.08";  // Cloud side PHP version

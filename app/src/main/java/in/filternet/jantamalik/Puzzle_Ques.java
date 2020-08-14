@@ -72,30 +72,30 @@ public class Puzzle_Ques {
                     "MP",
                     "Municipal corporator",
                     "Opposition",
-                    "Constitution article 246 clearly assigns these areas to state govt. As public representative MLA is responsible.",
+                    "Constitution 7th schedule clearly assigns these areas to state govt. As public representative MLA is responsible.",
                     "कौन जिम्मेदार है - पीने का पानी, सड़क, ट्रैफिक जाम और बिजली के लिए?",
                     "विधायक", "सांसद", "नगर निगम काॅरपोरेटर", "विपक्ष",
-                    "संविधान के अनुच्छेद 246 के अनुसार यह राज्य सरकार के विषय हैं। जन प्रतिनिधि के रूप में विधायक जिम्मेदार है।"},
-            {"Have you ever read constitution? Especially article 246", // Constitution
+                    "संविधान की 7वीं अनुसूची के अनुसार यह राज्य सरकार के विषय हैं। जन प्रतिनिधि के रूप में विधायक जिम्मेदार है।"},
+            {"Have you ever read constitution? Especially 7th schedule", // Constitution
                     "Yes",
                     "No",
                     "Only preamble",
                     "Not sure",
-                    "Most of us have not read it. Interesting fact is that newspaper editors and news channel reporters analyse, without even reading it.",
-                    "क्या आपने कभी संविधान पढ़ा है? खासतौर पर अनुच्छेद 246",
+                    "Most of us have not read it. Interesting fact is that newspaper editors and news channel reporters ignore it.",
+                    "क्या आपने कभी संविधान पढ़ा है? खासतौर पर 7वीं अनुसूची",
                     "हाँ", "नहीं", "सिर्फ प्रस्तावना", "कह नहीं सकते",
-                    "हम में से ज्यादातर लोग कभी संविधान नहीं पढ़ते। मजेदार बात है कि अखबार के संपादक और न्यूज चैनल के पत्रकार भी इसे पढ़े बिना ही काम चलाते हैं।"},
+                    "हम में से ज्यादातर लोग कभी संविधान नहीं पढ़ते। मजेदार बात है कि अखबार के संपादक और न्यूज चैनल के पत्रकार भी इसे पढ़े बिना ही काम चला रहे हैं।"},
             {"When was the lokpal bill passed by loksabha?", // Political Rights 4
                     "When people started protesting outside minister/MP house",
                     "When people protested in Ramlila ground",
                     "When Anna went to jail", "Don't know",
-                    "Loksabha didn't react to dharna for 7 days. On 7th night protesters changed location to MP homes. MPs came under pressure and passed lokpal bill.",
+                    "Loksabha didn't react to dharna for 7 days. On 8th day protesters changed location to MP homes. Within 4 days Lokpal bill was passed.",
                     "लोकसभा ने लोकपाल बिल कब पास किया था?",
                     "जब लोगों ने मंत्री/सांसद के घर के सामने धरना दिया था",
                     "जब लोगों ने रामलीला मैदान में धरना दिया था",
                     "जब अन्ना जेल गए थे",
                     "पता नहीं",
-                    "लोकसभा ने धरने को 7 दिन तक अनसुना किया। फिर लोगों ने सांसदों के घर के सामने धरना दिया। तब जाकर लोकपाल बिल पास हुआ।"},
+                    "लोकसभा ने धरने को 7 दिन तक अनसुना किया। 8वें दिन लोगों ने सांसदों के घर के सामने धरना दिया। 4 ही दिन में लोकपाल बिल पास हो गया।"},
     };
 
 }
