@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String URL_PLAYSTORE_MARKET = "https://play.google.com/store/apps/details?id=in.filternet.jantamalik";
     public static final String USER_SHARE_APP = "\n" + URL_PLAYSTORE_MARKET + "&referrer=utm_source%3Dr";
 
+    private Activity activity;
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private Toolbar toolbar;
@@ -119,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
         if(savedInstanceState != null) {
             rajya = savedInstanceState.getBoolean("rajya");
         }
+
+        activity = this;
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPref.edit();
@@ -963,8 +966,7 @@ public class MainActivity extends AppCompatActivity {
 
                     // Bugfix : Activity may be in background and this may crash
                     try {
-                        mAlertDialog = builder.create();
-                        //if (!getBaseContext().isFinishing()) // Activity shudn't be finished or finishing
+                        if (!activity.isFinishing()) // Activity shudn't be finished or finishing
                             mAlertDialog.show();
                     } catch (Exception e) {
                         e.printStackTrace();

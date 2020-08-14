@@ -11,6 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
+
+import in.filternet.jantamalik.Constants;
 import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
@@ -64,9 +66,9 @@ public class Duties extends AppCompatActivity {
     public void onclick_source(View view) {
         LogEvents.send(this, "7th_schedule");
 
-        String url = "https://db.filternet.in/jantamalik/7thSchedule-EN.pdf";
+        String url = Constants.COI_English_7th_schedule;
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-            url = "https://db.filternet.in/jantamalik/7thSchedule-HI.pdf";
+            url = Constants.COI_Hindi_7th_schedule;
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);

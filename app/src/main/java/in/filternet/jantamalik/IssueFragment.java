@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,11 +12,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
@@ -68,9 +68,9 @@ public class IssueFragment extends Fragment {
             public void onClick(View view) {
                 LogEvents.send(view.getContext(), "7th_schedule");
 
-                String url = "https://db.filternet.in/jantamalik/7thSchedule-EN.pdf";
+                String url = Constants.COI_English_7th_schedule;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-                    url = "https://db.filternet.in/jantamalik/7thSchedule-HI.pdf";
+                    url = Constants.COI_Hindi_7th_schedule;
                 }
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
