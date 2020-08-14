@@ -18,10 +18,7 @@ import java.util.HashMap;
 public final class LogEvents {
     private static String TAG = "LogEvents";
 
-    //private final static String CLOUD_VERSION = "devel";  // Cloud side PHP version
-    private final static String CLOUD_VERSION = "20.06.08";  // Cloud side PHP version
-    private final static String URL_BASE_SSL = "https://db.filternet.in/jantamalik/" + CLOUD_VERSION;
-    private static final String URL_ANALYTICS = URL_BASE_SSL + "/" + "analytics.php"; // logs / UX tracer
+    private static final String URL_ANALYTICS = Constants.URL_ANALYTICS;
 
     public static void send(Context context, String s){
         sendWithValue(context, s, ""); // only evant name, no value

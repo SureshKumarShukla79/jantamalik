@@ -7,7 +7,6 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import androidx.preference.PreferenceManager;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
@@ -24,6 +23,8 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
+
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.MPdata;
 import in.filternet.jantamalik.Kendra.VoteMP;
@@ -847,9 +848,9 @@ public class Issues extends AppCompatActivity {
     public void onclick_read_online(View view) {
         LogEvents.send(this, "Read_Online");
 
-        String url = "http://legislative.gov.in/sites/default/files/COI-updated.pdf";
+        String url = Constants.COI_English_full;
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-            url = "http://legislative.gov.in/sites/default/files/CONSTITUTION%20OF%20INDIA-2019-UPLOAD.pdf";
+            url = Constants.COI_Hindi_full;
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
@@ -858,9 +859,9 @@ public class Issues extends AppCompatActivity {
     public void onclick_amazon(View view) {
         LogEvents.send(this, "Buy_Amazon");
 
-        String url = "https://www.amazon.in/gp/product/B088QP1KGP/ref=ox_sc_act_title_5?smid=A1PKK5TIH3CQO0&amp;psc=1";
+        String url = Constants.COI_English_buy_amazon;
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-            url = "https://www.amazon.in/gp/product/B0818XVFFS/ref=ox_sc_act_title_3?smid=A1PKK5TIH3CQO0&amp;psc=1";
+            url = Constants.COI_Hindi_buy_amazon;
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
@@ -869,9 +870,9 @@ public class Issues extends AppCompatActivity {
     public void onclick_post(View view) {
         LogEvents.send(this, "Buy_Post");
 
-        String url = "https://www.lawliterature.in/product/the-constitution-of-india-including-coloured-preamble-signatures-speech/";
+        String url = Constants.COI_English_buy_IndiaPost;
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-            url = "https://www.lawliterature.in/product/bharat-ka-samvidhan-anusuchiyon-sahit/";
+            url = Constants.COI_Hindi_buy_IndiaPost;
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
@@ -994,7 +995,7 @@ public class Issues extends AppCompatActivity {
     public void onclick_open_donate(View view) {
         LogEvents.send(this, "Donate");
 
-        Uri uri = Uri.parse("https://www.filternet.in/donate/");
+        Uri uri = Uri.parse(Constants.URL_DONATE);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }

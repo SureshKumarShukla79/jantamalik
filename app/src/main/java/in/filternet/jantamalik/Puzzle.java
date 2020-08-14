@@ -19,11 +19,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
+
+import java.util.ArrayList;
+import java.util.Random;
 
 public class Puzzle extends Activity {
 
@@ -398,8 +398,8 @@ public class Puzzle extends Activity {
                             ui_option_4.setTextColor(getResources().getColor(R.color.white, null));
                             ui_option_4.setBackgroundColor(getResources().getColor(R.color.red, null));
                         } else {
-                            ui_option_3.setTextColor(get_color_for_lower_version(R.color.white));
-                            ui_option_3.setBackgroundColor(get_color_for_lower_version(R.color.red));
+                            ui_option_4.setTextColor(get_color_for_lower_version(R.color.white));
+                            ui_option_4.setBackgroundColor(get_color_for_lower_version(R.color.red));
                         }
                     }
                     LogEvents.send(this, "A" + (question_num+1));
