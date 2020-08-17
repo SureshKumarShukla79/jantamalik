@@ -390,11 +390,11 @@
         \n- Meet at their home.</string>
     <string name="mp_protest"><b>If this doesn\'t work</b></string>
     <string name="mp_neta"><b>If above steps don\'t work, then protest outside MP\'s home. This gets quick results.</b>
-        \n\nDuring Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.
-        \nSome MP come to meet within 15 minutes.</string>
-    <string name="mla_neta"><b>If above steps don\'t work, then protest outside MLA\'s home. This gets quick results.
-        \nSome MLA come to meet within 15 minutes.</b>
-        \n\nDuring Anna Hazare fast for Jan Lokpal bill, when people protested outside homes, it worked wonders.</string>
+        \n\nCase study 1 - Anna Hazare fast for Jan Lokpal bill. For first 7 days people protested in Ramlila ground, nothing happened. From 8th day onwards people protested outside MP/MLA homes, the bill got passed within 6 days.
+        \n\nCase study 2 - In Uttarakhand students have were selected but were not getting joining letters. They protested in city for months, but didn\'t succeed. When they protested outside MLA house, they got attention within 15 minutes. Within next 45 days they had joined and started getting salary.</string>
+    <string name="mla_neta"><b>If above steps don\'t work, then protest outside MLA\'s home. This gets quick results.</b>
+        \n\nCase study 1 - Anna Hazare fast for Jan Lokpal bill. For first 7 days people protested in Ramlila ground, nothing happened. From 8th day onwards people protested outside MP/MLA homes, the bill got passed within 6 days.
+        \n\nCase study 2 - In Uttarakhand students have were selected but were not getting joining letters. They protested in city for months, but didn\'t succeed. When they protested outside MLA house, they got attention within 15 minutes. Within next 45 days they had joined and started getting salary.</string>
 
     <string name="clean_voter">Cleanliness of roads, removing silt and stray animals is responsibility of local municipality.
         \nIf local municipality does not take care, then state govt is responsible.</string>
