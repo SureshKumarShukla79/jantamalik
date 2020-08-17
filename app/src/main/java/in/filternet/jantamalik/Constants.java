@@ -22,4 +22,7 @@ public class Constants {
     // India Post
     public static final String COI_English_buy_IndiaPost = "https://www.lawliterature.in/product/the-constitution-of-india-including-coloured-preamble-signatures-speech/";
     public static final String COI_Hindi_buy_IndiaPost = "https://www.lawliterature.in/product/bharat-ka-samvidhan-anusuchiyon-sahit/";
+
+    // Youtube Video
+    public static final String COI_Youtube = "https://www.youtube.com/watch?v=6YPgH3KQ1uU";
 }

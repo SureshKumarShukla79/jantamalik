@@ -700,5 +700,7 @@
     <string name="constitution_buy">आज ही एक कापी मगाएं (सिर्फ ₹ 100/-)</string>
     <string name="constitution_amazon"><font fgcolor='#214EF3'><u>अमेजन</u></font></string>
     <string name="constitution_post"><font fgcolor='#214EF3'><u>भारतीय डाक</u></font></string>
+
+    <string name="coi_youtube">इस वीडियो में जानिए कैसे संविधान आम समस्याओं का समाधान दिलाता है।</string>
 </resources>
 

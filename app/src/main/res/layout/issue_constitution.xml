@@ -115,6 +115,22 @@
                 android:clickable="true"
                 android:onClick="onclick_post"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/issue_text_left_margin"
+                android:text="@string/coi_youtube"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/play_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/youtube_logo"
+                android:onClick="onclick_play_video" />
+
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

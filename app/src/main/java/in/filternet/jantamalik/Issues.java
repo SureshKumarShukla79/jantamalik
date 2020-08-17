@@ -878,6 +878,13 @@ public class Issues extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onclick_play_video(View view) {
+        LogEvents.send(this, "COI_Youtube");
+
+        String url = Constants.COI_Youtube;
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+    }
+
     private void make_clickable_links_media() {
         TextView l1 = findViewById(R.id.l1);
         l1.setMovementMethod(LinkMovementMethod.getInstance());
