@@ -529,6 +529,11 @@ public final class MP_2_MLA {
             {"ओडिशा", "संबलपुर", "कुचिंडा (एस टी)", "रेंगाली (एस सी)", "सम्बलपुर", "रायराखोल", "देवगढ़", "छेदीपाड़ा (एस सी)", "अथमालिक"},
             {"Odisha", "Sundargarh", "Talsara (ST)", "Sundargarh (ST)", "Biramitrapur (ST)", "Raghunathpali (SC)", "Rourkela", "Rajgangapur (ST)", "Bonai (ST)"},
             {"ओडिशा", "सुंदरगढ़", "तिलसारा (एस टी)", "सुंदरगढ़ (एस टी)", "बीरमित्रपुर (एस टी)", "रघुनाथपाली (एस सी)", "राउरकेला", "राजगंगापुर (एस टी)", "बोनाई (एस टी)"},
+
+            {"Puducherry", "Puducherry", "Mannadipet", "Thirubhuvanai (SC)", "Oussudu (SC)", "Mangalam", "Villianur", "Ozhukarai", "Kadirgamam", "Indira Nagar", "Thattanchavady", "Kamraj Nagar", "Lawspet", "Kalapet", "Muthialpet", "Raj Bhavan", "Oupalam", "Orleampeth", "Nellithope", "Mudaliarpet", "Ariankuppam", "Manavely", "Embalam (SC)", "Nettapakkam (SC)", "Bahour", "Nedungadu (SC)", "Thirunallar", "Karaikal North", "Karaikal South", "Neravy T.R. Pattinam", "Mahe", "Yanam"},
+            {"पुदुच्चेरी", "पुडुचेरी", "मन्नदीपेट", "थिरूभुवनै (एस सी)", "ओस्सुदू (एस सी)", "मंगलम", "विल्लिअनुर", "ओज़्हुकारै", "क़ादिरगमम", "इंदिरा नगर", "थट्टांचावडी", "कामराज नगर", "लॉस्पेट", "कालापेट", "मुठिआलपेट", "राज भवन", "अौपालम", "अोरलीमपेठ", "नेल्लीथोपे", "मुदालिअर्पेट", "अॅरियनकुप्पम", "मानवेळी", "एम्बलम (एस सी)", "नेत्तापक्कम (एस सी)", "बाहौर", "नेदुंगदु (एस सी)", "थिरुनल्लार", "काराइकाल उत्तर", "काराइकाल दक्षिण", "नेराव्य टी. आर. पट्टिनाम", "माहे", "यानम"},
+
+
             {"Punjab", "Amritsar", "Ajnala", "Raja Sansi", "Majitha", "Amritsar North", "Amritsar West (SC)", "Amritsar Central", "Amritsar East", "Amristar South", "Attari (SC)"},
             {"पंजाब", "अमृतसर", "अजनाला", "राजा सांसी", "मजीठा", "अमृतसर उत्तर", "अमृतसर पश्चिम (एस सी)", "अमृतसर सेंट्रल", "अमृतसर पूर्व", "अमृतसर दक्षिण", "अटारी (एस सी)"},
             {"Punjab", "Anandpur Sahib", "Garhshankar", "Banga (SC)", "Nawan Shahr", "Balachaur", "Anandpur Sahib", "Rupnagar", "Chamkaur Sahib (SC)", "Kharar", "S.A.S. Nagar"},
