@@ -24,5 +24,5 @@ public class Constants {
     public static final String COI_Hindi_buy_IndiaPost = "https://www.lawliterature.in/product/bharat-ka-samvidhan-anusuchiyon-sahit/";
 
     // Youtube Video
-    public static final String COI_Youtube = "https://www.youtube.com/watch?v=6YPgH3KQ1uU";
+    public static final String COI_Youtube = "https://youtu.be/6YPgH3KQ1uU?t=40";
 }
