@@ -27,7 +27,7 @@
 		{"Sikkim", "Rangang-Yangang", "Raj Kumari Thapa", "सिक्किम", "रानगंग-यानगंग", "Raj Kumari Thapa",  "  9593261324", "6297223517", "", " rajkumarithapa21@gmail.com", "", " R/O H.NO.95 Pathing, Village Pathing Sub,Yangyang,Dist.South Sikkim "},
 		{"Sikkim", "Rhenock", "Bishnu Kr Sharma", "सिक्किम", "रहेनोक", "Bishnu Kr Sharma",  "  7407384313", "", "", " bishnu99khatiwara@gmail.com", "", " Padamchey,P.O.Pachak,P.S.Pakyong,East Sikkim "},
 		{"Sikkim", "Rinchenpong (BL)", "Karma Sonam Lepcha", "सिक्किम", "रिनचेनपोंग (बी.एल.)", "Karma Sonam Lepcha",  "  9647876903", "", "", " kslepcha91@gmail.com", "", " Sangadorjee, P.O. Rinchenpong, P.S. Kaluk, West Sikkim "},
-		{"Sikkim", "Salghari-Zoom (SC)", "Sunita Gajmer", "सिक्किम", "सलघारी-जूम (एस सी)", "Sunita Gajmer",  "  7908196273", "", "", "", "", " Majhi Gaon West, Namchi P.O. Nayabazar P.O. Jorethang south Sikkim - 737121 "},
+		{"Sikkim", "Salghari-Zoom", "Sunita Gajmer", "सिक्किम", "सलघारी-जूम", "Sunita Gajmer",  "  7908196273", "", "", "", "", " Majhi Gaon West, Namchi P.O. Nayabazar P.O. Jorethang south Sikkim - 737121 "},
 		{"Sikkim", "Sangha", "Sonam Lama", "सिक्किम", "संघा", "Sonam Lama",  "  9434127107", "", "", " pintsoc@gmail.com", "", " Thangsing, P.O Khamdong, P.S Singtam, East Sikkim "},
 		{"Sikkim", "Shyari (BL)", "Kunga Nima Lepcha", "सिक्किम", "श्यारी (बी.एल.)", "Kunga Nima Lepcha",  "  9932666444", "", "", " ikunganima@gmail.com", "", " upper Tathangchen, P.O.Rajbhawan, P.S.Sadar, Gangtok,East Sikkim "},
 		{"Sikkim", "Soreong-Chakung", "Aditya Golay Tamang", "सिक्किम", "सोरेओंग-चाकुंग", "Aditya Golay Tamang",  "  9083005103", "", "", " adityagolay@yahoo.in", "", " House No. 29/2, Singling Busty, P.O. & P.S. Soreng West Sikkim - 737121 "},
@@ -35,7 +35,7 @@
 		{"Sikkim", "Tumen-Lingi (BL)", "Ugen T. Gyatso Bhutia", "सिक्किम", "तुमेन-लिंगी (बी.एल.)", "Ugen T. Gyatso Bhutia",  "  9475028292", "", "", "", "", " House No. 046, Deorali, Sub-Gangtok, District - East Sikkim - 737102 "},
 		{"Sikkim", "Upper Burtuk", "Dilliram Thapa", "सिक्किम", "अपर बुरटुक", "Dilliram Thapa",  "  9434103269", " 7908879961", "", " dishantpragati@gmail.com", "", " Sichey Busty, P.O Sichey P.S. Gangtok, East Sikkim "},
 		{"Sikkim", "Upper Tadong", "Gay Tshering Dhungel", "सिक्किम", "अपर तादोंग", "Gay Tshering Dhungel",  "  9434031018", "", "", " gtdhungel@gmail.com", "", " Daragaon MW, ICAR Road Gangtok Municipal Corp.New Greendale School, Tadong East Sikkim-737102 "},
-		{"Sikkim", "West Pendam (SC)", "Lall Bahadur Das", "सिक्किम", "पश्चिम पेन्डम (एस सी)", "Lall Bahadur Das",  "  7318832735", " 6296742358", "", " lalj3d@gmail.com", "", " Upper Gaygyong P.O. Yangang & P.S. Ravangla, South Sikkim "},
+		{"Sikkim", "West Pendam", "Lall Bahadur Das", "सिक्किम", "पश्चिम पेन्डम", "Lall Bahadur Das",  "  7318832735", " 6296742358", "", " lalj3d@gmail.com", "", " Upper Gaygyong P.O. Yangang & P.S. Ravangla, South Sikkim "},
 		{"Sikkim", "Yangthang", "Bhim Hang Limboo", "सिक्किम", "यांगथांग", "Bhim Hang Limboo",  "  9593261489", "", "", "", "", " Singpheng, Darap, P.O. Darap, P.S. Tikjuk, West Sikkim "},
 		{"Sikkim", "Yoksam-Tashiding (BL)", "Sangay Lepcha", "सिक्किम", "योकसाम-ताशिडिंंग (बी एल)", "Sangay Lepcha",  "  9647855908", "", "", "", "", " H.No.8, Arithang, P.O. Arithang, Gyalshing, West Sikkim 737113 "},
 
