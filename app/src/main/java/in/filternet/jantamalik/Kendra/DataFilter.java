@@ -2,6 +2,7 @@ package in.filternet.jantamalik.Kendra;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
 import androidx.preference.PreferenceManager;
 
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ import in.filternet.jantamalik.Rajya.Jharkhand;
 import in.filternet.jantamalik.Rajya.Karnataka;
 import in.filternet.jantamalik.Rajya.Kerala;
 import in.filternet.jantamalik.Rajya.MP_2_MLA;
+import in.filternet.jantamalik.Rajya.MP_2_MLA_part2;
 import in.filternet.jantamalik.Rajya.Madhya_Pradesh;
 import in.filternet.jantamalik.Rajya.Maharashtra;
 import in.filternet.jantamalik.Rajya.Manipur;
@@ -165,10 +167,17 @@ public class DataFilter {
 
         // Treemap to keep data sorted names of Areas.
         TreeMap<String,Integer> areas = new TreeMap<>();
-        for(int i=0; i< MP_2_MLA.mapping.length; i++){
+        for (int i = 0; i < MP_2_MLA.mapping.length; i++) {
             if (MP_area.equals(MP_2_MLA.mapping[i][mp_area_column])) {
                 for (int k = 2; k < MP_2_MLA.mapping[i].length; k++) {
                     areas.put(MP_2_MLA.mapping[i][k], i);
+                }
+            }
+        }
+        for (int i = 0; i < MP_2_MLA_part2.mapping.length; i++) {
+            if (MP_area.equals(MP_2_MLA_part2.mapping[i][mp_area_column])) {
+                for (int k = 2; k < MP_2_MLA_part2.mapping[i].length; k++) {
+                    areas.put(MP_2_MLA_part2.mapping[i][k], i);
                 }
             }
         }
@@ -217,8 +226,14 @@ public class DataFilter {
     public boolean has_MP_2_MLA_mapping(String state, String MP_area) {
         int state_column = 0, mp_area_column = 1;
 
-        for(int i=0; i< MP_2_MLA.mapping.length; i++){
+        for (int i = 0; i < MP_2_MLA.mapping.length; i++) {
             if (state.equals(MP_2_MLA.mapping[i][state_column]) && MP_area.equals(MP_2_MLA.mapping[i][mp_area_column])) {
+                //Log.e(TAG, "has_MP_2_MLA_mapping: true");
+                return true;
+            }
+        }
+        for (int i = 0; i < MP_2_MLA_part2.mapping.length; i++) {
+            if (state.equals(MP_2_MLA_part2.mapping[i][state_column]) && MP_area.equals(MP_2_MLA_part2.mapping[i][mp_area_column])) {
                 //Log.e(TAG, "has_MP_2_MLA_mapping: true");
                 return true;
             }
