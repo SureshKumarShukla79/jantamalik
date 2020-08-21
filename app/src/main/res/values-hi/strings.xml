@@ -169,7 +169,7 @@
 
     <string name="list_source_MP">सांसद निम्न विषयों पर कानून बनाता है:</string>
     <string name="list_source_MLA">विधायक निम्न विषयों पर कानून बनाता है:</string>
-    <string name="source_responsibility_MP_MLA"><b>स्रोत</b>:mla_neta<font fgcolor='#214EF3'><u>संविधान - 7वीं अनुसूची</u></font></string>
+    <string name="source_responsibility_MP_MLA"><b>स्रोत</b><font fgcolor='#214EF3'><u>संविधान - 7वीं अनुसूची</u></font></string>
 
     <string name="disclaimer"><b>स्पष्टीकरण</b>: यह ऐप किसी भी सरकारी विभाग से नहीं जुड़ी है।</string>
 
