@@ -1,5 +1,6 @@
 package in.filternet.jantamalik;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -8,6 +9,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.view.Gravity;
 import android.view.View;
@@ -24,7 +26,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
-
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.MPdata;
 import in.filternet.jantamalik.Kendra.VoteMP;
@@ -705,7 +706,12 @@ public class Issues extends AppCompatActivity {
 
                     String url_link = assets + "<a href='"+ bucket[i][j + 3] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
                     //Log.e(TAG, "Link: " + url_link);
-                    text.setText(Html.fromHtml(url_link));
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { //API 24
+                        text.setText(Html.fromHtml(url_link, Html.FROM_HTML_MODE_LEGACY));
+                    } else {
+                        text.setText(for_lower_version(url_link));
+                    }
+
                 } else {
                     if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
                         int j_hi = j + 6;
@@ -721,6 +727,11 @@ public class Issues extends AppCompatActivity {
             ui_green_table.setGravity(Gravity.CENTER);
             ui_green_table.setStretchAllColumns(false);
         }
+    }
+
+    @SuppressWarnings("deprecation")
+    public static Spanned for_lower_version(String text) {
+        return Html.fromHtml(text);
     }
 
     private void load_bad_candidate(int total_candidate, String[][] bucket) {
@@ -811,7 +822,7 @@ public class Issues extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             text.setTextAppearance(R.style.TextAppearance_AppCompat_Medium);
         } else {
-            text.setTextAppearance(this, R.style.TextAppearance_AppCompat_Medium);
+            text_appearance_for_lower_version(this, text);
         }
 
         text.setPadding(5,5,5,5);
@@ -819,6 +830,11 @@ public class Issues extends AppCompatActivity {
         text.setGravity(Gravity.CENTER);
         text.setBackgroundResource(color);
         text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
+    }
+
+    @SuppressWarnings("deprecation")
+    public static void text_appearance_for_lower_version(Context context, TextView text){
+        text.setTextAppearance(context, R.style.TextAppearance_AppCompat_Medium);
     }
 
     private int num_of_candidate(String[][] bucket) {

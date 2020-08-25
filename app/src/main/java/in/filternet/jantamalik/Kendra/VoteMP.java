@@ -999,7 +999,11 @@ public class VoteMP extends AppCompatActivity {
 
                     String url_link = assets + "<a href='"+ bucket[i][j + 3] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
                     //Log.e(TAG, "Link: " + url_link);
-                    text.setText(Html.fromHtml(url_link));
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { //API 24
+                        text.setText(Html.fromHtml(url_link, Html.FROM_HTML_MODE_LEGACY));
+                    } else {
+                        text.setText(Issues.for_lower_version(url_link));
+                    }
                 } else {
                     if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
                         int j_hi = j + 6;
@@ -1105,7 +1109,7 @@ public class VoteMP extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             text.setTextAppearance(R.style.TextAppearance_AppCompat_Medium);
         } else {
-            text.setTextAppearance(this, R.style.TextAppearance_AppCompat_Medium);
+            Issues.text_appearance_for_lower_version(this, text);
         }
 
         text.setPadding(5,5,5,5);
