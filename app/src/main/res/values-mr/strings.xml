@@ -169,8 +169,8 @@
 
     <string name="list_source_MP">स्रोत: खासदार खालील क्षेत्रात कायदे बनवतात:</string>
     <string name="list_source_MLA">स्रोत: आमदार  खालील क्षेत्रात कायदे बनवतात:</string>
-    <string name="source_responsibility_MP_MLA"><b>स्रोत</b>: <font fgcolor='#214EF3'><u>संविधानाच्या - 7वीं अनुसूची</u></font></string>
-    <string name="disclaimer"><b>स्पष्टीकरण</b>: यह ऐप किसी भी सरकारी विभाग से नहीं जुड़ी है।</string>
+    <string name="source_responsibility_MP_MLA"><b>स्रोत</b> - <font fgcolor='#214EF3'><u>संविधान - लघु</u></font></string>
+    <string name="disclaimer"><b>स्पष्टीकरण</b>: यह ऐप किसी सरकारी विभाग से नहीं जुड़ी है।</string>
 
     <string name="kendra_subjects">रोजगार , सामाजिक सुरक्षा , किंमत नियंत्रण ,
         \nयूपीएचसी , शिक्षण , रेल्वे ,

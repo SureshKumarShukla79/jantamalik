@@ -45,11 +45,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp"
-        android:visibility="visible">
+        android:layout_margin="3dp">
 
         <LinearLayout
-            android:id="@+id/puzzle"
+            android:id="@+id/constitution_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -61,7 +60,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
-                android:src="@drawable/green_badge" />
+                android:src="@drawable/shivgami" />
 
             <TextView
                 android:background="@color/light_orange"
@@ -70,7 +69,7 @@
                 android:gravity="center_vertical"
                 android:padding="10dp"
                 android:layout_weight="1.0"
-                android:text="@string/puzzle_text"
+                android:text="@string/constitution_text"
                 android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -108,7 +107,7 @@
         android:visibility="visible">
 
         <LinearLayout
-            android:id="@+id/constitution_layout"
+            android:id="@+id/puzzle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -120,7 +119,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
-                android:src="@drawable/shivgami" />
+                android:src="@drawable/green_badge" />
 
             <TextView
                 android:background="@color/light_orange"
@@ -129,7 +128,7 @@
                 android:gravity="center_vertical"
                 android:padding="10dp"
                 android:layout_weight="1.0"
-                android:text="@string/constitution_text"
+                android:text="@string/puzzle_text"
                 android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -458,7 +457,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/hospital_layout"
@@ -516,7 +516,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/drinking_water_layout"
@@ -574,7 +575,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/road_layout"
@@ -633,7 +635,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/public_transport_layout"
@@ -691,7 +694,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/agriculture_water_layout"
@@ -749,7 +753,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/agriculture_loan_layout"
@@ -806,7 +811,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/price_realization_layout"
@@ -864,7 +870,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/agriculture_seed_layout"
@@ -922,7 +929,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/police_layout"
@@ -981,8 +989,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp"
-        android:visibility="gone">
+        android:layout_margin="3dp">
 
         <LinearLayout
             android:id="@+id/media_or_afeem_layout"
@@ -1041,7 +1048,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/train_delay_layout"
@@ -1100,7 +1108,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/corruption_layout"
@@ -1159,7 +1168,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/business_layout"
@@ -1218,7 +1228,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/traffic_layout"
@@ -1277,7 +1288,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/electricity_layout"
@@ -1336,7 +1348,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/cleanliness_layout"
@@ -1395,7 +1408,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <LinearLayout
             android:id="@+id/sewage_layout"
@@ -1453,7 +1467,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp">
+        android:layout_margin="3dp"
+        android:visibility="gone">
 
         <TextView
             android:padding="6dp"
@@ -1482,17 +1497,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/twitter_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/twitter"
-            android:onClick="onclick_twitter_button"
-            app:civ_border_color="@color/twitter_blue"
-            app:civ_border_width="1dp" />
-
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/share1"
             android:layout_width="50dp"
@@ -1505,6 +1509,17 @@
             android:scaleX="-1"
             android:src="@drawable/share1"
             android:backgroundTint="@color/colorPrimary" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/twitter_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/twitter"
+            android:onClick="onclick_twitter_button"
+            app:civ_border_color="@color/twitter_blue"
+            app:civ_border_width="1dp" />
 
         <Button
             android:layout_width="wrap_content"

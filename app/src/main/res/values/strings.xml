@@ -168,7 +168,7 @@
 
     <string name="list_source_MP">MP makes laws in following areas:</string>
     <string name="list_source_MLA">MLA makes laws in following areas:</string>
-    <string name="source_responsibility_MP_MLA"><b>Source</b>: <font fgcolor='#214EF3'><u>Constitution - 7th schedule</u></font></string>
+    <string name="source_responsibility_MP_MLA"><b>Source</b> - <font fgcolor='#214EF3'><u>Constitution - short</u></font></string>
 
     <string name="disclaimer"><b>Disclaimer</b>: This app doesn\'t represent any government entity.</string>
 
