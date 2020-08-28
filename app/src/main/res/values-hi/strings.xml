@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name"><b>जनता मालिक</b></string>
+    <string name="title">वोटर जागरूक तो देश महान</string>
 
     <string name="team_list">श्रेय</string>
 
@@ -11,9 +12,9 @@
     <string name="Center_Subjects">सांसद की जिम्मेदारियाँ</string>
     <string name="state_subjects">विधायक की जिम्मेदारियाँ</string>
 
-    <string name="Issues"><b>मेरे मुद्दे</b></string>
-    <string name="Money"><b>मेरा नोट</b></string>
-    <string name="Vote"><b>मेरा वोट</b></string>
+    <string name="Issues"><b>मुख्य मुद्दे</b></string>
+    <string name="Money"><b>हमारा टैक्स का पैसा</b></string>
+    <string name="Vote"><b>हमारा जन प्रतिनिधि</b></string>
 
     <string name="Button_donate_activity">समर्थन करें</string>
     <string name="menuItemDonate">समर्थन करें</string>
@@ -63,7 +64,7 @@
     <string name="assembly_text">विधानसभा</string>
     <string name="ward_text">वार्ड</string>
 
-    <string name="democracy">आप सरकार कैसे चलाते हैं?</string>
+    <string name="democracy">हम सरकार कैसे चलाते हैं?</string>
     <string name="mp_duty"><b>हम अपने सांसद के माध्यम से सरकार चलातें हैं</b>
         \n1. सांसद मेरे सवालोंं को लोकसभा में पूछता है और सरकार से जवाब लेता हे
         \n2. सांसद लोकसभा की बहस में मेरे पक्ष को रखता है
@@ -695,7 +696,9 @@
     <string name="constitution_1">मेरा वचन ही है शासन</string>
     <string name="constitution_2">हमें माहिषमती का संविधान पता है,
         \nलेकिन भारत का ?</string>
-    <string name="constitution_online"><font fgcolor='#214EF3'><u>आनलाईन पढ़ें</u></font></string>
+    <string name="constitution_online">आनलाईन पढ़ें</string>
+    <string name="constitution_short"><font fgcolor='#214EF3'><u>लघु</u></font></string>
+    <string name="constitution_full"><font fgcolor='#214EF3'><u>पूर्ण</u></font></string>
 
     <string name="constitution_buy">आज ही एक कापी मगाएं (सिर्फ ₹ 100/-)</string>
     <string name="constitution_amazon"><font fgcolor='#214EF3'><u>अमेजन</u></font></string>

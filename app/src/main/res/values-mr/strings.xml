@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">जनता मालिक </string>
+    <string name="title">वोटर जागरूक तो देश महान</string>
 
     <string name="team_list">श्रेय</string>
 
@@ -13,7 +14,7 @@
     <string name="state_subjects">आमदारांच्या जबाबदऱ्या</string>
 
     <string name="Issues"><b>माझे मुद्दे</b></string>
-    <string name="Money"><b>माझे पैसे</b></string>
+    <string name="Money"><b>माझा टैक्स का पैसा</b></string>
     <string name="Vote"><b>माझे मत</b></string>
 
     <string name="Button_donate_activity">समर्थन</string>
@@ -64,7 +65,7 @@
     <string name="assembly_text">विधानसभा</string>
     <string name="ward_text">वॉर्ड </string>
 
-    <string name="democracy">तुम्ही सरकार कशी चालवतात  ?</string>
+    <string name="democracy">आपण सरकार कशी चालवतात?</string>
     <string name="mp_duty"><b>आपण आपल्या खासदारांच्या माध्यमातून सरकार चलवितो</b>
         \n1. खासदार माझे प्रश्न विचारतात आणि सारकरकरडून त्यांचे उत्तरे घेतात
         \n2. खासदार माझे मुद्दे संसदेतल्या चर्चेत मांडतात
@@ -689,7 +690,9 @@
     <string name="constitution_1">मेरा वचन ही है शासन</string>
     <string name="constitution_2">हमें माहिषमती का संविधान पता है,
         \nलेकिन भारत का ?</string>
-    <string name="constitution_online"><font fgcolor='#214EF3'><u>आनलाईन पढ़ें</u></font></string>
+    <string name="constitution_online">आनलाईन पढ़ें</string>
+    <string name="constitution_short"><font fgcolor='#214EF3'><u>लघु</u></font></string>
+    <string name="constitution_full"><font fgcolor='#214EF3'><u>पूर्ण</u></font></string>
 
     <string name="constitution_buy">आज ही एक कापी मगाएं (सिर्फ ₹ 100/-)</string>
     <string name="constitution_amazon"><font fgcolor='#214EF3'><u>अमेजन</u></font></string>

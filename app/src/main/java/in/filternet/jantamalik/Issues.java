@@ -26,6 +26,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
+
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.Kendra.MPdata;
 import in.filternet.jantamalik.Kendra.VoteMP;
@@ -861,7 +862,18 @@ public class Issues extends AppCompatActivity {
         return num;
     }
 
-    public void onclick_read_online(View view) {
+    public void onclick_read_online_short(View view) {
+        LogEvents.send(this, "Read_Online");
+
+        String url = Constants.COI_English_short;
+        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
+            url = Constants.COI_Hindi_short;
+        }
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
+    }
+
+    public void onclick_read_online_full(View view) {
         LogEvents.send(this, "Read_Online");
 
         String url = Constants.COI_English_full;

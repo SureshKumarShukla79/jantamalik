@@ -65,9 +65,9 @@ public class DutiesKendra extends AppCompatActivity {
     public void onclick_source(View view) {
         LogEvents.send(this, "7th_schedule");
 
-        String url = Constants.COI_English_7th_schedule;
+        String url = Constants.COI_English_short;
         if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-            url = Constants.COI_Hindi_7th_schedule;
+            url = Constants.COI_Hindi_short;
         }
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);

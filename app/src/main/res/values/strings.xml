@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Janta Malik</string>
+    <string name="title">Aware voter, great nation</string>
 
     <string name="team_list">Credits</string>
 
@@ -11,9 +12,9 @@
     <string name="Center_Subjects">Responsibilities of MP</string>
     <string name="state_subjects">Responsibilities of MLA</string>
 
-    <string name="Issues"><b>My issues</b></string>
-    <string name="Money"><b>My note</b></string>
-    <string name="Vote"><b>My vote</b></string>
+    <string name="Issues"><b>Main issues</b></string>
+    <string name="Money"><b>My taxmoney</b></string>
+    <string name="Vote"><b>My public representative</b></string>
 
     <string name="Button_donate_activity">Support us</string>
     <string name="menuItemDonate">Support us</string>
@@ -63,7 +64,7 @@
     <string name="assembly_text">MLA area</string>
     <string name="ward_text">Ward</string>
 
-    <string name="democracy">How you run the government?</string>
+    <string name="democracy">How we run the government?</string>
     <string name="mp_duty"><b>We run govt through our MP</b>
         \n1. MP asks my questions and get answer from govt
         \n2. MP puts my points in debates in Parliament
@@ -131,7 +132,7 @@
     <string name="email_us_msg">Next</string>
     <string name="donate">Donate</string>
     <string name="switchText">I am facing this issue.</string>
-    <string name="voter">Voters</string>
+    <string name="voter">Voter</string>
     <string name="loksabha">Loksabha</string>
     <string name="government_kendra">Government</string>
 
@@ -687,9 +688,13 @@
 
     <string name="constitution_text">Constitution ?</string>
     <string name="constitution_1">My word is law</string>
-    <string name="constitution_2">We know Mahishmati constitution,
+    <string name="constitution_2">We know Mahishmati\'s constitution,
         \nwhat about India\'s ?</string>
-    <string name="constitution_online">Read <font fgcolor='#214EF3'><u>online</u></font></string>
+
+    <string name="constitution_online">Read Constitution Online</string>
+    <string name="constitution_short"><font fgcolor='#214EF3'><u>Short</u></font></string>
+    <string name="constitution_full"><font fgcolor='#214EF3'><u>Full</u></font></string>
+
     <string name="constitution_buy">Order a copy today (Only Rs 100/-)</string>
     <string name="constitution_amazon"><font fgcolor='#214EF3'><u>Amazon</u></font></string>
     <string name="constitution_post"><font fgcolor='#214EF3'><u>Indian Post</u></font></string>
