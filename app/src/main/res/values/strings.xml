@@ -538,6 +538,13 @@
     <string name="bihar_repay_loan">Repayment of Loans</string>
     <string name="bihar_source_text">Full budget 2018-19 http://finance.bih.nic.in/Documents/Circulars/CN-02-28-02-2018.pdf</string>
 
+    <!--Budget UP-->
+    <string name="budget_UP"><b>Uttar Pradesh</b></string>
+    <string name="UP_budget">5,12,860 crore</string>
+    <string name="UP_tax_total"><b>Total budget of state govt - Five lakh twelve thousand eight hundred sixty crores</b></string>
+    <string name="UP_education">Education</string>
+    <string name="UP_source_text">Download budget 2020-21 https://db.filternet.in/jantamalik/Budget_UP.pdf</string>
+
     <string name="puzzle">Quiz</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>

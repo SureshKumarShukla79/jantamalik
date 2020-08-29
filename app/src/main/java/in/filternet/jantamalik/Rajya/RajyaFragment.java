@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +19,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.Kendra.DataFilter;
@@ -81,7 +81,7 @@ public class RajyaFragment extends Fragment {
             {	"Tamil Nadu"	                ,	"? lakh crore"      , "http://myneta.info/tamilnadu2016/index.php?action=show_winners&sort=default"         ,       "तमिल नाडु"         ,	    "? लाख करोड़"       }	,
             {	"Telangana"	                    ,	"? lakh crore"      , "http://myneta.info/telangana2018/index.php?action=show_winners&sort=default"         ,       "तेलंगाना"           ,	    "? लाख करोड़"       }	,
             {	"Tripura"	                    ,	"? lakh crore" 	    , "http://myneta.info/tripura2018/index.php?action=show_winners&sort=default"           ,       "त्रिपुरा"            ,	    "? लाख करोड़"       }	,
-            {	"Uttar Pradesh"	                ,	"? lakh crore"      , "http://myneta.info/uttarpradesh2017/index.php?action=show_winners&sort=default"      ,       "उत्तर प्रदेश"         ,	    "? लाख करोड़"       }	,
+            {"Uttar Pradesh", "5 lakh crore", "http://myneta.info/uttarpradesh2017/index.php?action=show_winners&sort=default", "उत्तर प्रदेश", "5 लाख करोड़"},
             {	"Uttarakhand"	                ,	"? lakh crore"      , "http://myneta.info/uttarakhand2017/index.php?action=show_winners&sort=default"       ,       "उत्तराखण्ड"         ,     "? लाख करोड़"       }	,
             {	"West Bengal"	                ,	"? lakh crore"      , "http://myneta.info/westbengal2016/index.php?action=show_winners&sort=default"        ,       "पश्चिम बंगाल"      ,	  "? लाख करोड़"         }	,
     };
@@ -280,6 +280,8 @@ public class RajyaFragment extends Fragment {
 
         if(state.equals("Bihar") || state.equals("बिहार"))
             layout_id = R.layout.budget_bihar;
+        else if (state.equals("Uttar Pradesh") || state.equals("उत्तर प्रदेश"))
+            layout_id = R.layout.budget_uttarpradesh;
         else
             layout_id = 0;
 
