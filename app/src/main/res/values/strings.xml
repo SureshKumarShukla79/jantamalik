@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Janta Malik</string>
-    <string name="title">Aware voter, great nation</string>
+    <string name="title">Aware voter, wealthy voter</string>
 
     <string name="team_list">Credits</string>
 
@@ -386,8 +386,8 @@
     <string name="star_india">Star India</string>
     <string name="paytm">Paytm</string>
 
-    <string name="mp_voter">- Call the public representative.
-        \n- Write emails with facts and action required.
+    <string name="mp_voter">- Very few public representatives answer call or email.
+        \n- Write letter with facts and action required.
         \n- Meet at their home.</string>
     <string name="mp_protest"><b>If this doesn\'t work</b></string>
     <string name="mp_neta"><b>If above steps don\'t work, then protest outside MP\'s home. This gets quick results.</b>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">जनता मालिक </string>
-    <string name="title">वोटर जागरूक तो देश महान</string>
+    <string name="title">जागरूक वोटर, संपन्न वोटर</string>
 
     <string name="team_list">श्रेय</string>
 
@@ -386,8 +386,8 @@
     <string name="star_india">स्टार इंडिया </string>
     <string name="paytm">पेटियम </string>
 
-    <string name="mp_voter">- लोकप्रतिनिधीना कॉल करा ।
-        \n- तथ्ये आणि क्रियेसह ईमेल लिहा ।
+    <string name="mp_voter">- खूप लोकप्रतिनिधि कॉल आणि ईमेल उत्तर देत नाहीं।
+        \n- तथ्ये आणि क्रियेसह पत्र लिहा ।
         \n- त्यांच्या घरी भेटा ।</string>
     <string name="mp_protest"><b>काम नाही तर</b></string>
     <string name="mp_neta"><b>जर वरील गोष्टी कार्य करत नसतील तर खासदार घराबाहेर निषेध (विरोध) करा। यास द्रुत गतिने परिणाम मिळतो।</b>
