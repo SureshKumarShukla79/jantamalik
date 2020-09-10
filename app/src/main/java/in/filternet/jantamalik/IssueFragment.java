@@ -29,7 +29,7 @@ public class IssueFragment extends Fragment {
     private final static String TAG = "Issue";
 
     private FloatingActionButton ui_add_issue;
-    private TextView ui_source_7th_schedule;
+    private TextView ui_source;
     private View view;
     private String mLanguage;
     private SharedPreferences mSharedPref;
@@ -62,15 +62,15 @@ public class IssueFragment extends Fragment {
             }
         });
 
-        ui_source_7th_schedule = view.findViewById(R.id.source);
-        ui_source_7th_schedule.setOnClickListener(new View.OnClickListener() {
+        ui_source = view.findViewById(R.id.source_app);
+        ui_source.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LogEvents.send(view.getContext(), "7th_schedule");
+                LogEvents.send(view.getContext(), "source_app");
 
-                String url = Constants.COI_English_short;
+                String url = Constants.COI_English_full;
                 if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-                    url = Constants.COI_Hindi_short;
+                    url = Constants.COI_Hindi_full;
                 }
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);

@@ -171,6 +171,7 @@
     <string name="list_source_MLA">MLA makes laws in following areas:</string>
     <string name="source_responsibility_MP_MLA"><b>Source</b> - <font fgcolor='#214EF3'><u>Constitution - short</u></font></string>
 
+    <string name="source"><b>Source</b> - <font fgcolor='#214EF3'><u>Constitution</u></font></string>
     <string name="disclaimer"><b>Disclaimer</b>: This app doesn\'t represent any government entity.</string>
 
     <string name="kendra_subjects">Employment, Social security, Price control,

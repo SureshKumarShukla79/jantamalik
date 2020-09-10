@@ -16,8 +16,8 @@ android {
         versionName "devel"
 
         // Production
-        //versionCode   2000829  // silly mistake extra Zero after Year.
-        //versionName "20.08.29"
+        //versionCode   2000910  // silly mistake extra Zero after Year.
+        //versionName "20.09.10"
     }
     buildTypes {
         release {
@@ -38,9 +38,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.preference:preference:1.1.1"
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'org.jsoup:jsoup:1.12.2' // Downloaded library for app version fetch
