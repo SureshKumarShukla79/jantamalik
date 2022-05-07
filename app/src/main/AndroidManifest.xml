@@ -20,7 +20,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme_NoActionBar">
+            android:theme="@style/AppTheme_NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -67,15 +68,12 @@
 
         <receiver
             android:name=".Receiver"
-            android:directBootAware="true">
+            android:directBootAware="true"
+            android:exported="false">
             <intent-filter android:priority="99">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.DATE_CHANGED" />
             </intent-filter>
         </receiver>
-
-        <!-- UXCam SDK -->
-        <service android:name="com.uxcam.service.HttpPostService" />
     </application>
-
 </manifest>

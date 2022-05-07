@@ -5,11 +5,11 @@ repositories {
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 32
     defaultConfig {
         applicationId "in.filternet.jantamalik"
         minSdkVersion 15
-        targetSdkVersion 29
+        targetSdkVersion 32
 
         // devel version
         versionCode 190101

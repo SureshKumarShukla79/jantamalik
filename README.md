@@ -18,4 +18,4 @@ You can help
 Even if you are no programmer you can help by translating the Janta Malik into your native language. Fixing/completing existing translations is very welcome as well.
 
 FAQ
-You can find the blog article here : https://www.filternet.in/janta-malik/
+You can find the blog article here : www.jantamalik.in
