@@ -9,12 +9,9 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
-import in.filternet.jantamalik.LogEvents;
-import in.filternet.jantamalik.MainActivity;
-import in.filternet.jantamalik.R;
 
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
+import in.filternet.jantamalik.LogEvents;
+import in.filternet.jantamalik.R;
 
 public class CorporationFragment extends Fragment {
 
@@ -27,17 +24,7 @@ public class CorporationFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-        current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
-        if(current_language != null && current_language.equals(sLANGUAGE_HINDI)) {
-            MainActivity.setUI_Lang(getActivity(), "hi");
-        }
-
-        if(current_language != null && current_language.equals(sLANGUAGE_MARATHI)) {
-            MainActivity.setUI_Lang(getActivity(), "mr");
-        }
 
         view = inflater.inflate(R.layout.corporate,container,false);
 

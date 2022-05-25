@@ -1,5 +1,10 @@
 package in.filternet.jantamalik.Rajya;
 
+import static in.filternet.jantamalik.Kendra.VoteMP.getLoksabha_Group;
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
+import static in.filternet.jantamalik.MainActivity.sMLA_AREA;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,12 +21,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.Issues;
@@ -29,11 +35,6 @@ import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
-
-import static in.filternet.jantamalik.Kendra.VoteMP.getLoksabha_Group;
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
-import static in.filternet.jantamalik.MainActivity.sMLA_AREA;
 
 public class VoteVidhayak extends AppCompatActivity {
     String TAG = "VoteVidhayak";
@@ -111,20 +112,18 @@ public class VoteVidhayak extends AppCompatActivity {
         });
 
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
 
-        String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String mp_area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
-        String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
+        String mp_area = mSharedPref.getString(MainActivity.sMP_AREA, "");
+        String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
         //Log.e(TAG, "USER Preference: " + State + ", " + mp_area + ", " + mla_area);
 
         DataFilter dataFilter = new DataFilter();
 
         // Load defaults
-        if (mp_area != null && dataFilter.has_MP_2_MLA_mapping(State, mp_area)) {
+        if (mp_area != null && dataFilter.has_MP_2_MLA_mapping(mp_area)) {
             mla_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_MP_area(mp_area));
         } else {
-            mla_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_state(mLanguage, State));
+            mla_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_state());
         }
 
         mla_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -143,9 +142,7 @@ public class VoteVidhayak extends AppCompatActivity {
                 editor.putString(MainActivity.sMLA_AREA, MLAArea).commit();
 
                 String tmp = MLAArea;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
-                    tmp = MainActivity.get_MLA_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                }
+                tmp = MainActivity.get_MLA_area(getBaseContext());
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
                 LogEvents.sendWithValue(getBaseContext(), sMLA_AREA, tmp);
@@ -178,14 +175,13 @@ public class VoteVidhayak extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     private void updateMLA() {
         DataFilter dataFilter = new DataFilter();
-        String State = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
-        mla = dataFilter.getMLAInfo(mLanguage, State, mla_area);
+        String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
+        mla = dataFilter.getMLAInfo(mla_area);
 
         //Log.e(TAG, mla_area + " " + mla.name + " " + mla.phone + " " + mla.email + " " + mla.address);
         ui_name.setText(mla.name);
 
-        if(mla.phone == null || mla.phone.equals("") || mla.phone.isEmpty()) {
+        if (mla.phone == null || mla.phone.equals("") || mla.phone.isEmpty()) {
             ui_call.setVisibility(View.GONE);
             ui_phone.setVisibility(View.GONE);
         } else {

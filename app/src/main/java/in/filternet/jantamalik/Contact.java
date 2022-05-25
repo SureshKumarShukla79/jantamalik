@@ -1,5 +1,7 @@
 package in.filternet.jantamalik;
 
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,30 +9,24 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.preference.PreferenceManager;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
-
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
-import static in.filternet.jantamalik.MainActivity.sUSER_CURRENT_LANGUAGE;
-import static in.filternet.jantamalik.MainActivity.setUI_Lang;
 
 public class Contact extends AppCompatActivity {
 
     private FloatingActionButton ui_email_us;
     private RadioButton ui_issue, ui_update, ui_feedback;
 
-    private String TAG = "Contact";
+    private final String TAG = "Contact";
     private boolean mAddIssue, mUpdateMP, mFeedback;
     private int mTABnumber = 0;
     private String mIssueSubject = null;
@@ -45,15 +41,6 @@ public class Contact extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-        mLanguage = mSharedPref.getString(sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI); // first launch
-        if(mLanguage.equals(sLANGUAGE_HINDI)) {
-            setUI_Lang(this, "hi");
-        }
-
-        if(mLanguage.equals(sLANGUAGE_MARATHI)) {
-            setUI_Lang(this, "mr");
-        }
 
         savedInstanceState = getIntent().getExtras();
         if(savedInstanceState != null){
@@ -151,9 +138,8 @@ public class Contact extends AppCompatActivity {
     }
 
     public void onclick_email_us(View view) {
-        String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-        String MP_area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
-        String MLA_area = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
+        String MP_area = mSharedPref.getString(MainActivity.sMP_AREA, "");
+        String MLA_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
 
         String[] TO = {getString(R.string.support_email)};
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -162,7 +148,7 @@ public class Contact extends AppCompatActivity {
 
         intent.setPackage("com.google.android.gm");
         intent.putExtra(Intent.EXTRA_EMAIL, TO);
-        intent.putExtra(Intent.EXTRA_SUBJECT, MLA_area + ", " + MP_area + ", " + state + "\n" + subject);
+        intent.putExtra(Intent.EXTRA_SUBJECT, MLA_area + ", " + MP_area + ", " + "\n" + subject);
         try {
             if (intent.resolveActivity(getPackageManager()) != null) {
                 //Log.e(TAG, "1st option");
@@ -211,13 +197,12 @@ public class Contact extends AppCompatActivity {
         String whatsapp = "com.whatsapp";
 
         if(isPackageExist(this, intent, whatsapp)) {
-            String state = mSharedPref.getString(MainActivity.sSTATE, MainActivity.DEFAULT_STATE);
-            String MP_area = mSharedPref.getString(MainActivity.sMP_AREA, MainActivity.DEFAULT_MP);
-            String MLA_area = mSharedPref.getString(MainActivity.sMLA_AREA, MainActivity.DEFAULT_MLA);
+            String MP_area = mSharedPref.getString(MainActivity.sMP_AREA, "");
+            String MLA_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
             try {
                 if (intent != null) {
-                    Uri url = Uri.parse("https://wa.me/917570000787?text="+ MLA_area + ", " + MP_area
-                            + ", "+ state + "\n\n" + subject + "\n");
+                    Uri url = Uri.parse("https://wa.me/917570000787?text=" + MLA_area + ", " + MP_area
+                            + ", " + "\n\n" + subject + "\n");
                     intent.setAction(Intent.ACTION_VIEW);
                     intent.setData(url);
                     startActivity(intent);

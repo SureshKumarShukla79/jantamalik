@@ -1,6 +1,9 @@
 package in.filternet.jantamalik.Rajya;
 
 
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -17,9 +20,6 @@ import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
-
 public class Duties extends AppCompatActivity {
 
     private final static String TAG ="Duties";
@@ -33,15 +33,6 @@ public class Duties extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, null);
-        if (mLanguage != null && mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            MainActivity.setUI_Lang(this, "hi");
-        }
-
-        if (mLanguage != null && mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-            MainActivity.setUI_Lang(this, "mr");
-        }
 
         setContentView(R.layout.duties_rajya);
 
@@ -66,10 +57,7 @@ public class Duties extends AppCompatActivity {
     public void onclick_source(View view) {
         LogEvents.send(this, "7th_schedule");
 
-        String url = Constants.COI_English_short;
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-            url = Constants.COI_Hindi_short;
-        }
+        String url = Constants.COI_Hindi;
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         startActivity(intent);
     }

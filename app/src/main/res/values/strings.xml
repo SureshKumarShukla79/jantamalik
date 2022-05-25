@@ -1,326 +1,251 @@
 <resources>
-    <string name="app_name">Janta Malik</string>
-    <string name="title">Our tax, Our rights</string>
+    <string name="app_name"><b>जनता मालिक</b></string>
+    <string name="title">हमारा पैसा, हमारा अधिकार</string>
 
-    <string name="team_list">Credits</string>
+    <string name="team_list">श्रेय</string>
 
-    <string name="kendra"><b>Center</b></string>
-    <string name="rajya"><b>State</b></string>
-    <string name="corporation"><b>Corporation</b></string>
-    <string name="taxkendra"><b>Center - Tax</b></string>
+    <string name="kendra"><b>केन्द्र</b></string>
+    <string name="rajya"><b>राज्य</b></string>
+    <string name="corporation"><b>स्थानीय</b></string>
+    <string name="taxkendra"><b>केन्द्र - टैक्स</b></string>
 
-    <string name="Center_Subjects">Responsibilities of MP</string>
-    <string name="state_subjects">Responsibilities of MLA</string>
+    <string name="Center_Subjects">सांसद की जिम्मेदारियाँ</string>
+    <string name="state_subjects">विधायक की जिम्मेदारियाँ</string>
 
-    <string name="Issues"><b>Main issues</b></string>
-    <string name="Money"><b>My taxmoney</b></string>
-    <string name="Vote"><b>My public representative</b></string>
+    <string name="Issues"><b>मुख्य मुद्दे</b></string>
+    <string name="Money"><b>हमारा टैक्स का पैसा</b></string>
+    <string name="Vote"><b>हमारा जन प्रतिनिधि</b></string>
 
-    <string name="Button_donate_activity">Support us</string>
-    <string name="menuItemDonate">Support us</string>
-    <string name="menuItemContactUs">Contact us</string>
-    <string name="menuItemShare">Share</string>
+    <string name="Button_donate_activity">समर्थन करें</string>
+    <string name="menuItemDonate">समर्थन करें</string>
+    <string name="menuItemContactUs">संपर्क करें</string>
+    <string name="menuItemShare">शेयर करें</string>
 
-    <string name="call_button">Call</string>
-    <string name="email_button">Email</string>
-    <string name="CrimeIssue">Crime</string>
-    <string name="IssueInflation">Inflation</string>
-    <string name="IssueEducation">Poor educational institutions</string>
-    <string name="IssueClimate">Pollution</string>
-    <string name="IssueHealth">Poor Health services</string>
-    <string name="WomenSafety">Women safety</string>
-    <string name="Cleanliness">Cleanliness</string>
+    <string name="call_button">कॉल करें</string>
+    <string name="email_button">ईमेल करें</string>
+    <string name="CrimeIssue">अपराध</string>
 
-    <string name="MP">My MP</string>
-    <string name="MLA">My MLA</string>
-    <string name="Parshad">My Corporator</string>
+    <string name="IssueInflation">महंगाई</string>
+    <string name="IssueEducation">खराब शिक्षा</string>
+    <string name="IssueClimate">प्रदूषण</string>
+    <string name="IssueHealth">स्वास्थ्य सेवाओं की कमी</string>
+    <string name="WomenSafety">महिला सुरक्षा</string>
+    <string name="Cleanliness">साफ सफाई</string>
 
-    <string name="mp">MP</string>
-    <string name="mla">MLA</string>
-    <string name="parshad">Corporator</string>
+    <string name="MP">मेरा सांसद</string>
+    <string name="MLA">मेरा विधायक</string>
+    <string name="Parshad">मेरा पार्षद</string>
 
-    <string name="mp_area">Constituency:</string>
+    <string name="mp">सांसद</string>
+    <string name="mla">विधायक</string>
+    <string name="parshad">पार्षद</string>
 
-    <string name="source_sansad">Source - Affidavit file to Election Commission https://myneta.info</string>
+    <string name="mp_area">निर्वाचन क्षेत्र: </string>
 
-    <string name="update_info">Call and email your MP. Don\'t hesitate.</string>
+    <string name="source_sansad">स्रोत - चुनाव आयोग में भरा नामांकन https://myneta.info</string>
 
-    <string name="donate_appeal">Filternet Foundation is a non-profit organization, your donation keeps this project running.</string>
+    <string name="update_info">सांसद को फोन व ईमेल करें, हिचकिचाएँ नहीं।</string>
 
-    <string name="support_email">support@filternet.in</string>
-    <string name="add_issue">Add Issue</string>
-    <string name="update_contact_info">Update Information. Your name will appear in contributors.</string>
-    <string name="feedback">Feedback</string>
+    <string name="donate_appeal">हम एक गैर-मुनाफा संस्था हैं। आपके चंदे से ही काम आगे बढ़ता है।</string>
 
-    <string name="share_message">Lets improve our governance 😀
-        \n\n Yes, it is possible.
-        \nThe key is to find out - Who is responsible for solving the problem?
-        \n1 Install Janta Malik App
-        \n2 Check your voter awareness, solve issues
+    <string name="support_email"></string>
+    <string name="add_issue">अपने मुद्दे जोड़ें</string>
+    <string name="feedback">सुझाव लिखें</string>
+
+    <string name="share_message">आइए सरकारी सेवाओं को बेहतर बनाएँ 😀
+        \n\n जी हाँ, यब संभव है.
+        \n सबसे बड़ी कुंजी होती है यह पता करना कि - इस समस्या के समाधान का कौन जिम्मेदार है?
+        \n1 जनता मालिक ऐप डाउनलोड करिए
+        \n2 अपनी जागरूकता बढ़ाइए, समाधान पाइए
         \n</string>
 
-    <string name="state_text">State</string>
-    <string name="constituency_text">MP area</string>
-    <string name="assembly_text">MLA area</string>
-    <string name="ward_text">Ward</string>
+    <string name="state_text">राज्य</string>
+    <string name="constituency_text">लोकसभा</string>
+    <string name="assembly_text">विधानसभा</string>
+    <string name="ward_text">वार्ड</string>
 
-    <string name="democracy">How we run the government?</string>
-    <string name="mp_duty"><b>We run govt through our MP</b>
-        \n1. MP asks my questions and get answer from govt
-        \n2. MP puts my points in debates in Parliament
-        \n3. MP shares the govt spending and policies with me</string>
-    <string name="mp_optional"><b>How MP can communicate</b>
-        \nArticle in newspaper or social media or public meetings</string>
-    <string name="salary_Saansad"><b>Salary 2.7 lakh per month</b> (including allowances)
-        \nTwo lakh seventy thousand rupees</string>
+    <string name="democracy">हम सरकार कैसे चलाते हैं?</string>
+    <string name="mp_duty"><b>हम अपने सांसद के माध्यम से सरकार चलातें हैं</b>
+        \n1. सांसद मेरे सवालोंं को लोकसभा में पूछता है और सरकार से जवाब लेता हे
+        \n2. सांसद लोकसभा की बहस में मेरे पक्ष को रखता है
+        \n3. सांसद सरकार के खर्च और काम-काज समझकर मुझे बताता है</string>
+    <string name="mp_optional"><b>सांसद लोगो से कैसे जुड़े</b>
+        \nअखबार में लेख या सोशल मीडिया या जनसभाओं में</string>
+    <string name="salary_Saansad"><b>वेतन 2.7 लाख प्रतिमाह</b> (भत्ते मिलाकर)
+        \nदो लाख सत्तर हजार रुपये</string>
 
-    <string name="mla_duty"><b>MLA Duties</b>
-        \n1. Ask my questions and get answer from govt
-        \n2. Put my points in debates in Parliament
-        \n3. Share the govt tax spending and law enforcement status with me</string>
-    <string name="mla_optional"><b>Optional</b>
-        \nAttending weddings, parties, public functions and social media</string>
+    <string name="mla_duty"><b>विधायक के जरूरी काम</b>
+        \n1. मेरे सवालोंं को विधानसभा में पूछना और सरकार से जवाब लेना
+        \n2. विधानसभा की बहसों में मेरे पक्ष को रखना
+        \n3. राज्य सरकार के खर्च और काम-काज का हिसाब समझकर मुझे बताना</string>
+    <string name="mla_optional"><b>गैर-जरूरी या वैकल्पिक</b>
+        \nशादी या पार्टी या समारोह में जाना, सोशल मीडिया</string>
 
-    <string name="next_version">You are welcome to donate or join the team for next version</string>
+    <string name="next_version">आप भी दान दें या टीम में जुड़ें और अगले संस्करण में सहायता करें</string>
 
-    <string name="tax_note">For nation building, we all pay tax in various forms. Tax rates on common items :</string>
-    <string name="tax_total_center"><b>Total tax to central govt - Twenty seven lakh eighty six thousand three hundred fifty crores</b></string>
-    <string name="tax_center_details">Where is our tax money spent?</string>
-    <string name="crore">Crore</string>
+    <string name="tax_note">देश की प्रगति के लिए हम सब कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
+    <string name="tax_total_center"><b>केंद्र सरकार को कुल सालाना टैक्स - सत्ताइस लाख छियासी हजार तीन सौ पचास करोड़ रू हम सब मिलकर देते हैं।</b></string>
+    <string name="tax_center_details">हमारा टैक्स का पैसा खर्च कहाँ हो रहा है?</string>
+    <string name="crore">करोड़</string>
 
-    <string name="interest">Interest</string>
-    <string name="defence">Defence</string>
-    <string name="subsidy_food">Subsidy - food</string>
-    <string name="pension">Pension</string>
-    <string name="transfer_to_states">Transfer to \nStates</string>
-    <string name="rural_development">Rural \nDevelopment</string>
-    <string name="transport">Transport</string>
-    <string name="tax_administration">Tax \nAdministration</string>
-    <string name="home_affairs">Home Affairs</string>
-    <string name="education">Education</string>
-    <string name="others">Other expenses</string>
-    <string name="subsidy_fertilizer">Subsidy \nfertilizer</string>
-    <string name="agriculture_and_allied">Agriculture &amp; \nAllied</string>
-    <string name="health">Health</string>
-    <string name="social_welfare">Social welfare</string>
-    <string name="urban_development">Urban \nDevelopment</string>
-    <string name="energy">Energy</string>
-    <string name="commerce_and_industry">Commerce and
-        \nIndustry</string>
-    <string name="subsidy_petroleum">Subsidy \npetroleum</string>
-    <string name="scientific_department">Scientific \nDepartment</string>
-    <string name="it_and_telecom">IT and Telecom</string>
-    <string name="finance">Finance</string>
-    <string name="external_affairs">External Affairs</string>
-    <string name="union_territories">Union \nTerritories</string>
-    <string name="planning_and_statistics">Planning and \nStatistics</string>
-    <string name="development_north_east">Development of \nNorth-East</string>
+    <string name="interest">ब्याज</string>
+    <string name="defence">रक्षा</string>
+    <string name="subsidy_food">छूट - भोजन</string>
+    <string name="pension">पेंशन</string>
+    <string name="transfer_to_states">राज्य को स्थानांतरण</string>
+    <string name="rural_development">ग्रामीण विकास</string>
+    <string name="transport">ट्रांसपोर्ट</string>
+    <string name="tax_administration">टैक्स प्रशासन</string>
+    <string name="home_affairs">गृह मंत्रालय</string>
+    <string name="education">शिक्षा</string>
+    <string name="others">अन्य सभी खर्चे</string>
+    <string name="subsidy_fertilizer">छूट - उर्वरक</string>
+    <string name="agriculture_and_allied">कृषि और संबद्ध
+        \nगतिविधि</string>
+    <string name="health">स्वास्थ्य</string>
+    <string name="social_welfare">सामाजिक कल्याण</string>
+    <string name="urban_development">शहरी विकास</string>
+    <string name="energy">ऊर्जा</string>
+    <string name="commerce_and_industry">वाणिज्य और उद्योग</string>
+    <string name="subsidy_petroleum">छूट - पेट्रोलियम</string>
+    <string name="scientific_department">वैज्ञानिक विभाग</string>
+    <string name="it_and_telecom">आईटी और दूरसंचार</string>
+    <string name="finance">वित्त</string>
+    <string name="external_affairs">विदेशी मामले</string>
+    <string name="union_territories">केंद्र शासित प्रदेश</string>
+    <string name="planning_and_statistics">योजना और
+        \nसांख्यिकी</string>
+    <string name="development_north_east">पूर्वोत्तर का विकास</string>
 
-    <string name="version_update">New version available, please update</string>
-    <string name="Option_Update">Update</string>
-    <string name="Option_Later">Later</string>
+    <string name="version_update">ऐप का नया संस्करण आ गया है, डाउनलोड करें</string>
+    <string name="Option_Update">हाँ</string>
+    <string name="Option_Later">बाद में</string>
 
-    <string name="app_purpose">Issues which trouble you daily.
-        \nIssues on which media is silent.\nProviding vital information, which makes Janta as Malik!</string>
+    <string name="app_purpose">जो मुद्दे आपको रोज परेशान करते हैं.\nमुद्दे जिनपर अखबार, टीवी चुप रहते हैं.\n\nआपके लिए लाए हैं वो जानकारी,\nजो जनता को मालिक बनाती है!</string>
 
-    <string name="User_appeal">Add your issue,
-        \nSelected issues will appear next week.</string>
+    <string name="User_appeal">अपने मुद्दों को जोड़ें,
+        \nचुने हुए मुद्दे अगले हफ्ते दिखेंगें</string>
 
-    <string name="add_issue_msg">Add Issue</string>
+    <string name="add_issue_msg">अपना मुद्दा लिखेंं</string>
+    <string name="update_contact_info">जानकारी सही करेंं। आपका नाम योगदान में जुड़ेगा।</string>
+    <string name="feedback_msg">सुझाव दें</string>
+    <string name="email_us_msg">आगे</string>
+    <string name="donate">दान करें</string>
+    <string name="switchText">यह मेरा मुद्दा है।</string>
+    <string name="voter">वोटर</string>
+    <string name="loksabha">लोकसभा</string>
+    <string name="government_kendra">केंद्र सरकार</string>
 
-    <string name="feedback_msg">Feedback</string>
-    <string name="email_us_msg">Next</string>
-    <string name="donate">Donate</string>
-    <string name="switchText">I am facing this issue.</string>
-    <string name="voter">Voter</string>
-    <string name="loksabha">Loksabha</string>
-    <string name="government_kendra">Government</string>
+    <string name="rajyasabha">विधानसभा</string>
+    <string name="government_rajya">राज्य सरकार</string>
 
-    <string name="rajyasabha">Vidhansabha</string>
-    <string name="government_rajya">State govt</string>
-
-    <string name="contact">Contact us</string>
-    <string name="source_text">Budget 2019-20 https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf</string>
-    <string name="head">Head</string>
+    <string name="contact">संपर्क करें</string>
+    <string name="source_text">सालाना बजट 2019-20 https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf</string>
+    <string name="head">नाम</string>
 
     <string-array name="MP_state_values">
-        <item>Uttar Pradesh</item>
+        <item>उत्तर प्रदेश</item>
     </string-array>
 
     <string-array name="MP_area_values">
-        <item>Varanasi</item>
+        <item>वाराणसी</item>
     </string-array>
 
     <string-array name="MLA_area_values">
-        <item>Varanasi Cantt</item>
+        <item>वाराणसी कैंट</item>
     </string-array>
 
     <string-array name="Parshad_values">
-        <item>Chittupur, Sigra</item>
+        <item>छित्तुपुर, सिगरा</item>
     </string-array>
 
     <string name="notification_update">New version of app is available. Download.</string>
-    <string name="notification_update_hi">ऐप का नया संस्करण आया है, डाउनलोड करें</string>
-    <string name="notification_update_mr">अ‍ॅपची नवीन व्हर्जन उपलब्ध आहे, डाउनलोड करा</string>
+    <string name="notification_update_hi"></string>
+    <string name="notification_update_mr"></string>
 
-    <string name="kendra_budget_simple">27 lakh crore</string>
-    <string name="kendra_budget">27,86,350 crore</string>
-    <string name="rajya_budget">\??? crore</string>
+    <string name="kendra_budget_simple">27 लाख करोड़</string>
+    <string name="kendra_budget">27,86,350 करोड़</string>
 
-    <string name="list_source_MP">MP makes laws in following areas:</string>
-    <string name="list_source_MLA">MLA makes laws in following areas:</string>
-    <string name="source_responsibility_MP_MLA"><b>Source</b> - <font fgcolor='#214EF3'><u>Constitution - short</u></font></string>
+    <string name="rajya_budget">\??? करोड़</string>
 
-    <string name="source"><b>Source</b> - <font fgcolor='#214EF3'><u>Constitution</u></font></string>
-    <string name="disclaimer"><b>Disclaimer</b>: This app doesn\'t represent any government entity.</string>
+    <string name="list_source_MP">सांसद निम्न विषयों पर कानून बनाता है:</string>
+    <string name="list_source_MLA">विधायक निम्न विषयों पर कानून बनाता है:</string>
+    <string name="source_responsibility_MP_MLA"><b>स्रोत</b> - <font fgcolor='#214EF3'><u>संविधान - लघु</u></font></string>
 
-    <string name="kendra_subjects">Employment, Social security, Price control,
-        \nUPSC, Education, Railway,
-        \nNational highway, Stock exchange, Post Office,
-        \nCurrency, Bank, Company law, Company tax,
-        \nInsurance, Quality of goods, Petrol,
-        \nExcise duty on Petrol/CNG, Mines and petroleum refinery,
-        \nCBI, Citizenship, Passport,
-        \nDefense, Forest, Medicine,
-        \nLabour in mines, Census, inter-state migration,
-        \nIPC, Divorce law, etc</string>
+    <string name="source"><b>स्रोत</b> - <font fgcolor='#214EF3'><u>संविधान</u></font></string>
+    <string name="disclaimer"><b>स्पष्टीकरण</b>: यह ऐप किसी सरकारी विभाग से नहीं जुड़ी है।</string>
 
-    <string name="rajya_subjects">Police, Public order, State Public Service Commission, officers and staff in High Court, Prisons, Powers of Municipality,
-        Hospitals and dispensaries, Pilgrimages, Liquor, Agriculture, Preservation, protection and stock of animal,
-        Water supplies - irrigation/canals, drainage, Land, Land revenue, Fisheries, Trade and commerce within the State, Markets and fairs,
-        Money-lending and money-lenders, Taxes on agricultural income, Taxes on the consumption or sale of electricity, Taxes on vehicles,
-        Education, Roads, Forest, etc
-        \n\nConstitution 7th schedule</string>
+    <string name="kendra_subjects">रोजगार, सामाजिक सुरक्षा, यूपीएससी,
+        \nशिक्षा, रेल, राष्ट्रीय राजमार्ग,
+        \nशेयर बाजार, पेट्रोल/सीएनजी पर कर, पोस्ट आफिस,
+        \nनोट / सिक्के, बैंक,
+        \nकंपनी कानून, कंपनी टैक्स, बीमा,
+        \nसामान की गुणवत्ता, पेट्रोल, पेट्रोल का दाम,
+        \nखान और तेलक्षेत्र, खान में श्रम, सीबीआई,
+        \nनागरिकता, पासपोर्ट, रक्षा,
+        \nवन, दवाई, जनगणना,
+        \nअंतर-राज्यीय आवाजाही, दंड विधि, तलाक कानून, आदि </string>
 
-    <string name="phone">Phone</string>
-    <string name="email">Email</string>
-    <string name="mail_to_us">App is made by Filternet Foundation in public interest.</string>
-    <string name="work_in_progress">Work In Progress</string>
-    <string name="opensource">Open Source (github)</string>
-    <string name="saansad_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
-        \n\nThey can not serve the role of a responsible MP.</string>
+    <string name="rajya_subjects">पुलिस, कानून व्यवस्था, राज्य लोकसेवा आयोग, उच्च न्यायालय के अधिकारी और सेवक, जेल, नगरनिगमों का गठन और शक्तियाँ,
+        अस्पताल और औषधालय, तीर्थयात्राएं, शराब, खेती, पशुधन,
+        जल - सिंचाई/ नहरें / निकास, भूमि, भूमि कर, मछलीपालन, राज्य के अंदर व्यवसाय कर, बाजार और मेेले,
+        साहूकारी, कृषि ऋण मुक्ति, खेती पर कर, बिजली कर, वाहन कर,
+        शिक्षा, सड़क, वन, आदि
+        \n\nसंविधान 7वीं अनुसूची से</string>
 
-    <string name="vidhayak_is_key"><b>*</b> Right-to-Information query and Public-Interest-Litigation are secondary tools.
-        \n\nThey can not serve the role of a responsible MLA.</string>
+    <string name="phone">फोन</string>
+    <string name="email">ईमेल</string>
+    <string name="mail_to_us">ऐप फिल्टरनेट फाउंडेशन द्वारा जनहित में बनाई गई है।</string>
+    <string name="work_in_progress">कार्य प्रगति पर है</string>
+    <string name="opensource">मुक्त स्रोत</string>
+    <string name="saansad_is_key"><b>*</b> सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।
+        \n\nयह तरीके एक जिम्मेदार सांसद की कमी पूरी नहीं कर सकते।</string>
 
-    <string name="gst_biscuit">18% GST</string>
-    <string name="gst_cloth">12% GST</string>
-    <string name="tax_petrol">100% Tax</string>
+    <string name="vidhayak_is_key"><b>*</b> सूचना का अधिकार या कोर्ट में जनहित याचिका दूसरे स्तर के तरीके हैं।
+        \n\nयह तरीके एक जिम्मेदार विधायक की कमी पूरी नहीं कर सकते।</string>
+
+    <string name="gst_biscuit">18% जीएसटी</string>
+    <string name="gst_cloth">12% जीएसटी</string>
+    <string name="tax_petrol">100% टैक्स</string>
     <string name="itax_slabs">5 / 20 / 30%</string>
 
-    <string name="land_sale">Registry</string>
+    <string name="land_sale">रजिस्ट्री</string>
 
-    <string name="gst_exercise_book">12% GST</string>
-    <string name="user_liking">If you like the app</string>
-    <string name="good">Share</string>
-    <string name="very_good">Donate</string>
+    <string name="gst_exercise_book">12% जीएसटी</string>
+    <string name="user_liking">अगर आपको ऐप अच्छा लगा</string>
+    <string name="good">शेयर करें</string>
+    <string name="very_good">दान दें</string>
 
-    <string name="media_or_afeem">Media or Afeem ?</string>
-    <string name="mp_no_response">Where to protest?</string>
+    <string name="media_or_afeem">मीडिया या अफीम ?</string>
+    <string name="mp_no_response">धरना कहाँ पर दें?</string>
+    <string name="cleanliness">सफाई</string>
+    <string name="poor_road">सड़क</string>
+    <string name="electricity">बिजली</string>
+    <string name="police">पुलिस/कानून-व्यवस्था</string>
+    <string name="traffic">जाम में फंसी जनता</string>
+    <string name="corruption">दफ्तर में घूस</string>
+    <string name="train">देर से चलती रेल</string>
+    <string name="business">नये उद्योग (स्टार्टप) की मुश्किलें</string>
+    <string name="election_2019">2019 लोकसभा चुनाव</string>
+    <string name="employment">नौकरी</string>
+    <string name="hospital">बेहतर अस्पताल/प्राथमिक स्वास्थ्य केंद्र </string>
+    <string name="drinking_water">पीने का पानी</string>
+    <string name="agriculture_water">कृषि के लिए पानी की उपलब्धता</string>
+    <string name="agriculture_loan">कृषि ऋण उपलब्धता</string>
+    <string name="price_realization">कृषि उत्पादों के लिए सही मूल्य</string>
+    <string name="agriculture_subsidy">बीज/उर्वरक के लिए कृषि सब्सिडी</string>
+    <string name="public_transport">बेहतर सार्वजनिक परिवहन</string>
+    <string name="sewage">सीवर</string>
+    <string name="inflation">ऊंची टैक्स दर</string>
 
-    <string name="cleanliness">Cleanliness</string>
-    <string name="poor_road">Poor Road</string>
-    <string name="electricity">Electricity</string>
-    <string name="police">Police/Law and order</string>
-    <string name="traffic">Road jam/traffic</string>
-    <string name="corruption">Corruption in official duties</string>
-    <string name="train">Train delay</string>
-    <string name="business">Low ease-of-doing-business</string>
-    <string name="election_2019">2019 Loksabha elections</string>
-    <string name="employment">Jobs</string>
-    <string name="hospital">Better hospitals/primary healthcare centres</string>
-    <string name="drinking_water">Drinking water</string>
-    <string name="agriculture_water">Availability of water for agriculture</string>
-    <string name="agriculture_loan">Agriculture loan availability</string>
-    <string name="price_realization">High price realization for farm products</string>
-    <string name="agriculture_subsidy">Agricultural subsidy for seeds/fertilizers</string>
-    <string name="public_transport">Better public transport</string>
-    <string name="sewage">Sewage</string>
-    <string name="inflation">High tax rates</string>
+    <string name="jagran_group">जागरण समूह -
+        \nदैनिक जागरण,
+        \nमिड-डे,
+        \nरेडियो सिटी 91.1 एफएम</string>
 
-    <string name="jagran_group">Jagran Group -\nDainik Jagran, \nMid Day, \nRadio City 91.1 FM</string>
-    <string name="jagran_group_links"><a href="https://youtu.be/8_-8SvxvHqA?t=135">Part 1</a>
-        \n\n<a href="https://youtu.be/SY53lbYMuQ8">Part 2</a>
-        \n\n<a href="https://youtu.be/m5G5_bJwceY">Part 3</a></string>
+    <string name="spine_media">अच्छे अखबार/न्यूज चैनल :</string>
 
-    <string name="spine_media">Good options for newspaper/news channel :</string>
-
-    <string name="media_income">Soldout media houses - accept black-money and show paid and fake news. Check sting operation of your newspaper/news channel :</string>
-
-    <string name="dainik_bhaskar_list"><a href="https://youtu.be/BfTwuNOTGSM?t=135">Part 1</a>
-        \n\n<a href="https://youtu.be/DGLpcqFe1-A">Part 2</a>
-        \n\n<a href="https://youtu.be/d71S2XNuNog">Part 3</a></string>
-
-    <string name="times_group">Times Group -
-        \nThe Times Of India
-        \nThe Economic Times
-        \nZoom
-        \nRadio Mirchi 98.3 FM
-        \njung!ee pictures
-        \nनवभारत टाइम्स
-        \nTimes Now
-        \nET Now
-        \nMirror Now</string>
-    <string name="times_group_list"><a href="https://youtu.be/u6xEcQln0Ps?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/c1eZbrt19zg?t=135">Part 2</a>
-    \n\n<a href="https://youtu.be/5btvR2vfe6U">Part 3</a>
-    \n\n<a href="https://youtu.be/kr4GNJyNfkc">Part 4</a></string>
-
-    <string name="zee_group">Zee Group
-    \nZee News</string>
-    <string name="zee_group_list"><a href="https://youtu.be/dEyu9ULiBK8?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/rV071AcAVNI">Part 2</a>
-    \n\n<a href="https://youtu.be/RDdQTHTWlgk">Part 3</a>
-    \n\n<a href="https://youtu.be/KSi2yLCVaoQ">Part 4</a>
-    \n\n<a href="https://youtu.be/cQf4VFaDPfA">Part 5</a></string>
-
-    <string name="BigFM_list"><a href="https://youtu.be/fKYkM4vJxlU?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/_cHB97APrys">Part 2</a>
-    \n\n<a href="https://youtu.be/FJqCLt33Ys4">Part 3</a></string>
-
-    <string name="TV18_list"><a href="https://youtu.be/ajBqO4_npk0?t=135">Part 1</a>
-        \n\n<a href="https://youtu.be/rrMG1STPNSQ">Part 2</a></string>
-
-    <string name="india_today_group">India Today -
-        \nAaj Tak,
-        \ntv Today,
-        \nतेज,
-        \nदिल्ली आजतक,
-        \nBusiness Today,
-        \nCosmopolitan,
-        \nMail Today</string>
-    <string name="india_today_list"><a href="https://youtu.be/jZBWF0qG5_c?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/4kL6JwN9Mzw">Part 2</a></string>
-
-    <string name="HT_media_group">Hindustan Times Group
-        \nहिंदुस्तान
-        \nRadio Nasha 107.2 FM
-        \nHindustan Times
-        \nकादम्बिनी
-        \nनंदन
-        \nFever 104 RM
-        \nmint</string>
-    <string name="HT_media_list"><a href="https://youtu.be/z3RGM10In_o?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/z_WRgFkjxRk">Part 2</a>
-    \n\n<a href="https://youtu.be/c2lr2jmiQcc">Part 3</a></string>
-
-    <string name="abp_news">ABP News</string>
-    <string name="abp_news_list"><a href="https://youtu.be/47uik2v0ldU?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/sBXmunGeUL0">Part 2</a>
-    \n\n<a href="https://youtu.be/AzHLKRU5yq0">Part 3</a></string>
-
-    <string name="NewIndianExpress_list"><a href="https://youtu.be/NWHlPUO-aCo?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/7JWGSbaxE6A">Part 2</a></string>
-
-    <string name="OpenMagazine_list"><a href="https://youtu.be/iq_tGjnbLeQ?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/ndKX4BUT5MY">Part 2</a></string>
-
-    <string name="SunGroup_list"><a href="https://youtu.be/nFE2I32j-jk?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/yIsHmeI52NM">Part 2</a>
-    \n\n<a href="https://youtu.be/ZnopMOw9jyw">Part 3</a></string>
-
-    <string name="StarIndia_list"><a href="https://youtu.be/MiFeWxIaayQ?t=135">Part 1</a>
-    \n\n<a href="https://youtu.be/038ns-e_N5M">Part 2</a></string>
+    <string name="media_income">बिके हुए मीडिया जो - कालाधन लेते है या पैसे लेकर झूठी खबरें छापते हैं। अपने अखबार और टीवी चैनल का स्टिंग आपरेशन जाँच लें :</string>
 
     <string name="terms_and_condition_en">I agree to terms and conditions of usage.
         \n\nfilternet.in/terms-of-service/</string>
@@ -337,375 +262,456 @@
     <string name="button_yes_mr">हो</string>
     <string name="button_no_mr">नाही</string>
 
-    <string name="TheNewIndianExpress">The New Indian Express,
+    <string name="TheNewIndianExpress">द न्यू इंडियन एक्सप्रेस,
         \nदिनेमानी (तमिल)
-        \n\n<b>*</b>\'The New Indian Express\'
-        \nseparated from
-        \n\'Indian Express\' in 1999</string>
+        \n\n<b>*</b>\'द न्यू इंडियन एक्सप्रेस\'
+        \nऔर \'इंडियन एक्सप्रेस\' दोे
+        \nअलग समूह हैं।</string>
 
-    <string name="sun_group">Sun Group -
-        \nRED FM 93.5,
-        \nSUN TV Network,
-        \nUdaya</string>
-    <string name="newspaper_tv">Newspaper/ TV</string>
-    <string name="truth_or_afeem">Truth or Afeem?</string>
-    <string name="india_tv">India TV</string>
-    <string name="punjab_kesari">Punjab Kesari</string>
-    <string name="sab_tv">Sab TV</string>
+    <string name="newspaper_tv">अखबार/ टीवी</string>
+    <string name="truth_or_afeem">सच या अफीम?</string>
+    <string name="india_tv">इंडिया टीवी</string>
+    <string name="punjab_kesari">पंजाब केसरी</string>
+    <string name="sab_tv">सब टीवी</string>
+    <string name="amar_ujala">अमर उजाला</string>
+    <string name="sadhana_prime_news">साधना प्राइम न्यूज</string>
+    <string name="uni">यूएनआई</string>
+    <string name="_9x_tashan">9X टशन</string>
+    <string name="samachar_plus">समाचार प्लस</string>
+    <string name="hindi_khabar">हिन्दी खबर</string>
+    <string name="swatantra_bharat">स्वतंत्र भारत</string>
+    <string name="aaj_hindi_daily">आज (हिंदी अखबार)</string>
+    <string name="india_watch">इंडिया वाच</string>
+    <string name="hnn_24x7">एचएनएन 24X7</string>
+    <string name="scoopwhoop">स्कूपव्हूप</string>
+    <string name="dna">डीएनए</string>
+    <string name="rediff_com">रेडिफ.काम</string>
+    <string name="dainik_bhaskar">दैनिक भास्कर</string>
 
-    <string name="amar_ujala">Amar Ujala</string>
-    <string name="amar_ujala_list"><a href="https://youtu.be/OoAEOVuf-yI?t=135">Part 1</a></string>
+    <string name="times_group">टाइम्स समूह -
+        \nद टाइम्स आफ इंडिया
+        \nद इकानामिक टाइम्स
+        \nजूम चैनल
+        \nरेडियो मिर्ची 98.3 एफएम
+        \nजंगली पिक्चरस
+        \nनवभारत टाइम्स
+        \nटाइम्स नाऊ
+        \nइटी नाऊ
+        \nमिरर नाऊ</string>
 
-    <string name="sadhana_prime_news">Sadhana Prime News</string>
-    <string name="uni">UNI</string>
-    <string name="_9x_tashan">9X Tashan</string>
-    <string name="samachar_plus">Samachar Plus</string>
-    <string name="hindi_khabar">Hindi Khabar</string>
-    <string name="swatantra_bharat">Swatantra Bharat</string>
-    <string name="aaj_hindi_daily">Aaj Hindi Daily</string>
-    <string name="india_watch">India Watch</string>
-    <string name="hnn_24x7">HNN 24X7</string>
-    <string name="scoopwhoop">ScoopWhoop</string>
-    <string name="dna">DNA</string>
-    <string name="rediff_com">Rediff.com</string>
-    <string name="dainik_bhaskar">Dainik Bhaskar</string>
-    <string name="big_fm_92_7">Big FM 92.7</string>
-    <string name="tv_18">TV 18</string>
-    <string name="abn_andhra_jyoti">ABN Andhra Jyoti</string>
-    <string name="dainik_sambad">Dainik Sambad</string>
-    <string name="bartaman">Bartaman</string>
-    <string name="open_magazine">Open Magazine</string>
-    <string name="mvtv">MVTV</string>
-    <string name="india_voice">India Voice</string>
-    <string name="k_news">K News</string>
-    <string name="dinamalar">Dinamalar</string>
-    <string name="tv_5">TV 5</string>
-    <string name="lokmat">Lokmat</string>
-    <string name="swaraj_express">Swaraj Express</string>
-    <string name="bharat_samachar">Bharat Samachar</string>
-    <string name="radio_one">Radio One</string>
-    <string name="star_india">Star India</string>
-    <string name="paytm">Paytm</string>
+    <string name="zee_group">जी समूह
+    \nजी न्यूज</string>
+    <string name="big_fm_92_7">बिग एफएम 92.7</string>
+    <string name="tv_18">टीवी 18</string>
 
-    <string name="mp_voter">- Very few public representatives answer call or email.
-        \n- Write letter with facts and action required.
-        \n- Meet at their home.</string>
-    <string name="mp_protest"><b>If this doesn\'t work</b></string>
-    <string name="mp_neta"><b>If above steps don\'t work, then protest outside MP\'s home. This gets quick results.</b>
-        \n\nCase study 1 - Anna Hazare fast for Jan Lokpal bill. For first 7 days people protested in Ramlila ground, nothing happened. From 8th day onwards people protested outside MP/MLA homes, the bill got passed within 6 days.
-        \n\nCase study 2 - In Uttarakhand students have were selected but were not getting joining letters. They protested in city for months, but didn\'t succeed. When they protested outside MLA house, they got attention within 15 minutes. Within next 45 days they had joined and started getting salary.</string>
-    <string name="mla_neta"><b>If above steps don\'t work, then protest outside MLA\'s home. This gets quick results.</b>
-        \n\nCase study 1 - Anna Hazare fast for Jan Lokpal bill. For first 7 days people protested in Ramlila ground, nothing happened. From 8th day onwards people protested outside MP/MLA homes, the bill got passed within 6 days.
-        \n\nCase study 2 - In Uttarakhand students have were selected but were not getting joining letters. They protested in city for months, but didn\'t succeed. When they protested outside MLA house, they got attention within 15 minutes. Within next 45 days they had joined and started getting salary.</string>
+    <string name="india_today_group">इंडिया टुडे -
+        \nआज तक
+        \nटीवी टुडे
+        \nतेज
+        \nदिल्ली आजतक
+        \nबिजनेस टुडे
+        \nकास्मोपालिटन
+        \nमेल टुडे</string>
 
-    <string name="clean_voter">Cleanliness of roads, removing silt and stray animals is responsibility of local municipality.
-        \nIf local municipality does not take care, then state govt is responsible.</string>
-    <string name="clean_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
+    <string name="HT_media_group">हिंदुस्तान टाइम्स समूह
+        \nहिंदुस्तान
+        \nरेडियो नशा 107.2 एफएम
+        \nहिंदुस्तान टाइम्स
+        \nकादम्बिनी
+        \nनंदन
+        \nफीवर 104 एफएम
+        \nमिंट</string>
 
-    <string name="road_voter">Road connectivity and road quality are responsibilities of state govt.</string>
-    <string name="road_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
+    <string name="abp_news">एबीपी न्यूज</string>
+    <string name="abn_andhra_jyoti">एबीएन आंध्रा ज्योति</string>
+    <string name="dainik_sambad">दैनिक संवाद</string>
+    <string name="bartaman">वर्तमान</string>
+    <string name="open_magazine">ओपन मैगेजीन</string>
+    <string name="mvtv">एमवीटीवी</string>
+    <string name="india_voice">इंडिया वाइस</string>
+    <string name="k_news">के न्यूज</string>
+    <string name="dinamalar">दीनामालार</string>
+    <string name="tv_5">टीवी 5</string>
+    <string name="lokmat">लोकमत</string>
 
-    <string name="electricity_voter">Electricity - connection, quality and cost are responsibilities of state govt.</string>
-    <string name="electricity_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
+    <string name="sun_group">सन समूह -
+        \nरेड एफएम 93.5
+        \nसन टीवी नेटवर्क
+        \nउदय टीवी</string>
+    <string name="swaraj_express">स्वराज एक्सप्रेस</string>
+    <string name="bharat_samachar">भारत समाचार</string>
+    <string name="radio_one">रेडियो वन</string>
+    <string name="star_india">स्टार इंडिया</string>
+    <string name="paytm">पेटीएम</string>
 
-    <string name="police_voter">Main police functions - patrolling, FIR lodging and investigation/chargesheet. Police quality - is responsibility of state govt.</string>
-    <string name="police_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
+    <string name="mp_voter">- बहुत कम जन-प्रतिनिधि फोन या ईमेल का जवाब देते हैं।
+        \n- तथ्यों के साथ चिट्ठी लिखें।
+        \n- उनके घर पर मिलें।</string>
+    <string name="mp_protest"><b>काम न बने तो</b></string>
+    <string name="mp_neta"><b>अब भी बात न बने तो सांसद के घर के सामने शांतिपूर्ण तरीके से धरना दें। यह बहुत जल्दी ध्यान खींचता है और जल्दी समाधान भी देता है।</b>
+        \n\nउदाहरण 1 - अन्ना आंदोलन या जनलोकपाल बिल के समय. रामलीला मैदान में 7 दिन तक धरना देने पर कुछ न हुआ. 8वें दिन से सांसद/विधायक के घर के सामने धरना देनेपर 6 दिन में बिल पास हो गया.
+        \n\nउदाहरण 2 - उत्तराखंड में परीक्षा पास करने के बाद भी ज्वाइंनिंग लेटर नहीं आ रहा था. कई दिन तक यहां-वहां धरना देने के बाद भी काम न बना. जब विधायक के घर के सामने धरना दिया तो 15 मिनट में बात बन गई. 45 दिन में नियुक्ति भी हुई और सैलरी भी आने लगी.</string>
+    <string name="mla_neta"><b>अब भी बात न बने तो विधायक के घर के सामने शांतिपूर्ण तरीके से धरना दें। यह बहुत जल्दी ध्यान खींचता है और जल्दी समाधान भी देता है।</b>
+        \n\nउदाहरण 1 - अन्ना आंदोलन या जनलोकपाल बिल के समय. रामलीला मैदान में 7 दिन तक धरना देने पर कुछ न हुआ. 8वें दिन से सांसद/विधायक के घर के सामने धरना देनेपर 6 दिन में बिल पास हो गया.
+        \n\nउदाहरण 2 - उत्तराखंड में परीक्षा पास करने के बाद भी ज्वाइंनिंग लेटर नहीं आ रहा था. कई दिन तक यहां-वहां धरना देने के बाद भी काम न बना. जब विधायक के घर के सामने धरना दिया तो 15 मिनट में बात बन गई. 45 दिन में नियुक्ति भी हुई और सैलरी भी आने लगी.</string>
 
-    <string name="traffic_voter">Traffic jam is common problem. Many reasons cause this - poor traffic police, too many vehicles (easy loan), poor city planning.
-        \n\nGovt are considering to lower driving license age to 17 years, to permit more riders on road.
-        \n\nRoad, traffic police and city planning - all three are responsibility of state govt.</string>
-    <string name="traffic_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
+    <string name="clean_voter">सड़क पर गंदगी, सिल्ट, छुट्टा पशु जैसी समस्याएँ स्थानीय नगर निगम की जिम्मेदारी है।
+        \nअगर नगर निगम अपनी जिम्मेदारी नहीं निभाता तो यह राज्य सरकार की जिम्मेदारी है।</string>
+    <string name="clean_neta">राज्य सरकार में समस्या उठाने की जिम्मेदारी विधायक की है। विधायक को संपर्क करें।</string>
 
-    <string name="corruption_voter">Delay or casual response or corruption in govt office is responsibility of concerned govt.</string>
-    <string name="corruption_neta">Its responsibility of MLA/MP, to raise such issues to concerned minister heading the department. Contact them.</string>
+    <string name="road_voter">सड़क बनवाना और उसकी रख-रखाव राज्य सरकार की जिम्मेदारी है।</string>
+    <string name="road_neta">राज्य सरकार में समस्या उठाने की जिम्मेदारी विधायक की है। विधायक को संपर्क करें।</string>
 
-    <string name="train_voter">Train delays is responsibility of center govt.</string>
-    <string name="train_neta">Its responsibility of MP to raise issues to railway minister. Contact MP.</string>
+    <string name="electricity_voter">बिजली कनेक्शन, गुणवत्ता और कीमत - राज्य सरकार की जिम्मेदारी है।</string>
+    <string name="electricity_neta">राज्य सरकार में समस्या उठाने की जिम्मेदारी विधायक की है। विधायक को संपर्क करें।</string>
 
-    <string name="business_voter">New businesses are backbone of economy. It creates new jobs.\nOpening a business is very difficult. Complex procedures waste precious time and energy.
-        \n\nWorld ranking of India is low (100th position in 2018).
-        \n\nMudra yojana for small loans is non-existent in banks
-        \n\nDue to poor law-n-order, investors hesitate to invest.</string>
+    <string name="police_voter">पुलिस के मुख्य काम - निगरानी, केस दर्ज करना, और केस की जाँच। पुलिस की गुणवत्ता - राज्य सरकार की जिम्मेदारी है।</string>
+    <string name="police_neta">राज्य सरकार में समस्या उठाने की जिम्मेदारी विधायक की है। विधायक को संपर्क करें।</string>
+
+    <string name="traffic_voter">रोड पर जाम आम समस्या है। इसके मुख्य कारण हैं - खराब यातायात पुलिस, ज्यादा वाहन (लोन पर लिए हुए), शहर का नक्शा।
+        \n\nसरकार तो ड्राइविंग लाइसेंस की उम्र घटाकर 17 करना चाहती है, जिससे और वाहनचालक जुड़ें।
+        \n\nसड़क, यातायात पुलिस और शहर का नक्शा - तीनों ही राज्य सरकार की जिम्मेदारी है।</string>
+    <string name="traffic_neta">राज्य सरकार में समस्या उठाने की जिम्मेदारी विधायक की है। विधायक को संपर्क करें।</string>
+
+    <string name="corruption_voter">आम जनता के कामों में देरी या ढ़िलाई या घूस के लिए संबधित सरकार जिम्मेदार है।</string>
+    <string name="corruption_neta">संबधित सरकार के मंत्री से समस्या उठाने की जिम्मेदारी विधायक या सांसद की है। उन्हें संपर्क करें।</string>
+
+    <string name="train_voter">रेल के चलने में देरी, केंद्र सरकार के रेल मंत्रालय की जिम्मेदारी है।</string>
+    <string name="train_neta">अपने सांसद के माध्यम से रेल मंत्री से सवाल पूछें। सांसद से संपर्क करें।</string>
+
+    <string name="business_voter">नये उद्योग अर्थव्यवस्था की रीढ़ होते हैं। नये रोजगार को जन्म देते हैं।\nदेश में रोजगार खोलना काफी मुश्किल है। कई झंझट भरे नियम ध्यान को बाँटते हैं और कीमती समय बर्बाद कर देते हैं।
+        \n\nविश्व में भारत का स्थान काफी नीचे है (2018 में 100 वां स्थान)।
+        \n\nछोटे व्यापारियों के लिए मुद्रा योजना बैंकों से गायब है।
+        \n\nखराब कानून व्यवस्था के कारण पूंजी लगाने से लोग हिचकते हैं।</string>
     <string name="business_neta"></string>
-    <string name="business_parliament_house">Making simpler laws is responsibility of MP.</string>
-    <string name="business_nagar_nigam">Law-n-order in state is responsibility of MLA</string>
+    <string name="business_parliament_house">कानून को आसान बनाने की जिम्मेदारी सांसदों की है। सांसद को संपर्क करें।</string>
+    <string name="business_nagar_nigam">राज्य में कानून व्यवस्था की जिम्मेदारी विधायकों की है। विधायक को संपर्क करें।</string>
 
-    <string name="sewage_voter">Sewage is responsibility of local municipality.
-        \nIf local municipality does not take care, then state govt is responsible.</string>
-    <string name="sewage_neta">Its duty of MLA to take up this issue with state govt. Contact MLA.</string>
+    <string name="sewage_voter">सीवर स्थानीय नगर निगम की जिम्मेदारी है।
+        \nअगर नगर निगम अपनी जिम्मेदारी नहीं निभाता तो यह राज्य सरकार की जिम्मेदारी है।</string>
+    <string name="sewage_neta">राज्य सरकार में समस्या उठाने की जिम्मेदारी विधायक की है। विधायक को संपर्क करें।</string>
 
     <!-- Vidhayak Duties -->
-    <string name="vidhayak_duty_police">Police</string>
-    <string name="vidhayak_duty_order">Public order</string>
-    <string name="vidhayak_duty_state_public_service">State Public Service Commission</string>
-    <string name="vidhayak_duty_high_court">Officers and Staff in High Court</string>
-    <string name="vidhayak_duty_prison">Prisons</string>
-    <string name="vidhayak_duty_municipality">Powers of Municipality</string>
-    <string name="vidhayak_duty_hospital">Hospitals and Dispensaries</string>
-    <string name="vidhayak_duty_pilgrim">Pilgrimages</string>
-    <string name="vidhayak_duty_Liquor">Liquor</string>
-    <string name="vidhayak_duty_agri">Agriculture</string>
-    <string name="vidhayak_duty_preserve">Preservation, Protection and Stock of animal</string>
-    <string name="vidhayak_duty_water_supply">Water supplies - irrigation/ canals/ drainage</string>
-    <string name="vidhayak_duty_land">Land, Land revenue</string>
-    <string name="vidhayak_duty_fish">Fisheries</string>
-    <string name="vidhayak_duty_trade">Trade and commerce within the State</string>
-    <string name="vidhayak_duty_market">Markets and fairs</string>
-    <string name="vidhayak_duty_money">Money-lending and money-lenders</string>
-    <string name="vidhayak_duty_agri_tax">Taxes on agricultural income</string>
-    <string name="vidhayak_duty_electric_tax">Taxes on the consumption or sale of electricity</string>
-    <string name="vidhayak_duty_vehicle_tax">Taxes on Vehicles, Education, Roads, Forest, etc</string>
-    <string name="vidhayak_duty_education">Education</string>
-    <string name="vidhayak_duty_road">Roads</string>
-    <string name="vidhayak_duty_forest">Forest, etc</string>
+    <string name="vidhayak_duty_police">पुलिस</string>
+    <string name="vidhayak_duty_order">कानून व्यवस्था</string>
+    <string name="vidhayak_duty_state_public_service">राज्य लोकसेवा आयोग</string>
+    <string name="vidhayak_duty_high_court">उच्च न्यायालय के अधिकारी और सेवक</string>
+    <string name="vidhayak_duty_prison">जेल</string>
+    <string name="vidhayak_duty_municipality">नगरनिगमों का गठन और शक्तियाँ</string>
+    <string name="vidhayak_duty_hospital">अस्पताल और औषधालय</string>
+    <string name="vidhayak_duty_pilgrim">तीर्थयात्राएं</string>
+    <string name="vidhayak_duty_Liquor">शराब</string>
+    <string name="vidhayak_duty_agri">खेती</string>
+    <string name="vidhayak_duty_preserve">पशुधन</string>
+    <string name="vidhayak_duty_water_supply">जल - सिंचाई/ नहरें/ निकास</string>
+    <string name="vidhayak_duty_land">भूमि, भूमि कर</string>
+    <string name="vidhayak_duty_fish">मछलीपालन</string>
+    <string name="vidhayak_duty_trade">राज्य के अंदर व्यवसाय कर</string>
+    <string name="vidhayak_duty_market">बाजार और मेेले</string>
+    <string name="vidhayak_duty_money">साहूकारी और कृषि ऋण मुक्ति</string>
+    <string name="vidhayak_duty_agri_tax">खेती पर कर</string>
+    <string name="vidhayak_duty_electric_tax">बिजली कर</string>
+    <string name="vidhayak_duty_vehicle_tax">वाहन कर</string>
+    <string name="vidhayak_duty_education">शिक्षा</string>
+    <string name="vidhayak_duty_road">सड़क</string>
+    <string name="vidhayak_duty_forest">वन, आदि</string>
 
     <!-- Saansad Duties -->
-    <string name="mp_duty_employment">Employment</string>
-    <string name="mp_duty_social_security">Social security</string>
-    <string name="mp_duty_price_control">Price control</string>
-    <string name="mp_duty_upsc">UPSC</string>
-    <string name="mp_duty_education">Education</string>
-    <string name="mp_duty_rail">Railway</string>
-    <string name="mp_duty_highway">National highway</string>
-    <string name="mp_duty_stock">Stock exchange</string>
-    <string name="mp_duty_po">Post Office</string>
-    <string name="mp_duty_currency">Currency</string>
-    <string name="mp_duty_bank">Bank</string>
-    <string name="mp_duty_company">Company law, Company tax</string>
-    <string name="mp_duty_insurance">Insurance</string>
-    <string name="mp_duty_quality">Quality of goods</string>
-    <string name="mp_duty_oil">Petrol, Excise duty on Petrol/CNG</string>
-    <string name="mp_duty_mine">Mines and petroleum refinery, Labour in mines</string>
-    <string name="mp_duty_cbi">CBI</string>
-    <string name="mp_duty_citizenship">Citizenship</string>
-    <string name="mp_duty_passport">Passport</string>
-    <string name="mp_duty_defense">Defense</string>
-    <string name="mp_duty_forest">Forest</string>
-    <string name="mp_duty_medicine">Medicine</string>
-    <string name="mp_duty_census">Census</string>
-    <string name="mp_duty_migration">Inter-state migration</string>
-    <string name="mp_duty_ipc">IPC</string>
-    <string name="mp_duty_divorce_law">Divorce law, etc</string>
+    <string name="mp_duty_employment">रोजगार</string>
+    <string name="mp_duty_social_security">सामाजिक सुरक्षा</string>
+    <string name="mp_duty_price_control">महंगाई</string>
+    <string name="mp_duty_upsc">यूपीएससी</string>
+    <string name="mp_duty_education">शिक्षा</string>
+    <string name="mp_duty_rail">रेल</string>
+    <string name="mp_duty_highway">राष्ट्रीय राजमार्ग</string>
+    <string name="mp_duty_stock">शेयर बाजार</string>
+    <string name="mp_duty_po">पोस्ट आफिस</string>
+    <string name="mp_duty_currency">नोट / सिक्के</string>
+    <string name="mp_duty_bank">बैंक</string>
+    <string name="mp_duty_company">कंपनी कानून, कंपनी टैक्स</string>
+    <string name="mp_duty_insurance">बीमा</string>
+    <string name="mp_duty_quality">सामान की गुणवत्ता</string>
+    <string name="mp_duty_oil">पेट्रोल, पेट्रोल का दाम, पेट्रोल/सीएनजी पर कर</string>
+    <string name="mp_duty_mine">खान और तेलक्षेत्र, खान में श्रम</string>
+    <string name="mp_duty_cbi">सीबीआई</string>
+    <string name="mp_duty_citizenship">नागरिकता</string>
+    <string name="mp_duty_passport">पासपोर्ट</string>
+    <string name="mp_duty_defense">रक्षा</string>
+    <string name="mp_duty_forest">वन</string>
+    <string name="mp_duty_medicine">दवाई</string>
+    <string name="mp_duty_census">जनगणना</string>
+    <string name="mp_duty_migration">अंतर-राज्यीय आवाजाही</string>
+    <string name="mp_duty_ipc">दंड विधि</string>
+    <string name="mp_duty_divorce_law">तलाक कानून, आदि </string>
 
-    <string name="issue_information">To ask question,
-        \nor add information / experience</string>
+    <string name="issue_information">कोई सवाल पूछने के लिए,
+        \nजानकारी / अनुभव जोड़ने के लिए</string>
 
-    <string name="india_tv_list"><a href="https://youtu.be/3bA-m_727R0?t=135">Part 1</a></string>
-    <string name="punjab_kesari_list"><a href="https://youtu.be/rqEJaW7Ok2I?t=135">Part 1</a></string>
-    <string name="sab_tv_list"><a href="https://youtu.be/MmZBtGt4Kx4?t=135">Part 1</a></string>
-    <string name="sadhana_news_list"><a href="https://youtu.be/1qVK6zajI58?t=135">Part 1</a></string>
-    <string name="uni_list"><a href="https://youtu.be/I7_6ZXePsog?t=135">Part 1</a></string>
-    <string name="_9x_tashan_list"><a href="https://youtu.be/IifKJgiY00M?t=135">Part 1</a></string>
-    <string name="samachar_plus_list"><a href="https://youtu.be/J3TbL6BtJGk?t=135">Part 1</a></string>
-    <string name="hindi_khabar_list"><a href="https://youtu.be/5iAFRGW0nN4?t=135">Part 1</a></string>
-    <string name="swatantra_list"><a href="https://youtu.be/cjYB0MmEqqs?t=135">Part 1</a></string>
-    <string name="aaj_hindi_list"><a href="https://youtu.be/K6WLi9GvZ2s?t=135">Part 1</a></string>
-    <string name="india_watch_list"><a href="https://youtu.be/uNXvnfRvR6Y?t=135">Part 1</a></string>
-    <string name="hnn_24x7_list"><a href="https://youtu.be/8WwfOa0F0p8?t=135">Part 1</a></string>
-    <string name="scoopshoop_list"><a href="https://youtu.be/xQSrLHgM_pI?t=135">Part 1</a></string>
-    <string name="dna_list"><a href="https://youtu.be/Mz0T8fMDtq0?t=135">Part 1</a></string>
-    <string name="rediff_list"><a href="https://youtu.be/6udsFUF7FiQ?t=135">Part 1</a></string>
-    <string name="abn_andhra_list"><a href="https://youtu.be/WLzOq1O17Mc?t=135">Part 1</a></string>
-    <string name="dainik_sambad_list"><a href="https://youtu.be/y7wRn6s4GaY?t=135">Part 1</a></string>
-    <string name="bartaman_list"><a href="https://youtu.be/t_9esHdidI0?t=135">Part 1</a></string>
-    <string name="mvtv_list"><a href="https://youtu.be/2DVqzFap5rA?t=135">Part 1</a></string>
-    <string name="india_voice_list"><a href="https://youtu.be/F0Rd9A_Fi-8?t=135">Part 1</a></string>
-    <string name="k_news_list"><a href="https://youtu.be/9In4zQ4Wreo?t=135">Part 1</a></string>
-    <string name="dinamalar_list"><a href="https://youtu.be/9ZnIkMwo68g?t=135">Part 1</a></string>
-    <string name="tv_5_list"><a href="https://youtu.be/67EWmjDwH9M?t=135">Part 1</a></string>
-    <string name="swarj_express_list"><a href="https://youtu.be/hqSdMcvLlzM?t=135">Part 1</a></string>
-    <string name="bharat_samachar_list"><a href="https://youtu.be/Gm26ogEOoXc?t=135">Part 1</a></string>
-    <string name="radio_one_list"><a href="https://youtu.be/g51sGCw-fzM?t=135">Part 1</a></string>
-    <string name="paytm_list"><a href="https://youtu.be/lvj8hRD1GY4?t=135">Part 1</a></string>
-    <string name="lokmat_list"><a href="https://youtu.be/8ERMq0YjTFM?t=135">Part 1</a></string>
+    <string name="jagran_group_links"><a href="https://youtu.be/8_-8SvxvHqA?t=135">भाग 1</a>
+        \n\n<a href="https://youtu.be/SY53lbYMuQ8">भाग 2</a>
+        \n\n<a href="https://youtu.be/m5G5_bJwceY">भाग 3</a></string>
 
-    <string name="contact_mla">Call and email your MLA. Don\'t hesitate.</string>
+    <string name="dainik_bhaskar_list"><a href="https://youtu.be/BfTwuNOTGSM?t=135">भाग 1</a>
+        \n\n<a href="https://youtu.be/DGLpcqFe1-A">भाग 2</a>
+        \n\n<a href="https://youtu.be/d71S2XNuNog">भाग 3</a></string>
 
-    <string name="rajya_tax">For development of state, we all pay tax in various forms. Tax rates on common items :</string>
+    <string name="times_group_list"><a href="https://youtu.be/u6xEcQln0Ps?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/c1eZbrt19zg?t=135">भाग 2</a>
+    \n\n<a href="https://youtu.be/5btvR2vfe6U">भाग 3</a>
+    \n\n<a href="https://youtu.be/kr4GNJyNfkc">भाग 4</a></string>
+
+    <string name="zee_group_list"><a href="https://youtu.be/dEyu9ULiBK8?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/rV071AcAVNI">भाग 2</a>
+    \n\n<a href="https://youtu.be/RDdQTHTWlgk">भाग 3</a>
+    \n\n<a href="https://youtu.be/KSi2yLCVaoQ">भाग 4</a>
+    \n\n<a href="https://youtu.be/cQf4VFaDPfA">भाग 5</a></string>
+
+    <string name="BigFM_list"><a href="https://youtu.be/fKYkM4vJxlU?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/_cHB97APrys">भाग 2</a>
+    \n\n<a href="https://youtu.be/FJqCLt33Ys4">भाग 3</a></string>
+
+    <string name="TV18_list"><a href="https://youtu.be/ajBqO4_npk0?t=135">भाग 1</a>
+        \n\n<a href="https://youtu.be/rrMG1STPNSQ">भाग 2</a></string>
+
+    <string name="india_today_list"><a href="https://youtu.be/jZBWF0qG5_c?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/4kL6JwN9Mzw">भाग 2</a></string>
+
+    <string name="HT_media_list"><a href="https://youtu.be/z3RGM10In_o?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/z_WRgFkjxRk">भाग 2</a>
+    \n\n<a href="https://youtu.be/c2lr2jmiQcc">भाग 3</a></string>
+
+    <string name="abp_news_list"><a href="https://youtu.be/47uik2v0ldU?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/sBXmunGeUL0">भाग 2</a>
+    \n\n<a href="https://youtu.be/AzHLKRU5yq0">भाग 3</a></string>
+
+    <string name="NewIndianExpress_list"><a href="https://youtu.be/NWHlPUO-aCo?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/7JWGSbaxE6A">भाग 2</a></string>
+
+    <string name="OpenMagazine_list"><a href="https://youtu.be/iq_tGjnbLeQ?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/ndKX4BUT5MY">भाग 2</a></string>
+
+    <string name="SunGroup_list"><a href="https://youtu.be/nFE2I32j-jk?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/yIsHmeI52NM">भाग 2</a>
+    \n\n<a href="https://youtu.be/ZnopMOw9jyw">भाग 3</a></string>
+
+    <string name="StarIndia_list"><a href="https://youtu.be/MiFeWxIaayQ?t=135">भाग 1</a>
+    \n\n<a href="https://youtu.be/038ns-e_N5M">भाग 2</a></string>
+
+    <string name="amar_ujala_list"><a href="https://youtu.be/OoAEOVuf-yI?t=135">भाग 1</a></string>
+    <string name="india_tv_list"><a href="https://youtu.be/3bA-m_727R0?t=135">भाग 1</a></string>
+    <string name="punjab_kesari_list"><a href="https://youtu.be/rqEJaW7Ok2I?t=135">भाग 1</a></string>
+    <string name="sab_tv_list"><a href="https://youtu.be/MmZBtGt4Kx4?t=135">भाग 1</a></string>
+    <string name="sadhana_news_list"><a href="https://youtu.be/1qVK6zajI58?t=135">भाग 1</a></string>
+    <string name="uni_list"><a href="https://youtu.be/I7_6ZXePsog?t=135">भाग 1</a></string>
+    <string name="_9x_tashan_list"><a href="https://youtu.be/IifKJgiY00M?t=135">भाग 1</a></string>
+    <string name="samachar_plus_list"><a href="https://youtu.be/J3TbL6BtJGk?t=135">भाग 1</a></string>
+    <string name="hindi_khabar_list"><a href="https://youtu.be/5iAFRGW0nN4?t=135">भाग 1</a></string>
+    <string name="swatantra_list"><a href="https://youtu.be/cjYB0MmEqqs?t=135">भाग 1</a></string>
+    <string name="aaj_hindi_list"><a href="https://youtu.be/K6WLi9GvZ2s?t=135">भाग 1</a></string>
+    <string name="india_watch_list"><a href="https://youtu.be/uNXvnfRvR6Y?t=135">भाग 1</a></string>
+    <string name="hnn_24x7_list"><a href="https://youtu.be/8WwfOa0F0p8?t=135">भाग 1</a></string>
+    <string name="scoopshoop_list"><a href="https://youtu.be/xQSrLHgM_pI?t=135">भाग 1</a></string>
+    <string name="dna_list"><a href="https://youtu.be/Mz0T8fMDtq0?t=135">भाग 1</a></string>
+    <string name="rediff_list"><a href="https://youtu.be/6udsFUF7FiQ?t=135">भाग 1</a></string>
+    <string name="abn_andhra_list"><a href="https://youtu.be/WLzOq1O17Mc?t=135">भाग 1</a></string>
+    <string name="dainik_sambad_list"><a href="https://youtu.be/y7wRn6s4GaY?t=135">भाग 1</a></string>
+    <string name="bartaman_list"><a href="https://youtu.be/t_9esHdidI0?t=135">भाग 1</a></string>
+    <string name="mvtv_list"><a href="https://youtu.be/2DVqzFap5rA?t=135">भाग 1</a></string>
+    <string name="india_voice_list"><a href="https://youtu.be/F0Rd9A_Fi-8?t=135">भाग 1</a></string>
+    <string name="k_news_list"><a href="https://youtu.be/9In4zQ4Wreo?t=135">भाग 1</a></string>
+    <string name="dinamalar_list"><a href="https://youtu.be/9ZnIkMwo68g?t=135">भाग 1</a></string>
+    <string name="tv_5_list"><a href="https://youtu.be/67EWmjDwH9M?t=135">भाग 1</a></string>
+    <string name="swarj_express_list"><a href="https://youtu.be/hqSdMcvLlzM?t=135">भाग 1</a></string>
+    <string name="bharat_samachar_list"><a href="https://youtu.be/Gm26ogEOoXc?t=135">भाग 1</a></string>
+    <string name="radio_one_list"><a href="https://youtu.be/g51sGCw-fzM?t=135">भाग 1</a></string>
+    <string name="paytm_list"><a href="https://youtu.be/lvj8hRD1GY4?t=135">भाग 1</a></string>
+    <string name="lokmat_list"><a href="https://youtu.be/8ERMq0YjTFM?t=135">भाग 1</a></string>
+
+    <string name="contact_mla">विधायक को फोन व ईमेल करें, हिचकिचाएँ नहीं।</string>
+
+    <string name="rajya_tax">राज्य की प्रगति के लिए हम सब कई तरह के कर (टैक्स) देते हैं। विभिन्र वस्तुओं पर कर की दरें :</string>
 
     <!--Budget Bihar-->
-    <string name="budget_bihar"><b>Bihar</b></string>
-    <string name="bihar_budget">1,76,990 crore</string>
-    <string name="bihar_tax_total"><b>Total tax to state govt - One lakh seventy six thousand nine hundred ninety crores</b></string>
-    <string name="bihar_education">Education</string>
-    <string name="bihar_pension">Pension</string>
-    <string name="bihar_rural_dev">Rural Development</string>
-    <string name="bihar_interest">Interest Payment</string>
-    <string name="bihar_rural_work">Rural works</string>
-    <string name="bihar_energy">Energy</string>
-    <string name="bihar_panchayti_raj">Panchayti Raj</string>
-    <string name="bihar_home">Home</string>
-    <string name="bihar_health">Health</string>
-    <string name="bihar_repay_loan">Repayment of Loans</string>
-    <string name="bihar_source_text">Full budget 2018-19 http://finance.bih.nic.in/Documents/Circulars/CN-02-28-02-2018.pdf</string>
+    <string name="budget_bihar"><b>बिहार</b></string>
+    <string name="bihar_budget">1,76,990 करोड़</string>
+    <string name="bihar_tax_total"><b>राज्य सरकार को कुल सालाना टैक्स - एक लाख छिहत्तर हजार नौ सौ नब्बे करोड़ रू हम सब मिलकर देते हैं।</b></string>
+    <string name="bihar_education">शिक्षा</string>
+    <string name="bihar_pension">पेंशन</string>
+    <string name="bihar_rural_dev">ग्रामीण विकास</string>
+    <string name="bihar_interest">ब्याज भुगतान</string>
+    <string name="bihar_rural_work">ग्रामीण कार्य</string>
+    <string name="bihar_energy">ऊर्जा</string>
+    <string name="bihar_panchayti_raj">पंचायती राज</string>
+    <string name="bihar_home">गृह</string>
+    <string name="bihar_health">स्वास्थ्य</string>
+    <string name="bihar_repay_loan">कर्ज मूल भुगतान</string>
+    <string name="bihar_source_text">सालाना बजट 2018-19 http://finance.bih.nic.in/Documents/Circulars/CN-02-28-02-2018.pdf</string>
 
-    <!--Budget UP-->
-    <string name="budget_UP"><b>Uttar Pradesh</b></string>
-    <string name="UP_budget">5,12,860 crore</string>
-    <string name="UP_tax_total"><b>Total budget of state govt - Five lakh twelve thousand eight hundred sixty crores</b></string>
-    <string name="UP_education">Education</string>
-    <string name="UP_source_text">Download budget 2020-21 https://db.filternet.in/jantamalik/Budget_UP.pdf</string>
+    <!--Budget Bihar-->
+    <string name="budget_UP"><b>उत्तर प्रदेश</b></string>
+    <string name="UP_budget">5,12,860 करोड़</string>
+    <string name="UP_tax_total"><b>राज्य सरकार का कुल बजट - पांच लाख बारह हजार आठ सौ साठ करोड़ रू।</b></string>
+    <string name="UP_education">शिक्षा</string>
+    <string name="UP_source_text">सालाना बजट 2020-21 डाउनलोड करें https://db.filternet.in/jantamalik/%E0%A4%AC%E0%A4%9C%E0%A4%9F%20%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A6%E0%A5%87%E0%A4%B6.pdf</string>
 
-    <string name="puzzle">Quiz</string>
-    <string name="skip">Skip</string>
-    <string name="next">Next</string>
-    <string name="finish">Finish</string>
+    <string name="puzzle">पहेली</string>
+    <string name="skip">बाहर जाएँ</string>
+    <string name="next">अगला</string>
+    <string name="finish">समाप्त</string>
     <string name="correct"><b>✅</b></string>
     <string name="wrong_answer"><b>❌</b></string>
 
-    <string name="filter_text">Remaining candidates are filtered based on following criteria:</string>
+    <string name="filter_text">बाकी उम्मीदवारों को नीचे दिए गए आधार पर छाँट दिया गया है:</string>
+    <string name="illegal_foreign_funding">उम्मीदवार जिस राजनीतिक पार्टी से खड़ा है, वह गैरकानूनी विदेशी चंदें की दोषी है। <a href="https://www.filternet.in/economic-freedom-of-india/">दिल्ली हाईकोर्ट के फैसले को विस्तार से जानें >></a></string>
+    <string name="criminal">उम्मीदवार पर गंभीर आपराधिक मामले दर्ज है</string>
+    <string name="old">उम्मीदवार की आयु 65 साल या ज्यादा हैं (सुप्रीमकोर्ट के जज की अधिकतम आयु 65 है)</string>
+    <string name="no_graduate">उम्मीदवार ग्रेजुएट/स्नातक नहीं है (100 विषयों पर कानून बनाने पड़ते हैं)</string>
 
-    <string name="illegal_foreign_funding">Candidate\'s political party is guilty of illegal-foreign-funding. <a href="https://www.filternet.in/2019-battle-for-economic-freedom-of-india/">Read Delhi High Court verdict in detail >></a></string>
-    <string name="criminal">Candidate is charged of serious crimes</string>
-    <string name="old">Candidate is 65 years old on day of result (Supreme court judge max age is 65 yrs)</string>
-    <string name="no_graduate">Candidate is not graduate (needs to make bills on 100 topics)</string>
+    <string name="coming_soon">नामांकन पूरा नहीं हुआ है\nजल्द आयेगा</string>
+    <string name="good_candidate">उम्मीदवार</string>
+    <string name="bad_candidate">उम्मीदवार</string>
+    <string name="political_party">राजनीतिक दल</string>
+    <string name="total_assets">कुल संपत्ति</string>
+    <string name="main_reason">मुख्य कारण</string>
+    <string name="puzzle_title">आप कितने जागरूक हैं?</string>
 
-    <string name="coming_soon">Nomination is under progress\nComing soon</string>
-    <string name="good_candidate">Candidate</string>
-    <string name="bad_candidate">Candidate</string>
-    <string name="political_party">Political Party</string>
-    <string name="total_assets">Total Assets</string>
-    <string name="main_reason">Main reason</string>
-    <string name="puzzle_title">Are you a smart voter?</string>
+    <string name="congratulation">बधाई हो !</string>
+    <string name="smart_voter">आप बहुत <b>जागरूक वोटर</b> है</string>
+    <string name="user_thanks">बंद करें</string>
+    <string name="share">अपने दोस्तों से शेयर करें</string>
+    <string name="election_2019_header_line">70 साल से बड़े नाम पर ही वोट दिया,
+        \nफिर 5-साल अपने सांसद का इंतजार किया
+        \n\nतो अबकी बार,
+        \nअच्छा सांसद तो अच्छी सरकार</string>
+    <string name="adr_source">उम्मीदवार की जानकारी का स्रोत : <a href="https://adrindia.org">एसोसिएशन फॉर डेमोक्रेटिक रिफॉर्म्स</a></string>
+    <string name="know_more">अधिक जानें ></string>
+    <string name="foreign_funding"><a href="https://www.filternet.in/economic-freedom-of-india/">पार्टी गैरकानूनी विदेशी चंदे की दोषी है</a></string>
+    <string name="criminal_case">गंभीर आपराधिक मामले</string>
+    <string name="aged">65 से ज्यादा उम्र</string>
+    <string name="not_graduate">ग्रेजुएट नहीं है</string>
 
-    <string name="congratulation">Congratulations !</string>
-    <string name="smart_voter">You are a <b>Smart Voter</b></string>
-    <string name="user_thanks">Close</string>
-    <string name="share">Share with friends</string>
-    <string name="election_2019_header_line">For 70 years we voted for big names,
-        \nThen wait for MP for 5 years
-        \n\nThis time select,
-        \nGood MPs for Good governance</string>
-    <string name="adr_source">Source of candidate information : <a href="https://adrindia.org">Association for Democratic Reforms</a></string>
-    <string name="know_more">Know more ></string>
-    <string name="foreign_funding"><a href="https://www.filternet.in/2019-battle-for-economic-freedom-of-india/">Party is guilty of illegal foreign funding</a></string>
-    <string name="criminal_case">Serious crimes</string>
-    <string name="aged">Above 65 years</string>
-    <string name="not_graduate">Not graduate</string>
+    <string name="share_puzzle">मैं एक *जागरूक वोटर* हुँ और आप?
+        \nखेलिए वोटर जागरूकता पहेली और बनिए जागरूक वोटर।
+        \n\nखेलने के लिए, डाउनलोड करें: *जनता मालिक* ऐप</string>
 
-    <string name="share_puzzle">I am a *Smart Voter* and you?
-        \nPlay voter awareness quiz and become a Smart Voter
-        \n\nTo play, install: *Janta Malik* app</string>
+    <string name="department"><b>सरकारी विभाग</b></string>
+    <string name="vacancy"><b>खाली पद</b></string>
+    <string name="total"><b>कुल</b></string>
+    <string name="total_vacancy"><b>24 लाख</b></string>
+    <string name="teacher">स्कूली शिक्षक</string>
+    <string name="police_unemploy">पुलिस *</string>
+    <string name="teacher_vacancy">10.1 लाख</string>
+    <string name="police_vacancy">5.4 लाख</string>
+    <string name="railway">रेलवे</string>
+    <string name="railway_vacancy">2.4 लाख</string>
+    <string name="anganwadi_workers">आंगनवाड़ी कार्यकर्ता</string>
+    <string name="anganwadi_vacancy">2.2 लाख</string>
+    <string name="health_centres">स्वास्थ्य केंद्र</string>
+    <string name="health_centre_vacancy">1.5 लाख</string>
+    <string name="armed_forces">सशस्त्र बल</string>
+    <string name="paramilitary_forces">अर्धसैनिक बल</string>
+    <string name="postal_department">डाक विभाग</string>
+    <string name="aiims">एम्स अस्पताल</string>
+    <string name="higher_institutes">उच्च शिक्षण संस्थान</string>
+    <string name="courts">अदालतें</string>
 
-    <string name="department"><b>Government Department</b></string>
-    <string name="vacancy"><b>Vacancies</b></string>
-    <string name="total"><b>Total</b></string>
-    <string name="total_vacancy"><b>24 lakh</b></string>
-    <string name="police_unemploy">Police *</string>
-    <string name="teacher">School Teachers</string>
-    <string name="teacher_vacancy">10.1 lakh</string>
-    <string name="police_vacancy">5.4 lakh</string>
-    <string name="railway">Railway</string>
-    <string name="railway_vacancy">2.4 lakh</string>
-    <string name="anganwadi_workers">Anganwadi Workers</string>
-    <string name="anganwadi_vacancy">2.2 lakh</string>
-    <string name="health_centres">Health Centres</string>
-    <string name="health_centre_vacancy">1.5 lakh</string>
-    <string name="armed_forces">Armed Forces</string>
-    <string name="paramilitary_forces">Paramilitary Forces</string>
-    <string name="postal_department">Postal Department</string>
-    <string name="aiims">AIIMS</string>
-    <string name="higher_institutes">Higher education institutes</string>
-    <string name="courts">Courts</string>
+    <string name="toi_source">स्त्रोत:</string>
+    <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">द टाइम्स आॅफ इंडिया</a> *राज्य सरकार</string>
 
-    <string name="toi_source">Source:</string>
-    <string name="toi_link"><a href="https://timesofindia.indiatimes.com/india/central-and-state-governments-sit-over-24-lakh-vacancies-amid-debate-over-job-drought/articleshow/65274821.cms">The Times of India</a> *State govt</string>
-
-    <string name="indian_express">Indian Express</string>
+    <string name="indian_express">इंडियन एक्सप्रेस</string>
     <string name="jansatta">जनसत्ता</string>
-
     <string name="choose_your_language">अपनी भाषा चुनें</string>
-    <string name="contact_your_mp">Contact your MP</string>
-    <string name="contact_your_mla">Contact your MLA</string>
-    <string name="contact_your_parshad">Contact your Corporator</string>
 
-    <string name="law_under_research">The law related to this subject is under research</string>
-    <string name="tax_under_research">The tax spend on this subject is under research</string>
+    <string name="contact_your_mp">सांसद से सम्पर्क करें</string>
+    <string name="contact_your_mla">विधायक से सम्पर्क करें</string>
+    <string name="contact_your_parshad">पार्षद से सम्पर्क करें</string>
 
-    <string name="vidhan_sabha">Source: Constitution 7th schedule this is subject of Vidhan Sabha (State government).
-        \n\nYour public representative in Vidhan Sabha is elected MLA.</string>
-    <string name="lok_sabha">Source: Constitution 7th schedule this is subject of Loksabha (Center government).
-        \n\nYour public representative in Loksabha is elected MP.</string>
-    <string name="vidhansabha_n_loksabha_common">Source: Constitution 7th schedule this subject is common to Vidhan Sabha (State government) and Loksabha (Center government).
-        \n\nYour public representative in Vidhan Sabha is MLA and in Loksabha is MP.</string>
+    <string name="law_under_research">इससे जुडे़ कानून पर शोध जारी है</string>
+    <string name="tax_under_research">इस पर खर्च होने वाले टैक्स पर शोध जारी है</string>
 
-    <string name="corruption_law">Prevention of Corruption Law, Lokpal Bill</string>
+    <string name="vidhan_sabha">स्त्रोत: संविधान 7वीं अनुसूची के अनुसार यह विधानसभा (राज्य सरकार) का विषय है।
+        \n\nविधानसभा में आपका जन प्रतिनिधि चुना हुआ विधायक होता है।</string>
+    <string name="lok_sabha">स्त्रोत: संविधान 7वीं अनुसूची के अनुसार यह लोकसभा (केन्द्र सरकार) का विषय है।
+        \n\nलोकसभा में आपका जन प्रतिनिधि चुना हुआ सांसद होता है।</string>
+    <string name="vidhansabha_n_loksabha_common">स्त्रोत: संविधान 7वीं अनुसूची के अनुसार यह विधानसभा (राज्य सरकार) और लोकसभा (केन्द्र सरकार) दोनों का विषय है।
+        \n\nविधानसभा में आपका जन प्रतिनिधि चुना हुआ विधायक होता है। लोकसभा में आपका जन प्रतिनिधि चुना हुआ सांसद होता है।</string>
 
-    <string name="mla_missing">Information of MLA will be added soon</string>
-    <string name="parshad_missing">Information of Corporator will be added soon</string>
+    <string name="corruption_law">भ्रष्टाचार निरोधी कानून, लोकपाल कानून</string>
 
-    <string name="join_local_whatsapp_group">Join local Janta Malik Group</string>
+    <string name="mla_missing">विधायक की जानकारी जल्द ही जोड़ दी जाएगी</string>
+    <string name="parshad_missing">पार्षद की जानकारी जल्द ही जोड़ दी जाएगी</string>
 
-    <string name="name"><b>Item Name</b></string>
-    <string name="gst"><b>\tGST\t</b></string>
-    <string name="parle_g">Biscuits</string>
-    <string name="petrol">Petrol</string>
-    <string name="lpg">LPG gas cynlider</string>
-    <string name="dress">Clothes</string>
-    <string name="book">Books</string>
-    <string name="edible_oil">Edible oil</string>
-    <string name="hair_oil">Hair oil</string>
-    <string name="icecream">Ice cream</string>
-    <string name="soap">Soap</string>
-    <string name="toothpaste">Toothpaste</string>
-    <string name="milk">Packet of milk</string>
-    <string name="motorbike">Scooty, Motorcycle</string>
-    <string name="makeup_items">Beauty products</string>
+    <string name="join_local_whatsapp_group">स्थानीय जनता मालिक ग्रुप से जुड़ें</string>
+
+    <string name="name"><b>वस्तु का नाम</b></string>
+    <string name="gst"><b>\tजीएसटी\t</b></string>
+    <string name="parle_g">बिस्कुट</string>
+    <string name="petrol">पेट्रोल</string>
+    <string name="lpg">एलपीजी गैस सिलेण्डर</string>
+    <string name="dress">कपडे़</string>
+    <string name="book">किताबें</string>
+    <string name="edible_oil">खाने योग्य तेल</string>
+    <string name="hair_oil">बालों का तेल</string>
+    <string name="icecream">आइसक्रीम</string>
+    <string name="soap">साबुन</string>
+    <string name="toothpaste">टुथपेस्ट</string>
+    <string name="milk">दूध का पैकेट</string>
+    <string name="motorbike">स्कूटी, मोटरसाइकिल</string>
+    <string name="makeup_items">मेकअप की वस्तुऐं</string>
     <string name="website"><u>www.filternet.in</u></string>
     <string name="phone_number">+91-7570000787</string>
 
-    <string name="gst_tax">Singapore has only 7% GST, yet education and medicine is FREE.
-        \n<b>India has 5 GST rates (5, 12, 18, 28, 100) yet education and medicine is not FREE.</b>
+    <string name="gst_tax">सिंगापुर में सिर्फ 7% जीएसटी है फिर भी पढ़ाई और दवाई मुफ्त है।
+        \n<b>भारत में जीएसटी की 5 दरें हैं  (5, 12, 18, 28, 100) फिर भी पढ़ाई और दवाई मुफ्त नहीं है।</b>
         </string>
-    <string name="nudge">Tax rates are governed by the GST Council. Your MPs and MLAs are part of this council. Ask your MP/MLA to reduce GST to 7% and get relief.</string>
-    <string name="gst_faq">Your MP/MLA may be part of majority. They can influence govt.</string>
-    <string name="discount_nat_7_gst">At 7%</string>
+    <string name="nudge">टैक्स की दरें जीएसटी परिषद द्वारा निर्धारित की जाती है, जिसमें सांसद और विधायक ही निर्णय लेते हैं। अपने सांसद/विधायक से कहकर जीएसटी रेट 7% करवाएं और चार पैसे बचाएँ।</string>
+    <string name="gst_faq">आपके सांसद/विधायक बहुमत का हिस्सा हो सकते हैं। वे सरकार से यह मांग कर सकते हैं।</string>
+    <string name="discount_nat_7_gst">7% दर</string>
 
-    <string name="select_state_and_constituency">Select</string>
+    <string name="select_state_and_constituency">चुनें</string>
     <string name="no_selection">Select valid options</string>
     <string name="select_state">Select state</string>
-    <string name="spiritual">Spiritual</string>
-    <string name="spiritual_details">Spirituality is decreasing very fast.
-        \n\nPeople don\'t keep Geeta, Gangajal or drink Cow milk anymore. Very few understand the aim of life and how to reach it.
-        \n\nGood and bad deeds, heaven and hell, law of karma are considered a myth.
-        \n\nReal identification of varna(jaati) and its spiritual interpretation.
-        \n\nHigh-quality texts like Spiritual interpretation of Geeta written by enlightened Yogi\'s is unknown to most.</string>
-    <string name="geeta_shops">Above book has commentary from 3 Yogi\'s - Lahiri Mahashaya, Pandit Gopinath Kaviraj and Bhupendranath Sanyal. This book is found in select shops:
-        \n\n1. Vishwa Vidyalaya Prakashan, Chowk, Varanasi\nwww.vvpbooks.com\n(0542)2413741, 2413082
-        \n\n2. Manas Granthagar, Nr Sankat Mochan Mandir, Varanasi
-        \n\n3. Geeta Pustakalaya, BHU VT, Varanasi\n9151148962
-    </string>
+    <string name="spiritual">आध्यात्म</string>
+    <string name="spiritual_details">आध्यात्म तेजी से घट रहा है।
+        \n\nलोग अब गीता, गंगाजल या गाय के दूध का सेवन कम ही करते हैं। जीवन का उद्देश्य और उसे पाने के तरीके बहुत कम लोग जानते हैं।
+        \n\nपाप-पुण्य, स्वर्ग-नरक, कर्म और उसके फल के विधान - को मनगढ़ंत समझा जाता है।
+         \n\nवर्ण या जाति की आध्यात्मिक पहचान कैसे होती है।
+        \n\nयोगियों के अनुभव पर लिखी गई गीता की आध्यात्मिक व्याख्या जैसे उच्च-स्तर के साहित्य कम ही जाने जाते हैं।</string>
+    <string name="geeta_shops">यह किताब तीन योगियों - लाहिड़ी महाशय, पण्डित गोपीनाथ कविराज और श्री भूपेन्द्रनाथ सान्याल द्वारा लिखी गई है। यह किताब चुनी हुई दुकानों पर मिलती हैं:
+    \n\n1. विश्व विद्यालय प्रकाशन, चौक, वाराणसी\nwww.vvpbooks.com\n(0542)2413741, 2413082
+    \n\n2. मानस ग्रंथागार, संकट मोचन मंदिर के पास, वाराणसी
+        \n\n3. गीता पुस्तकालय, बीएचयू वीटी, वाराणसी\n9151148962</string>
 
-    <string name="girl_safety">Girls safety</string>
-    <string name="girl_safety_details">Minor girls rape is on rise. It is increasing year-on-year. In 2018, Rajasthan reported 6 girls rape every day.
-        \nPorn videos trigger 80% of rapes.
-        \nPornography is illegal in India since 2009 (section 67 of Information Technology Act).
-        \n\nHow many more rapes to happen before central govt implements this law to ban porn?
-        \n\nUttarakhand High Court gave strict orders, yet porn sites are freely available.
-        \n\nSee a rare but factful discussion on latest developments in
+    <string name="girl_safety">बच्चियों की सुरक्षा</string>
+    <string name="girl_safety_details">छोटी बच्चियों के बलात्कार बढ़ रहे हैं। साल-दर-साल बढ़ रहे हैं। 2018 में राजस्थान में रोज 6 बच्चियों का बलात्कार हुआ था।
+        \n80% बलात्कारों मे पोर्न साइट या अश्लील वीडियो कारण बनते हैं।
+        \nभारत में पोर्न साइट पर साल 2009 से कानूनी प्रतिबंध है। सूचना प्रोद्योगिकी की धारा 67 ।
+        \n\nकितने और बलात्कारों के बाद केंद्र सरकार इस कानून को लागू करेगी? जाने कब इन पर प्रतिबंध लगाएगी?
+        \n\nउत्तराखंड हाईकोर्ट के कड़े निर्देश के बावजूद पोर्न साइट धड़ल्ले से चल रही हैं।
+        \n\nइस विषय पर रोचक और तथ्यपूर्ण जानकारी
         \nhttps://youtu.be/GZ1OgMwyEBs</string>
 
-    <string name="ok">OK</string>
-    <string name="score"><b>Your score:</b>\n</string>
+    <string name="ok">ठीक है</string>
+    <string name="score"><b>आपका स्कोर:</b>\n</string>
 
-    <string name="no_language_support">This language is not available. You may translate it for your community.</string>
-    <string name="button_ok">OK</string>
+    <string name="no_language_support">यह भाषा अभी नहीं जोड़ी गई है। अाप इसमें अनुवाद जोड़कर इसे बोलनेवाले लोगों की मदद कर सकते हैं।</string>
+    <string name="button_ok">ठीक है</string>
 
-    <string name="option"><b>How we voted?</b></string>
-    <string name="puzzle_text">Awareness Puzzle</string>
+    <string name="option"><b>हमने कैसे चुना था?</b></string>
+    <string name="puzzle_text">जागरूकता पहेली</string>
 
-    <string name="constitution_text">Constitution ?</string>
-    <string name="constitution_1">My word is law</string>
-    <string name="constitution_2">We know Mahishmati\'s constitution,
-        \nwhat about India\'s ?</string>
+    <string name="constitution_text">संविधान ?</string>
+    <string name="constitution_1">मेरा वचन ही है शासन</string>
+    <string name="constitution_2">हमें माहिषमती का संविधान पता है,
+        \nलेकिन भारत का ?</string>
+    <string name="constitution_online">आनलाईन पढ़ें</string>
+    <string name="constitution_short"><font fgcolor='#214EF3'><u>लघु</u></font></string>
+    <string name="constitution_full"><font fgcolor='#214EF3'><u>पूर्ण</u></font></string>
 
-    <string name="constitution_online">Read Constitution Online</string>
-    <string name="constitution_short"><font fgcolor='#214EF3'><u>Short</u></font></string>
-    <string name="constitution_full"><font fgcolor='#214EF3'><u>Full</u></font></string>
+    <string name="constitution_buy">आज ही एक कापी मगाएं (सिर्फ ₹ 100/-)</string>
+    <string name="constitution_amazon"><font fgcolor='#214EF3'><u>अमेजन</u></font></string>
+    <string name="constitution_post"><font fgcolor='#214EF3'><u>भारतीय डाक</u></font></string>
 
-    <string name="constitution_buy">Order a copy today (Only Rs 100/-)</string>
-    <string name="constitution_amazon"><font fgcolor='#214EF3'><u>Amazon</u></font></string>
-    <string name="constitution_post"><font fgcolor='#214EF3'><u>Indian Post</u></font></string>
-
-    <string name="coi_youtube">Watch video to find out ways to use constitution to solve common problems.</string>
+    <string name="coi_youtube">इस वीडियो में जानिए कैसे संविधान आम समस्याओं का समाधान दिलाता है।</string>
 </resources>
+

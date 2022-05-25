@@ -20,18 +20,6 @@
             app:title="@string/title"
             app:titleTextColor="#ffffff">
 
-            <ImageButton
-                android:id="@+id/lanugage_button"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_gravity="end"
-                android:onClick="changeLanguage"
-                android:textStyle="bold"
-                android:textColor="@color/colorPrimary"
-                android:background="@drawable/language_icon"/>
-
             <Button
                 android:id="@+id/puzzle_button"
                 android:layout_width="60dp"

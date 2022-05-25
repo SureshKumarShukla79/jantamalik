@@ -62,9 +62,6 @@
             android:theme="@style/AppTheme_NoActionBar" />
         <activity
             android:name=".Puzzle" />
-        <activity
-            android:name=".Language"
-            android:theme="@style/AppTheme_NoActionBar"/>
 
         <receiver
             android:name=".Receiver"

@@ -1,23 +1,21 @@
 package in.filternet.jantamalik.Kendra;
 
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import androidx.preference.PreferenceManager;
 import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
-
-import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
 
 public class Infographics extends AppCompatActivity {
 
@@ -28,15 +26,6 @@ public class Infographics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-        String mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
-        if (mLanguage.equals(sLANGUAGE_HINDI)) {
-            MainActivity.setUI_Lang(this, "hi");
-        }
-
-        if (mLanguage.equals(sLANGUAGE_MARATHI)) {
-            MainActivity.setUI_Lang(this, "mr");
-        }
 
         setContentView(R.layout.infographics_kendra);
         LogEvents.send(this, "Kendra_Infographics");

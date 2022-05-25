@@ -1,5 +1,9 @@
 package in.filternet.jantamalik.Kendra;
 
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.sMP_AREA;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -24,59 +28,20 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.LogEvents;
-import in.filternet.jantamalik.LokSabha_Election_2019.Andaman_and_Nicobar_Islands;
-import in.filternet.jantamalik.LokSabha_Election_2019.Andhra_Pradesh;
-import in.filternet.jantamalik.LokSabha_Election_2019.Arunachal_Pradesh;
-import in.filternet.jantamalik.LokSabha_Election_2019.Assam;
-import in.filternet.jantamalik.LokSabha_Election_2019.Bihar;
-import in.filternet.jantamalik.LokSabha_Election_2019.Chandigarh;
-import in.filternet.jantamalik.LokSabha_Election_2019.Chhattisgarh;
-import in.filternet.jantamalik.LokSabha_Election_2019.Dadra_and_Nagar_Haveli;
-import in.filternet.jantamalik.LokSabha_Election_2019.Daman_and_Diu;
-import in.filternet.jantamalik.LokSabha_Election_2019.Goa;
-import in.filternet.jantamalik.LokSabha_Election_2019.Gujarat;
-import in.filternet.jantamalik.LokSabha_Election_2019.Haryana;
-import in.filternet.jantamalik.LokSabha_Election_2019.Himachal_Pradesh;
-import in.filternet.jantamalik.LokSabha_Election_2019.Jammu_and_Kashmir;
-import in.filternet.jantamalik.LokSabha_Election_2019.Jharkhand;
-import in.filternet.jantamalik.LokSabha_Election_2019.Karnataka;
-import in.filternet.jantamalik.LokSabha_Election_2019.Kerala;
-import in.filternet.jantamalik.LokSabha_Election_2019.Lakshadweep;
-import in.filternet.jantamalik.LokSabha_Election_2019.Madhya_Pradesh;
-import in.filternet.jantamalik.LokSabha_Election_2019.Maharashtra;
-import in.filternet.jantamalik.LokSabha_Election_2019.Manipur;
-import in.filternet.jantamalik.LokSabha_Election_2019.Meghalaya;
-import in.filternet.jantamalik.LokSabha_Election_2019.Mizoram;
-import in.filternet.jantamalik.LokSabha_Election_2019.Nagaland;
-import in.filternet.jantamalik.LokSabha_Election_2019.National_Capital_Territory_of_Delhi;
-import in.filternet.jantamalik.LokSabha_Election_2019.Odisha;
-import in.filternet.jantamalik.LokSabha_Election_2019.Puducherry;
-import in.filternet.jantamalik.LokSabha_Election_2019.Punjab;
-import in.filternet.jantamalik.LokSabha_Election_2019.Rajasthan;
-import in.filternet.jantamalik.LokSabha_Election_2019.Sikkim;
-import in.filternet.jantamalik.LokSabha_Election_2019.Tamil_Nadu;
-import in.filternet.jantamalik.LokSabha_Election_2019.Telangana;
-import in.filternet.jantamalik.LokSabha_Election_2019.Tripura;
 import in.filternet.jantamalik.LokSabha_Election_2019.Uttar_Pradesh;
-import in.filternet.jantamalik.LokSabha_Election_2019.Uttarakhand;
-import in.filternet.jantamalik.LokSabha_Election_2019.West_Bengal;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
-
-import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.sMP_AREA;
-import static in.filternet.jantamalik.MainActivity.sSTATE;
 
 public class VoteMP extends AppCompatActivity {
     static String TAG = "VoteMP";
@@ -90,9 +55,7 @@ public class VoteMP extends AppCompatActivity {
     private RelativeLayout ui_no_progress, ui_other_options;
     DataFilter.MP_info mp;
 
-    private Spinner spinnerState;
     private Spinner spinnerMP;
-    private ArrayAdapter<String> arrayAdapterState;
     private ArrayAdapter<String> arrayAdapterMP;
     private DataFilter dataFilter;
 
@@ -153,7 +116,6 @@ public class VoteMP extends AppCompatActivity {
         ui_source_adr = findViewById(R.id.source_adr);
         ui_source_adr.setMovementMethod(LinkMovementMethod.getInstance());
 
-        spinnerState = findViewById(R.id.state_spinner);
         spinnerMP = findViewById(R.id.MP_spinner);
 
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
@@ -163,64 +125,24 @@ public class VoteMP extends AppCompatActivity {
                 back_button(view);
             }
         });
-        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
 
-        String State = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
-        String MP = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
+        String MP = mSharedPref.getString(sMP_AREA, "");
 
         // Populating GUI
         dataFilter = new DataFilter();
         // Load defaults
-        arrayAdapterState = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getStates(mLanguage));
-        arrayAdapterState.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerState.setAdapter(arrayAdapterState);
-
-        int spinnerPosition = arrayAdapterState.getPosition(State);
-        spinnerState.setSelection(spinnerPosition);
-        //Log.e(TAG, "state def: " + State);
 
         //populating MP Area
-        arrayAdapterMP = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
+        arrayAdapterMP = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas());
         arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMP.setAdapter(arrayAdapterMP);
 
-        spinnerPosition = arrayAdapterMP.getPosition(MP);
+        int spinnerPosition = arrayAdapterMP.getPosition(MP);
         spinnerMP.setSelection(spinnerPosition);
         //Log.e(TAG, "MP def: " + MP);
         // defaults over
 
         // set for dynamic handling
-        spinnerState.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String State = spinnerState.getItemAtPosition(spinnerState.getSelectedItemPosition()).toString();
-                //Log.e(TAG, "spin state : " + i + " " + l + " " + State);
-                editor.putString(sSTATE, State).commit();
-
-                String tmp = State;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
-                    String state = MainActivity.get_state(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    tmp = state;
-                }
-                tmp = tmp.replace(" ", "_");
-                tmp = tmp.replace("&", "and");
-                LogEvents.sendWithValue(getBaseContext(), sSTATE, tmp);
-
-                // Reload the state MP areas
-                arrayAdapterMP = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas(mLanguage, State));
-                arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerMP.setAdapter(arrayAdapterMP);
-
-                String MP = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
-                int spinnerPosition = arrayAdapterMP.getPosition(MP);
-                spinnerMP.setSelection(spinnerPosition);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-            }
-        });
-
         //spinner constituency click handler
         spinnerMP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -230,10 +152,8 @@ public class VoteMP extends AppCompatActivity {
                 editor.putString(sMP_AREA, MPArea).commit();
 
                 String tmp = MPArea;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {// Firebase needs English, cant handle Hindi
-                    String area = MainActivity.get_MP_area(getBaseContext(), MainActivity.sLANGUAGE_ENGLISH);
-                    tmp = area;
-                }
+                String area = MainActivity.get_MP_area(getBaseContext());
+                tmp = area;
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
                 LogEvents.sendWithValue(getBaseContext(), sMP_AREA, tmp);
@@ -282,7 +202,7 @@ public class VoteMP extends AppCompatActivity {
     @SuppressLint("RestrictedApi")
     private void updateMP() {
         DataFilter dataFilter = new DataFilter();
-        String MPArea = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
+        String MPArea = mSharedPref.getString(sMP_AREA, "");
         //mp = dataFilter.new MP_info();
         mp = dataFilter.getMPInfo(this, mLanguage, MPArea);
 
@@ -468,24 +388,18 @@ public class VoteMP extends AppCompatActivity {
         String whatsapp_group = "";
 
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
-        String state = shared_pref.getString(sSTATE, MainActivity.DEFAULT_STATE);
-        String area = shared_pref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
+        String area = shared_pref.getString(sMP_AREA, "");
 
         // Get English version and then WhatsApp group link
-        String language = shared_pref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI);
-        if(language.equals(MainActivity.sLANGUAGE_HINDI) || language.equals(MainActivity.sLANGUAGE_MARATHI)) {
-            state = MainActivity.get_state(context, MainActivity.sLANGUAGE_ENGLISH);
-            area = MainActivity.get_MP_area(context, MainActivity.sLANGUAGE_ENGLISH);
-        }
+        area = MainActivity.get_MP_area(context);
 
         //Log.e(TAG, state + " " + area);
 
         for (int i = 0; i < LokSabhaGroups.all_groups.length; i++) {
-            if (state.equals(LokSabhaGroups.all_groups[i][0])
-                    && area.equals(LokSabhaGroups.all_groups[i][1])) {
-                whatsapp_group = LokSabhaGroups.all_groups[i][2];
-            } else
-                continue;
+            if (area.equals(LokSabhaGroups.all_groups[i][0])) {
+                whatsapp_group = LokSabhaGroups.all_groups[i][1];
+                break;
+            }
         }
         //Log.e(TAG, tmp);
 
@@ -569,381 +483,11 @@ public class VoteMP extends AppCompatActivity {
     }
 
     private String[][] get_green_bucket() {
-        String[][] bucket = new String[0][];
-
-        String state = mSharedPref.getString(sSTATE, null);
-        switch (state) {
-            case "Andaman & Nicobar Islands":
-            case "अण्डमान और निकोबार द्वीपसमूह":
-                bucket = Andaman_and_Nicobar_Islands.green_bucket;
-                break;
-
-            case "Andhra Pradesh":
-            case "आन्ध्र प्रदेश":
-                bucket = Andhra_Pradesh.green_bucket;
-                break;
-
-            case "Arunachal Pradesh":
-            case "अरुणाचल प्रदेश":
-                bucket = Arunachal_Pradesh.green_bucket;
-                break;
-
-            case "Assam":
-            case "असम":
-                bucket = Assam.green_bucket;
-                break;
-
-            case "Bihar":
-            case "बिहार":
-                bucket = Bihar.green_bucket;
-                break;
-
-            case "Chandigarh":
-            case "चण्डीगढ़":
-                bucket = Chandigarh.green_bucket;
-                break;
-
-            case "Chhattisgarh":
-            case "छत्तीसगढ़":
-                bucket = Chhattisgarh.green_bucket;
-                break;
-
-            case "Dadra & Nagar Haveli":
-            case "दादरा और नगर हवेली":
-                bucket = Dadra_and_Nagar_Haveli.green_bucket;
-                break;
-
-            case "Daman & Diu":
-            case "दमन और दीव":
-                bucket = Daman_and_Diu.green_bucket;
-                break;
-
-            case "Goa":
-            case "गोवा":
-                bucket = Goa.green_bucket;
-                break;
-
-            case "Gujarat":
-            case "गुजरात":
-                bucket = Gujarat.green_bucket;
-                break;
-
-            case "Haryana":
-            case "हरियाणा":
-                bucket = Haryana.green_bucket;
-                break;
-
-            case "Himachal Pradesh":
-            case "हिमाचल प्रदेश":
-                bucket = Himachal_Pradesh.green_bucket;
-                break;
-
-            case "Jammu & Kashmir":
-            case "जम्मू और कश्मीर":
-                bucket = Jammu_and_Kashmir.green_bucket;
-                break;
-
-            case "Jharkhand":
-            case "झारखण्ड":
-                bucket = Jharkhand.green_bucket;
-                break;
-
-            case "Karnataka":
-            case "कर्नाटक":
-                bucket = Karnataka.green_bucket;
-                break;
-
-            case "Kerala":
-            case "केरल":
-                bucket = Kerala.green_bucket;
-                break;
-
-            case "Lakshadweep":
-            case "लक्षद्वीप":
-                bucket = Lakshadweep.green_bucket;
-                break;
-
-            case "Madhya Pradesh":
-            case "मध्य प्रदेश":
-                bucket = Madhya_Pradesh.green_bucket;
-                break;
-
-            case "Maharashtra":
-            case "महाराष्ट्र":
-                bucket = Maharashtra.green_bucket;
-                break;
-
-            case "Manipur":
-            case "मणिपुर":
-                bucket = Manipur.green_bucket;
-                break;
-
-            case "Meghalaya":
-            case "मेघालय":
-                bucket = Meghalaya.green_bucket;
-                break;
-
-            case "Mizoram":
-            case "मिज़ोरम":
-                bucket = Mizoram.green_bucket;
-                break;
-
-            case "Nagaland":
-            case "नागालैण्ड":
-                bucket = Nagaland.green_bucket;
-                break;
-
-            case "National Capital Territory of Delhi":
-            case "दिल्ली":
-                bucket = National_Capital_Territory_of_Delhi.green_bucket;
-                break;
-
-            case "Odisha":
-            case "ओडिशा":
-                bucket = Odisha.green_bucket;
-                break;
-
-            case "Puducherry":
-            case "पुदुच्चेरी":
-                bucket = Puducherry.green_bucket;
-                break;
-
-            case "Punjab":
-            case "पंजाब":
-                bucket = Punjab.green_bucket;
-                break;
-
-            case "Rajasthan":
-            case "राजस्थान":
-                bucket = Rajasthan.green_bucket;
-                break;
-
-            case "Sikkim":
-            case "सिक्किम":
-                bucket = Sikkim.green_bucket;
-                break;
-
-            case "Tamil Nadu":
-            case "तमिल नाडु":
-                bucket = Tamil_Nadu.green_bucket;
-                break;
-
-            case "Telangana":
-            case "तेलंगाना":
-                bucket = Telangana.green_bucket;
-                break;
-
-            case "Tripura":
-            case "त्रिपुरा":
-                bucket = Tripura.green_bucket;
-                break;
-
-            case "Uttar Pradesh":
-            case "उत्तर प्रदेश":
-                bucket = Uttar_Pradesh.green_bucket;
-                break;
-
-            case "Uttarakhand":
-            case "उत्तराखण्ड":
-                bucket = Uttarakhand.green_bucket;
-                break;
-
-            case "West Bengal":
-            case "पश्चिम बंगाल":
-                bucket = West_Bengal.green_bucket;
-                break;
-        }
-
-        return bucket;
+        return Uttar_Pradesh.green_bucket;
     }
 
     private String[][] get_red_bucket() {
-        String[][] bucket = new String[0][];
-
-        String state = mSharedPref.getString(sSTATE, null);
-        switch (state) {
-            case "Andaman & Nicobar Islands":
-            case "अण्डमान और निकोबार द्वीपसमूह":
-                bucket = Andaman_and_Nicobar_Islands.red_bucket;
-                break;
-
-            case "Andhra Pradesh":
-            case "आन्ध्र प्रदेश":
-                bucket = Andhra_Pradesh.red_bucket;
-                break;
-
-            case "Arunachal Pradesh":
-            case "अरुणाचल प्रदेश":
-                bucket = Arunachal_Pradesh.red_bucket;
-                break;
-
-            case "Assam":
-            case "असम":
-                bucket = Assam.red_bucket;
-                break;
-
-            case "Bihar":
-            case "बिहार":
-                bucket = Bihar.red_bucket;
-                break;
-
-            case "Chandigarh":
-            case "चण्डीगढ़":
-                bucket = Chandigarh.red_bucket;
-                break;
-
-            case "Chhattisgarh":
-            case "छत्तीसगढ़":
-                bucket = Chhattisgarh.red_bucket;
-                break;
-
-            case "Dadra & Nagar Haveli":
-            case "दादरा और नगर हवेली":
-                bucket = Dadra_and_Nagar_Haveli.red_bucket;
-                break;
-
-            case "Daman & Diu":
-            case "दमन और दीव":
-                bucket = Daman_and_Diu.red_bucket;
-                break;
-
-            case "Goa":
-            case "गोवा":
-                bucket = Goa.red_bucket;
-                break;
-
-            case "Gujarat":
-            case "गुजरात":
-                bucket = Gujarat.red_bucket;
-                break;
-
-            case "Haryana":
-            case "हरियाणा":
-                bucket = Haryana.red_bucket;
-                break;
-
-            case "Himachal Pradesh":
-            case "हिमाचल प्रदेश":
-                bucket = Himachal_Pradesh.red_bucket;
-                break;
-
-            case "Jammu & Kashmir":
-            case "जम्मू और कश्मीर":
-                bucket = Jammu_and_Kashmir.red_bucket;
-                break;
-
-            case "Jharkhand":
-            case "झारखण्ड":
-                bucket = Jharkhand.red_bucket;
-                break;
-
-            case "Karnataka":
-            case "कर्नाटक":
-                bucket = Karnataka.red_bucket;
-                break;
-
-            case "Kerala":
-            case "केरल":
-                bucket = Kerala.red_bucket;
-                break;
-
-            case "Lakshadweep":
-            case "लक्षद्वीप":
-                bucket = Lakshadweep.red_bucket;
-                break;
-
-            case "Madhya Pradesh":
-            case "मध्य प्रदेश":
-                bucket = Madhya_Pradesh.red_bucket;
-                break;
-
-            case "Maharashtra":
-            case "महाराष्ट्र":
-                bucket = Maharashtra.red_bucket;
-                break;
-
-            case "Manipur":
-            case "मणिपुर":
-                bucket = Manipur.red_bucket;
-                break;
-
-            case "Meghalaya":
-            case "मेघालय":
-                bucket = Meghalaya.red_bucket;
-                break;
-
-            case "Mizoram":
-            case "मिज़ोरम":
-                bucket = Mizoram.red_bucket;
-                break;
-
-            case "Nagaland":
-            case "नागालैण्ड":
-                bucket = Nagaland.red_bucket;
-                break;
-
-            case "National Capital Territory of Delhi":
-            case "दिल्ली":
-                bucket = National_Capital_Territory_of_Delhi.red_bucket;
-                break;
-
-            case "Odisha":
-            case "ओडिशा":
-                bucket = Odisha.red_bucket;
-                break;
-
-            case "Puducherry":
-            case "पुदुच्चेरी":
-                bucket = Puducherry.red_bucket;
-                break;
-
-            case "Punjab":
-            case "पंजाब":
-                bucket = Punjab.red_bucket;
-                break;
-
-            case "Rajasthan":
-            case "राजस्थान":
-                bucket = Rajasthan.red_bucket;
-                break;
-
-            case "Sikkim":
-            case "सिक्किम":
-                bucket = Sikkim.red_bucket;
-                break;
-
-            case "Tamil Nadu":
-            case "तमिल नाडु":
-                bucket = Tamil_Nadu.red_bucket;
-                break;
-
-            case "Telangana":
-            case "तेलंगाना":
-                bucket = Telangana.red_bucket;
-                break;
-
-            case "Tripura":
-            case "त्रिपुरा":
-                bucket = Tripura.red_bucket;
-                break;
-
-            case "Uttar Pradesh":
-            case "उत्तर प्रदेश":
-                bucket = Uttar_Pradesh.red_bucket;
-                break;
-
-            case "Uttarakhand":
-            case "उत्तराखण्ड":
-                bucket = Uttarakhand.red_bucket;
-                break;
-
-            case "West Bengal":
-            case "पश्चिम बंगाल":
-                bucket = West_Bengal.red_bucket;
-                break;
-        }
-
-        return bucket;
+        return Uttar_Pradesh.red_bucket;
     }
 
     private void load_good_candidate(int total_candidate, String[][] bucket) {
@@ -983,21 +527,19 @@ public class VoteMP extends AppCompatActivity {
                 if(j==2) {
                     text.setClickable(true);
                     text.setMovementMethod(LinkMovementMethod.getInstance());
-                    text.setPadding(5,5,5,5);
+                    text.setPadding(5, 5, 5, 5);
                     text.setLinkTextColor(Color.BLUE);
                     text.setGravity(Gravity.CENTER);
                     text.setBackgroundResource(R.drawable.table_border_style);
                     text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
 
                     String assets = bucket[i][j + 2];
-                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-                        if (assets.contains("Lac"))
-                            assets = assets.replace("Lac", " लाख");
-                        else if (assets.contains("Crore"))
-                            assets = assets.replace("Crore", " करोड़");
-                    }
+                    if (assets.contains("Lac"))
+                        assets = assets.replace("Lac", " लाख");
+                    else if (assets.contains("Crore"))
+                        assets = assets.replace("Crore", " करोड़");
 
-                    String url_link = assets + "<a href='"+ bucket[i][j + 3] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
+                    String url_link = assets + "<a href='" + bucket[i][j + 3] + "'> " + getString(R.string.know_more) + "</a>";// IMP: Don't lead space on left/right side of url, that doesn't work
                     //Log.e(TAG, "Link: " + url_link);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) { //API 24
                         text.setText(Html.fromHtml(url_link, Html.FROM_HTML_MODE_LEGACY));
@@ -1005,12 +547,8 @@ public class VoteMP extends AppCompatActivity {
                         text.setText(Issues.for_lower_version(url_link));
                     }
                 } else {
-                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-                        int j_hi = j + 6;
-                        text.setText(bucket[i][j_hi + 2]);
-                    } else {
-                        text.setText(bucket[i][j + 2]);
-                    }
+                    int j_hi = j + 6;
+                    text.setText(bucket[i][j_hi + 2]);
                     make_text_attractive(text, R.drawable.table_border_style);
                 }
                 row.addView(text);
@@ -1064,12 +602,8 @@ public class VoteMP extends AppCompatActivity {
                             break;
                     }
                 } else {
-                    if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-                        int j_hi = j + 5;
-                        text.setText(bucket[i][j_hi + 2]);
-                    } else {
-                        text.setText(bucket[i][j + 2]);
-                    }
+                    int j_hi = j + 5;
+                    text.setText(bucket[i][j_hi + 2]);
                 }
 
                 make_text_attractive(text, R.drawable.table_border_red);
@@ -1082,22 +616,17 @@ public class VoteMP extends AppCompatActivity {
         }
     }
 
-    private int get_starting_index(String[][] bucket){
+    private int get_starting_index(String[][] bucket) {
         int index = 0, area_column = 1;
-        String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
-        String constituency = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
+        String constituency = mSharedPref.getString(sMP_AREA, "");
 
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-            for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state.equals(MPdata.all_MPs[i][3]) && constituency.equals(MPdata.all_MPs[i][4])){
-                    state = MPdata.all_MPs[i][0];
-                    constituency = MPdata.all_MPs[i][1];
-                }
+        for (int i = 0; i < MPdata.all_MPs.length; i++) {
+            if (constituency.equals(MPdata.all_MPs[i][2])) {
+                constituency = MPdata.all_MPs[i][0];
             }
-            //area_column = 7;
         }
 
-        for (int i=0; i<bucket.length; i++) {
+        for (int i = 0; i < bucket.length; i++) {
             String area_name = bucket[i][area_column];
             if (constituency.equals(area_name))
                 return i;
@@ -1121,17 +650,12 @@ public class VoteMP extends AppCompatActivity {
 
     private int num_of_candidate(String[][] bucket) {
         int num = 0, area_column = 1;
-        String state = mSharedPref.getString(sSTATE, MainActivity.DEFAULT_STATE);
-        String constituency = mSharedPref.getString(sMP_AREA, MainActivity.DEFAULT_MP);
+        String constituency = mSharedPref.getString(sMP_AREA, "");
 
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-            for(int i=0; i< MPdata.all_MPs.length; i++){
-                if (state.equals(MPdata.all_MPs[i][3]) && constituency.equals(MPdata.all_MPs[i][4])) {
-                    state = MPdata.all_MPs[i][0];
-                    constituency = MPdata.all_MPs[i][1];
-                }
+        for (int i = 0; i < MPdata.all_MPs.length; i++) {
+            if (constituency.equals(MPdata.all_MPs[i][4])) {
+                constituency = MPdata.all_MPs[i][1];
             }
-            //area_column = 7;
         }
 
         for (String[] i : bucket) {

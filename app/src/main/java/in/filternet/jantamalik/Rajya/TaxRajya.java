@@ -1,22 +1,22 @@
 package in.filternet.jantamalik.Rajya;
 
 
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import androidx.preference.PreferenceManager;
 import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
-
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 
 public class TaxRajya extends AppCompatActivity {
 
@@ -37,15 +37,6 @@ public class TaxRajya extends AppCompatActivity {
         }
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-        String current_language = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, null);
-        if (current_language != null && current_language.equals(MainActivity.sLANGUAGE_HINDI)) {
-            MainActivity.setUI_Lang(this, "hi");
-        }
-
-        if (current_language != null && current_language.equals(MainActivity.sLANGUAGE_MARATHI)) {
-            MainActivity.setUI_Lang(this, "mr");
-        }
 
         setContentView(layoutResID);
 

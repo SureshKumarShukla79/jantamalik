@@ -27,7 +27,7 @@ import java.util.Random;
 
 public class Puzzle extends Activity {
 
-    private String TAG = "Puzzle";
+    private final String TAG = "Puzzle";
 
     public final static String bQUE_ = "Que_";
 
@@ -49,20 +49,6 @@ public class Puzzle extends Activity {
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
         mEditor = mSharedPref.edit();
-
-        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, null); // first launch
-        if (mLanguage == null){
-            mEditor.putString(MainActivity.sUSER_CURRENT_LANGUAGE, MainActivity.sLANGUAGE_HINDI).commit();
-            mLanguage = MainActivity.sLANGUAGE_HINDI; // default - Hindi 58 crore. English 2 crore.
-        }
-
-        if(mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            MainActivity.setUI_Lang(this, "hi");
-        }
-
-        if(mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-            MainActivity.setUI_Lang(this, "mr");
-        }
 
         setContentView(R.layout.puzzle);
 
@@ -94,12 +80,7 @@ public class Puzzle extends Activity {
         }
 
         ui_question_no.setText(String.valueOf(++number));
-
-        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
-            ui_question.setText(Puzzle_Ques.questions[question_num][0]);
-        } else {
-            ui_question.setText(Puzzle_Ques.questions[question_num][6]);
-        }
+        ui_question.setText(Puzzle_Ques.questions[question_num][6]);
 
         //Create a list of radio buttons. Then, choose a radio button, randomly and place right/wrong options on it
         ArrayList<RadioButton> option = new ArrayList<>();
@@ -110,36 +91,20 @@ public class Puzzle extends Activity {
 
         //Choose random radio button and place right/wrong options on it
         int index = get_index(option.size());
-        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][1]);  //Place right answer on that index
-        } else {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][7]);  //Place right answer on that index
-        }
+        option.get(index).setText(Puzzle_Ques.questions[question_num][7]);  //Place right answer on that index
         option.remove(index);                                               //Remove the element of that index
         /** Removing the full option, ensures that even if random number repeats, it will go to another slot. **/
 
         index = get_index(option.size());
-        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][2]);
-        } else {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][8]);
-        }
+        option.get(index).setText(Puzzle_Ques.questions[question_num][8]);
         option.remove(index);
 
         index = get_index(option.size());
-        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][3]);
-        } else {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][9]);
-        }
+        option.get(index).setText(Puzzle_Ques.questions[question_num][9]);
         option.remove(index);
 
         index = get_index(option.size());
-        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][4]);
-        } else {
-            option.get(index).setText(Puzzle_Ques.questions[question_num][10]);
-        }
+        option.get(index).setText(Puzzle_Ques.questions[question_num][10]);
         option.remove(index);
     }
 
@@ -289,17 +254,12 @@ public class Puzzle extends Activity {
 
     public void onclick_check_answer(View view) {
         String correct_answer;
-        if(mLanguage.equals(MainActivity.sLANGUAGE_ENGLISH)) {
-            correct_answer = Puzzle_Ques.questions[question_num][1];
-            ui_detail.setText(Puzzle_Ques.questions[question_num][5]);
-        } else {
-            correct_answer = Puzzle_Ques.questions[question_num][7];
-            ui_detail.setText(Puzzle_Ques.questions[question_num][11]);
-        }
+        correct_answer = Puzzle_Ques.questions[question_num][7];
+        ui_detail.setText(Puzzle_Ques.questions[question_num][11]);
 
-        LogEvents.send(this, "Q" + (question_num+1));
+        LogEvents.send(this, "Q" + (question_num + 1));
 
-        boolean checked =  ((RadioButton) view).isChecked();
+        boolean checked = ((RadioButton) view).isChecked();
 
         // IMP - On Android 9 Samsung (Monika) phone, options had a trailing space. This made
         // length 4 and it didn't match Hindi(Yes). Very odd but that what happened. So instead of equals using contains.

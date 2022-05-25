@@ -1,6 +1,9 @@
 package in.filternet.jantamalik.Kendra;
 
 
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -17,9 +20,6 @@ import in.filternet.jantamalik.LogEvents;
 import in.filternet.jantamalik.MainActivity;
 import in.filternet.jantamalik.R;
 
-import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-
 public class DutiesKendra extends AppCompatActivity {
 
     private final static String TAG ="DutiesKendra";
@@ -33,15 +33,6 @@ public class DutiesKendra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, null);
-        if (mLanguage != null && mLanguage.equals(MainActivity.sLANGUAGE_HINDI)) {
-            MainActivity.setUI_Lang(this, "hi");
-        }
-
-        if (mLanguage != null && mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)) {
-            MainActivity.setUI_Lang(this, "mr");
-        }
 
         setContentView(R.layout.duties_kendra);
         LogEvents.send(this, TAG);
@@ -64,12 +55,7 @@ public class DutiesKendra extends AppCompatActivity {
 
     public void onclick_source(View view) {
         LogEvents.send(this, "7th_schedule");
-
-        String url = Constants.COI_English_short;
-        if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-            url = Constants.COI_Hindi_short;
-        }
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.COI_Hindi));
         startActivity(intent);
     }
 }

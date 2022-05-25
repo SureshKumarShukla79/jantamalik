@@ -1,5 +1,8 @@
 package in.filternet.jantamalik;
 
+import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
+import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,11 +22,6 @@ import androidx.preference.PreferenceManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
-import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_HINDI;
-import static in.filternet.jantamalik.MainActivity.sLANGUAGE_MARATHI;
-
 public class IssueFragment extends Fragment {
 
     private final static String TAG = "Issue";
@@ -37,16 +35,6 @@ public class IssueFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, final Bundle savedInstanceState) {
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity());
-
-        mLanguage = mSharedPref.getString(MainActivity.sUSER_CURRENT_LANGUAGE, sLANGUAGE_HINDI);
-        if (mLanguage.equals(sLANGUAGE_HINDI)) {
-            MainActivity.setUI_Lang(getActivity(), "hi");
-        }
-
-        if (mLanguage.equals(sLANGUAGE_MARATHI)) {
-            MainActivity.setUI_Lang(getActivity(), "mr");
-        }
-
         view = inflater.inflate(R.layout.issues, container, false);
 
         LogEvents.send(getContext(), TAG);
@@ -68,10 +56,7 @@ public class IssueFragment extends Fragment {
             public void onClick(View view) {
                 LogEvents.send(view.getContext(), "source_app");
 
-                String url = Constants.COI_English_full;
-                if (mLanguage.equals(MainActivity.sLANGUAGE_HINDI) || mLanguage.equals(MainActivity.sLANGUAGE_MARATHI)){
-                    url = Constants.COI_Hindi_full;
-                }
+                String url = Constants.COI_Hindi;
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
             }
