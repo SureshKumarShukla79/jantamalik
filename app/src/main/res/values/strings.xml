@@ -12,7 +12,7 @@
     <string name="Center_Subjects">सांसद की जिम्मेदारियाँ</string>
     <string name="state_subjects">विधायक की जिम्मेदारियाँ</string>
 
-    <string name="Issues"><b>मुख्य मुद्दे</b></string>
+    <string name="Issues"><b>पंचायत/शहर</b></string>
     <string name="Money"><b>हमारा टैक्स का पैसा</b></string>
     <string name="Vote"><b>हमारा जन प्रतिनिधि</b></string>
 
@@ -163,14 +163,14 @@
     <string name="notification_update_hi"></string>
     <string name="notification_update_mr"></string>
 
-    <string name="kendra_budget_simple">27 लाख करोड़</string>
-    <string name="kendra_budget">27,86,350 करोड़</string>
+    <string name="kendra_budget_simple">39 लाख करोड़</string>
+    <string name="kendra_budget">39 लाख करोड़</string>
 
-    <string name="rajya_budget">\??? करोड़</string>
+    <string name="rajya_budget">\6 लाख करोड़</string>
 
     <string name="list_source_MP">सांसद निम्न विषयों पर कानून बनाता है:</string>
     <string name="list_source_MLA">विधायक निम्न विषयों पर कानून बनाता है:</string>
-    <string name="source_responsibility_MP_MLA"><b>स्रोत</b> - <font fgcolor='#214EF3'><u>संविधान - लघु</u></font></string>
+    <string name="source_responsibility_MP_MLA"><b>स्रोत</b> - <font fgcolor='#214EF3'><u>संविधान</u></font></string>
 
     <string name="source"><b>स्रोत</b> - <font fgcolor='#214EF3'><u>संविधान</u></font></string>
     <string name="disclaimer"><b>स्पष्टीकरण</b>: यह ऐप किसी सरकारी विभाग से नहीं जुड़ी है।</string>

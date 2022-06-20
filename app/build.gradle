@@ -11,12 +11,12 @@ android {
         targetSdkVersion 32
 
         // devel version
-        versionCode 220101
-        versionName "devel"
+        //versionCode 220101
+        //versionName "devel"
 
         // Production
-        //versionCode 2200520  // silly mistake extra Zero after Year.
-        //versionName "22.05.20"
+        versionCode 2200618  // silly mistake extra Zero after Year.
+        versionName "22.06.18"
     }
     buildTypes {
         release {
@@ -42,5 +42,5 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
-    implementation 'org.jsoup:jsoup:1.13.1' // Downloaded library for app version fetch
+    implementation 'org.jsoup:jsoup:1.15.1' // gets Downloaded from maven repo
 }

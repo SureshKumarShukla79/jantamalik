@@ -69,25 +69,22 @@ public class DataFilter {
         //  Log.e(TAG,lang+" "+MPArea);
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
 
-        int state_column = 0, area_column = 1, name_column = 2;
-        int phone_column = 6, phone2_column = 7, phone3_column = 8;
-        int email_column = 9, email2_column = 10;
-        int address_column = 11;
+        int area = 0, name = 1;
+        int phone = 2, phone2 = 3, phone3 = 4;
+        int email = 5, email2 = 6;
+        int address = 7;
 
         MP_info mp_info = new MP_info();
-        state_column = 3;
-        area_column = 4;
-        name_column = 5;
 
         for (int i = 0; i < MPdata.all_MPs.length; i++) {
-            if (MPArea.equals(MPdata.all_MPs[i][area_column])) {
-                mp_info.name = MPdata.all_MPs[i][name_column];
-                mp_info.phone = MPdata.all_MPs[i][phone_column];
-                mp_info.phone2 = MPdata.all_MPs[i][phone2_column];
-                mp_info.phone3 = MPdata.all_MPs[i][phone3_column];
-                mp_info.email = MPdata.all_MPs[i][email_column];
-                mp_info.email2 = MPdata.all_MPs[i][email2_column];
-                mp_info.address = MPdata.all_MPs[i][address_column];
+            if (MPArea.equals(MPdata.all_MPs[i][area])) {
+                mp_info.name = MPdata.all_MPs[i][name];
+                mp_info.phone = MPdata.all_MPs[i][phone];
+                mp_info.phone2 = MPdata.all_MPs[i][phone2];
+                mp_info.phone3 = MPdata.all_MPs[i][phone3];
+                mp_info.email = MPdata.all_MPs[i][email];
+                mp_info.email2 = MPdata.all_MPs[i][email2];
+                mp_info.address = MPdata.all_MPs[i][address];
             } else
                 continue;
         }
@@ -138,29 +135,28 @@ public class DataFilter {
     public MP_info getMLAInfo(String mla_area) {
         //Log.e(TAG,lang + ", " + state + ", "+ mla_area);
 
-        int area_column = 2, name_column = 3;
-        int phone_column = 4, phone2_column = 5, phone3_column = 6;
-        int email_column = 7, email2_column = 8;
-        int address_column = 9;
+        int area = 2, name = 3;
+        int phone = 4, phone2 = 5, phone3 = 6;
+        int email = 7, email2 = 8;
+        int address = 9;
 
         MP_info mla_info = new MP_info();
 
         String[][] infos = Uttar_Pradesh.MLAs;
 
         for (String[] info : infos) {
-            if (mla_area.equals(info[area_column])) {
-                mla_info.name = info[name_column];
-                mla_info.phone = info[phone_column];
-                mla_info.phone2 = info[phone2_column];
-                mla_info.phone3 = info[phone3_column];
-                mla_info.email = info[email_column];
-                mla_info.email2 = info[email2_column];
-                mla_info.address = info[address_column];
+            if (mla_area.equals(info[area])) {
+                mla_info.name = info[name];
+                mla_info.phone = info[phone];
+                mla_info.phone2 = info[phone2];
+                mla_info.phone3 = info[phone3];
+                mla_info.email = info[email];
+                mla_info.email2 = info[email2];
+                mla_info.address = info[address];
                 break;
             }
         }
         //Log.e(TAG, mla_info.name+" "+mla_info.email+" "+mla_info.phone+" "+mla_info.address);
-
         return mla_info;
     }
 

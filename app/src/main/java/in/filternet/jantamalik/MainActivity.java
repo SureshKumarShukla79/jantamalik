@@ -1,6 +1,5 @@
 package in.filternet.jantamalik;
 
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
@@ -33,6 +32,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String bAPP_UPDATE_LATER = "App_Update_Later";   //boolean
 
     public static final String TAB_NUMBER = "tab_number";
-    public static final int TAB_ISSUE = 0, TAB_KENDRA = 1, TAB_RAJYA = 2;
+    public static final int TAB_243 = 0, TAB_KENDRA = 2, TAB_RAJYA = 1;
 
     public static final String SELECT_MP = "क्षेत्र चुनें";
     public static final String SELECT_MLA = "क्षेत्र चुनें";
@@ -118,23 +118,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.viewPager_main);
         toolbar = findViewById(R.id.appbar);
 
-        // Fresh Install, Save SharedPreferences
-        String MP = mSharedPref.getString(sMP_AREA, "");
-        String MLA = mSharedPref.getString(sMLA_AREA, "");
-        //Log.e(TAG, "Def : " + State + " " + MP + " " + MLA );
-
         boolean user_agree = mSharedPref.getBoolean(bUSER_AGREE, false);
-        if (user_agree) {
-            mEditor.putString(MainActivity.sMP_AREA, "").commit();
-            mEditor.putString(MainActivity.sMLA_AREA, "").commit();
-            ask_user_preference();
-        } else {
-            String mp_area = MainActivity.get_MP_area(this);
-            String mla_area = MainActivity.get_MLA_area(this);
 
-            mEditor.putString(MainActivity.sMP_AREA, mp_area).commit();
-            mEditor.putString(MainActivity.sMLA_AREA, mla_area).commit();
-        }
+        if (user_agree)
+            ask_user_preference();
 
         setSupportActionBar(toolbar);
 
@@ -142,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 tabLayout.getTabCount());
         viewPager.setAdapter(mainViewPagerAdapter);
 
-        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout ));
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -173,70 +160,70 @@ public class MainActivity extends AppCompatActivity {
 
     private void prompt_user_agree() {
         boolean user_agree = mSharedPref.getBoolean(bUSER_AGREE, false);
-        if(user_agree) {
-            // nothong to do
-        } else {
-            TextView message = new TextView(this);
-            message.setTextSize((float) 20);
-            message.setHeight(250);
-            message.setPadding(30, 30, 30, 0);
-            message.setLinkTextColor(Color.BLUE);
-            message.setGravity(Gravity.CENTER);
+        if (user_agree) // nothing to do
+            return;
 
-            String terms_and_condition = "", button_yes = "", button_no = "";
-            terms_and_condition = getResources().getString(R.string.terms_and_condition_hi);
-            button_yes = getResources().getString(R.string.button_yes_hi);
-            button_no = getResources().getString(R.string.button_no_hi);
+        // else
+        TextView message = new TextView(this);
+        message.setTextSize((float) 20);
+        message.setHeight(250);
+        message.setPadding(30, 30, 30, 0);
+        message.setLinkTextColor(Color.BLUE);
+        message.setGravity(Gravity.CENTER);
 
-            SpannableString s = new SpannableString(terms_and_condition);
-            Linkify.addLinks(s, Linkify.WEB_URLS);
-            message.setText(s);
-            message.setMovementMethod(LinkMovementMethod.getInstance());
+        String terms_and_condition = "", button_yes = "", button_no = "";
+        terms_and_condition = getResources().getString(R.string.terms_and_condition_hi);
+        button_yes = getResources().getString(R.string.button_yes_hi);
+        button_no = getResources().getString(R.string.button_no_hi);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
-            builder.setView(message);
-            builder.setPositiveButton(button_yes, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int id) {
-                    LogEvents.send(MainActivity.this, "Agree");
-                    mEditor.putBoolean(bUSER_AGREE, true).commit();
+        SpannableString s = new SpannableString(terms_and_condition);
+        Linkify.addLinks(s, Linkify.WEB_URLS);
+        message.setText(s);
+        message.setMovementMethod(LinkMovementMethod.getInstance());
 
-                    ask_user_preference();
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+        builder.setView(message);
+        builder.setPositiveButton(button_yes, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                LogEvents.send(MainActivity.this, "Agree");
+                mEditor.putBoolean(bUSER_AGREE, true).commit();
+
+                ask_user_preference();
+            }
+        });
+        builder.setNegativeButton(button_no, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                LogEvents.send(MainActivity.this, "Not_Agree");
+                finish();
+            }
+        });
+
+        final AlertDialog dialog = builder.create();
+        dialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialog_interface) {
+                Button positive = dialog.getButton(Dialog.BUTTON_POSITIVE);
+                positive.setTextSize((float) 20);
+                Button negative = dialog.getButton(Dialog.BUTTON_NEGATIVE);
+                negative.setTextSize((float) 20);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                    positive.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
+                    negative.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
+                } else {
+                    positive.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+                    negative.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
                 }
-            });
-            builder.setNegativeButton(button_no, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int id) {
-                    LogEvents.send(MainActivity.this, "Not_Agree");
-                    finish();
-                }
-            });
 
-            final AlertDialog dialog = builder.create();
-            dialog.setOnShowListener(new DialogInterface.OnShowListener() {
-                @Override
-                public void onShow(DialogInterface dialog_interface) {
-                    Button positive = dialog.getButton(Dialog.BUTTON_POSITIVE);
-                    positive.setTextSize((float) 20);
-                    Button negative = dialog.getButton(Dialog.BUTTON_NEGATIVE);
-                    negative.setTextSize((float) 20);
+                positive.setTypeface(positive.getTypeface(), Typeface.BOLD);
+                negative.setTypeface(positive.getTypeface(), Typeface.BOLD);
+            }
+        });
 
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                        positive.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
-                        negative.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
-                    } else {
-                        positive.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
-                        negative.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
-                    }
-
-                    positive.setTypeface(positive.getTypeface(), Typeface.BOLD);
-                    negative.setTypeface(positive.getTypeface(), Typeface.BOLD);
-                }
-            });
-
-            dialog.setCancelable(false);
-            dialog.show();
-        }
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     @SuppressWarnings("deprecation")
@@ -245,6 +232,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ask_user_preference() {
+        // Fresh Install, Save SharedPreferences
+        String MP = mSharedPref.getString(sMP_AREA, "");
+        String MLA = mSharedPref.getString(sMLA_AREA, "");
+        Log.e(TAG, "Def : " + MP + " " + MLA);
+
+        if (!MP.equals("") && !MLA.equals("")) // Both MP, MLA are saved
+            return;
+
         LayoutInflater inflater = getLayoutInflater();
         View ui_preference_layout = inflater.inflate(R.layout.user_preference, null);
 
@@ -278,7 +273,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 mEditor.putString(MainActivity.sMP_AREA, selected_constituency).commit();
-                //Log.e(TAG, "state: " + state);
 
                 ui_assembly.setVisibility(View.VISIBLE);
 
@@ -401,29 +395,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onclick_open_donate(View view) {
-        LogEvents.send(this, "Donate");
-
-        Uri uri = Uri.parse("https://www.filternet.in/donate/");
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(intent);
+        startActivity(Common.open_donate(view));
     }
 
     public static String get_MP_area(Context context) {
-        String area = " "; // TODO why one space
+        String area = "";
 
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
         String area_in = shared_pref.getString(sMP_AREA, "");
 
+        final int CONSTITUENCY = 0;
         for (int i = 0; i < MPdata.all_MPs.length; i++) {
-            if (area_in.equals(MPdata.all_MPs[i][2])) {
-                area = MPdata.all_MPs[i][4];
+            if (area_in.equals(MPdata.all_MPs[i][CONSTITUENCY])) {
+                area = MPdata.all_MPs[i][CONSTITUENCY];
             }
         }
 
         //Area is still empty which means user selected preference is already in Hindi then no need to change
         if (area.equals(" ")) {
             for (int i = 0; i < MPdata.all_MPs.length; i++) {
-                if (area_in.equals(MPdata.all_MPs[i][4])) {
+                if (area_in.equals(MPdata.all_MPs[i][CONSTITUENCY])) {
                     area = area_in;
                 }
             }
@@ -433,21 +424,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static String get_MLA_area(Context context) {
-        String mla_area = " "; // TODO why one space
+        String mla_area = "";
+        final int CONSTITUENCY = 2;
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
-
         String mla_area_in = shared_pref.getString(sMLA_AREA, "");
-        String[][] infos = Uttar_Pradesh.MLAs;
 
-        for (String[] info : infos) {
-            if (mla_area_in.equals(info[1])) {
-                mla_area = info[2];
+        for (String[] info : Uttar_Pradesh.MLAs) {
+            if (mla_area_in.equals(info[CONSTITUENCY])) {
+                mla_area = info[CONSTITUENCY];
             }
         }
+
         //Area is still empty which means user selected preference is already in Hindi then no need to change
-        if (mla_area.equals(" ")) {
-            for (String[] info : infos) {
-                if (mla_area_in.equals(info[2])) {
+        if (mla_area.equals("")) {
+            for (String[] info : Uttar_Pradesh.MLAs) {
+                if (mla_area_in.equals(info[CONSTITUENCY])) {
                     mla_area = mla_area_in;
                 }
             }
@@ -566,6 +557,43 @@ public class MainActivity extends AppCompatActivity {
         }
 
         notificationManager.notify(notification_id, mBuilder.build());
+    }
+
+    //One copy in MainActivity
+    public void user_became_smart(View view) {
+        ImageView image = new ImageView(this);
+        image.setImageResource(R.drawable.green_badge);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+        builder.setTitle(R.string.congratulation);
+        builder.setMessage(R.string.smart_voter);
+        builder.setView(image);
+        builder.setPositiveButton(R.string.user_thanks, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                LogEvents.send(MainActivity.this, "Smart_Voter");
+
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        builder.setNeutralButton(R.string.share, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                LogEvents.send(MainActivity.this, "Share_Puzzle");
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String shareBody = getString(R.string.share_puzzle);
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + MainActivity.USER_SHARE_APP);
+                startActivity(intent);
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+        dialog.show();
     }
 
     private class VersionPrompt extends AsyncTask<Void, Void, Boolean> {

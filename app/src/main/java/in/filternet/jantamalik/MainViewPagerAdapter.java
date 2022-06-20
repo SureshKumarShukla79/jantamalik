@@ -1,5 +1,9 @@
 package in.filternet.jantamalik;
 
+import static in.filternet.jantamalik.MainActivity.TAB_243;
+import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
+import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -7,13 +11,9 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import in.filternet.jantamalik.Kendra.KendraFragment;
 import in.filternet.jantamalik.Rajya.RajyaFragment;
 
-import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
-import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
-import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
-
 public class MainViewPagerAdapter extends FragmentPagerAdapter {
 
-    private  int numOfTabs;
+    private final int numOfTabs;
 
     MainViewPagerAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
@@ -23,7 +23,7 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position){
-            case TAB_ISSUE:
+            case TAB_243:
                 IssueFragment issues = new IssueFragment();
                 return issues;
             case TAB_KENDRA:

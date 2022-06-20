@@ -6,12 +6,15 @@
 package in.filternet.jantamalik;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.View;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -77,7 +80,9 @@ public class Common {
         return result.toString();
     }
 
-    private static boolean isProviderUpdated = false, isSSL_fixapplied = false;
+    private static final boolean isProviderUpdated = false;
+    private static boolean isSSL_fixapplied = false;
+
     public static void SSLv3_bugfix() {
 
         if (isProviderUpdated) // TODO not sure if TLSv1 fallback is required with updated Provider
@@ -111,7 +116,14 @@ public class Common {
             HttpsURLConnection.setDefaultSSLSocketFactory(NoSSLv3Factory);
             isSSL_fixapplied = true; // fix works appl-wide, so needed only one time
         } catch (Exception e) {
-            Log.e(TAG, "SSLv3-" + e.toString());
+            Log.e(TAG, "SSLv3-" + e);
         }
+    }
+
+    public static Intent open_donate(View view) {
+        Uri uri = Uri.parse("upi://pay?pa=8948478790@upi&pn=Suresh Kumar Shukla&am=100.00&tn=Janta Malik Donation"); //https://www.filternet.in/donate/
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        Intent chooser = Intent.createChooser(intent, "Pay with...");
+        return chooser;
     }
 }

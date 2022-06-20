@@ -16,7 +16,7 @@ import java.util.HashMap;
 
 
 public final class LogEvents {
-    private static String TAG = "LogEvents";
+    private static final String TAG = "LogEvents";
 
     private static final String URL_ANALYTICS = Constants.URL_ANALYTICS;
 
@@ -31,7 +31,8 @@ public final class LogEvents {
                 return;
             }
 
-            new Event_2_Server(context, name, value).start();
+            //TODO new Event_2_Server(context, name, value).start();
+            Log.e(TAG, value);
         }
     }
 

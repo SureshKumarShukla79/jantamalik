@@ -167,11 +167,8 @@ public class Contact extends AppCompatActivity {
 
 
     public void onclick_open_donate(View view) {
-        LogEvents.send(this, "Donate");
-
-        Uri uri = Uri.parse("https://www.filternet.in/donate/");
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(intent);
+        startActivity(Common.open_donate(view));
+        //startActivityForResult(Common.open_donate(view), 1, null);
     }
 
     public void onclick_github(View view) {

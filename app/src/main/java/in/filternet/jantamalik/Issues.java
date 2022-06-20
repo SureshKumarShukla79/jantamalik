@@ -1,6 +1,6 @@
 package in.filternet.jantamalik;
 
-import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
+import static in.filternet.jantamalik.MainActivity.TAB_243;
 import static in.filternet.jantamalik.MainActivity.TAB_KENDRA;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.USER_SHARE_APP;
@@ -504,7 +504,7 @@ public class Issues extends AppCompatActivity {
         intent.putExtra("add_issue", true);
         intent.putExtra("subject", getString(titleID));
         if(issues) {
-            intent.putExtra(TAB_NUMBER, TAB_ISSUE);
+            intent.putExtra(TAB_NUMBER, TAB_243);
         }
         startActivity(intent);
     }
@@ -523,11 +523,7 @@ public class Issues extends AppCompatActivity {
     }
 
     public void onclick_open_donate(View view) {
-        LogEvents.send(this, "Donate");
-
-        Uri uri = Uri.parse(Constants.URL_DONATE);
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        startActivity(intent);
+        startActivity(Common.open_donate(view));
     }
 
     public void onclick_my_MP_screen(View view) {

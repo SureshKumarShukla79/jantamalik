@@ -1,6 +1,6 @@
 package in.filternet.jantamalik;
 
-import static in.filternet.jantamalik.MainActivity.TAB_ISSUE;
+import static in.filternet.jantamalik.MainActivity.TAB_243;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 
 import android.content.DialogInterface;
@@ -45,7 +45,7 @@ public class IssueFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), Contact.class);
                 intent.putExtra("add_issue", true);
-                intent.putExtra(TAB_NUMBER, TAB_ISSUE);
+                intent.putExtra(TAB_NUMBER, TAB_243);
                 startActivity(intent);
             }
         });

@@ -4,92 +4,54 @@ public class Puzzle_Ques {
 
     public static final String[][] questions = {
             //   "Question"	        "Answer & Option 1"	   "Option 2"           "Option 3"	        "Option 4"
-            {"When did you pay tax first time in your life?", // Economy 1
-                    "When I bought toffee/biscuit",
-                    "My 1st Salary as Income Tax(TDS)",
-                    "Family paid the hospital bill when I was born.",
-                    "I never paid tax",
-                    "When you bought toffee or biscuit, you as the customer paid tax. On a 5 rupee ParleG, about 90p is tax. Tax goes to central and state govt.",
+            {// Economy 1
                     "आपने जीवन में पहली बार टैक्स कब दिया था?",
                     "जब मैनें टाॅफी या बिस्कुट खरीदी",
                     "मेरी पहली सैलरी पर टैक्स कटा था(टीडीएस)",
                     "मेरे पैदा होनेपर अस्पताल का बिल",
                     "मैंने कभी टैक्स नहीं दिया है",
                     "टाफी या बिस्कुट खरीदने पर आपने टैक्स दिया था। पारलेजी के 5 रूपये में 90 पैसा टैक्स होता है जो केंद्र और राज्य सरकार को जाता है।"},
-            {"How much is central govt budget for 2019-20?",// Ecoonomy 2
-                    "27 lakh crore",
-                    "24 lakh crore",
-                    "3 lakh crore",
-                    "18 lakh crore",
-                    "",
+            {// Ecoonomy 2
                     "केन्द्र सरकार का 2019-20 का सालाना बजट कितना है?",
-                    "27 लाख करोड़",
+                    "39 लाख करोड़",
                     "24 लाख करोड़",
                     "3 लाख करोड़",
                     "18 लाख करोड़",
                     ""},
-            {"How do you run the govt?", // Political Rights 1
-                    "Voter -> MP -> Loksabha -> Govt",
-                    "Voter -> Govt -> MP -> Loksabha",
-                    "Govt -> MP -> Loksabha -> Voter",
-                    "MP -> Loksabha -> Govt -> Voter",
-                    "As a voter, we participate in governance through public representatives.",
+            {// Political Rights 1
                     "आप सरकार कैसे चलाते हैं?",
                     "वोटर -> सांसद -> लोकसभा -> सरकार",
                     "वोटर -> सरकार -> सांसद -> लोकसभा",
                     "सरकार -> सांसद -> लोकसभा -> वोटर",
                     "सांसद -> लोकसभा -> सरकार -> वोटर",
                     "लोकतंत्र में आम नागरिक अपने जन प्रतिनिधि के माध्यम से सरकार चलाता है।"},
-            {"Which political parties have been found guilty of illegal-foreign-funding in Delhi high court, in 2014?", // Political Rights 2
-                    "BJP and Congress",
-                    "Congress only", "SP and BSP",
-                    "All parties",
-                    "Both these parties were declared guilty of foreign funding in 2014. 17 lawyers argues for them but lost.",
+            {// Political Rights 2
                     "किन राजनीतिक पार्टियों को दिल्ली हाईकोर्ट ने 2014 में, गैरकानूनी-विदेशी-चंदे का दोषी करार दिया?",
                     "भाजपा और कांग्रेस",
                     "सिर्फ कांग्रेस",
                     "सपा और बसपा",
                     "सभी पार्टियाँ",
                     "2014 में दोनों पार्टियों को अपराधी घोषित किया। 17 वकीलों ने इनके पक्ष में बहस की पर हार गए।"},
-            {"What is priority of education in central govt budget?", // Ecoonomy 3
-                    "11", "3", "1", "13",
-                    "Many countries have 6% or higher budget allocated for education. India spends less than 3%",
+            {// Ecoonomy 3
                     "केन्द्र सरकार के बजट में शिक्षा का कौन सा स्थान है?",
                     "11", "3", "1", "13",
                     "कई देशों में शिक्षा का बजट 6% से ज्यादा है। भारत सरकार 3% भी खर्च नहीं करती।"},
-            {"What is priority of health in central govt budget?", // Ecoonomy 4
-                    "13", "2", "5", "15", "",
+            {// Ecoonomy 4
                     "केन्द्र सरकार के बजट में स्वास्थ्य का कौन सा स्थान है?",
                     "13", "2", "5", "15", ""},
-            {"Does newspapers/news-channels frequently show paid-news?", // Media 1
-                    "Yes", "No", "I can't detect it", "Rarely",
-                    "CobraPost sting operation 2018 caught many popular media houses ready to publish propoganda for money.",
+            {// Media 1
                     "क्या अाये दिन अखबार और न्यूज चैनल बिकी-झूठी-खबरें दिखाते हैं?",
                     "हाँ", "नहीं", "मुझे पता ही नहीं चलता", "कभी-कभी",
                     "कोबरा पोस्ट ने गुप्त कैमरे पर कई नामी मीडिया को पैसे के बदले झूठ परोसने के लिए तैयार पाया।"},
-            {"Who is responsible for - drinking water, road, traffic jam and electricity?", // Political Rights 3
-                    "MLA",
-                    "MP",
-                    "Municipal corporator",
-                    "Opposition",
-                    "Constitution 7th schedule clearly assigns these areas to state govt. As public representative MLA is responsible.",
+            {// Political Rights 3
                     "कौन जिम्मेदार है - पीने का पानी, सड़क, ट्रैफिक जाम और बिजली के लिए?",
                     "विधायक", "सांसद", "नगर निगम काॅरपोरेटर", "विपक्ष",
                     "संविधान की 7वीं अनुसूची के अनुसार यह राज्य सरकार के विषय हैं। जन प्रतिनिधि के रूप में विधायक जिम्मेदार है।"},
-            {"Have you ever read constitution? Especially 7th schedule", // Constitution
-                    "Yes",
-                    "No",
-                    "Only preamble",
-                    "Not sure",
-                    "Most of us have not read it. Interesting fact is that newspaper editors and news channel reporters ignore it.",
+            {// Constitution
                     "क्या आपने कभी संविधान पढ़ा है? खासतौर पर 7वीं अनुसूची",
                     "हाँ", "नहीं", "सिर्फ प्रस्तावना", "कह नहीं सकते",
                     "हम में से ज्यादातर लोग कभी संविधान नहीं पढ़ते। मजेदार बात है कि अखबार के संपादक और न्यूज चैनल के पत्रकार भी इसे पढ़े बिना ही काम चला रहे हैं।"},
-            {"When was the lokpal bill passed by loksabha?", // Political Rights 4
-                    "When people started protesting outside minister/MP house",
-                    "When people protested in Ramlila ground",
-                    "When Anna went to jail", "Don't know",
-                    "Loksabha didn't react to dharna for 7 days. On 8th day protesters changed location to MP homes. Within 4 days Lokpal bill was passed.",
+            {// Political Rights 4
                     "लोकसभा ने लोकपाल बिल कब पास किया था?",
                     "जब लोगों ने मंत्री/सांसद के घर के सामने धरना दिया था",
                     "जब लोगों ने रामलीला मैदान में धरना दिया था",
@@ -97,5 +59,4 @@ public class Puzzle_Ques {
                     "पता नहीं",
                     "लोकसभा ने धरने को 7 दिन तक अनसुना किया। 8वें दिन लोगों ने सांसदों के घर के सामने धरना दिया। 4 ही दिन में लोकपाल बिल पास हो गया।"},
     };
-
 }

@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -115,7 +116,7 @@ public class VoteVidhayak extends AppCompatActivity {
 
         String mp_area = mSharedPref.getString(MainActivity.sMP_AREA, "");
         String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
-        //Log.e(TAG, "USER Preference: " + State + ", " + mp_area + ", " + mla_area);
+        Log.e(TAG, "USER Preference: " + mp_area + ", " + mla_area);
 
         DataFilter dataFilter = new DataFilter();
 

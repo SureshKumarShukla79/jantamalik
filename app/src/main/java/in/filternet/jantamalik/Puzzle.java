@@ -39,9 +39,9 @@ public class Puzzle extends Activity {
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
-    private String mLanguage;
 
     private int question_num = -1, number = 0, score = 0;
+    private final int QUESTION = 0, ANSWER = 1, CHOICE2 = 2, CHOICE3 = 3, CHOICE4 = 4, HINT = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +80,7 @@ public class Puzzle extends Activity {
         }
 
         ui_question_no.setText(String.valueOf(++number));
-        ui_question.setText(Puzzle_Ques.questions[question_num][6]);
+        ui_question.setText(Puzzle_Ques.questions[question_num][QUESTION]);
 
         //Create a list of radio buttons. Then, choose a radio button, randomly and place right/wrong options on it
         ArrayList<RadioButton> option = new ArrayList<>();
@@ -91,20 +91,20 @@ public class Puzzle extends Activity {
 
         //Choose random radio button and place right/wrong options on it
         int index = get_index(option.size());
-        option.get(index).setText(Puzzle_Ques.questions[question_num][7]);  //Place right answer on that index
+        option.get(index).setText(Puzzle_Ques.questions[question_num][ANSWER]);  //Place right answer on that index
         option.remove(index);                                               //Remove the element of that index
         /** Removing the full option, ensures that even if random number repeats, it will go to another slot. **/
 
         index = get_index(option.size());
-        option.get(index).setText(Puzzle_Ques.questions[question_num][8]);
+        option.get(index).setText(Puzzle_Ques.questions[question_num][CHOICE2]);
         option.remove(index);
 
         index = get_index(option.size());
-        option.get(index).setText(Puzzle_Ques.questions[question_num][9]);
+        option.get(index).setText(Puzzle_Ques.questions[question_num][CHOICE3]);
         option.remove(index);
 
         index = get_index(option.size());
-        option.get(index).setText(Puzzle_Ques.questions[question_num][10]);
+        option.get(index).setText(Puzzle_Ques.questions[question_num][CHOICE4]);
         option.remove(index);
     }
 
@@ -254,8 +254,8 @@ public class Puzzle extends Activity {
 
     public void onclick_check_answer(View view) {
         String correct_answer;
-        correct_answer = Puzzle_Ques.questions[question_num][7];
-        ui_detail.setText(Puzzle_Ques.questions[question_num][11]);
+        correct_answer = Puzzle_Ques.questions[question_num][ANSWER];
+        ui_detail.setText(Puzzle_Ques.questions[question_num][HINT]);
 
         LogEvents.send(this, "Q" + (question_num + 1));
 

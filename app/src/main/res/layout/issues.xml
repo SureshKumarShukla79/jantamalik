@@ -1501,8 +1501,7 @@
             android:id="@+id/share1"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
+
             android:clickable="true"
             android:focusable="true"
             android:onClick="onclick_share_button"
@@ -1510,26 +1509,16 @@
             android:src="@drawable/share1"
             android:backgroundTint="@color/colorPrimary" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/twitter_image"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:src="@drawable/twitter"
-            android:onClick="onclick_twitter_button"
-            app:civ_border_color="@color/twitter_blue"
-            app:civ_border_width="1dp" />
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
             android:text="@string/very_good"
             android:layout_margin="1dp"
             android:textColor="@color/colorAccent"
             android:onClick="onclick_open_donate"
-            android:background="@drawable/button_styling"
-            android:visibility="gone"/>
+            android:background="@drawable/button_styling" />
     </LinearLayout>
 
 </LinearLayout>
