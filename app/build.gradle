@@ -11,12 +11,12 @@ android {
         targetSdkVersion 32
 
         // devel version
-        //versionCode 220101
-        //versionName "devel"
+        versionCode 220101
+        versionName "devel"
 
         // Production
-        versionCode 2200618  // silly mistake extra Zero after Year.
-        versionName "22.06.18"
+        //versionCode 2200618  // silly mistake extra Zero after Year.
+        //versionName "22.06.18"
     }
     buildTypes {
         release {
@@ -30,6 +30,9 @@ android {
             buildConfigField 'boolean', 'RELEASE_MODE', 'false'
             debuggable true
         }
+    }
+    dexOptions {
+        incremental true
     }
 }
 
