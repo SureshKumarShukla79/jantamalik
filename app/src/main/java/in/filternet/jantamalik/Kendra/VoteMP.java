@@ -119,12 +119,7 @@ public class VoteMP extends AppCompatActivity {
         spinnerMP = findViewById(R.id.MP_spinner);
 
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                back_button(view);
-            }
-        });
+        toolbar.setNavigationOnClickListener(this::back_button);
 
         String MP = mSharedPref.getString(sMP_AREA, "");
 
@@ -133,7 +128,7 @@ public class VoteMP extends AppCompatActivity {
         // Load defaults
 
         //populating MP Area
-        arrayAdapterMP = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas());
+        arrayAdapterMP = new ArrayAdapter<>(getBaseContext(), R.layout.spinner_text_style, dataFilter.getMPAreas());
         arrayAdapterMP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMP.setAdapter(arrayAdapterMP);
 
@@ -151,12 +146,7 @@ public class VoteMP extends AppCompatActivity {
                 //Log.e(TAG, "spin MP : " + i + " " + l + " " + MPArea);
                 editor.putString(sMP_AREA, MPArea).commit();
 
-                String tmp = MPArea;
-                String area = MainActivity.get_MP_area(getBaseContext());
-                tmp = area;
-                tmp = tmp.replace(" ", "_");
-                tmp = tmp.replace("&", "and");
-                LogEvents.sendWithValue(getBaseContext(), sMP_AREA, tmp);
+                LogEvents.sendWithValue(getBaseContext(), sMP_AREA, MPArea);
 
                 updateMP();
                 update_candidate();
@@ -170,31 +160,23 @@ public class VoteMP extends AppCompatActivity {
         updateMP();
         update_candidate();
 
-        ui_no_progress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!mProtestVisibility) {
-                    mProtestVisibility = true;
-                    show_protest();
-                }
-                else {
-                    mProtestVisibility = false;
-                    hide_protest();
-                }
+        ui_no_progress.setOnClickListener(view -> {
+            if (!mProtestVisibility) {
+                mProtestVisibility = true;
+                show_protest();
+            } else {
+                mProtestVisibility = false;
+                hide_protest();
             }
         });
 
-        ui_other_options.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!mOtherOptions) {
-                    mOtherOptions = true;
-                    show_options();
-                }
-                else {
-                    mOtherOptions = false;
-                    hide_options();
-                }
+        ui_other_options.setOnClickListener(view -> {
+            if (!mOtherOptions) {
+                mOtherOptions = true;
+                show_options();
+            } else {
+                mOtherOptions = false;
+                hide_options();
             }
         });
     }
@@ -343,8 +325,7 @@ public class VoteMP extends AppCompatActivity {
         }
 
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setData(Uri.parse("mailto:"));
-        intent.setType("text/plain");
+        intent.setDataAndType(Uri.parse("mailto:"), "text/plain");
         intent.setPackage("com.google.android.gm");
         intent.putExtra(Intent.EXTRA_EMAIL, TO);
 
@@ -389,11 +370,7 @@ public class VoteMP extends AppCompatActivity {
 
         SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
         String area = shared_pref.getString(sMP_AREA, "");
-
-        // Get English version and then WhatsApp group link
-        area = MainActivity.get_MP_area(context);
-
-        //Log.e(TAG, state + " " + area);
+        area = "Varanasi"; // MVP let one group grow to 500 then unleash
 
         for (int i = 0; i < LokSabhaGroups.all_groups.length; i++) {
             if (area.equals(LokSabhaGroups.all_groups[i][0])) {

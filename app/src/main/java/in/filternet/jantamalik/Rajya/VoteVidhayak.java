@@ -1,17 +1,22 @@
 package in.filternet.jantamalik.Rajya;
 
 import static in.filternet.jantamalik.Kendra.VoteMP.getLoksabha_Group;
+import static in.filternet.jantamalik.MainActivity.SELECT_MLA;
+import static in.filternet.jantamalik.MainActivity.SELECT_MP;
 import static in.filternet.jantamalik.MainActivity.TAB_NUMBER;
 import static in.filternet.jantamalik.MainActivity.TAB_RAJYA;
 import static in.filternet.jantamalik.MainActivity.sMLA_AREA;
+import static in.filternet.jantamalik.MainActivity.sMP_AREA;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,14 +28,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.List;
+
 import de.hdodenhof.circleimageview.CircleImageView;
-import in.filternet.jantamalik.Contact;
 import in.filternet.jantamalik.Issues;
 import in.filternet.jantamalik.Kendra.DataFilter;
 import in.filternet.jantamalik.LogEvents;
@@ -53,13 +60,11 @@ public class VoteVidhayak extends AppCompatActivity {
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor editor;
-    private String mLanguage;
     private boolean mProtestVisibility = false;
     private int layoutResID = 0, titleID = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
 
         savedInstanceState = getIntent().getExtras();
@@ -71,7 +76,6 @@ public class VoteVidhayak extends AppCompatActivity {
         }
 
         setContentView(R.layout.vote_mla_layout);
-
         LogEvents.send(this, TAG);
 
         mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
@@ -105,16 +109,11 @@ public class VoteVidhayak extends AppCompatActivity {
         spinnerMLA = findViewById(R.id.MLA_spinner);
 
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                back_button(view);
-            }
-        });
+        toolbar.setNavigationOnClickListener(view -> back_button(view));
 
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
-        String mp_area = mSharedPref.getString(MainActivity.sMP_AREA, "");
+        String mp_area = mSharedPref.getString(sMP_AREA, "");
         String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
         Log.e(TAG, "USER Preference: " + mp_area + ", " + mla_area);
 
@@ -122,9 +121,9 @@ public class VoteVidhayak extends AppCompatActivity {
 
         // Load defaults
         if (mp_area != null && dataFilter.has_MP_2_MLA_mapping(mp_area)) {
-            mla_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_MP_area(mp_area));
+            mla_adapter = new ArrayAdapter<>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_MP_area(mp_area));
         } else {
-            mla_adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_state());
+            mla_adapter = new ArrayAdapter<>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_state());
         }
 
         mla_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -134,41 +133,22 @@ public class VoteVidhayak extends AppCompatActivity {
         spinnerMLA.setSelection(spinnerPosition);
         //Log.e(TAG, "MLA def: " + MLA);
 
-        //spinner constituency click handler
-        spinnerMLA.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String MLAArea = adapterView.getItemAtPosition(i).toString();
-                //Log.e(TAG, "spin MLA : " + i + " " + l + " " + MLAArea);
-                editor.putString(MainActivity.sMLA_AREA, MLAArea).commit();
-
-                String tmp = MLAArea;
-                tmp = MainActivity.get_MLA_area(getBaseContext());
-                tmp = tmp.replace(" ", "_");
-                tmp = tmp.replace("&", "and");
-                LogEvents.sendWithValue(getBaseContext(), sMLA_AREA, tmp);
-
-                updateMLA();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-            }
+        Activity activity = this;
+        spinnerMLA.setOnTouchListener((v, event) -> {
+            Log.e(TAG, "User click ");
+            ask_user_preference(activity);
+            return true;
         });
 
         updateMLA();
 
-        ui_no_progress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(!mProtestVisibility) {
-                    mProtestVisibility = true;
-                    show_protest();
-                }
-                else {
-                    mProtestVisibility = false;
-                    hide_protest();
-                }
+        ui_no_progress.setOnClickListener(view -> {
+            if (!mProtestVisibility) {
+                mProtestVisibility = true;
+                show_protest();
+            } else {
+                mProtestVisibility = false;
+                hide_protest();
             }
         });
     }
@@ -179,7 +159,7 @@ public class VoteVidhayak extends AppCompatActivity {
         String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
         mla = dataFilter.getMLAInfo(mla_area);
 
-        //Log.e(TAG, mla_area + " " + mla.name + " " + mla.phone + " " + mla.email + " " + mla.address);
+        Log.e(TAG, "update MLA" + mla_area + " " + mla.name + " " + mla.phone + " " + mla.email + " " + mla.address);
         ui_name.setText(mla.name);
 
         if (mla.phone == null || mla.phone.equals("") || mla.phone.isEmpty()) {
@@ -326,8 +306,7 @@ public class VoteVidhayak extends AppCompatActivity {
         }
 
         Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setData(Uri.parse("mailto:"));
-        intent.setType("text/plain");
+        intent.setDataAndType(Uri.parse("mailto:"), "text/plain");
         intent.setPackage("com.google.android.gm");
         intent.putExtra(Intent.EXTRA_EMAIL, TO);
 
@@ -344,20 +323,6 @@ public class VoteVidhayak extends AppCompatActivity {
         } catch (Exception ex) {
             Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
         }
-    }
-
-    public void onclick_update_Vidhayak(View view) {
-        Intent intent = new Intent(this, Contact.class);
-        intent.putExtra("update_mla", true);
-        intent.putExtra(TAB_NUMBER, TAB_RAJYA);
-        startActivity(intent);
-    }
-
-    public void onclick_Vidhayak(View view) {
-        Intent intent = new Intent(this, Contact.class);
-        intent.putExtra("update_mla", true);
-        intent.putExtra(TAB_NUMBER, TAB_RAJYA);
-        startActivity(intent);
     }
 
     public void onclick_show_protest(View view) {
@@ -382,4 +347,112 @@ public class VoteVidhayak extends AppCompatActivity {
         ui_hide_protest.setVisibility(View.GONE);
     }
 
+    public void ask_user_preference(Activity activity) {
+        SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(activity);
+        SharedPreferences.Editor mEditor = mSharedPref.edit();
+
+        String MP = mSharedPref.getString(sMP_AREA, SELECT_MP);
+        String MLA = mSharedPref.getString(sMLA_AREA, SELECT_MLA);
+        final String TAG = "USER_CHOICE";
+        Log.e(TAG, "Def : " + MP + " " + MLA);
+
+        LayoutInflater inflater = activity.getLayoutInflater();
+        View ui_preference_layout = inflater.inflate(R.layout.user_preference, null);
+
+        final LinearLayout ui_constituency = ui_preference_layout.findViewById(R.id.constituency);
+        final Spinner ui_constituency_spinner = ui_preference_layout.findViewById(R.id.constituency_spinner);
+        final LinearLayout ui_assembly = ui_preference_layout.findViewById(R.id.assembly);
+        final Spinner ui_assembly_spinner = ui_preference_layout.findViewById(R.id.assembly_spinner);
+        final FloatingActionButton ui_done = ui_preference_layout.findViewById(R.id.done);
+
+        final DataFilter data_filter = new DataFilter();
+
+        ui_constituency.setVisibility(View.VISIBLE);
+        if (!MLA.equals(""))
+            ui_assembly.setVisibility(View.VISIBLE);
+
+        //populating constituency
+        List<String> constituency_list = data_filter.getMPAreas();
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(activity.getBaseContext(), R.layout.spinner_text_style, constituency_list);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ui_constituency_spinner.setAdapter(adapter);
+
+        int MPPosition = adapter.getPosition(MP);
+        ui_constituency_spinner.setSelection(MPPosition);
+
+        //spinner constituency click handler
+        ui_constituency_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @SuppressLint("RestrictedApi")
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected_constituency = adapterView.getItemAtPosition(i).toString();
+                if (selected_constituency.equals(SELECT_MP)) {
+                    return;
+                }
+
+                mEditor.putString(sMP_AREA, selected_constituency).commit();
+
+                ui_assembly.setVisibility(View.VISIBLE);
+
+                Log.e(TAG, "selected MP : " + selected_constituency);
+                //populating assembly
+                List<String> assembly_list;
+                if (data_filter.has_MP_2_MLA_mapping(selected_constituency)) {
+                    assembly_list = data_filter.get_MLA_area_as_per_MP_area(selected_constituency);
+                } else {
+                    assembly_list = data_filter.get_MLA_area_as_per_state();
+                }
+
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(activity.getBaseContext(), R.layout.spinner_text_style, assembly_list);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                ui_assembly_spinner.setAdapter(adapter);
+                int MLAPosition = adapter.getPosition(MLA);
+                ui_assembly_spinner.setSelection(MLAPosition);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
+        //spinner constituency click handler
+        ui_assembly_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @SuppressLint("RestrictedApi")
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected_assembly = adapterView.getItemAtPosition(i).toString();
+                if (selected_assembly.equals(SELECT_MLA)) {
+                    ui_done.setVisibility(View.INVISIBLE);
+                    return;
+                }
+
+                mEditor.putString(MainActivity.sMLA_AREA, selected_assembly).commit();
+                Log.e(TAG, "selected MLA : " + selected_assembly);
+                ui_done.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setView(ui_preference_layout);
+        alert.setCancelable(false);
+        final AlertDialog dialog = alert.create();
+
+        ui_done.setOnClickListener(v -> {
+            String selected_constituency = mSharedPref.getString(sMP_AREA, "");
+            String selected_assembly = mSharedPref.getString(MainActivity.sMLA_AREA, "");
+
+            LogEvents.sendWithValue(activity.getBaseContext(), sMP_AREA, selected_constituency);
+            LogEvents.sendWithValue(activity.getBaseContext(), sMLA_AREA, selected_assembly);
+
+            dialog.dismiss();
+            updateMLA();
+        });
+
+        dialog.show();
+    }
 }

@@ -32,7 +32,7 @@ public final class LogEvents {
             }
 
             //TODO new Event_2_Server(context, name, value).start();
-            Log.e(TAG, value);
+            Log.e(TAG, name + "" + value);
         }
     }
 
@@ -52,8 +52,8 @@ public final class LogEvents {
             HttpURLConnection urlc = null;
 
             //Log.e(TAG, "sending");
-            JsonReader reader = null;
-            URL url = null;
+            JsonReader reader;
+            URL url;
 
             try {
                 url = new URL(URL_ANALYTICS);
