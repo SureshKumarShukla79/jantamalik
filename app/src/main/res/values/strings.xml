@@ -140,7 +140,7 @@
     <string name="government_rajya">राज्य सरकार</string>
 
     <string name="contact">संपर्क करें</string>
-    <string name="source_text">सालाना बजट 2019-20 https://www.indiabudget.gov.in/doc/Budget_at_Glance/budget_at_a_glance.pdf</string>
+    <string name="source_text">सालाना बजट 2022-23 https://www.indiabudget.gov.in</string>
     <string name="head">नाम</string>
 
     <string-array name="MP_state_values">
@@ -549,10 +549,10 @@
 
     <!--Budget Bihar-->
     <string name="budget_UP"><b>उत्तर प्रदेश</b></string>
-    <string name="UP_budget">5,12,860 करोड़</string>
+    <string name="UP_budget">6,15,518 करोड़</string>
     <string name="UP_tax_total"><b>राज्य सरकार का कुल बजट - पांच लाख बारह हजार आठ सौ साठ करोड़ रू।</b></string>
     <string name="UP_education">शिक्षा</string>
-    <string name="UP_source_text">सालाना बजट 2020-21 डाउनलोड करें https://db.filternet.in/jantamalik/%E0%A4%AC%E0%A4%9C%E0%A4%9F%20%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A6%E0%A5%87%E0%A4%B6.pdf</string>
+    <string name="UP_source_text">सालाना बजट 2022-23 डाउनलोड करें https://budget.up.nic.in</string>
 
     <string name="puzzle">पहेली</string>
     <string name="skip">बाहर जाएँ</string>

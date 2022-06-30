@@ -204,14 +204,14 @@
 
         <TextView
             android:id="@+id/total_tax"
-            android:layout_below="@+id/GridLayout_Note"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="40sp"
-            android:text="@string/UP_budget"
+            android:layout_below="@+id/GridLayout_Note"
             android:layout_centerHorizontal="true"
+            android:text="@string/UP_budget"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/tax_total_center"

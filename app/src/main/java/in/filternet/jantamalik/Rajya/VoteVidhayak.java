@@ -63,12 +63,14 @@ public class VoteVidhayak extends AppCompatActivity {
     private boolean mProtestVisibility = false;
     private int layoutResID = 0, titleID = 0;
 
+    private String mp_area, mla_area;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         savedInstanceState = getIntent().getExtras();
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             layoutResID = savedInstanceState.getInt("layout_id");
             //Log.e(TAG, "layout_id: " + layoutResID);
             titleID = savedInstanceState.getInt("title_id");
@@ -113,8 +115,8 @@ public class VoteVidhayak extends AppCompatActivity {
 
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
-        String mp_area = mSharedPref.getString(sMP_AREA, "");
-        String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
+        mp_area = mSharedPref.getString(sMP_AREA, "");
+        mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
         Log.e(TAG, "USER Preference: " + mp_area + ", " + mla_area);
 
         DataFilter dataFilter = new DataFilter();
@@ -155,8 +157,11 @@ public class VoteVidhayak extends AppCompatActivity {
 
     @SuppressLint("RestrictedApi")
     private void updateMLA() {
+        int spinnerPosition = mla_adapter.getPosition(mla_area);
+        spinnerMLA.setSelection(spinnerPosition);
+
         DataFilter dataFilter = new DataFilter();
-        String mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
+        mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
         mla = dataFilter.getMLAInfo(mla_area);
 
         Log.e(TAG, "update MLA" + mla_area + " " + mla.name + " " + mla.phone + " " + mla.email + " " + mla.address);
@@ -351,10 +356,10 @@ public class VoteVidhayak extends AppCompatActivity {
         SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(activity);
         SharedPreferences.Editor mEditor = mSharedPref.edit();
 
-        String MP = mSharedPref.getString(sMP_AREA, SELECT_MP);
-        String MLA = mSharedPref.getString(sMLA_AREA, SELECT_MLA);
+        mp_area = mSharedPref.getString(sMP_AREA, SELECT_MP);
+        mla_area = mSharedPref.getString(sMLA_AREA, SELECT_MLA);
         final String TAG = "USER_CHOICE";
-        Log.e(TAG, "Def : " + MP + " " + MLA);
+        Log.e(TAG, "Def : " + mp_area + " " + mla_area);
 
         LayoutInflater inflater = activity.getLayoutInflater();
         View ui_preference_layout = inflater.inflate(R.layout.user_preference, null);
@@ -368,7 +373,7 @@ public class VoteVidhayak extends AppCompatActivity {
         final DataFilter data_filter = new DataFilter();
 
         ui_constituency.setVisibility(View.VISIBLE);
-        if (!MLA.equals(""))
+        if (!mla_area.equals(""))
             ui_assembly.setVisibility(View.VISIBLE);
 
         //populating constituency
@@ -378,7 +383,7 @@ public class VoteVidhayak extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ui_constituency_spinner.setAdapter(adapter);
 
-        int MPPosition = adapter.getPosition(MP);
+        int MPPosition = adapter.getPosition(mp_area);
         ui_constituency_spinner.setSelection(MPPosition);
 
         //spinner constituency click handler
@@ -386,20 +391,20 @@ public class VoteVidhayak extends AppCompatActivity {
             @SuppressLint("RestrictedApi")
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String selected_constituency = adapterView.getItemAtPosition(i).toString();
-                if (selected_constituency.equals(SELECT_MP)) {
+                mp_area = adapterView.getItemAtPosition(i).toString();
+                if (mp_area.equals(SELECT_MP)) {
                     return;
                 }
 
-                mEditor.putString(sMP_AREA, selected_constituency).commit();
+                mEditor.putString(sMP_AREA, mp_area).commit();
 
                 ui_assembly.setVisibility(View.VISIBLE);
 
-                Log.e(TAG, "selected MP : " + selected_constituency);
+                Log.e(TAG, "selected MP : " + mp_area);
                 //populating assembly
                 List<String> assembly_list;
-                if (data_filter.has_MP_2_MLA_mapping(selected_constituency)) {
-                    assembly_list = data_filter.get_MLA_area_as_per_MP_area(selected_constituency);
+                if (data_filter.has_MP_2_MLA_mapping(mp_area)) {
+                    assembly_list = data_filter.get_MLA_area_as_per_MP_area(mp_area);
                 } else {
                     assembly_list = data_filter.get_MLA_area_as_per_state();
                 }
@@ -407,7 +412,7 @@ public class VoteVidhayak extends AppCompatActivity {
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(activity.getBaseContext(), R.layout.spinner_text_style, assembly_list);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 ui_assembly_spinner.setAdapter(adapter);
-                int MLAPosition = adapter.getPosition(MLA);
+                int MLAPosition = adapter.getPosition(mla_area);
                 ui_assembly_spinner.setSelection(MLAPosition);
             }
 
@@ -421,14 +426,14 @@ public class VoteVidhayak extends AppCompatActivity {
             @SuppressLint("RestrictedApi")
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String selected_assembly = adapterView.getItemAtPosition(i).toString();
-                if (selected_assembly.equals(SELECT_MLA)) {
+                mla_area = adapterView.getItemAtPosition(i).toString();
+                if (mla_area.equals(SELECT_MLA)) {
                     ui_done.setVisibility(View.INVISIBLE);
                     return;
                 }
 
-                mEditor.putString(MainActivity.sMLA_AREA, selected_assembly).commit();
-                Log.e(TAG, "selected MLA : " + selected_assembly);
+                mEditor.putString(MainActivity.sMLA_AREA, mla_area).commit();
+                Log.e(TAG, "selected MLA : " + mla_area);
                 ui_done.setVisibility(View.VISIBLE);
             }
 
@@ -443,11 +448,11 @@ public class VoteVidhayak extends AppCompatActivity {
         final AlertDialog dialog = alert.create();
 
         ui_done.setOnClickListener(v -> {
-            String selected_constituency = mSharedPref.getString(sMP_AREA, "");
-            String selected_assembly = mSharedPref.getString(MainActivity.sMLA_AREA, "");
+            mp_area = mSharedPref.getString(sMP_AREA, "");
+            mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
 
-            LogEvents.sendWithValue(activity.getBaseContext(), sMP_AREA, selected_constituency);
-            LogEvents.sendWithValue(activity.getBaseContext(), sMLA_AREA, selected_assembly);
+            LogEvents.sendWithValue(activity.getBaseContext(), sMP_AREA, mp_area);
+            LogEvents.sendWithValue(activity.getBaseContext(), sMLA_AREA, mla_area);
 
             dialog.dismiss();
             updateMLA();
