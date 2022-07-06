@@ -3,44 +3,61 @@ repositories {
 }
 apply plugin: 'com.android.application'
 
+// Create a variable called keystorePropertiesFile, and initialize it to your keystore.properties file, in the rootProject folder.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties() // Initialize a new Properties() object called keystoreProperties.
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile)) // Load your keystore.properties file into the keystoreProperties object.
+
 android {
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
     compileSdkVersion 32
     defaultConfig {
         applicationId "in.filternet.jantamalik"
-        minSdkVersion 15
+        minSdkVersion 23
         targetSdkVersion 32
-
         // devel version
-        versionCode 220101
-        versionName "devel"
-
+        //versionCode 220101
+        //versionName "devel"
         // Production
-        //versionCode 2200618  // silly mistake extra Zero after Year.
-        //versionName "22.06.18"
+        versionCode 2200704  // silly mistake extra Zero after Year.
+        versionName "22.07.04"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
             buildConfigField 'boolean', 'RELEASE_MODE', 'true'
+            signingConfig signingConfigs.release
+            multiDexEnabled true
         }
-
         debug {
             buildConfigField 'boolean', 'RELEASE_MODE', 'false'
             debuggable true
         }
     }
-    dexOptions {
-        incremental true
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
+    dependenciesInfo {
+        includeInApk true
+        includeInBundle true
+    }
+    buildToolsVersion '32.0.0'
+    ndkVersion '24.0.8215888'
 }
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "androidx.preference:preference:1.2.0"
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
