@@ -14,13 +14,15 @@ android {
             storePassword keystoreProperties['storePassword']
         }
     }
-    compileSdkVersion 32
+    compileSdk 32
+    buildToolsVersion '32.0.0'
+    ndkVersion '24.0.8215888'
     defaultConfig {
         applicationId "in.filternet.jantamalik"
-        minSdkVersion 30
+        minSdkVersion 23
         targetSdkVersion 32
-        versionCode 2200708  // silly mistake extra Zero after Year.
-        versionName "22.07.08"
+        versionCode 2200804  // silly mistake extra Zero after Year.
+        versionName "22.08.04"
     }
     buildTypes {
         release {
@@ -43,8 +45,6 @@ android {
         includeInApk true
         includeInBundle true
     }
-    buildToolsVersion '32.0.0'
-    ndkVersion '24.0.8215888'
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -54,6 +54,6 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-    implementation 'de.hdodenhof:circleimageview:3.0.0'
-    implementation 'org.jsoup:jsoup:1.15.1' // gets Downloaded from maven repo
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'org.jsoup:jsoup:1.15.2' // gets Downloaded from maven repo
 }
