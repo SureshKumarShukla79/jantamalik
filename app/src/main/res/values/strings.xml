@@ -46,7 +46,7 @@
 
     <string name="update_info">सांसद को फोन व ईमेल करें, हिचकिचाएँ नहीं।</string>
 
-    <string name="donate_appeal">हम एक गैर-मुनाफा संस्था हैं। आपके चंदे से ही काम आगे बढ़ता है।</string>
+    <string name="donate_appeal">यह एक निःशुल्क ऐप है।चंदा जरूर दें।</string>
 
     <string name="support_email"></string>
     <string name="add_issue">अपने मुद्दे जोड़ें</string>
@@ -658,7 +658,7 @@
     <string name="milk">दूध का पैकेट</string>
     <string name="motorbike">स्कूटी, मोटरसाइकिल</string>
     <string name="makeup_items">मेकअप की वस्तुऐं</string>
-    <string name="website"><u>www.filternet.in</u></string>
+    <string name="website"><u>www.jantamalik.in</u></string>
     <string name="phone_number">+91-7570000787</string>
 
     <string name="gst_tax">सिंगापुर में सिर्फ 7% जीएसटी है फिर भी पढ़ाई और दवाई मुफ्त है।
