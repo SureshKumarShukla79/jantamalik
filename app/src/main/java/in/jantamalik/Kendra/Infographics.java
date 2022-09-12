@@ -1,0 +1,48 @@
+package in.jantamalik.Kendra;
+
+import static in.jantamalik.MainActivity.TAB_KENDRA;
+import static in.jantamalik.MainActivity.TAB_NUMBER;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
+
+import in.jantamalik.LogEvents;
+import in.jantamalik.MainActivity;
+import in.jantamalik.R;
+
+public class Infographics extends AppCompatActivity {
+
+    private Toolbar toolbar;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        SharedPreferences mSharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+
+        setContentView(R.layout.infographics_kendra);
+        LogEvents.send(this, "Kendra_Infographics");
+
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                back_button(view);
+            }
+        });
+    }
+
+    private void back_button(View view) {
+        Intent intent = new Intent(view.getContext(), MainActivity.class);
+        intent.putExtra(TAB_NUMBER, TAB_KENDRA);
+        startActivity(intent);
+    }
+}

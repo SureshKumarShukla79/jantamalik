@@ -4,7 +4,7 @@ Description
 Indian democracy has got off-track over decades. This app intends to reach 1,000 Indians and get them solutions to their governance problems.
 
 Get it on Google Play 
-https://play.google.com/store/apps/details?id=in.filternet.jantamalik
+https://play.google.com/store/apps/details?id=in.jantamalik
 
 It contains contact info of all MPs elected in 2019 LokSabha.
 

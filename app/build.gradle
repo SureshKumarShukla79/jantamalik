@@ -18,11 +18,11 @@ android {
     buildToolsVersion '32.0.0'
     ndkVersion '24.0.8215888'
     defaultConfig {
-        applicationId "in.filternet.jantamalik"
+        applicationId "in.jantamalik"
         minSdkVersion 23
         targetSdkVersion 32
-        versionCode 2200804  // silly mistake extra Zero after Year.
-        versionName "22.08.04"
+        versionCode 220912
+        versionName "22.09.12"
     }
     buildTypes {
         release {

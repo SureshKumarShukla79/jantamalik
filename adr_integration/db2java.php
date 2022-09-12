@@ -37,7 +37,7 @@ if (mysqli_num_rows($result_green_bucket) > 0) {
             unlink($FILE);
 
             error_log("/* Auto-generated file from db2java.php*/
-package in.filternet.jantamalik.LokSabha_Election_2019;
+package in.jantamalik.LokSabha_Election_2019;
 
 public class " . str_replace(" ", "_", $tmp) . " {\n", 3, $FILE);
 

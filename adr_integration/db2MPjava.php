@@ -20,7 +20,7 @@ unlink($FILE);
 
 error_log("/* Auto-generated file from db2MPjava.php*/
 
-package in.filternet.jantamalik.Kendra;
+package in.jantamalik.Kendra;
 
 public final class MPdata {
 
