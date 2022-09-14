@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="in.filternet.jantamalik.MainActivity">
+    tools:context="in.jantamalik.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbarLayout"
@@ -19,31 +18,6 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:title="@string/title"
             app:titleTextColor="#ffffff">
-
-            <Button
-                android:id="@+id/puzzle_button"
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_gravity="end"
-                android:onClick="onclick_puzzle"
-                android:text="@string/puzzle"
-                android:textStyle="bold"
-                android:textColor="@color/colorPrimary"
-                android:background="@drawable/home_button"
-                android:visibility="gone"/>
-
-            <ImageButton
-                android:id="@+id/green_badge"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_gravity="end"
-                android:background="@drawable/green_badge"
-                android:onClick="user_became_smart"
-                android:visibility="gone"/>
         </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.tabs.TabLayout
@@ -59,21 +33,7 @@
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/issues"
-                android:text="@string/Issues" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/states"
-                android:text="@string/rajya" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/nation"
-                android:text="@string/kendra" />
+                android:layout_height="wrap_content" />
         </com.google.android.material.tabs.TabLayout>
 
     </com.google.android.material.appbar.AppBarLayout>

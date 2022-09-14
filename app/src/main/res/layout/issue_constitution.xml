@@ -74,14 +74,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="center"
                 android:layout_margin="6dp"
                 android:text="@string/constitution_online"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
                 android:textColorLink="@color/blue"
                 android:clickable="true"
                 android:onClick="onclick_read_online_full" />
 
             <TextView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/issue_text_left_margin"
@@ -90,6 +92,7 @@
                 android:textColor="@color/black"/>
 
             <Button
+                android:visibility="gone"
                 android:id="@+id/play_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

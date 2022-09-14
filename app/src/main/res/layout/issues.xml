@@ -8,14 +8,13 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-<LinearLayout
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:layout_margin="2dp"
-    tools:context="in.filternet.jantamalik.Kendra.VoteMP">
+    tools:context="in.jantamalik.Kendra.VoteMP">
 
     <TextView
         android:id="@+id/source_app"
@@ -103,8 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp"
-        android:visibility="visible">
+        android:layout_margin="3dp">
 
         <LinearLayout
             android:id="@+id/puzzle"
@@ -159,6 +157,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
@@ -218,6 +217,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
@@ -277,11 +277,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp"
-        android:visibility="gone">
+        android:layout_margin="3dp">
 
         <LinearLayout
             android:id="@+id/mp_no_response_layout"
@@ -337,6 +337,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
@@ -395,6 +396,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
@@ -454,11 +456,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp"
-        android:visibility="gone">
+        android:layout_margin="3dp">
 
         <LinearLayout
             android:id="@+id/hospital_layout"
@@ -513,11 +515,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp"
-        android:visibility="gone">
+        android:layout_margin="3dp">
 
         <LinearLayout
             android:id="@+id/drinking_water_layout"
@@ -572,11 +574,11 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
-        android:layout_margin="3dp"
-        android:visibility="gone">
+        android:layout_margin="3dp">
 
         <LinearLayout
             android:id="@+id/road_layout"
@@ -986,6 +988,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@color/white"
