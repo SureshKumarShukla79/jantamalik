@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String sMLA_AREA = "MLA_Area";
     public static final String sWARD = "Ward";
 
-    public final static String URL_PLAYSTORE_MARKET = "https://play.google.com/store/apps/details?id=in.filternet.jantamalik";
+    public final static String URL_PLAYSTORE_MARKET = "https://play.google.com/store/apps/details?id=in.jantamalik";
     public static final String USER_SHARE_APP = "\n" + URL_PLAYSTORE_MARKET + "&referrer=utm_source%3Dr";
 
     private Activity activity;
@@ -461,13 +461,19 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(context, Receiver.class);
         intent.setAction(eventName);
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
+
         //Log.e(TAG, "start " + pendingIntent);
         AlarmManager manager = (AlarmManager) (context.getSystemService(Context.ALARM_SERVICE));
 
         Calendar calendar = Calendar.getInstance();
 
-        if(fresh) {// Fresh install: If time has elapsed then set from next Sunday 11:00 AM
+        if (fresh) {// Fresh install: If time has elapsed then set from next Sunday 11:00 AM
             int current_hour = calendar.get(Calendar.HOUR_OF_DAY);
             int current_min = calendar.get(Calendar.MINUTE);
             if ((current_hour * 60 + current_min) > (11 * 60))
@@ -541,7 +547,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Intent resultIntent = new Intent(context, MainActivity.class);
-        PendingIntent resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent resultPendingIntent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
         mBuilder.setContentIntent(resultPendingIntent);
         mBuilder.setAutoCancel(true);
 
