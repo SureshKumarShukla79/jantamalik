@@ -57,8 +57,6 @@ import java.util.Random;
 import java.util.regex.Pattern;
 
 import in.jantamalik.Kendra.DataFilter;
-import in.jantamalik.Kendra.MPdata;
-import in.jantamalik.Rajya.Uttar_Pradesh;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -279,13 +277,8 @@ public class MainActivity extends AppCompatActivity {
                 //Log.e(TAG, "selected_constituency: " + selected_constituency);
                 //populating assembly
                 List<String> assembly_list = null;
-                if (data_filter.has_MP_2_MLA_mapping(selected_constituency)) {
-                    assembly_list = data_filter.get_MLA_area_as_per_MP_area(selected_constituency);
-                    assembly_list.add(SELECT_MLA);
-                } else {
-                    assembly_list = data_filter.get_MLA_area_as_per_state();
-                    assembly_list.add(SELECT_MLA);
-                }
+                assembly_list = data_filter.get_MLA_area_as_per_MP_area(selected_constituency);
+                assembly_list.add(SELECT_MLA);
 
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, assembly_list);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -322,22 +315,6 @@ public class MainActivity extends AppCompatActivity {
         alert.setView(ui_preference_layout);
         alert.setCancelable(false);
         final AlertDialog dialog = alert.create();
-
-        ui_done.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String selected_constituency = mSharedPref.getString(MainActivity.sMP_AREA, "");
-                String selected_assembly = mSharedPref.getString(MainActivity.sMLA_AREA, "");
-
-                selected_constituency = MainActivity.get_MP_area(getBaseContext());
-                LogEvents.sendWithValue(getBaseContext(), sMP_AREA, selected_constituency);
-
-                selected_assembly = MainActivity.get_MLA_area(getBaseContext());
-                LogEvents.sendWithValue(getBaseContext(), sMLA_AREA, selected_assembly);
-
-                dialog.dismiss();
-            }
-        });
 
         dialog.show();
     }
@@ -405,46 +382,10 @@ public class MainActivity extends AppCompatActivity {
         String area_in = shared_pref.getString(sMP_AREA, "");
 
         final int CONSTITUENCY = 0;
-        for (int i = 0; i < MPdata.all_MPs.length; i++) {
-            if (area_in.equals(MPdata.all_MPs[i][CONSTITUENCY])) {
-                area = MPdata.all_MPs[i][CONSTITUENCY];
-            }
-        }
 
         //Area is still empty which means user selected preference is already in Hindi then no need to change
-        if (area.equals(" ")) {
-            for (int i = 0; i < MPdata.all_MPs.length; i++) {
-                if (area_in.equals(MPdata.all_MPs[i][CONSTITUENCY])) {
-                    area = area_in;
-                }
-            }
-        }
 
         return area;
-    }
-
-    public static String get_MLA_area(Context context) {
-        String mla_area = "";
-        final int CONSTITUENCY = 2;
-        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
-        String mla_area_in = shared_pref.getString(sMLA_AREA, "");
-
-        for (String[] info : Uttar_Pradesh.MLAs) {
-            if (mla_area_in.equals(info[CONSTITUENCY])) {
-                mla_area = info[CONSTITUENCY];
-            }
-        }
-
-        //Area is still empty which means user selected preference is already in Hindi then no need to change
-        if (mla_area.equals("")) {
-            for (String[] info : Uttar_Pradesh.MLAs) {
-                if (mla_area_in.equals(info[CONSTITUENCY])) {
-                    mla_area = mla_area_in;
-                }
-            }
-        }
-
-        return mla_area;
     }
 
     public static void set_notification_time(Context context, boolean fresh) {

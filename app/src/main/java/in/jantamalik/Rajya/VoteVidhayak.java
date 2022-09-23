@@ -122,11 +122,7 @@ public class VoteVidhayak extends AppCompatActivity {
         DataFilter dataFilter = new DataFilter();
 
         // Load defaults
-        if (mp_area != null && dataFilter.has_MP_2_MLA_mapping(mp_area)) {
-            mla_adapter = new ArrayAdapter<>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_MP_area(mp_area));
-        } else {
-            mla_adapter = new ArrayAdapter<>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_state());
-        }
+        mla_adapter = new ArrayAdapter<>(getBaseContext(), R.layout.spinner_text_style, dataFilter.get_MLA_area_as_per_MP_area(mp_area));
 
         mla_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMLA.setAdapter(mla_adapter);
@@ -162,7 +158,6 @@ public class VoteVidhayak extends AppCompatActivity {
 
         DataFilter dataFilter = new DataFilter();
         mla_area = mSharedPref.getString(MainActivity.sMLA_AREA, "");
-        mla = dataFilter.getMLAInfo(mla_area);
 
         Log.e(TAG, "update MLA" + mla_area + " " + mla.name + " " + mla.phone + " " + mla.email + " " + mla.address);
         ui_name.setText(mla.name);
@@ -402,12 +397,8 @@ public class VoteVidhayak extends AppCompatActivity {
 
                 Log.e(TAG, "selected MP : " + mp_area);
                 //populating assembly
-                List<String> assembly_list;
-                if (data_filter.has_MP_2_MLA_mapping(mp_area)) {
-                    assembly_list = data_filter.get_MLA_area_as_per_MP_area(mp_area);
-                } else {
-                    assembly_list = data_filter.get_MLA_area_as_per_state();
-                }
+                List<String> assembly_list = null;
+                assembly_list = data_filter.get_MLA_area_as_per_MP_area(mp_area);
 
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(activity.getBaseContext(), R.layout.spinner_text_style, assembly_list);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

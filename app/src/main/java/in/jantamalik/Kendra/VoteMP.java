@@ -4,7 +4,6 @@ import static in.jantamalik.MainActivity.TAB_KENDRA;
 import static in.jantamalik.MainActivity.TAB_NUMBER;
 import static in.jantamalik.MainActivity.sMP_AREA;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,7 +25,6 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +37,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import in.jantamalik.Contact;
 import in.jantamalik.Issues;
 import in.jantamalik.LogEvents;
-import in.jantamalik.LokSabha_Election_2019.Uttar_Pradesh;
 import in.jantamalik.MainActivity;
 import in.jantamalik.R;
 
@@ -53,7 +50,6 @@ public class VoteMP extends AppCompatActivity {
     private LinearLayout ui_whatsapp_group, ui_protest, ui_mp_options, ui_source;
     private TableLayout ui_green_table, ui_red_table;
     private RelativeLayout ui_no_progress, ui_other_options;
-    DataFilter.MP_info mp;
 
     private Spinner spinnerMP;
     private ArrayAdapter<String> arrayAdapterMP;
@@ -147,18 +143,12 @@ public class VoteMP extends AppCompatActivity {
                 editor.putString(sMP_AREA, MPArea).commit();
 
                 LogEvents.sendWithValue(getBaseContext(), sMP_AREA, MPArea);
-
-                updateMP();
-                update_candidate();
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
-
-        updateMP();
-        update_candidate();
 
         ui_no_progress.setOnClickListener(view -> {
             if (!mProtestVisibility) {
@@ -181,82 +171,6 @@ public class VoteMP extends AppCompatActivity {
         });
     }
 
-    @SuppressLint("RestrictedApi")
-    private void updateMP() {
-        DataFilter dataFilter = new DataFilter();
-        String MPArea = mSharedPref.getString(sMP_AREA, "");
-        //mp = dataFilter.new MP_info();
-        mp = dataFilter.getMPInfo(this, mLanguage, MPArea);
-
-        //Log.e(TAG, MPArea + " " + mp.name + " " + mp.phone + " " + mp.email + " " + mp.address);
-        ui_name.setText(mp.name);
-
-        if(mp.phone == null || mp.phone.equals("")) {
-            ui_call.setVisibility(View.GONE);
-            ui_phone.setVisibility(View.GONE);
-        } else {
-            ui_phone.setText(mp.phone);
-            ui_call.setVisibility(View.VISIBLE);
-            ui_phone.setVisibility(View.VISIBLE);
-        }
-
-        if(mp.phone2 == null || mp.phone2.equals("")) {
-            ui_call2.setVisibility(View.GONE);
-            ui_phone2.setVisibility(View.GONE);
-        }
-        else {
-            ui_phone2.setText(mp.phone2);
-            ui_call2.setVisibility(View.VISIBLE);
-            ui_phone2.setVisibility(View.VISIBLE);
-        }
-
-        if(mp.phone3 == null || mp.phone3.equals("")) {
-            ui_call3.setVisibility(View.GONE);
-            ui_phone3.setVisibility(View.GONE);
-        }
-        else {
-            ui_phone3.setText(mp.phone3);
-            ui_call3.setVisibility(View.VISIBLE);
-            ui_phone3.setVisibility(View.VISIBLE);
-        }
-
-        if(mp.email == null || mp.email.equals("")) {
-            ui_mail.setVisibility(View.GONE);
-            ui_email.setVisibility(View.GONE);
-        }
-        else {
-            ui_email.setText(mp.email);
-            ui_mail.setVisibility(View.VISIBLE);
-            ui_email.setVisibility(View.VISIBLE);
-        }
-
-        if(mp.email2 == null || mp.email2.equals("")) {
-            ui_mail2.setVisibility(View.GONE);
-            ui_email2.setVisibility(View.GONE);
-        }
-        else {
-            ui_email2.setText(mp.email2);
-            ui_mail2.setVisibility(View.VISIBLE);
-            ui_email2.setVisibility(View.VISIBLE);
-        }
-
-        if(mp.address == null || mp.address.equals("")) {
-            ui_address.setVisibility(View.GONE);
-            ui_image_address.setVisibility(View.GONE);
-        } else {
-            ui_address.setText(mp.address);
-            ui_address.setVisibility(View.VISIBLE);
-            ui_image_address.setVisibility(View.VISIBLE);
-        }
-
-        String tmp = getLoksabha_Group(this);
-        if (tmp.equals("")) {
-            ui_whatsapp_group.setVisibility(View.GONE);
-        } else {
-            ui_whatsapp_group.setVisibility(View.VISIBLE);
-        }
-    }
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -273,74 +187,6 @@ public class VoteMP extends AppCompatActivity {
             Intent intent = new Intent(view.getContext(), MainActivity.class);
             intent.putExtra(TAB_NUMBER, TAB_KENDRA);
             startActivity(intent);
-        }
-    }
-
-    public void onclick_call_mp(View view) {
-        if(mp.phone.equals("") && mp.phone2.equals("") && mp.phone3.equals(""))
-            return;
-
-        Uri number = null;
-        switch (view.getId()) {
-            case R.id.phone:
-            case R.id.call:
-                number = Uri.parse("tel:" + mp.phone);
-                break;
-            case R.id.phone2:
-            case R.id.call2:
-                number = Uri.parse("tel:" + mp.phone2);
-                break;
-            case R.id.phone3:
-            case R.id.call3:
-                number = Uri.parse("tel:" + mp.phone3);
-                break;
-        }
-
-        Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
-
-        try { // Calling not available on Tablet devices
-            startActivity(callIntent);
-            LogEvents.send(this, "MP_Phone");
-        } catch (Exception exception){
-            Toast.makeText(this, "Unable to CALL", Toast.LENGTH_LONG).show();
-            exception.printStackTrace();
-        }
-    }
-
-    public void onclick_email_mp(View view) {
-        if(mp.email.equals("") && mp.email2.equals(""))
-            return;
-
-        String[] TO = new String[0];
-
-        switch (view.getId()) {
-            case R.id.email:
-            case R.id.mail:
-                TO = new String[]{mp.email};
-                break;
-            case R.id.email2:
-            case R.id.mail2:
-                TO = new String[]{mp.email2};
-                break;
-        }
-
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setDataAndType(Uri.parse("mailto:"), "text/plain");
-        intent.setPackage("com.google.android.gm");
-        intent.putExtra(Intent.EXTRA_EMAIL, TO);
-
-        try {
-            if (intent.resolveActivity(getPackageManager()) != null) {
-                //Log.v(TAG, "1st option");
-                startActivity(intent);
-            } else {
-                //Log.v(TAG, "2nd option");
-                startActivity(Intent.createChooser(intent, "Sending mail..."));
-                finish();
-            }
-            LogEvents.send(this, "MP_Email");
-        } catch (Exception ex) {
-            Toast.makeText(this, "Gmail app didn't respond.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -415,8 +261,6 @@ public class VoteMP extends AppCompatActivity {
         ui_expand_mp_option.setVisibility(View.GONE);
         ui_mp_options.setVisibility(View.VISIBLE);
         ui_hide_mp_option.setVisibility(View.VISIBLE);
-
-        update_candidate();
     }
 
     public void onclick_hide_options(View view) {
@@ -427,44 +271,6 @@ public class VoteMP extends AppCompatActivity {
         ui_expand_mp_option.setVisibility(View.VISIBLE);
         ui_mp_options.setVisibility(View.GONE);
         ui_hide_mp_option.setVisibility(View.GONE);
-    }
-
-    private void update_candidate() {
-        String[][] green_bucket = get_green_bucket();
-        String[][] red_bucket = get_red_bucket();
-
-        int total_green_candidate = num_of_candidate(green_bucket);
-        int total_red_candidate = num_of_candidate(red_bucket);
-
-        if(total_green_candidate > 0) {
-            ui_green_table.removeAllViews();
-            load_good_candidate(total_green_candidate, green_bucket);
-            ui_green_table.setVisibility(View.VISIBLE);
-        }
-
-        if(total_red_candidate > 0) {
-            ui_red_table.removeAllViews();
-            load_bad_candidate(total_red_candidate, red_bucket);
-            ui_red_table.setVisibility(View.VISIBLE);
-        }
-
-        if(total_green_candidate == 0 && total_red_candidate == 0){
-            ui_green_table.setVisibility(View.GONE);
-            ui_red_table.setVisibility(View.GONE);
-        } else if(total_red_candidate == 0) {
-            ui_red_table.setVisibility(View.GONE);
-        } else if(total_green_candidate == 0) {
-            ui_source.setVisibility(View.VISIBLE);
-            ui_green_table.setVisibility(View.GONE);
-        }
-    }
-
-    private String[][] get_green_bucket() {
-        return Uttar_Pradesh.green_bucket;
-    }
-
-    private String[][] get_red_bucket() {
-        return Uttar_Pradesh.red_bucket;
     }
 
     private void load_good_candidate(int total_candidate, String[][] bucket) {
@@ -597,12 +403,6 @@ public class VoteMP extends AppCompatActivity {
         int index = 0, area_column = 1;
         String constituency = mSharedPref.getString(sMP_AREA, "");
 
-        for (int i = 0; i < MPdata.all_MPs.length; i++) {
-            if (constituency.equals(MPdata.all_MPs[i][2])) {
-                constituency = MPdata.all_MPs[i][0];
-            }
-        }
-
         for (int i = 0; i < bucket.length; i++) {
             String area_name = bucket[i][area_column];
             if (constituency.equals(area_name))
@@ -623,24 +423,5 @@ public class VoteMP extends AppCompatActivity {
         text.setGravity(Gravity.CENTER);
         text.setBackgroundResource(color);
         text.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.MATCH_PARENT, 1f));
-    }
-
-    private int num_of_candidate(String[][] bucket) {
-        int num = 0, area_column = 1;
-        String constituency = mSharedPref.getString(sMP_AREA, "");
-
-        for (int i = 0; i < MPdata.all_MPs.length; i++) {
-            if (constituency.equals(MPdata.all_MPs[i][4])) {
-                constituency = MPdata.all_MPs[i][1];
-            }
-        }
-
-        for (String[] i : bucket) {
-            String area_name = i[area_column];
-            if (constituency.equals(area_name))
-                num++;
-        }
-
-        return num;
     }
 }

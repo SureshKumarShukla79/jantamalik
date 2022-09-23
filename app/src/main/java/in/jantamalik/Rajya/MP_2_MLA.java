@@ -1,7 +1,6 @@
 package in.jantamalik.Rajya;
 
 public final class MP_2_MLA {
-
     public static final String[][] mapping = {
             {"आगरा", "एतमादपुर", "आगरा कैंट.", "आगरा दक्षिण", "आगरा उत्तर", "जलेसर"},
             {"अकबरपुर", "अकबरपुर रनिया", "बिठूर", "कल्याणपुर", "महाराजपुर", "घाटमपुर"},

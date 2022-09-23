@@ -34,9 +34,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.preference.PreferenceManager;
 
 import in.jantamalik.Kendra.DataFilter;
-import in.jantamalik.Kendra.MPdata;
 import in.jantamalik.Kendra.VoteMP;
-import in.jantamalik.LokSabha_Election_2019.Uttar_Pradesh;
 import in.jantamalik.Rajya.VoteVidhayak;
 
 public class Issues extends AppCompatActivity {
@@ -145,62 +143,12 @@ public class Issues extends AppCompatActivity {
                 tmp = tmp.replace(" ", "_");
                 tmp = tmp.replace("&", "and");
                 LogEvents.sendWithValue(getBaseContext(), sMP_AREA, tmp);
-
-                update_candidate();
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
-
-        update_candidate();
-    }
-
-    private void update_candidate() {
-        String[][] green_bucket = get_green_bucket();
-        String[][] red_bucket = get_red_bucket();
-
-        int total_green_candidate = num_of_candidate(green_bucket);
-        int total_red_candidate = num_of_candidate(red_bucket);
-
-        if(total_green_candidate > 0) {
-            ui_green_table.removeAllViews();
-            load_good_candidate(total_green_candidate, green_bucket);
-            ui_green_table.setVisibility(View.VISIBLE);
-        }
-
-        if(total_red_candidate > 0) {
-            ui_red_table.removeAllViews();
-            load_bad_candidate(total_red_candidate, red_bucket);
-            ui_red_table.setVisibility(View.VISIBLE);
-        }
-
-        if(total_green_candidate == 0 && total_red_candidate == 0){
-            ui_coming_soon.setVisibility(View.VISIBLE);
-            ui_source.setVisibility(View.GONE);
-            ui_green_table.setVisibility(View.GONE);
-            ui_red_table.setVisibility(View.GONE);
-        } else if(total_red_candidate == 0) {
-            ui_source.setVisibility(View.VISIBLE);
-            ui_red_table.setVisibility(View.GONE);
-            ui_coming_soon.setVisibility(View.GONE);
-        } else if(total_green_candidate == 0) {
-            ui_source.setVisibility(View.VISIBLE);
-            ui_green_table.setVisibility(View.GONE);
-            ui_coming_soon.setVisibility(View.GONE);
-        } else {
-            ui_source.setVisibility(View.VISIBLE);
-            ui_coming_soon.setVisibility(View.GONE);
-        }
-    }
-
-    private String[][] get_green_bucket() {
-        return Uttar_Pradesh.green_bucket;
-    }
-
-    private String[][] get_red_bucket() {
-        return Uttar_Pradesh.red_bucket;
     }
 
     private void load_good_candidate(int total_candidate, String[][] bucket) {
@@ -341,12 +289,6 @@ public class Issues extends AppCompatActivity {
         int index = 0, area_column = 1;
         String constituency = mSharedPref.getString(sMP_AREA, "");
 
-            for(int i=0; i< MPdata.all_MPs.length; i++) {
-                if (constituency.equals(MPdata.all_MPs[i][0])) {
-                    constituency = MPdata.all_MPs[i][0];
-                }
-            }
-
         for (int i=0; i<bucket.length; i++) {
             String area_name = bucket[i][area_column];
             if (constituency.equals(area_name))
@@ -377,12 +319,6 @@ public class Issues extends AppCompatActivity {
     private int num_of_candidate(String[][] bucket) {
         int num = 0, area_column = 1;
         String constituency = mSharedPref.getString(sMP_AREA, "");
-
-            for(int i=0; i< MPdata.all_MPs.length; i++) {
-                if (constituency.equals(MPdata.all_MPs[i][4])) {
-                    constituency = MPdata.all_MPs[i][2];
-                }
-            }
 
         for (String[] i : bucket) {
             String area_name = i[area_column];
