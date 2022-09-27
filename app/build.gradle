@@ -21,8 +21,8 @@ android {
         applicationId "in.jantamalik"
         minSdkVersion 23
         targetSdkVersion 32
-        versionCode 220923
-        versionName "22.09.23"
+        versionCode 220927
+        versionName "22.09.27"
     }
     buildTypes {
         release {

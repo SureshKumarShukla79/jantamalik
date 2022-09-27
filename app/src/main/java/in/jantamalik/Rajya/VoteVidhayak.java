@@ -359,17 +359,14 @@ public class VoteVidhayak extends AppCompatActivity {
         LayoutInflater inflater = activity.getLayoutInflater();
         View ui_preference_layout = inflater.inflate(R.layout.user_preference, null);
 
-        final LinearLayout ui_constituency = ui_preference_layout.findViewById(R.id.constituency);
         final Spinner ui_constituency_spinner = ui_preference_layout.findViewById(R.id.constituency_spinner);
-        final LinearLayout ui_assembly = ui_preference_layout.findViewById(R.id.assembly);
         final Spinner ui_assembly_spinner = ui_preference_layout.findViewById(R.id.assembly_spinner);
         final FloatingActionButton ui_done = ui_preference_layout.findViewById(R.id.done);
 
         final DataFilter data_filter = new DataFilter();
 
-        ui_constituency.setVisibility(View.VISIBLE);
         if (!mla_area.equals(""))
-            ui_assembly.setVisibility(View.VISIBLE);
+            ui_assembly_spinner.setVisibility(View.VISIBLE);
 
         //populating constituency
         List<String> constituency_list = data_filter.getMPAreas();
@@ -393,7 +390,7 @@ public class VoteVidhayak extends AppCompatActivity {
 
                 mEditor.putString(sMP_AREA, mp_area).commit();
 
-                ui_assembly.setVisibility(View.VISIBLE);
+                ui_assembly_spinner.setVisibility(View.VISIBLE);
 
                 Log.e(TAG, "selected MP : " + mp_area);
                 //populating assembly

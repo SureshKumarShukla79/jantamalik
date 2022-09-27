@@ -33,7 +33,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -74,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAB_NUMBER = "tab_number";
     public static final int TAB_243 = 0, TAB_KENDRA = 2, TAB_RAJYA = 1;
 
-    public static final String SELECT_MP = "क्षेत्र चुनें";
-    public static final String SELECT_MLA = "क्षेत्र चुनें";
+    public static final String SELECT_MP = "जिला चुनें";
+    public static final String SELECT_MLA = "विधानसभा चुनें";
 
     public static final String sMP_AREA = "MP_Area";
     public static final String sMLA_AREA = "MLA_Area";
@@ -86,13 +85,12 @@ public class MainActivity extends AppCompatActivity {
 
     private Activity activity;
     private ViewPager viewPager;
-    private TabLayout tabLayout;
-    private Toolbar toolbar;
 
     private SharedPreferences mSharedPref;
     private SharedPreferences.Editor mEditor;
 
     boolean rajya;
+    AlertDialog m_dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,9 +110,9 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        tabLayout = findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.viewPager_main);
-        toolbar = findViewById(R.id.appbar);
+        Toolbar toolbar = findViewById(R.id.appbar);
 
         boolean user_agree = mSharedPref.getBoolean(bUSER_AGREE, false);
 
@@ -131,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
             }
 
             @Override
@@ -208,11 +205,11 @@ public class MainActivity extends AppCompatActivity {
                 negative.setTextSize((float) 20);
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                    positive.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
-                    negative.setTextColor(getResources().getColor(R.color.colorPrimaryDark, null));
+                    positive.setTextColor(getResources().getColor(R.color.black, null));
+                    negative.setTextColor(getResources().getColor(R.color.black, null));
                 } else {
-                    positive.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
-                    negative.setTextColor(get_color_for_lower_version(R.color.colorPrimaryDark));
+                    positive.setTextColor(get_color_for_lower_version(R.color.black));
+                    negative.setTextColor(get_color_for_lower_version(R.color.black));
                 }
 
                 positive.setTypeface(positive.getTypeface(), Typeface.BOLD);
@@ -241,15 +238,11 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = getLayoutInflater();
         View ui_preference_layout = inflater.inflate(R.layout.user_preference, null);
 
-        final LinearLayout ui_constituency = ui_preference_layout.findViewById(R.id.constituency);
         final Spinner ui_constituency_spinner = ui_preference_layout.findViewById(R.id.constituency_spinner);
-        final LinearLayout ui_assembly = ui_preference_layout.findViewById(R.id.assembly);
         final Spinner ui_assembly_spinner = ui_preference_layout.findViewById(R.id.assembly_spinner);
         final FloatingActionButton ui_done = ui_preference_layout.findViewById(R.id.done);
 
         final DataFilter data_filter = new DataFilter();
-
-        ui_constituency.setVisibility(View.VISIBLE);
 
         //populating constituency
         List<String> constituency_list = data_filter.getMPAreas();
@@ -272,12 +265,11 @@ public class MainActivity extends AppCompatActivity {
 
                 mEditor.putString(MainActivity.sMP_AREA, selected_constituency).commit();
 
-                ui_assembly.setVisibility(View.VISIBLE);
+                ui_assembly_spinner.setVisibility(View.VISIBLE);
 
                 //Log.e(TAG, "selected_constituency: " + selected_constituency);
                 //populating assembly
-                List<String> assembly_list = null;
-                assembly_list = data_filter.get_MLA_area_as_per_MP_area(selected_constituency);
+                List<String> assembly_list = data_filter.get_MLA_area_as_per_MP_area(selected_constituency);
                 assembly_list.add(SELECT_MLA);
 
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), R.layout.spinner_text_style, assembly_list);
@@ -314,23 +306,20 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setView(ui_preference_layout);
         alert.setCancelable(false);
-        final AlertDialog dialog = alert.create();
 
-        dialog.show();
+        m_dialog = alert.create();
+        m_dialog.show();
     }
 
-    public void onclick_puzzle(View view) {
-        boolean smart_voter = mSharedPref.getBoolean(bSMART_VOTER, false);
-        if(!smart_voter) {
-            Intent intent = new Intent(this, Puzzle.class);
-            startActivity(intent);
-        }
+    public void onclick_done(View view) {
+        m_dialog.hide();
+        LogEvents.send(this, "Preference_saved");
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater =  getMenuInflater();
-        menuInflater.inflate(R.menu.main_menu,menu);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main_menu, menu);
         return true;
     }
 
@@ -373,19 +362,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void onclick_open_donate(View view) {
         startActivity(Common.open_donate(view));
-    }
-
-    public static String get_MP_area(Context context) {
-        String area = "";
-
-        SharedPreferences shared_pref = PreferenceManager.getDefaultSharedPreferences(context);
-        String area_in = shared_pref.getString(sMP_AREA, "");
-
-        final int CONSTITUENCY = 0;
-
-        //Area is still empty which means user selected preference is already in Hindi then no need to change
-
-        return area;
     }
 
     public static void set_notification_time(Context context, boolean fresh) {
