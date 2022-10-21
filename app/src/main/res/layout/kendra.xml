@@ -31,7 +31,7 @@
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
                 android:background="@drawable/recyclerview_item_click_effect"
-                android:src="@drawable/rights" />
+                android:src="@drawable/issues" />
             <TextView
                 android:id="@+id/govt1"
                 android:background="@drawable/recyclerview_item_click_effect"
@@ -73,7 +73,7 @@
                 android:layout_margin="3dp"
                 android:background="@drawable/recyclerview_item_click_effect"
                 android:scaleType="centerInside"
-                android:src="@drawable/responsibility" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -105,13 +105,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|bottom">
+
                 <ImageView
                     android:id="@+id/note1"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:scaleType="centerInside"
                     android:background="@drawable/recyclerview_item_click_effect"
-                    android:src="@drawable/note" />
+                    android:src="@drawable/issues" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -160,7 +161,7 @@
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@drawable/recyclerview_item_click_effect"
-                    android:src="@drawable/vote" />
+                    android:src="@drawable/issues" />
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -210,7 +211,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:src="@drawable/chair" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@drawable/recyclerview_item_click_effect"

@@ -47,7 +47,7 @@
                 android:layout_gravity="center"
                 android:background="@color/colorPrimaryDark"
                 android:padding="1dp"
-                android:src="@drawable/inflation" />
+                android:src="@drawable/issues" />
 
             <LinearLayout
                 android:visibility="gone"
@@ -58,12 +58,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="@dimen/small_image"
                     android:layout_height="@dimen/small_image"
                     android:layout_gravity="center"
                     android:background="@color/greylight"
-                    android:src="@drawable/sanvidhaan" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:id="@+id/janta_issue"
                     android:layout_width="wrap_content"
@@ -83,12 +84,13 @@
                 android:padding="1dp"
                 android:background="@drawable/linearlayout_border"
                 android:layout_height="wrap_content">
+
                 <ImageView
                     android:layout_width="@dimen/small_image"
                     android:layout_height="@dimen/small_image"
                     android:layout_gravity="center"
                     android:background="@color/greylight"
-                    android:src="@drawable/compay_law" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:id="@+id/parshad_text"
                     android:layout_width="wrap_content"
@@ -113,7 +115,7 @@
                     android:layout_height="@dimen/small_image"
                     android:layout_gravity="center"
                     android:background="@color/greylight"
-                    android:src="@drawable/note"
+                    android:src="@drawable/issues"
                     android:visibility="gone" />
                 <TextView
                     android:id="@+id/parliament"
@@ -180,7 +182,7 @@
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
                         android:padding="@dimen/gst_discount"
-                        android:src="@drawable/tax_parleg" />
+                        android:src="@drawable/issues" />
 
                     <TextView
                         android:gravity="center"
@@ -216,7 +218,7 @@
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
                         android:padding="@dimen/gst_discount"
-                        android:src="@drawable/soap" />
+                        android:src="@drawable/issues" />
 
                     <TextView
                         android:gravity="center"
@@ -245,13 +247,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal">
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:background="@color/colorPrimary"
-                    android:padding="@dimen/gst_discount"
-                    android:src="@drawable/lipstick" />
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:background="@color/colorPrimary"
+                        android:padding="@dimen/gst_discount"
+                        android:src="@drawable/issues" />
 
                 <TextView
                     android:gravity="center"
@@ -286,7 +288,7 @@
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
                         android:padding="@dimen/gst_discount"
-                        android:src="@drawable/tax_cloth" />
+                        android:src="@drawable/issues" />
 
                     <TextView
                         android:gravity="center"
@@ -321,7 +323,7 @@
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
                         android:padding="@dimen/gst_discount"
-                        android:src="@drawable/bike" />
+                        android:src="@drawable/issues" />
 
                     <TextView
                         android:gravity="center"
@@ -356,7 +358,7 @@
                         android:layout_gravity="center"
                         android:background="@color/colorPrimary"
                         android:padding="@dimen/gst_discount"
-                        android:src="@drawable/petrol" />
+                        android:src="@drawable/issues" />
 
                     <TextView
                         android:gravity="center"

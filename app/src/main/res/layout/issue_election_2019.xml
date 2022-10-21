@@ -46,7 +46,7 @@
             android:layout_gravity="center"
             android:background="@color/colorPrimaryDark"
             android:padding="1dp"
-            android:src="@drawable/chair" />
+            android:src="@drawable/issues" />
 
         <TextView
             android:id="@+id/header_line"
@@ -136,7 +136,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:src="@drawable/backstabbed" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:id="@+id/filter_text"
@@ -160,7 +160,7 @@
                android:layout_width="60dp"
                android:layout_height="60dp"
                android:layout_gravity="center"
-               android:src="@drawable/gunda_neta" />
+               android:src="@drawable/issues" />
 
            <TextView
                android:layout_width="match_parent"
@@ -181,8 +181,8 @@
            <ImageView
                android:layout_width="60dp"
                android:layout_height="60dp"
-                           android:layout_gravity="center"
-                           android:src="@drawable/aged_neta" />
+               android:layout_gravity="center"
+               android:src="@drawable/issues" />
 
                        <TextView
                            android:layout_width="match_parent"
@@ -200,11 +200,11 @@
            android:padding="3dp"
            android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/illetrate_neta" />
+           <ImageView
+               android:layout_width="60dp"
+               android:layout_height="60dp"
+               android:layout_gravity="center"
+               android:src="@drawable/issues" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -234,10 +234,10 @@
             android:padding="5dp"
             android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="25dp"
-            android:background="@drawable/adr"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:background="@drawable/issues" />
 
         <TextView
             android:id="@+id/source_adr"

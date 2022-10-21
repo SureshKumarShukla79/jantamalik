@@ -28,7 +28,7 @@
             android:layout_below="@+id/toolbar"
             android:background="@color/colorPrimary"
             android:padding="1dp"
-            android:src="@drawable/sanvidhaan" />
+            android:src="@drawable/issues" />
 
         <TextView
             android:id="@+id/list"
@@ -69,13 +69,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/police" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/vidhayak_duty_police"
                     android:layout_width="wrap_content"
@@ -109,7 +110,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/ipc"/>
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/vidhayak_duty_order"
                     android:textColorLink="@color/black"
@@ -269,13 +270,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/hospital" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/vidhayak_duty_hospital"
                     android:textColor="@color/black"
@@ -429,13 +431,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/agriculture_water" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/vidhayak_duty_water_supply"
                     android:textColor="@color/black"
@@ -723,13 +726,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/education" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/vidhayak_duty_education"
                     android:textColor="@color/black"
@@ -789,13 +793,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/forest" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/vidhayak_duty_forest"
                     android:textColor="@color/black"

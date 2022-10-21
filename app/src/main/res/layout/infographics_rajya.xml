@@ -44,7 +44,7 @@
                     android:layout_width="@dimen/tax_image"
                     android:layout_height="@dimen/tax_image"
                     android:scaleType="centerInside"
-                    android:src="@drawable/voter" />
+                    android:src="@drawable/issues" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
                     android:layout_height="@dimen/tax_image"
                     android:scaleType="centerInside"
                     android:layout_gravity="center"
-                    android:src="@drawable/politician_illustration" />
+                    android:src="@drawable/issues" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -113,7 +113,7 @@
                     android:layout_height="@dimen/tax_image"
                     android:scaleType="centerInside"
                     android:layout_gravity="center"
-                    android:src="@drawable/loksabha"
+                    android:src="@drawable/issues"
                     android:visibility="gone" />
 
                 <TextView
@@ -151,7 +151,7 @@
                     android:scaleType="centerInside"
                     android:layout_gravity="center"
                     android:background="@color/colorAccent"
-                    android:src="@drawable/govt"
+                    android:src="@drawable/issues"
                     android:visibility="gone" />
 
                 <TextView

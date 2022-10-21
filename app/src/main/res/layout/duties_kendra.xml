@@ -28,7 +28,7 @@
             android:layout_below="@+id/toolbar"
             android:background="@color/colorPrimary"
             android:padding="1dp"
-            android:src="@drawable/sanvidhaan" />
+            android:src="@drawable/issues" />
 
         <TextView
             android:id="@+id/list_center"
@@ -69,13 +69,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/unemployment" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_employment"
                     android:layout_width="wrap_content"
@@ -101,13 +102,14 @@
                 android:padding="5dp"
                 android:textColor="@color/black"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:background="@color/colorPrimary"
-                android:padding="1dp"
-                android:src="@drawable/social_security" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:padding="1dp"
+                    android:src="@drawable/issues" />
             <TextView
                 android:text="@string/mp_duty_social_security"
                 android:layout_width="wrap_content"
@@ -140,7 +142,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/inflation"/>
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_price_control"
                     android:textColorLink="@color/black"
@@ -175,7 +177,7 @@
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/upsc" />
+                    android:src="@drawable/issues" />
 
                 <TextView
                     android:text="@string/mp_duty_upsc"
@@ -203,13 +205,14 @@
                     android:text="5"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/education" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_education"
                     android:textColor="@color/black"
@@ -236,13 +239,14 @@
                     android:text="6"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/rail" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_rail"
                     android:textColor="@color/black"
@@ -268,13 +272,14 @@
                     android:text="7"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/nh_2" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_highway"
                     android:textColor="@color/black"
@@ -300,13 +305,14 @@
                     android:text="8"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/share_market" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_stock"
                     android:textColor="@color/black"
@@ -332,13 +338,14 @@
                     android:text="9"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/post" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_po"
                     android:textColor="@color/black"
@@ -364,13 +371,14 @@
                     android:text="10"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/currency" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_currency"
                     android:textColor="@color/black"
@@ -396,13 +404,14 @@
                     android:text="11"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/bank" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_bank"
                     android:textColor="@color/black"
@@ -428,13 +437,14 @@
                     android:text="12"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/compay_law" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_company"
                     android:textColor="@color/black"
@@ -460,13 +470,14 @@
                     android:text="13"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/bima" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_insurance"
                     android:textColor="@color/black"
@@ -493,13 +504,14 @@
                     android:text="14"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/vegetable" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_quality"
                     android:textColor="@color/black"
@@ -525,13 +537,14 @@
                     android:text="15"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/petrol" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_oil"
                     android:textColor="@color/black"
@@ -557,13 +570,14 @@
                     android:text="16"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/mine" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_mine"
                     android:textColor="@color/black"
@@ -590,13 +604,14 @@
                     android:text="17"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/cbi" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_cbi"
                     android:textColor="@color/black"
@@ -622,13 +637,14 @@
                     android:text="18"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/aadhar" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_citizenship"
                     android:textColor="@color/black"
@@ -655,13 +671,14 @@
                     android:text="19"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@color/black" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/passport" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_passport"
                     android:textColor="@color/black"
@@ -688,13 +705,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/defense" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_defense"
                     android:textColor="@color/black"
@@ -721,13 +739,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/forest" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_forest"
                     android:textColor="@color/black"
@@ -754,13 +773,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/medicine" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_medicine"
                     android:textColor="@color/black"
@@ -787,13 +807,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/census" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_census"
                     android:textColor="@color/black"
@@ -820,13 +841,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/migration" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_migration"
                     android:textColor="@color/black"
@@ -853,13 +875,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/ipc" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_ipc"
                     android:textColor="@color/black"
@@ -886,13 +909,14 @@
                     android:padding="5dp"
                     android:textColor="@color/black"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
+
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_gravity="center"
                     android:background="@color/colorPrimary"
                     android:padding="1dp"
-                    android:src="@drawable/divorce_law" />
+                    android:src="@drawable/issues" />
                 <TextView
                     android:text="@string/mp_duty_divorce_law"
                     android:textColor="@color/black"

@@ -46,7 +46,7 @@
             android:layout_gravity="center"
             android:background="@color/colorPrimaryDark"
             android:padding="1dp"
-            android:src="@drawable/media" />
+            android:src="@drawable/issues" />
 
             <androidx.cardview.widget.CardView
             android:id="@+id/spine"

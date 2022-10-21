@@ -46,7 +46,7 @@
                 android:layout_gravity="center"
                 android:background="@color/colorPrimaryDark"
                 android:padding="1dp"
-                android:src="@drawable/girl_safety" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:id="@+id/janta_issue"

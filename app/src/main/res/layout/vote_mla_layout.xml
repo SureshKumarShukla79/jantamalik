@@ -65,7 +65,7 @@
                 android:layout_height="120dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:src="@drawable/politician_illustration"
+                android:src="@drawable/issues"
                 app:civ_border_color="@color/black"
                 app:civ_border_width="3dp"
                 android:visibility="gone" />
@@ -441,7 +441,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="25dp"
-                            android:background="@drawable/adr"/>
+                            android:background="@drawable/issues" />
 
                         <TextView
                             android:id="@+id/source_adr"
@@ -484,7 +484,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:onClick="onclick_WhatsApp"
-                    android:src="@drawable/whatsapp"
+                    android:src="@drawable/issues"
                     app:backgroundTint="@color/colorPrimary" />
             </LinearLayout>
         </LinearLayout>

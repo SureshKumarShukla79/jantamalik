@@ -59,7 +59,7 @@
                 android:adjustViewBounds="true"
                 android:padding="2dip"
                 android:scaleType="fitXY"
-                android:src="@drawable/tax_parleg" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:text="@string/gst_biscuit"
@@ -80,7 +80,7 @@
                 android:id="@+id/GST_grid"
                 android:padding="2dip"
                 android:scaleType="fitXY"
-                android:src="@drawable/tax_cloth"
+                android:src="@drawable/issues"
                 android:layout_width="@dimen/tax_image_W"
                 android:layout_height="@dimen/tax_image_H"
                 android:adjustViewBounds="true" />
@@ -107,7 +107,7 @@
                 android:adjustViewBounds="true"
                 android:padding="2dip"
                 android:scaleType="fitXY"
-                android:src="@drawable/tax_book" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:text="@string/gst_exercise_book"
@@ -131,7 +131,7 @@
                 android:adjustViewBounds="true"
                 android:padding="2dip"
                 android:scaleType="fitXY"
-                android:src="@drawable/tax_petrol" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:text="@string/tax_petrol"
@@ -165,7 +165,7 @@
                 android:adjustViewBounds="true"
                 android:padding="2dip"
                 android:scaleType="fitXY"
-                android:src="@drawable/tax_incometax" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:text="@string/itax_slabs"
@@ -192,7 +192,7 @@
             android:adjustViewBounds="true"
             android:layout_margin="@dimen/image_margin"
             android:scaleType="fitXY"
-            android:src="@drawable/dhan_kalash" />
+            android:src="@drawable/issues" />
 
         <ImageView
             android:layout_width="60dp"

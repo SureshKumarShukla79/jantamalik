@@ -148,7 +148,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:onClick="onclick_whatsapp_us"
-                    android:src="@drawable/whatsapp"
+                    android:src="@drawable/issues"
                     app:backgroundTint="@color/colorPrimary" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton

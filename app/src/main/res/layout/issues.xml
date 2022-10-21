@@ -177,7 +177,7 @@
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
                 android:background="@color/light_green"
-                android:src="@drawable/inflation" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_green"
@@ -237,7 +237,7 @@
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
                 android:background="@color/light_green"
-                android:src="@drawable/unemployment" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_green"
@@ -296,7 +296,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
-                android:src="@drawable/protest" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_green"
@@ -357,7 +357,7 @@
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
                 android:background="@color/light_orange"
-                android:src="@drawable/spiritual" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_orange"
@@ -416,7 +416,7 @@
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
                 android:background="@color/light_green"
-                android:src="@drawable/girl_safety" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_green"
@@ -475,7 +475,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/hospital" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -534,7 +534,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/drinking_water" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -593,7 +593,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/poor_road" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -653,7 +653,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/public_transport" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -712,7 +712,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/agriculture_water" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -771,7 +771,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/agricultural_loan" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -829,7 +829,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/price_realization" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -888,7 +888,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/agriculture_subsidy" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -947,7 +947,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/police" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -1007,7 +1007,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/media" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_green"
@@ -1067,7 +1067,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/train" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_green"
@@ -1127,7 +1127,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/corruption" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_green"
@@ -1187,7 +1187,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
-                android:src="@drawable/business" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_green"
@@ -1247,7 +1247,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/traffic" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -1307,7 +1307,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/electricity" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_pink"
@@ -1367,7 +1367,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/cleanliness" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/tint_yellow"
@@ -1427,7 +1427,7 @@
                 android:layout_height="60dp"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
                 android:layout_gravity="center"
-                android:src="@drawable/sewage" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/tint_yellow"
