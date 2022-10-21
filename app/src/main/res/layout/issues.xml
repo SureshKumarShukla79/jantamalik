@@ -117,7 +117,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/issue_pic_left_margin"
-                android:src="@drawable/green_badge" />
+                android:src="@drawable/issues" />
 
             <TextView
                 android:background="@color/light_orange"

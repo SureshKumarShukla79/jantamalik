@@ -331,17 +331,17 @@ public class Issues extends AppCompatActivity {
 
     public void onclick_read_online_full(View view) {
         LogEvents.send(this, "Read_Online");
-
-        String url = Constants.COI_Hindi;
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        startActivity(intent);
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.COI_Hindi)));
     }
 
-    public void onclick_play_video(View view) {
-        LogEvents.send(this, "COI_Youtube");
+    public void onclick_mp_mla_contact(View view) {
+        LogEvents.send(this, "MP_MLA_contact");
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.MP_MLA_contact)));
+    }
 
-        String url = Constants.COI_Youtube;
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+    public void onclick_jantamalik_pdf(View view) {
+        LogEvents.send(this, "JantaMalik_PDF");
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.JantaMalik_PDF)));
     }
 
     private void make_clickable_links_media() {

@@ -698,11 +698,14 @@
     <string name="option"><b>हमने कैसे चुना था?</b></string>
     <string name="puzzle_text">जागरूकता पहेली</string>
 
-    <string name="constitution_text">संविधान ?</string>
+    <string name="constitution_text">काम की बात</string>
     <string name="constitution_1">मेरा वचन ही है शासन</string>
     <string name="constitution_2">हमें माहिषमती का संविधान पता है,
         \nलेकिन भारत का ?</string>
-    <string name="constitution_online">आनलाईन पढ़ें</string>
+    <string name="constitution_online">संविधान डाउनलोड करेंं</string>
+    <string name="mp_mla_contact">अपने विधायक, सांसद के फोन नंबर, पते जानेंं</string>
+    <string name="jantamalik_pdf">जनता मालिक फ्री पढ़ें</string>
+
     <string name="constitution_short"><font fgcolor='#214EF3'><u>लघु</u></font></string>
     <string name="constitution_full"><font fgcolor='#214EF3'><u>पूर्ण</u></font></string>
 

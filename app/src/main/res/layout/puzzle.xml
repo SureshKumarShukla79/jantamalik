@@ -148,7 +148,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@color/black"
         android:text=""
-        android:visibility="invisible"/>
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"

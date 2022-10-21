@@ -83,23 +83,28 @@
                 android:onClick="onclick_read_online_full" />
 
             <TextView
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/issue_text_left_margin"
-                android:text="@string/coi_youtube"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@color/black"/>
-
-            <Button
-                android:visibility="gone"
-                android:id="@+id/play_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_gravity="center"
-                android:background="@drawable/youtube_logo"
-                android:onClick="onclick_play_video" />
+                android:layout_margin="30dp"
+                android:text="@string/mp_mla_contact"
+                android:textColor="@color/blue"
+                android:textColorLink="@color/blue"
+                android:clickable="true"
+                android:onClick="onclick_mp_mla_contact" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:text="@string/jantamalik_pdf"
+                android:textColor="@color/blue"
+                android:textColorLink="@color/blue"
+                android:clickable="true"
+                android:onClick="onclick_jantamalik_pdf" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

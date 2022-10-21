@@ -362,15 +362,15 @@ public class Puzzle extends Activity {
                             ui_option_4.setBackgroundColor(get_color_for_lower_version(R.color.red));
                         }
                     }
-                    LogEvents.send(this, "A" + (question_num+1));
+                    LogEvents.send(this, "A" + (question_num + 1));
                 }
                 break;
         }
 
         mEditor.commit();
 
-        ui_detail.setVisibility(View.VISIBLE);
-        show_correct_answer(correct_answer);
+        //ui_detail.setVisibility(View.VISIBLE);
+        //show_correct_answer(correct_answer);
         enable_radio(false);
     }
 
