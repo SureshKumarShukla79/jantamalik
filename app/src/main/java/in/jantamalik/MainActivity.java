@@ -336,6 +336,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.share_menuItem:
                 onclick_share_button(getCurrentFocus());
                 break;
+            case R.id.privacy_menuItem:
+                onclick_read_privacy(getCurrentFocus());
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -350,6 +353,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Important");
         intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody + USER_SHARE_APP);
         startActivity(intent);
+    }
+
+    public void onclick_read_privacy(View view) {
+        LogEvents.send(this, "Read_Online");
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.privacy)));
     }
 
     public void onclick_twitter_button(View view) {

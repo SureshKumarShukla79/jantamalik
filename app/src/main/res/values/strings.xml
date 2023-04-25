@@ -20,6 +20,7 @@
     <string name="menuItemDonate">समर्थन करें</string>
     <string name="menuItemContactUs">संपर्क करें</string>
     <string name="menuItemShare">शेयर करें</string>
+    <string name="privacyItemShare">निजता की शर्तें</string>
 
     <string name="call_button">कॉल करें</string>
     <string name="email_button">ईमेल करें</string>

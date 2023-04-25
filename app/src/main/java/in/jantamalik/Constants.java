@@ -14,4 +14,6 @@ public class Constants {
     public static final String COI_Youtube = "https://youtu.be/6YPgH3KQ1uU?t=40";
     public static final String MP_MLA_contact = "https://play.google.com/store/apps/details?id=com.ramotion.expandingcollection.examples.full";
     public static final String JantaMalik_PDF = "https://jantamalik.in";
+
+    public static final String privacy = "https://jantamalik.in/privacy-policy-janta-malik-app";
 }
