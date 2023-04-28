@@ -1,0 +1,7 @@
+# Ubuntu LTS 22.04 notes
+
+sudo apt-get install python3-pip
+sudo pip install selenium
+
+# clipboard reading for OTP / SMS
+sudo pip install pyperclip
