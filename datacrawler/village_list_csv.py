@@ -63,8 +63,8 @@ for i in range(1, janpad_count+1):
 
     janpad_count = janpad_count - 1
 
-print("length of village",len(village_list))
-print(village_list)
+#print("length of village",len(village_list))
+#print(village_list)
 
 np.savetxt("VillageList.csv", village_list, delimiter=", ",  # Set the delimiter as a comma followed by a space
            fmt='% s', encoding='utf-8')  # Set the format of the data as string
