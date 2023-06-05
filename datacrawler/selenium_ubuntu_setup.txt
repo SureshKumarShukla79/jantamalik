@@ -5,3 +5,5 @@ sudo pip install selenium
 
 # clipboard reading for OTP / SMS
 sudo pip install pyperclip
+
+sudo pip install opencv-python
